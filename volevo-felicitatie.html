@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO - Felicitaties!</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a2060;
+    color: white;
+    font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Animated background */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 20% 50%, rgba(255,130,0,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(255,200,0,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 60% 80%, rgba(255,130,0,0.05) 0%, transparent 50%);
+    animation: bgPulse 8s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes bgPulse {
+    0%   { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.1) rotate(3deg); }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1800px;
+    padding: 32px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    animation: fadeDown 0.8s ease-out both;
+  }
+
+  .emoji-row {
+    font-size: 2.4rem;
+    letter-spacing: 8px;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+  }
+
+  .main-title {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #9CD0C1, #2A3176, #9CD0C1);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+    text-align: center;
+    line-height: 1;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'Barlow', Arial, sans-serif;
+  }
+
+  .divider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #9CD0C1, #2A3176, #9CD0C1, transparent);
+    border-radius: 2px;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    0%   { box-shadow: 0 0 6px #9CD0C1; opacity: 0.8; }
+    100% { box-shadow: 0 0 20px #9CD0C1, 0 0 40px rgba(255,130,0,0.4); opacity: 1; }
+  }
+
+  /* Teams grid */
+  .section-label {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    font-family: 'Barlow', Arial, sans-serif;
+    align-self: flex-start;
+    margin-bottom: -12px;
+  }
+
+  .teams-grid {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .teams-grid.main-teams {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .teams-grid.cmv-teams {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .team-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,130,0,0.25);
+    border-radius: 12px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.2s;
+    animation: fadeUp 0.6s ease-out both;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .team-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #9CD0C1, #2A3176);
+    border-radius: 4px 0 0 4px;
+  }
+
+  .team-card.highlight {
+    background: rgba(255,130,0,0.12);
+    border-color: rgba(255,207,0,0.5);
+  }
+
+  .team-card.highlight::before {
+    background: linear-gradient(180deg, #2A3176, #9CD0C1, #2A3176);
+  }
+
+  .rank-badge {
+    background: linear-gradient(135deg, #9CD0C1, #2A3176);
+    color: #1a2060;
+    font-size: 1.3rem;
+    font-weight: 900;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(255,130,0,0.5);
+  }
+
+  .team-info {
+    flex: 1;
+  }
+
+  .team-name {
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.1;
+  }
+
+  .team-division {
+    font-size: clamp(0.8rem, 1.3vw, 1.05rem);
+    color: rgba(255,255,255,0.6);
+    font-family: 'Barlow', Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .trophy-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  /* Footer */
+  .footer {
+    font-family: 'Barlow', Arial, sans-serif;
+    font-size: clamp(0.7rem, 1.1vw, 0.95rem);
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Staggered card animations */
+  .team-card:nth-child(1) { animation-delay: 0.1s; }
+  .team-card:nth-child(2) { animation-delay: 0.2s; }
+  .team-card:nth-child(3) { animation-delay: 0.3s; }
+  .team-card:nth-child(4) { animation-delay: 0.4s; }
+  .team-card:nth-child(5) { animation-delay: 0.5s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="emoji-row">🏐 🏆 🏐</div>
+    <div class="main-title">Gefeliciteerd, VOLEVO!</div>
+    <div class="subtitle">Teams die bovenaan staan · 28 maart 2026</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Competitie teams (1e plaats) -->
+  <div class="section-label">🥇 Reguliere competitie — 1e plaats</div>
+  <div class="teams-grid main-teams">
+
+    <div class="team-card highlight">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO MA 1</div>
+        <div class="team-division">Meiden A Topklasse</div>
+      </div>
+      <div class="trophy-icon">⭐</div>
+    </div>
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO DS 3</div>
+        <div class="team-division">Dames Promotieklasse E</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO MA 4</div>
+        <div class="team-division">Meiden A 2e Klasse I</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO HS 5</div>
+        <div class="team-division">Heren 3e Klasse M</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO MB</div>
+        <div class="team-division">VDO Tussenronde Meiden B Kruisfinales</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+  </div>
+
+  <!-- CMV teams -->
+  <div class="section-label">🥇 CMV Haaglanden — 1e plaats in poule</div>
+  <div class="teams-grid cmv-teams">
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO N4 1</div>
+        <div class="team-division">Niveau 4 · Poule A</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO N4 2</div>
+        <div class="team-division">Niveau 4 · Poule B</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO N5 6</div>
+        <div class="team-division">Niveau 5 · Poule C</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+    <div class="team-card">
+      <div class="rank-badge">1</div>
+      <div class="team-info">
+        <div class="team-name">VOLEVO N2 2</div>
+        <div class="team-division">Niveau 2 · Poule A</div>
+      </div>
+      <div class="trophy-icon">🏆</div>
+    </div>
+
+  </div>
+
+  <div class="footer">Gegevens: volleybal.nl · Automatisch bijgewerkt</div>
+
+</div>
+
+</body>
+</html>
