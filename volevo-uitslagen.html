@@ -60,15 +60,25 @@
 
   .card-main {
     display: grid;
-    grid-template-columns: 5px 76px 1fr 120px 1fr;
+    grid-template-columns: 5px 76px 1fr 120px 1fr 5px;
     align-items: stretch;
   }
 
-  /* Accent bar — green = winner side, navy = loser side, gray = draw/unknown */
-  .accent-bar { background: #e5e5ea; }
-  .match-card.win-home .accent-bar { background: #30d158; }
-  .match-card.win-away .accent-bar { background: #2A3176; }
-  .match-card.draw     .accent-bar { background: #30d158; }
+  /* Accent bars — left = home side colour, right = away side colour */
+  .accent-bar        { background: #e5e5ea; }
+  .accent-bar-right  { background: #e5e5ea; }
+
+  /* win-home: home wins → left bar green, right bar navy */
+  .match-card.win-home .accent-bar       { background: #30d158; }
+  .match-card.win-home .accent-bar-right { background: #2A3176; }
+
+  /* win-away: away wins → left bar navy, right bar green */
+  .match-card.win-away .accent-bar       { background: #2A3176; }
+  .match-card.win-away .accent-bar-right { background: #30d158; }
+
+  /* draw: both green */
+  .match-card.draw .accent-bar       { background: #30d158; }
+  .match-card.draw .accent-bar-right { background: #30d158; }
 
   .match-time-col {
     display: flex; align-items: center; justify-content: center;
@@ -82,11 +92,9 @@
   .team-name { font-size: 1.05rem; font-weight: 600; color: #3a3a3c; line-height: 1.25; }
   .team-name.volevo { color: #2A3176; font-weight: 800; }
 
-  /* GREEN winner highlight */
+  /* Winner team name highlight */
   .match-card.win-home .team-col.home .team-name { color: #1a8a3a; font-weight: 800; }
   .match-card.win-away .team-col.away .team-name { color: #1a8a3a; font-weight: 800; }
-  .match-card.win-home .team-col.home .team-name.volevo { color: #1a8a3a; }
-  .match-card.win-away .team-col.away .team-name.volevo { color: #1a8a3a; }
   .match-card.draw .team-col .team-name { color: #1a8a3a; font-weight: 800; }
 
   /* Club logo */
@@ -103,12 +111,25 @@
   }
   .score-main {
     font-size: 2rem; font-weight: 800; letter-spacing: -0.5px;
-    line-height: 1; font-variant-numeric: tabular-nums; color: #1d1d1f;
+    line-height: 1; font-variant-numeric: tabular-nums;
+    display: flex; align-items: center; gap: 4px;
   }
-  /* Score color per outcome */
-  .match-card.win-home .score-main,
-  .match-card.win-away .score-main,
-  .match-card.draw     .score-main { color: #1a8a3a; }
+  /* Default: both sides neutral */
+  .score-main .sh { color: #1d1d1f; }
+  .score-main .sd { color: #d1d1d6; font-size: 1.4rem; font-weight: 400; }
+  .score-main .sa { color: #1d1d1f; }
+
+  /* win-home: home (left) = green, away (right) = navy */
+  .match-card.win-home .score-main .sh { color: #1a8a3a; }
+  .match-card.win-home .score-main .sa { color: #2A3176; }
+
+  /* win-away: home (left) = navy, away (right) = green */
+  .match-card.win-away .score-main .sh { color: #2A3176; }
+  .match-card.win-away .score-main .sa { color: #1a8a3a; }
+
+  /* draw: both green */
+  .match-card.draw .score-main .sh,
+  .match-card.draw .score-main .sa { color: #1a8a3a; }
 
   .score-sets { font-size: 0.65rem; color: #aeaeb2; margin-top: 5px; letter-spacing: 0.3px; font-weight: 500; text-align: center; }
 
@@ -211,9 +232,8 @@ function parsePoule(desc) {
   return m?m[1].trim():'';
 }
 
-// Determine winner class
-// Returns 'win-home', 'win-away', 'draw', or ''
-function winClass(home, away, score) {
+// Determine winner class and split score HTML
+function winClass(score) {
   if (!score) return '';
   var p = score.split('-');
   if (p.length < 2) return '';
@@ -222,6 +242,16 @@ function winClass(home, away, score) {
   if (h > a) return 'win-home';
   if (a > h) return 'win-away';
   return 'draw';
+}
+
+// Build split-colour score HTML: <span class="sh">H</span><span class="sd">-</span><span class="sa">A</span>
+function scoreHtml(score) {
+  if (!score) return score || '';
+  var p = score.split('-');
+  if (p.length < 2) return score;
+  return '<span class="sh">'+p[0].trim()+'</span>'+
+         '<span class="sd">–</span>'+
+         '<span class="sa">'+p[1].trim()+'</span>';
 }
 
 var RSS_URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss';
@@ -255,7 +285,7 @@ function render(matches) {
   count.textContent = matches.length + ' uitslag' + (matches.length!==1?'en':'');
   var html = '';
   matches.forEach(function(m) {
-    var wc = winClass(m.home, m.away, m.score);
+    var wc = winClass(m.score);
     var cls = 'match-card' + (wc ? ' ' + wc : '');
     var hVol = iv(m.home), aVol = iv(m.away);
     var hCode = hVol ? 'CNZ6B97' : m.homeCode;
@@ -269,13 +299,14 @@ function render(matches) {
           '<div class="team-name' + (hVol ? ' volevo' : '') + '">' + m.home + '</div>' +
         '</div>' +
         '<div class="score-block">' +
-          '<div class="score-main">' + m.score + '</div>' +
+          '<div class="score-main">' + scoreHtml(m.score) + '</div>' +
           (m.sets ? '<div class="score-sets">' + m.sets + '</div>' : '') +
         '</div>' +
         '<div class="team-col away">' +
           '<div class="team-name' + (aVol ? ' volevo' : '') + '">' + m.away + '</div>' +
           clubLogoHtml(aCode, m.away, aVol) +
         '</div>' +
+        '<div class="accent-bar-right"></div>' +
       '</div>' +
       (m.poule ? '<div class="card-competition">' + m.poule + '</div>' : '') +
     '</div>';
