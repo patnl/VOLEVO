@@ -434,7 +434,7 @@ async function loadData() {
 setInterval(updateBadge, 30000);
 
 // Tijdsgebaseerde scroll — zelfde snelheid op 60fps (browser) én 30fps (Yodeck)
-var SCROLL_PPS = 100; // pixels per seconde
+var SCROLL_PPS = 60; // pixels per seconde
 var scrollPos=0, scrollDir=1, scrollPause=0, scrollLast=null;
 function scroll(ts) {
   if(!ts){ requestAnimationFrame(scroll); return; } // setTimeout geeft geen ts mee

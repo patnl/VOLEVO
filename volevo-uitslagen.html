@@ -293,16 +293,19 @@ async function fetchRSS() {
   throw new Error('Kan feed niet laden.');
 }
 
-function render(matches) {
+function render(matches, isToday) {
   document.getElementById('datum').textContent = fd(new Date());
   var container = document.getElementById('results');
   var count = document.getElementById('count');
   if (!matches.length) {
-    container.innerHTML = '<div class="no-results">Nog geen uitslagen van vandaag</div>';
+    container.innerHTML = '<div class="no-results">Geen uitslagen beschikbaar</div>';
     count.textContent = '0 uitslagen'; return;
   }
   count.textContent = matches.length + ' uitslag' + (matches.length!==1?'en':'');
-  var html = '';
+  // Toon een banner als dit niet van vandaag is
+  var html = !isToday
+    ? '<div style="text-align:center;padding:10px 20px 4px;font-size:0.72rem;font-weight:600;color:#aeaeb2;letter-spacing:0.3px;">Laatste bekende uitslagen van ' + fd(new Date(matches[0].time)) + '</div>'
+    : '';
   matches.forEach(function(m) {
     var wc = winClass(m.score);
     var cls = 'match-card' + (wc ? ' ' + wc : '');
@@ -336,36 +339,50 @@ function render(matches) {
 async function loadData() {
   try {
     var xml = await fetchRSS();
-    var matches = [];
+    var allMatches = [];
     xml.querySelectorAll('item').forEach(function(item) {
       var title = (item.querySelector('title')||{}).textContent||'';
       var pub   = (item.querySelector('pubDate')||{}).textContent||'';
       var desc  = (item.querySelector('description')||{}).textContent||'';
       var status = getNsText(item,'status');
       var poule  = getNsText(item,'poule') || parsePoule(desc);
-      if (status==='vervallen'||!isToday(pub)) return;
+      if (status==='vervallen') return;
       var ui = title.indexOf(', Uitslag:');
-      if (ui===-1) return;
+      if (ui===-1) return; // alleen gespeelde wedstrijden
       var tp = title.substring(0, ui).trim();
       var score = title.substring(ui + 10).trim();
       var di = tp.indexOf(' - ');
       var home = di!==-1 ? tp.substring(0,di).trim() : tp;
       var away = di!==-1 ? tp.substring(di+3).trim() : '';
-      // sets from description
       var sm = desc.match(/Setstanden:\s*([^\r\n<]+)/i);
       var sets = sm ? sm[1].trim() : '';
-      // club codes from link
       var linkEl = item.querySelector('link');
       var linkUrl = linkEl ? (linkEl.textContent||linkEl.innerHTML||'') : '';
       var homeCode=null, awayCode=null;
       var mc = linkUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
       if (mc) { homeCode=mc[1].toUpperCase(); awayCode=mc[2].toUpperCase(); }
-      matches.push({ time:pub, home:home, away:away, score:score, sets:sets,
-                     poule:poule, homeCode:homeCode, awayCode:awayCode });
+      allMatches.push({ time:pub, home:home, away:away, score:score, sets:sets,
+                        poule:poule, homeCode:homeCode, awayCode:awayCode });
     });
-    matches.sort(function(a,b){ return new Date(a.time)-new Date(b.time); });
-    lastUpdated = Date.now();
-    render(matches);
+    allMatches.sort(function(a,b){ return new Date(a.time)-new Date(b.time); });
+
+    // Eerst kijken of er vandaag uitslagen zijn
+    var todayMatches = allMatches.filter(function(m){ return isToday(m.time); });
+    if (todayMatches.length > 0) {
+      lastUpdated = Date.now();
+      render(todayMatches, true);
+    } else if (allMatches.length > 0) {
+      // Geen uitslagen vandaag → laatste bekende dag tonen
+      var latestDate = new Date(allMatches[allMatches.length-1].time);
+      var latestDay = latestDate.toDateString();
+      var latestMatches = allMatches.filter(function(m){
+        return new Date(m.time).toDateString() === latestDay;
+      });
+      lastUpdated = Date.now();
+      render(latestMatches, false);
+    } else {
+      render([], true);
+    }
     updateBadge();
   } catch(e) {
     document.getElementById('results').innerHTML =
@@ -376,7 +393,7 @@ async function loadData() {
 setInterval(updateBadge, 30000);
 
 // Tijdsgebaseerde scroll — zelfde snelheid op 60fps (browser) én 30fps (Yodeck)
-var SCROLL_PPS = 100; // pixels per seconde
+var SCROLL_PPS = 60; // pixels per seconde
 var scrollPos=0, scrollDir=1, scrollPause=0, scrollLast=null;
 function scroll(ts){
   if(!ts){ requestAnimationFrame(scroll); return; } // setTimeout geeft geen ts mee
