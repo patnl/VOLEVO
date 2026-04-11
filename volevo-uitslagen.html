@@ -370,21 +370,24 @@ async function loadData() {
 
 setInterval(updateBadge, 30000);
 
-// CSS transform scroll — werkt in Yodeck WebView (geen window.scroll nodig)
-var scrollPos=0, scrollDir=1, scrollPause=0;
-function scroll(){
-  if(scrollPause>0){scrollPause--;requestAnimationFrame(scroll);return;}
+// Tijdsgebaseerde scroll — zelfde snelheid op 60fps (browser) én 30fps (Yodeck)
+var SCROLL_PPS = 60; // pixels per seconde
+var scrollPos=0, scrollDir=1, scrollPause=0, scrollLast=null;
+function scroll(ts){
+  if(scrollLast===null) scrollLast=ts;
+  var dt=Math.min(ts-scrollLast, 100); // max 100ms stap (tab-switch bescherming)
+  scrollLast=ts;
+  if(scrollPause>0){scrollPause-=dt;requestAnimationFrame(scroll);return;}
   var inner=document.getElementById('scroll-inner');
   var wrap=document.getElementById('scroll-wrap');
   if(!inner||!wrap){requestAnimationFrame(scroll);return;}
-  // Pas top dynamisch aan op basis van header hoogte
   var hdr=document.querySelector('.header');
   if(hdr) wrap.style.top=hdr.offsetHeight+'px';
   var max=inner.offsetHeight-wrap.offsetHeight;
   if(max<=0){requestAnimationFrame(scroll);return;}
-  scrollPos+=0.7*scrollDir;
-  if(scrollPos>=max){scrollPos=max;scrollPause=250;scrollDir=-1;}
-  else if(scrollPos<=0&&scrollDir===-1){scrollPos=0;scrollPause=350;scrollDir=1;}
+  scrollPos+=(SCROLL_PPS*dt/1000)*scrollDir;
+  if(scrollPos>=max){scrollPos=max;scrollPause=3000;scrollDir=-1;}
+  else if(scrollPos<=0&&scrollDir===-1){scrollPos=0;scrollPause=4000;scrollDir=1;}
   inner.style.transform='translateY('+(-scrollPos)+'px)';
   requestAnimationFrame(scroll);
 }
