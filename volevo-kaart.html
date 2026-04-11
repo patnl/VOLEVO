@@ -160,6 +160,15 @@
     font-size: 0.68rem; color: #aeaeb2; font-weight: 600; margin-top: 6px;
     padding-left: 48px;
   }
+  .popup-travel {
+    margin-left: auto; text-align: right; flex-shrink: 0;
+  }
+  .popup-travel-dist {
+    color: white; font-size: 0.78rem; font-weight: 700;
+  }
+  .popup-travel-time {
+    color: rgba(255,255,255,0.65); font-size: 0.68rem; font-weight: 500; margin-top: 1px;
+  }
 
   /* ── MATCH COUNT BADGE (paginering) ── */
   #page-badge {
@@ -334,17 +343,59 @@ function logoHtml(code, name, isVol, size) {
   return '<div class="popup-logo-fb'+(isVol?' is-volevo':'')+'">'+initials(name)+'</div>';
 }
 
+// ── VOLEVO home (De Fluit, Leidschendam) ────────────────────────────────
+var HOME_POSTAL = '2262ED';
+var HOME_CITY   = 'Leidschendam';
+var homeCoords  = null; // geocoded once on startup
+
+// OSRM routing (free, no key needed)
+async function getRoute(fromLat, fromLng, toLat, toLng) {
+  try {
+    var url = 'https://router.project-osrm.org/route/v1/driving/' +
+      fromLng.toFixed(6)+','+fromLat.toFixed(6)+';'+
+      toLng.toFixed(6)+','+toLat.toFixed(6)+'?overview=false';
+    var r = await fetch(url, { signal: AbortSignal.timeout(6000) });
+    var j = await r.json();
+    if (j.routes && j.routes.length > 0) {
+      return { distance: j.routes[0].distance, duration: j.routes[0].duration };
+    }
+  } catch(e) {}
+  return null;
+}
+function fmtDistance(m) {
+  if (m < 1000) return Math.round(m) + ' m';
+  return (m / 1000).toFixed(1).replace('.', ',') + ' km';
+}
+function fmtDuration(s) {
+  var mins = Math.round(s / 60);
+  if (mins < 60) return mins + ' min';
+  var h = Math.floor(mins / 60), rem = mins % 60;
+  return h + ' u' + (rem > 0 ? ' ' + rem + ' min' : '');
+}
+
 // Parse location from description
+// Format: "..., Speellocatie: VENUE, STREET NUMBER, POSTAL  CITY"
 function parseLocation(desc) {
-  var sp = desc.match(/Speellocatie:\s*([^,\r\n<]+)/i);
-  var venue = sp ? sp[1].trim() : '';
-  // Extract postal code + city
-  var addrMatch = desc.match(/(\d{4}\s*[A-Z]{2})\s{1,3}([A-Za-z'\-\. ]{2,40}?)(?:\s*<|,|\r|\n|$)/);
-  var postal = addrMatch ? addrMatch[1].replace(/\s/,'') : '';
-  var city = addrMatch ? addrMatch[2].trim() : '';
-  // Clean city (remove trailing punctuation/spaces)
-  city = city.replace(/[,\.]+$/, '').trim();
-  return { venue: venue, postal: postal, city: city };
+  // Extract everything after "Speellocatie:"
+  var sp = desc.match(/Speellocatie:\s*(.+?)(?=,\s*Poule:|,\s*Adres:|$)/i);
+  var full = sp ? sp[1].trim() : '';
+  // Split on commas: [venue, street, "POSTAL  CITY"]
+  var parts = full.split(',').map(function(p){ return p.trim(); });
+  var venue = parts[0] || '';
+  // Find the part with a postal code
+  var postalPart = '', street = '', city = '', postal = '';
+  for (var i = 1; i < parts.length; i++) {
+    var pm = parts[i].match(/^(\d{4}\s*[A-Z]{2})\s{1,4}([A-Za-z][A-Za-z'\-\. ]+)$/);
+    if (pm) {
+      postal = pm[1].replace(/\s/,'');
+      city = pm[2].trim().replace(/[,\.]+$/, '').trim();
+    } else if (i === 1 && !pm) {
+      street = parts[i];
+    }
+  }
+  // Build display address
+  var addrLine = [street, postal ? postal + ' ' + city : city].filter(Boolean).join(', ');
+  return { venue: venue, street: street, postal: postal, city: city, addrLine: addrLine };
 }
 
 // ── Nominatim geocoding cache ─────────────────────────────────────────────
@@ -427,14 +478,21 @@ var cycleIndex = 0;
 var cycleTimer = null;
 var CYCLE_MS = 6000; // 6 seconds per location
 
-function buildPopupHtml(venue, city, matches) {
+function buildPopupHtml(venue, addrLine, matches, route) {
   var html = '<div class="popup-card">';
   // Venue header
-  html += '<div class="popup-venue">';
+  html += '<div class="popup-venue" style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:#2A3176;">';
   html += '<div class="popup-venue-icon">📍</div>';
-  html += '<div><div class="popup-venue-name">' + (venue||'Onbekende locatie') + '</div>';
-  if (city) html += '<div class="popup-venue-city">' + city + '</div>';
-  html += '</div></div>';
+  html += '<div style="flex:1;min-width:0;"><div class="popup-venue-name">' + (venue||'Onbekende locatie') + '</div>';
+  if (addrLine) html += '<div class="popup-venue-city">' + addrLine + '</div>';
+  html += '</div>';
+  if (route) {
+    html += '<div class="popup-travel">';
+    html += '<div class="popup-travel-dist">🚗 ' + fmtDistance(route.distance) + '</div>';
+    html += '<div class="popup-travel-time">± ' + fmtDuration(route.duration) + '</div>';
+    html += '</div>';
+  }
+  html += '</div>';
   // Each match
   matches.forEach(function(m) {
     var hVol = iv(m.home), aVol = iv(m.away);
@@ -456,7 +514,7 @@ function buildPopupHtml(venue, city, matches) {
   return html;
 }
 
-function createMarker(lat, lng, venue, city, matches) {
+function createMarker(lat, lng, venue, addrLine, matches, route) {
   var hasVolevo = matches.some(function(m){ return iv(m.home) || iv(m.away); });
   var cls = 'map-marker ' + (hasVolevo ? 'volevo' : 'away');
   var count = matches.length > 1 ? '<div style="position:absolute;top:-4px;right:-4px;background:#ff3b30;color:white;border-radius:50%;width:18px;height:18px;font-size:0.6rem;font-weight:900;display:flex;align-items:center;justify-content:center;border:2px solid white;">'+matches.length+'</div>' : '';
@@ -479,7 +537,7 @@ function createMarker(lat, lng, venue, city, matches) {
     autoClose: false,
     closeOnClick: false,
     closeOnEscapeKey: false
-  }).setContent(buildPopupHtml(venue, city, matches));
+  }).setContent(buildPopupHtml(venue, addrLine, matches, route));
 
   marker.bindPopup(popup);
   marker.addTo(map);
@@ -524,6 +582,12 @@ function cycleTo(index) {
 // ── Main load ─────────────────────────────────────────────────────────────
 async function loadData() {
   try {
+    // Geocode VOLEVO home once
+    if (!homeCoords) {
+      homeCoords = await geocode(HOME_POSTAL, HOME_CITY);
+      await new Promise(res => setTimeout(res, 1200));
+    }
+
     var xml = await fetchRSS();
     document.getElementById('datum').textContent = fd(new Date());
     document.getElementById('datum-right').textContent = fd(new Date());
@@ -552,7 +616,8 @@ async function loadData() {
 
       todayMatches.push({
         time: pub, home: home, away: away, poule: poule.trim(),
-        venue: loc.venue, postal: loc.postal, city: loc.city
+        venue: loc.venue, postal: loc.postal, city: loc.city,
+        street: loc.street, addrLine: loc.addrLine
       });
     });
 
@@ -571,7 +636,7 @@ async function loadData() {
     var venueMap = {};
     todayMatches.forEach(function(m) {
       var key = (m.postal || m.city || m.venue || 'onbekend').toLowerCase();
-      if (!venueMap[key]) venueMap[key] = { venue: m.venue, postal: m.postal, city: m.city, matches: [] };
+      if (!venueMap[key]) venueMap[key] = { venue: m.venue, postal: m.postal, city: m.city, addrLine: m.addrLine, matches: [] };
       venueMap[key].matches.push(m);
     });
 
@@ -584,10 +649,20 @@ async function loadData() {
       var v = venues[i];
       var coords = await geocode(v.postal, v.city);
       if (coords) {
-        geocoded.push({ coords: coords, venue: v.venue, city: v.city, matches: v.matches });
+        geocoded.push({ coords: coords, venue: v.venue, city: v.city, addrLine: v.addrLine, matches: v.matches });
       }
       // Stagger Nominatim requests
       if (i < venues.length-1) await new Promise(res => setTimeout(res, 1200));
+    }
+
+    // Fetch driving routes from De Fluit to each venue (OSRM, parallel-safe)
+    document.querySelector('.loading-text').textContent = 'Reistijden berekenen…';
+    if (homeCoords) {
+      var routePromises = geocoded.map(function(g) {
+        return getRoute(homeCoords.lat, homeCoords.lng, g.coords.lat, g.coords.lng);
+      });
+      var routes = await Promise.all(routePromises);
+      geocoded.forEach(function(g, i) { g.route = routes[i]; });
     }
 
     // Remove old markers
@@ -596,7 +671,7 @@ async function loadData() {
 
     // Build markers
     geocoded.forEach(function(g) {
-      var m = createMarker(g.coords.lat, g.coords.lng, g.venue, g.city, g.matches);
+      var m = createMarker(g.coords.lat, g.coords.lng, g.venue, g.addrLine || g.city, g.matches, g.route);
       markers.push(m);
     });
 
