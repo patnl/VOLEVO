@@ -88,8 +88,9 @@
   html, body { overflow: hidden; height: 100vh; }
   .header {
     position: fixed;
-    top: 36px;   /* ← safe-area: verhoog dit als de header nog steeds wordt afgeknipt */
-    left: 0; right: 0;
+    top: 36px;   /* ← safe-area bovenkant */
+    left: 36px; right: 36px; /* ← safe-area zijkanten zodat logo niet wegvalt */
+    border-radius: 14px; /* afgerond want zweeft nu vrij */
   }
   .scroll-wrap {
     position: fixed; left: 0; right: 0; bottom: 0;
@@ -436,6 +437,7 @@ setInterval(updateBadge, 30000);
 var SCROLL_PPS = 100; // pixels per seconde
 var scrollPos=0, scrollDir=1, scrollPause=0, scrollLast=null;
 function scroll(ts) {
+  if(!ts){ requestAnimationFrame(scroll); return; } // setTimeout geeft geen ts mee
   if(scrollLast===null) scrollLast=ts;
   var dt=Math.min(ts-scrollLast, 100);
   scrollLast=ts;
