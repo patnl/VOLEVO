@@ -418,11 +418,13 @@ setInterval(updateBadge, 30000);
 var spd=0.7, dir=1, pf=0;
 function scroll() {
   if(pf>0){pf--;requestAnimationFrame(scroll);return;}
-  var max=document.body.scrollHeight-window.innerHeight;
+  var el=document.scrollingElement||document.documentElement||document.body;
+  var max=el.scrollHeight-el.clientHeight;
   if(max<=0){requestAnimationFrame(scroll);return;}
-  window.scrollBy(0,spd*dir);
-  if(window.scrollY>=max-2){pf=250;dir=-1;}
-  else if(window.scrollY<=1&&dir===-1){pf=350;dir=1;}
+  el.scrollTop+=spd*dir;
+  var pos=el.scrollTop;
+  if(pos>=max-2){pf=250;dir=-1;}
+  else if(pos<=1&&dir===-1){pf=350;dir=1;}
   requestAnimationFrame(scroll);
 }
 
