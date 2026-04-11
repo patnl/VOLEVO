@@ -50,10 +50,14 @@
 
   /* SCROLL CONTAINER — voor Yodeck WebView */
   html, body { overflow: hidden; height: 100vh; }
-  .header { position: fixed; top: 0; left: 0; right: 0; }
+  .header {
+    position: fixed;
+    top: 36px;   /* ← safe-area: verhoog dit als de header nog steeds wordt afgeknipt */
+    left: 0; right: 0;
+  }
   .scroll-wrap {
     position: fixed; left: 0; right: 0; bottom: 0;
-    top: 79px; /* hoogte header */
+    top: 120px; /* fallback; wordt via JS dynamisch ingesteld */
     overflow: hidden;
   }
   .scroll-inner { will-change: transform; }
@@ -371,7 +375,7 @@ async function loadData() {
 setInterval(updateBadge, 30000);
 
 // Tijdsgebaseerde scroll — zelfde snelheid op 60fps (browser) én 30fps (Yodeck)
-var SCROLL_PPS = 60; // pixels per seconde
+var SCROLL_PPS = 100; // pixels per seconde
 var scrollPos=0, scrollDir=1, scrollPause=0, scrollLast=null;
 function scroll(ts){
   if(scrollLast===null) scrollLast=ts;
