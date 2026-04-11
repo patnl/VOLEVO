@@ -192,6 +192,20 @@
   }
   .badge-dot.active { background: #2A3176; transform: scale(1.3); }
 
+  /* ── DEMO BANNER ── */
+  #demo-banner {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #ff9500;
+    color: white;
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 5px;
+    z-index: 2001;
+    letter-spacing: 0.5px;
+  }
+
   /* ── GEEN WEDSTRIJDEN ── */
   #no-matches {
     display: none;
@@ -229,6 +243,9 @@
 </style>
 </head>
 <body>
+
+<!-- Demo banner (alleen zichtbaar met ?demo) -->
+<div id="demo-banner" style="display:none">⚠️ DEMO MODUS — alle wedstrijden uit de RSS-feed worden getoond</div>
 
 <!-- Loading overlay -->
 <div id="loading-overlay">
@@ -287,6 +304,12 @@
 
 <script>
 // ── Helpers ──────────────────────────────────────────────────────────────────
+if (DEMO_MODE) {
+  document.getElementById('demo-banner').style.display = 'block';
+  // Schuif header iets naar beneden zodat hij niet achter de banner zit
+  document.querySelector('.header').style.top = '66px';
+}
+
 function hdrFail() {
   var w = document.getElementById('header-logo-wrap');
   if (w) w.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
@@ -427,6 +450,7 @@ async function geocode(postal, city) {
 var RSS_URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
 var REFRESH_MS = 5 * 60 * 1000;
 var lastUpdated = null;
+var DEMO_MODE = new URLSearchParams(window.location.search).has('demo');
 
 async function fetchRSS() {
   var proxies = [
@@ -600,9 +624,10 @@ async function loadData() {
       var desc = (item.querySelector('description')||{}).textContent||'';
       var status = getNsText(item, 'status');
       var poule = getNsText(item, 'poule') || (desc.match(/Poule:\s*([^\r\n,<]+)/i)||[])[1] || '';
-      if (status === 'vervallen' || !isToday(pub)) return;
+      if (status === 'vervallen') return;
+      if (!DEMO_MODE && !isToday(pub)) return;
       var played = title.indexOf(', Uitslag:') !== -1;
-      if (played) return; // Only upcoming
+      if (!DEMO_MODE && played) return; // In demo: toon ook gespeelde wedstrijden
       if (/VOLEVO\s+N\d/i.test(title)) return;
 
       // Parse teams
