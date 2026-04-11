@@ -33,11 +33,11 @@
   .header-left { display: flex; align-items: center; gap: 16px; }
 
   #header-logo-wrap {
-    height: 50px; width: 56px;
+    height: 100px; width: 112px;
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
   #header-logo-img {
-    max-height: 50px; max-width: 56px;
+    max-height: 100px; max-width: 112px;
     object-fit: contain; display: block;
   }
   .hdr-logo-fb {
@@ -335,6 +335,35 @@ async function fetchRSS() {
   throw new Error('Kan feed niet laden.');
 }
 
+// Resolve club codes via allorigins.win (volgt redirect van Nevobo permalink naar volleybal.nl URL)
+async function resolveClubCodes(linkUrl) {
+  if (!linkUrl) return null;
+  try {
+    var proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(linkUrl);
+    var timeoutProm = new Promise(function(res) { setTimeout(function() { res(null); }, 6000); });
+    var resp = await Promise.race([fetch(proxyUrl), timeoutProm]);
+    if (!resp || !resp.ok) return null;
+    var json = await resp.json();
+    // Kijk eerst naar de definitieve URL na redirect (status.url)
+    var finalUrl = (json.status && json.status.url) ? json.status.url : '';
+    var mc = finalUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
+    if (mc) return { homeCode: mc[1].toUpperCase(), awayCode: mc[2].toUpperCase() };
+    // Doorzoek paginainhoud op club-logo URLs
+    var content = json.contents || '';
+    var logos = [], lm;
+    var logoPat = /assets\.nevobo\.nl\/organisatie\/logo\/([A-Z0-9]{5,10})/gi;
+    while ((lm = logoPat.exec(content)) !== null && logos.length < 6) {
+      var c = lm[1].toUpperCase();
+      if (logos.indexOf(c) === -1) logos.push(c);
+    }
+    if (logos.length >= 2) return { homeCode: logos[0], awayCode: logos[1] };
+    // Fallback: zoek /wedstrijd/CODE/CODE patroon in paginainhoud
+    var mc2 = content.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
+    if (mc2) return { homeCode: mc2[1].toUpperCase(), awayCode: mc2[2].toUpperCase() };
+  } catch(e) {}
+  return null;
+}
+
 function renderCard(m) {
   var hVol = iv(m.home), aVol = iv(m.away), hasVol = hVol || aVol;
   var cls = 'match-card' + (m.played ? ' played' : '') + (hasVol ? '' : ' no-volevo');
@@ -409,19 +438,39 @@ async function loadData() {
         home = t2.home; away = t2.away;
       }
 
-      // Try to get club codes from link URL
       var linkEl = item.querySelector('link');
       var linkUrl = linkEl ? (linkEl.textContent || linkEl.innerHTML || '') : '';
+
+      // Stap 1: probeer nevobo-naamruimte-elementen
       var homeCode = null, awayCode = null;
-      var mCodes = linkUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
-      if (mCodes) { homeCode = mCodes[1].toUpperCase(); awayCode = mCodes[2].toUpperCase(); }
+      var nsH = getNsText(item,'thuisvereniging') || getNsText(item,'thuisclub') || getNsText(item,'thuisclubcode');
+      var nsA = getNsText(item,'uitvereniging')   || getNsText(item,'uitclub')   || getNsText(item,'uitclubcode');
+      if (nsH) homeCode = nsH.toUpperCase();
+      if (nsA) awayCode = nsA.toUpperCase();
+
+      // Stap 2: probeer regex op link URL (werkt bij volleybal.nl URLs)
+      if (!homeCode || !awayCode) {
+        var mCodes = linkUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
+        if (mCodes) { homeCode = mCodes[1].toUpperCase(); awayCode = mCodes[2].toUpperCase(); }
+      }
 
       matches.push({ time: pub, home: home, away: away, score: score, played: played,
-                     poule: poule, homeCode: homeCode, awayCode: awayCode });
+                     poule: poule, homeCode: homeCode, awayCode: awayCode,
+                     _linkUrl: (!homeCode || !awayCode) ? linkUrl : null });
     });
     matches.sort(function(a,b){ return new Date(a.time) - new Date(b.time); });
+
+    // Stap 3: los ontbrekende clubcodes asynchroon op via allorigins.win (parallel)
+    var resolved = await Promise.all(matches.map(async function(m) {
+      if (m._linkUrl) {
+        var codes = await resolveClubCodes(m._linkUrl);
+        if (codes) { m.homeCode = m.homeCode || codes.homeCode; m.awayCode = m.awayCode || codes.awayCode; }
+      }
+      return m;
+    }));
+
     lastUpdated = Date.now();
-    render(matches);
+    render(resolved);
     updateBadge();
   } catch(e) {
     document.getElementById('results').innerHTML =

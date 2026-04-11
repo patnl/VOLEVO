@@ -293,6 +293,35 @@ async function fetchRSS() {
   throw new Error('Kan feed niet laden.');
 }
 
+// Resolve club codes via allorigins.win (volgt redirect van Nevobo permalink naar volleybal.nl URL)
+async function resolveClubCodes(linkUrl) {
+  if (!linkUrl) return null;
+  try {
+    var proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(linkUrl);
+    var timeoutProm = new Promise(function(res) { setTimeout(function() { res(null); }, 6000); });
+    var resp = await Promise.race([fetch(proxyUrl), timeoutProm]);
+    if (!resp || !resp.ok) return null;
+    var json = await resp.json();
+    // Kijk eerst naar de definitieve URL na redirect (status.url)
+    var finalUrl = (json.status && json.status.url) ? json.status.url : '';
+    var mc = finalUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
+    if (mc) return { homeCode: mc[1].toUpperCase(), awayCode: mc[2].toUpperCase() };
+    // Doorzoek paginainhoud op club-logo URLs (assets.nevobo.nl/organisatie/logo/CODE.jpg)
+    var content = json.contents || '';
+    var logos = [], lm;
+    var logoPat = /assets\.nevobo\.nl\/organisatie\/logo\/([A-Z0-9]{5,10})/gi;
+    while ((lm = logoPat.exec(content)) !== null && logos.length < 6) {
+      var c = lm[1].toUpperCase();
+      if (logos.indexOf(c) === -1) logos.push(c);
+    }
+    if (logos.length >= 2) return { homeCode: logos[0], awayCode: logos[1] };
+    // Fallback: zoek /wedstrijd/CODE/CODE patroon in paginainhoud
+    var mc2 = content.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
+    if (mc2) return { homeCode: mc2[1].toUpperCase(), awayCode: mc2[2].toUpperCase() };
+  } catch(e) {}
+  return null;
+}
+
 function render(matches, isToday) {
   document.getElementById('datum').textContent = fd(new Date());
   var container = document.getElementById('results');
@@ -360,31 +389,51 @@ async function loadData() {
       var sets = sm ? sm[1].trim() : '';
       var linkEl = item.querySelector('link');
       var linkUrl = linkEl ? (linkEl.textContent||linkEl.innerHTML||'') : '';
-      var homeCode=null, awayCode=null;
-      var mc = linkUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
-      if (mc) { homeCode=mc[1].toUpperCase(); awayCode=mc[2].toUpperCase(); }
+
+      // Stap 1: probeer nevobo-naamruimte-elementen
+      var homeCode = null, awayCode = null;
+      var nsH = getNsText(item,'thuisvereniging') || getNsText(item,'thuisclub') || getNsText(item,'thuisclubcode');
+      var nsA = getNsText(item,'uitvereniging')   || getNsText(item,'uitclub')   || getNsText(item,'uitclubcode');
+      if (nsH) homeCode = nsH.toUpperCase();
+      if (nsA) awayCode = nsA.toUpperCase();
+
+      // Stap 2: probeer regex op link URL (werkt bij volleybal.nl URLs)
+      if (!homeCode || !awayCode) {
+        var mc = linkUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
+        if (mc) { homeCode=mc[1].toUpperCase(); awayCode=mc[2].toUpperCase(); }
+      }
+
       allMatches.push({ time:pub, home:home, away:away, score:score, sets:sets,
-                        poule:poule, homeCode:homeCode, awayCode:awayCode });
+                        poule:poule, homeCode:homeCode, awayCode:awayCode,
+                        _linkUrl: (!homeCode || !awayCode) ? linkUrl : null });
     });
     allMatches.sort(function(a,b){ return new Date(a.time)-new Date(b.time); });
 
-    // Eerst kijken of er vandaag uitslagen zijn
+    // Bepaal welke wedstrijden getoond worden
     var todayMatches = allMatches.filter(function(m){ return isToday(m.time); });
+    var toShow, showIsToday;
     if (todayMatches.length > 0) {
-      lastUpdated = Date.now();
-      render(todayMatches, true);
+      toShow = todayMatches; showIsToday = true;
     } else if (allMatches.length > 0) {
-      // Geen uitslagen vandaag → laatste bekende dag tonen
       var latestDate = new Date(allMatches[allMatches.length-1].time);
       var latestDay = latestDate.toDateString();
-      var latestMatches = allMatches.filter(function(m){
-        return new Date(m.time).toDateString() === latestDay;
-      });
-      lastUpdated = Date.now();
-      render(latestMatches, false);
+      toShow = allMatches.filter(function(m){ return new Date(m.time).toDateString()===latestDay; });
+      showIsToday = false;
     } else {
-      render([], true);
+      render([], true); return;
     }
+
+    // Stap 3: los ontbrekende clubcodes asynchroon op via allorigins.win (parallel)
+    var resolved = await Promise.all(toShow.map(async function(m) {
+      if (m._linkUrl) {
+        var codes = await resolveClubCodes(m._linkUrl);
+        if (codes) { m.homeCode = m.homeCode || codes.homeCode; m.awayCode = m.awayCode || codes.awayCode; }
+      }
+      return m;
+    }));
+
+    lastUpdated = Date.now();
+    render(resolved, showIsToday);
     updateBadge();
   } catch(e) {
     document.getElementById('results').innerHTML =
