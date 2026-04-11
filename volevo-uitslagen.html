@@ -48,6 +48,16 @@
   .dot { width: 6px; height: 6px; border-radius: 50%; background: #34c759; flex-shrink: 0; animation: pulse 2s ease-in-out infinite; }
   @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
 
+  /* SCROLL CONTAINER — voor Yodeck WebView */
+  html, body { overflow: hidden; height: 100vh; }
+  .header { position: fixed; top: 0; left: 0; right: 0; }
+  .scroll-wrap {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    top: 79px; /* hoogte header */
+    overflow: hidden;
+  }
+  .scroll-inner { will-change: transform; }
+
   /* CONTENT */
   .content { padding: 22px 28px 40px; max-width: 1400px; margin: 0 auto; }
   .loading, .no-results { text-align: center; padding: 80px 40px; color: #86868b; font-size: 1rem; }
@@ -173,8 +183,12 @@
   </div>
 </div>
 
-<div class="content">
-  <div id="results"><div class="loading">Uitslagen laden…</div></div>
+<div class="scroll-wrap" id="scroll-wrap">
+  <div class="scroll-inner" id="scroll-inner">
+    <div class="content">
+      <div id="results"><div class="loading">Uitslagen laden…</div></div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -356,16 +370,22 @@ async function loadData() {
 
 setInterval(updateBadge, 30000);
 
-var spd=0.7,dir=1,pf=0;
+// CSS transform scroll — werkt in Yodeck WebView (geen window.scroll nodig)
+var scrollPos=0, scrollDir=1, scrollPause=0;
 function scroll(){
-  if(pf>0){pf--;requestAnimationFrame(scroll);return;}
-  var el=document.scrollingElement||document.documentElement||document.body;
-  var max=el.scrollHeight-el.clientHeight;
+  if(scrollPause>0){scrollPause--;requestAnimationFrame(scroll);return;}
+  var inner=document.getElementById('scroll-inner');
+  var wrap=document.getElementById('scroll-wrap');
+  if(!inner||!wrap){requestAnimationFrame(scroll);return;}
+  // Pas top dynamisch aan op basis van header hoogte
+  var hdr=document.querySelector('.header');
+  if(hdr) wrap.style.top=hdr.offsetHeight+'px';
+  var max=inner.offsetHeight-wrap.offsetHeight;
   if(max<=0){requestAnimationFrame(scroll);return;}
-  el.scrollTop+=spd*dir;
-  var pos=el.scrollTop;
-  if(pos>=max-2){pf=250;dir=-1;}
-  else if(pos<=1&&dir===-1){pf=350;dir=1;}
+  scrollPos+=0.7*scrollDir;
+  if(scrollPos>=max){scrollPos=max;scrollPause=250;scrollDir=-1;}
+  else if(scrollPos<=0&&scrollDir===-1){scrollPos=0;scrollPause=350;scrollDir=1;}
+  inner.style.transform='translateY('+(-scrollPos)+'px)';
   requestAnimationFrame(scroll);
 }
 
