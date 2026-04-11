@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Wedstrijdkaart</title>
+
+<!-- Leaflet.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh; overflow: hidden;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    position: fixed;
+    top: 36px; left: 36px; right: 36px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 14px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  #header-logo-wrap {
+    height: 100px; width: 112px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  #header-logo-img { max-height: 100px; max-width: 112px; object-fit: contain; display: block; }
+  .hdr-logo-fb {
+    background: #2A3176; border-radius: 12px; width: 50px; height: 50px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hdr-logo-fb span { color: #9CD0C1; font-size: 0.58rem; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; }
+  .header-divider { width: 1px; height: 36px; background: #e5e5ea; flex-shrink: 0; }
+  .page-label { font-size: 3rem; font-weight: 800; color: #1d1d1f; letter-spacing: -0.5px; line-height: 1; }
+  .page-sub { font-size: 0.73rem; color: #86868b; font-weight: 500; margin-top: 3px; display: flex; align-items: center; gap: 6px; }
+  .nevobo-tag { display: inline-flex; align-items: center; gap: 4px; background: #f0f0f5; border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 600; color: #636366; }
+  .header-right { text-align: right; flex-shrink: 0; }
+  #datum { font-size: 0.9rem; font-weight: 600; color: #3a3a3c; }
+  .header-meta { margin-top: 4px; display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+  #count { background: #2A3176; color: white; font-size: 0.7rem; font-weight: 700; padding: 3px 11px; border-radius: 20px; }
+  #refresh-badge { display: inline-flex; align-items: center; gap: 5px; background: #f2f2f7; border-radius: 20px; padding: 3px 10px; font-size: 0.68rem; font-weight: 600; color: #636366; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #34c759; animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;}50%{opacity:0.35;} }
+
+  /* ── MAP ── */
+  #map {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+  }
+
+  /* ── LEAFLET OVERRIDES ── */
+  .leaflet-popup-content-wrapper {
+    border-radius: 18px !important;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.1) !important;
+    border: none !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    min-width: 300px;
+  }
+  .leaflet-popup-content { margin: 0 !important; }
+  .leaflet-popup-tip { background: white !important; }
+  .leaflet-popup-close-button { display: none !important; }
+
+  /* ── CUSTOM MARKER ── */
+  .map-marker {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    font-size: 0.55rem; font-weight: 900;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden;
+  }
+  .map-marker img { width: 46px; height: 46px; object-fit: contain; }
+  .map-marker.volevo { background: #2A3176; }
+  .map-marker.away { background: #aeaeb2; }
+  .map-marker.multi { background: #2A3176; }
+
+  /* Pulse animation for active marker */
+  .marker-pulse::after {
+    content: '';
+    position: absolute;
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: rgba(42,49,118,0.3);
+    animation: markerPulse 1.5s ease-out infinite;
+    top: -3px; left: -3px;
+  }
+  @keyframes markerPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  /* ── POPUP CARD ── */
+  .popup-card {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    background: white;
+    min-width: 320px; max-width: 400px;
+  }
+  .popup-venue {
+    background: #2A3176;
+    padding: 12px 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .popup-venue-icon { font-size: 1.1rem; }
+  .popup-venue-name { color: white; font-size: 0.85rem; font-weight: 700; }
+  .popup-venue-city { color: rgba(255,255,255,0.7); font-size: 0.72rem; font-weight: 500; }
+  .popup-match { padding: 14px 18px 10px; border-bottom: 1px solid #f2f2f7; }
+  .popup-match:last-child { border-bottom: none; }
+  .popup-time {
+    font-size: 0.72rem; font-weight: 700; color: #2A3176;
+    letter-spacing: 0.3px; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .popup-teams {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .popup-team {
+    display: flex; align-items: center; gap: 8px; flex: 1;
+  }
+  .popup-team.away { flex-direction: row-reverse; justify-content: flex-start; }
+  .popup-logo {
+    width: 40px; height: 40px; border-radius: 8px; overflow: hidden;
+    flex-shrink: 0; background: #f5f5f7;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .popup-logo img { width: 40px; height: 40px; object-fit: contain; }
+  .popup-logo-fb {
+    width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; font-weight: 800; color: white; background: #aeaeb2;
+    letter-spacing: 0.3px; text-transform: uppercase;
+  }
+  .popup-logo-fb.is-volevo { background: #2A3176; color: #9CD0C1; }
+  .popup-team-name {
+    font-size: 0.95rem; font-weight: 600; color: #3a3a3c; line-height: 1.2;
+  }
+  .popup-team-name.volevo { color: #2A3176; font-weight: 800; }
+  .popup-vs { font-size: 0.8rem; font-weight: 700; color: #d1d1d6; flex-shrink: 0; }
+  .popup-poule {
+    font-size: 0.68rem; color: #aeaeb2; font-weight: 600; margin-top: 6px;
+    padding-left: 48px;
+  }
+
+  /* ── MATCH COUNT BADGE (paginering) ── */
+  #page-badge {
+    position: fixed;
+    bottom: 32px; left: 50%; transform: translateX(-50%);
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 0.75rem; font-weight: 700;
+    color: #3a3a3c;
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    z-index: 999;
+    transition: opacity 0.3s;
+  }
+  .badge-dots { display: flex; gap: 5px; }
+  .badge-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #d1d1d6; transition: background 0.3s, transform 0.3s;
+  }
+  .badge-dot.active { background: #2A3176; transform: scale(1.3); }
+
+  /* ── GEEN WEDSTRIJDEN ── */
+  #no-matches {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 48px 60px;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  #no-matches .emoji { font-size: 3rem; margin-bottom: 12px; }
+  #no-matches h2 { font-size: 1.4rem; font-weight: 700; color: #1d1d1f; margin-bottom: 6px; }
+  #no-matches p { font-size: 0.9rem; color: #86868b; }
+
+  /* ── LOADING ── */
+  #loading-overlay {
+    position: fixed; inset: 0;
+    background: #f5f5f7;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2000;
+    transition: opacity 0.5s;
+  }
+  .loading-inner { text-align: center; }
+  .loading-spinner {
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 3px solid #e5e5ea;
+    border-top-color: #2A3176;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { font-size: 0.9rem; font-weight: 600; color: #86868b; }
+</style>
+</head>
+<body>
+
+<!-- Loading overlay -->
+<div id="loading-overlay">
+  <div class="loading-inner">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Wedstrijden laden…</div>
+  </div>
+</div>
+
+<!-- Map -->
+<div id="map"></div>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-left">
+    <div id="header-logo-wrap">
+      <img id="header-logo-img"
+        src="https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg"
+        alt="Volevo" onerror="hdrFail()">
+    </div>
+    <div class="header-divider"></div>
+    <div>
+      <div class="page-label">Speelkaart</div>
+      <div class="page-sub">
+        <span id="datum">–</span>
+        <span class="nevobo-tag">
+          <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+            <circle cx="5" cy="5" r="4" stroke="#636366" stroke-width="1.3"/>
+            <path d="M5 2.5v2.5l1.5 1" stroke="#636366" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Nevobo live
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div id="datum-right" style="font-size:0.9rem;font-weight:600;color:#3a3a3c;"></div>
+    <div class="header-meta">
+      <div id="count">laden...</div>
+      <div id="refresh-badge"><div class="dot"></div><span id="refresh-text">laden…</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Page indicator -->
+<div id="page-badge" style="display:none">
+  <div class="badge-dots" id="badge-dots"></div>
+</div>
+
+<!-- No matches message -->
+<div id="no-matches">
+  <div class="emoji">📅</div>
+  <h2>Geen wedstrijden vandaag</h2>
+  <p>Er staan vandaag geen VOLEVO-wedstrijden gepland.</p>
+</div>
+
+<script>
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function hdrFail() {
+  var w = document.getElementById('header-logo-wrap');
+  if (w) w.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+}
+function iv(n) { return n && n.toUpperCase().indexOf('VOLEVO') !== -1; }
+function isToday(ds) {
+  var d = new Date(ds), n = new Date();
+  return d.getFullYear()===n.getFullYear()&&d.getMonth()===n.getMonth()&&d.getDate()===n.getDate();
+}
+function ft(ds) {
+  var d = new Date(ds);
+  return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+}
+function fd(d) {
+  var dy=['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+  var mo=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+  return dy[d.getDay()]+' '+d.getDate()+' '+mo[d.getMonth()]+' '+d.getFullYear();
+}
+function getNsText(item, local) {
+  var els = item.getElementsByTagNameNS('*', local);
+  return els.length ? els[0].textContent.trim() : '';
+}
+
+// Club code lookup
+var CLUB_CODES = {
+  'VOLEVO':'CNZ6B97','Castellum':'CKL9Q2V','Inter Rijswijk':'CKL9K7I',
+  'VVV Delta':'CKL9M9Q','VC Olympia':'CKM0H2G','Leython DC':'CKL9Q4X',
+  'Ancora RVV':'CKL9R1X','VV Utrecht':'CKL9X3J','VC WIK Groot-Ammers':'CKM1J1A',
+  'Zovoc':'CKL9N3N',"Kratos '08":'CKN1S6F','Kalinko':'CKL9K5G',
+  'Punch':'CKL9M4L','Dinto':'CKL6Y59','AVV Keistad':'CKL7S2R',
+  'Netwerk':'CKL9M3K','VollinGo':'CKL9P5V','VSTS':'CKL9P3T','VCO':'CKL9R75'
+};
+function getClubCode(name) {
+  if (!name) return null;
+  if (iv(name)) return 'CNZ6B97';
+  if (CLUB_CODES[name]) return CLUB_CODES[name];
+  var base = name.replace(/\s+(MA|MB|MC|DS|HS|JO|JB|JC|JD|JE|MO|JA)\s*\d*\s*$/i,'').trim();
+  return CLUB_CODES[base] || null;
+}
+function initials(name) {
+  return (name||'').trim().split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).slice(0,2).map(w=>w[0].toUpperCase()).join('');
+}
+
+// Build a club logo element (img or fallback initials)
+function logoHtml(code, name, isVol, size) {
+  size = size || 40;
+  if (code) {
+    var id='pl'+Math.random().toString(36).slice(2,6);
+    return '<div class="popup-logo"><img src="https://assets.nevobo.nl/organisatie/logo/'+code+'.jpg" '+
+      'width="'+size+'" height="'+size+'" style="object-fit:contain" '+
+      'onerror="this.parentElement.outerHTML=\'<div class=&quot;popup-logo-fb'+(isVol?' is-volevo':'')+
+      '&quot;>'+initials(name)+'</div>\'" loading="eager"></div>';
+  }
+  return '<div class="popup-logo-fb'+(isVol?' is-volevo':'')+'">'+initials(name)+'</div>';
+}
+
+// Parse location from description
+function parseLocation(desc) {
+  var sp = desc.match(/Speellocatie:\s*([^,\r\n<]+)/i);
+  var venue = sp ? sp[1].trim() : '';
+  // Extract postal code + city
+  var addrMatch = desc.match(/(\d{4}\s*[A-Z]{2})\s{1,3}([A-Za-z'\-\. ]{2,40}?)(?:\s*<|,|\r|\n|$)/);
+  var postal = addrMatch ? addrMatch[1].replace(/\s/,'') : '';
+  var city = addrMatch ? addrMatch[2].trim() : '';
+  // Clean city (remove trailing punctuation/spaces)
+  city = city.replace(/[,\.]+$/, '').trim();
+  return { venue: venue, postal: postal, city: city };
+}
+
+// ── Nominatim geocoding cache ─────────────────────────────────────────────
+var geoCache = {};
+async function geocode(postal, city) {
+  var key = postal || city;
+  if (geoCache[key]) return geoCache[key];
+  // Try postal code first, fall back to city name
+  var queries = postal ? [postal + ', Nederland', city + ', Nederland'] : [city + ', Nederland'];
+  for (var i = 0; i < queries.length; i++) {
+    try {
+      var url = 'https://nominatim.openstreetmap.org/search?q=' +
+        encodeURIComponent(queries[i]) + '&format=json&limit=1&countrycodes=nl';
+      var r = await fetch(url, { headers: { 'Accept-Language': 'nl' }, signal: AbortSignal.timeout(5000) });
+      var j = await r.json();
+      if (j && j.length > 0) {
+        var coords = { lat: parseFloat(j[0].lat), lng: parseFloat(j[0].lon), display: j[0].display_name };
+        geoCache[key] = coords;
+        return coords;
+      }
+    } catch(e) {}
+    // Wait 1 second between Nominatim requests (rate limit)
+    if (i < queries.length - 1) await new Promise(res => setTimeout(res, 1100));
+  }
+  return null;
+}
+
+// ── RSS ───────────────────────────────────────────────────────────────────
+var RSS_URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
+var REFRESH_MS = 5 * 60 * 1000;
+var lastUpdated = null;
+
+async function fetchRSS() {
+  var proxies = [
+    RSS_URL,
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(RSS_URL),
+    'https://corsproxy.io/?' + encodeURIComponent(RSS_URL)
+  ];
+  for (var i = 0; i < proxies.length; i++) {
+    try {
+      var r = await fetch(proxies[i]);
+      if (!r.ok) continue;
+      var t = await r.text();
+      if (t && t.indexOf('<item>') !== -1) return new DOMParser().parseFromString(t,'text/xml');
+    } catch(e) {}
+  }
+  throw new Error('Feed niet beschikbaar');
+}
+
+function timeAgo(ts) {
+  if (!ts) return '–';
+  var m = Math.floor((Date.now()-ts)/60000);
+  if (m < 1) return 'zojuist';
+  if (m === 1) return '1 min. geleden';
+  return m + ' min. geleden';
+}
+
+// ── Leaflet map init ──────────────────────────────────────────────────────
+var map = L.map('map', {
+  zoomControl: false,
+  attributionControl: false,
+  dragging: false,
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  boxZoom: false,
+  keyboard: false,
+  tap: false
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  maxZoom: 18
+}).addTo(map);
+
+// Netherlands bounds
+map.setView([52.35, 5.35], 7);
+
+// ── Marker + popup cycling ───────────────────────────────────────────────
+var markers = [];
+var cycleIndex = 0;
+var cycleTimer = null;
+var CYCLE_MS = 6000; // 6 seconds per location
+
+function buildPopupHtml(venue, city, matches) {
+  var html = '<div class="popup-card">';
+  // Venue header
+  html += '<div class="popup-venue">';
+  html += '<div class="popup-venue-icon">📍</div>';
+  html += '<div><div class="popup-venue-name">' + (venue||'Onbekende locatie') + '</div>';
+  if (city) html += '<div class="popup-venue-city">' + city + '</div>';
+  html += '</div></div>';
+  // Each match
+  matches.forEach(function(m) {
+    var hVol = iv(m.home), aVol = iv(m.away);
+    var hCode = getClubCode(m.home);
+    var aCode = getClubCode(m.away);
+    html += '<div class="popup-match">';
+    html += '<div class="popup-time">🕐 ' + ft(m.time) + '</div>';
+    html += '<div class="popup-teams">';
+    html += '<div class="popup-team">' + logoHtml(hCode, m.home, hVol, 40);
+    html += '<div class="popup-team-name'+(hVol?' volevo':'')+'">'+m.home+'</div></div>';
+    html += '<div class="popup-vs">vs</div>';
+    html += '<div class="popup-team away"><div class="popup-team-name'+(aVol?' volevo':'')+'">'+m.away+'</div>';
+    html += logoHtml(aCode, m.away, aVol, 40) + '</div>';
+    html += '</div>';
+    if (m.poule) html += '<div class="popup-poule">' + m.poule + '</div>';
+    html += '</div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+function createMarker(lat, lng, venue, city, matches) {
+  var hasVolevo = matches.some(function(m){ return iv(m.home) || iv(m.away); });
+  var cls = 'map-marker ' + (hasVolevo ? 'volevo' : 'away');
+  var count = matches.length > 1 ? '<div style="position:absolute;top:-4px;right:-4px;background:#ff3b30;color:white;border-radius:50%;width:18px;height:18px;font-size:0.6rem;font-weight:900;display:flex;align-items:center;justify-content:center;border:2px solid white;">'+matches.length+'</div>' : '';
+  var icon = L.divIcon({
+    html: '<div style="position:relative"><div class="'+cls+'"><img src="https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg" onerror="this.outerHTML=\'<span style=font-weight:900;font-size:0.65rem>VV</span>\'" style="width:40px;height:40px;object-fit:contain;border-radius:50%"></div>'+count+'</div>',
+    className: '',
+    iconSize: [52, 52],
+    iconAnchor: [26, 26],
+    popupAnchor: [0, -30]
+  });
+
+  var marker = L.marker([lat, lng], { icon: icon });
+  var popup = L.popup({
+    maxWidth: 420,
+    minWidth: 320,
+    autoPan: true,
+    autoPanPaddingTopLeft: [60, 180],
+    autoPanPaddingBottomRight: [60, 80],
+    closeButton: false,
+    autoClose: false,
+    closeOnClick: false,
+    closeOnEscapeKey: false
+  }).setContent(buildPopupHtml(venue, city, matches));
+
+  marker.bindPopup(popup);
+  marker.addTo(map);
+  return marker;
+}
+
+function updateDots() {
+  var dots = document.getElementById('badge-dots');
+  if (!dots) return;
+  dots.innerHTML = '';
+  markers.forEach(function(_, i) {
+    var d = document.createElement('div');
+    d.className = 'badge-dot' + (i === cycleIndex ? ' active' : '');
+    dots.appendChild(d);
+  });
+}
+
+function cycleTo(index) {
+  if (!markers.length) return;
+  if (cycleTimer) clearTimeout(cycleTimer);
+  // Close previous
+  markers.forEach(function(m) { m.closePopup(); });
+  // Remove pulse from all markers
+  document.querySelectorAll('.map-marker').forEach(function(el){ el.classList.remove('marker-pulse'); });
+
+  cycleIndex = index % markers.length;
+  var m = markers[cycleIndex];
+  map.setView(m.getLatLng(), 11, { animate: true, duration: 1.2 });
+  setTimeout(function() {
+    m.openPopup();
+    // Add pulse to active marker icon
+    var iconEl = m.getElement();
+    if (iconEl) {
+      var inner = iconEl.querySelector('.map-marker');
+      if (inner) inner.classList.add('marker-pulse');
+    }
+  }, 500);
+  updateDots();
+  cycleTimer = setTimeout(function(){ cycleTo(cycleIndex + 1); }, CYCLE_MS);
+}
+
+// ── Main load ─────────────────────────────────────────────────────────────
+async function loadData() {
+  try {
+    var xml = await fetchRSS();
+    document.getElementById('datum').textContent = fd(new Date());
+    document.getElementById('datum-right').textContent = fd(new Date());
+
+    // Parse today's upcoming matches
+    var todayMatches = [];
+    xml.querySelectorAll('item').forEach(function(item) {
+      var title = (item.querySelector('title')||{}).textContent||'';
+      var pub = (item.querySelector('pubDate')||{}).textContent||'';
+      var desc = (item.querySelector('description')||{}).textContent||'';
+      var status = getNsText(item, 'status');
+      var poule = getNsText(item, 'poule') || (desc.match(/Poule:\s*([^\r\n,<]+)/i)||[])[1] || '';
+      if (status === 'vervallen' || !isToday(pub)) return;
+      var played = title.indexOf(', Uitslag:') !== -1;
+      if (played) return; // Only upcoming
+      if (/VOLEVO\s+N\d/i.test(title)) return;
+
+      // Parse teams
+      var ci = title.indexOf(': ');
+      var teams = ci !== -1 ? title.substring(ci+2) : title;
+      teams = teams.replace(/,\s*\d{1,2}:\d{2}$/, '').trim();
+      var di = teams.indexOf(' - ');
+      var home = di !== -1 ? teams.substring(0,di).trim() : teams;
+      var away = di !== -1 ? teams.substring(di+3).trim() : '';
+      var loc = parseLocation(desc);
+
+      todayMatches.push({
+        time: pub, home: home, away: away, poule: poule.trim(),
+        venue: loc.venue, postal: loc.postal, city: loc.city
+      });
+    });
+
+    todayMatches.sort(function(a,b){ return new Date(a.time)-new Date(b.time); });
+
+    var countEl = document.getElementById('count');
+    if (!todayMatches.length) {
+      countEl.textContent = '0 wedstrijden';
+      document.getElementById('no-matches').style.display = 'block';
+      hideLoading();
+      return;
+    }
+    countEl.textContent = todayMatches.length + ' wedstrijd' + (todayMatches.length!==1?'en':'');
+
+    // Group by venue key
+    var venueMap = {};
+    todayMatches.forEach(function(m) {
+      var key = (m.postal || m.city || m.venue || 'onbekend').toLowerCase();
+      if (!venueMap[key]) venueMap[key] = { venue: m.venue, postal: m.postal, city: m.city, matches: [] };
+      venueMap[key].matches.push(m);
+    });
+
+    // Geocode all unique locations (sequential, Nominatim rate limit)
+    var venues = Object.values(venueMap);
+    document.querySelector('.loading-text').textContent = 'Locaties zoeken…';
+
+    var geocoded = [];
+    for (var i = 0; i < venues.length; i++) {
+      var v = venues[i];
+      var coords = await geocode(v.postal, v.city);
+      if (coords) {
+        geocoded.push({ coords: coords, venue: v.venue, city: v.city, matches: v.matches });
+      }
+      // Stagger Nominatim requests
+      if (i < venues.length-1) await new Promise(res => setTimeout(res, 1200));
+    }
+
+    // Remove old markers
+    markers.forEach(function(m){ map.removeLayer(m); });
+    markers = [];
+
+    // Build markers
+    geocoded.forEach(function(g) {
+      var m = createMarker(g.coords.lat, g.coords.lng, g.venue, g.city, g.matches);
+      markers.push(m);
+    });
+
+    // Fit map to markers
+    if (markers.length > 0) {
+      var group = L.featureGroup(markers);
+      var bounds = group.getBounds().pad(0.3);
+      // Clamp to Netherlands
+      map.fitBounds(bounds, { maxZoom: 11, animate: false });
+    }
+
+    // Show dots
+    if (markers.length > 1) {
+      var pageBadge = document.getElementById('page-badge');
+      pageBadge.style.display = 'flex';
+    }
+
+    lastUpdated = Date.now();
+    document.getElementById('refresh-text').textContent = timeAgo(lastUpdated);
+    hideLoading();
+
+    // Start cycling after a brief pause
+    setTimeout(function(){ cycleTo(0); }, 1500);
+
+  } catch(e) {
+    document.getElementById('count').textContent = 'fout';
+    document.querySelector('.loading-text').textContent = 'Fout: ' + e.message;
+    setTimeout(hideLoading, 3000);
+  }
+}
+
+function hideLoading() {
+  var overlay = document.getElementById('loading-overlay');
+  overlay.style.opacity = '0';
+  setTimeout(function(){ overlay.style.display = 'none'; }, 500);
+}
+
+setInterval(function(){
+  document.getElementById('refresh-text').textContent = timeAgo(lastUpdated);
+}, 30000);
+
+// Reload every 5 minutes
+setInterval(function(){
+  if (cycleTimer) clearTimeout(cycleTimer);
+  markers.forEach(function(m){ map.removeLayer(m); });
+  markers = [];
+  document.getElementById('loading-overlay').style.opacity = '1';
+  document.getElementById('loading-overlay').style.display = 'flex';
+  document.querySelector('.loading-text').textContent = 'Wedstrijden laden…';
+  loadData();
+}, REFRESH_MS);
+
+loadData();
+</script>
+</body>
+</html>
