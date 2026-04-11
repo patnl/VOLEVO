@@ -219,6 +219,37 @@ function initialsHtml(name, isVol) {
   return '<div class="row-logo-fb'+(isVol?' is-volevo':'')+'">'+ini+'</div>';
 }
 
+// Statische clubcode-tabel — alle tegenstanders van VOLEVO (seizoen 2025-2026)
+var CLUB_CODES = {
+  'VOLEVO':               'CNZ6B97',
+  'Castellum':            'CKL9Q2V',
+  'Inter Rijswijk':       'CKL9K7I',
+  'VVV Delta':            'CKL9M9Q',
+  'VC Olympia':           'CKM0H2G',
+  'Leython DC':           'CKL9Q4X',
+  'Ancora RVV':           'CKL9R1X',
+  'VV Utrecht':           'CKL9X3J',
+  'VC WIK Groot-Ammers':  'CKM1J1A',
+  'Zovoc':                'CKL9N3N',
+  "Kratos '08":           'CKN1S6F',
+  'Kalinko':              'CKL9K5G',
+  'Punch':                'CKL9M4L',
+  'Dinto':                'CKL6Y59',
+  'AVV Keistad':          'CKL7S2R',
+  'Netwerk':              'CKL9M3K',
+  'VollinGo':             'CKL9P5V',
+  'VSTS':                 'CKL9P3T',
+  'VCO':                  'CKL9R75'
+};
+// Strip ploeg-suffix (bijv. "MB 2", "MA 1") en zoek clubcode op
+function getClubCode(name) {
+  if (!name) return null;
+  if (iv(name)) return 'CNZ6B97';
+  if (CLUB_CODES[name]) return CLUB_CODES[name];
+  var base = name.replace(/\s+(MA|MB|MC|DS|HS|JO|JB|JC|JD|JE|MO|JA)\s*\d*\s*$/i, '').trim();
+  return CLUB_CODES[base] || null;
+}
+
 function iv(n) { return n && n.toUpperCase().indexOf('VOLEVO') !== -1; }
 function isToday(ds) {
   var d=new Date(ds), n=new Date();
@@ -387,17 +418,14 @@ async function loadData() {
       var away = di!==-1 ? tp.substring(di+3).trim() : '';
       var sm = desc.match(/Setstanden:\s*([^\r\n<]+)/i);
       var sets = sm ? sm[1].trim() : '';
+      // Stap 1: opzoeken in statische clubcode-tabel (direct, geen extra request)
+      var homeCode = getClubCode(home);
+      var awayCode = getClubCode(away);
+
       var linkEl = item.querySelector('link');
       var linkUrl = linkEl ? (linkEl.textContent||linkEl.innerHTML||'') : '';
 
-      // Stap 1: probeer nevobo-naamruimte-elementen
-      var homeCode = null, awayCode = null;
-      var nsH = getNsText(item,'thuisvereniging') || getNsText(item,'thuisclub') || getNsText(item,'thuisclubcode');
-      var nsA = getNsText(item,'uitvereniging')   || getNsText(item,'uitclub')   || getNsText(item,'uitclubcode');
-      if (nsH) homeCode = nsH.toUpperCase();
-      if (nsA) awayCode = nsA.toUpperCase();
-
-      // Stap 2: probeer regex op link URL (werkt bij volleybal.nl URLs)
+      // Stap 2: probeer regex op link URL (werkt als volleybal.nl URL)
       if (!homeCode || !awayCode) {
         var mc = linkUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
         if (mc) { homeCode=mc[1].toUpperCase(); awayCode=mc[2].toUpperCase(); }
