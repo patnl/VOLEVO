@@ -18,9 +18,8 @@
   /* HEADER */
   .header {
     background: rgba(255,255,255,0.88);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    /* backdrop-filter verwijderd: niet ondersteund in Yodeck Chromium */
+    border-bottom: 1px solid rgba(0,0,0,0.10);
     padding: 14px 32px;
     display: flex; align-items: center; justify-content: space-between;
     position: sticky; top: 0; z-index: 10;
@@ -67,10 +66,30 @@
   .content { padding: 22px 28px 40px; max-width: 1400px; margin: 0 auto; }
   .loading, .no-results { text-align: center; padding: 80px 40px; color: #86868b; font-size: 1rem; }
 
+  .section-label {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: #aeaeb2; padding: 6px 4px 10px; margin-top: 6px;
+  }
+
   /* MATCH CARD */
   .match-card {
     background: white; border-radius: 16px; margin-bottom: 10px; overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
+    transition: transform 0.65s cubic-bezier(0.34,1.15,0.64,1),
+                box-shadow 0.55s ease,
+                opacity 0.45s ease;
+    transform-origin: center;
+    position: relative;
+  }
+  .match-card.focused {
+    transform: scale(1.028);
+    box-shadow: 0 16px 48px rgba(42,49,118,0.13), 0 4px 14px rgba(0,0,0,0.08);
+    opacity: 1 !important;
+    z-index: 3;
+  }
+  .match-card.dimmed {
+    opacity: 0.32;
+    transform: scale(0.983);
   }
 
   .card-main {
@@ -100,6 +119,10 @@
     padding: 18px 10px; border-right: 1px solid #f2f2f7;
   }
   .match-time { font-size: 1.6rem; font-weight: 700; color: #86868b; font-variant-numeric: tabular-nums; }
+  .day-tag {
+    display: block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.8px;
+    text-transform: uppercase; color: #aeaeb2; line-height: 1; margin-bottom: 3px;
+  }
 
   .team-col { display: flex; align-items: center; padding: 18px 16px; gap: 14px; }
   .team-col.home { justify-content: flex-end; flex-direction: row-reverse; }
@@ -251,9 +274,32 @@ function getClubCode(name) {
 }
 
 function iv(n) { return n && n.toUpperCase().indexOf('VOLEVO') !== -1; }
-function isToday(ds) {
-  var d=new Date(ds), n=new Date();
-  return d.getFullYear()===n.getFullYear()&&d.getMonth()===n.getMonth()&&d.getDate()===n.getDate();
+
+var DAG = ['zo','ma','di','wo','do','vr','za'];
+function timeHtml(ds) {
+  var d = new Date(ds), n = new Date();
+  var isToday = d.getFullYear()===n.getFullYear() && d.getMonth()===n.getMonth() && d.getDate()===n.getDate();
+  var time = String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+  return (isToday ? '' : '<span class="day-tag">'+DAG[d.getDay()]+'</span>') + time;
+}
+
+// Geeft de zaterdag van het relevante competitieweekend terug (midnight)
+function getWeekendSaturday() {
+  var now = new Date(); now.setHours(0,0,0,0);
+  var day = now.getDay(), sat = new Date(now); // 0=zo,1=ma,...,6=za
+  if      (day === 0) sat.setDate(now.getDate() - 1);       // zondag → gisteren
+  else if (day === 6) { /* zaterdag → vandaag */ }
+  else if (day <= 3)  sat.setDate(now.getDate() - (day+1)); // ma/di/wo → afgelopen zat
+  else                sat.setDate(now.getDate() + (6-day)); // do/vr → komende zat
+  return sat;
+}
+function isThisWeekend(ds) {
+  if (!ds) return false;
+  var d = new Date(ds); d.setHours(0,0,0,0);
+  var sat = getWeekendSaturday();
+  var sun = new Date(sat); sun.setDate(sat.getDate()+1);
+  var t = d.getTime();
+  return t === sat.getTime() || t === sun.getTime();
 }
 function ft(ds) {
   var d=new Date(ds);
@@ -353,20 +399,43 @@ async function resolveClubCodes(linkUrl) {
   return null;
 }
 
-function render(matches, isToday) {
-  document.getElementById('datum').textContent = fd(new Date());
+// Selecteer max N wedstrijden die het dichtst bij het huidige tijdstip liggen
+function closestToNow(matches, max) {
+  var now = Date.now();
+  var scored = matches.map(function(m) {
+    return { m: m, diff: Math.abs(new Date(m.time).getTime() - now) };
+  });
+  scored.sort(function(a,b){ return a.diff - b.diff; });
+  var sub = scored.slice(0, max).map(function(s){ return s.m; });
+  sub.sort(function(a,b){ return new Date(a.time) - new Date(b.time); });
+  return sub;
+}
+
+var MAX_VISIBLE = 5;
+
+function render(matches) {
+  var sat = getWeekendSaturday();
+  var sun = new Date(sat); sun.setDate(sat.getDate()+1);
+  var mos = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+  document.getElementById('datum').textContent =
+    'za '+sat.getDate()+' & zo '+sun.getDate()+' '+mos[sat.getMonth()]+' '+sat.getFullYear();
   var container = document.getElementById('results');
   var count = document.getElementById('count');
   if (!matches.length) {
-    container.innerHTML = '<div class="no-results">Geen uitslagen beschikbaar</div>';
+    container.innerHTML = '<div class="no-results">Geen uitslagen dit weekend</div>';
     count.textContent = '0 uitslagen'; return;
   }
-  count.textContent = matches.length + ' uitslag' + (matches.length!==1?'en':'');
-  // Toon een banner als dit niet van vandaag is
-  var html = !isToday
-    ? '<div style="text-align:center;padding:10px 20px 4px;font-size:0.72rem;font-weight:600;color:#aeaeb2;letter-spacing:0.3px;">Laatste bekende uitslagen van ' + fd(new Date(matches[0].time)) + '</div>'
-    : '';
-  matches.forEach(function(m) {
+  // Beperk tot MAX_VISIBLE rondom huidig tijdstip
+  var visible = matches.length > MAX_VISIBLE ? closestToNow(matches, MAX_VISIBLE) : matches;
+  count.textContent = visible.length + (matches.length > MAX_VISIBLE ? '/'+matches.length : '') +
+    ' uitslag' + (visible.length !== 1 ? 'en' : '');
+
+  // Groepeer per dag (zaterdag / zondag)
+  var bySat = visible.filter(function(m){ var d=new Date(m.time); d.setHours(0,0,0,0); return d.getTime()===sat.getTime(); });
+  var bySun = visible.filter(function(m){ var d=new Date(m.time); d.setHours(0,0,0,0); return d.getTime()===sun.getTime(); });
+  var html = '';
+
+  function addCard(m) {
     var wc = winClass(m.score);
     var cls = 'match-card' + (wc ? ' ' + wc : '');
     var hVol = iv(m.home), aVol = iv(m.away);
@@ -375,7 +444,7 @@ function render(matches, isToday) {
     html += '<div class="' + cls + '">' +
       '<div class="card-main">' +
         '<div class="accent-bar"></div>' +
-        '<div class="match-time-col"><div class="match-time">' + ft(m.time) + '</div></div>' +
+        '<div class="match-time-col"><div class="match-time">' + timeHtml(m.time) + '</div></div>' +
         '<div class="team-col home">' +
           clubLogoHtml(hCode, m.home, hVol) +
           '<div class="team-name' + (hVol ? ' volevo' : '') + '">' + m.home + '</div>' +
@@ -392,8 +461,26 @@ function render(matches, isToday) {
       '</div>' +
       (m.poule ? '<div class="card-competition">' + m.poule + '</div>' : '') +
     '</div>';
+  }
+
+  if (bySat.length) {
+    html += '<div class="section-label">Zaterdag</div>';
+    bySat.forEach(addCard);
+  }
+  if (bySun.length) {
+    html += '<div class="section-label">Zondag</div>';
+    bySun.forEach(addCard);
+  }
+  // Fallback: wedstrijden die niet op zat/zon vallen (bijv. weekdag-speeldag)
+  var other = visible.filter(function(m){
+    var d=new Date(m.time); d.setHours(0,0,0,0);
+    return d.getTime()!==sat.getTime() && d.getTime()!==sun.getTime();
   });
+  if (other.length) { other.forEach(addCard); }
+
   container.innerHTML = html;
+  matchTimes = visible.map(function(m){ return m.time; });
+  startSpotlight();
 }
 
 async function loadData() {
@@ -437,18 +524,18 @@ async function loadData() {
     });
     allMatches.sort(function(a,b){ return new Date(a.time)-new Date(b.time); });
 
-    // Bepaal welke wedstrijden getoond worden
-    var todayMatches = allMatches.filter(function(m){ return isToday(m.time); });
-    var toShow, showIsToday;
-    if (todayMatches.length > 0) {
-      toShow = todayMatches; showIsToday = true;
+    // Bepaal welke wedstrijden getoond worden: heel weekend (zat+zon)
+    var weekendMatches = allMatches.filter(function(m){ return isThisWeekend(m.time); });
+    var toShow;
+    if (weekendMatches.length > 0) {
+      toShow = weekendMatches;
     } else if (allMatches.length > 0) {
+      // Geen weekend-matches: toon de meest recente dag als fallback
       var latestDate = new Date(allMatches[allMatches.length-1].time);
       var latestDay = latestDate.toDateString();
       toShow = allMatches.filter(function(m){ return new Date(m.time).toDateString()===latestDay; });
-      showIsToday = false;
     } else {
-      render([], true); return;
+      render([]); return;
     }
 
     // Stap 3: los ontbrekende clubcodes asynchroon op via allorigins.win (parallel)
@@ -461,7 +548,7 @@ async function loadData() {
     }));
 
     lastUpdated = Date.now();
-    render(resolved, showIsToday);
+    render(resolved);
     updateBadge();
   } catch(e) {
     document.getElementById('results').innerHTML =
@@ -471,32 +558,60 @@ async function loadData() {
 
 setInterval(updateBadge, 30000);
 
-// Tijdsgebaseerde scroll — zelfde snelheid op 60fps (browser) én 30fps (Yodeck)
-var SCROLL_PPS = 60; // pixels per seconde
-var scrollPos=0, scrollDir=1, scrollPause=0, scrollLast=null;
-function scroll(ts){
-  if(!ts){ requestAnimationFrame(scroll); return; } // setTimeout geeft geen ts mee
-  if(scrollLast===null) scrollLast=ts;
-  var dt=Math.min(ts-scrollLast, 100); // max 100ms stap (tab-switch bescherming)
-  scrollLast=ts;
-  if(scrollPause>0){scrollPause-=dt;requestAnimationFrame(scroll);return;}
-  var inner=document.getElementById('scroll-inner');
-  var wrap=document.getElementById('scroll-wrap');
-  if(!inner||!wrap){requestAnimationFrame(scroll);return;}
-  var hdr=document.querySelector('.header');
-  if(hdr) wrap.style.top=hdr.offsetHeight+'px';
-  var max=inner.offsetHeight-wrap.offsetHeight;
-  if(max<=0){requestAnimationFrame(scroll);return;}
-  scrollPos+=(SCROLL_PPS*dt/1000)*scrollDir;
-  if(scrollPos>=max){scrollPos=max;scrollPause=3000;scrollDir=-1;}
-  else if(scrollPos<=0&&scrollDir===-1){scrollPos=0;scrollPause=4000;scrollDir=1;}
-  inner.style.transform='translateY('+(-scrollPos)+'px)';
-  requestAnimationFrame(scroll);
+// ── Spotlight: zoom-in per kaart, start bij wedstrijd dichtst bij nu ──
+var SPOT_MS   = 3500;  // ms per kaart
+var spotIdx   = -1;
+var spotTimer = null;
+var matchTimes = [];   // gevuld door render()
+
+// Zoek startkaart: de uitslag met starttijd het dichtst bij now
+function findStartIdx() {
+  if (!matchTimes.length) return 0;
+  var now = Date.now();
+  var best = 0, bestDiff = Infinity;
+  matchTimes.forEach(function(t, i) {
+    var diff = Math.abs(new Date(t).getTime() - now);
+    if (diff < bestDiff) { bestDiff = diff; best = i; }
+  });
+  return best;
+}
+
+function doSpotlight() {
+  var cards = document.querySelectorAll('.match-card');
+  if (!cards.length) { spotTimer = setTimeout(doSpotlight, 800); return; }
+
+  spotIdx = (spotIdx + 1) % cards.length;
+
+  cards.forEach(function(c, i) {
+    c.classList.remove('focused', 'dimmed');
+    c.classList.add(i === spotIdx ? 'focused' : 'dimmed');
+  });
+
+  // Scroll zodat focused kaart gecentreerd is in de viewport
+  var focused = cards[spotIdx];
+  var inner = document.getElementById('scroll-inner');
+  var wrap  = document.getElementById('scroll-wrap');
+  if (inner && wrap && focused) {
+    var hdr = document.querySelector('.header');
+    if (hdr) wrap.style.top = (hdr.offsetTop + hdr.offsetHeight) + 'px';
+    var target = Math.round(focused.offsetTop + focused.offsetHeight / 2 - wrap.offsetHeight / 2);
+    target = Math.max(0, Math.min(target, inner.offsetHeight - wrap.offsetHeight));
+    inner.style.transition = 'transform 0.75s cubic-bezier(0.4,0,0.2,1)';
+    inner.style.transform  = 'translateY(' + (-target) + 'px)';
+  }
+
+  spotTimer = setTimeout(doSpotlight, SPOT_MS);
+}
+
+function startSpotlight() {
+  if (spotTimer) clearTimeout(spotTimer);
+  // Begin 1 stap vóór de startkaart zodat de eerste doSpotlight() de juiste kaart toont
+  spotIdx = findStartIdx() - 1;
+  spotTimer = setTimeout(doSpotlight, 1800);
 }
 
 loadData();
 setInterval(loadData, REFRESH_MS);
-setTimeout(scroll, 3000);
 </script>
 </body>
 </html>
