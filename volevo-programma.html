@@ -499,10 +499,9 @@ function render(matches) {
     return;
   }
 
-  // Beperk tot MAX_VISIBLE rondom huidig tijdstip
-  var visible = upcoming.length > MAX_VISIBLE ? closestToNow(upcoming, MAX_VISIBLE) : upcoming;
-  count.textContent = visible.length + (upcoming.length > MAX_VISIBLE ? '/'+upcoming.length : '') +
-    ' wedstrijd' + (visible.length !== 1 ? 'en' : '');
+  // Toon ALLE wedstrijden — de scroller scrollt er vanzelf doorheen
+  var visible = upcoming;
+  count.textContent = visible.length + ' wedstrijd' + (visible.length !== 1 ? 'en' : '');
 
   // Groepeer per dag
   var bySat = visible.filter(function(m){ var d=new Date(m.time); d.setHours(0,0,0,0); return d.getTime()===sat.getTime(); });
