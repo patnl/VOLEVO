@@ -23,9 +23,8 @@
   .header {
     position: fixed;
     top: 36px; left: 36px; right: 36px;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.97);
+    /* backdrop-filter verwijderd: niet ondersteund in Yodeck Chromium */
     border-radius: 14px;
     border-bottom: 1px solid rgba(0,0,0,0.08);
     padding: 14px 28px;
@@ -303,6 +302,9 @@
 </div>
 
 <script>
+// ── DEMO_MODE moet als eerste gedeclareerd worden ─────────────────────────────
+var DEMO_MODE = new URLSearchParams(window.location.search).has('demo');
+
 // ── Helpers ──────────────────────────────────────────────────────────────────
 if (DEMO_MODE) {
   document.getElementById('demo-banner').style.display = 'block';
@@ -450,7 +452,7 @@ async function geocode(postal, city) {
 var RSS_URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
 var REFRESH_MS = 5 * 60 * 1000;
 var lastUpdated = null;
-var DEMO_MODE = new URLSearchParams(window.location.search).has('demo');
+// DEMO_MODE al gedeclareerd bovenaan script
 
 async function fetchRSS() {
   var proxies = [
