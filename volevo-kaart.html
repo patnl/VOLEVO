@@ -297,8 +297,8 @@
 <!-- No matches message -->
 <div id="no-matches">
   <div class="emoji">📅</div>
-  <h2>Geen wedstrijden vandaag</h2>
-  <p>Er staan vandaag geen VOLEVO-wedstrijden gepland.</p>
+  <h2>Geen wedstrijden gepland</h2>
+  <p>Er staan momenteel geen VOLEVO-wedstrijden in de planning.</p>
 </div>
 
 <script>
@@ -320,6 +320,9 @@ function iv(n) { return n && n.toUpperCase().indexOf('VOLEVO') !== -1; }
 function isToday(ds) {
   var d = new Date(ds), n = new Date();
   return d.getFullYear()===n.getFullYear()&&d.getMonth()===n.getMonth()&&d.getDate()===n.getDate();
+}
+function isSameDay(d1, d2) {
+  return d1.getFullYear()===d2.getFullYear()&&d1.getMonth()===d2.getMonth()&&d1.getDate()===d2.getDate();
 }
 function ft(ds) {
   var d = new Date(ds);
@@ -615,11 +618,9 @@ async function loadData() {
     }
 
     var xml = await fetchRSS();
-    document.getElementById('datum').textContent = fd(new Date());
-    document.getElementById('datum-right').textContent = fd(new Date());
 
-    // Parse today's upcoming matches
-    var todayMatches = [];
+    // Parse all future matches from the feed
+    var allMatches = [];
     xml.querySelectorAll('item').forEach(function(item) {
       var title = (item.querySelector('title')||{}).textContent||'';
       var pub = (item.querySelector('pubDate')||{}).textContent||'';
@@ -627,10 +628,9 @@ async function loadData() {
       var status = getNsText(item, 'status');
       var poule = getNsText(item, 'poule') || (desc.match(/Poule:\s*([^\r\n,<]+)/i)||[])[1] || '';
       if (status === 'vervallen') return;
-      if (!DEMO_MODE && !isToday(pub)) return;
-      var played = title.indexOf(', Uitslag:') !== -1;
-      if (!DEMO_MODE && played) return; // In demo: toon ook gespeelde wedstrijden
       if (/VOLEVO\s+N\d/i.test(title)) return;
+      var played = title.indexOf(', Uitslag:') !== -1;
+      if (!DEMO_MODE && played) return;
 
       // Parse teams
       var ci = title.indexOf(': ');
@@ -641,14 +641,42 @@ async function loadData() {
       var away = di !== -1 ? teams.substring(di+3).trim() : '';
       var loc = parseLocation(desc);
 
-      todayMatches.push({
+      allMatches.push({
         time: pub, home: home, away: away, poule: poule.trim(),
         venue: loc.venue, postal: loc.postal, city: loc.city,
         street: loc.street, addrLine: loc.addrLine
       });
     });
 
+    // In demo mode: show all matches
+    // In normal mode: first try today, then find the next matchday
+    var todayMatches = [];
+    var displayDate = new Date();
+
+    if (DEMO_MODE) {
+      todayMatches = allMatches;
+    } else {
+      // Try today first
+      todayMatches = allMatches.filter(function(m) { return isToday(m.time); });
+
+      // If no matches today, find the nearest future matchday
+      if (!todayMatches.length) {
+        var now = new Date();
+        var futureMatches = allMatches.filter(function(m) { return new Date(m.time) > now; });
+        futureMatches.sort(function(a, b) { return new Date(a.time) - new Date(b.time); });
+        if (futureMatches.length) {
+          var nextDay = new Date(futureMatches[0].time);
+          displayDate = nextDay;
+          todayMatches = futureMatches.filter(function(m) { return isSameDay(new Date(m.time), nextDay); });
+        }
+      }
+    }
+
     todayMatches.sort(function(a,b){ return new Date(a.time)-new Date(b.time); });
+
+    // Update header date — show the actual matchday being displayed
+    document.getElementById('datum').textContent = fd(displayDate);
+    document.getElementById('datum-right').textContent = fd(displayDate);
 
     var countEl = document.getElementById('count');
     if (!todayMatches.length) {
