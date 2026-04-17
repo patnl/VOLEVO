@@ -667,6 +667,20 @@ async function loadData() {
       venueMap[key].matches.push(m);
     });
 
+    // Limit each venue to max 5 matches, closest to current time
+    var now = Date.now();
+    Object.keys(venueMap).forEach(function(key) {
+      var vm = venueMap[key];
+      if (vm.matches.length > 5) {
+        vm.matches.sort(function(a, b) {
+          return Math.abs(new Date(a.time) - now) - Math.abs(new Date(b.time) - now);
+        });
+        vm.matches = vm.matches.slice(0, 5);
+        // Re-sort chronologically for display
+        vm.matches.sort(function(a, b) { return new Date(a.time) - new Date(b.time); });
+      }
+    });
+
     // Geocode all unique locations (sequential, Nominatim rate limit)
     var venues = Object.values(venueMap);
     document.querySelector('.loading-text').textContent = 'Locaties zoeken…';
