@@ -18,8 +18,9 @@
   /* HEADER */
   .header {
     background: rgba(255,255,255,0.88);
-    /* backdrop-filter verwijderd: niet ondersteund in Yodeck Chromium */
-    border-bottom: 1px solid rgba(0,0,0,0.10);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
     padding: 14px 32px;
     display: flex;
     align-items: center;
@@ -32,11 +33,11 @@
   .header-left { display: flex; align-items: center; gap: 16px; }
 
   #header-logo-wrap {
-    height: 100px; width: 112px;
+    height: 50px; width: 56px;
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
   #header-logo-img {
-    max-height: 100px; max-width: 112px;
+    max-height: 50px; max-width: 56px;
     object-fit: contain; display: block;
   }
   .hdr-logo-fb {
@@ -48,10 +49,13 @@
     color: #9CD0C1; font-size: 0.58rem;
     font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase;
   }
-  .header-divider { width: 1px; height: 36px; background: #e5e5ea; flex-shrink: 0; }
+  .header-divider {
+    width: 1px; height: 36px;
+    background: #e5e5ea; flex-shrink: 0;
+  }
   .header-title-block .page-label {
-    font-size: 3rem; font-weight: 800; color: #1d1d1f;
-    letter-spacing: -0.5px; line-height: 1;
+    font-size: 1.4rem; font-weight: 800;
+    color: #1d1d1f; letter-spacing: -0.4px; line-height: 1;
   }
   .header-title-block .page-sub {
     font-size: 0.73rem; color: #86868b; font-weight: 500;
@@ -62,153 +66,127 @@
     background: #f0f0f5; border-radius: 6px; padding: 2px 8px;
     font-size: 0.67rem; font-weight: 600; color: #636366;
   }
+
   .header-right { text-align: right; flex-shrink: 0; }
   #datum { font-size: 0.9rem; font-weight: 600; color: #3a3a3c; }
   .header-meta {
-    margin-top: 4px; display: flex; align-items: center;
-    justify-content: flex-end; gap: 8px;
+    margin-top: 4px; display: flex;
+    align-items: center; justify-content: flex-end; gap: 8px;
   }
   #count {
     background: #2A3176; color: white; font-size: 0.7rem;
-    font-weight: 700; letter-spacing: 0.3px; padding: 3px 11px; border-radius: 20px;
+    font-weight: 700; letter-spacing: 0.3px;
+    padding: 3px 11px; border-radius: 20px;
   }
   #refresh-badge {
     display: inline-flex; align-items: center; gap: 5px;
-    background: #f2f2f7; border-radius: 20px; padding: 3px 10px;
-    font-size: 0.68rem; font-weight: 600; color: #636366;
+    background: #f2f2f7; border-radius: 20px;
+    padding: 3px 10px; font-size: 0.68rem;
+    font-weight: 600; color: #636366;
   }
   .dot {
-    width: 6px; height: 6px; border-radius: 50%; background: #34c759;
-    flex-shrink: 0; animation: pulse 2s ease-in-out infinite;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #34c759; flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
   }
   @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
-
-  /* SCROLL CONTAINER — voor Yodeck WebView */
-  html, body { overflow: hidden; height: 100vh; }
-  .header {
-    position: fixed;
-    top: 36px;   /* ← safe-area bovenkant */
-    left: 36px; right: 36px; /* ← safe-area zijkanten zodat logo niet wegvalt */
-    border-radius: 14px; /* afgerond want zweeft nu vrij */
-  }
-  .scroll-wrap {
-    position: fixed; left: 0; right: 0; bottom: 0;
-    top: 120px; /* fallback; wordt via JS dynamisch ingesteld */
-    overflow: hidden;
-  }
-  .scroll-inner { will-change: transform; }
 
   /* CONTENT */
   .content { padding: 22px 28px 40px; max-width: 1400px; margin: 0 auto; }
   .loading, .no-results {
-    text-align: center; padding: 80px 40px; color: #86868b; font-size: 1rem;
+    text-align: center; padding: 80px 40px;
+    color: #86868b; font-size: 1rem;
   }
   .section-label {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.8px;
-    text-transform: uppercase; color: #aeaeb2; padding: 6px 4px 10px; margin-top: 6px;
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.8px; text-transform: uppercase;
+    color: #aeaeb2; padding: 6px 4px 10px; margin-top: 6px;
   }
 
   /* MATCH CARD */
   .match-card {
-    background: white; border-radius: 16px; margin-bottom: 10px; overflow: hidden;
+    background: white; border-radius: 16px; margin-bottom: 10px;
+    overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
-    transition: transform 0.65s cubic-bezier(0.34,1.15,0.64,1),
-                box-shadow 0.55s ease,
-                opacity 0.45s ease;
-    transform-origin: center;
-    position: relative;
-  }
-  .match-card.focused {
-    transform: scale(1.028);
-    box-shadow: 0 16px 48px rgba(42,49,118,0.13), 0 4px 14px rgba(0,0,0,0.08);
-    opacity: 1 !important;
-    z-index: 3;
-  }
-  .match-card.dimmed {
-    opacity: 0.32;
-    transform: scale(0.983);
-  }
-  .match-card.played { opacity: 0.52; }
-
-  /* Top row: time + teams */
-  .card-main {
     display: grid;
-    grid-template-columns: 5px 76px 1fr 100px 1fr 96px;
+    grid-template-columns: 5px 76px 1fr 110px 1fr 96px;
     align-items: stretch;
   }
+  .match-card.played { opacity: 0.5; }
 
   .accent-bar { background: #9CD0C1; }
   .match-card.no-volevo .accent-bar { background: #e5e5ea; }
-  .match-card.played     .accent-bar { background: #d1d1d6; }
+  .match-card.played    .accent-bar { background: #d1d1d6; }
 
   .match-time-col {
     display: flex; align-items: center; justify-content: center;
     padding: 18px 10px; border-right: 1px solid #f2f2f7;
   }
   .match-time {
-    font-size: 1.6rem; font-weight: 700; color: #86868b;
-    font-variant-numeric: tabular-nums; text-align: center;
+    font-size: 1rem; font-weight: 700;
+    color: #86868b; font-variant-numeric: tabular-nums;
   }
   .match-time.upcoming { color: #2A3176; }
-  .day-tag {
-    display: block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.8px;
-    text-transform: uppercase; color: #aeaeb2; line-height: 1; margin-bottom: 3px;
-  }
 
   .team-col {
-    display: flex; align-items: center; padding: 18px 16px; gap: 14px;
+    display: flex; align-items: center;
+    padding: 18px 16px; gap: 12px;
   }
   .team-col.home { justify-content: flex-end; flex-direction: row-reverse; }
 
   .team-name {
-    font-size: 1.7rem; font-weight: 600; color: #3a3a3c; line-height: 1.2;
+    font-size: 1.05rem; font-weight: 600;
+    color: #3a3a3c; line-height: 1.25;
   }
   .team-name.volevo { color: #2A3176; font-weight: 800; }
 
-  /* Club logo in row */
+  /* Mini club logo */
   .row-logo {
-    width: 56px; height: 56px; flex-shrink: 0; border-radius: 10px; overflow: hidden;
-    display: flex; align-items: center; justify-content: center; background: #f5f5f7;
-  }
-  .row-logo img { width: 56px; height: 56px; object-fit: contain; }
-  .row-logo-fb {
-    width: 56px; height: 56px; border-radius: 10px;
+    width: 36px; height: 36px; flex-shrink: 0;
+    border-radius: 8px; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem; font-weight: 800; letter-spacing: 0.5px;
-    text-transform: uppercase; flex-shrink: 0; color: white; background: #aeaeb2;
+    background: #f5f5f7;
+  }
+  .row-logo img { width: 36px; height: 36px; object-fit: contain; }
+  .row-logo-fb {
+    width: 36px; height: 36px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem; font-weight: 800;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    flex-shrink: 0; color: white; background: #aeaeb2;
   }
   .row-logo-fb.is-volevo { background: #2A3176; color: #9CD0C1; }
 
-  /* Mid col */
+  /* Mid col: vs / score */
   .mid-col {
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 14px 8px; border-left: 1px solid #f2f2f7; border-right: 1px solid #f2f2f7;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 14px 8px;
+    border-left: 1px solid #f2f2f7;
+    border-right: 1px solid #f2f2f7;
   }
-  .vs-label { font-size: 1.1rem; font-weight: 700; color: #d1d1d6; letter-spacing: 1px; }
+  .vs-label {
+    font-size: 0.78rem; font-weight: 700;
+    color: #d1d1d6; letter-spacing: 1px;
+  }
   .score-text {
-    font-size: 3.2rem; font-weight: 800; color: #2A3176;
-    letter-spacing: -0.5px; font-variant-numeric: tabular-nums; line-height: 1;
+    font-size: 1.75rem; font-weight: 800;
+    color: #2A3176; letter-spacing: -0.5px;
+    font-variant-numeric: tabular-nums; line-height: 1;
   }
 
   /* Status badge */
   .status-col {
-    display: flex; align-items: center; justify-content: center; padding: 18px 14px;
+    display: flex; align-items: center;
+    justify-content: center; padding: 18px 14px;
   }
   .badge {
-    font-size: 1rem; font-weight: 700; letter-spacing: 0.3px;
-    text-transform: uppercase; padding: 6px 16px; border-radius: 20px;
+    font-size: 0.69rem; font-weight: 700;
+    letter-spacing: 0.3px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 20px;
   }
   .badge.upcoming { background: rgba(42,49,118,0.08); color: #2A3176; }
   .badge.played   { background: #f2f2f7; color: #aeaeb2; }
-
-  /* Competition label strip */
-  .card-competition {
-    padding: 0 18px 12px 110px;
-    font-size: 1rem; font-weight: 600;
-    color: #aeaeb2; letter-spacing: 0.1px;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
-  .match-card.played .card-competition { opacity: 0.6; }
 </style>
 </head>
 <body>
@@ -218,7 +196,8 @@
     <div id="header-logo-wrap">
       <img id="header-logo-img"
         src="https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg"
-        alt="Volevo" onerror="hdrFail()">
+        alt="Volevo"
+        onerror="hdrLogoFallback()">
     </div>
     <div class="header-divider"></div>
     <div class="header-title-block">
@@ -230,7 +209,7 @@
             <circle cx="5" cy="5" r="4" stroke="#636366" stroke-width="1.3"/>
             <path d="M5 2.5v2.5l1.5 1" stroke="#636366" stroke-width="1.3" stroke-linecap="round"/>
           </svg>
-          Nevobo live
+          Nevobo live feed
         </span>
       </div>
     </div>
@@ -238,47 +217,37 @@
   <div class="header-right">
     <div class="header-meta">
       <div id="count">laden...</div>
-      <div id="refresh-badge"><div class="dot"></div><span id="refresh-text">laden…</span></div>
+      <div id="refresh-badge">
+        <div class="dot"></div>
+        <span id="refresh-text">laden…</span>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="scroll-wrap" id="scroll-wrap">
-  <div class="scroll-inner" id="scroll-inner">
-    <div class="content">
-      <div id="results"><div class="loading">Programma laden…</div></div>
-    </div>
-  </div>
+<div class="content">
+  <div id="results"><div class="loading">Programma laden…</div></div>
 </div>
 
 <script>
-// ── Header logo ──
-function hdrFail() {
-  var w = document.getElementById('header-logo-wrap');
-  if (w) w.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+// ── Header logo fallback ──
+var hdrLogoUrls=[
+  'https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
+  'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo',
+  'https://volleybal.nl/api/clubs/CNZ6B97/logo.png'
+];
+var hdrLogoIdx=0;
+function hdrLogoFallback(){
+  hdrLogoIdx++;
+  var img=document.getElementById('header-logo-img');
+  if(img&&hdrLogoIdx<hdrLogoUrls.length){ img.src=hdrLogoUrls[hdrLogoIdx]; }
+  else{
+    var wrap=document.getElementById('header-logo-wrap');
+    if(wrap) wrap.innerHTML='<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+  }
 }
 
-// ── Row logos ──
-var rlFails = {};
-function clubLogoHtml(code, name, isVol) {
-  if (!code) return initialsHtml(name, isVol);
-  var id = 'rl' + Math.random().toString(36).slice(2,7);
-  var url = 'https://assets.nevobo.nl/organisatie/logo/' + code + '.jpg';
-  return '<div class="row-logo"><img id="'+id+'" src="'+url+'" '+
-    'onerror="rlFail(\''+id+'\',\''+esc(name)+'\','+isVol+')" loading="lazy"></div>';
-}
-function rlFail(id, name, isVol) {
-  var el = document.getElementById(id);
-  if (el) el.parentElement.outerHTML = initialsHtml(name, isVol);
-}
-function esc(s) { return (s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
-function initialsHtml(name, isVol) {
-  var ini = (name||'').trim().split(/\s+/).filter(function(w){return /[A-Za-z]/.test(w);}).slice(0,2).map(function(w){return w[0].toUpperCase();}).join('');
-  return '<div class="row-logo-fb'+(isVol?' is-volevo':'')+'">'+ini+'</div>';
-}
-
-// ── Helpers ──
-// Statische clubcode-tabel — alle tegenstanders van VOLEVO (seizoen 2025-2026)
+// ── Statische clubcode-tabel (seizoen 2025-2026) ──
 var CLUB_CODES = {
   'VOLEVO':               'CNZ6B97',
   'Castellum':            'CKL9Q2V',
@@ -300,355 +269,277 @@ var CLUB_CODES = {
   'VSTS':                 'CKL9P3T',
   'VCO':                  'CKL9R75'
 };
-// Strip ploeg-suffix (bijv. "MB 2", "MA 1") en zoek clubcode op
-function getClubCode(name) {
-  if (!name) return null;
-  if (iv(name)) return 'CNZ6B97';
-  if (CLUB_CODES[name]) return CLUB_CODES[name];
-  var base = name.replace(/\s+(MA|MB|MC|DS|HS|JO|JB|JC|JD|JE|MO|JA)\s*\d*\s*$/i, '').trim();
-  return CLUB_CODES[base] || null;
+function getClubCode(name){
+  if(!name) return null;
+  if(iv(name)) return 'CNZ6B97';
+  if(CLUB_CODES[name]) return CLUB_CODES[name];
+  var base=name.replace(/\s+(MA|MB|MC|MD|DS|HS|JO|JA|JB|JC|JD|JE|MO|N[0-9]+)\s*\d*\s*$/i,'').trim();
+  return CLUB_CODES[base]||null;
 }
 
-function iv(n) { return n && n.toUpperCase().indexOf('VOLEVO') !== -1; }
-
-var DAG = ['zo','ma','di','wo','do','vr','za'];
-function timeHtml(ds) {
-  var d = new Date(ds), n = new Date();
-  var isToday = d.getFullYear()===n.getFullYear() && d.getMonth()===n.getMonth() && d.getDate()===n.getDate();
-  var time = String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
-  return (isToday ? '' : '<span class="day-tag">'+DAG[d.getDay()]+'</span>') + time;
+// ── Row logo helpers ──
+var rowLogoFallbacks={};
+function clubLogoHtml(code,teamName,isVol){
+  if(!code) return initialsHtml(teamName,isVol);
+  var url='https://assets.nevobo.nl/organisatie/logo/'+code+'.jpg';
+  var id='rl-'+(Math.random().toString(36).slice(2,8));
+  return '<div class="row-logo"><img id="'+id+'" src="'+url+'" '+
+    'onerror="rowLogoFail(\''+id+'\',\''+escQ(teamName)+'\','+isVol+')" '+
+    'loading="lazy"></div>';
+}
+function escQ(s){ return (s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+function rowLogoFail(id,name,isVol){
+  var el=document.getElementById(id); if(!el)return;
+  var w=el.parentElement; w.outerHTML=initialsHtml(name,isVol);
+}
+function initialsHtml(name,isVol){
+  var ini=(name||'').trim().split(/\s+/).filter(function(w){return /[A-Za-z]/.test(w);}).slice(0,2).map(function(w){return w[0].toUpperCase();}).join('');
+  return '<div class="row-logo-fb'+(isVol?' is-volevo':'')+'">'+ini+'</div>';
 }
 
-// Geeft de zaterdag van het relevante competitieweekend terug (midnight)
-function getWeekendSaturday() {
-  var now = new Date(); now.setHours(0,0,0,0);
-  var day = now.getDay(), sat = new Date(now);
-  if      (day === 0) sat.setDate(now.getDate() - 1);
-  else if (day === 6) { /* vandaag */ }
-  else if (day <= 3)  sat.setDate(now.getDate() - (day+1));
-  else                sat.setDate(now.getDate() + (6-day));
-  return sat;
-}
-function isThisWeekend(ds) {
-  if (!ds) return false;
-  var d = new Date(ds); d.setHours(0,0,0,0);
-  var sat = getWeekendSaturday();
-  var sun = new Date(sat); sun.setDate(sat.getDate()+1);
-  var t = d.getTime();
-  return t === sat.getTime() || t === sun.getTime();
-}
-
-// Max N wedstrijden, dichtst bij huidig tijdstip, gesorteerd op tijd
-function closestToNow(matches, max) {
-  var now = Date.now();
-  var scored = matches.map(function(m){
-    return { m: m, diff: Math.abs(new Date(m.time).getTime() - now) };
-  });
-  scored.sort(function(a,b){ return a.diff - b.diff; });
-  var sub = scored.slice(0, max).map(function(s){ return s.m; });
-  sub.sort(function(a,b){ return new Date(a.time) - new Date(b.time); });
-  return sub;
+// ── Extract club codes: eerst statische tabel, dan RSS-link ──
+function extractClubCodes(item,home,away){
+  // Methode 1: opzoeken in statische tabel
+  var hCode=getClubCode(home);
+  var aCode=getClubCode(away);
+  if(hCode&&aCode) return{home:hCode,away:aCode};
+  // Methode 2: regex op <link> URL
+  var link='';
+  var el=item.querySelector('link');
+  if(el) link=el.textContent||el.innerHTML||'';
+  var m=link.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
+  if(m) return{home:hCode||m[1].toUpperCase(),away:aCode||m[2].toUpperCase()};
+  // Methode 3: zoek NEVOBO-codepatroon (bijv. CNZ6B97) ergens in het item-XML
+  var allText=item.textContent||'';
+  var pat=/[A-Z]{3}[0-9][A-Z][0-9]{2}/g, found=[], cp;
+  while((cp=pat.exec(allText))!==null){ if(found.indexOf(cp[0])===-1) found.push(cp[0]); }
+  if(!hCode&&!aCode&&found.length>=2) return{home:found[0],away:found[1]};
+  if(!hCode&&found.length>=1) hCode=found[0];
+  if(!aCode&&found.length>=2) aCode=found[1];
+  if(hCode||aCode) return{home:hCode||null,away:aCode||null};
+  return null;
 }
 
-var MAX_VISIBLE = 5;
-function ft(ds) {
+// ── Data & time ──
+var RSS_URL='https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
+var REFRESH_MS=5*60*1000;
+var lastUpdated=null;
+
+function isToday(ds){
+  if(!ds)return false;
+  var d=new Date(ds),n=new Date();
+  return d.getFullYear()===n.getFullYear()&&d.getMonth()===n.getMonth()&&d.getDate()===n.getDate();
+}
+function ft(ds){
   var d=new Date(ds);
   return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
 }
-function fd(ds) {
+function fd(ds){
   var d=new Date(ds);
   var dy=['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
   var mo=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
   return dy[d.getDay()]+' '+d.getDate()+' '+mo[d.getMonth()]+' '+d.getFullYear();
 }
-function timeAgo(ts) {
-  if(!ts) return '–';
+function timeAgo(ts){
+  if(!ts)return'–';
   var m=Math.floor((Date.now()-ts)/60000);
-  if(m<1) return 'zojuist bijgewerkt';
-  if(m===1) return '1 min. geleden';
+  if(m<1)return'zojuist bijgewerkt';
+  if(m===1)return'1 min. geleden';
   return m+' min. geleden';
 }
-function updateBadge() { document.getElementById('refresh-text').textContent = timeAgo(lastUpdated); }
+function updateBadge(){ document.getElementById('refresh-text').textContent=timeAgo(lastUpdated); }
 
-// Parse "DD mrt HH:MM: Home - Away" → { home, away }
-function parseTitle(title) {
-  // Strip "DD mrt HH:MM: " prefix if present
-  var ci = title.indexOf(': ');
-  var teams = ci !== -1 ? title.substring(ci + 2) : title;
-  // Remove trailing ", HH:MM" if present
-  teams = teams.replace(/,\s*\d{1,2}:\d{2}$/, '').trim();
-  var di = teams.indexOf(' - ');
-  return {
-    home: di !== -1 ? teams.substring(0, di).trim() : teams,
-    away: di !== -1 ? teams.substring(di + 3).trim() : ''
-  };
-}
+function iv(n){ return n&&n.toUpperCase().indexOf('VOLEVO')!==-1; }
 
-// Extract competition from description CDATA
-// Format: "Wedstrijd: ..., Datum: ..., Speellocatie: ..., Adres: ..., Poule: {name}"
-function parsePoule(desc) {
-  var m = desc.match(/Poule:\s*([^\r\n,<]+)/i);
-  if (m) return m[1].trim();
-  // Try nevobo:poule fallback already handled in XML parse
-  return '';
-}
-
-// Extract club code from nevobo namespace
-function getNsText(item, local) {
-  var els = item.getElementsByTagNameNS('*', local);
-  return els.length ? els[0].textContent.trim() : '';
-}
-
-// ── RSS fetch ──
-var RSS_URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
-var REFRESH_MS = 5 * 60 * 1000;
-var lastUpdated = null;
-
-async function fetchRSS() {
-  var proxies = [
-    RSS_URL,
-    'https://api.allorigins.win/raw?url=' + encodeURIComponent(RSS_URL),
-    'https://corsproxy.io/?' + encodeURIComponent(RSS_URL)
-  ];
-  for (var i = 0; i < proxies.length; i++) {
-    try {
-      var r = await fetch(proxies[i]);
-      if (!r.ok) continue;
-      var t = await r.text();
-      if (t && t.indexOf('<item>') !== -1) return new DOMParser().parseFromString(t, 'text/xml');
-    } catch(e) {}
+async function fetchRSS(url){
+  var proxies=['','https://api.allorigins.win/raw?url=','https://corsproxy.io/?'];
+  for(var i=0;i<proxies.length;i++){
+    try{
+      var u=proxies[i]?(proxies[i]+encodeURIComponent(url)):url;
+      var r=await fetch(u); if(!r.ok)continue;
+      var t=await r.text();
+      if(t&&t.indexOf('<item>')!==-1)return new DOMParser().parseFromString(t,'text/xml');
+    }catch(e){}
   }
   throw new Error('Kan feed niet laden.');
 }
 
-// Resolve club codes via allorigins.win (volgt redirect van Nevobo permalink naar volleybal.nl URL)
-async function resolveClubCodes(linkUrl) {
-  if (!linkUrl) return null;
-  try {
-    var proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(linkUrl);
-    var timeoutProm = new Promise(function(res) { setTimeout(function() { res(null); }, 6000); });
-    var resp = await Promise.race([fetch(proxyUrl), timeoutProm]);
-    if (!resp || !resp.ok) return null;
-    var json = await resp.json();
-    // Kijk eerst naar de definitieve URL na redirect (status.url)
-    var finalUrl = (json.status && json.status.url) ? json.status.url : '';
-    var mc = finalUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
-    if (mc) return { homeCode: mc[1].toUpperCase(), awayCode: mc[2].toUpperCase() };
-    // Doorzoek paginainhoud op club-logo URLs
-    var content = json.contents || '';
-    var logos = [], lm;
-    var logoPat = /assets\.nevobo\.nl\/organisatie\/logo\/([A-Z0-9]{5,10})/gi;
-    while ((lm = logoPat.exec(content)) !== null && logos.length < 6) {
-      var c = lm[1].toUpperCase();
-      if (logos.indexOf(c) === -1) logos.push(c);
-    }
-    if (logos.length >= 2) return { homeCode: logos[0], awayCode: logos[1] };
-    // Fallback: zoek /wedstrijd/CODE/CODE patroon in paginainhoud
-    var mc2 = content.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
-    if (mc2) return { homeCode: mc2[1].toUpperCase(), awayCode: mc2[2].toUpperCase() };
-  } catch(e) {}
-  return null;
+var MAX_VISIBLE = 5;
+function closestToNow(arr, max) {
+  var now = Date.now();
+  var s = arr.map(function(m){ return { m:m, diff:Math.abs(new Date(m.time).getTime()-now) }; });
+  s.sort(function(a,b){ return a.diff-b.diff; });
+  var sub = s.slice(0,max).map(function(x){ return x.m; });
+  sub.sort(function(a,b){ return new Date(a.time)-new Date(b.time); });
+  return sub;
 }
 
-function renderCard(m) {
-  var hVol = iv(m.home), aVol = iv(m.away), hasVol = hVol || aVol;
-  var cls = 'match-card' + (m.played ? ' played' : '') + (hasVol ? '' : ' no-volevo');
-  var tCls = 'match-time' + (m.played ? '' : ' upcoming');
-  var mid = '<div class="vs-label">vs</div>';
-  var bCls = 'badge upcoming';
-  var bTxt = ft(m.time);
-  var hCode = hVol ? 'CNZ6B97' : m.homeCode;
-  var aCode = aVol ? 'CNZ6B97' : m.awayCode;
+var DAG_KORT = ['zo','ma','di','wo','do','vr','za'];
+var DAG_LANG = ['Zondag','Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag'];
 
-  return '<div class="' + cls + '">' +
-    '<div class="card-main">' +
-      '<div class="accent-bar"></div>' +
-      '<div class="match-time-col"><div class="' + tCls + '">' + timeHtml(m.time) + '</div></div>' +
-      '<div class="team-col home">' +
-        clubLogoHtml(hCode, m.home, hVol) +
-        '<div class="team-name' + (hVol ? ' volevo' : '') + '">' + m.home + '</div>' +
-      '</div>' +
-      '<div class="mid-col">' + mid + '</div>' +
-      '<div class="team-col away">' +
-        '<div class="team-name' + (aVol ? ' volevo' : '') + '">' + m.away + '</div>' +
-        clubLogoHtml(aCode, m.away, aVol) +
-      '</div>' +
-      '<div class="status-col"><span class="' + bCls + '">' + bTxt + '</span></div>' +
-    '</div>' +
-    (m.poule ? '<div class="card-competition">' + m.poule + '</div>' : '') +
+function renderCard(m){
+  var hVol=iv(m.home),aVol=iv(m.away),hasVol=hVol||aVol;
+  var cls='match-card'+(m.played?' played':'')+(hasVol?'':' no-volevo');
+  var tCls='match-time'+(m.played?'':' upcoming');
+  var mid=m.played&&m.score
+    ? '<div class="score-text">'+m.score+'</div>'
+    : '<div class="vs-label">vs</div>';
+  var bCls=m.played?'badge played':'badge upcoming';
+  // Badge: "Gespeeld" / "Vandaag" / dagnaam voor andere datum
+  var bTxt = m.played ? 'Gespeeld'
+    : isToday(m.time) ? 'Vandaag'
+    : DAG_LANG[new Date(m.time).getDay()];
+  var hCode=hVol?'CNZ6B97':m.homeCode;
+  var aCode=aVol?'CNZ6B97':m.awayCode;
+  return '<div class="'+cls+'">'+
+    '<div class="accent-bar"></div>'+
+    '<div class="match-time-col"><div class="'+tCls+'">'+ft(m.time)+'</div></div>'+
+    '<div class="team-col home">'+
+      clubLogoHtml(hCode,m.home,hVol)+
+      '<div class="team-name'+(hVol?' volevo':'')+'">'+m.home+'</div>'+
+    '</div>'+
+    '<div class="mid-col">'+mid+'</div>'+
+    '<div class="team-col away">'+
+      '<div class="team-name'+(aVol?' volevo':'')+'">'+m.away+'</div>'+
+      clubLogoHtml(aCode,m.away,aVol)+
+    '</div>'+
+    '<div class="status-col"><span class="'+bCls+'">'+bTxt+'</span></div>'+
   '</div>';
 }
 
-function render(matches) {
-  var sat = getWeekendSaturday();
-  var sun = new Date(sat); sun.setDate(sat.getDate()+1);
-  var mos = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
-  document.getElementById('datum').textContent =
-    'za '+sat.getDate()+' & zo '+sun.getDate()+' '+mos[sat.getMonth()]+' '+sat.getFullYear();
-  var container = document.getElementById('results');
-  var count = document.getElementById('count');
+function render(matches){
+  var container=document.getElementById('results');
+  var count=document.getElementById('count');
+  var mos=['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
 
-  // Alleen nog te spelen — gespeelde wedstrijden vallen weg
-  var upcoming = matches.filter(function(m){ return !m.played; });
-
-  if (!upcoming.length) {
-    container.innerHTML = '<div class="no-results">Alle wedstrijden gespeeld dit weekend 🏐</div>';
-    count.textContent = '0 te spelen';
-    matchTimes = [];
-    startSpotlight();
+  if(!matches.length){
+    document.getElementById('datum').textContent=fd(new Date());
+    container.innerHTML='<div class="no-results">Geen wedstrijden gevonden</div>';
+    count.textContent='0 wedstrijden';
     return;
   }
 
-  // Toon ALLE wedstrijden — de scroller scrollt er vanzelf doorheen
-  var visible = upcoming;
-  count.textContent = visible.length + ' wedstrijd' + (visible.length !== 1 ? 'en' : '');
+  // Beperk tot MAX_VISIBLE rondom huidig tijdstip
+  var visible = matches.length > MAX_VISIBLE ? closestToNow(matches, MAX_VISIBLE) : matches;
+  count.textContent = visible.length+(matches.length>MAX_VISIBLE?'/'+matches.length:'')+
+    ' wedstrijd'+(visible.length!==1?'en':'');
+
+  // Datum in header: eerste matchdag van de zichtbare wedstrijden
+  var d0=new Date(visible[0].time); d0.setHours(0,0,0,0);
+  var now0=new Date(); now0.setHours(0,0,0,0);
+  if(d0.getTime()===now0.getTime()){
+    document.getElementById('datum').textContent=fd(new Date());
+  } else {
+    document.getElementById('datum').textContent=
+      DAG_LANG[d0.getDay()]+' '+d0.getDate()+' '+mos[d0.getMonth()]+' '+d0.getFullYear();
+  }
 
   // Groepeer per dag
-  var bySat = visible.filter(function(m){ var d=new Date(m.time); d.setHours(0,0,0,0); return d.getTime()===sat.getTime(); });
-  var bySun = visible.filter(function(m){ var d=new Date(m.time); d.setHours(0,0,0,0); return d.getTime()===sun.getTime(); });
-  var html = '';
-  if (bySat.length) { html += '<div class="section-label">Zaterdag</div>'; bySat.forEach(function(m){ html += renderCard(m); }); }
-  if (bySun.length) { html += '<div class="section-label">Zondag</div>';   bySun.forEach(function(m){ html += renderCard(m); }); }
-  var other = visible.filter(function(m){
-    var d=new Date(m.time); d.setHours(0,0,0,0);
-    return d.getTime()!==sat.getTime() && d.getTime()!==sun.getTime();
+  var byDate={};
+  visible.forEach(function(m){
+    var d=new Date(m.time); d.setHours(0,0,0,0); var key=d.getTime();
+    if(!byDate[key]) byDate[key]={date:d,upcoming:[],played:[]};
+    if(m.played) byDate[key].played.push(m);
+    else         byDate[key].upcoming.push(m);
   });
-  if (other.length) { other.forEach(function(m){ html += renderCard(m); }); }
 
-  container.innerHTML = html;
-  matchTimes = visible.map(function(m){ return m.time; });
-  startSpotlight();
+  var html='';
+  Object.keys(byDate).sort().forEach(function(key){
+    var g=byDate[key], d=g.date;
+    var isT=d.getTime()===now0.getTime();
+    if(g.upcoming.length){
+      var lbl=isT?'Nog te spelen':DAG_LANG[d.getDay()]+' '+d.getDate()+' '+mos[d.getMonth()];
+      html+='<div class="section-label">'+lbl+'</div>';
+      g.upcoming.forEach(function(m){html+=renderCard(m);});
+    }
+    if(g.played.length){
+      html+='<div class="section-label">Gespeeld</div>';
+      g.played.forEach(function(m){html+=renderCard(m);});
+    }
+  });
+  container.innerHTML=html;
 }
 
-async function loadData() {
-  try {
-    var xml = await fetchRSS();
-    var matches = [];
-    xml.querySelectorAll('item').forEach(function(item) {
-      var title = (item.querySelector('title') || {}).textContent || '';
-      var pub   = (item.querySelector('pubDate') || {}).textContent || '';
-      var desc  = (item.querySelector('description') || {}).textContent || '';
-      var status = getNsText(item, 'status');
-      var poule  = getNsText(item, 'poule') || parsePoule(desc);
+async function loadData(){
+  try{
+    var xml=await fetchRSS(RSS_URL);
+    var allFromToday=[];
+    var todayStart=new Date(); todayStart.setHours(0,0,0,0);
 
-      if (status === 'vervallen' || !isThisWeekend(pub)) return;
-
-      var played = title.indexOf(', Uitslag:') !== -1;
-      var score = null, home, away;
-
-      if (played) {
-        var ui = title.indexOf(', Uitslag:');
-        var tp = title.substring(0, ui).trim();
-        score = title.substring(ui + 10).trim();
-        var t = parseTitle(tp);
-        home = t.home; away = t.away;
-      } else {
-        var t2 = parseTitle(title);
-        home = t2.home; away = t2.away;
+    xml.querySelectorAll('item').forEach(function(item){
+      var title=(item.querySelector('title')||{}).textContent||'';
+      var pub=(item.querySelector('pubDate')||{}).textContent||'';
+      var sEl=item.getElementsByTagNameNS('*','status')[0];
+      if(sEl&&sEl.textContent.trim()==='vervallen') return;
+      // Alleen vandaag of in de toekomst
+      if(new Date(pub) < todayStart) return;
+      // Strip date prefix "18 apr 10:30: " van programma-titels
+      var cleanTitle = title.replace(/^\d{1,2} \w{3,4} \d{2}:\d{2}:\s*/, '');
+      var played=cleanTitle.indexOf(', Uitslag:')!==-1;
+      var score=null,home,away;
+      if(played){
+        var ui=cleanTitle.indexOf(', Uitslag:');
+        var tp=cleanTitle.substring(0,ui).trim();
+        score=cleanTitle.substring(ui+10).trim();
+        var di=tp.indexOf(' - ');
+        home=di!==-1?tp.substring(0,di).trim():tp;
+        away=di!==-1?tp.substring(di+3).trim():'';
+      }else{
+        var di2=cleanTitle.indexOf(' - ');
+        home=di2!==-1?cleanTitle.substring(0,di2).trim():cleanTitle.trim();
+        away=di2!==-1?cleanTitle.substring(di2+3).trim():'';
       }
-
-      // Stap 1: opzoeken in statische clubcode-tabel (direct, geen extra request)
-      var homeCode = getClubCode(home);
-      var awayCode = getClubCode(away);
-
-      var linkEl = item.querySelector('link');
-      var linkUrl = linkEl ? (linkEl.textContent || linkEl.innerHTML || '') : '';
-
-      // Stap 2: probeer regex op link URL (werkt als volleybal.nl URL)
-      if (!homeCode || !awayCode) {
-        var mCodes = linkUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
-        if (mCodes) { homeCode = mCodes[1].toUpperCase(); awayCode = mCodes[2].toUpperCase(); }
-      }
-
-      matches.push({ time: pub, home: home, away: away, score: score, played: played,
-                     poule: poule, homeCode: homeCode, awayCode: awayCode,
-                     _linkUrl: (!homeCode || !awayCode) ? linkUrl : null });
+      var codes=extractClubCodes(item,home,away);
+      allFromToday.push({
+        time:pub,home:home,away:away,score:score,played:played,
+        homeCode:codes?codes.home:null,
+        awayCode:codes?codes.away:null
+      });
     });
-    matches.sort(function(a,b){ return new Date(a.time) - new Date(b.time); });
+    allFromToday.sort(function(a,b){return new Date(a.time)-new Date(b.time);});
 
-    // Stap 3: los ontbrekende clubcodes asynchroon op via allorigins.win (parallel)
-    var resolved = await Promise.all(matches.map(async function(m) {
-      if (m._linkUrl) {
-        var codes = await resolveClubCodes(m._linkUrl);
-        if (codes) { m.homeCode = m.homeCode || codes.homeCode; m.awayCode = m.awayCode || codes.awayCode; }
-      }
-      return m;
-    }));
+    // Probeer vandaag; anders eerste toekomstige speeldag
+    var todayMatches=allFromToday.filter(function(m){return isToday(m.time);});
+    var toShow;
+    if(todayMatches.length>0){
+      toShow=todayMatches;
+    } else if(allFromToday.length>0){
+      // Eerste toekomstige dag
+      var nextDayStr=new Date(allFromToday[0].time).toDateString();
+      toShow=allFromToday.filter(function(m){return new Date(m.time).toDateString()===nextDayStr;});
+    } else {
+      toShow=[];
+    }
 
-    lastUpdated = Date.now();
-    render(resolved);
+    // Verwijder wedstrijden die meer dan 2 uur geleden zijn gestart
+    var cutoff2h = new Date(Date.now() - 2 * 60 * 60 * 1000);
+    toShow = toShow.filter(function(m){ return new Date(m.time) >= cutoff2h; });
+
+    lastUpdated=Date.now();
+    render(toShow);
     updateBadge();
-  } catch(e) {
-    document.getElementById('results').innerHTML =
-      '<div class="loading" style="color:#ff3b30">' + e.message + '</div>';
+  }catch(e){
+    document.getElementById('results').innerHTML='<div class="loading" style="color:#ff3b30">'+e.message+'</div>';
   }
 }
 
-setInterval(updateBadge, 30000);
+setInterval(updateBadge,30000);
 
-// ── Spotlight: zoom-in per kaart, start bij wedstrijd dichtst bij nu ──
-var SPOT_MS   = 3500;
-var spotIdx   = -1;
-var spotTimer = null;
-var matchTimes = [];  // gevuld door render()
-
-// Start bij de wedstrijd die het dichtst bij het huidige tijdstip begint
-function findStartIdx() {
-  if (!matchTimes.length) return 0;
-  var now = Date.now();
-  // Voorkeur: eerste nog-niet-begonnen wedstrijd
-  for (var i = 0; i < matchTimes.length; i++) {
-    if (new Date(matchTimes[i]).getTime() >= now - 5 * 60000) return i;
-  }
-  // Alle wedstrijden gespeeld: begin bij de laatste
-  return matchTimes.length - 1;
-}
-
-function doSpotlight() {
-  var cards = document.querySelectorAll('.match-card');
-  if (!cards.length) { spotTimer = setTimeout(doSpotlight, 800); return; }
-
-  spotIdx = (spotIdx + 1) % cards.length;
-
-  cards.forEach(function(c, i) {
-    c.classList.remove('focused', 'dimmed');
-    c.classList.add(i === spotIdx ? 'focused' : 'dimmed');
-  });
-
-  // Scroll zodat focused kaart gecentreerd is in de viewport
-  var focused = cards[spotIdx];
-  var inner = document.getElementById('scroll-inner');
-  var wrap  = document.getElementById('scroll-wrap');
-  if (inner && wrap && focused) {
-    var hdr = document.querySelector('.header');
-    if (hdr) wrap.style.top = (hdr.offsetTop + hdr.offsetHeight) + 'px';
-    var target = Math.round(focused.offsetTop + focused.offsetHeight / 2 - wrap.offsetHeight / 2);
-    target = Math.max(0, Math.min(target, inner.offsetHeight - wrap.offsetHeight));
-    inner.style.transition = 'transform 0.75s cubic-bezier(0.4,0,0.2,1)';
-    inner.style.transform  = 'translateY(' + (-target) + 'px)';
-  }
-
-  spotTimer = setTimeout(doSpotlight, SPOT_MS);
-}
-
-function startSpotlight() {
-  if (spotTimer) clearTimeout(spotTimer);
-  spotIdx = findStartIdx() - 1;
-  spotTimer = setTimeout(doSpotlight, 1800);
+// Auto-scroll
+var spd=0.7,dir=1,pf=0;
+function scroll(){
+  if(pf>0){pf--;requestAnimationFrame(scroll);return;}
+  var max=document.body.scrollHeight-window.innerHeight;
+  if(max<=0){requestAnimationFrame(scroll);return;}
+  window.scrollBy(0,spd*dir);
+  if(window.scrollY>=max-2){pf=250;dir=-1;}
+  else if(window.scrollY<=1&&dir===-1){pf=350;dir=1;}
+  requestAnimationFrame(scroll);
 }
 
 loadData();
-setInterval(loadData, REFRESH_MS);
+setInterval(loadData,REFRESH_MS);
+setTimeout(scroll,3000);
 </script>
-
-<!-- Versie-badge: altijd rechtsonder zichtbaar -->
-<div id="ver-badge" style="
-  position: fixed; bottom: 10px; right: 14px; z-index: 999;
-  background: rgba(0,0,0,0.10); border-radius: 8px;
-  padding: 3px 9px; pointer-events: none;
-  font-family: -apple-system, BlinkMacSystemFont, monospace;
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px;
-  color: rgba(0,0,0,0.35);
-">PROGRAMMA v1.4</div>
 </body>
 </html>
