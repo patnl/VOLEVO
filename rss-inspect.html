@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>RSS Inspectie – Nevobo Programma</title>
+<style>
+  body { font-family: monospace; font-size: 13px; background: #1a1a2e; color: #e0e0e0; padding: 20px; }
+  h1 { color: #9CD0C1; font-size: 1rem; margin-bottom: 16px; }
+  .item { background: #0f0f23; border: 1px solid #333; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+  .item h2 { color: #7eb8f7; font-size: 0.9rem; margin-bottom: 10px; }
+  .field { margin: 4px 0; }
+  .key { color: #9CD0C1; }
+  .val { color: #f0f0f0; }
+  .desc { color: #aaa; background: #111; padding: 8px; border-radius: 4px; margin-top: 8px; white-space: pre-wrap; word-break: break-all; font-size: 0.8rem; }
+  .ns-fields { margin-top: 8px; padding: 8px; background: #0a1628; border-radius: 4px; }
+  .ns-fields h3 { color: #ffb347; font-size: 0.8rem; margin: 0 0 6px; }
+  .error { color: #ff6b6b; padding: 20px; }
+</style>
+</head>
+<body>
+<h1>🔍 Nevobo RSS Inspectie — programma.rss (eerste 5 items)</h1>
+<div id="out">Laden...</div>
+
+<script>
+var URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
+
+async function load() {
+  var out = document.getElementById('out');
+  var proxies = [URL,
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(URL),
+    'https://corsproxy.io/?' + encodeURIComponent(URL)
+  ];
+  var xml = null;
+  for (var i = 0; i < proxies.length; i++) {
+    try {
+      var r = await fetch(proxies[i]);
+      var t = await r.text();
+      if (t.indexOf('<item>') !== -1) { xml = new DOMParser().parseFromString(t, 'text/xml'); break; }
+    } catch(e) {}
+  }
+  if (!xml) { out.innerHTML = '<div class="error">Kon feed niet laden.</div>'; return; }
+
+  var items = xml.querySelectorAll('item');
+  var html = '<p style="color:#aaa;margin-bottom:16px">Totaal items in feed: <strong style="color:#9CD0C1">' + items.length + '</strong></p>';
+
+  var count = 0;
+  items.forEach(function(item) {
+    if (count++ > 4) return;
+
+    // Collect all child elements
+    var fields = [];
+    for (var i = 0; i < item.children.length; i++) {
+      var el = item.children[i];
+      fields.push({ name: el.tagName, ns: el.namespaceURI, val: el.textContent.trim() });
+    }
+
+    // Also look for namespace elements specifically
+    var nsMap = {};
+    for (var j = 0; j < item.children.length; j++) {
+      var e = item.children[j];
+      var localName = e.localName || e.tagName;
+      nsMap[e.tagName] = { localName: localName, ns: e.namespaceURI||'', val: e.textContent.trim() };
+    }
+
+    var title = (item.querySelector('title')||{}).textContent||'';
+    var pub = (item.querySelector('pubDate')||{}).textContent||'';
+    var desc = (item.querySelector('description')||{}).textContent||'';
+    var link = '';
+    var linkEl = item.querySelector('link');
+    if (linkEl) link = linkEl.textContent || linkEl.innerHTML || '';
+
+    html += '<div class="item">';
+    html += '<h2>' + escHtml(title) + '</h2>';
+    html += '<div class="field"><span class="key">pubDate: </span><span class="val">' + escHtml(pub) + '</span></div>';
+    html += '<div class="field"><span class="key">link: </span><span class="val">' + escHtml(link) + '</span></div>';
+
+    html += '<div class="ns-fields"><h3>Alle elementen in dit item:</h3>';
+    Object.keys(nsMap).forEach(function(tag) {
+      var f = nsMap[tag];
+      if (tag === 'description') return;
+      html += '<div class="field"><span class="key">' + escHtml(tag) + ' </span>';
+      if (f.ns) html += '<span style="color:#666;font-size:0.75rem">[ns:' + escHtml(f.ns) + ']</span> ';
+      html += '<span class="val">→ ' + escHtml(f.val.substring(0, 200)) + '</span></div>';
+    });
+    html += '</div>';
+
+    html += '<div class="field" style="margin-top:8px"><span class="key">description (raw):</span></div>';
+    html += '<div class="desc">' + escHtml(desc.substring(0, 800)) + '</div>';
+    html += '</div>';
+  });
+
+  out.innerHTML = html;
+}
+
+function escHtml(s) {
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+load();
+</script>
+</body>
+</html>
