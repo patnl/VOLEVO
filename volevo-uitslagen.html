@@ -39,6 +39,7 @@
   .header-title-block .page-label { font-size: 3rem; font-weight: 800; color: #1d1d1f; letter-spacing: -0.5px; line-height: 1; }
   .header-title-block .page-sub { font-size: 0.73rem; color: #86868b; font-weight: 500; margin-top: 3px; display: flex; align-items: center; gap: 6px; }
   .nevobo-tag { display: inline-flex; align-items: center; gap: 4px; background: #f0f0f5; border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 600; color: #636366; }
+  .version-tag { display: inline-flex; align-items: center; background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px; }
   .header-right { text-align: right; flex-shrink: 0; }
   #datum { font-size: 0.9rem; font-weight: 600; color: #3a3a3c; }
   .header-meta { margin-top: 4px; display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
@@ -185,7 +186,7 @@
   <div class="header-left">
     <div id="header-logo-wrap">
       <img id="header-logo-img"
-        src="https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg"
+        src="./logo.png"
         alt="Volevo" onerror="hdrFail()">
     </div>
     <div class="header-divider"></div>
@@ -200,6 +201,7 @@
           </svg>
           Nevobo live
         </span>
+        <span class="version-tag">v2.5 · 18 apr</span>
       </div>
     </div>
   </div>
@@ -220,9 +222,20 @@
 </div>
 
 <script>
+var hdrFallbacks = [
+  'https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
+  'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'
+];
+var hdrFallbackIdx = 0;
 function hdrFail() {
-  var w = document.getElementById('header-logo-wrap');
-  if (w) w.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+  var img = document.getElementById('header-logo-img');
+  if (img && hdrFallbackIdx < hdrFallbacks.length) {
+    img.onerror = hdrFail;
+    img.src = hdrFallbacks[hdrFallbackIdx++];
+  } else {
+    var w = document.getElementById('header-logo-wrap');
+    if (w) w.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+  }
 }
 var rlFails = {};
 function clubLogoHtml(code, name, isVol) {
@@ -262,7 +275,18 @@ var CLUB_CODES = {
   'Netwerk':              'CKL9M3K',
   'VollinGo':             'CKL9P5V',
   'VSTS':                 'CKL9P3T',
-  'VCO':                  'CKL9R75'
+  'VCO':                  'CKL9R75',
+  'Monza':                'CKL9M0R',
+  'ZVH':                  'CKL9Q05',
+  'Limes':                'CKL9Y8R',
+  'Gemini S':             'CKL7Q8R',
+  'Sovicos':              'CKL9K9K',
+  'Gemini-K':             'CKL9Q5Y',
+  'Reflex':               'CKL9N5Q',
+  'Smash':                'CKL9M6P',
+  'Olympia':              'CKM0H2G',
+  'SSV':                  'CKL9P8T',
+  'Driehoek':             'CKL9K3H'
 };
 // Strip ploeg-suffix (bijv. "MB 2", "MA 1") en zoek clubcode op
 function getClubCode(name) {
@@ -414,27 +438,49 @@ function closestToNow(matches, max) {
 var MAX_VISIBLE = 5;
 
 function render(matches) {
-  var sat = getWeekendSaturday();
-  var sun = new Date(sat); sun.setDate(sat.getDate()+1);
-  var mos = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
-  document.getElementById('datum').textContent =
-    'za '+sat.getDate()+' & zo '+sun.getDate()+' '+mos[sat.getMonth()]+' '+sat.getFullYear();
   var container = document.getElementById('results');
-  var count = document.getElementById('count');
+  var count     = document.getElementById('count');
+  var mos      = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+  var DAG_SHORT = ['zo','ma','di','wo','do','vr','za'];
+  var DAG_FULL  = ['Zondag','Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag'];
+
   if (!matches.length) {
-    container.innerHTML = '<div class="no-results">Geen uitslagen dit weekend</div>';
+    document.getElementById('datum').textContent = '–';
+    container.innerHTML = '<div class="no-results">Geen uitslagen beschikbaar</div>';
     count.textContent = '0 uitslagen'; return;
   }
+
   // Beperk tot MAX_VISIBLE rondom huidig tijdstip
   var visible = matches.length > MAX_VISIBLE ? closestToNow(matches, MAX_VISIBLE) : matches;
   count.textContent = visible.length + (matches.length > MAX_VISIBLE ? '/'+matches.length : '') +
     ' uitslag' + (visible.length !== 1 ? 'en' : '');
 
-  // Groepeer per dag (zaterdag / zondag)
-  var bySat = visible.filter(function(m){ var d=new Date(m.time); d.setHours(0,0,0,0); return d.getTime()===sat.getTime(); });
-  var bySun = visible.filter(function(m){ var d=new Date(m.time); d.setHours(0,0,0,0); return d.getTime()===sun.getTime(); });
-  var html = '';
+  // Datum in header: toon bereik van getoonde wedstrijden
+  var dateMap = {};
+  visible.forEach(function(m) {
+    var d = new Date(m.time); d.setHours(0,0,0,0); dateMap[d.getTime()] = d;
+  });
+  var dateList = Object.keys(dateMap).sort().map(function(k){ return dateMap[k]; });
+  if (dateList.length === 1) {
+    var d = dateList[0];
+    document.getElementById('datum').textContent =
+      DAG_SHORT[d.getDay()]+' '+d.getDate()+' '+mos[d.getMonth()]+' '+d.getFullYear();
+  } else {
+    var d1 = dateList[0], d2 = dateList[dateList.length-1];
+    document.getElementById('datum').textContent =
+      DAG_SHORT[d1.getDay()]+' '+d1.getDate()+' & '+
+      DAG_SHORT[d2.getDay()]+' '+d2.getDate()+' '+mos[d1.getMonth()]+' '+d1.getFullYear();
+  }
 
+  // Groepeer per dag — volledig dynamisch, niet hardgecodeerd op za/zo
+  var byDate = {};
+  visible.forEach(function(m) {
+    var d = new Date(m.time); d.setHours(0,0,0,0); var key = d.getTime();
+    if (!byDate[key]) byDate[key] = { date: d, matches: [] };
+    byDate[key].matches.push(m);
+  });
+
+  var html = '';
   function addCard(m) {
     var wc = winClass(m.score);
     var cls = 'match-card' + (wc ? ' ' + wc : '');
@@ -463,20 +509,16 @@ function render(matches) {
     '</div>';
   }
 
-  if (bySat.length) {
-    html += '<div class="section-label">Zaterdag</div>';
-    bySat.forEach(addCard);
-  }
-  if (bySun.length) {
-    html += '<div class="section-label">Zondag</div>';
-    bySun.forEach(addCard);
-  }
-  // Fallback: wedstrijden die niet op zat/zon vallen (bijv. weekdag-speeldag)
-  var other = visible.filter(function(m){
-    var d=new Date(m.time); d.setHours(0,0,0,0);
-    return d.getTime()!==sat.getTime() && d.getTime()!==sun.getTime();
+  var now0 = new Date(); now0.setHours(0,0,0,0);
+  Object.keys(byDate).sort().forEach(function(key) {
+    var group = byDate[key];
+    var d     = group.date;
+    var label = d.getTime() === now0.getTime()
+      ? 'Vandaag'
+      : DAG_FULL[d.getDay()] + ' ' + d.getDate() + ' ' + mos[d.getMonth()];
+    html += '<div class="section-label">' + label + '</div>';
+    group.matches.forEach(addCard);
   });
-  if (other.length) { other.forEach(addCard); }
 
   container.innerHTML = html;
   matchTimes = visible.map(function(m){ return m.time; });

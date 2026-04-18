@@ -47,6 +47,7 @@
   .page-label { font-size: 3rem; font-weight: 800; color: #1d1d1f; letter-spacing: -0.5px; line-height: 1; }
   .page-sub { font-size: 0.73rem; color: #86868b; font-weight: 500; margin-top: 3px; display: flex; align-items: center; gap: 6px; }
   .nevobo-tag { display: inline-flex; align-items: center; gap: 4px; background: #f0f0f5; border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 600; color: #636366; }
+  .version-tag { display: inline-flex; align-items: center; background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px; }
   .header-right { text-align: right; flex-shrink: 0; }
   #datum { font-size: 0.9rem; font-weight: 600; color: #3a3a3c; }
   .header-meta { margin-top: 4px; display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
@@ -277,6 +278,7 @@
           </svg>
           Nevobo live
         </span>
+        <span class="version-tag">v2.5 · 18 apr</span>
       </div>
     </div>
   </div>
@@ -345,13 +347,17 @@ var CLUB_CODES = {
   'Ancora RVV':'CKL9R1X','VV Utrecht':'CKL9X3J','VC WIK Groot-Ammers':'CKM1J1A',
   'Zovoc':'CKL9N3N',"Kratos '08":'CKN1S6F','Kalinko':'CKL9K5G',
   'Punch':'CKL9M4L','Dinto':'CKL6Y59','AVV Keistad':'CKL7S2R',
-  'Netwerk':'CKL9M3K','VollinGo':'CKL9P5V','VSTS':'CKL9P3T','VCO':'CKL9R75'
+  'Netwerk':'CKL9M3K','VollinGo':'CKL9P5V','VSTS':'CKL9P3T','VCO':'CKL9R75',
+  'Monza':'CKL9M0R','ZVH':'CKL9Q05','Limes':'CKL9Y8R',
+  'Gemini S':'CKL7Q8R','Sovicos':'CKL9K9K','Gemini-K':'CKL9Q5Y',
+  'Reflex':'CKL9N5Q','Smash':'CKL9M6P','Olympia':'CKM0H2G',
+  'SSV':'CKL9P8T','Driehoek':'CKL9K3H'
 };
 function getClubCode(name) {
   if (!name) return null;
   if (iv(name)) return 'CNZ6B97';
   if (CLUB_CODES[name]) return CLUB_CODES[name];
-  var base = name.replace(/\s+(MA|MB|MC|DS|HS|JO|JB|JC|JD|JE|MO|JA)\s*\d*\s*$/i,'').trim();
+  var base = name.replace(/\s+(MA|MB|MC|MD|DS|HS|JO|JA|JB|JC|JD|JE|MO|N[0-9]+)\s*\d*\s*$/i,'').trim();
   return CLUB_CODES[base] || null;
 }
 function initials(name) {

@@ -66,6 +66,11 @@
     background: #f0f0f5; border-radius: 6px; padding: 2px 8px;
     font-size: 0.67rem; font-weight: 600; color: #636366;
   }
+  .version-tag {
+    display: inline-flex; align-items: center;
+    background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px;
+    font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px;
+  }
 
   .header-right { text-align: right; flex-shrink: 0; }
   #datum { font-size: 0.9rem; font-weight: 600; color: #3a3a3c; }
@@ -195,7 +200,7 @@
   <div class="header-left">
     <div id="header-logo-wrap">
       <img id="header-logo-img"
-        src="https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg"
+        src="./logo.png"
         alt="Volevo"
         onerror="hdrLogoFallback()">
     </div>
@@ -211,6 +216,7 @@
           </svg>
           Nevobo live feed
         </span>
+        <span class="version-tag">v2.5 · 18 apr</span>
       </div>
     </div>
   </div>
@@ -231,17 +237,17 @@
 
 <script>
 // ── Header logo fallback ──
+// Fallback-keten nadat ./logo.png faalt
 var hdrLogoUrls=[
   'https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
-  'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo',
-  'https://volleybal.nl/api/clubs/CNZ6B97/logo.png'
+  'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'
 ];
 var hdrLogoIdx=0;
 function hdrLogoFallback(){
-  hdrLogoIdx++;
   var img=document.getElementById('header-logo-img');
-  if(img&&hdrLogoIdx<hdrLogoUrls.length){ img.src=hdrLogoUrls[hdrLogoIdx]; }
-  else{
+  if(img&&hdrLogoIdx<hdrLogoUrls.length){
+    img.src=hdrLogoUrls[hdrLogoIdx++];
+  } else {
     var wrap=document.getElementById('header-logo-wrap');
     if(wrap) wrap.innerHTML='<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
   }
@@ -267,7 +273,18 @@ var CLUB_CODES = {
   'Netwerk':              'CKL9M3K',
   'VollinGo':             'CKL9P5V',
   'VSTS':                 'CKL9P3T',
-  'VCO':                  'CKL9R75'
+  'VCO':                  'CKL9R75',
+  'Monza':                'CKL9M0R',
+  'ZVH':                  'CKL9Q05',
+  'Limes':                'CKL9Y8R',
+  'Gemini S':             'CKL7Q8R',
+  'Sovicos':              'CKL9K9K',
+  'Gemini-K':             'CKL9Q5Y',
+  'Reflex':               'CKL9N5Q',
+  'Smash':                'CKL9M6P',
+  'Olympia':              'CKM0H2G',
+  'SSV':                  'CKL9P8T',
+  'Driehoek':             'CKL9K3H'
 };
 function getClubCode(name){
   if(!name) return null;
