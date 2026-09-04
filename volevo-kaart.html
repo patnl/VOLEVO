@@ -156,6 +156,12 @@
   }
   .popup-team-name.volevo { color: #2A3176; font-weight: 800; }
   .popup-vs { font-size: 0.8rem; font-weight: 700; color: #d1d1d6; flex-shrink: 0; }
+  .popup-veld {
+    display: inline-block; margin-left: 7px;
+    background: rgba(42,49,118,0.09); color: #2A3176;
+    font-size: 0.68rem; font-weight: 800; letter-spacing: 0.2px;
+    border-radius: 5px; padding: 1px 7px; vertical-align: middle;
+  }
   .popup-poule {
     font-size: 0.68rem; color: #aeaeb2; font-weight: 600; margin-top: 6px;
     padding-left: 48px;
@@ -394,6 +400,7 @@ function logoHtml(code, name, isVol, size) {
 }
 
 // ── VOLEVO home (De Fluit, Leidschendam) ────────────────────────────────
+var HOME_HAL    = 'De Fluit';
 var HOME_POSTAL = '2262ED';
 var HOME_CITY   = 'Leidschendam';
 var homeCoords  = null; // geocoded once on startup
@@ -446,6 +453,44 @@ function parseLocation(desc) {
   // Build display address
   var addrLine = [street, postal ? postal + ' ' + city : city].filter(Boolean).join(', ');
   return { venue: venue, street: street, postal: postal, city: city, addrLine: addrLine };
+}
+
+
+// ── Hal, veld en coordinaten uit data/matches.json ──
+// De sporthallen in de Nevobo-API hebben een gevalideerd adres met coordinaten.
+// Die zijn nauwkeuriger dan een postcode-zoekopdracht bij Nominatim, en kosten
+// geen externe aanvraag per locatie.
+var VENUES = {};
+var venuesLoaded = false;
+async function loadVenues() {
+  if (venuesLoaded) return;
+  venuesLoaded = true;
+  try {
+    var r = await fetch('./data/matches.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    (d.wedstrijden || []).forEach(function(w) {
+      if (!w.tijdstip) return;
+      var t = new Date(w.tijdstip).getTime();
+      VENUES[t + '|' + w.thuis + '|' + w.uit] = w;
+      var k = w.thuis + '|' + w.uit;
+      if (!(k in VENUES)) VENUES[k] = w;
+    });
+  } catch(e) {}
+}
+function venueFor(time, home, away) {
+  var t = new Date(time).getTime();
+  return VENUES[t + '|' + home + '|' + away] || VENUES[home + '|' + away] || null;
+}
+// Coordinaten van de eigen zaal uit dezelfde bron, zodat ook de reistijd niet
+// meer van een geocoder afhangt.
+function thuisCoords() {
+  var keys = Object.keys(VENUES);
+  for (var i = 0; i < keys.length; i++) {
+    var w = VENUES[keys[i]];
+    if (w.hal === HOME_HAL && w.lat && w.lon) return { lat: w.lat, lng: w.lon, display: w.hal };
+  }
+  return null;
 }
 
 // ── Nominatim geocoding cache ─────────────────────────────────────────────
@@ -555,7 +600,8 @@ function buildPopupHtml(venue, addrLine, matches, route) {
     var hCode = getClubCode(m.home);
     var aCode = getClubCode(m.away);
     html += '<div class="popup-match">';
-    html += '<div class="popup-time">🕐 ' + ft(m.time) + '</div>';
+    html += '<div class="popup-time">🕐 ' + ft(m.time) +
+      (m.veld ? '<span class="popup-veld">veld ' + m.veld + '</span>' : '') + '</div>';
     html += '<div class="popup-teams">';
     html += '<div class="popup-team">' + logoHtml(hCode, m.home, hVol, 40);
     html += '<div class="popup-team-name'+(hVol?' volevo':'')+'">'+m.home+'</div></div>';
@@ -639,10 +685,14 @@ function cycleTo(index) {
 async function loadData() {
   try {
     await loadClubs();
-    // Geocode VOLEVO home once
+    await loadVenues();
+    // Eigen zaal: coordinaten uit matches.json, anders alsnog geocoderen
     if (!homeCoords) {
-      homeCoords = await geocode(HOME_POSTAL, HOME_CITY);
-      await new Promise(res => setTimeout(res, 1200));
+      homeCoords = thuisCoords();
+      if (!homeCoords) {
+        homeCoords = await geocode(HOME_POSTAL, HOME_CITY);
+        await new Promise(res => setTimeout(res, 1200));
+      }
     }
 
     var xml = await fetchRSS();
@@ -669,11 +719,20 @@ async function loadData() {
       var away = di !== -1 ? teams.substring(di+3).trim() : '';
       var loc = parseLocation(desc);
 
-      allMatches.push({
+      var m = {
         time: pub, home: home, away: away, poule: poule.trim(),
         venue: loc.venue, postal: loc.postal, city: loc.city,
         street: loc.street, addrLine: loc.addrLine
-      });
+      };
+      var v = venueFor(pub, home, away);
+      if (v) {
+        if (v.hal)    m.venue = v.hal;
+        if (v.veld)   m.veld = v.veld;
+        if (v.plaats) m.city = v.plaats;
+        if (v.adres)  m.addrLine = [v.adres, v.plaats].filter(Boolean).join(', ');
+        if (v.lat && v.lon) m.coords = { lat: v.lat, lng: v.lon, display: v.hal };
+      }
+      allMatches.push(m);
     });
 
     // In demo mode: show all matches
@@ -718,8 +777,11 @@ async function loadData() {
     // Group by venue key
     var venueMap = {};
     todayMatches.forEach(function(m) {
-      var key = (m.postal || m.city || m.venue || 'onbekend').toLowerCase();
-      if (!venueMap[key]) venueMap[key] = { venue: m.venue, postal: m.postal, city: m.city, addrLine: m.addrLine, matches: [] };
+      // Op hal groeperen als we die kennen: twee zalen kunnen dezelfde
+      // postcode delen, en dan zouden ze op een hoop belanden.
+      var key = m.coords ? ('hal:' + m.venue) : (m.postal || m.city || m.venue || 'onbekend').toLowerCase();
+      if (!venueMap[key]) venueMap[key] = { venue: m.venue, postal: m.postal, city: m.city,
+                                            addrLine: m.addrLine, coords: m.coords || null, matches: [] };
       venueMap[key].matches.push(m);
     });
 
@@ -744,12 +806,15 @@ async function loadData() {
     var geocoded = [];
     for (var i = 0; i < venues.length; i++) {
       var v = venues[i];
-      var coords = await geocode(v.postal, v.city);
+      var coords = v.coords;
+      if (!coords) {
+        // Onbekende zaal: dan alsnog Nominatim, met de gebruikelijke pauze ertussen
+        coords = await geocode(v.postal, v.city);
+        if (i < venues.length-1) await new Promise(res => setTimeout(res, 1200));
+      }
       if (coords) {
         geocoded.push({ coords: coords, venue: v.venue, city: v.city, addrLine: v.addrLine, matches: v.matches });
       }
-      // Stagger Nominatim requests
-      if (i < venues.length-1) await new Promise(res => setTimeout(res, 1200));
     }
 
     // Fetch driving routes from De Fluit to each venue (OSRM, parallel-safe)
