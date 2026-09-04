@@ -248,7 +248,7 @@ var ZAAL = {
         { veld:'1',  hal:'1', fx:0, fy:0,    fw:1, fh:1/4, net:'v' },
         { veld:'2',  hal:'2', fx:0, fy:1/4,  fw:1, fh:1/4, net:'v' },
         { veld:'3',  hal:'3', fx:0, fy:2/4,  fw:1, fh:1/4, net:'v' },
-        { veld:null, hal:'4', fx:0, fy:3/4,  fw:1, fh:1/4, net:'v' } ] },
+        { veld:'h4', hal:'4', fx:0, fy:3/4,  fw:1, fh:1/4, net:'v' } ] },
       gemengd: { omschrijving: 'gemengd · groot veld plus twee', velden: [
         { veld:['1','2'], hal:['1','2'], fx:0,   fy:0,   fw:1/2, fh:1,   net:'h' },
         { veld:'3',       hal:'3',       fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
@@ -282,7 +282,7 @@ function halVan(v) {
   return h.join(' / ');
 }
 function labelVan(v) {
-  var l = veldenVan(v);
+  var l = veldenVan(v).filter(function(nr) { return String(nr).charAt(0) !== 'h'; });
   return l.length ? l.join(' of ') : '–';
 }
 
@@ -340,6 +340,13 @@ function veldVan(w) {
 }
 function isGecorrigeerd(w) {
   return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
+}
+
+// Weergavenaam van een veldnummer. Nummers die met "h" beginnen zijn plekken
+// die de zaal wel heeft maar het wedstrijdschema niet kent (hal 4).
+function veldLabel(nr) {
+  if (!nr) return '';
+  return String(nr).charAt(0) === 'h' ? 'hal ' + String(nr).slice(1) : 'veld ' + nr;
 }
 
 var REFRESH_MS = 10 * 60 * 1000;

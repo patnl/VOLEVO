@@ -109,6 +109,11 @@
   <code>data/overrides.json</code> in de repo. Vanaf dat moment gaan alle pagina's ervan uit.
   Wie geen schrijfrechten op de repo heeft, kan hier dus wel iets invullen maar niets veranderen
   aan wat anderen zien.
+  <br><br>
+  <strong>Twee nummeringen.</strong> In de zaal lopen de plekken van 1 tot en met 8
+  (De Bocht 1–4, De Tas 5–8). Het wedstrijdschema kent er maar zeven, want acht velden tegelijk
+  komt in de competitie niet voor. Hieronder staat daarom bij elke plek allebei de nummers,
+  bijvoorbeeld <code>De Tas · hal 8 = veld 7</code>. Alleen hal 4 heeft geen schemanummer.
 </div>
 
 <div class="content">
@@ -159,7 +164,29 @@
 <script>
 var HAL = 'De Fluit';
 var ZAALNAMEN = ['De Bocht', 'De Tas'];
-var VELDEN = ['1','2','3','4','5','6','7'];
+// Alle acht plekken in de zaal, met het nummer waaronder ze in het
+// wedstrijdschema staan. Hal 4 heeft er geen: acht velden tegelijk komt in de
+// competitie niet voor, dus het schema telt maar tot 7.
+var PLEKKEN = [
+  { zaal: 'De Bocht', hal: '1', veld: '1'  },
+  { zaal: 'De Bocht', hal: '2', veld: '2'  },
+  { zaal: 'De Bocht', hal: '3', veld: '3'  },
+  { zaal: 'De Bocht', hal: '4', veld: 'h4' },
+  { zaal: 'De Tas',   hal: '5', veld: '4'  },
+  { zaal: 'De Tas',   hal: '6', veld: '5'  },
+  { zaal: 'De Tas',   hal: '7', veld: '6'  },
+  { zaal: 'De Tas',   hal: '8', veld: '7'  }
+];
+function omschrijf(veld) {
+  if (!veld) return '?';
+  var p = PLEKKEN.filter(function(x) { return x.veld === String(veld); })[0];
+  if (!p) return 'veld ' + veld;
+  return (String(p.veld).charAt(0) === 'h' ? 'hal ' + p.hal : 'veld ' + p.veld + ' (hal ' + p.hal + ')');
+}
+function plekLabel(p) {
+  return p.zaal + ' · hal ' + p.hal +
+    (String(p.veld).charAt(0) === 'h' ? ' (niet in het schema)' : ' = veld ' + p.veld);
+}
 
 var wedstrijden = [], perDag = {}, dagen = [];
 var overrides = { standen: {}, velden: {}, meldingen: {} };
@@ -272,18 +299,18 @@ function teken() {
         var k = sleutel(w), gew = overrides.velden[k] !== undefined;
         var mijn = effVeld(w);
         var botst = mijn && bezetting[mijn] && bezetting[mijn].length > 1;
-        return '<tr' + (botst ? ' class="botst"' : '') + '><td>' + esc(w.veld || '?') + '</td>' +
+        return '<tr' + (botst ? ' class="botst"' : '') + '><td>' + esc(omschrijf(w.veld)) + '</td>' +
           '<td class="team">' + esc(w.thuis) + '</td>' +
           '<td class="tegen">' + esc(w.uit) + '</td>' +
           '<td><select class="veldkeuze' + (gew ? ' gewijzigd' : '') + '" data-k="' + esc(k) + '">' +
-            '<option value="">— zoals gepland' + (w.veld ? ': veld ' + esc(w.veld) : '') + ' —</option>' +
-            VELDEN.map(function(v) {
+            '<option value="">— zoals gepland' + (w.veld ? ': ' + esc(omschrijf(w.veld)) : '') + ' —</option>' +
+            PLEKKEN.map(function(pl) {
               // Bezet door een andere wedstrijd? Dan niet te kiezen.
-              var door = (bezetting[v] || []).filter(function(x) { return sleutel(x) !== k; });
+              var door = (bezetting[pl.veld] || []).filter(function(x) { return sleutel(x) !== k; });
               var vrij = door.length === 0;
-              return '<option value="' + v + '"' +
-                (gew && String(overrides.velden[k]) === v ? ' selected' : '') +
-                (vrij ? '' : ' disabled') + '>veld ' + v +
+              return '<option value="' + pl.veld + '"' +
+                (gew && String(overrides.velden[k]) === pl.veld ? ' selected' : '') +
+                (vrij ? '' : ' disabled') + '>' + esc(plekLabel(pl)) +
                 (vrij ? '' : ' · bezet door ' + esc(door[0].thuis)) + '</option>';
             }).join('') +
           '</select></td></tr>';

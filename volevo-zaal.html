@@ -267,6 +267,13 @@ function isGecorrigeerd(w) {
   return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
 }
 
+// Weergavenaam van een veldnummer. Nummers die met "h" beginnen zijn plekken
+// die de zaal wel heeft maar het wedstrijdschema niet kent (hal 4).
+function veldLabel(nr) {
+  if (!nr) return '';
+  return String(nr).charAt(0) === 'h' ? 'hal ' + String(nr).slice(1) : 'veld ' + nr;
+}
+
 var REFRESH_MS = 10 * 60 * 1000;
 
 var DAG_KORT = ['zo','ma','di','wo','do','vr','za'];
@@ -390,7 +397,7 @@ function tekenRaster() {
   }
 
   var thead = '<thead><tr><th class="tijdkop">Tijd</th>' +
-    kolommen.map(function(v) { return '<th>Veld ' + esc(v) + '</th>'; }).join('') +
+    kolommen.map(function(v) { return '<th>' + esc(veldLabel(v).replace(/^v/, 'V')) + '</th>'; }).join('') +
     '</tr></thead>';
 
   var tbody = '<tbody>' + tijden.map(function(t) {
@@ -402,7 +409,7 @@ function tekenRaster() {
       }
       return '<td class="veldcel">' + lijst.map(function(w) {
         return '<div class="wedstrijd">' +
-                 '<span class="veld-badge-mob">Veld ' + esc(v) + '</span>' +
+                 '<span class="veld-badge-mob">' + esc(veldLabel(v).replace(/^v/, 'V')) + '</span>' +
                  '<div class="w-thuis">' + esc(w.thuis) + '</div>' +
                  '<div class="w-tegen"><span class="vs">vs</span>' + esc(w.uit) + '</div>' +
                '</div>';
