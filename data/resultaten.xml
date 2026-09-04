@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 04 Sep 2026 22:16:24 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 23:50:27 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO DS 2 - VVV Delta DS 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2033002</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2033002</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 2 - VVV Delta DS 1, Uitslag: 3-1, Setstanden: 27-25, 18-25, 27-25, 25-14]]></description>
+      <pubDate>Fri, 04 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VOLEVO DS 4 - SKC DS 1, Uitslag: 0-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2033003</link>

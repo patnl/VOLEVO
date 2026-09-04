@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 04 Sep 2026 22:16:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 23:50:25 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[VOLEVO JA 1 - Inter Rijswijk JA 1, Uitslag: 0-3]]></title>
@@ -47,12 +47,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[4 sep 21:00: VOLEVO DS 2 - VVV Delta DS 1]]></title>
+      <title><![CDATA[VOLEVO DS 2 - VVV Delta DS 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2033002</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2033002</guid>
-      <description><![CDATA[Wedstrijd: 3000BD1A15AB, Datum: vrijdag 4 september, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 2 - VVV Delta DS 1, Uitslag: 3-1, Setstanden: 27-25, 18-25, 27-25, 25-14]]></description>
       <pubDate>Fri, 04 Sep 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[5 sep 9:00: Leython DC MB 2 - VOLEVO MB 1]]></title>
