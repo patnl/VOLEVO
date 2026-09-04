@@ -1,10 +1,10 @@
 {
-  "commit": "6bf0126",
-  "date": "2026-09-04T22:16:11+02:00",
+  "commit": "eae5858",
+  "date": "2026-09-04T22:22:46+02:00",
   "files": {
     "index.html": {
-      "commit": "0370c60",
-      "date": "2026-09-04T21:59:14+02:00"
+      "commit": "eae5858",
+      "date": "2026-09-04T22:22:46+02:00"
     },
     "rss-inspect.html": {
       "commit": "2124d61",
@@ -19,12 +19,16 @@
       "date": "2026-09-04T21:59:14+02:00"
     },
     "volevo-programma.html": {
-      "commit": "e2bf571",
-      "date": "2026-09-04T22:08:59+02:00"
+      "commit": "eae5858",
+      "date": "2026-09-04T22:22:46+02:00"
     },
     "volevo-uitslagen.html": {
       "commit": "0370c60",
       "date": "2026-09-04T21:59:14+02:00"
+    },
+    "volevo-zaal.html": {
+      "commit": "eae5858",
+      "date": "2026-09-04T22:22:46+02:00"
     }
   }
 }
