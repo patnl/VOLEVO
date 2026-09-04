@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Beheer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f7; color: #1d1d1f;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    min-height: 100vh; -webkit-font-smoothing: antialiased;
+  }
+  .header {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 14px 28px; display: flex; align-items: center;
+    justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 20;
+  }
+  .titel { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.3px; }
+  .sub { font-size: 0.73rem; color: #86868b; margin-top: 3px; }
+  .terug {
+    font-size: 0.72rem; font-weight: 600; color: #86868b; text-decoration: none;
+    padding: 5px 10px; border-radius: 8px; background: #f2f2f7;
+  }
+  .uitleg {
+    background: #eef6ff; border-bottom: 1px solid #cfe4ff; color: #1b4a7a;
+    padding: 11px 28px; font-size: 0.78rem; line-height: 1.5;
+  }
+  .uitleg code { background: rgba(27,74,122,0.09); padding: 1px 5px; border-radius: 4px; }
+  .content { padding: 20px 28px 60px; max-width: 1000px; margin: 0 auto; }
+  .blok {
+    background: white; border-radius: 16px; padding: 18px 20px; margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 18px rgba(0,0,0,0.04);
+  }
+  .blok h2 {
+    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.8px;
+    text-transform: uppercase; color: #aeaeb2; margin-bottom: 12px;
+  }
+  label { font-size: 0.78rem; font-weight: 600; color: #3a3a3c; display: block; margin-bottom: 5px; }
+  select, input[type=text], textarea {
+    font-family: inherit; font-size: 0.85rem; padding: 8px 10px;
+    border: 1px solid #d1d1d6; border-radius: 9px; background: white;
+    color: #1d1d1f; width: 100%; max-width: 420px;
+  }
+  textarea { min-height: 60px; resize: vertical; max-width: 100%; }
+  .regel { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+  .regel > div { flex: 1 1 220px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+  th {
+    text-align: left; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.6px;
+    text-transform: uppercase; color: #aeaeb2; padding: 6px 8px; border-bottom: 1px solid #f2f2f7;
+  }
+  td { padding: 7px 8px; border-bottom: 1px solid #f7f7fa; vertical-align: middle; }
+  td.team { font-weight: 700; color: #2A3176; }
+  td.tegen { color: #636366; }
+  select.veldkeuze { max-width: 150px; padding: 5px 8px; font-size: 0.8rem; }
+  select.veldkeuze.gewijzigd { border-color: #ff9500; background: #fff9f0; font-weight: 700; }
+
+  .standknop {
+    border: none; font-family: inherit; cursor: pointer;
+    background: #f2f2f7; color: #636366; border-radius: 8px;
+    padding: 6px 12px; font-size: 0.75rem; font-weight: 600; margin-right: 5px;
+  }
+  .standknop.aan { background: #2A3176; color: white; }
+  .standgroep { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; flex-wrap: wrap; }
+  .standgroep .naam { font-size: 0.8rem; font-weight: 700; width: 92px; }
+  .auto { font-size: 0.72rem; color: #aeaeb2; }
+
+  pre.json {
+    background: #1d1d1f; color: #e5e5ea; border-radius: 12px; padding: 14px;
+    font-size: 0.74rem; line-height: 1.5; overflow-x: auto; max-height: 320px;
+  }
+  .knoppen { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 12px; }
+  button.actie {
+    border: none; font-family: inherit; cursor: pointer;
+    background: #2A3176; color: white; border-radius: 10px;
+    padding: 9px 16px; font-size: 0.8rem; font-weight: 700;
+  }
+  button.actie.grijs { background: #f2f2f7; color: #3a3a3c; }
+  .gelukt { font-size: 0.76rem; color: #34c759; font-weight: 700; align-self: center; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="titel">Beheer</div>
+    <div class="sub">Handmatige correcties op de zaal- en veldindeling</div>
+  </div>
+  <div style="display:flex;gap:8px">
+    <a class="terug" href="./volevo-plattegrond.html">Plattegrond →</a>
+    <a class="terug" href="./volevo-zaal.html">Zaalindeling →</a>
+  </div>
+</div>
+
+<div class="uitleg">
+  Deze pagina slaat niets op — de site is statisch en heeft geen server, dus er is ook geen
+  inlog. Je stelt hier de correcties samen en zet het resultaat in
+  <code>data/overrides.json</code> in de repo. Vanaf dat moment gaan alle pagina's ervan uit.
+  Wie geen schrijfrechten op de repo heeft, kan hier dus wel iets invullen maar niets veranderen
+  aan wat anderen zien.
+</div>
+
+<div class="content">
+  <div class="blok">
+    <h2>Speelronde</h2>
+    <div class="regel">
+      <div>
+        <label for="dag">Speeldag</label>
+        <select id="dag"></select>
+      </div>
+      <div>
+        <label for="ronde">Speelronde</label>
+        <select id="ronde"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="blok">
+    <h2>Stand van de zalen</h2>
+    <div id="standen"></div>
+    <div class="auto">Niets gekozen = de pagina leidt de stand zelf af uit de bezetting.
+    Een gemengde stand (halve zaal een groot veld, andere helft twee kleine) valt niet af te
+    leiden en moet je hier dus zetten.</div>
+  </div>
+
+  <div class="blok">
+    <h2>Velden per wedstrijd</h2>
+    <div id="wedstrijden"></div>
+  </div>
+
+  <div class="blok">
+    <h2>Melding voor deze speeldag</h2>
+    <textarea id="melding" placeholder="Bijvoorbeeld: veld 3 vervalt wegens een lekkage; MB 3 speelt op veld 4."></textarea>
+  </div>
+
+  <div class="blok">
+    <h2>Resultaat — in data/overrides.json zetten</h2>
+    <pre class="json" id="json">…</pre>
+    <div class="knoppen">
+      <button class="actie" id="kopieer">Kopieer naar klembord</button>
+      <button class="actie grijs" id="download">Download bestand</button>
+      <button class="actie grijs" id="leeg">Correcties van deze ronde wissen</button>
+      <span class="gelukt" id="gelukt" style="display:none">Gekopieerd</span>
+    </div>
+  </div>
+</div>
+
+<script>
+var HAL = 'De Fluit';
+var ZAALNAMEN = ['De Bocht', 'De Tas'];
+var VELDEN = ['1','2','3','4','5','6','7'];
+
+var wedstrijden = [], perDag = {}, dagen = [];
+var overrides = { standen: {}, velden: {}, meldingen: {} };
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function dagSleutel(iso) {
+  var d = new Date(iso);
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function tijd(iso) {
+  var d = new Date(iso);
+  return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+}
+function sleutel(w) { return w.tijdstip + '|' + w.thuis + '|' + w.uit; }
+function dag()   { return document.getElementById('dag').value; }
+function ronde() { return document.getElementById('ronde').value; }
+
+async function start() {
+  var r = await fetch('./data/matches.json?t=' + Date.now());
+  var d = await r.json();
+  wedstrijden = (d.wedstrijden || []).filter(function(w) { return w.hal === HAL && w.tijdstip; });
+  perDag = {};
+  wedstrijden.forEach(function(w) { (perDag[dagSleutel(w.tijdstip)] = perDag[dagSleutel(w.tijdstip)] || []).push(w); });
+  dagen = Object.keys(perDag).sort();
+
+  // Bestaande correcties inlezen, zodat je verder werkt en niet overschrijft
+  try {
+    var ro = await fetch('./data/overrides.json?t=' + Date.now());
+    if (ro.ok) {
+      var o = await ro.json();
+      overrides = { standen: o.standen || {}, velden: o.velden || {}, meldingen: o.meldingen || {} };
+    }
+  } catch(e) {}
+
+  var vandaag = dagSleutel(new Date().toISOString());
+  var start = dagen.filter(function(k) { return k >= vandaag; })[0] || dagen[dagen.length-1];
+  document.getElementById('dag').innerHTML = dagen.map(function(k) {
+    var dd = new Date(k + 'T12:00:00');
+    return '<option value="' + k + '"' + (k === start ? ' selected' : '') + '>' +
+      dd.toLocaleDateString('nl-NL', { weekday:'long', day:'numeric', month:'long', year:'numeric' }) +
+      ' (' + perDag[k].length + ')</option>';
+  }).join('');
+  vulRondes();
+  document.getElementById('dag').addEventListener('change', function() { vulRondes(); teken(); });
+  document.getElementById('ronde').addEventListener('change', teken);
+  document.getElementById('melding').addEventListener('input', function() {
+    var t = this.value.trim();
+    if (t) overrides.meldingen[dag()] = t; else delete overrides.meldingen[dag()];
+    toonJson();
+  });
+  teken();
+}
+
+function vulRondes() {
+  var t = {};
+  (perDag[dag()] || []).forEach(function(w) { t[tijd(w.tijdstip)] = true; });
+  var lijst = Object.keys(t).sort();
+  document.getElementById('ronde').innerHTML = lijst.map(function(x) {
+    return '<option value="' + x + '">' + x + '</option>';
+  }).join('');
+}
+
+function teken() {
+  var lijst = (perDag[dag()] || []).filter(function(w) { return tijd(w.tijdstip) === ronde(); })
+    .sort(function(a,b) { return String(a.veld).localeCompare(String(b.veld), 'nl', {numeric:true}); });
+  var rk = dag() + '|' + ronde();
+
+  // Standen
+  document.getElementById('standen').innerHTML = ZAALNAMEN.map(function(z) {
+    var huidig = (overrides.standen[rk] || {})[z] || '';
+    return '<div class="standgroep"><span class="naam">' + esc(z) + '</span>' +
+      [['', 'automatisch'], ['drie', '3-deling'], ['vier', '4-deling'], ['gemengd', 'gemengd']].map(function(k) {
+        return '<button class="standknop' + (huidig === k[0] ? ' aan' : '') +
+          '" data-zaal="' + esc(z) + '" data-stand="' + k[0] + '">' + k[1] + '</button>';
+      }).join('') + '</div>';
+  }).join('');
+  Array.prototype.forEach.call(document.querySelectorAll('[data-stand]'), function(b) {
+    b.addEventListener('click', function() {
+      var z = b.getAttribute('data-zaal'), st = b.getAttribute('data-stand');
+      overrides.standen[rk] = overrides.standen[rk] || {};
+      if (st) overrides.standen[rk][z] = st; else delete overrides.standen[rk][z];
+      if (!Object.keys(overrides.standen[rk]).length) delete overrides.standen[rk];
+      teken();
+    });
+  });
+
+  // Wedstrijden
+  document.getElementById('wedstrijden').innerHTML = lijst.length
+    ? '<table><thead><tr><th>Gepland</th><th>Thuis</th><th>Tegenstander</th><th>Veld</th></tr></thead><tbody>' +
+      lijst.map(function(w) {
+        var k = sleutel(w), gew = overrides.velden[k] !== undefined;
+        return '<tr><td>' + esc(w.veld || '?') + '</td>' +
+          '<td class="team">' + esc(w.thuis) + '</td>' +
+          '<td class="tegen">' + esc(w.uit) + '</td>' +
+          '<td><select class="veldkeuze' + (gew ? ' gewijzigd' : '') + '" data-k="' + esc(k) + '">' +
+            '<option value="">— zoals gepland —</option>' +
+            VELDEN.map(function(v) {
+              return '<option value="' + v + '"' + (gew && String(overrides.velden[k]) === v ? ' selected' : '') +
+                '>veld ' + v + '</option>';
+            }).join('') +
+          '</select></td></tr>';
+      }).join('') + '</tbody></table>'
+    : '<div class="auto">Geen wedstrijden in deze speelronde.</div>';
+  Array.prototype.forEach.call(document.querySelectorAll('.veldkeuze'), function(sel) {
+    sel.addEventListener('change', function() {
+      var k = sel.getAttribute('data-k');
+      if (sel.value) overrides.velden[k] = sel.value; else delete overrides.velden[k];
+      teken();
+    });
+  });
+
+  document.getElementById('melding').value = overrides.meldingen[dag()] || '';
+  toonJson();
+}
+
+function bestand() {
+  return {
+    toelichting: 'Handmatige correcties die voorrang krijgen op de Nevobo-gegevens. Samen te stellen met volevo-admin.html.',
+    gewijzigd: new Date().toISOString().slice(0,19) + 'Z',
+    standen: overrides.standen,
+    velden: overrides.velden,
+    meldingen: overrides.meldingen
+  };
+}
+function toonJson() {
+  document.getElementById('json').textContent = JSON.stringify(bestand(), null, 2);
+}
+
+document.getElementById('kopieer').addEventListener('click', async function() {
+  try {
+    await navigator.clipboard.writeText(JSON.stringify(bestand(), null, 2));
+    var g = document.getElementById('gelukt');
+    g.style.display = 'inline'; setTimeout(function() { g.style.display = 'none'; }, 2000);
+  } catch(e) {
+    alert('Kopiëren lukte niet. Selecteer de tekst hierboven en kopieer met de hand.');
+  }
+});
+document.getElementById('download').addEventListener('click', function() {
+  var blob = new Blob([JSON.stringify(bestand(), null, 2)], { type: 'application/json' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'overrides.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function() { URL.revokeObjectURL(a.href); }, 1000);
+});
+document.getElementById('leeg').addEventListener('click', function() {
+  var rk = dag() + '|' + ronde();
+  delete overrides.standen[rk];
+  (perDag[dag()] || []).filter(function(w) { return tijd(w.tijdstip) === ronde(); })
+    .forEach(function(w) { delete overrides.velden[sleutel(w)]; });
+  teken();
+});
+
+start();
+</script>
+
+</body>
+</html>

@@ -92,6 +92,17 @@
   .bouwdeel { fill: #f2f2f7; stroke: #e5e5ea; stroke-width: 2; }
   .bouwdeel-tekst { font-size: 15px; font-weight: 600; fill: #aeaeb2; text-anchor: middle; }
 
+  .melding-balk {
+    background: #eef6ff; border: 1px solid #cfe4ff; color: #1b4a7a;
+    border-radius: 12px; padding: 10px 14px; margin-bottom: 14px;
+    font-size: 0.8rem; display: flex; gap: 9px; align-items: flex-start; line-height: 1.45;
+  }
+  .wl-gewijzigd {
+    background: #fff4e5; color: #7a4b00; font-weight: 800;
+    font-size: 0.62rem; border-radius: 4px; padding: 1px 5px; margin-left: 5px;
+    text-transform: uppercase; letter-spacing: 0.3px;
+  }
+
   .standrij { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
   .standgroep { display: flex; align-items: center; gap: 6px; }
   .standnaam { font-size: 0.72rem; font-weight: 700; color: #86868b; margin-right: 2px; }
@@ -166,6 +177,7 @@
   </div>
   <div class="header-right">
     <a class="terug" href="./volevo-zaal.html">Zaalindeling →</a>
+    <a class="terug" href="./volevo-admin.html">Beheer →</a>
   </div>
 </div>
 
@@ -209,46 +221,125 @@ function hdrLogoFallback() {
 var ZAAL = {
   naam: 'De Fluit',
   // In de hal lopen de nummers door over beide zalen: De Bocht 1 t/m 4,
-  // De Tas 5 t/m 8. Het wedstrijdschema kent er zeven (1 t/m 7); acht velden
-  // tegelijk komt in de competitie niet voor. `veld` = schemanummer,
-  // `hal` = nummer op de bordjes in de zaal.
+  // De Tas 5 t/m 8. Het wedstrijdschema kent er zeven (1 t/m 7).
+  // `veld` = schemanummer, `hal` = nummer op de bordjes. Beide mogen een
+  // lijstje zijn: bij een gemengde stand beslaat een groot veld twee plekken
+  // en kan de wedstrijd onder het ene of het andere nummer ingepland staan.
   //
-  // Elke zaal kan in 3-deling of in 4-deling staan; bij een 4-deling draait
-  // alles een kwartslag. Bevestigd: 3-deling = velden verticaal (naast
-  // elkaar), 4-deling = velden horizontaal (boven elkaar).
+  // Standen per zaal:
+  //   drie    3-deling, velden verticaal
+  //   vier    4-deling, velden horizontaal (de kwartslag)
+  //   gemengd halve zaal een groot veld, andere helft twee kleine
   //
-  // De tekening kiest de stand per speelronde uit de bezetting; met de
-  // knopjes erboven is hij handmatig te wisselen, want voor De Bocht valt de
-  // stand niet uit het schema af te leiden.
+  // Vlakken staan in breukdelen van de zaal (fx/fy = linkerbovenhoek,
+  // fw/fh = breedte/hoogte), zodat elke indeling te tekenen is.
+  // net: 'h' = net horizontaal, 'v' = net verticaal.
   //
   // Nog te bevestigen: de volgorde binnen De Bocht.
   bevestigd: false,
   viewBox: '0 0 1240 660',
   zalen: [
     { naam: 'De Bocht', x: 30, y: 80, w: 590, h: 520,
-      drie: { richting: 'stroken', velden: [ {veld:'1',hal:'1'}, {veld:'2',hal:'2'}, {veld:'3',hal:'3'} ] },
-      // Vierde veld van De Bocht komt in het wedstrijdschema niet voor: bij
-      // 4+4 zouden er acht velden zijn en dat gebeurt in de competitie niet.
-      vier: { richting: 'banden',  velden: [ {veld:'1',hal:'1'}, {veld:'2',hal:'2'},
-                                             {veld:'3',hal:'3'}, {veld:null,hal:'4'} ] } },
+      drie: { omschrijving: '3-deling · verticaal', velden: [
+        { veld:'1', hal:'1', fx:0,     fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'2', hal:'2', fx:1/3,   fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'3', hal:'3', fx:2/3,   fy:0, fw:1/3, fh:1, net:'h' } ] },
+      vier: { omschrijving: '4-deling · horizontaal', velden: [
+        { veld:'1',  hal:'1', fx:0, fy:0,    fw:1, fh:1/4, net:'v' },
+        { veld:'2',  hal:'2', fx:0, fy:1/4,  fw:1, fh:1/4, net:'v' },
+        { veld:'3',  hal:'3', fx:0, fy:2/4,  fw:1, fh:1/4, net:'v' },
+        { veld:null, hal:'4', fx:0, fy:3/4,  fw:1, fh:1/4, net:'v' } ] },
+      gemengd: { omschrijving: 'gemengd · groot veld plus twee', velden: [
+        { veld:['1','2'], hal:['1','2'], fx:0,   fy:0,   fw:1/2, fh:1,   net:'h' },
+        { veld:'3',       hal:'3',       fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:null,      hal:'4',       fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } },
+
     { naam: 'De Tas', x: 650, y: 80, w: 560, h: 520,
-      drie: { richting: 'stroken', velden: [ {veld:'7',hal:'8'}, {veld:'6',hal:'7'}, {veld:'5',hal:'6'} ] },
-      vier: { richting: 'banden',  velden: [ {veld:'7',hal:'8'}, {veld:'6',hal:'7'}, {veld:'5',hal:'6'}, {veld:'4',hal:'5'} ] } }
+      drie: { omschrijving: '3-deling · verticaal', velden: [
+        { veld:'7', hal:'8', fx:0,   fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'6', hal:'7', fx:1/3, fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'5', hal:'6', fx:2/3, fy:0, fw:1/3, fh:1, net:'h' } ] },
+      vier: { omschrijving: '4-deling · horizontaal', velden: [
+        { veld:'7', hal:'8', fx:0, fy:0,   fw:1, fh:1/4, net:'v' },
+        { veld:'6', hal:'7', fx:0, fy:1/4, fw:1, fh:1/4, net:'v' },
+        { veld:'5', hal:'6', fx:0, fy:2/4, fw:1, fh:1/4, net:'v' },
+        { veld:'4', hal:'5', fx:0, fy:3/4, fw:1, fh:1/4, net:'v' } ] },
+      gemengd: { omschrijving: 'gemengd · groot veld plus twee', velden: [
+        { veld:'7',       hal:'8',       fx:0,   fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:'6',       hal:'7',       fx:0,   fy:1/2, fw:1/2, fh:1/2, net:'v' },
+        { veld:['5','4'], hal:['6','5'], fx:1/2, fy:0,   fw:1/2, fh:1,   net:'h' } ] } }
   ],
   ingang: { x: 30, y: 616, w: 220, h: 30, tekst: 'Ingang / plein' }
 };
+
+// Alle schemanummers van een vlak, als lijst
+function veldenVan(v) {
+  if (!v.veld) return [];
+  return Array.isArray(v.veld) ? v.veld : [v.veld];
+}
+function halVan(v) {
+  var h = Array.isArray(v.hal) ? v.hal : [v.hal];
+  return h.join(' / ');
+}
+function labelVan(v) {
+  var l = veldenVan(v);
+  return l.length ? l.join(' of ') : '–';
+}
 
 // Welke stand staat deze speelronde in deze zaal? Is een veld in gebruik dat
 // alleen in de 4-deling bestaat, dan staat de zaal gedraaid.
 var standKeuze = {};   // zaalnaam -> 'drie' | 'vier', gezet door de knopjes
 function standVan(zaal, perVeld) {
+  if (standKeuze[zaal.naam] && zaal[standKeuze[zaal.naam]]) return zaal[standKeuze[zaal.naam]];
+  var vast = (OVERRIDES.standen[gekozenDag + '|' + gekozenRonde] || {})[zaal.naam];
+  if (vast && zaal[vast]) return zaal[vast];
+  // Automatisch: staat er een veld in gebruik dat alleen in de 4-deling
+  // bestaat, dan staat de zaal gekanteld. Een gemengde stand valt niet uit
+  // het schema af te leiden; die kies je met de knopjes of via de correcties.
   if (!zaal.vier) return zaal.drie;
-  if (standKeuze[zaal.naam]) return zaal[standKeuze[zaal.naam]];
-  var alleenInVier = zaal.vier.velden.filter(function(v) {
-    return !zaal.drie.velden.some(function(d) { return d.veld === v.veld; });
+  var alleenInVier = [];
+  zaal.vier.velden.forEach(function(v) {
+    veldenVan(v).forEach(function(nr) {
+      var ookInDrie = zaal.drie.velden.some(function(d) { return veldenVan(d).indexOf(nr) !== -1; });
+      if (!ookInDrie) alleenInVier.push(nr);
+    });
   });
-  var gedraaid = alleenInVier.some(function(v) { return (perVeld[v.veld] || []).length; });
+  var gedraaid = alleenInVier.some(function(nr) { return (perVeld[nr] || []).length; });
   return gedraaid ? zaal.vier : zaal.drie;
+}
+
+
+// ── Handmatige correcties uit data/overrides.json ──
+// De planning is niet altijd de werkelijkheid: een zaal kan anders staan dan
+// bedacht, of een wedstrijd verhuist naar een ander veld. Dit bestand krijgt
+// voorrang op de Nevobo-gegevens en wordt samengesteld met volevo-admin.html.
+var OVERRIDES = { standen: {}, velden: {}, meldingen: {} };
+var overridesGeladen = false;
+async function loadOverrides() {
+  if (overridesGeladen) return;
+  overridesGeladen = true;
+  try {
+    var r = await fetch('./data/overrides.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    OVERRIDES = {
+      standen:   d.standen   || {},
+      velden:    d.velden    || {},
+      meldingen: d.meldingen || {}
+    };
+  } catch(e) {}
+}
+// Sleutel van een wedstrijd: tijdstip|thuis|uit
+function wedstrijdSleutel(w) {
+  return (w.tijdstip || '') + '|' + (w.thuis || '') + '|' + (w.uit || '');
+}
+// Veldnummer met correctie meegerekend
+function veldVan(w) {
+  var o = OVERRIDES.velden[wedstrijdSleutel(w)];
+  return (o === undefined || o === null || o === '') ? w.veld : String(o);
+}
+function isGecorrigeerd(w) {
+  return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
 }
 
 var REFRESH_MS = 10 * 60 * 1000;
@@ -279,6 +370,7 @@ async function laden() {
       var b = document.getElementById('voorlopig');
       if (b) b.style.display = 'none';
     }
+    await loadOverrides();
     var r = await fetch('./data/matches.json?t=' + Date.now());
     if (!r.ok) throw new Error('Kan wedstrijdgegevens niet laden (' + r.status + ').');
     var d = await r.json();
@@ -308,9 +400,17 @@ async function laden() {
 function halNr(veld) {
   for (var i = 0; i < ZAAL.zalen.length; i++) {
     var z = ZAAL.zalen[i];
-    var alle = (z.vier ? z.vier.velden : []).concat(z.drie.velden);
-    var v = alle.filter(function(x) { return x.veld === veld; })[0];
-    if (v && v.hal && v.hal !== v.veld) return v.hal;
+    var alle = [];
+    ['drie','vier','gemengd'].forEach(function(k) { if (z[k]) alle = alle.concat(z[k].velden); });
+    for (var j = 0; j < alle.length; j++) {
+      var v = alle[j], nrs = veldenVan(v);
+      var idx = nrs.indexOf(veld);
+      if (idx !== -1) {
+        var h = Array.isArray(v.hal) ? v.hal[idx] : v.hal;
+        if (h && h !== veld) return h;
+        return null;
+      }
+    }
   }
   return null;
 }
@@ -364,51 +464,43 @@ function teken() {
   // Bezetting van deze ronde
   var actief = (perDag[gekozenDag] || []).filter(function(w) { return tijd(w.tijdstip) === gekozenRonde; });
   var perVeld = {};
-  actief.forEach(function(w) { (perVeld[w.veld || '?'] = perVeld[w.veld || '?'] || []).push(w); });
+  actief.forEach(function(w) { var v = veldVan(w) || '?'; (perVeld[v] = perVeld[v] || []).push(w); });
 
   // SVG
   var svg = '<svg class="plan" viewBox="' + ZAAL.viewBox + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plattegrond ' + esc(ZAAL.naam) + '">';
   ZAAL.zalen.forEach(function(z) {
     var stand = standVan(z, perVeld);
-    var aantal = stand.velden.length;
-    var banden = stand.richting === 'banden';   // banden = boven elkaar, stroken = naast elkaar
     svg += '<rect class="zaal-omtrek" x="'+z.x+'" y="'+z.y+'" width="'+z.w+'" height="'+z.h+'" rx="10"/>';
     svg += '<text class="zaal-naam" x="'+(z.x+16)+'" y="'+(z.y-20)+'">'+esc(z.naam)+'</text>';
-    svg += '<text class="zaal-sub" x="'+(z.x+26+z.naam.length*13)+'" y="'+(z.y-20)+'">' +
-      aantal + '-deling · ' + (banden ? 'horizontaal' : 'verticaal') + '</text>';
+    svg += '<text class="zaal-sub" x="'+(z.x+26+z.naam.length*13)+'" y="'+(z.y-20)+'">'+esc(stand.omschrijving)+'</text>';
 
-    var marge = 18, tussen = 12;
-    stand.velden.forEach(function(v, i) {
-      var vx, vy, bw, bh;
-      if (banden) {
-        bh = (z.h - 2*marge - (aantal-1)*tussen) / aantal;
-        bw = z.w - 2*marge;
-        vx = z.x + marge; vy = z.y + marge + i*(bh+tussen);
-      } else {
-        bw = (z.w - 2*marge - (aantal-1)*tussen) / aantal;
-        bh = z.h - 2*marge;
-        vx = z.x + marge + i*(bw+tussen); vy = z.y + marge;
-      }
-      var midx = vx + bw/2, midy = vy + bh/2;
-      var bezet = perVeld[v.veld] || [];
-      var isActief = gekozenVeld === v.veld;
+    var marge = 16, spleet = 6;
+    stand.velden.forEach(function(v) {
+      var bx = z.x + marge + v.fx * (z.w - 2*marge) + spleet/2;
+      var by = z.y + marge + v.fy * (z.h - 2*marge) + spleet/2;
+      var bw = v.fw * (z.w - 2*marge) - spleet;
+      var bh = v.fh * (z.h - 2*marge) - spleet;
+      var midx = bx + bw/2, midy = by + bh/2;
+
+      var nummers = veldenVan(v);
+      var bezet = [];
+      nummers.forEach(function(nr) { bezet = bezet.concat(perVeld[nr] || []); });
+      var isActief = nummers.length && nummers.indexOf(gekozenVeld) !== -1;
       var cls = 'veld-vak-groep' + (isActief ? ' actief' : (bezet.length ? ' bezet' : ''));
-      svg += '<g class="'+cls+'" data-veld="'+esc(v.veld)+'">';
-      svg += '<rect class="veld-vak'+(isActief?' actief':(bezet.length?' bezet':''))+'" x="'+vx+'" y="'+vy+'" width="'+bw+'" height="'+bh+'" rx="8"/>';
-      // Net: dwars op de lengterichting van het veld
-      if (banden) {
-        svg += '<line class="net" x1="'+midx+'" y1="'+(vy+8)+'" x2="'+midx+'" y2="'+(vy+bh-8)+'"/>';
+
+      svg += '<g class="'+cls+'"' + (nummers.length ? ' data-veld="'+esc(nummers[0])+'"' : '') + '>';
+      svg += '<rect class="veld-vak'+(isActief?' actief':(bezet.length?' bezet':''))+'" x="'+bx+'" y="'+by+'" width="'+bw+'" height="'+bh+'" rx="8"/>';
+      if (v.net === 'v') {
+        svg += '<line class="net" x1="'+midx+'" y1="'+(by+8)+'" x2="'+midx+'" y2="'+(by+bh-8)+'"/>';
       } else {
-        svg += '<line class="net" x1="'+(vx+8)+'" y1="'+midy+'" x2="'+(vx+bw-8)+'" y2="'+midy+'"/>';
+        svg += '<line class="net" x1="'+(bx+8)+'" y1="'+midy+'" x2="'+(bx+bw-8)+'" y2="'+midy+'"/>';
       }
-      var kop = banden ? (vx + 34) : midx;
-      var kopY = banden ? (vy + 26) : (vy + 44);
-      svg += '<text class="veld-nr" x="'+kop+'" y="'+kopY+'">'+esc(v.veld)+'</text>';
-      svg += '<text class="veld-halnr" x="'+kop+'" y="'+(kopY+19)+'">hal '+esc(v.hal)+'</text>';
-      bezet.slice(0,2).forEach(function(w, k) {
-        var basis = midy - 6 + k*46;
+      svg += '<text class="veld-nr" x="'+(bx+30)+'" y="'+(by+28)+'">'+esc(labelVan(v))+'</text>';
+      svg += '<text class="veld-halnr" x="'+(bx+30)+'" y="'+(by+46)+'">hal '+esc(halVan(v))+'</text>';
+      bezet.slice(0,3).forEach(function(w, k) {
+        var basis = midy - 6 + k*42;
         svg += '<text class="veld-team" x="'+midx+'" y="'+basis+'">'+esc(w.thuis.replace(/^VOLEVO\s*/,''))+'</text>';
-        svg += '<text class="veld-tegen" x="'+midx+'" y="'+(basis+20)+'">'+esc(w.uit)+'</text>';
+        svg += '<text class="veld-tegen" x="'+midx+'" y="'+(basis+19)+'">'+esc(w.uit)+'</text>';
       });
       svg += '</g>';
     });
@@ -421,12 +513,14 @@ function teken() {
   svg += '</svg>';
 
   var lijstHtml = actief.length
-    ? '<div class="wedstrijdlijst">' + actief.sort(function(a,b){
-        return String(a.veld).localeCompare(String(b.veld), 'nl', {numeric:true});
+    ? '<div class="wedstrijdlijst">' + actief.slice().sort(function(a,b){
+        return String(veldVan(a)).localeCompare(String(veldVan(b)), 'nl', {numeric:true});
       }).map(function(w) {
-        return '<div class="wl-item' + (gekozenVeld === w.veld ? ' actief' : '') + '" data-kies="' + esc(w.veld) + '">' +
-          '<span class="wl-veld">Veld ' + esc(w.veld || '?') +
-            (halNr(w.veld) ? ' <span class="wl-halnr">(hal ' + esc(halNr(w.veld)) + ')</span>' : '') + '</span>' +
+        var vv = veldVan(w);
+        return '<div class="wl-item' + (gekozenVeld === vv ? ' actief' : '') + '" data-kies="' + esc(vv) + '">' +
+          '<span class="wl-veld">Veld ' + esc(vv || '?') +
+            (halNr(vv) ? ' <span class="wl-halnr">(hal ' + esc(halNr(vv)) + ')</span>' : '') +
+            (isGecorrigeerd(w) ? ' <span class="wl-gewijzigd" title="Handmatig aangepast">gewijzigd</span>' : '') + '</span>' +
           '<span class="wl-thuis">' + esc(w.thuis) + '</span>' +
           '<span class="wl-tegen">vs ' + esc(w.uit) + '</span>' +
           '<span class="wl-tijd">' + esc(tijd(w.tijdstip)) + '</span></div>';
@@ -434,17 +528,20 @@ function teken() {
     : '<div class="melding">Geen wedstrijden in deze speelronde.</div>';
 
   var standKnoppen = '<div class="standrij">' + ZAAL.zalen.map(function(z) {
-    if (!z.vier) return '';
-    var huidig = standVan(z, perVeld) === z.vier ? 'vier' : 'drie';
+    var nu = standVan(z, perVeld);
+    var opties = [['drie','3-deling'], ['vier','4-deling'], ['gemengd','gemengd']];
     return '<span class="standgroep"><span class="standnaam">' + esc(z.naam) + '</span>' +
-      ['drie','vier'].map(function(k) {
-        return '<button class="standknop' + (huidig === k ? ' aan' : '') +
-          '" data-zaal="' + esc(z.naam) + '" data-stand="' + k + '">' +
-          (k === 'drie' ? '3-deling' : '4-deling') + '</button>';
+      opties.filter(function(k) { return z[k[0]]; }).map(function(k) {
+        return '<button class="standknop' + (nu === z[k[0]] ? ' aan' : '') +
+          '" data-zaal="' + esc(z.naam) + '" data-stand="' + k[0] + '">' + k[1] + '</button>';
       }).join('') + '</span>';
   }).join('') + '</div>';
 
-  document.getElementById('plan').innerHTML =
+  var melding = OVERRIDES.meldingen[gekozenDag];
+  var meldingHtml = melding
+    ? '<div class="melding-balk"><span>📣</span><span>' + esc(melding) + '</span></div>' : '';
+
+  document.getElementById('plan').innerHTML = meldingHtml +
     '<div class="plan-kaart">' + standKnoppen + svg +
       '<div class="legenda">' +
         '<span><i class="lg-vrij"></i>vrij</span>' +

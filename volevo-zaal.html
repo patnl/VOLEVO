@@ -233,6 +233,40 @@ function hdrLogoFallback() {
 // ── Instellingen ──
 var HAL = 'De Fluit';
 var VELDEN = ['1','2','3','4','5','6','7'];  // vaste indeling van De Fluit
+
+// ── Handmatige correcties uit data/overrides.json ──
+// De planning is niet altijd de werkelijkheid: een zaal kan anders staan dan
+// bedacht, of een wedstrijd verhuist naar een ander veld. Dit bestand krijgt
+// voorrang op de Nevobo-gegevens en wordt samengesteld met volevo-admin.html.
+var OVERRIDES = { standen: {}, velden: {}, meldingen: {} };
+var overridesGeladen = false;
+async function loadOverrides() {
+  if (overridesGeladen) return;
+  overridesGeladen = true;
+  try {
+    var r = await fetch('./data/overrides.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    OVERRIDES = {
+      standen:   d.standen   || {},
+      velden:    d.velden    || {},
+      meldingen: d.meldingen || {}
+    };
+  } catch(e) {}
+}
+// Sleutel van een wedstrijd: tijdstip|thuis|uit
+function wedstrijdSleutel(w) {
+  return (w.tijdstip || '') + '|' + (w.thuis || '') + '|' + (w.uit || '');
+}
+// Veldnummer met correctie meegerekend
+function veldVan(w) {
+  var o = OVERRIDES.velden[wedstrijdSleutel(w)];
+  return (o === undefined || o === null || o === '') ? w.veld : String(o);
+}
+function isGecorrigeerd(w) {
+  return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
+}
+
 var REFRESH_MS = 10 * 60 * 1000;
 
 var DAG_KORT = ['zo','ma','di','wo','do','vr','za'];
@@ -262,6 +296,7 @@ function isVandaag(sleutel) { return sleutel === dagSleutel(new Date().toISOStri
 
 async function laden() {
   try {
+    await loadOverrides();
     var r = await fetch('./data/matches.json?t=' + Date.now());
     if (!r.ok) throw new Error('Kan wedstrijdgegevens niet laden (' + r.status + ').');
     var d = await r.json();
@@ -326,7 +361,7 @@ function tekenRaster() {
   var sloten = {};
   wedstrijden.forEach(function(w) {
     var t = tijd(w.tijdstip);
-    var veld = w.veld || '?';
+    var veld = veldVan(w) || '?';
     sloten[t] = sloten[t] || {};
     (sloten[t][veld] = sloten[t][veld] || []).push(w);
   });
@@ -334,7 +369,7 @@ function tekenRaster() {
 
   // Welke velden komen deze dag voor? Onbekende velden achteraan.
   var gebruikt = {};
-  wedstrijden.forEach(function(w) { gebruikt[w.veld || '?'] = true; });
+  wedstrijden.forEach(function(w) { gebruikt[veldVan(w) || '?'] = true; });
   var kolommen = VELDEN.filter(function(v) { return true; });
   Object.keys(gebruikt).forEach(function(v) {
     if (kolommen.indexOf(v) === -1) kolommen.push(v);
