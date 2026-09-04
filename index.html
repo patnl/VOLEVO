@@ -57,6 +57,11 @@
     font-size: 0.73rem; color: #86868b; font-weight: 500;
     margin-top: 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
   }
+  .version-tag {
+    display: inline-flex; align-items: center;
+    background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px;
+    font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px;
+  }
   .nevobo-tag {
     display: inline-flex; align-items: center; gap: 4px;
     background: #f0f0f5; border-radius: 6px; padding: 2px 8px;
@@ -139,6 +144,7 @@
           </svg>
           Nevobo live feed
         </span>
+        <span class="version-tag">v1.0 · 4 sep</span>
       </div>
     </div>
   </div>
@@ -220,6 +226,30 @@ function hdrLogoFallback(){
     if(wrap) wrap.innerHTML='<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
   }
 }
+
+// ── Versielabel bijwerken uit data/version.json ──
+// Het cijfer (v2.5) blijft handmatig; de datum komt uit de laatste commit van
+// deze pagina, gestempeld door .github/workflows/stamp-version.yml.
+(async function stampVersion() {
+  var el = document.querySelector('.version-tag');
+  if (!el) return;
+  var base = (el.textContent.split('\u00b7')[0] || '').trim();
+  try {
+    var r = await fetch('./data/version.json?t=' + Date.now());
+    if (!r.ok) return;
+    var v = await r.json();
+    var me = (location.pathname.split('/').pop() || 'index.html');
+    var info = (v.files || {})[me];
+    if (!info || !info.date) return;
+    var d = new Date(info.date);
+    if (isNaN(d)) return;
+    var mnd = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    el.textContent = (base ? base + ' \u00b7 ' : '') + d.getDate() + ' ' + mnd[d.getMonth()];
+    el.title = 'Pagina laatst gewijzigd: '
+      + d.toLocaleString('nl-NL', { dateStyle: 'full', timeStyle: 'short' })
+      + ' (commit ' + info.commit + ')';
+  } catch(e) {}
+})();
 </script>
 
 </body>

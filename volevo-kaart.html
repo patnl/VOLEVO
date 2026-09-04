@@ -822,6 +822,30 @@ setInterval(function(){
 }, REFRESH_MS);
 
 loadData();
+
+// ── Versielabel bijwerken uit data/version.json ──
+// Het cijfer (v2.5) blijft handmatig; de datum komt uit de laatste commit van
+// deze pagina, gestempeld door .github/workflows/stamp-version.yml.
+(async function stampVersion() {
+  var el = document.querySelector('.version-tag');
+  if (!el) return;
+  var base = (el.textContent.split('\u00b7')[0] || '').trim();
+  try {
+    var r = await fetch('./data/version.json?t=' + Date.now());
+    if (!r.ok) return;
+    var v = await r.json();
+    var me = (location.pathname.split('/').pop() || 'index.html');
+    var info = (v.files || {})[me];
+    if (!info || !info.date) return;
+    var d = new Date(info.date);
+    if (isNaN(d)) return;
+    var mnd = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    el.textContent = (base ? base + ' \u00b7 ' : '') + d.getDate() + ' ' + mnd[d.getMonth()];
+    el.title = 'Pagina laatst gewijzigd: '
+      + d.toLocaleString('nl-NL', { dateStyle: 'full', timeStyle: 'short' })
+      + ' (commit ' + info.commit + ')';
+  } catch(e) {}
+})();
 </script>
 </body>
 </html>
