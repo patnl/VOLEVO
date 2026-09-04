@@ -58,6 +58,12 @@
   td.team { font-weight: 700; color: #2A3176; }
   td.tegen { color: #636366; }
   select.veldkeuze { max-width: 150px; padding: 5px 8px; font-size: 0.8rem; }
+  .botsing {
+    background: #fff0f0; border: 1px solid #ffc9c9; color: #a11;
+    border-radius: 10px; padding: 9px 12px; margin-bottom: 12px;
+    font-size: 0.78rem; font-weight: 600;
+  }
+  tr.botst td { background: #fff7f7; }
   select.veldkeuze.gewijzigd { border-color: #ff9500; background: #fff9f0; font-weight: 700; }
 
   .standknop {
@@ -243,22 +249,47 @@ function teken() {
     });
   });
 
+  // Effectief veld per wedstrijd: correctie zo niet, dan de planning
+  function effVeld(w) {
+    var o = overrides.velden[sleutel(w)];
+    return (o === undefined || o === '') ? (w.veld || '') : String(o);
+  }
+  // Wie bezet welk veld in deze ronde? Een veld kan maar door een wedstrijd
+  // tegelijk gebruikt worden, dus de rest mag er niet naartoe.
+  var bezetting = {};
+  lijst.forEach(function(w) {
+    var v = effVeld(w);
+    if (v) (bezetting[v] = bezetting[v] || []).push(w);
+  });
+  var dubbel = Object.keys(bezetting).filter(function(v) { return bezetting[v].length > 1; });
+
   // Wedstrijden
   document.getElementById('wedstrijden').innerHTML = lijst.length
-    ? '<table><thead><tr><th>Gepland</th><th>Thuis</th><th>Tegenstander</th><th>Veld</th></tr></thead><tbody>' +
+    ? (dubbel.length ? '<div class="botsing">Let op: veld ' + dubbel.join(' en ') +
+        ' staat in de planning dubbel bezet. Zet een van beide op een ander veld.</div>' : '') +
+      '<table><thead><tr><th>Gepland</th><th>Thuis</th><th>Tegenstander</th><th>Veld</th></tr></thead><tbody>' +
       lijst.map(function(w) {
         var k = sleutel(w), gew = overrides.velden[k] !== undefined;
-        return '<tr><td>' + esc(w.veld || '?') + '</td>' +
+        var mijn = effVeld(w);
+        var botst = mijn && bezetting[mijn] && bezetting[mijn].length > 1;
+        return '<tr' + (botst ? ' class="botst"' : '') + '><td>' + esc(w.veld || '?') + '</td>' +
           '<td class="team">' + esc(w.thuis) + '</td>' +
           '<td class="tegen">' + esc(w.uit) + '</td>' +
           '<td><select class="veldkeuze' + (gew ? ' gewijzigd' : '') + '" data-k="' + esc(k) + '">' +
-            '<option value="">— zoals gepland —</option>' +
+            '<option value="">— zoals gepland' + (w.veld ? ': veld ' + esc(w.veld) : '') + ' —</option>' +
             VELDEN.map(function(v) {
-              return '<option value="' + v + '"' + (gew && String(overrides.velden[k]) === v ? ' selected' : '') +
-                '>veld ' + v + '</option>';
+              // Bezet door een andere wedstrijd? Dan niet te kiezen.
+              var door = (bezetting[v] || []).filter(function(x) { return sleutel(x) !== k; });
+              var vrij = door.length === 0;
+              return '<option value="' + v + '"' +
+                (gew && String(overrides.velden[k]) === v ? ' selected' : '') +
+                (vrij ? '' : ' disabled') + '>veld ' + v +
+                (vrij ? '' : ' · bezet door ' + esc(door[0].thuis)) + '</option>';
             }).join('') +
           '</select></td></tr>';
-      }).join('') + '</tbody></table>'
+      }).join('') + '</tbody></table>' +
+      '<div class="auto" style="margin-top:9px">Een veld dat al bezet is, staat uitgeschakeld. ' +
+      'Wil je twee teams wisselen, zet er dan eerst een op &quot;zoals gepland&quot; of op een vrij veld.</div>'
     : '<div class="auto">Geen wedstrijden in deze speelronde.</div>';
   Array.prototype.forEach.call(document.querySelectorAll('.veldkeuze'), function(sel) {
     sel.addEventListener('change', function() {
