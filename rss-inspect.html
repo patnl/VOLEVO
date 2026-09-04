@@ -23,10 +23,12 @@
 
 <script>
 var URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
+// Lokale mirror (ververst door .github/workflows/mirror-feeds.yml); externe proxies zijn fallback
+var LOCAL_FEED = './data/programma.xml';
 
 async function load() {
   var out = document.getElementById('out');
-  var proxies = [URL,
+  var proxies = [LOCAL_FEED + '?t=' + Date.now(), URL,
     'https://api.allorigins.win/raw?url=' + encodeURIComponent(URL),
     'https://corsproxy.io/?' + encodeURIComponent(URL)
   ];

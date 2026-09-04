@@ -1,0 +1,55 @@
+name: Mirror Nevobo feeds
+
+# De Nevobo-API stuurt geen CORS-headers, dus de browser kan de RSS niet direct
+# ophalen. De gratis CORS-proxies (allorigins, corsproxy.io) zijn niet meer
+# bruikbaar. Daarom halen we de feeds hier server-side op en committen we ze in
+# de repo, zodat de pagina's ze same-origin kunnen lezen.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/mirror-feeds.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-feeds
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Feeds ophalen
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          base=https://api.nevobo.nl/export/vereniging/CNZ6B97
+          for feed in programma resultaten; do
+            echo "→ $feed"
+            curl -fsS --retry 3 --retry-delay 5 --max-time 60 \
+              -H 'User-Agent: volevo-pages-mirror' \
+              "$base/$feed.rss" -o "data/$feed.tmp"
+            # Ruwe sanity-check: moet XML met items zijn, anders niet overschrijven
+            grep -q '<item>' "data/$feed.tmp"
+            mv "data/$feed.tmp" "data/$feed.xml"
+          done
+
+      - name: Committen als er iets is veranderd
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain data)" ]; then
+            echo "Geen wijzigingen in de feeds."
+            exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data
+          git commit -m "Feeds bijwerken ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+          git push

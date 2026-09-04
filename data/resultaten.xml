@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nevobo="https://www.api.nevobo.nl/rss/">
+  <channel>
+    <title>RSS feed Nederlandse Volleybalbond</title>
+    <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
+    <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
+    <lastBuildDate>Fri, 04 Sep 2026 21:34:25 +0200</lastBuildDate>
+    <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO MC 1 - Zovoc JC 1, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1966972</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1966972</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 1 - Zovoc JC 1, Uitslag: 3-2, Setstanden: 16-25, 25-10, 23-25, 25-21, 15-12]]></description>
+      <pubDate>Fri, 04 Sep 2026 19:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MA 2 - VELO MA 1, Uitslag: 0-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1967259</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1967259</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 2 - VELO MA 1, Uitslag: 0-3, Setstanden: 23-25, 17-25, 14-25]]></description>
+      <pubDate>Fri, 04 Sep 2026 19:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO JB 1 - Inter Rijswijk JB 1, Uitslag: 0-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1966965</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1966965</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO JB 1 - Inter Rijswijk JB 1, Uitslag: 0-3, Setstanden: 9-25, 24-26, 15-25]]></description>
+      <pubDate>Fri, 04 Sep 2026 19:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO JA 1 - Inter Rijswijk JA 1, Uitslag: 0-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1966930</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1966930</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO JA 1 - Inter Rijswijk JA 1, Uitslag: 0-3, Setstanden: 16-25, 20-25, 17-25]]></description>
+      <pubDate>Fri, 04 Sep 2026 19:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 3 - SKC DS 2, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2033012</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2033012</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - SKC DS 2, Uitslag: 3-2, Setstanden: 24-26, 25-13, 18-25, 25-21, 15-11]]></description>
+      <pubDate>Thu, 03 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+  </channel>
+</rss>

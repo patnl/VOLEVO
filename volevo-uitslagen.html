@@ -186,7 +186,7 @@
   <div class="header-left">
     <div id="header-logo-wrap">
       <img id="header-logo-img"
-        src="./logo.png"
+        src="./LOGO.png"
         alt="Volevo" onerror="hdrFail()">
     </div>
     <div class="header-divider"></div>
@@ -375,11 +375,14 @@ function scoreHtml(score) {
 }
 
 var RSS_URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss';
+// Lokale mirror (ververst door .github/workflows/mirror-feeds.yml); externe proxies zijn fallback
+var LOCAL_FEED = './data/resultaten.xml';
 var REFRESH_MS = 5 * 60 * 1000;
 var lastUpdated = null;
 
 async function fetchRSS() {
   var proxies = [
+    LOCAL_FEED + '?t=' + Date.now(),
     RSS_URL,
     'https://api.allorigins.win/raw?url=' + encodeURIComponent(RSS_URL),
     'https://corsproxy.io/?' + encodeURIComponent(RSS_URL)

@@ -459,12 +459,15 @@ async function geocode(postal, city) {
 
 // ── RSS ───────────────────────────────────────────────────────────────────
 var RSS_URL = 'https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
+// Lokale mirror (ververst door .github/workflows/mirror-feeds.yml); externe proxies zijn fallback
+var LOCAL_FEED = './data/programma.xml';
 var REFRESH_MS = 5 * 60 * 1000;
 var lastUpdated = null;
 // DEMO_MODE al gedeclareerd bovenaan script
 
 async function fetchRSS() {
   var proxies = [
+    LOCAL_FEED + '?t=' + Date.now(),
     RSS_URL,
     'https://api.allorigins.win/raw?url=' + encodeURIComponent(RSS_URL),
     'https://corsproxy.io/?' + encodeURIComponent(RSS_URL)
@@ -500,8 +503,10 @@ var map = L.map('map', {
   tap: false
 });
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  maxZoom: 18
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  maxZoom: 18,
+  maxNativeZoom: 16,
+  attribution: 'Tiles &copy; Esri'
 }).addTo(map);
 
 // Netherlands bounds

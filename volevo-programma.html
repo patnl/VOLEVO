@@ -200,7 +200,7 @@
   <div class="header-left">
     <div id="header-logo-wrap">
       <img id="header-logo-img"
-        src="./logo.png"
+        src="./LOGO.png"
         alt="Volevo"
         onerror="hdrLogoFallback()">
     </div>
@@ -237,7 +237,7 @@
 
 <script>
 // ── Header logo fallback ──
-// Fallback-keten nadat ./logo.png faalt
+// Fallback-keten nadat ./LOGO.png faalt
 var hdrLogoUrls=[
   'https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
   'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'
@@ -339,6 +339,8 @@ function extractClubCodes(item,home,away){
 
 // ── Data & time ──
 var RSS_URL='https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss';
+// Lokale mirror (ververst door .github/workflows/mirror-feeds.yml); externe proxies zijn fallback
+var LOCAL_FEED = './data/programma.xml';
 var REFRESH_MS=5*60*1000;
 var lastUpdated=null;
 
@@ -369,10 +371,12 @@ function updateBadge(){ document.getElementById('refresh-text').textContent=time
 function iv(n){ return n&&n.toUpperCase().indexOf('VOLEVO')!==-1; }
 
 async function fetchRSS(url){
-  var proxies=['','https://api.allorigins.win/raw?url=','https://corsproxy.io/?'];
+  var proxies=[LOCAL_FEED+'?t='+Date.now(), url,
+    'https://api.allorigins.win/raw?url='+encodeURIComponent(url),
+    'https://corsproxy.io/?'+encodeURIComponent(url)];
   for(var i=0;i<proxies.length;i++){
     try{
-      var u=proxies[i]?(proxies[i]+encodeURIComponent(url)):url;
+      var u=proxies[i];
       var r=await fetch(u); if(!r.ok)continue;
       var t=await r.text();
       if(t&&t.indexOf('<item>')!==-1)return new DOMParser().parseFromString(t,'text/xml');
