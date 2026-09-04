@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Plattegrond</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f7; color: #1d1d1f;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    min-height: 100vh; -webkit-font-smoothing: antialiased;
+  }
+
+  .header {
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 14px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; position: sticky; top: 0; z-index: 20;
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  #header-logo-wrap { height: 50px; width: 56px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  #header-logo-img { max-height: 50px; max-width: 56px; object-fit: contain; display: block; }
+  .hdr-logo-fb { background: #2A3176; border-radius: 12px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; }
+  .hdr-logo-fb span { color: #9CD0C1; font-size: 0.58rem; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; }
+  .header-divider { width: 1px; height: 36px; background: #e5e5ea; flex-shrink: 0; }
+  .page-label { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.4px; line-height: 1; }
+  .page-sub { font-size: 0.73rem; color: #86868b; font-weight: 500; margin-top: 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .hal-tag { display: inline-flex; align-items: center; gap: 4px; background: #f0f0f5; border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 600; color: #636366; }
+  .version-tag { display: inline-flex; align-items: center; background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px; }
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  .terug { font-size: 0.72rem; font-weight: 600; color: #86868b; text-decoration: none; padding: 5px 10px; border-radius: 8px; background: #f2f2f7; }
+  .terug:hover { color: #2A3176; }
+
+  /* Waarschuwing zolang de indeling niet bevestigd is */
+  .voorlopig {
+    background: #fff4e5; border-bottom: 1px solid #ffd8a8;
+    color: #7a4b00; padding: 9px 28px; font-size: 0.76rem;
+    display: flex; align-items: center; gap: 8px; line-height: 1.4;
+  }
+  .voorlopig strong { font-weight: 800; }
+
+  .kiezers {
+    padding: 12px 28px 6px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .rij { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 3px; align-items: center; }
+  .rij-label {
+    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.6px;
+    text-transform: uppercase; color: #aeaeb2; flex-shrink: 0; width: 74px;
+  }
+  .chip {
+    flex-shrink: 0; cursor: pointer; border: none; font-family: inherit;
+    background: white; color: #3a3a3c; border-radius: 10px; padding: 7px 13px;
+    font-size: 0.76rem; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
+    line-height: 1.2; white-space: nowrap;
+  }
+  .chip .sub { font-size: 0.65rem; font-weight: 700; color: #aeaeb2; text-transform: uppercase; letter-spacing: 0.4px; }
+  .chip.active { background: #2A3176; color: white; }
+  .chip.active .sub { color: #9CD0C1; }
+
+  .content { padding: 8px 28px 40px; max-width: 1200px; margin: 0 auto; }
+  .plan-kaart {
+    background: white; border-radius: 18px; padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 6px 24px rgba(0,0,0,0.05);
+  }
+  svg.plan { width: 100%; height: auto; display: block; }
+
+  .zaal-omtrek { fill: #fbfbfd; stroke: #d1d1d6; stroke-width: 3; }
+  .veld-vak { fill: #f2f2f7; stroke: #d1d1d6; stroke-width: 2; }
+  .veld-vak.bezet { fill: #eef0f8; stroke: #b9bfdd; }
+  .veld-vak.actief { fill: #2A3176; stroke: #2A3176; }
+  .veld-nr { font-size: 26px; font-weight: 800; fill: #aeaeb2; text-anchor: middle; }
+  .veld-vak-groep.bezet .veld-nr { fill: #2A3176; }
+  .veld-vak-groep.actief .veld-nr { fill: #9CD0C1; }
+  .veld-team { font-size: 17px; font-weight: 700; fill: #2A3176; text-anchor: middle; }
+  .veld-tegen { font-size: 14px; fill: #86868b; text-anchor: middle; }
+  .veld-vak-groep.actief .veld-team { fill: #ffffff; }
+  .veld-vak-groep.actief .veld-tegen { fill: #cfd4ea; }
+  .veld-vak-groep { cursor: pointer; }
+  .bouwdeel { fill: #f2f2f7; stroke: #e5e5ea; stroke-width: 2; }
+  .bouwdeel-tekst { font-size: 15px; font-weight: 600; fill: #aeaeb2; text-anchor: middle; }
+
+  .legenda {
+    margin-top: 14px; display: flex; gap: 16px; flex-wrap: wrap;
+    font-size: 0.74rem; color: #86868b; align-items: center;
+  }
+  .legenda i { width: 13px; height: 13px; border-radius: 4px; display: inline-block; margin-right: 5px; vertical-align: -2px; }
+  .lg-vrij   { background: #f2f2f7; border: 1.5px solid #d1d1d6; }
+  .lg-bezet  { background: #eef0f8; border: 1.5px solid #b9bfdd; }
+  .lg-actief { background: #2A3176; }
+
+  .wedstrijdlijst { margin-top: 16px; display: flex; flex-direction: column; gap: 7px; }
+  .wl-item {
+    background: white; border-radius: 12px; padding: 10px 13px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    display: flex; align-items: center; gap: 11px; cursor: pointer;
+    border-left: 4px solid #e5e5ea; font-size: 0.84rem;
+  }
+  .wl-item.actief { border-left-color: #2A3176; box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 6px 18px rgba(42,49,118,0.10); }
+  .wl-veld {
+    background: rgba(42,49,118,0.08); color: #2A3176; font-weight: 800;
+    font-size: 0.7rem; border-radius: 6px; padding: 3px 8px; flex-shrink: 0;
+  }
+  .wl-item.actief .wl-veld { background: #2A3176; color: white; }
+  .wl-thuis { font-weight: 700; color: #2A3176; }
+  .wl-tegen { color: #636366; }
+  .wl-tijd { margin-left: auto; color: #86868b; font-weight: 600; font-size: 0.78rem; }
+
+  .melding { text-align: center; padding: 60px 30px; color: #86868b; }
+
+  @media (max-width: 700px) {
+    .header, .voorlopig, .kiezers, .content { padding-left: 16px; padding-right: 16px; }
+    .rij-label { width: 100%; }
+    .rij { flex-wrap: nowrap; }
+    .kiezers { gap: 10px; }
+    .veld-nr { font-size: 34px; }
+    .veld-team { font-size: 22px; }
+    .veld-tegen { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div id="header-logo-wrap">
+      <img id="header-logo-img" src="./LOGO.png" alt="Volevo" onerror="hdrLogoFallback()">
+    </div>
+    <div class="header-divider"></div>
+    <div>
+      <div class="page-label">Plattegrond</div>
+      <div class="page-sub">
+        <span id="dagtitel">–</span>
+        <span class="hal-tag">
+          <svg width="9" height="9" viewBox="0 0 20 20" fill="none">
+            <path d="M10 17.5s5.5-5.1 5.5-9a5.5 5.5 0 10-11 0c0 3.9 5.5 9 5.5 9z" stroke="#636366" stroke-width="1.7" stroke-linejoin="round"/>
+            <circle cx="10" cy="8.3" r="1.9" stroke="#636366" stroke-width="1.6"/>
+          </svg>
+          <span>De Fluit</span>
+        </span>
+        <span class="version-tag">v0.9 · 4 sep</span>
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="terug" href="./volevo-zaal.html">Zaalindeling →</a>
+  </div>
+</div>
+
+<div class="voorlopig" id="voorlopig">
+  <span>⚠️</span>
+  <span><strong>Voorlopige indeling.</strong> De nummers en bezetting kloppen (die komen uit de
+  Nevobo-gegevens), maar wáár de velden in de zaal liggen is nog niet bevestigd. Loop niet
+  op deze tekening af zonder te kijken.</span>
+</div>
+
+<div class="kiezers">
+  <div class="rij"><span class="rij-label">Speeldag</span><span id="dagen" style="display:flex;gap:7px"></span></div>
+  <div class="rij"><span class="rij-label">Speelronde</span><span id="rondes" style="display:flex;gap:7px"></span></div>
+</div>
+
+<div class="content">
+  <div id="plan"><div class="melding">Plattegrond laden…</div></div>
+</div>
+
+<script>
+// ── Header logo fallback ──
+var hdrLogoUrls = ['https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
+                   'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'];
+var hdrLogoIdx = 0;
+function hdrLogoFallback() {
+  var img = document.getElementById('header-logo-img');
+  if (img && hdrLogoIdx < hdrLogoUrls.length) { img.src = hdrLogoUrls[hdrLogoIdx++]; }
+  else {
+    var wrap = document.getElementById('header-logo-wrap');
+    if (wrap) wrap.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  ZAALINDELING — het enige stuk dat aangepast moet worden als de echte
+//  plattegrond bekend is. Coordinaten in een eigen raster (viewBox hieronder);
+//  x/y is de linkerbovenhoek van een veld, w/h de afmetingen.
+//  Zet `bevestigd: true` zodra de posities kloppen; dan verdwijnt de
+//  waarschuwingsbalk bovenaan vanzelf.
+// ═══════════════════════════════════════════════════════════════════════════
+var ZAAL = {
+  naam: 'De Fluit',
+  bevestigd: false,
+  viewBox: '0 0 1180 560',
+  omtrek: { x: 30, y: 30, w: 1120, h: 500, r: 10 },
+  velden: [
+    { nr: '1', x:  60, y:  80, w: 130, h: 400 },
+    { nr: '2', x: 212, y:  80, w: 130, h: 400 },
+    { nr: '3', x: 364, y:  80, w: 130, h: 400 },
+    { nr: '4', x: 516, y:  80, w: 130, h: 400 },
+    { nr: '5', x: 668, y:  80, w: 130, h: 400 },
+    { nr: '6', x: 820, y:  80, w: 130, h: 400 },
+    { nr: '7', x: 972, y:  80, w: 130, h: 400 }
+  ],
+  // Vaste elementen (entree, kleedkamers, tribune) — puur oriëntatie
+  elementen: []
+};
+
+var REFRESH_MS = 10 * 60 * 1000;
+var DAG_KORT = ['zo','ma','di','wo','do','vr','za'];
+var DAG_LANG = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+var MND_KORT = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+var MND_LANG = ['januari','februari','maart','april','mei','juni','juli','augustus',
+                'september','oktober','november','december'];
+
+var perDag = {}, dagen = [], gekozenDag = null, gekozenRonde = null, gekozenVeld = null;
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function dagSleutel(iso) {
+  var d = new Date(iso);
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function tijd(iso) {
+  var d = new Date(iso);
+  return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+}
+
+async function laden() {
+  try {
+    if (ZAAL.bevestigd) {
+      var b = document.getElementById('voorlopig');
+      if (b) b.style.display = 'none';
+    }
+    var r = await fetch('./data/matches.json?t=' + Date.now());
+    if (!r.ok) throw new Error('Kan wedstrijdgegevens niet laden (' + r.status + ').');
+    var d = await r.json();
+    var lijst = (d.wedstrijden || []).filter(function(w) { return w.hal === ZAAL.naam && w.tijdstip; });
+    if (!lijst.length) throw new Error('Geen wedstrijden in ' + ZAAL.naam + ' gevonden.');
+
+    perDag = {};
+    lijst.forEach(function(w) { (perDag[dagSleutel(w.tijdstip)] = perDag[dagSleutel(w.tijdstip)] || []).push(w); });
+    dagen = Object.keys(perDag).sort();
+
+    var params = new URLSearchParams(location.search);
+    if (!gekozenDag) {
+      var vandaag = dagSleutel(new Date().toISOString());
+      gekozenDag = params.get('dag') && perDag[params.get('dag')] ? params.get('dag')
+        : (perDag[vandaag] ? vandaag
+          : (dagen.filter(function(k){ return k >= vandaag; })[0] || dagen[dagen.length-1]));
+    }
+    if (!gekozenVeld && params.get('veld')) gekozenVeld = params.get('veld');
+    teken();
+  } catch(e) {
+    document.getElementById('plan').innerHTML =
+      '<div class="melding" style="color:#ff3b30">' + esc(e.message) + '</div>';
+  }
+}
+
+function rondesVan(dag) {
+  var t = {};
+  (perDag[dag] || []).forEach(function(w) { t[tijd(w.tijdstip)] = true; });
+  return Object.keys(t).sort();
+}
+
+function teken() {
+  var rondes = rondesVan(gekozenDag);
+  if (!gekozenRonde || rondes.indexOf(gekozenRonde) === -1) {
+    // Standaard: de eerstvolgende ronde van die dag, anders de eerste
+    var nu = new Date();
+    gekozenRonde = rondes.filter(function(t) {
+      return new Date(gekozenDag + 'T' + t + ':00') >= nu;
+    })[0] || rondes[0];
+  }
+
+  var d = new Date(gekozenDag + 'T12:00:00');
+  document.getElementById('dagtitel').textContent =
+    DAG_LANG[d.getDay()] + ' ' + d.getDate() + ' ' + MND_LANG[d.getMonth()] + ' ' + d.getFullYear();
+
+  // Chips
+  document.getElementById('dagen').innerHTML = dagen.map(function(k) {
+    var dd = new Date(k + 'T12:00:00');
+    return '<button class="chip' + (k === gekozenDag ? ' active' : '') + '" data-dag="' + k + '">' +
+      '<span class="sub">' + DAG_KORT[dd.getDay()] + '</span>' +
+      '<span>' + dd.getDate() + ' ' + MND_KORT[dd.getMonth()] + '</span></button>';
+  }).join('');
+  document.getElementById('rondes').innerHTML = rondes.map(function(t) {
+    var n = (perDag[gekozenDag] || []).filter(function(w) { return tijd(w.tijdstip) === t; }).length;
+    return '<button class="chip' + (t === gekozenRonde ? ' active' : '') + '" data-ronde="' + t + '">' +
+      '<span>' + t + '</span><span class="sub">' + n + ' wedstr.</span></button>';
+  }).join('');
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-dag]'), function(b) {
+    b.addEventListener('click', function() {
+      gekozenDag = b.getAttribute('data-dag'); gekozenRonde = null; gekozenVeld = null; teken();
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-ronde]'), function(b) {
+    b.addEventListener('click', function() {
+      gekozenRonde = b.getAttribute('data-ronde'); gekozenVeld = null; teken();
+    });
+  });
+
+  // Bezetting van deze ronde
+  var actief = (perDag[gekozenDag] || []).filter(function(w) { return tijd(w.tijdstip) === gekozenRonde; });
+  var perVeld = {};
+  actief.forEach(function(w) { (perVeld[w.veld || '?'] = perVeld[w.veld || '?'] || []).push(w); });
+
+  // SVG
+  var svg = '<svg class="plan" viewBox="' + ZAAL.viewBox + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plattegrond ' + esc(ZAAL.naam) + '">';
+  var o = ZAAL.omtrek;
+  svg += '<rect class="zaal-omtrek" x="'+o.x+'" y="'+o.y+'" width="'+o.w+'" height="'+o.h+'" rx="'+(o.r||8)+'"/>';
+  (ZAAL.elementen || []).forEach(function(el) {
+    svg += '<rect class="bouwdeel" x="'+el.x+'" y="'+el.y+'" width="'+el.w+'" height="'+el.h+'" rx="6"/>';
+    svg += '<text class="bouwdeel-tekst" x="'+(el.x+el.w/2)+'" y="'+(el.y+el.h/2+5)+'">'+esc(el.tekst||'')+'</text>';
+  });
+  ZAAL.velden.forEach(function(v) {
+    var bezet = perVeld[v.nr] || [];
+    var isActief = gekozenVeld === v.nr;
+    var cls = 'veld-vak-groep' + (isActief ? ' actief' : (bezet.length ? ' bezet' : ''));
+    var mid = v.x + v.w/2;
+    svg += '<g class="'+cls+'" data-veld="'+esc(v.nr)+'">';
+    svg += '<rect class="veld-vak'+(isActief?' actief':(bezet.length?' bezet':''))+'" x="'+v.x+'" y="'+v.y+'" width="'+v.w+'" height="'+v.h+'" rx="8"/>';
+    svg += '<text class="veld-nr" x="'+mid+'" y="'+(v.y+42)+'">'+esc(v.nr)+'</text>';
+    bezet.slice(0,2).forEach(function(w, i) {
+      var basis = v.y + v.h/2 - 10 + i*54;
+      svg += '<text class="veld-team" x="'+mid+'" y="'+basis+'">'+esc(w.thuis.replace(/^VOLEVO\s*/,''))+'</text>';
+      svg += '<text class="veld-tegen" x="'+mid+'" y="'+(basis+20)+'">'+esc(w.uit)+'</text>';
+    });
+    svg += '</g>';
+  });
+  svg += '</svg>';
+
+  var lijstHtml = actief.length
+    ? '<div class="wedstrijdlijst">' + actief.sort(function(a,b){
+        return String(a.veld).localeCompare(String(b.veld), 'nl', {numeric:true});
+      }).map(function(w) {
+        return '<div class="wl-item' + (gekozenVeld === w.veld ? ' actief' : '') + '" data-kies="' + esc(w.veld) + '">' +
+          '<span class="wl-veld">Veld ' + esc(w.veld || '?') + '</span>' +
+          '<span class="wl-thuis">' + esc(w.thuis) + '</span>' +
+          '<span class="wl-tegen">vs ' + esc(w.uit) + '</span>' +
+          '<span class="wl-tijd">' + esc(tijd(w.tijdstip)) + '</span></div>';
+      }).join('') + '</div>'
+    : '<div class="melding">Geen wedstrijden in deze speelronde.</div>';
+
+  document.getElementById('plan').innerHTML =
+    '<div class="plan-kaart">' + svg +
+      '<div class="legenda">' +
+        '<span><i class="lg-vrij"></i>vrij</span>' +
+        '<span><i class="lg-bezet"></i>bezet</span>' +
+        '<span><i class="lg-actief"></i>geselecteerd</span>' +
+        '<span style="margin-left:auto">Klik een veld of een wedstrijd aan.</span>' +
+      '</div>' +
+    '</div>' + lijstHtml;
+
+  // Klikken: veld in de tekening of regel in de lijst
+  Array.prototype.forEach.call(document.querySelectorAll('[data-veld]'), function(g) {
+    g.addEventListener('click', function() {
+      gekozenVeld = (gekozenVeld === g.getAttribute('data-veld')) ? null : g.getAttribute('data-veld');
+      teken();
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-kies]'), function(el) {
+    el.addEventListener('click', function() {
+      gekozenVeld = (gekozenVeld === el.getAttribute('data-kies')) ? null : el.getAttribute('data-kies');
+      teken();
+    });
+  });
+}
+
+laden();
+setInterval(laden, REFRESH_MS);
+
+// ── Versielabel bijwerken uit data/version.json ──
+(async function stampVersion() {
+  var el = document.querySelector('.version-tag');
+  if (!el) return;
+  var base = (el.textContent.split('·')[0] || '').trim();
+  try {
+    var r = await fetch('./data/version.json?t=' + Date.now());
+    if (!r.ok) return;
+    var v = await r.json();
+    var me = (location.pathname.split('/').pop() || 'index.html');
+    var info = (v.files || {})[me];
+    if (!info || !info.date) return;
+    var d = new Date(info.date);
+    if (isNaN(d)) return;
+    var mnd = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    el.textContent = (base ? base + ' · ' : '') + d.getDate() + ' ' + mnd[d.getMonth()];
+    el.title = 'Pagina laatst gewijzigd: '
+      + d.toLocaleString('nl-NL', { dateStyle: 'full', timeStyle: 'short' })
+      + ' (commit ' + info.commit + ')';
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>
