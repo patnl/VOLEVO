@@ -92,6 +92,16 @@
   .bouwdeel { fill: #f2f2f7; stroke: #e5e5ea; stroke-width: 2; }
   .bouwdeel-tekst { font-size: 15px; font-weight: 600; fill: #aeaeb2; text-anchor: middle; }
 
+  .standrij { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+  .standgroep { display: flex; align-items: center; gap: 6px; }
+  .standnaam { font-size: 0.72rem; font-weight: 700; color: #86868b; margin-right: 2px; }
+  .standknop {
+    border: none; font-family: inherit; cursor: pointer;
+    background: #f2f2f7; color: #636366; border-radius: 8px;
+    padding: 5px 11px; font-size: 0.72rem; font-weight: 600;
+  }
+  .standknop.aan { background: #2A3176; color: white; }
+
   .legenda {
     margin-top: 14px; display: flex; gap: 16px; flex-wrap: wrap;
     font-size: 0.74rem; color: #86868b; align-items: center;
@@ -204,29 +214,36 @@ var ZAAL = {
   // `hal` = nummer op de bordjes in de zaal.
   //
   // Elke zaal kan in 3-deling of in 4-deling staan; bij een 4-deling draait
-  // alles een kwartslag. De tekening kiest de stand per speelronde: staat er
-  // een vierde veld in gebruik, dan de gedraaide stand.
+  // alles een kwartslag. Bevestigd: 3-deling = velden verticaal (naast
+  // elkaar), 4-deling = velden horizontaal (boven elkaar).
   //
-  // Nog te bevestigen: de volgorde binnen De Bocht, en of de gedraaide stand
-  // hieronder de goede kant op staat.
+  // De tekening kiest de stand per speelronde uit de bezetting; met de
+  // knopjes erboven is hij handmatig te wisselen, want voor De Bocht valt de
+  // stand niet uit het schema af te leiden.
+  //
+  // Nog te bevestigen: de volgorde binnen De Bocht.
   bevestigd: false,
   viewBox: '0 0 1240 660',
   zalen: [
     { naam: 'De Bocht', x: 30, y: 80, w: 590, h: 520,
-      drie: { richting: 'banden', velden: [ {veld:'1',hal:'1'}, {veld:'2',hal:'2'}, {veld:'3',hal:'3'} ] },
-      // De Bocht komt in het wedstrijdschema nooit met een vierde veld voor.
-      vier: null },
+      drie: { richting: 'stroken', velden: [ {veld:'1',hal:'1'}, {veld:'2',hal:'2'}, {veld:'3',hal:'3'} ] },
+      // Vierde veld van De Bocht komt in het wedstrijdschema niet voor: bij
+      // 4+4 zouden er acht velden zijn en dat gebeurt in de competitie niet.
+      vier: { richting: 'banden',  velden: [ {veld:'1',hal:'1'}, {veld:'2',hal:'2'},
+                                             {veld:'3',hal:'3'}, {veld:null,hal:'4'} ] } },
     { naam: 'De Tas', x: 650, y: 80, w: 560, h: 520,
-      drie: { richting: 'banden',  velden: [ {veld:'7',hal:'8'}, {veld:'6',hal:'7'}, {veld:'5',hal:'6'} ] },
-      vier: { richting: 'stroken', velden: [ {veld:'7',hal:'8'}, {veld:'6',hal:'7'}, {veld:'5',hal:'6'}, {veld:'4',hal:'5'} ] } }
+      drie: { richting: 'stroken', velden: [ {veld:'7',hal:'8'}, {veld:'6',hal:'7'}, {veld:'5',hal:'6'} ] },
+      vier: { richting: 'banden',  velden: [ {veld:'7',hal:'8'}, {veld:'6',hal:'7'}, {veld:'5',hal:'6'}, {veld:'4',hal:'5'} ] } }
   ],
   ingang: { x: 30, y: 616, w: 220, h: 30, tekst: 'Ingang / plein' }
 };
 
 // Welke stand staat deze speelronde in deze zaal? Is een veld in gebruik dat
 // alleen in de 4-deling bestaat, dan staat de zaal gedraaid.
+var standKeuze = {};   // zaalnaam -> 'drie' | 'vier', gezet door de knopjes
 function standVan(zaal, perVeld) {
   if (!zaal.vier) return zaal.drie;
+  if (standKeuze[zaal.naam]) return zaal[standKeuze[zaal.naam]];
   var alleenInVier = zaal.vier.velden.filter(function(v) {
     return !zaal.drie.velden.some(function(d) { return d.veld === v.veld; });
   });
@@ -333,12 +350,14 @@ function teken() {
 
   Array.prototype.forEach.call(document.querySelectorAll('[data-dag]'), function(b) {
     b.addEventListener('click', function() {
-      gekozenDag = b.getAttribute('data-dag'); gekozenRonde = null; gekozenVeld = null; teken();
+      gekozenDag = b.getAttribute('data-dag'); gekozenRonde = null; gekozenVeld = null;
+      standKeuze = {}; teken();
     });
   });
   Array.prototype.forEach.call(document.querySelectorAll('[data-ronde]'), function(b) {
     b.addEventListener('click', function() {
-      gekozenRonde = b.getAttribute('data-ronde'); gekozenVeld = null; teken();
+      gekozenRonde = b.getAttribute('data-ronde'); gekozenVeld = null;
+      standKeuze = {}; teken();
     });
   });
 
@@ -356,7 +375,7 @@ function teken() {
     svg += '<rect class="zaal-omtrek" x="'+z.x+'" y="'+z.y+'" width="'+z.w+'" height="'+z.h+'" rx="10"/>';
     svg += '<text class="zaal-naam" x="'+(z.x+16)+'" y="'+(z.y-20)+'">'+esc(z.naam)+'</text>';
     svg += '<text class="zaal-sub" x="'+(z.x+26+z.naam.length*13)+'" y="'+(z.y-20)+'">' +
-      aantal + '-deling' + (banden ? '' : ' · kwartslag gedraaid') + '</text>';
+      aantal + '-deling · ' + (banden ? 'horizontaal' : 'verticaal') + '</text>';
 
     var marge = 18, tussen = 12;
     stand.velden.forEach(function(v, i) {
@@ -414,8 +433,19 @@ function teken() {
       }).join('') + '</div>'
     : '<div class="melding">Geen wedstrijden in deze speelronde.</div>';
 
+  var standKnoppen = '<div class="standrij">' + ZAAL.zalen.map(function(z) {
+    if (!z.vier) return '';
+    var huidig = standVan(z, perVeld) === z.vier ? 'vier' : 'drie';
+    return '<span class="standgroep"><span class="standnaam">' + esc(z.naam) + '</span>' +
+      ['drie','vier'].map(function(k) {
+        return '<button class="standknop' + (huidig === k ? ' aan' : '') +
+          '" data-zaal="' + esc(z.naam) + '" data-stand="' + k + '">' +
+          (k === 'drie' ? '3-deling' : '4-deling') + '</button>';
+      }).join('') + '</span>';
+  }).join('') + '</div>';
+
   document.getElementById('plan').innerHTML =
-    '<div class="plan-kaart">' + svg +
+    '<div class="plan-kaart">' + standKnoppen + svg +
       '<div class="legenda">' +
         '<span><i class="lg-vrij"></i>vrij</span>' +
         '<span><i class="lg-bezet"></i>bezet</span>' +
@@ -425,6 +455,12 @@ function teken() {
     '</div>' + lijstHtml;
 
   // Klikken: veld in de tekening of regel in de lijst
+  Array.prototype.forEach.call(document.querySelectorAll('[data-stand]'), function(b) {
+    b.addEventListener('click', function() {
+      standKeuze[b.getAttribute('data-zaal')] = b.getAttribute('data-stand');
+      teken();
+    });
+  });
   Array.prototype.forEach.call(document.querySelectorAll('[data-veld]'), function(g) {
     g.addEventListener('click', function() {
       gekozenVeld = (gekozenVeld === g.getAttribute('data-veld')) ? null : g.getAttribute('data-veld');
