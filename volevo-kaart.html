@@ -360,6 +360,22 @@ function getClubCode(name) {
   var base = name.replace(/\s+(MA|MB|MC|MD|DS|HS|JO|JA|JB|JC|JD|JE|MO|N[0-9]+)\s*\d*\s*$/i,'').trim();
   return CLUB_CODES[base] || null;
 }
+// ── Clubcodes aanvullen uit data/clubs.json ──
+// De statische tabel hierboven dekt alleen bekende tegenstanders. clubs.json
+// bevat alle ~1750 Nevobo-verenigingen en wordt dagelijks ververst door
+// .github/workflows/mirror-feeds.yml. Namen uit de tabel hierboven blijven leidend.
+var clubsLoaded = false;
+async function loadClubs() {
+  if (clubsLoaded) return;
+  clubsLoaded = true;
+  try {
+    var r = await fetch('./data/clubs.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    for (var k in d) { if (!CLUB_CODES.hasOwnProperty(k)) CLUB_CODES[k] = d[k]; }
+  } catch(e) {}
+}
+
 function initials(name) {
   return (name||'').trim().split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).slice(0,2).map(w=>w[0].toUpperCase()).join('');
 }
@@ -622,6 +638,7 @@ function cycleTo(index) {
 // ── Main load ─────────────────────────────────────────────────────────────
 async function loadData() {
   try {
+    await loadClubs();
     // Geocode VOLEVO home once
     if (!homeCoords) {
       homeCoords = await geocode(HOME_POSTAL, HOME_CITY);

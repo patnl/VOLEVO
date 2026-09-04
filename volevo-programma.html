@@ -293,6 +293,22 @@ function getClubCode(name){
   var base=name.replace(/\s+(MA|MB|MC|MD|DS|HS|JO|JA|JB|JC|JD|JE|MO|N[0-9]+)\s*\d*\s*$/i,'').trim();
   return CLUB_CODES[base]||null;
 }
+// ── Clubcodes aanvullen uit data/clubs.json ──
+// De statische tabel hierboven dekt alleen bekende tegenstanders. clubs.json
+// bevat alle ~1750 Nevobo-verenigingen en wordt dagelijks ververst door
+// .github/workflows/mirror-feeds.yml. Namen uit de tabel hierboven blijven leidend.
+var clubsLoaded = false;
+async function loadClubs() {
+  if (clubsLoaded) return;
+  clubsLoaded = true;
+  try {
+    var r = await fetch('./data/clubs.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    for (var k in d) { if (!CLUB_CODES.hasOwnProperty(k)) CLUB_CODES[k] = d[k]; }
+  } catch(e) {}
+}
+
 
 // ── Row logo helpers ──
 var rowLogoFallbacks={};
@@ -483,6 +499,7 @@ function render(matches){
 
 async function loadData(){
   try{
+    await loadClubs();
     var xml=await fetchRSS(RSS_URL);
     var allFromToday=[];
     var todayStart=new Date(); todayStart.setHours(0,0,0,0);

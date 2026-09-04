@@ -296,6 +296,22 @@ function getClubCode(name) {
   var base = name.replace(/\s+(MA|MB|MC|DS|HS|JO|JB|JC|JD|JE|MO|JA)\s*\d*\s*$/i, '').trim();
   return CLUB_CODES[base] || null;
 }
+// ── Clubcodes aanvullen uit data/clubs.json ──
+// De statische tabel hierboven dekt alleen bekende tegenstanders. clubs.json
+// bevat alle ~1750 Nevobo-verenigingen en wordt dagelijks ververst door
+// .github/workflows/mirror-feeds.yml. Namen uit de tabel hierboven blijven leidend.
+var clubsLoaded = false;
+async function loadClubs() {
+  if (clubsLoaded) return;
+  clubsLoaded = true;
+  try {
+    var r = await fetch('./data/clubs.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    for (var k in d) { if (!CLUB_CODES.hasOwnProperty(k)) CLUB_CODES[k] = d[k]; }
+  } catch(e) {}
+}
+
 
 function iv(n) { return n && n.toUpperCase().indexOf('VOLEVO') !== -1; }
 
@@ -395,35 +411,6 @@ async function fetchRSS() {
     } catch(e) {}
   }
   throw new Error('Kan feed niet laden.');
-}
-
-// Resolve club codes via allorigins.win (volgt redirect van Nevobo permalink naar volleybal.nl URL)
-async function resolveClubCodes(linkUrl) {
-  if (!linkUrl) return null;
-  try {
-    var proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(linkUrl);
-    var timeoutProm = new Promise(function(res) { setTimeout(function() { res(null); }, 6000); });
-    var resp = await Promise.race([fetch(proxyUrl), timeoutProm]);
-    if (!resp || !resp.ok) return null;
-    var json = await resp.json();
-    // Kijk eerst naar de definitieve URL na redirect (status.url)
-    var finalUrl = (json.status && json.status.url) ? json.status.url : '';
-    var mc = finalUrl.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
-    if (mc) return { homeCode: mc[1].toUpperCase(), awayCode: mc[2].toUpperCase() };
-    // Doorzoek paginainhoud op club-logo URLs (assets.nevobo.nl/organisatie/logo/CODE.jpg)
-    var content = json.contents || '';
-    var logos = [], lm;
-    var logoPat = /assets\.nevobo\.nl\/organisatie\/logo\/([A-Z0-9]{5,10})/gi;
-    while ((lm = logoPat.exec(content)) !== null && logos.length < 6) {
-      var c = lm[1].toUpperCase();
-      if (logos.indexOf(c) === -1) logos.push(c);
-    }
-    if (logos.length >= 2) return { homeCode: logos[0], awayCode: logos[1] };
-    // Fallback: zoek /wedstrijd/CODE/CODE patroon in paginainhoud
-    var mc2 = content.match(/\/wedstrijd\/([A-Z0-9]{5,10})[^\/]*\/([A-Z0-9]{5,10})/i);
-    if (mc2) return { homeCode: mc2[1].toUpperCase(), awayCode: mc2[2].toUpperCase() };
-  } catch(e) {}
-  return null;
 }
 
 // Selecteer max N wedstrijden die het dichtst bij het huidige tijdstip liggen
@@ -530,6 +517,7 @@ function render(matches) {
 
 async function loadData() {
   try {
+    await loadClubs();
     var xml = await fetchRSS();
     var allMatches = [];
     xml.querySelectorAll('item').forEach(function(item) {
@@ -583,14 +571,13 @@ async function loadData() {
       render([]); return;
     }
 
-    // Stap 3: los ontbrekende clubcodes asynchroon op via allorigins.win (parallel)
-    var resolved = await Promise.all(toShow.map(async function(m) {
-      if (m._linkUrl) {
-        var codes = await resolveClubCodes(m._linkUrl);
-        if (codes) { m.homeCode = m.homeCode || codes.homeCode; m.awayCode = m.awayCode || codes.awayCode; }
-      }
+    // Stap 3: ontbrekende clubcodes uit de (met clubs.json aangevulde) tabel halen.
+    // De oude lookup via allorigins.win is vervallen: die proxy bestaat niet meer.
+    var resolved = toShow.map(function(m) {
+      if (!m.homeCode) m.homeCode = getClubCode(m.home);
+      if (!m.awayCode) m.awayCode = getClubCode(m.away);
       return m;
-    }));
+    });
 
     lastUpdated = Date.now();
     render(resolved);

@@ -1,0 +1,44 @@
+name: Mirror Nevobo clublijst
+
+# Bouwt data/clubs.json (clubnaam -> organisatiecode) zodat de pagina's het
+# logo van elke tegenstander kunnen tonen zonder externe lookup. De Nevobo-API
+# kent geen zoek-op-naam, dus de hele verenigingenlijst wordt doorlopen
+# (~59 pagina's); daarom dagelijks in plaats van elk kwartier.
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/mirror-clubs.yml'
+      - 'scripts/build_clubs.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-clubs
+  cancel-in-progress: false
+
+jobs:
+  clubs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Clublijst ophalen
+        run: python3 scripts/build_clubs.py
+
+      - name: Committen als er iets is veranderd
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain data/clubs.json)" ]; then
+            echo "Clublijst ongewijzigd."
+            exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/clubs.json
+          git commit -m "Clublijst bijwerken ($(date -u '+%Y-%m-%d'))"
+          git push
