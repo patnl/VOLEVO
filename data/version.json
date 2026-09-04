@@ -1,6 +1,6 @@
 {
-  "commit": "07063b6",
-  "date": "2026-09-04T22:30:23+02:00",
+  "commit": "7cfb053",
+  "date": "2026-09-04T22:36:43+02:00",
   "files": {
     "index.html": {
       "commit": "eae5858",
@@ -17,6 +17,10 @@
     "volevo-kaart.html": {
       "commit": "07063b6",
       "date": "2026-09-04T22:30:23+02:00"
+    },
+    "volevo-plattegrond.html": {
+      "commit": "7cfb053",
+      "date": "2026-09-04T22:36:43+02:00"
     },
     "volevo-programma.html": {
       "commit": "eae5858",
