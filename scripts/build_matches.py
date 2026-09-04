@@ -104,6 +104,20 @@ if met_veld < len(matches) * 0.5:
              % (met_veld, len(matches)))
 
 matches.sort(key=lambda m: (m['tijdstip'] or '', m['thuis']))
+
+# Alleen wegschrijven als de wedstrijden zelf veranderd zijn. Anders zou de
+# tijdstempel elke run een commit opleveren, vier keer per dag, voor niets.
+try:
+    with open('data/matches.json', encoding='utf-8') as f:
+        oud = json.load(f).get('wedstrijden')
+except (OSError, ValueError):
+    oud = None
+
+if oud == matches:
+    print('Wedstrijdgegevens ongewijzigd (%d wedstrijden) - bestand niet aangeraakt'
+          % len(matches))
+    raise SystemExit(0)
+
 data = {'gegenereerd': time.strftime('%Y-%m-%dT%H:%M:%S+00:00', time.gmtime()),
         'wedstrijden': matches}
 
