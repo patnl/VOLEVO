@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Zaalindeling</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  .header {
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 14px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 20;
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  #header-logo-wrap {
+    height: 50px; width: 56px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  #header-logo-img { max-height: 50px; max-width: 56px; object-fit: contain; display: block; }
+  .hdr-logo-fb {
+    background: #2A3176; border-radius: 12px; width: 50px; height: 50px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hdr-logo-fb span {
+    color: #9CD0C1; font-size: 0.58rem; font-weight: 900;
+    letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .header-divider { width: 1px; height: 36px; background: #e5e5ea; flex-shrink: 0; }
+  .page-label {
+    font-size: 1.4rem; font-weight: 800; color: #1d1d1f;
+    letter-spacing: -0.4px; line-height: 1;
+  }
+  .page-sub {
+    font-size: 0.73rem; color: #86868b; font-weight: 500;
+    margin-top: 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .hal-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: #f0f0f5; border-radius: 6px; padding: 2px 8px;
+    font-size: 0.67rem; font-weight: 600; color: #636366;
+  }
+  .version-tag {
+    display: inline-flex; align-items: center;
+    background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px;
+    font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px;
+  }
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  .terug {
+    font-size: 0.72rem; font-weight: 600; color: #86868b;
+    text-decoration: none; padding: 5px 10px; border-radius: 8px;
+    background: #f2f2f7;
+  }
+  .terug:hover { color: #2A3176; }
+
+  /* DAGKIEZER */
+  .daybar {
+    position: sticky; top: 79px; z-index: 15;
+    background: rgba(245,245,247,0.94);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    padding: 12px 28px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .daybar-scroll {
+    display: flex; gap: 7px; overflow-x: auto; padding-bottom: 3px;
+    scrollbar-width: thin;
+  }
+  .day-chip {
+    flex-shrink: 0; cursor: pointer; border: none;
+    background: white; color: #3a3a3c;
+    border-radius: 10px; padding: 7px 13px;
+    font-size: 0.76rem; font-weight: 600; font-family: inherit;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
+    line-height: 1.2; white-space: nowrap;
+  }
+  .day-chip .dc-dag { font-size: 0.65rem; font-weight: 700; color: #aeaeb2; text-transform: uppercase; letter-spacing: 0.4px; }
+  .day-chip.active { background: #2A3176; color: white; }
+  .day-chip.active .dc-dag { color: #9CD0C1; }
+  .day-chip.vandaag:not(.active) { box-shadow: 0 0 0 1.5px #9CD0C1; }
+
+  /* CONTENT */
+  .content { padding: 20px 28px 48px; max-width: 1500px; margin: 0 auto; }
+  .loading, .leeg {
+    text-align: center; padding: 70px 40px; color: #86868b; font-size: 0.95rem;
+  }
+
+  .slot-label {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: #aeaeb2; padding: 14px 4px 8px;
+  }
+
+  .grid-wrap { overflow-x: auto; padding-bottom: 4px; }
+  table.zaal { border-collapse: separate; border-spacing: 6px; min-width: 100%; }
+  table.zaal th {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.6px;
+    text-transform: uppercase; color: #aeaeb2; padding: 0 0 2px;
+    text-align: center; min-width: 132px;
+  }
+  table.zaal th.tijdkop { min-width: 58px; text-align: left; padding-left: 4px; }
+  td.tijdcel {
+    vertical-align: middle; text-align: left;
+    font-size: 0.92rem; font-weight: 700; color: #2A3176;
+    white-space: nowrap; padding-left: 4px; min-width: 58px;
+  }
+  td.veldcel { vertical-align: top; padding: 0; }
+
+  .wedstrijd {
+    background: white; border-radius: 12px; padding: 9px 11px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 3px 12px rgba(0,0,0,0.035);
+    border-left: 4px solid #2A3176;
+    display: flex; flex-direction: column; gap: 3px;
+    min-height: 100%;
+  }
+  .wedstrijd + .wedstrijd { margin-top: 6px; }
+  .w-thuis { font-size: 0.82rem; font-weight: 700; color: #2A3176; line-height: 1.25; }
+  .w-tegen { font-size: 0.78rem; color: #636366; line-height: 1.25; }
+  .w-tegen .vs { color: #c7c7cc; font-weight: 600; margin-right: 3px; }
+  /* Het veldnummer staat op breed scherm al in de kolomkop */
+  .veld-badge-mob { display: none; }
+
+  .leeg-cel {
+    border: 1.5px dashed #e5e5ea; border-radius: 12px;
+    min-height: 54px; display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; color: #d1d1d6; font-weight: 600;
+  }
+
+  tr.nu td.tijdcel { color: #1d1d1f; }
+  tr.nu .wedstrijd { border-left-color: #9CD0C1; box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 6px 20px rgba(42,49,118,0.10); }
+  .nu-tag {
+    display: inline-block; background: #9CD0C1; color: #17493c;
+    font-size: 0.6rem; font-weight: 800; letter-spacing: 0.4px;
+    border-radius: 5px; padding: 1px 5px; margin-left: 6px;
+    text-transform: uppercase; vertical-align: middle;
+  }
+
+  .voet {
+    margin-top: 22px; padding: 0 4px;
+    font-size: 0.72rem; color: #aeaeb2;
+    display: flex; gap: 10px; flex-wrap: wrap; justify-content: space-between;
+  }
+  .voet a { color: #86868b; font-weight: 600; text-decoration: none; }
+  .voet a:hover { color: #2A3176; }
+
+  /* Smal scherm: raster wordt een lijst per tijdslot */
+  @media (max-width: 780px) {
+    .header, .daybar, .content { padding-left: 16px; padding-right: 16px; }
+    .daybar { top: 71px; }
+    table.zaal, table.zaal tbody, table.zaal tr, table.zaal td { display: block; width: 100%; }
+    table.zaal thead { display: none; }
+    table.zaal { border-spacing: 0; }
+    table.zaal tr { margin-bottom: 16px; }
+    td.tijdcel {
+      padding: 0 0 7px; font-size: 1rem;
+    }
+    td.veldcel { margin-bottom: 6px; }
+    td.veldcel.leeg-veld { display: none; }
+    .wedstrijd { flex-direction: row; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .veld-badge-mob {
+      display: inline-block;
+      background: rgba(42,49,118,0.08); color: #2A3176;
+      font-size: 0.66rem; font-weight: 800; border-radius: 5px;
+      padding: 2px 6px; letter-spacing: 0.3px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div id="header-logo-wrap">
+      <img id="header-logo-img" src="./LOGO.png" alt="Volevo" onerror="hdrLogoFallback()">
+    </div>
+    <div class="header-divider"></div>
+    <div>
+      <div class="page-label">Zaalindeling</div>
+      <div class="page-sub">
+        <span id="dagtitel">–</span>
+        <span class="hal-tag">
+          <svg width="9" height="9" viewBox="0 0 20 20" fill="none">
+            <path d="M10 17.5s5.5-5.1 5.5-9a5.5 5.5 0 10-11 0c0 3.9 5.5 9 5.5 9z" stroke="#636366" stroke-width="1.7" stroke-linejoin="round"/>
+            <circle cx="10" cy="8.3" r="1.9" stroke="#636366" stroke-width="1.6"/>
+          </svg>
+          <span id="haltekst">De Fluit</span>
+        </span>
+        <span class="version-tag">v1.0 · 4 sep</span>
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="terug" href="./volevo-programma.html">Programma →</a>
+  </div>
+</div>
+
+<div class="daybar"><div class="daybar-scroll" id="dagen"></div></div>
+
+<div class="content">
+  <div id="raster"><div class="loading">Zaalindeling laden…</div></div>
+</div>
+
+<script>
+// ── Header logo fallback ──
+var hdrLogoUrls = [
+  'https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
+  'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'
+];
+var hdrLogoIdx = 0;
+function hdrLogoFallback() {
+  var img = document.getElementById('header-logo-img');
+  if (img && hdrLogoIdx < hdrLogoUrls.length) {
+    img.src = hdrLogoUrls[hdrLogoIdx++];
+  } else {
+    var wrap = document.getElementById('header-logo-wrap');
+    if (wrap) wrap.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+  }
+}
+
+// ── Instellingen ──
+var HAL = 'De Fluit';
+var VELDEN = ['1','2','3','4','5','6','7'];  // vaste indeling van De Fluit
+var REFRESH_MS = 10 * 60 * 1000;
+
+var DAG_KORT = ['zo','ma','di','wo','do','vr','za'];
+var DAG_LANG = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+var MND_KORT = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+var MND_LANG = ['januari','februari','maart','april','mei','juni','juli','augustus',
+                'september','oktober','november','december'];
+
+var perDag = {};        // 'YYYY-MM-DD' -> [wedstrijd]
+var dagen = [];         // gesorteerde sleutels
+var gekozenDag = null;
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function dagSleutel(iso) {
+  var d = new Date(iso);
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' +
+         String(d.getDate()).padStart(2,'0');
+}
+function tijd(iso) {
+  var d = new Date(iso);
+  return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+}
+function isVandaag(sleutel) { return sleutel === dagSleutel(new Date().toISOString()); }
+
+async function laden() {
+  try {
+    var r = await fetch('./data/matches.json?t=' + Date.now());
+    if (!r.ok) throw new Error('Kan wedstrijdgegevens niet laden (' + r.status + ').');
+    var d = await r.json();
+    var lijst = (d.wedstrijden || []).filter(function(w) {
+      return w.hal === HAL && w.tijdstip;
+    });
+    if (!lijst.length) throw new Error('Geen wedstrijden in ' + HAL + ' gevonden.');
+
+    perDag = {};
+    lijst.forEach(function(w) {
+      var k = dagSleutel(w.tijdstip);
+      (perDag[k] = perDag[k] || []).push(w);
+    });
+    dagen = Object.keys(perDag).sort();
+
+    if (!gekozenDag || !perDag[gekozenDag]) {
+      var vandaag = dagSleutel(new Date().toISOString());
+      gekozenDag = perDag[vandaag] ? vandaag
+        : (dagen.filter(function(k){ return k >= vandaag; })[0] || dagen[dagen.length-1]);
+    }
+    tekenDagen();
+    tekenRaster();
+  } catch(e) {
+    document.getElementById('raster').innerHTML =
+      '<div class="loading" style="color:#ff3b30">' + esc(e.message) + '</div>';
+  }
+}
+
+function tekenDagen() {
+  var host = document.getElementById('dagen');
+  host.innerHTML = dagen.map(function(k) {
+    var d = new Date(k + 'T12:00:00');
+    var cls = 'day-chip' + (k === gekozenDag ? ' active' : '') + (isVandaag(k) ? ' vandaag' : '');
+    return '<button class="' + cls + '" data-dag="' + k + '">' +
+             '<span class="dc-dag">' + DAG_KORT[d.getDay()] + '</span>' +
+             '<span>' + d.getDate() + ' ' + MND_KORT[d.getMonth()] + '</span>' +
+           '</button>';
+  }).join('');
+  Array.prototype.forEach.call(host.querySelectorAll('.day-chip'), function(b) {
+    b.addEventListener('click', function() {
+      gekozenDag = b.getAttribute('data-dag');
+      tekenDagen(); tekenRaster();
+    });
+  });
+  var act = host.querySelector('.day-chip.active');
+  if (act && act.scrollIntoView) act.scrollIntoView({ block: 'nearest', inline: 'center' });
+}
+
+function tekenRaster() {
+  var host = document.getElementById('raster');
+  var wedstrijden = (perDag[gekozenDag] || []).slice();
+  var d = new Date(gekozenDag + 'T12:00:00');
+  document.getElementById('dagtitel').textContent =
+    DAG_LANG[d.getDay()] + ' ' + d.getDate() + ' ' + MND_LANG[d.getMonth()] + ' ' + d.getFullYear();
+
+  if (!wedstrijden.length) {
+    host.innerHTML = '<div class="leeg">Geen wedstrijden in ' + esc(HAL) + ' op deze dag.</div>';
+    return;
+  }
+
+  // Tijdsloten en de cellen daarbinnen
+  var sloten = {};
+  wedstrijden.forEach(function(w) {
+    var t = tijd(w.tijdstip);
+    var veld = w.veld || '?';
+    sloten[t] = sloten[t] || {};
+    (sloten[t][veld] = sloten[t][veld] || []).push(w);
+  });
+  var tijden = Object.keys(sloten).sort();
+
+  // Welke velden komen deze dag voor? Onbekende velden achteraan.
+  var gebruikt = {};
+  wedstrijden.forEach(function(w) { gebruikt[w.veld || '?'] = true; });
+  var kolommen = VELDEN.filter(function(v) { return true; });
+  Object.keys(gebruikt).forEach(function(v) {
+    if (kolommen.indexOf(v) === -1) kolommen.push(v);
+  });
+
+  // Huidig tijdslot markeren (alleen vandaag): het laatste slot dat al begonnen is
+  var nuSlot = null;
+  if (isVandaag(gekozenDag)) {
+    var nu = new Date();
+    tijden.forEach(function(t) {
+      var st = new Date(gekozenDag + 'T' + t + ':00');
+      if (nu >= st && nu - st < 3 * 3600 * 1000) nuSlot = t;
+      if (!nuSlot && nu < st) { /* nog niet begonnen */ }
+    });
+    if (!nuSlot) nuSlot = tijden.filter(function(t) {
+      return new Date(gekozenDag + 'T' + t + ':00') > nu;
+    })[0] || null;
+  }
+
+  var thead = '<thead><tr><th class="tijdkop">Tijd</th>' +
+    kolommen.map(function(v) { return '<th>Veld ' + esc(v) + '</th>'; }).join('') +
+    '</tr></thead>';
+
+  var tbody = '<tbody>' + tijden.map(function(t) {
+    var rijCls = (t === nuSlot) ? ' class="nu"' : '';
+    var cellen = kolommen.map(function(v) {
+      var lijst = (sloten[t] || {})[v] || [];
+      if (!lijst.length) {
+        return '<td class="veldcel leeg-veld"><div class="leeg-cel">vrij</div></td>';
+      }
+      return '<td class="veldcel">' + lijst.map(function(w) {
+        return '<div class="wedstrijd">' +
+                 '<span class="veld-badge-mob">Veld ' + esc(v) + '</span>' +
+                 '<div class="w-thuis">' + esc(w.thuis) + '</div>' +
+                 '<div class="w-tegen"><span class="vs">vs</span>' + esc(w.uit) + '</div>' +
+               '</div>';
+      }).join('') + '</td>';
+    }).join('');
+    return '<tr' + rijCls + '><td class="tijdcel">' + esc(t) +
+           (t === nuSlot ? '<span class="nu-tag">nu</span>' : '') + '</td>' + cellen + '</tr>';
+  }).join('') + '</tbody>';
+
+  var aantal = wedstrijden.length;
+  host.innerHTML =
+    '<div class="slot-label">' + aantal + (aantal === 1 ? ' wedstrijd' : ' wedstrijden') +
+      ' · ' + tijden.length + (tijden.length === 1 ? ' speelronde' : ' speelrondes') + '</div>' +
+    '<div class="grid-wrap"><table class="zaal">' + thead + tbody + '</table></div>' +
+    '<div class="voet">' +
+      '<span>Velden en tijden komen uit de Nevobo-API.</span>' +
+      '<a href="./volevo-kaart.html">Route naar de zaal →</a>' +
+    '</div>';
+}
+
+laden();
+setInterval(laden, REFRESH_MS);
+
+// ── Versielabel bijwerken uit data/version.json ──
+(async function stampVersion() {
+  var el = document.querySelector('.version-tag');
+  if (!el) return;
+  var base = (el.textContent.split('·')[0] || '').trim();
+  try {
+    var r = await fetch('./data/version.json?t=' + Date.now());
+    if (!r.ok) return;
+    var v = await r.json();
+    var me = (location.pathname.split('/').pop() || 'index.html');
+    var info = (v.files || {})[me];
+    if (!info || !info.date) return;
+    var d = new Date(info.date);
+    if (isNaN(d)) return;
+    var mnd = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    el.textContent = (base ? base + ' · ' : '') + d.getDate() + ' ' + mnd[d.getMonth()];
+    el.title = 'Pagina laatst gewijzigd: '
+      + d.toLocaleString('nl-NL', { dateStyle: 'full', timeStyle: 'short' })
+      + ' (commit ' + info.commit + ')';
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>

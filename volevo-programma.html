@@ -201,6 +201,8 @@
     font-size: 0.7rem; letter-spacing: 0.2px;
   }
   .venue-sep { color: #d1d1d6; }
+  a.venue-veld { text-decoration: none; }
+  a.venue-veld:hover { background: rgba(42,49,118,0.16); }
 
   .badge {
     font-size: 0.69rem; font-weight: 700;
@@ -467,7 +469,9 @@ function venueHtml(m) {
     '<circle cx="10" cy="8.3" r="1.9" stroke="#86868b" stroke-width="1.6"/></svg>';
   var out = [pin];
   if (v.hal)   out.push('<span class="venue-hal">' + v.hal + '</span>');
-  if (v.veld)  out.push('<span class="venue-veld">veld ' + v.veld + '</span>');
+  if (v.veld)  out.push(v.hal === 'De Fluit'
+    ? '<a class="venue-veld" href="./volevo-zaal.html">veld ' + v.veld + '</a>'
+    : '<span class="venue-veld">veld ' + v.veld + '</span>');
   var rest = [];
   if (v.adres)  rest.push(v.adres);
   if (v.plaats) rest.push(v.plaats);
