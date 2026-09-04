@@ -185,6 +185,23 @@
     display: flex; align-items: center;
     justify-content: center; padding: 18px 14px;
   }
+  /* Locatiebalk onderin de kaart: hal + veld uit data/matches.json */
+  .venue-row {
+    grid-column: 1 / -1;
+    border-top: 1px solid #f2f2f7;
+    padding: 7px 14px 8px 22px;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    font-size: 0.74rem; color: #86868b;
+  }
+  .venue-row .pin { flex-shrink: 0; opacity: 0.55; }
+  .venue-hal { font-weight: 600; color: #3a3a3c; }
+  .venue-veld {
+    background: rgba(42,49,118,0.08); color: #2A3176;
+    font-weight: 700; border-radius: 5px; padding: 1px 7px;
+    font-size: 0.7rem; letter-spacing: 0.2px;
+  }
+  .venue-sep { color: #d1d1d6; }
+
   .badge {
     font-size: 0.69rem; font-weight: 700;
     letter-spacing: 0.3px; text-transform: uppercase;
@@ -414,6 +431,50 @@ function closestToNow(arr, max) {
 var DAG_KORT = ['zo','ma','di','wo','do','vr','za'];
 var DAG_LANG = ['Zondag','Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag'];
 
+
+// ── Hal en veld uit data/matches.json ──
+// De RSS bevat geen veldnummer; matches.json wordt gevuld uit de Nevobo-API
+// door .github/workflows/mirror-matches.yml.
+var VENUES = {};          // "tijd|thuis|uit" en "thuis|uit" -> wedstrijdinfo
+var venuesLoaded = false;
+async function loadVenues() {
+  if (venuesLoaded) return;
+  venuesLoaded = true;
+  try {
+    var r = await fetch('./data/matches.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    (d.wedstrijden || []).forEach(function(w) {
+      if (!w.tijdstip) return;
+      var t = new Date(w.tijdstip).getTime();
+      VENUES[t + '|' + w.thuis + '|' + w.uit] = w;
+      // Tweede sleutel zonder tijd, voor als een wedstrijd verplaatst is en de
+      // twee bronnen even uit de pas lopen.
+      var k = w.thuis + '|' + w.uit;
+      if (!(k in VENUES)) VENUES[k] = w;
+    });
+  } catch(e) {}
+}
+function venueFor(m) {
+  var t = new Date(m.time).getTime();
+  return VENUES[t + '|' + m.home + '|' + m.away] || VENUES[m.home + '|' + m.away] || null;
+}
+function venueHtml(m) {
+  var v = venueFor(m);
+  if (!v || (!v.hal && !v.veld)) return '';
+  var pin = '<svg class="pin" width="11" height="11" viewBox="0 0 20 20" fill="none">'+
+    '<path d="M10 17.5s5.5-5.1 5.5-9a5.5 5.5 0 10-11 0c0 3.9 5.5 9 5.5 9z" stroke="#86868b" stroke-width="1.7" stroke-linejoin="round"/>'+
+    '<circle cx="10" cy="8.3" r="1.9" stroke="#86868b" stroke-width="1.6"/></svg>';
+  var out = [pin];
+  if (v.hal)   out.push('<span class="venue-hal">' + v.hal + '</span>');
+  if (v.veld)  out.push('<span class="venue-veld">veld ' + v.veld + '</span>');
+  var rest = [];
+  if (v.adres)  rest.push(v.adres);
+  if (v.plaats) rest.push(v.plaats);
+  if (rest.length) out.push('<span class="venue-sep">·</span><span>' + rest.join(', ') + '</span>');
+  return '<div class="venue-row">' + out.join('') + '</div>';
+}
+
 function renderCard(m){
   var hVol=iv(m.home),aVol=iv(m.away),hasVol=hVol||aVol;
   var cls='match-card'+(m.played?' played':'')+(hasVol?'':' no-volevo');
@@ -441,6 +502,7 @@ function renderCard(m){
       clubLogoHtml(aCode,m.away,aVol)+
     '</div>'+
     '<div class="status-col"><span class="'+bCls+'">'+bTxt+'</span></div>'+
+    venueHtml(m)+
   '</div>';
 }
 
@@ -500,6 +562,7 @@ function render(matches){
 async function loadData(){
   try{
     await loadClubs();
+    await loadVenues();
     var xml=await fetchRSS(RSS_URL);
     var allFromToday=[];
     var todayStart=new Date(); todayStart.setHours(0,0,0,0);
