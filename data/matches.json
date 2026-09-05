@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-05T10:50:52+00:00",
+ "gegenereerd": "2026-09-05T15:26:00+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -131,7 +131,7 @@
    "tijdstip": "2026-09-05T13:00:00+02:00",
    "thuis": "Leython DC HS 3",
    "uit": "VOLEVO HS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -139,7 +139,7 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/5ebf72cf-5846-45d9-ae0d-d5517ff25e62"
+   "dwf": "https://dwf.nevobo.nl/results/5ebf72cf-5846-45d9-ae0d-d5517ff25e62/scoresheets/e268717a-66ba-4a13-880e-119eb6b2aa15"
   },
   {
    "tijdstip": "2026-09-05T17:00:00+02:00",
