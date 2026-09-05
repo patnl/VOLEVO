@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-05T04:47:31+00:00",
+ "gegenereerd": "2026-09-05T10:50:52+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -103,7 +103,7 @@
    "tijdstip": "2026-09-05T09:00:00+02:00",
    "thuis": "Leython DC MB 2",
    "uit": "VOLEVO MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -111,13 +111,13 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/65cca7d1-1aed-402c-a02c-aee654408c53"
+   "dwf": "https://dwf.nevobo.nl/results/65cca7d1-1aed-402c-a02c-aee654408c53/scoresheets/99d852ba-8417-4f80-88b0-4cb128b5494b"
   },
   {
    "tijdstip": "2026-09-05T09:00:00+02:00",
    "thuis": "Leython DC MC 2",
    "uit": "VOLEVO JC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -125,7 +125,7 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/5f5078f6-a496-4d7b-8f95-2dd2a4e1894a"
+   "dwf": "https://dwf.nevobo.nl/results/5f5078f6-a496-4d7b-8f95-2dd2a4e1894a/scoresheets/24dcc8e7-793f-41e9-857a-5002315a4d91"
   },
   {
    "tijdstip": "2026-09-05T13:00:00+02:00",
