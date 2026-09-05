@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-04T20:07:44+00:00",
+ "gegenereerd": "2026-09-05T04:47:31+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -75,7 +75,7 @@
    "tijdstip": "2026-09-04T21:00:00+02:00",
    "thuis": "VOLEVO DS 2",
    "uit": "VVV Delta DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -83,7 +83,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/5bce8cff-b6e3-4a20-b958-efe21c056868"
+   "dwf": "https://dwf.nevobo.nl/results/5bce8cff-b6e3-4a20-b958-efe21c056868/scoresheets/e10c2b13-0e1b-4e95-a464-653ed807e012"
   },
   {
    "tijdstip": "2026-09-04T21:00:00+02:00",
