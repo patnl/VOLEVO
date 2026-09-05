@@ -4,8 +4,24 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 05 Sep 2026 09:43:58 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 13:24:07 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Leython DC MC 2 - VOLEVO JC 1, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1966969</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1966969</guid>
+      <description><![CDATA[Wedstrijd: Leython DC MC 2 - VOLEVO JC 1, Uitslag: 2-3, Setstanden: 26-24, 9-25, 25-18, 13-25, 15-17]]></description>
+      <pubDate>Sat, 05 Sep 2026 09:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Leython DC MB 2 - VOLEVO MB 1, Uitslag: 0-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1967243</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1967243</guid>
+      <description><![CDATA[Wedstrijd: Leython DC MB 2 - VOLEVO MB 1, Uitslag: 0-3, Setstanden: 15-25, 12-25, 25-27]]></description>
+      <pubDate>Sat, 05 Sep 2026 09:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VOLEVO DS 2 - VVV Delta DS 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2033002</link>
