@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-05T15:26:00+00:00",
+ "gegenereerd": "2026-09-05T20:34:45+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -145,7 +145,7 @@
    "tijdstip": "2026-09-05T17:00:00+02:00",
    "thuis": "Merkala Zaanstad DS 1",
    "uit": "VOLEVO DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Topsportcentrum De Koog",
    "plaats": "Koog aan de Zaan",
    "adres": "Wezelstraat 7",
@@ -153,13 +153,13 @@
    "lat": 52.46737,
    "lon": 4.8014,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/5145abc5-335c-457a-ac93-7441d61c5471"
+   "dwf": "https://dwf.nevobo.nl/results/5145abc5-335c-457a-ac93-7441d61c5471/scoresheets/2be7cbb4-76cd-4901-bce9-8fb4acf685a8"
   },
   {
    "tijdstip": "2026-09-05T18:30:00+02:00",
    "thuis": "SPORTJA LeythonDC HS 1",
    "uit": "VOLEVO HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -167,7 +167,7 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/7c0776e0-ad15-4e20-ada2-e06f2a7e98b9"
+   "dwf": "https://dwf.nevobo.nl/results/7c0776e0-ad15-4e20-ada2-e06f2a7e98b9/scoresheets/0873030b-867c-4c5e-b346-859b605e5624"
   },
   {
    "tijdstip": "2026-09-10T21:00:00+02:00",
