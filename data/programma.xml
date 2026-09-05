@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 05 Sep 2026 13:24:06 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 15:58:05 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Leython DC MB 2 - VOLEVO MB 1, Uitslag: 0-3]]></title>
@@ -23,12 +23,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[5 sep 13:00: Leython DC HS 3 - VOLEVO HS 2]]></title>
+      <title><![CDATA[Leython DC HS 3 - VOLEVO HS 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2010536</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2010536</guid>
-      <description><![CDATA[Wedstrijd: 3000BH1A16CD, Datum: zaterdag 5 september, 13:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <description><![CDATA[Wedstrijd: Leython DC HS 3 - VOLEVO HS 2, Uitslag: 1-3, Setstanden: 26-28, 19-25, 25-21, 17-25]]></description>
       <pubDate>Sat, 05 Sep 2026 13:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[5 sep 17:00: Merkala Zaanstad DS 1 - VOLEVO DS 1]]></title>
