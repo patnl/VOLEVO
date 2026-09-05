@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 05 Sep 2026 18:43:43 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 20:35:37 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Leython DC MB 2 - VOLEVO MB 1, Uitslag: 0-3]]></title>
@@ -39,12 +39,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[5 sep 18:30: SPORTJA LeythonDC HS 1 - VOLEVO HS 1]]></title>
+      <title><![CDATA[SPORTJA LeythonDC HS 1 - VOLEVO HS 1, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1964394</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1964394</guid>
-      <description><![CDATA[Wedstrijd: 9000NBH1T CD, Datum: zaterdag 5 september, 18:30, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <description><![CDATA[Wedstrijd: SPORTJA LeythonDC HS 1 - VOLEVO HS 1, Uitslag: 2-3, Setstanden: 14-25, 16-25, 25-16, 25-23, 7-15]]></description>
       <pubDate>Sat, 05 Sep 2026 18:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[10 sep 21:00: VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1]]></title>

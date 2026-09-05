@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 05 Sep 2026 18:43:45 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 20:35:38 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[SPORTJA LeythonDC HS 1 - VOLEVO HS 1, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1964394</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1964394</guid>
+      <description><![CDATA[Wedstrijd: SPORTJA LeythonDC HS 1 - VOLEVO HS 1, Uitslag: 2-3, Setstanden: 14-25, 16-25, 25-16, 25-23, 7-15]]></description>
+      <pubDate>Sat, 05 Sep 2026 18:30:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Merkala Zaanstad DS 1 - VOLEVO DS 1, Uitslag: 3-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1964241</link>
