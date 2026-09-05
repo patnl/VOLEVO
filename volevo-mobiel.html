@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2A3176">
+<title>VOLEVO · Wedstrijddag</title>
+<style>
+  :root {
+    --blue: #2A3176;
+    --mint: #9CD0C1;
+    --bg: #f4f4f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --muted: #74747a;
+    --line: #e5e5ea;
+    --success: #1c7c54;
+    --shadow: 0 8px 30px rgba(30,34,78,.08);
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--blue); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    padding-bottom: calc(92px + env(safe-area-inset-bottom));
+  }
+  button, select, a { font: inherit; }
+  a { color: inherit; }
+
+  .top {
+    background: linear-gradient(155deg, #242a68 0%, var(--blue) 58%, #353c85 100%);
+    color: white;
+    padding: calc(14px + env(safe-area-inset-top)) 18px 30px;
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0 8px 30px rgba(42,49,118,.18);
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 11px; min-width: 0; }
+  .logo {
+    width: 46px; height: 46px; border-radius: 13px;
+    background: white; display: grid; place-items: center; overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,.16);
+  }
+  .logo img { width: 100%; height: 100%; object-fit: contain; }
+  .brand-name { font-size: 1.05rem; font-weight: 850; letter-spacing: .5px; }
+  .brand-sub { margin-top: 2px; font-size: .72rem; color: rgba(255,255,255,.72); }
+  .refresh {
+    width: 42px; height: 42px; border: 0; border-radius: 13px;
+    background: rgba(255,255,255,.12); color: white; display: grid; place-items: center;
+    cursor: pointer;
+  }
+  .refresh:active { transform: scale(.96); }
+
+  .hero { margin-top: 27px; }
+  .eyebrow {
+    font-size: .72rem; text-transform: uppercase; letter-spacing: 1.2px;
+    font-weight: 800; color: var(--mint);
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 3rem); line-height: .98; margin: 8px 0 8px;
+    letter-spacing: -1.4px;
+  }
+  .date-line { font-size: .92rem; color: rgba(255,255,255,.78); }
+
+  main { max-width: 680px; margin: -1px auto 0; padding: 0 14px; }
+  .team-panel {
+    position: relative; margin-top: -14px; background: var(--card); border-radius: 20px;
+    padding: 16px; box-shadow: var(--shadow);
+  }
+  .label { font-size: .72rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .7px; }
+  .select-wrap { position: relative; margin-top: 8px; }
+  select {
+    width: 100%; border: 1px solid var(--line); background: #fafafa; color: var(--text);
+    border-radius: 14px; padding: 13px 42px 13px 14px; font-weight: 750; font-size: .98rem;
+    appearance: none; -webkit-appearance: none; outline: none;
+  }
+  .select-wrap:after {
+    content: "⌄"; position: absolute; right: 15px; top: 50%; transform: translateY(-56%);
+    color: var(--blue); font-size: 1.2rem; pointer-events: none;
+  }
+
+  .section { margin-top: 25px; }
+  .section-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin: 0 4px 11px; }
+  .section-title { font-size: 1.18rem; font-weight: 850; letter-spacing: -.35px; }
+  .section-note { font-size: .72rem; color: var(--muted); white-space: nowrap; }
+
+  .match-list { display: grid; gap: 11px; }
+  .match {
+    background: var(--card); border-radius: 20px; padding: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.045); border: 1px solid rgba(0,0,0,.035);
+  }
+  .match-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .time { font-size: 1.34rem; font-weight: 900; letter-spacing: -.5px; color: var(--blue); }
+  .pill-row { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .pill {
+    border-radius: 999px; padding: 5px 9px; font-size: .66rem; font-weight: 800;
+    background: #f0f0f5; color: #5b5b62;
+  }
+  .pill.home { background: rgba(42,49,118,.09); color: var(--blue); }
+  .pill.field { background: rgba(156,208,193,.28); color: #176354; }
+  .teams { margin-top: 13px; display: grid; gap: 5px; }
+  .team { font-size: 1rem; font-weight: 780; line-height: 1.22; }
+  .team.other { color: #55555b; font-weight: 650; }
+  .versus { font-size: .68rem; color: #aaaab0; text-transform: uppercase; letter-spacing: .7px; font-weight: 800; }
+  .venue {
+    margin-top: 13px; padding-top: 12px; border-top: 1px solid var(--line);
+    display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: .82rem;
+  }
+  .venue-icon {
+    width: 34px; height: 34px; border-radius: 10px; background: #f2f2f6; flex: 0 0 auto;
+    display: grid; place-items: center; color: var(--blue);
+  }
+  .venue-text { min-width: 0; flex: 1; }
+  .venue-name { color: var(--text); font-weight: 750; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .venue-sub { margin-top: 2px; font-size: .72rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .route {
+    text-decoration: none; color: var(--blue); font-size: .72rem; font-weight: 850;
+    background: rgba(42,49,118,.07); padding: 8px 10px; border-radius: 10px; flex: 0 0 auto;
+  }
+
+  .empty {
+    background: var(--card); border-radius: 20px; padding: 22px 18px; text-align: center;
+    color: var(--muted); box-shadow: 0 2px 10px rgba(0,0,0,.04);
+  }
+  .empty strong { display: block; color: var(--text); font-size: 1rem; margin-bottom: 5px; }
+
+  .quick-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .quick {
+    min-height: 94px; background: var(--card); border-radius: 18px; padding: 15px;
+    text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,.04);
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .quick-icon { color: var(--blue); font-size: 1.25rem; }
+  .quick-title { font-size: .91rem; font-weight: 820; }
+  .quick-sub { font-size: .67rem; color: var(--muted); margin-top: 2px; }
+
+  .updated { margin: 24px 4px 0; text-align: center; color: #aaaab0; font-size: .67rem; line-height: 1.5; }
+
+  .bottom-nav {
+    position: fixed; z-index: 20; left: 10px; right: 10px;
+    bottom: calc(8px + env(safe-area-inset-bottom)); max-width: 660px; margin: auto;
+    height: 70px; border-radius: 22px; padding: 7px 8px;
+    background: rgba(255,255,255,.93); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+    box-shadow: 0 10px 40px rgba(24,29,68,.18); border: 1px solid rgba(0,0,0,.06);
+    display: grid; grid-template-columns: repeat(4,1fr);
+  }
+  .nav-item {
+    text-decoration: none; color: #8b8b91; border-radius: 16px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    font-size: .62rem; font-weight: 750;
+  }
+  .nav-item.active { color: var(--blue); background: rgba(42,49,118,.07); }
+  .nav-icon { font-size: 1.12rem; line-height: 1; }
+
+  .error { background: #fff2f1; color: #9a2b25; border-radius: 16px; padding: 14px; font-size: .82rem; }
+
+  @media (min-width: 700px) {
+    body { padding-bottom: 40px; }
+    .top { padding-left: max(24px, calc((100vw - 660px)/2)); padding-right: max(24px, calc((100vw - 660px)/2)); }
+    .bottom-nav { position: sticky; bottom: 12px; margin-top: 24px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo"><img src="./LOGO.png" alt="VOLEVO"></div>
+      <div>
+        <div class="brand-name">VOLEVO</div>
+        <div class="brand-sub">Wedstrijdinformatie</div>
+      </div>
+    </div>
+    <button class="refresh" id="refresh" aria-label="Vernieuwen" title="Vernieuwen">↻</button>
+  </div>
+  <div class="hero">
+    <div class="eyebrow">Wedstrijddag</div>
+    <h1 id="heroTitle">Vandaag bij VOLEVO</h1>
+    <div class="date-line" id="todayText"></div>
+  </div>
+</header>
+
+<main>
+  <section class="team-panel" aria-labelledby="teamLabel">
+    <div class="label" id="teamLabel">Mijn team</div>
+    <div class="select-wrap">
+      <select id="teamSelect" aria-label="Kies je VOLEVO-team">
+        <option value="">Alle VOLEVO-teams</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">Vandaag</div>
+      <div class="section-note" id="todayCount"></div>
+    </div>
+    <div class="match-list" id="todayMatches"><div class="empty">Wedstrijden laden…</div></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">Hierna</div>
+      <div class="section-note">komende wedstrijden</div>
+    </div>
+    <div class="match-list" id="nextMatches"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">Snel naar</div>
+    </div>
+    <div class="quick-grid">
+      <a class="quick" href="./volevo-programma.html">
+        <div class="quick-icon">▣</div><div><div class="quick-title">Programma</div><div class="quick-sub">Alle wedstrijden</div></div>
+      </a>
+      <a class="quick" href="./volevo-uitslagen.html">
+        <div class="quick-icon">✓</div><div><div class="quick-title">Uitslagen</div><div class="quick-sub">Scores & setstanden</div></div>
+      </a>
+      <a class="quick" href="./volevo-zaal.html">
+        <div class="quick-icon">⌗</div><div><div class="quick-title">Zaalindeling</div><div class="quick-sub">Welk veld?</div></div>
+      </a>
+      <a class="quick" href="./volevo-kaart.html">
+        <div class="quick-icon">⌖</div><div><div class="quick-title">Speelkaart</div><div class="quick-sub">Waar spelen we?</div></div>
+      </a>
+    </div>
+  </section>
+
+  <div class="updated" id="updatedText">Gegevens via Nevobo</div>
+</main>
+
+<nav class="bottom-nav" aria-label="Hoofdnavigatie">
+  <a class="nav-item active" href="./volevo-mobiel.html"><span class="nav-icon">●</span><span>Vandaag</span></a>
+  <a class="nav-item" href="./volevo-programma.html"><span class="nav-icon">▣</span><span>Programma</span></a>
+  <a class="nav-item" href="./volevo-uitslagen.html"><span class="nav-icon">✓</span><span>Uitslagen</span></a>
+  <a class="nav-item" href="./volevo-kaart.html"><span class="nav-icon">⌖</span><span>Kaart</span></a>
+</nav>
+
+<script>
+(function () {
+  var allMatches = [];
+  var selectedTeam = localStorage.getItem('volevo-team') || '';
+  var select = document.getElementById('teamSelect');
+  var todayBox = document.getElementById('todayMatches');
+  var nextBox = document.getElementById('nextMatches');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function dayKey(d) { return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()); }
+  function sameDay(a,b) { return dayKey(a) === dayKey(b); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>'"]/g, function(c) {
+      return {'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c];
+    });
+  }
+  function isVolevo(name) { return /^VOLEVO\b/i.test(name || ''); }
+  function teamMatch(m, team) { return !team || m.thuis === team || m.uit === team; }
+  function fmtTime(d) { return pad(d.getHours()) + ':' + pad(d.getMinutes()); }
+  function fmtDay(d) {
+    return new Intl.DateTimeFormat('nl-NL', {weekday:'short', day:'numeric', month:'short'}).format(d).replace('.', '');
+  }
+  function fmtLongDay(d) {
+    return new Intl.DateTimeFormat('nl-NL', {weekday:'long', day:'numeric', month:'long'}).format(d);
+  }
+  function routeUrl(m) {
+    var dest = (m.lat && m.lon) ? (m.lat + ',' + m.lon) : [m.adres, m.postcode, m.plaats].filter(Boolean).join(' ');
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(dest);
+  }
+  function matchCard(m, showDate) {
+    var d = new Date(m.tijdstip);
+    var home = isVolevo(m.thuis);
+    var where = [m.hal, m.plaats].filter(Boolean).join(' · ');
+    var address = [m.adres, m.postcode].filter(Boolean).join(' · ');
+    var badges = '<span class="pill ' + (home ? 'home' : '') + '">' + (home ? 'THUIS' : 'UIT') + '</span>';
+    if (m.veld) badges += '<span class="pill field">VELD ' + esc(m.veld) + '</span>';
+    return '<article class="match">' +
+      '<div class="match-top"><div><div class="time">' + (showDate ? esc(fmtDay(d)) + ' · ' : '') + esc(fmtTime(d)) + '</div></div><div class="pill-row">' + badges + '</div></div>' +
+      '<div class="teams">' +
+        '<div class="team ' + (!isVolevo(m.thuis) ? 'other' : '') + '">' + esc(m.thuis) + '</div>' +
+        '<div class="versus">tegen</div>' +
+        '<div class="team ' + (!isVolevo(m.uit) ? 'other' : '') + '">' + esc(m.uit) + '</div>' +
+      '</div>' +
+      '<div class="venue"><div class="venue-icon">⌖</div><div class="venue-text"><div class="venue-name">' + esc(where || 'Locatie volgt') + '</div><div class="venue-sub">' + esc(address) + '</div></div>' +
+      (where ? '<a class="route" target="_blank" rel="noopener" href="' + esc(routeUrl(m)) + '">Route</a>' : '') + '</div>' +
+    '</article>';
+  }
+
+  function render() {
+    var now = new Date();
+    var filtered = allMatches.filter(function(m) { return teamMatch(m, selectedTeam); });
+    var today = filtered.filter(function(m) { return sameDay(new Date(m.tijdstip), now); });
+    var upcoming = filtered.filter(function(m) { return new Date(m.tijdstip) > now && !sameDay(new Date(m.tijdstip), now); }).slice(0, 5);
+
+    document.getElementById('heroTitle').textContent = selectedTeam || 'Vandaag bij VOLEVO';
+    document.getElementById('todayCount').textContent = today.length ? (today.length + (today.length === 1 ? ' wedstrijd' : ' wedstrijden')) : '';
+
+    if (today.length) {
+      todayBox.innerHTML = today.map(function(m){ return matchCard(m, false); }).join('');
+    } else {
+      todayBox.innerHTML = '<div class="empty"><strong>Geen wedstrijd vandaag</strong>' + (selectedTeam ? 'Voor ' + esc(selectedTeam) + ' staat vandaag niets gepland.' : 'Er staan vandaag geen VOLEVO-wedstrijden in de feed.') + '</div>';
+    }
+
+    if (upcoming.length) {
+      nextBox.innerHTML = upcoming.map(function(m){ return matchCard(m, true); }).join('');
+    } else {
+      nextBox.innerHTML = '<div class="empty"><strong>Geen komende wedstrijden gevonden</strong>Bekijk het volledige programma voor meer informatie.</div>';
+    }
+  }
+
+  function buildTeams() {
+    var set = {};
+    allMatches.forEach(function(m) {
+      [m.thuis, m.uit].forEach(function(t) { if (isVolevo(t)) set[t] = true; });
+    });
+    Object.keys(set).sort(function(a,b){ return a.localeCompare(b, 'nl', {numeric:true}); }).forEach(function(t) {
+      var o = document.createElement('option'); o.value = t; o.textContent = t; select.appendChild(o);
+    });
+    if (selectedTeam && set[selectedTeam]) select.value = selectedTeam;
+    else selectedTeam = '';
+  }
+
+  function load() {
+    todayBox.innerHTML = '<div class="empty">Wedstrijden laden…</div>';
+    fetch('./data/matches.json?t=' + Date.now(), {cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(data) {
+        allMatches = (data.wedstrijden || []).slice().sort(function(a,b){ return new Date(a.tijdstip) - new Date(b.tijdstip); });
+        while (select.options.length > 1) select.remove(1);
+        buildTeams();
+        if (data.gegenereerd) {
+          var d = new Date(data.gegenereerd);
+          document.getElementById('updatedText').textContent = 'Nevobo-data bijgewerkt ' + d.toLocaleString('nl-NL', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+        }
+        render();
+      })
+      .catch(function(err) {
+        todayBox.innerHTML = '<div class="error">De wedstrijdgegevens konden niet worden geladen. Probeer de pagina opnieuw te openen.</div>';
+        nextBox.innerHTML = '';
+        console.error(err);
+      });
+  }
+
+  select.addEventListener('change', function() {
+    selectedTeam = select.value;
+    if (selectedTeam) localStorage.setItem('volevo-team', selectedTeam);
+    else localStorage.removeItem('volevo-team');
+    render();
+  });
+  document.getElementById('refresh').addEventListener('click', load);
+  document.getElementById('todayText').textContent = fmtLongDay(new Date());
+  load();
+})();
+</script>
+</body>
+</html>
