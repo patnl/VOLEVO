@@ -4,48 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 05 Sep 2026 22:43:20 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:20:55 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[Leython DC MB 2 - VOLEVO MB 1, Uitslag: 0-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/1967243</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/1967243</guid>
-      <description><![CDATA[Wedstrijd: Leython DC MB 2 - VOLEVO MB 1, Uitslag: 0-3, Setstanden: 15-25, 12-25, 25-27]]></description>
-      <pubDate>Sat, 05 Sep 2026 09:00:00 +0200</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Leython DC MC 2 - VOLEVO JC 1, Uitslag: 2-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/1966969</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/1966969</guid>
-      <description><![CDATA[Wedstrijd: Leython DC MC 2 - VOLEVO JC 1, Uitslag: 2-3, Setstanden: 26-24, 9-25, 25-18, 13-25, 15-17]]></description>
-      <pubDate>Sat, 05 Sep 2026 09:00:00 +0200</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Leython DC HS 3 - VOLEVO HS 2, Uitslag: 1-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2010536</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2010536</guid>
-      <description><![CDATA[Wedstrijd: Leython DC HS 3 - VOLEVO HS 2, Uitslag: 1-3, Setstanden: 26-28, 19-25, 25-21, 17-25]]></description>
-      <pubDate>Sat, 05 Sep 2026 13:00:00 +0200</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Merkala Zaanstad DS 1 - VOLEVO DS 1, Uitslag: 3-0]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/1964241</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/1964241</guid>
-      <description><![CDATA[Wedstrijd: Merkala Zaanstad DS 1 - VOLEVO DS 1, Uitslag: 3-0, Setstanden: 25-21, 25-17, 25-17]]></description>
-      <pubDate>Sat, 05 Sep 2026 17:00:00 +0200</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[SPORTJA LeythonDC HS 1 - VOLEVO HS 1, Uitslag: 2-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/1964394</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/1964394</guid>
-      <description><![CDATA[Wedstrijd: SPORTJA LeythonDC HS 1 - VOLEVO HS 1, Uitslag: 2-3, Setstanden: 14-25, 16-25, 25-16, 25-23, 7-15]]></description>
-      <pubDate>Sat, 05 Sep 2026 18:30:00 +0200</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[10 sep 21:00: VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2033015</link>
