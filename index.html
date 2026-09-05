@@ -2,267 +2,161 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VOLEVO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2A3176">
+<title>VOLEVO · Wedstrijddag</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: #f5f5f7;
-    color: #1d1d1f;
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* HEADER */
-  .header {
-    background: rgba(255,255,255,0.88);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    padding: 14px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  .header-left { display: flex; align-items: center; gap: 16px; }
-
-  #header-logo-wrap {
-    height: 50px; width: 56px;
-    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-  }
-  #header-logo-img {
-    max-height: 50px; max-width: 56px;
-    object-fit: contain; display: block;
-  }
-  .hdr-logo-fb {
-    background: #2A3176; border-radius: 12px;
-    width: 50px; height: 50px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .hdr-logo-fb span {
-    color: #9CD0C1; font-size: 0.58rem;
-    font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase;
-  }
-  .header-divider { width: 1px; height: 36px; background: #e5e5ea; flex-shrink: 0; }
-  .header-title-block .page-label {
-    font-size: 1.4rem; font-weight: 800;
-    color: #1d1d1f; letter-spacing: -0.4px; line-height: 1;
-  }
-  .header-title-block .page-sub {
-    font-size: 0.73rem; color: #86868b; font-weight: 500;
-    margin-top: 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
-  }
-  .version-tag {
-    display: inline-flex; align-items: center;
-    background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px;
-    font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px;
-  }
-  .nevobo-tag {
-    display: inline-flex; align-items: center; gap: 4px;
-    background: #f0f0f5; border-radius: 6px; padding: 2px 8px;
-    font-size: 0.67rem; font-weight: 600; color: #636366;
-  }
-
-  /* CONTENT */
-  .content { padding: 34px 28px 48px; max-width: 1000px; margin: 0 auto; }
-  .section-label {
-    font-size: 0.7rem; font-weight: 700;
-    letter-spacing: 0.8px; text-transform: uppercase;
-    color: #aeaeb2; padding: 0 4px 12px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 14px;
-  }
-
-  .card {
-    background: white; border-radius: 16px;
-    padding: 22px 22px 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
-    text-decoration: none; color: inherit;
-    display: flex; flex-direction: column; gap: 8px;
-    border-top: 4px solid #2A3176;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.09), 0 10px 28px rgba(0,0,0,0.07);
-  }
-  .card-icon {
-    width: 38px; height: 38px; border-radius: 11px;
-    background: rgba(42,49,118,0.08);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 4px;
-  }
-  .card-title {
-    font-size: 1.05rem; font-weight: 700;
-    letter-spacing: -0.2px; color: #1d1d1f;
-  }
-  .card-desc { font-size: 0.83rem; color: #86868b; line-height: 1.45; }
-  .card-go {
-    margin-top: 6px; font-size: 0.72rem; font-weight: 700;
-    color: #2A3176; letter-spacing: 0.2px;
-    display: inline-flex; align-items: center; gap: 5px;
-  }
-
-  .footer {
-    margin-top: 34px; padding: 0 4px;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 12px; flex-wrap: wrap;
-    font-size: 0.72rem; color: #aeaeb2;
-  }
-  .footer a { color: #86868b; text-decoration: none; font-weight: 600; }
-  .footer a:hover { color: #2A3176; }
+:root{
+  --blue:#2A3176;--blue2:#353c85;--mint:#9CD0C1;--bg:#f4f4f7;--card:#fff;
+  --text:#1d1d1f;--muted:#73737a;--line:#e5e5ea;--shadow:0 10px 32px rgba(30,34,78,.09)
+}
+*{box-sizing:border-box}html{background:var(--blue)}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;padding-bottom:calc(92px + env(safe-area-inset-bottom))}a{color:inherit}button,select{font:inherit}
+.top{background:linear-gradient(150deg,#222864 0%,var(--blue) 55%,var(--blue2) 100%);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 18px 34px;border-radius:0 0 28px 28px;box-shadow:0 10px 30px rgba(42,49,118,.20)}
+.top-inner{max-width:1100px;margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:14px;background:#fff;overflow:hidden;display:grid;place-items:center;box-shadow:0 5px 18px rgba(0,0,0,.18)}.logo img{width:100%;height:100%;object-fit:contain}.brand-name{font-weight:900;letter-spacing:.5px}.brand-sub{font-size:.72rem;color:rgba(255,255,255,.72);margin-top:2px}
+.desktop-nav{display:none;gap:8px}.desktop-nav a{text-decoration:none;color:rgba(255,255,255,.78);font-size:.82rem;font-weight:750;padding:9px 12px;border-radius:10px}.desktop-nav a:hover{background:rgba(255,255,255,.11);color:#fff}.refresh{border:0;width:42px;height:42px;border-radius:13px;background:rgba(255,255,255,.12);color:#fff;font-size:1.15rem;cursor:pointer}.refresh:active{transform:scale(.96)}
+.hero{margin-top:28px}.eyebrow{text-transform:uppercase;letter-spacing:1.2px;color:var(--mint);font-weight:850;font-size:.72rem}.hero h1{font-size:clamp(2.05rem,9vw,3.15rem);letter-spacing:-1.5px;line-height:.98;margin:8px 0}.date-line{font-size:.93rem;color:rgba(255,255,255,.78)}
+main{max-width:1100px;margin:-15px auto 0;padding:0 14px 28px}.team-panel{background:var(--card);border-radius:20px;padding:16px;box-shadow:var(--shadow);position:relative}.label{font-size:.7rem;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.75px}.select-wrap{position:relative;margin-top:8px}.select-wrap:after{content:"⌄";position:absolute;right:15px;top:50%;transform:translateY(-58%);color:var(--blue);pointer-events:none;font-size:1.2rem}select{width:100%;border:1px solid var(--line);background:#fafafa;color:var(--text);border-radius:14px;padding:13px 42px 13px 14px;font-weight:780;font-size:.98rem;appearance:none;-webkit-appearance:none;outline:none}
+.layout{display:grid;gap:24px}.section{margin-top:25px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 4px 11px}.section-title{font-size:1.2rem;font-weight:900;letter-spacing:-.4px}.section-note{font-size:.72rem;color:var(--muted)}.match-list{display:grid;gap:11px}.match{background:var(--card);border-radius:20px;padding:16px;box-shadow:0 2px 12px rgba(0,0,0,.045);border:1px solid rgba(0,0,0,.035)}.match-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.time{font-size:1.35rem;font-weight:950;color:var(--blue);letter-spacing:-.5px}.pill-row{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.pill{border-radius:999px;padding:5px 9px;font-size:.65rem;font-weight:850;background:#f0f0f5;color:#5b5b62}.pill.home{background:rgba(42,49,118,.09);color:var(--blue)}.pill.away{background:#f3f3f5;color:#626269}.pill.field{background:rgba(156,208,193,.30);color:#176354}.pill.done{background:#eeeef0;color:#808087}.teams{margin-top:13px;display:grid;gap:5px}.team{font-size:1rem;font-weight:800;line-height:1.2}.team.other{color:#55555b;font-weight:650}.versus{font-size:.67rem;color:#aaaab0;text-transform:uppercase;letter-spacing:.75px;font-weight:850}.venue{margin-top:13px;padding-top:12px;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px}.venue-icon{width:35px;height:35px;border-radius:10px;background:#f2f2f6;display:grid;place-items:center;color:var(--blue);flex:0 0 auto}.venue-text{min-width:0;flex:1}.venue-name{font-size:.82rem;font-weight:780;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.venue-sub{font-size:.71rem;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.route{text-decoration:none;color:var(--blue);font-size:.72rem;font-weight:900;background:rgba(42,49,118,.07);padding:8px 10px;border-radius:10px;flex:0 0 auto}.empty,.error{background:var(--card);border-radius:20px;padding:22px 18px;text-align:center;color:var(--muted);box-shadow:0 2px 10px rgba(0,0,0,.04)}.empty strong{display:block;color:var(--text);font-size:1rem;margin-bottom:5px}.error{background:#fff2f1;color:#982d27}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick{min-height:100px;background:var(--card);border-radius:18px;padding:15px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:space-between;transition:.15s ease}.quick:active{transform:scale(.985)}.quick-icon{color:var(--blue);font-size:1.22rem}.quick-title{font-size:.92rem;font-weight:850}.quick-sub{font-size:.67rem;color:var(--muted);margin-top:2px}.updated{text-align:center;color:#aaaab0;font-size:.67rem;line-height:1.5;margin:24px 4px 0}
+.bottom-nav{position:fixed;z-index:20;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom));max-width:660px;margin:auto;height:70px;border-radius:22px;padding:7px 8px;background:rgba(255,255,255,.94);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 10px 40px rgba(24,29,68,.18);border:1px solid rgba(0,0,0,.06);display:grid;grid-template-columns:repeat(4,1fr)}.nav-item{text-decoration:none;color:#8b8b91;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:.62rem;font-weight:780}.nav-item.active{color:var(--blue);background:rgba(42,49,118,.07)}.nav-icon{font-size:1.1rem;line-height:1}
+@media(min-width:760px){body{padding-bottom:42px}.top{border-radius:0 0 34px 34px;padding:20px 26px 46px}.desktop-nav{display:flex}.refresh{margin-left:auto}.hero{margin-top:42px}.hero h1{font-size:3.35rem;max-width:650px}.hero .date-line{font-size:1rem}main{margin-top:-18px;padding:0 24px 50px}.team-panel{padding:18px 20px}.layout{grid-template-columns:minmax(0,1.55fr) minmax(300px,.85fr);align-items:start}.sidebar{position:sticky;top:18px}.quick-grid{grid-template-columns:1fr 1fr}.bottom-nav{display:none}.match-list{grid-template-columns:repeat(2,minmax(0,1fr))}.section-title{font-size:1.28rem}.quick:hover,.match:hover{transform:translateY(-1px);box-shadow:0 7px 22px rgba(30,34,78,.08)}.quick,.match{transition:.15s ease}}
+@media(min-width:1050px){.match-list{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
-
-<div class="header">
-  <div class="header-left">
-    <div id="header-logo-wrap">
-      <img id="header-logo-img"
-        src="./LOGO.png"
-        alt="Volevo"
-        onerror="hdrLogoFallback()">
-    </div>
-    <div class="header-divider"></div>
-    <div class="header-title-block">
-      <div class="page-label">VOLEVO</div>
-      <div class="page-sub">
-        <span>Wedstrijdinformatie</span>
-        <span class="nevobo-tag">
-          <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
-            <circle cx="5" cy="5" r="4" stroke="#636366" stroke-width="1.3"/>
-            <path d="M5 2.5v2.5l1.5 1" stroke="#636366" stroke-width="1.3" stroke-linecap="round"/>
-          </svg>
-          Nevobo live feed
-        </span>
-        <span class="version-tag">v1.0 · 4 sep</span>
+<header class="top">
+  <div class="top-inner">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo"><img src="./LOGO.png" alt="VOLEVO"></div>
+        <div><div class="brand-name">VOLEVO</div><div class="brand-sub">Wedstrijdinformatie</div></div>
       </div>
+      <nav class="desktop-nav" aria-label="Navigatie">
+        <a href="./volevo-programma.html">Programma</a>
+        <a href="./volevo-uitslagen.html">Uitslagen</a>
+        <a href="./volevo-zaal.html">Zaal</a>
+        <a href="./volevo-kaart.html">Kaart</a>
+      </nav>
+      <button class="refresh" id="refresh" aria-label="Vernieuwen" title="Vernieuwen">↻</button>
+    </div>
+    <div class="hero">
+      <div class="eyebrow">Wedstrijddag</div>
+      <h1 id="heroTitle">Vandaag bij VOLEVO</h1>
+      <div class="date-line" id="todayText"></div>
     </div>
   </div>
-</div>
+</header>
 
-<div class="content">
-  <div class="section-label">Pagina's</div>
-  <div class="grid">
+<main>
+  <section class="team-panel" aria-labelledby="teamLabel">
+    <div class="label" id="teamLabel">Mijn team</div>
+    <div class="select-wrap">
+      <select id="teamSelect" aria-label="Kies je VOLEVO-team"><option value="">Alle VOLEVO-teams</option></select>
+    </div>
+  </section>
 
-    <a class="card" href="./volevo-programma.html">
-      <div class="card-icon">
-        <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-          <rect x="2.5" y="3.5" width="15" height="14" rx="3" stroke="#2A3176" stroke-width="1.6"/>
-          <path d="M2.5 7.5h15M6.5 2v3M13.5 2v3" stroke="#2A3176" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="card-title">Programma</div>
-      <div class="card-desc">Aankomende wedstrijden, live opgehaald uit de Nevobo-feed.</div>
-      <div class="card-go">Openen →</div>
-    </a>
+  <div class="layout">
+    <div class="content-col">
+      <section class="section">
+        <div class="section-head"><div class="section-title">Vandaag</div><div class="section-note" id="todayCount"></div></div>
+        <div class="match-list" id="todayMatches"><div class="empty">Wedstrijden laden…</div></div>
+      </section>
+      <section class="section">
+        <div class="section-head"><div class="section-title">Hierna</div><div class="section-note">komende wedstrijden</div></div>
+        <div class="match-list" id="nextMatches"></div>
+      </section>
+    </div>
 
-    <a class="card" href="./volevo-uitslagen.html">
-      <div class="card-icon">
-        <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-          <path d="M4 16V9M10 16V4M16 16v-4" stroke="#2A3176" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="card-title">Uitslagen</div>
-      <div class="card-desc">Gespeelde wedstrijden en setstanden.</div>
-      <div class="card-go">Openen →</div>
-    </a>
-
-    <a class="card" href="./volevo-zaal.html">
-      <div class="card-icon">
-        <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-          <rect x="2.5" y="3.5" width="15" height="13" rx="2.5" stroke="#2A3176" stroke-width="1.6"/>
-          <path d="M7.2 3.5v13M12.8 3.5v13M2.5 10h15" stroke="#2A3176" stroke-width="1.4"/>
-        </svg>
-      </div>
-      <div class="card-title">Zaalindeling</div>
-      <div class="card-desc">Welk team speelt op welk veld in De Fluit, per speelronde.</div>
-      <div class="card-go">Openen →</div>
-    </a>
-
-    <a class="card" href="./volevo-kaart.html">
-      <div class="card-icon">
-        <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-          <path d="M10 17.5s5.5-5.1 5.5-9a5.5 5.5 0 10-11 0c0 3.9 5.5 9 5.5 9z"
-            stroke="#2A3176" stroke-width="1.6" stroke-linejoin="round"/>
-          <circle cx="10" cy="8.3" r="2" stroke="#2A3176" stroke-width="1.5"/>
-        </svg>
-      </div>
-      <div class="card-title">Speelkaart</div>
-      <div class="card-desc">Kaart met de speellocaties van de wedstrijden.</div>
-      <div class="card-go">Openen →</div>
-    </a>
-
-    <a class="card" href="./volevo-felicitatie.html">
-      <div class="card-icon">
-        <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-          <path d="M10 2.6l2.1 4.5 4.9.6-3.6 3.4.95 4.9L10 14.1l-4.35 1.9.95-4.9L2 7.7l4.9-.6L10 2.6z"
-            stroke="#2A3176" stroke-width="1.5" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <div class="card-title">Felicitaties</div>
-      <div class="card-desc">Felicitatiepagina voor de winnaars.</div>
-      <div class="card-go">Openen →</div>
-    </a>
-
+    <aside class="sidebar">
+      <section class="section">
+        <div class="section-head"><div class="section-title">Snel naar</div></div>
+        <div class="quick-grid">
+          <a class="quick" href="./volevo-programma.html"><div class="quick-icon">▣</div><div><div class="quick-title">Programma</div><div class="quick-sub">Alle wedstrijden</div></div></a>
+          <a class="quick" href="./volevo-uitslagen.html"><div class="quick-icon">✓</div><div><div class="quick-title">Uitslagen</div><div class="quick-sub">Scores & setstanden</div></div></a>
+          <a class="quick" href="./volevo-zaal.html"><div class="quick-icon">⌗</div><div><div class="quick-title">Zaalindeling</div><div class="quick-sub">Welk veld?</div></div></a>
+          <a class="quick" href="./volevo-kaart.html"><div class="quick-icon">⌖</div><div><div class="quick-title">Speelkaart</div><div class="quick-sub">Waar spelen we?</div></div></a>
+          <a class="quick" href="./volevo-felicitatie.html"><div class="quick-icon">★</div><div><div class="quick-title">Felicitaties</div><div class="quick-sub">Winnaars in het zonnetje</div></div></a>
+          <a class="quick" href="./volevo-plattegrond.html"><div class="quick-icon">◇</div><div><div class="quick-title">Plattegrond</div><div class="quick-sub">Vind je plek in de zaal</div></div></a>
+        </div>
+      </section>
+      <div class="updated" id="updatedText">Gegevens via Nevobo</div>
+    </aside>
   </div>
+</main>
 
-  <div class="footer">
-    <span>VOLEVO · gegevens via de Nevobo-feed</span>
-    <a href="./rss-inspect.html">RSS-inspectie (technisch) →</a>
-  </div>
-</div>
+<nav class="bottom-nav" aria-label="Hoofdnavigatie">
+  <a class="nav-item active" href="./index.html"><span class="nav-icon">●</span><span>Vandaag</span></a>
+  <a class="nav-item" href="./volevo-programma.html"><span class="nav-icon">▣</span><span>Programma</span></a>
+  <a class="nav-item" href="./volevo-uitslagen.html"><span class="nav-icon">✓</span><span>Uitslagen</span></a>
+  <a class="nav-item" href="./volevo-kaart.html"><span class="nav-icon">⌖</span><span>Kaart</span></a>
+</nav>
 
 <script>
-// Fallback-keten nadat ./LOGO.png faalt
-var hdrLogoUrls=[
-  'https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
-  'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'
-];
-var hdrLogoIdx=0;
-function hdrLogoFallback(){
-  var img=document.getElementById('header-logo-img');
-  if(img&&hdrLogoIdx<hdrLogoUrls.length){
-    img.src=hdrLogoUrls[hdrLogoIdx++];
-  } else {
-    var wrap=document.getElementById('header-logo-wrap');
-    if(wrap) wrap.innerHTML='<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
-  }
-}
+(function(){
+  var allMatches=[];
+  var selectedTeam=localStorage.getItem('volevo-team')||'';
+  var select=document.getElementById('teamSelect');
+  var todayBox=document.getElementById('todayMatches');
+  var nextBox=document.getElementById('nextMatches');
 
-// ── Versielabel bijwerken uit data/version.json ──
-// Het cijfer (v2.5) blijft handmatig; de datum komt uit de laatste commit van
-// deze pagina, gestempeld door .github/workflows/stamp-version.yml.
-(async function stampVersion() {
-  var el = document.querySelector('.version-tag');
-  if (!el) return;
-  var base = (el.textContent.split('\u00b7')[0] || '').trim();
-  try {
-    var r = await fetch('./data/version.json?t=' + Date.now());
-    if (!r.ok) return;
-    var v = await r.json();
-    var me = (location.pathname.split('/').pop() || 'index.html');
-    var info = (v.files || {})[me];
-    if (!info || !info.date) return;
-    var d = new Date(info.date);
-    if (isNaN(d)) return;
-    var mnd = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
-    el.textContent = (base ? base + ' \u00b7 ' : '') + d.getDate() + ' ' + mnd[d.getMonth()];
-    el.title = 'Pagina laatst gewijzigd: '
-      + d.toLocaleString('nl-NL', { dateStyle: 'full', timeStyle: 'short' })
-      + ' (commit ' + info.commit + ')';
-  } catch(e) {}
+  function pad(n){return String(n).padStart(2,'0')}
+  function dayKey(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+  function sameDay(a,b){return dayKey(a)===dayKey(b)}
+  function esc(s){return String(s==null?'':s).replace(/[&<>'"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]})}
+  function isVolevo(name){return /^VOLEVO\b/i.test(name||'')}
+  function involvesTeam(m,t){return !t||m.thuis===t||m.uit===t}
+  function dateOf(m){var d=new Date(m.tijdstip);return isNaN(d)?null:d}
+  function fmtTime(d){return pad(d.getHours())+':'+pad(d.getMinutes())}
+  function fmtDate(d){return d.toLocaleDateString('nl-NL',{weekday:'short',day:'numeric',month:'short'})}
+  function niceToday(d){return d.toLocaleDateString('nl-NL',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}
+  function routeUrl(m){
+    if(m.lat&&m.lon)return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(m.lat+','+m.lon);
+    var q=[m.hal,m.adres,m.postcode,m.plaats].filter(Boolean).join(', ');
+    return q?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q):'';
+  }
+  function matchHtml(m,showDate){
+    var d=dateOf(m);if(!d)return '';
+    var home=isVolevo(m.thuis),away=isVolevo(m.uit),done=(m.status||'').toLowerCase()==='gespeeld';
+    var clubTeam=home?m.thuis:(away?m.uit:'');
+    var opponent=home?m.uit:m.thuis;
+    var route=routeUrl(m);
+    var where=[m.adres,m.postcode,m.plaats].filter(Boolean).join(' · ');
+    return '<article class="match">'+
+      '<div class="match-top"><div><div class="time">'+esc(showDate?fmtDate(d)+' · '+fmtTime(d):fmtTime(d))+'</div></div>'+
+      '<div class="pill-row">'+(done?'<span class="pill done">GESPEELD</span>':'')+'<span class="pill '+(home?'home':'away')+'">'+(home?'THUIS':'UIT')+'</span>'+(m.veld?'<span class="pill field">VELD '+esc(m.veld)+'</span>':'')+'</div></div>'+
+      '<div class="teams"><div class="team">'+esc(clubTeam||m.thuis)+'</div><div class="versus">tegen</div><div class="team other">'+esc(opponent||m.uit)+'</div></div>'+
+      ((m.hal||where)?'<div class="venue"><div class="venue-icon">⌖</div><div class="venue-text"><div class="venue-name">'+esc(m.hal||m.plaats||'Speellocatie')+'</div><div class="venue-sub">'+esc(where)+'</div></div>'+(route?'<a class="route" target="_blank" rel="noopener" href="'+route+'">Route</a>':'')+'</div>':'')+
+      '</article>';
+  }
+  function filtered(){return allMatches.filter(function(m){return involvesTeam(m,selectedTeam)})}
+  function render(){
+    var now=new Date(),data=filtered();
+    var todays=data.filter(function(m){var d=dateOf(m);return d&&sameDay(d,now)}).sort(function(a,b){return dateOf(a)-dateOf(b)});
+    var upcoming=data.filter(function(m){var d=dateOf(m);return d&&d>now&&(m.status||'').toLowerCase()!=='gespeeld'}).sort(function(a,b){return dateOf(a)-dateOf(b)}).slice(0,6);
+    document.getElementById('todayCount').textContent=todays.length?(todays.length+' wedstrijd'+(todays.length===1?'':'en')):'';
+    document.getElementById('heroTitle').textContent=selectedTeam?('Vandaag met '+selectedTeam.replace(/^VOLEVO\s*/i,'')):'Vandaag bij VOLEVO';
+    todayBox.innerHTML=todays.length?todays.map(function(m){return matchHtml(m,false)}).join(''):'<div class="empty"><strong>Geen wedstrijd vandaag</strong>'+(selectedTeam?'Voor '+esc(selectedTeam)+' staat vandaag niets gepland.':'Er staan vandaag geen VOLEVO-wedstrijden in de feed.')+'</div>';
+    nextBox.innerHTML=upcoming.length?upcoming.map(function(m){return matchHtml(m,true)}).join(''):'<div class="empty"><strong>Geen komende wedstrijden gevonden</strong>Controleer later opnieuw.</div>';
+  }
+  function fillTeams(){
+    var set={};allMatches.forEach(function(m){if(isVolevo(m.thuis))set[m.thuis]=1;if(isVolevo(m.uit))set[m.uit]=1});
+    Object.keys(set).sort(function(a,b){return a.localeCompare(b,'nl',{numeric:true})}).forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=t;select.appendChild(o)});
+    if(selectedTeam&&set[selectedTeam])select.value=selectedTeam;else selectedTeam='';
+  }
+  async function load(){
+    todayBox.innerHTML='<div class="empty">Wedstrijden laden…</div>';nextBox.innerHTML='';
+    try{
+      var r=await fetch('./data/matches.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
+      var data=await r.json();allMatches=Array.isArray(data.wedstrijden)?data.wedstrijden:[];
+      select.innerHTML='<option value="">Alle VOLEVO-teams</option>';fillTeams();render();
+      if(data.gegenereerd){var gd=new Date(data.gegenereerd);if(!isNaN(gd))document.getElementById('updatedText').textContent='Nevobo-data bijgewerkt '+gd.toLocaleString('nl-NL',{dateStyle:'medium',timeStyle:'short'});}
+    }catch(e){todayBox.innerHTML='<div class="error">De wedstrijdgegevens konden niet worden geladen. Probeer opnieuw.</div>';nextBox.innerHTML='';}
+  }
+  document.getElementById('todayText').textContent=niceToday(new Date());
+  select.addEventListener('change',function(){selectedTeam=select.value;localStorage.setItem('volevo-team',selectedTeam);render()});
+  document.getElementById('refresh').addEventListener('click',load);
+  load();
 })();
 </script>
-
 </body>
 </html>
