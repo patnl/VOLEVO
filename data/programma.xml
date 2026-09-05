@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 05 Sep 2026 15:58:05 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 18:43:43 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Leython DC MB 2 - VOLEVO MB 1, Uitslag: 0-3]]></title>
@@ -31,12 +31,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[5 sep 17:00: Merkala Zaanstad DS 1 - VOLEVO DS 1]]></title>
+      <title><![CDATA[Merkala Zaanstad DS 1 - VOLEVO DS 1, Uitslag: 3-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1964241</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1964241</guid>
-      <description><![CDATA[Wedstrijd: 9000NBD1Q CD, Datum: zaterdag 5 september, 17:00, Speellocatie: Topsportcentrum De Koog, Wezelstraat 7 D, 1541LZ  Koog aan de Zaan]]></description>
+      <description><![CDATA[Wedstrijd: Merkala Zaanstad DS 1 - VOLEVO DS 1, Uitslag: 3-0, Setstanden: 25-21, 25-17, 25-17]]></description>
       <pubDate>Sat, 05 Sep 2026 17:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[5 sep 18:30: SPORTJA LeythonDC HS 1 - VOLEVO HS 1]]></title>
