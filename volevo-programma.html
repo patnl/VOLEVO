@@ -201,6 +201,10 @@
     font-size: 0.7rem; letter-spacing: 0.2px;
   }
   .venue-sep { color: #d1d1d6; }
+  .venue-official {
+    background: #f2f2f7; color: #636366; border-radius: 5px;
+    padding: 1px 7px; font-size: 0.69rem; font-weight: 600; margin-left: 5px;
+  }
   a.venue-veld { text-decoration: none; }
   a.venue-veld:hover { background: rgba(42,49,118,0.16); }
 
@@ -499,6 +503,41 @@ async function loadVenues() {
     });
   } catch(e) {}
 }
+
+// ── Officialbeurten uit data/officials.json ──
+// Wie fluit, telt of doet het DWF bij een wedstrijd. Gevuld vanuit het
+// officialschema op volevo.nl door .github/workflows/mirror-officials.yml.
+var OFFICIALS = {};
+var officialsGeladen = false;
+async function loadOfficials() {
+  if (officialsGeladen) return;
+  officialsGeladen = true;
+  try {
+    var r = await fetch('./data/officials.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    OFFICIALS = d.perWedstrijd || {};
+  } catch(e) {}
+}
+function officialsVoor(tijdstip, thuis, uit) {
+  return OFFICIALS[tijdstip + '|' + thuis + '|' + uit] || [];
+}
+function taakKort(t) {
+  t = t || '';
+  if (/teller/i.test(t)) return 'teller';
+  if (/dwf/i.test(t)) return 'dwf';
+  if (/scheidsrechter/i.test(t)) return 'scheidsrechter';
+  return t;
+}
+// "scheidsrechter DS 4 · teller ouders"
+function officialsTekst(lijst) {
+  // Let op: 0 is falsy, dus geen || gebruiken - scheidsrechter zou dan
+  // achteraan belanden in plaats van vooraan.
+  var volgorde = { scheidsrechter: 0, teller: 1, dwf: 2 };
+  function rang(t) { var k = taakKort(t); return k in volgorde ? volgorde[k] : 9; }
+  return lijst.slice().sort(function(a, b) { return rang(a.taak) - rang(b.taak); }).map(function(o) { return taakKort(o.taak) + ' ' + o.team; });
+}
+
 function venueFor(m) {
   var t = new Date(m.time).getTime();
   return VENUES[t + '|' + m.home + '|' + m.away] || VENUES[m.home + '|' + m.away] || null;
@@ -519,6 +558,11 @@ function venueHtml(m) {
   if (v.adres)  rest.push(v.adres);
   if (v.plaats) rest.push(v.plaats);
   if (rest.length) out.push('<span class="venue-sep">·</span><span>' + rest.join(', ') + '</span>');
+  var off = officialsTekst(officialsVoor(v.tijdstip, v.thuis, v.uit));
+  if (off.length) {
+    out.push('<span class="venue-sep">·</span>' +
+      off.map(function(t) { return '<span class="venue-official">' + t + '</span>'; }).join(''));
+  }
   return '<div class="venue-row">' + out.join('') + '</div>';
 }
 
@@ -610,6 +654,7 @@ async function loadData(){
   try{
     await loadClubs();
     await loadVenues();
+    await loadOfficials();
     var xml=await fetchRSS(RSS_URL);
     var allFromToday=[];
     var todayStart=new Date(); todayStart.setHours(0,0,0,0);

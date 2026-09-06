@@ -130,6 +130,11 @@
     border-left: 4px solid #e5e5ea; font-size: 0.84rem;
   }
   .wl-item.actief { border-left-color: #2A3176; box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 6px 18px rgba(42,49,118,0.10); }
+  .wl-official {
+    flex-basis: 100%; font-size: 0.7rem; color: #aeaeb2;
+    margin-top: 4px; padding-top: 4px; border-top: 1px solid #f7f7fa;
+  }
+  .wl-item { flex-wrap: wrap; }
   .wl-veld {
     background: rgba(42,49,118,0.08); color: #2A3176; font-weight: 800;
     font-size: 0.7rem; border-radius: 6px; padding: 3px 8px; flex-shrink: 0;
@@ -371,6 +376,41 @@ function tijd(iso) {
   return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
 }
 
+
+// ── Officialbeurten uit data/officials.json ──
+// Wie fluit, telt of doet het DWF bij een wedstrijd. Gevuld vanuit het
+// officialschema op volevo.nl door .github/workflows/mirror-officials.yml.
+var OFFICIALS = {};
+var officialsGeladen = false;
+async function loadOfficials() {
+  if (officialsGeladen) return;
+  officialsGeladen = true;
+  try {
+    var r = await fetch('./data/officials.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    OFFICIALS = d.perWedstrijd || {};
+  } catch(e) {}
+}
+function officialsVoor(tijdstip, thuis, uit) {
+  return OFFICIALS[tijdstip + '|' + thuis + '|' + uit] || [];
+}
+function taakKort(t) {
+  t = t || '';
+  if (/teller/i.test(t)) return 'teller';
+  if (/dwf/i.test(t)) return 'dwf';
+  if (/scheidsrechter/i.test(t)) return 'scheidsrechter';
+  return t;
+}
+// "scheidsrechter DS 4 · teller ouders"
+function officialsTekst(lijst) {
+  // Let op: 0 is falsy, dus geen || gebruiken - scheidsrechter zou dan
+  // achteraan belanden in plaats van vooraan.
+  var volgorde = { scheidsrechter: 0, teller: 1, dwf: 2 };
+  function rang(t) { var k = taakKort(t); return k in volgorde ? volgorde[k] : 9; }
+  return lijst.slice().sort(function(a, b) { return rang(a.taak) - rang(b.taak); }).map(function(o) { return taakKort(o.taak) + ' ' + o.team; });
+}
+
 async function laden() {
   try {
     if (ZAAL.bevestigd) {
@@ -378,6 +418,7 @@ async function laden() {
       if (b) b.style.display = 'none';
     }
     await loadOverrides();
+    await loadOfficials();
     var r = await fetch('./data/matches.json?t=' + Date.now());
     if (!r.ok) throw new Error('Kan wedstrijdgegevens niet laden (' + r.status + ').');
     var d = await r.json();
@@ -530,7 +571,11 @@ function teken() {
             (isGecorrigeerd(w) ? ' <span class="wl-gewijzigd" title="Handmatig aangepast">gewijzigd</span>' : '') + '</span>' +
           '<span class="wl-thuis">' + esc(w.thuis) + '</span>' +
           '<span class="wl-tegen">vs ' + esc(w.uit) + '</span>' +
-          '<span class="wl-tijd">' + esc(tijd(w.tijdstip)) + '</span></div>';
+          '<span class="wl-tijd">' + esc(tijd(w.tijdstip)) + '</span>' +
+          (function() {
+            var off = officialsTekst(officialsVoor(w.tijdstip, w.thuis, w.uit));
+            return off.length ? '<div class="wl-official">' + esc(off.join(' · ')) + '</div>' : '';
+          })() + '</div>';
       }).join('') + '</div>'
     : '<div class="melding">Geen wedstrijden in deze speelronde.</div>';
 
