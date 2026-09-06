@@ -1,0 +1,2021 @@
+{
+ "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260905-Officialbeurten-sept-dec-web.xlsx",
+ "aantal": 331,
+ "nietGekoppeld": [],
+ "botsingen": [],
+ "perWedstrijd": {
+  "2026-09-03T21:00:00+02:00|VOLEVO DS 3|SKC DS 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-09-04T19:00:00+02:00|VOLEVO JA 1|Inter Rijswijk JA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-09-04T19:00:00+02:00|VOLEVO JB 1|Inter Rijswijk JB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-04T19:00:00+02:00|VOLEVO MA 2|VELO MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 2",
+    "opmerking": null
+   }
+  ],
+  "2026-09-04T19:00:00+02:00|VOLEVO MC 1|Zovoc JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-04T21:00:00+02:00|VOLEVO DS 2|VVV Delta DS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-09-04T21:00:00+02:00|VOLEVO DS 4|SKC DS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-09-10T21:00:00+02:00|VOLEVO DS 3|Volleybaldirect/Gemini-Kangeroes DS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T12:30:00+02:00|VOLEVO JB 1|ZVH JB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T12:30:00+02:00|VOLEVO JC 1|VVV Delta JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T12:30:00+02:00|VOLEVO MA 1|VCH MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "MB 1",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T12:30:00+02:00|VOLEVO MA 4|Leython DC MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 5",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T12:30:00+02:00|VOLEVO MA 6|VVV Delta MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 5",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T12:30:00+02:00|VOLEVO MB 2|Zovoc MB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T12:30:00+02:00|VOLEVO MC 4|Zovoc MC 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T15:00:00+02:00|VOLEVO DS 2|Punch DS 1": [
+   {
+    "taak": "teller",
+    "team": "JB 1",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T15:00:00+02:00|VOLEVO DS 4|Kalinko DS 2": [
+   {
+    "taak": "teller",
+    "team": "JC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T15:00:00+02:00|VOLEVO JB 2|Netwerk JB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T15:00:00+02:00|VOLEVO MA 2|Inter Rijswijk MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "JC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T15:00:00+02:00|VOLEVO MB 1|Zovoc MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 2",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T15:00:00+02:00|VOLEVO MB 3|VollinGo MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-12T15:00:00+02:00|VOLEVO MC 5|Castellum MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T12:30:00+02:00|VOLEVO JA 1|ZVH JA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 5",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T12:30:00+02:00|VOLEVO JB 2|VVV Delta JB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T12:30:00+02:00|VOLEVO MA 3|Kalinko MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MB 3",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T12:30:00+02:00|VOLEVO MA 6|Zovoc MA 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MB 3",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T12:30:00+02:00|VOLEVO MB 4|Zovoc MB 5": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T12:30:00+02:00|VOLEVO MC 3|VVV Delta MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T12:30:00+02:00|VOLEVO MC 5|Zovoc MC 4": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T15:00:00+02:00|VOLEVO HS 1|Ancora RVV HS 1": [
+   {
+    "taak": "dwf",
+    "team": "JA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "JB 2",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T15:00:00+02:00|VOLEVO JA 2|VCH JA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 3",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T15:00:00+02:00|VOLEVO JB 1|Zovoc JB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T15:00:00+02:00|VOLEVO JC 1|Ancora RVV MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T15:00:00+02:00|VOLEVO MA 5|WVV MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "JB 2",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T15:00:00+02:00|VOLEVO MC 2|Ancora RVV JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T17:30:00+02:00|VOLEVO DS 1|Van Rhijn Bouw Leython DC DS 2": [
+   {
+    "taak": "dwf",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 5",
+    "opmerking": null
+   }
+  ],
+  "2026-09-19T17:30:00+02:00|VOLEVO HS 2|VELO HS 1": [
+   {
+    "taak": "teller",
+    "team": "JB 1",
+    "opmerking": null
+   }
+  ],
+  "2026-09-25T19:00:00+02:00|VOLEVO DS 5|SKC DS 6": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-09-25T19:00:00+02:00|VOLEVO DS 6|Kalinko DS 7": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-09-25T19:00:00+02:00|VOLEVO DS 8|Kratos '08 DS 6": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 7",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-09-25T19:00:00+02:00|VOLEVO HS 5|Punch HS 6": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-09-25T21:00:00+02:00|VOLEVO DS 7|VVV Delta DS 3": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 5",
+    "opmerking": null
+   }
+  ],
+  "2026-09-25T21:00:00+02:00|VOLEVO DS 9|Castellum DS 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-09-25T21:00:00+02:00|VOLEVO HS 4|Jupiter HS 2": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-10-01T21:00:00+02:00|VOLEVO DS 3|Irene DS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-01T21:00:00+02:00|VOLEVO DS 4|VCS DS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-01T21:00:00+02:00|VOLEVO HS 3|Volley2B HS 4": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T12:30:00+02:00|VOLEVO HS 2|DEO HS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 2",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T12:30:00+02:00|VOLEVO JC 1|Zovoc MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T12:30:00+02:00|VOLEVO MA 2|Kalinko MA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 3",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T12:30:00+02:00|VOLEVO MB 2|Ancora RVV MB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T12:30:00+02:00|VOLEVO MC 1|Sliedrecht Sport XC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 3",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T12:30:00+02:00|VOLEVO MC 4|ZVH MC 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T15:00:00+02:00|VOLEVO DS 2|US DS 3": [
+   {
+    "taak": "teller",
+    "team": "MA 5",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T15:00:00+02:00|VOLEVO HS 1|Next Volley Dordrecht HS 2": [
+   {
+    "taak": "dwf",
+    "team": "MA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 5",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T15:00:00+02:00|VOLEVO JA 1|Dosko/Thor JA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T15:00:00+02:00|VOLEVO MA 4|VOLEVO MA 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T15:00:00+02:00|VOLEVO MB 1|Leython DC MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T15:00:00+02:00|VOLEVO MC 3|Netwerk JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T17:30:00+02:00|VOLEVO DS 1|Zaanstad DS 3": [
+   {
+    "taak": "dwf",
+    "team": "MA 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 3",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T17:30:00+02:00|VOLEVO JA 2|Castellum JA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 3",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T17:30:00+02:00|VOLEVO MA 5|Netwerk MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 4",
+    "opmerking": null
+   }
+  ],
+  "2026-10-03T17:30:00+02:00|VOLEVO MB 3|Zovoc MB 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-09T19:00:00+02:00|VOLEVO DS 7|Sovicos DS 3": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-10-09T19:00:00+02:00|VOLEVO DS 9|Netwerk DS 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 8",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-10-09T19:00:00+02:00|VOLEVO HS 4|Punch HS 5": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 5",
+    "opmerking": null
+   }
+  ],
+  "2026-10-09T19:00:00+02:00|VOLEVO HS 6|Monza HS 5": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-10-09T21:00:00+02:00|VOLEVO DS 6|DEO DS 2": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-10-09T21:00:00+02:00|VOLEVO DS 8|Inter Rijswijk DS 8": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-10-09T21:00:00+02:00|VOLEVO HS 5|SKC HS 2": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-10-15T21:00:00+02:00|VOLEVO DS 5|Sovicos DS 2": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-10-15T21:00:00+02:00|VOLEVO DS 7|Sovicos DS 5": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 4",
+    "opmerking": null
+   }
+  ],
+  "2026-10-15T21:00:00+02:00|VOLEVO DS 9|Sovicos DS 7": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 5",
+    "opmerking": null
+   }
+  ],
+  "2026-10-15T21:00:00+02:00|VOLEVO HS 6|SKC HS 8": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 5",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T12:30:00+02:00|VOLEVO MA 1|Limes MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "MA 6",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T12:30:00+02:00|VOLEVO MA 5|DEO MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 6",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T12:30:00+02:00|VOLEVO MB 2|Kalinko MB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T12:30:00+02:00|VOLEVO MB 4|ZVH MB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T12:30:00+02:00|VOLEVO MC 1|Inter Rijswijk JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T12:30:00+02:00|VOLEVO MC 3|Kratos '08 MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T12:30:00+02:00|VOLEVO MC 5|Ancora RVV MC 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T15:00:00+02:00|VOLEVO DS 2|Spaarnestad DS 3": [
+   {
+    "taak": "teller",
+    "team": "MA 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T15:00:00+02:00|VOLEVO JB 1|VHZ JB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T15:00:00+02:00|VOLEVO MA 4|Inter Rijswijk MA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T15:00:00+02:00|VOLEVO MA 6|Kratos '08 MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 7",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 5",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T15:00:00+02:00|VOLEVO MB 1|Ancora RVV MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 4",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T15:00:00+02:00|VOLEVO MB 3|Inter Rijswijk MB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T15:00:00+02:00|VOLEVO MC 2|ZVH JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T17:30:00+02:00|VOLEVO JA 1|Inter Rijswijk JA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 6",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T17:30:00+02:00|VOLEVO JB 2|VELO JB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-17T17:30:00+02:00|VOLEVO MA 2|Inter Rijswijk MA 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "JB 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-29T21:00:00+01:00|VOLEVO DS 3|Zovoc DS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-10-29T21:00:00+01:00|VOLEVO HS 3|VollinGo HS 4": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T12:30:00+01:00|VOLEVO DS 4|Zovoc DS 2": [
+   {
+    "taak": "teller",
+    "team": "MC 2",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T12:30:00+01:00|VOLEVO JA 2|Leython DC JA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MB 1",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T12:30:00+01:00|VOLEVO MA 2|Zovoc MA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MB 3",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T12:30:00+01:00|VOLEVO MB 2|Gemini-Kangeroes MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T12:30:00+01:00|VOLEVO MB 4|Kalinko MB 4": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T12:30:00+01:00|VOLEVO MC 1|Next Volley Dordrecht JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T12:30:00+01:00|VOLEVO MC 5|Kalinko JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T15:00:00+01:00|VOLEVO HS 1|Kratos '08 HS 1": [
+   {
+    "taak": "dwf",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MB 4",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T15:00:00+01:00|VOLEVO MA 3|Inter Rijswijk MA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MB 2",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T15:00:00+01:00|VOLEVO MA 6|Monza MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MB 2",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T15:00:00+01:00|VOLEVO MB 1|Dinto MB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T15:00:00+01:00|VOLEVO MB 3|ZVH MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T15:00:00+01:00|VOLEVO MC 2|Zovoc JC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T17:30:00+01:00|VOLEVO DS 1|VC WIK Groot-Ammers DS 1": [
+   {
+    "taak": "dwf",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 2",
+    "opmerking": null
+   }
+  ],
+  "2026-10-31T17:30:00+01:00|VOLEVO HS 2|Monza HS 1": [
+   {
+    "taak": "teller",
+    "team": "MB 1",
+    "opmerking": null
+   }
+  ],
+  "2026-11-05T21:00:00+01:00|VOLEVO DS 3|VollinGo DS 2": [
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-11-05T21:00:00+01:00|VOLEVO HS 3|Inter Rijswijk HS 4": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T12:30:00+01:00|VOLEVO DS 4|Inter Rijswijk DS 3": [
+   {
+    "taak": "teller",
+    "team": "JB 2",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T12:30:00+01:00|VOLEVO JC 1|ZVH MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T12:30:00+01:00|VOLEVO MA 3|Leython DC MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 2",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T12:30:00+01:00|VOLEVO MA 5|Kalinko MA 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 4",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T12:30:00+01:00|VOLEVO MB 1|Spaarnestad MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 1",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T12:30:00+01:00|VOLEVO MB 4|Castellum MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T12:30:00+01:00|VOLEVO MC 3|VELO MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T15:00:00+01:00|VOLEVO HS 1|Ancora RVV HS 1": [
+   {
+    "taak": "dwf",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "JC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T15:00:00+01:00|VOLEVO JB 2|Kratos '08 JB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T15:00:00+01:00|VOLEVO MA 2|VELO MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 3",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T15:00:00+01:00|VOLEVO MA 4|VSTS MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 5",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T15:00:00+01:00|VOLEVO MC 4|Netwerk MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T17:30:00+01:00|VOLEVO DS 1|VollinGo DS 1": [
+   {
+    "taak": "dwf",
+    "team": "MA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 4",
+    "opmerking": null
+   }
+  ],
+  "2026-11-07T17:30:00+01:00|VOLEVO HS 2|VollinGo HS 1": [
+   {
+    "taak": "teller",
+    "team": "JB 2",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T19:00:00+01:00|VOLEVO DS 7|SKC DS 3": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T19:00:00+01:00|VOLEVO HS 4|VVV Delta HS 4": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T19:00:00+01:00|VOLEVO MA 1|Spaarnestad MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 3",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "DS 5",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T19:00:00+01:00|VOLEVO MC 2|Leython DC MC 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T21:00:00+01:00|VOLEVO DS 3|VIVES DS 3": [
+   {
+    "taak": "teller",
+    "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T21:00:00+01:00|VOLEVO DS 5|Kalinko DS 5": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T21:00:00+01:00|VOLEVO DS 8|PQV Westland - Data Giants DS 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 4",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T21:00:00+01:00|VOLEVO HS 5|Castellum HS 2": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-11-13T21:00:00+01:00|VOLEVO HS 6|Grillroom-snackbar Alev/Punch HS 14": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-11-19T21:00:00+01:00|VOLEVO DS 3|Majella DS 1": [
+   {
+    "taak": "teller",
+    "team": "DS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-11-19T21:00:00+01:00|VOLEVO HS 3|Dosko HS 3": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T12:30:00+01:00|VOLEVO HS 2|Dosko HS 1": [
+   {
+    "taak": "teller",
+    "team": "MC 5",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T12:30:00+01:00|VOLEVO JB 1|Inter Rijswijk JB 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T12:30:00+01:00|VOLEVO JC 1|Inter Rijswijk JC 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T12:30:00+01:00|VOLEVO MA 3|VOLEVO MA 4": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 2",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T12:30:00+01:00|VOLEVO MC 1|Smash'66 MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T12:30:00+01:00|VOLEVO MC 4|Kalinko MC 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T15:00:00+01:00|VOLEVO DS 2|Forza Hoogland DS 1": [
+   {
+    "taak": "teller",
+    "team": "MA 6",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T15:00:00+01:00|VOLEVO DS 4|Volleybaldirect/Gemini-Kangeroes DS 1": [
+   {
+    "taak": "teller",
+    "team": "MA 6",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T15:00:00+01:00|VOLEVO HS 1|Volley2B HS 1": [
+   {
+    "taak": "dwf",
+    "team": "JA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "JC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T15:00:00+01:00|VOLEVO JA 2|Liusna JA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 1",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T15:00:00+01:00|VOLEVO MC 2|Kalinko MC 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "JA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T15:00:00+01:00|VOLEVO MC 5|Leython DC MC 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T17:30:00+01:00|VOLEVO DS 1|Next Volley Dordrecht DS 2": [
+   {
+    "taak": "dwf",
+    "team": "JA 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "JA 2",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T17:30:00+01:00|VOLEVO JA 1|Kalinko JA 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 2",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T17:30:00+01:00|VOLEVO JB 2|Kalinko JB 2": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T17:30:00+01:00|VOLEVO MA 6|Kalinko MA 4": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 5",
+    "opmerking": null
+   }
+  ],
+  "2026-11-21T17:30:00+01:00|VOLEVO MB 4|Inter Rijswijk MB 4": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T19:00:00+01:00|VOLEVO DS 7|Timios DS 2": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "Ds 9",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T19:00:00+01:00|VOLEVO DS 8|Inter Rijswijk DS 9": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 9",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T19:00:00+01:00|VOLEVO MA 1|Zovoc MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 5",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T19:00:00+01:00|VOLEVO MC 1|Inter Rijswijk MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 5",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T21:00:00+01:00|VOLEVO DS 5|Zovoc DS 5": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "DS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T21:00:00+01:00|VOLEVO DS 6|Sovicos DS 4": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "DS 7",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T21:00:00+01:00|VOLEVO DS 9|SKC DS 8": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 8",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-11-27T21:00:00+01:00|VOLEVO HS 5|GGV HS 1": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 8",
+    "opmerking": null
+   }
+  ],
+  "2026-12-03T19:30:00+01:00|VOLEVO MB 3|VCH MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-12-03T20:30:00+01:00|VOLEVO DS 2|Compaen DS 2": [
+   {
+    "taak": "teller",
+    "team": "HS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-12-10T21:00:00+01:00|VOLEVO DS 3|Inter Rijswijk DS 2": [
+   {
+    "taak": "teller",
+    "team": "DS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-12-10T21:00:00+01:00|VOLEVO HS 3|Kratos '08 HS 5": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 1",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T12:30:00+01:00|VOLEVO DS 4|Ancora RVV DS 1": [
+   {
+    "taak": "teller",
+    "team": "MC 4",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T12:30:00+01:00|VOLEVO JA 2|Scarabee JA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 4",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T12:30:00+01:00|VOLEVO MA 1|ZVH MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "MC 4",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T12:30:00+01:00|VOLEVO MA 3|VSTS MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MC 4",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T12:30:00+01:00|VOLEVO MA 5|Inter Rijswijk MA 4": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 4",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T12:30:00+01:00|VOLEVO MB 2|Inter Rijswijk MB 3": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 5",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T12:30:00+01:00|VOLEVO MC 3|Monza MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T15:00:00+01:00|VOLEVO HS 1|Vollido HS 1": [
+   {
+    "taak": "dwf",
+    "team": "MA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 1",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T15:00:00+01:00|VOLEVO MA 4|Kalinko MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 4",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "MA 1",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T15:00:00+01:00|VOLEVO MC 4|VollinGo MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "MA 1",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T17:30:00+01:00|VOLEVO DS 1|Inter Rijswijk DS 1": [
+   {
+    "taak": "dwf",
+    "team": "HS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-12-12T17:30:00+01:00|VOLEVO HS 2|Leython DC HS 2": [
+   {
+    "taak": "teller",
+    "team": "HS 6",
+    "opmerking": null
+   }
+  ],
+  "2026-12-17T21:00:00+01:00|VOLEVO DS 5|Kalinko DS 7": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 3",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 9",
+    "opmerking": null
+   }
+  ],
+  "2026-12-17T21:00:00+01:00|VOLEVO HS 4|VCH HS 2": [
+   {
+    "taak": "scheidsrechter (vaardigheidstraining)",
+    "team": "HS 2",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "HS 2",
+    "opmerking": null
+   }
+  ],
+  "2026-12-17T21:00:00+01:00|VOLEVO HS 6|Punch HS 12": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 6",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "DS 6",
+    "opmerking": null
+   }
+  ]
+ }
+}

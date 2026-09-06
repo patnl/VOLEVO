@@ -1,0 +1,59 @@
+name: Mirror officialbeurten
+
+# Haalt het officialschema van volevo.nl op en zet het om naar
+# data/officials.json. De bestandsnaam van de Excel bevat een datum, dus het
+# script plukt de link van de pagina in plaats van een vaste URL te gebruiken.
+# Draait na de wedstrijdgegevens, want de beurten worden daaraan gekoppeld.
+
+on:
+  schedule:
+    - cron: '47 4 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/mirror-officials.yml'
+      - 'scripts/build_officials.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-officials
+  cancel-in-progress: false
+
+jobs:
+  officials:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: openpyxl installeren
+        run: pip install --quiet openpyxl
+
+      - name: Officialbeurten ophalen
+        run: python3 scripts/build_officials.py
+
+      - name: Committen als er iets is veranderd
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain data/officials.json)" ]; then
+            echo "Officialbeurten ongewijzigd."
+            exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/officials.json
+          git commit -m "Officialbeurten bijwerken ($(date -u '+%Y-%m-%d'))"
+          # De andere workflows committen ook naar main; als er tussendoor een
+          # commit is bijgekomen wordt de push geweigerd. Dan rebasen en opnieuw.
+          for poging in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push geweigerd, opnieuw na rebase (poging $poging)"
+            git pull --rebase --autostash origin main
+          done
+          echo "Push bleef falen." >&2
+          exit 1

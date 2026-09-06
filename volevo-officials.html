@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Officialbeurten</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f7; color: #1d1d1f;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    min-height: 100vh; -webkit-font-smoothing: antialiased;
+  }
+  .header {
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 14px 28px; display: flex; align-items: center;
+    justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 20;
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  #header-logo-wrap { height: 50px; width: 56px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  #header-logo-img { max-height: 50px; max-width: 56px; object-fit: contain; display: block; }
+  .hdr-logo-fb { background: #2A3176; border-radius: 12px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; }
+  .hdr-logo-fb span { color: #9CD0C1; font-size: 0.58rem; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; }
+  .header-divider { width: 1px; height: 36px; background: #e5e5ea; flex-shrink: 0; }
+  .page-label { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.4px; line-height: 1; }
+  .page-sub { font-size: 0.73rem; color: #86868b; font-weight: 500; margin-top: 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .version-tag { display: inline-flex; align-items: center; background: rgba(42,49,118,0.07); border-radius: 6px; padding: 2px 8px; font-size: 0.67rem; font-weight: 700; color: #2A3176; letter-spacing: 0.2px; }
+  .terug { font-size: 0.72rem; font-weight: 600; color: #86868b; text-decoration: none; padding: 5px 10px; border-radius: 8px; background: #f2f2f7; }
+  .terug:hover { color: #2A3176; }
+
+  .filters {
+    background: rgba(245,245,247,0.95);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 13px 28px; position: sticky; top: 79px; z-index: 15;
+    display: flex; flex-direction: column; gap: 9px;
+  }
+  .filterrij { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .filterlabel {
+    font-size: 0.65rem; font-weight: 800; letter-spacing: 0.6px;
+    text-transform: uppercase; color: #aeaeb2; width: 62px; flex-shrink: 0;
+  }
+  .chip {
+    border: none; font-family: inherit; cursor: pointer;
+    background: white; color: #3a3a3c; border-radius: 9px;
+    padding: 6px 12px; font-size: 0.76rem; font-weight: 600;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06); white-space: nowrap;
+  }
+  .chip.aan { background: #2A3176; color: white; }
+  select, input[type=search] {
+    font-family: inherit; font-size: 0.8rem; padding: 7px 10px;
+    border: 1px solid #d9d9de; border-radius: 9px; background: white; color: #1d1d1f;
+  }
+  input[type=search] { min-width: 210px; }
+
+  .content { padding: 18px 28px 50px; max-width: 1080px; margin: 0 auto; }
+  .telling { font-size: 0.74rem; color: #86868b; padding: 4px 4px 12px; font-weight: 600; }
+  .dagkop {
+    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;
+    color: #aeaeb2; padding: 16px 4px 8px;
+  }
+  .beurt {
+    background: white; border-radius: 13px; padding: 11px 14px; margin-bottom: 7px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    display: grid; grid-template-columns: 58px 1fr auto; gap: 12px; align-items: center;
+    border-left: 4px solid #e5e5ea;
+  }
+  .beurt.eigen { border-left-color: #9CD0C1; }
+  .b-tijd { font-size: 0.9rem; font-weight: 800; color: #2A3176; }
+  .b-mid { min-width: 0; }
+  .b-wedstrijd { font-size: 0.87rem; font-weight: 600; }
+  .b-wedstrijd .thuis { color: #2A3176; font-weight: 700; }
+  .b-plek { font-size: 0.73rem; color: #86868b; margin-top: 3px; display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+  .b-veld { background: rgba(42,49,118,0.08); color: #2A3176; font-weight: 700; border-radius: 5px; padding: 1px 7px; font-size: 0.68rem; }
+  .b-opm { color: #a15c00; font-weight: 600; }
+  .b-rechts { text-align: right; display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
+  .b-team { font-size: 0.86rem; font-weight: 800; color: #1d1d1f; }
+  .b-taak {
+    font-size: 0.66rem; font-weight: 800; letter-spacing: 0.3px; text-transform: uppercase;
+    border-radius: 5px; padding: 2px 7px; white-space: nowrap;
+  }
+  .taak-teller  { background: #eef0f8; color: #2A3176; }
+  .taak-scheids { background: #e8f6f0; color: #17493c; }
+  .taak-dwf     { background: #fff4e5; color: #7a4b00; }
+  .b-samen { font-size: 0.66rem; color: #17493c; font-weight: 700; }
+
+  .melding { text-align: center; padding: 60px 30px; color: #86868b; }
+  .waarschuwing {
+    background: #fff0f0; border: 1px solid #ffc9c9; color: #a11;
+    border-radius: 12px; padding: 11px 14px; margin-bottom: 14px;
+    font-size: 0.78rem; font-weight: 600;
+  }
+  .voet { margin-top: 22px; padding: 0 4px; font-size: 0.72rem; color: #aeaeb2; line-height: 1.6; }
+  .voet a { color: #86868b; font-weight: 600; }
+
+  @media (max-width: 700px) {
+    .header, .filters, .content { padding-left: 16px; padding-right: 16px; }
+    .filters { top: 71px; }
+    .filterlabel { width: 100%; }
+    .beurt { grid-template-columns: 50px 1fr; }
+    .b-rechts { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 8px; justify-content: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div id="header-logo-wrap">
+      <img id="header-logo-img" src="./LOGO.png" alt="Volevo" onerror="hdrLogoFallback()">
+    </div>
+    <div class="header-divider"></div>
+    <div>
+      <div class="page-label">Officialbeurten</div>
+      <div class="page-sub">
+        <span id="periode">–</span>
+        <span class="version-tag">v1.0 · 6 sep</span>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px">
+    <a class="terug" href="./volevo-programma.html">Programma →</a>
+    <a class="terug" href="./volevo-zaal.html">Zaalindeling →</a>
+  </div>
+</div>
+
+<div class="filters">
+  <div class="filterrij">
+    <span class="filterlabel">Team</span>
+    <select id="team"></select>
+    <select id="wanneer">
+      <option value="komend">Vanaf vandaag</option>
+      <option value="alles">Hele periode</option>
+      <option value="verstreken">Alleen geweest</option>
+    </select>
+    <input type="search" id="zoek" placeholder="Zoek op team, tegenstander of zaal…">
+  </div>
+  <div class="filterrij">
+    <span class="filterlabel">Taak</span>
+    <span id="taken" style="display:flex;gap:7px;flex-wrap:wrap"></span>
+  </div>
+</div>
+
+<div class="content">
+  <div id="uitslag"><div class="melding">Officialbeurten laden…</div></div>
+</div>
+
+<script>
+var hdrLogoUrls = ['https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
+                   'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'];
+var hdrLogoIdx = 0;
+function hdrLogoFallback() {
+  var img = document.getElementById('header-logo-img');
+  if (img && hdrLogoIdx < hdrLogoUrls.length) { img.src = hdrLogoUrls[hdrLogoIdx++]; }
+  else {
+    var wrap = document.getElementById('header-logo-wrap');
+    if (wrap) wrap.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+  }
+}
+
+var DAG_LANG = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+var MND_LANG = ['januari','februari','maart','april','mei','juni','juli','augustus',
+                'september','oktober','november','december'];
+
+var beurten = [], botsingen = [], teams = [], taken = [];
+var filterTaken = {};   // taak -> aan/uit; leeg = alles
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function taakKlasse(t) {
+  t = (t || '').toLowerCase();
+  if (t.indexOf('teller') !== -1) return 'taak-teller';
+  if (t.indexOf('dwf') !== -1) return 'taak-dwf';
+  return 'taak-scheids';
+}
+function taakKort(t) {
+  t = (t || '');
+  if (/teller/i.test(t)) return 'teller';
+  if (/dwf/i.test(t)) return 'dwf';
+  if (/spelregeltoets/i.test(t)) return 'scheidsrechter · spelregeltoets';
+  if (/vaardigheid/i.test(t)) return 'scheidsrechter · vaardigheidstraining';
+  return t;
+}
+
+async function laden() {
+  try {
+    var haal = async function(u) { var r = await fetch(u + '?t=' + Date.now()); return r.ok ? r.json() : null; };
+    var off = await haal('./data/officials.json');
+    var mat = await haal('./data/matches.json');
+    if (!off) throw new Error('Kan de officialbeurten niet laden.');
+
+    var wedstrijden = {};
+    ((mat || {}).wedstrijden || []).forEach(function(w) {
+      wedstrijden[w.tijdstip + '|' + w.thuis + '|' + w.uit] = w;
+    });
+    // Wanneer speelt elk team zelf? Dan kunnen we "je bent er toch" tonen.
+    var speelt = {};
+    ((mat || {}).wedstrijden || []).forEach(function(w) {
+      [w.thuis, w.uit].forEach(function(n) {
+        if (n && n.toUpperCase().indexOf('VOLEVO') === 0) {
+          var t = n.replace(/^VOLEVO\s*/i, '').trim();
+          (speelt[t] = speelt[t] || {})[w.tijdstip.slice(0,16)] = w;
+        }
+      });
+    });
+
+    botsingen = off.botsingen || [];
+    beurten = [];
+    Object.keys(off.perWedstrijd || {}).forEach(function(k) {
+      var deel = k.split('|'), w = wedstrijden[k] || {};
+      off.perWedstrijd[k].forEach(function(b) {
+        var eigenDag = (speelt[b.team] || {});
+        var zelfBezig = null;
+        Object.keys(eigenDag).forEach(function(stamp) {
+          if (stamp.slice(0,10) === deel[0].slice(0,10)) zelfBezig = eigenDag[stamp];
+        });
+        beurten.push({
+          tijdstip: deel[0], thuis: deel[1], uit: deel[2],
+          taak: b.taak, team: b.team, opmerking: b.opmerking,
+          hal: w.hal, veld: w.veld, plaats: w.plaats,
+          zelfBezig: zelfBezig
+        });
+      });
+    });
+    beurten.sort(function(a,b) { return a.tijdstip < b.tijdstip ? -1 : a.tijdstip > b.tijdstip ? 1 : 0; });
+
+    teams = Object.keys(beurten.reduce(function(acc, b) { acc[b.team] = 1; return acc; }, {}))
+      .sort(function(a,b) { return a.localeCompare(b, 'nl', {numeric:true}); });
+    taken = Object.keys(beurten.reduce(function(acc, b) { acc[b.taak] = 1; return acc; }, {})).sort();
+
+    var params = new URLSearchParams(location.search);
+    document.getElementById('team').innerHTML =
+      '<option value="">Alle teams</option>' + teams.map(function(t) {
+        return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
+      }).join('');
+    if (params.get('team') && teams.indexOf(params.get('team')) !== -1) {
+      document.getElementById('team').value = params.get('team');
+    }
+    if (params.get('taak')) filterTaken[params.get('taak')] = true;
+
+    document.getElementById('taken').innerHTML = taken.map(function(t) {
+      return '<button class="chip" data-taak="' + esc(t) + '">' + esc(taakKort(t)) + '</button>';
+    }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-taak]'), function(b) {
+      b.addEventListener('click', function() {
+        var t = b.getAttribute('data-taak');
+        if (filterTaken[t]) delete filterTaken[t]; else filterTaken[t] = true;
+        teken();
+      });
+    });
+    ['team','wanneer','zoek'].forEach(function(id) {
+      document.getElementById(id).addEventListener('input', teken);
+      document.getElementById(id).addEventListener('change', teken);
+    });
+
+    var eerste = beurten[0], laatste = beurten[beurten.length-1];
+    if (eerste) {
+      var d1 = new Date(eerste.tijdstip), d2 = new Date(laatste.tijdstip);
+      document.getElementById('periode').textContent =
+        d1.getDate() + ' ' + MND_LANG[d1.getMonth()] + ' t/m ' +
+        d2.getDate() + ' ' + MND_LANG[d2.getMonth()] + ' ' + d2.getFullYear();
+    }
+    teken();
+  } catch(e) {
+    document.getElementById('uitslag').innerHTML =
+      '<div class="melding" style="color:#ff3b30">' + esc(e.message) + '</div>';
+  }
+}
+
+function teken() {
+  var team = document.getElementById('team').value;
+  var wanneer = document.getElementById('wanneer').value;
+  var zoek = document.getElementById('zoek').value.trim().toLowerCase();
+  var nu = Date.now();
+  var gekozenTaken = Object.keys(filterTaken);
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-taak]'), function(b) {
+    b.classList.toggle('aan', !!filterTaken[b.getAttribute('data-taak')]);
+  });
+
+  var lijst = beurten.filter(function(b) {
+    if (team && b.team !== team) return false;
+    if (gekozenTaken.length && gekozenTaken.indexOf(b.taak) === -1) return false;
+    var t = new Date(b.tijdstip).getTime();
+    if (wanneer === 'komend' && t < nu - 3*3600*1000) return false;
+    if (wanneer === 'verstreken' && t >= nu) return false;
+    if (zoek) {
+      var hooi = [b.team, b.thuis, b.uit, b.taak, b.hal, b.plaats, b.opmerking].join(' ').toLowerCase();
+      if (hooi.indexOf(zoek) === -1) return false;
+    }
+    return true;
+  });
+
+  var host = document.getElementById('uitslag');
+  if (!lijst.length) {
+    host.innerHTML = '<div class="melding">Geen beurten die aan deze filters voldoen.</div>';
+    return;
+  }
+
+  var perDag = {};
+  lijst.forEach(function(b) { (perDag[b.tijdstip.slice(0,10)] = perDag[b.tijdstip.slice(0,10)] || []).push(b); });
+
+  var waarschuwing = '';
+  if (botsingen.length) {
+    waarschuwing = '<div class="waarschuwing">Let op: ' + botsingen.length +
+      ' beurt(en) vallen samen met een eigen wedstrijd van dat team.</div>';
+  }
+
+  host.innerHTML = waarschuwing +
+    '<div class="telling">' + lijst.length + (lijst.length === 1 ? ' beurt' : ' beurten') +
+      (team ? ' voor ' + esc(team) : '') + '</div>' +
+    Object.keys(perDag).sort().map(function(dag) {
+      var d = new Date(dag + 'T12:00:00');
+      return '<div class="dagkop">' + DAG_LANG[d.getDay()] + ' ' + d.getDate() + ' ' +
+        MND_LANG[d.getMonth()] + '</div>' +
+        perDag[dag].map(function(b) {
+          var tijd = b.tijdstip.slice(11,16);
+          var plek = [];
+          if (b.hal) plek.push(esc(b.hal));
+          if (b.veld) plek.push('<span class="b-veld">veld ' + esc(b.veld) + '</span>');
+          if (b.opmerking) plek.push('<span class="b-opm">' + esc(b.opmerking) + '</span>');
+          return '<div class="beurt' + (b.zelfBezig ? ' eigen' : '') + '">' +
+            '<div class="b-tijd">' + tijd + '</div>' +
+            '<div class="b-mid">' +
+              '<div class="b-wedstrijd"><span class="thuis">' + esc(b.thuis) + '</span> – ' + esc(b.uit) + '</div>' +
+              (plek.length ? '<div class="b-plek">' + plek.join('') + '</div>' : '') +
+            '</div>' +
+            '<div class="b-rechts">' +
+              '<span class="b-team">' + esc(b.team) + '</span>' +
+              '<span class="b-taak ' + taakKlasse(b.taak) + '">' + esc(taakKort(b.taak)) + '</span>' +
+              (b.zelfBezig ? '<span class="b-samen">speelt zelf die dag</span>' : '') +
+            '</div>' +
+          '</div>';
+        }).join('');
+    }).join('') +
+    '<div class="voet">Bron: het officialschema op volevo.nl, automatisch ingelezen. ' +
+    'Kan je team niet? Dan zorgt je team zelf voor een vervanger — zie de ' +
+    '<a href="https://volevo.nl/officialbeurten/">uitleg op volevo.nl</a>.</div>';
+}
+
+laden();
+
+// ── Versielabel bijwerken uit data/version.json ──
+(async function stampVersion() {
+  var el = document.querySelector('.version-tag');
+  if (!el) return;
+  var base = (el.textContent.split('·')[0] || '').trim();
+  try {
+    var r = await fetch('./data/version.json?t=' + Date.now());
+    if (!r.ok) return;
+    var v = await r.json();
+    var me = (location.pathname.split('/').pop() || 'index.html');
+    var info = (v.files || {})[me];
+    if (!info || !info.date) return;
+    var d = new Date(info.date);
+    if (isNaN(d)) return;
+    var mnd = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    el.textContent = (base ? base + ' · ' : '') + d.getDate() + ' ' + mnd[d.getMonth()];
+    el.title = 'Pagina laatst gewijzigd: '
+      + d.toLocaleString('nl-NL', { dateStyle: 'full', timeStyle: 'short' })
+      + ' (commit ' + info.commit + ')';
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>
