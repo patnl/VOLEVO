@@ -1,5 +1,220 @@
 {
- "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260905-Officialbeurten-sept-dec-web.xlsx",
+ "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260905-Officialbeurten-sept-dec-web2.xlsx",
+ "veelTegelijk": [
+  {
+   "team": "DS 1",
+   "dag": "2026-09-19",
+   "tijd": "12:30",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO JA 1 - ZVH JA 2",
+    "VOLEVO JB 2 - VVV Delta JB 1",
+    "VOLEVO MA 3 - Kalinko MA 1"
+   ]
+  },
+  {
+   "team": "DS 2",
+   "dag": "2026-10-17",
+   "tijd": "17:30",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO JA 1 - Inter Rijswijk JA 2",
+    "VOLEVO JB 2 - VELO JB 1",
+    "VOLEVO MA 2 - Inter Rijswijk MA 3"
+   ]
+  },
+  {
+   "team": "DS 3",
+   "dag": "2026-11-13",
+   "tijd": "19:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 7 - SKC DS 3",
+    "VOLEVO HS 4 - VVV Delta HS 4",
+    "VOLEVO MA 1 - Spaarnestad MA 1"
+   ]
+  },
+  {
+   "team": "DS 4",
+   "dag": "2026-10-31",
+   "tijd": "15:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO HS 1 - Kratos '08 HS 1",
+    "VOLEVO MB 1 - Dinto MB 2",
+    "VOLEVO MB 3 - ZVH MB 1"
+   ]
+  },
+  {
+   "team": "DS 6",
+   "dag": "2026-10-09",
+   "tijd": "19:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 7 - Sovicos DS 3",
+    "VOLEVO HS 6 - Monza HS 5",
+    "VOLEVO HS 6 - Monza HS 5"
+   ]
+  },
+  {
+   "team": "DS 7",
+   "dag": "2026-09-25",
+   "tijd": "19:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 5 - SKC DS 6",
+    "VOLEVO DS 6 - Kalinko DS 7",
+    "VOLEVO DS 8 - Kratos '08 DS 6"
+   ]
+  },
+  {
+   "team": "DS 7",
+   "dag": "2026-11-13",
+   "tijd": "21:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 3 - VIVES DS 3",
+    "VOLEVO DS 5 - Kalinko DS 5",
+    "VOLEVO HS 5 - Castellum HS 2"
+   ]
+  },
+  {
+   "team": "DS 7",
+   "dag": "2026-11-27",
+   "tijd": "21:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 5 - Zovoc DS 5",
+    "VOLEVO DS 6 - Sovicos DS 4",
+    "VOLEVO DS 6 - Sovicos DS 4"
+   ]
+  },
+  {
+   "team": "DS 8",
+   "dag": "2026-11-27",
+   "tijd": "21:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 9 - SKC DS 8",
+    "VOLEVO DS 9 - SKC DS 8",
+    "VOLEVO HS 5 - GGV HS 1"
+   ]
+  },
+  {
+   "team": "DS 9",
+   "dag": "2026-11-27",
+   "tijd": "19:00",
+   "aantal": 4,
+   "wedstrijden": [
+    "VOLEVO DS 7 - Timios DS 2",
+    "VOLEVO DS 8 - Inter Rijswijk DS 9",
+    "VOLEVO DS 8 - Inter Rijswijk DS 9",
+    "VOLEVO MA 1 - Zovoc MA 1"
+   ]
+  },
+  {
+   "team": "HS 3",
+   "dag": "2026-12-12",
+   "tijd": "12:30",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO JA 2 - Scarabee JA 1",
+    "VOLEVO MA 1 - ZVH MA 1",
+    "VOLEVO MA 3 - VSTS MA 1"
+   ]
+  },
+  {
+   "team": "HS 4",
+   "dag": "2026-09-25",
+   "tijd": "19:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 5 - SKC DS 6",
+    "VOLEVO DS 6 - Kalinko DS 7",
+    "VOLEVO HS 5 - Punch HS 6"
+   ]
+  },
+  {
+   "team": "HS 4",
+   "dag": "2026-11-13",
+   "tijd": "21:00",
+   "aantal": 4,
+   "wedstrijden": [
+    "VOLEVO DS 5 - Kalinko DS 5",
+    "VOLEVO DS 8 - PQV Westland - Data Giants DS 3",
+    "VOLEVO DS 8 - PQV Westland - Data Giants DS 3",
+    "VOLEVO HS 5 - Castellum HS 2"
+   ]
+  },
+  {
+   "team": "HS 5",
+   "dag": "2026-10-09",
+   "tijd": "19:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 7 - Sovicos DS 3",
+    "VOLEVO HS 4 - Punch HS 5",
+    "VOLEVO HS 4 - Punch HS 5"
+   ]
+  },
+  {
+   "team": "HS 5",
+   "dag": "2026-10-15",
+   "tijd": "21:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 9 - Sovicos DS 7",
+    "VOLEVO DS 9 - Sovicos DS 7",
+    "VOLEVO HS 6 - SKC HS 8"
+   ]
+  },
+  {
+   "team": "HS 6",
+   "dag": "2026-10-09",
+   "tijd": "21:00",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 8 - Inter Rijswijk DS 8",
+    "VOLEVO DS 8 - Inter Rijswijk DS 8",
+    "VOLEVO HS 5 - SKC HS 2"
+   ]
+  },
+  {
+   "team": "HS 6",
+   "dag": "2026-12-12",
+   "tijd": "17:30",
+   "aantal": 3,
+   "wedstrijden": [
+    "VOLEVO DS 1 - Inter Rijswijk DS 1",
+    "VOLEVO DS 1 - Inter Rijswijk DS 1",
+    "VOLEVO HS 2 - Leython DC HS 2"
+   ]
+  },
+  {
+   "team": "MA 1",
+   "dag": "2026-12-12",
+   "tijd": "15:00",
+   "aantal": 4,
+   "wedstrijden": [
+    "VOLEVO HS 1 - Vollido HS 1",
+    "VOLEVO HS 1 - Vollido HS 1",
+    "VOLEVO MA 4 - Kalinko MA 1",
+    "VOLEVO MC 4 - VollinGo MC 1"
+   ]
+  },
+  {
+   "team": "MC 4",
+   "dag": "2026-12-12",
+   "tijd": "12:30",
+   "aantal": 4,
+   "wedstrijden": [
+    "VOLEVO DS 4 - Ancora RVV DS 1",
+    "VOLEVO JA 2 - Scarabee JA 1",
+    "VOLEVO MA 1 - ZVH MA 1",
+    "VOLEVO MA 3 - VSTS MA 1"
+   ]
+  }
+ ],
  "aantal": 331,
  "nietGekoppeld": [],
  "botsingen": [],
@@ -270,7 +485,7 @@
    },
    {
     "taak": "teller",
-    "team": "MB 3",
+    "team": "JC 1",
     "opmerking": null
    }
   ],
@@ -282,7 +497,7 @@
    },
    {
     "taak": "teller",
-    "team": "MB 3",
+    "team": "JB 1",
     "opmerking": null
    }
   ],
@@ -1721,7 +1936,7 @@
    },
    {
     "taak": "teller",
-    "team": "Ds 9",
+    "team": "DS 9",
     "opmerking": null
    }
   ],

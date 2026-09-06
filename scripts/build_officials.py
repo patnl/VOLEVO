@@ -67,6 +67,17 @@ if 'Thuiswedstrijden' not in wb.sheetnames:
     sys.exit('Tabblad "Thuiswedstrijden" ontbreekt; tabbladen: %s' % wb.sheetnames)
 ws = wb['Thuiswedstrijden']
 
+def normaliseer_team(naam):
+    """"DS 9" en "Ds 9" zijn hetzelfde team; in de bron staan ze allebei.
+
+    Zonder dit zouden ze als twee teams in de filters belanden en klopt de
+    telling per team niet.
+    """
+    naam = ' '.join((naam or '').split())
+    m = re.match(r'^([A-Za-z]{1,3})\s*(\d+)$', naam)
+    return '%s %s' % (m.group(1).upper(), m.group(2)) if m else naam
+
+
 beurten = []
 for r in ws.iter_rows(min_row=2, values_only=True):
     if not r or not r[0]:
@@ -82,7 +93,7 @@ for r in ws.iter_rows(min_row=2, values_only=True):
         'thuis': (thuis or '').strip(),
         'uit': (uit or '').strip(),
         'taak': (taak or '').strip(),
-        'team': (team or '').strip(),
+        'team': normaliseer_team(team),
         'opmerking': (opmerking or '').strip() or None,
     })
 
@@ -139,8 +150,30 @@ if botsingen:
     for x in botsingen[:10]:
         print('   %s %s  %s moet %s' % (x['dag'], x['tijd'], x['team'], x['taak']))
 
+# ── 5. Hoeveel mensen moet een team tegelijk leveren? ──
+# Twee beurten op hetzelfde tijdstip is heel gewoon (53 keer in dit schema) en
+# dus geen fout. Vanaf drie wordt het wel iets om te weten: dan moet een team
+# op datzelfde moment drie of vier mensen langs de kant hebben staan.
+tegelijk = {}
+for b in beurten:
+    if b['team'].lower() in ('', 'ouders'):
+        continue
+    tegelijk.setdefault((b['team'], b['dag'], b['tijd']), []).append(b)
+
+veel_tegelijk = []
+for (team, dag, tijd), groep in sorted(tegelijk.items()):
+    if len(groep) >= 3:
+        veel_tegelijk.append({'team': team, 'dag': dag, 'tijd': tijd, 'aantal': len(groep),
+                              'wedstrijden': [g['thuis'] + ' - ' + g['uit'] for g in groep]})
+if veel_tegelijk:
+    print('Ter info: %d keer moet een team drie of meer officials tegelijk leveren'
+          % len(veel_tegelijk))
+    for x in veel_tegelijk[:5]:
+        print('   %s %s  %s: %d beurten' % (x['dag'], x['tijd'], x['team'], x['aantal']))
+
 data = {
     'bron': bron,
+    'veelTegelijk': veel_tegelijk,
     'aantal': len(beurten),
     'nietGekoppeld': los,
     'botsingen': botsingen,
@@ -150,7 +183,8 @@ data = {
 # Alleen schrijven als er inhoudelijk iets veranderd is
 try:
     oud = json.load(open('data/officials.json', encoding='utf-8'))
-    if all(oud.get(k) == data[k] for k in ('bron', 'perWedstrijd', 'botsingen', 'nietGekoppeld')):
+    velden = ('bron', 'perWedstrijd', 'botsingen', 'nietGekoppeld', 'veelTegelijk')
+    if all(oud.get(k) == data[k] for k in velden):
         print('Officialbeurten ongewijzigd - bestand niet aangeraakt')
         os.remove(pad)
         raise SystemExit(0)
