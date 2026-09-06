@@ -119,6 +119,18 @@
   }
   td.veldcel { vertical-align: top; padding: 0; }
 
+  .botsing-let-op {
+    background: #fff0f0; border: 1px solid #ffc9c9; color: #a11;
+    border-radius: 8px; padding: 4px 8px; margin-bottom: 6px;
+    font-size: 0.64rem; font-weight: 800; text-align: center; line-height: 1.3;
+  }
+  .veldcel.botst .wedstrijd { border-left-color: #ff3b30; }
+  .dag-waarschuwing {
+    background: #fff0f0; border: 1px solid #ffc9c9; color: #a11;
+    border-radius: 12px; padding: 10px 14px; margin: 4px 0 2px;
+    font-size: 0.78rem; font-weight: 600;
+  }
+
   .wedstrijd {
     background: white; border-radius: 12px; padding: 9px 11px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 3px 12px rgba(0,0,0,0.035);
@@ -447,7 +459,12 @@ function tekenRaster() {
       if (!lijst.length) {
         return '<td class="veldcel leeg-veld"><div class="leeg-cel">vrij</div></td>';
       }
-      return '<td class="veldcel">' + lijst.map(function(w) {
+      // Twee wedstrijden tegelijk op een veld kan niet; dat is een fout in de
+      // planning. Stil onder elkaar zetten zou dat verbergen.
+      var botst = lijst.length > 1 ? ' botst' : '';
+      return '<td class="veldcel' + botst + '">' +
+        (botst ? '<div class="botsing-let-op">' + lijst.length + ' wedstrijden tegelijk op dit veld</div>' : '') +
+        lijst.map(function(w) {
         var off = officialsTekst(officialsVoor(w.tijdstip, w.thuis, w.uit));
         return '<div class="wedstrijd">' +
                  '<span class="veld-badge-mob">' + esc(veldLabel(v).replace(/^v/, 'V')) + '</span>' +
@@ -463,6 +480,15 @@ function tekenRaster() {
 
   var aantal = wedstrijden.length;
   host.innerHTML =
+    (function() {
+      var n = 0;
+      tijden.forEach(function(t) {
+        Object.keys(sloten[t] || {}).forEach(function(v) { if (sloten[t][v].length > 1) n++; });
+      });
+      return n ? '<div class="dag-waarschuwing">Let op: op ' + n +
+        (n === 1 ? ' veld staan' : ' velden staan') +
+        ' volgens de planning meerdere wedstrijden tegelijk. Controleer dat in de zaal.</div>' : '';
+    })() +
     '<div class="slot-label">' + aantal + (aantal === 1 ? ' wedstrijd' : ' wedstrijden') +
       ' · ' + tijden.length + (tijden.length === 1 ? ' speelronde' : ' speelrondes') + '</div>' +
     '<div class="grid-wrap"><table class="zaal">' + thead + tbody + '</table></div>' +

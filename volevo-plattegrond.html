@@ -74,6 +74,7 @@
   .veld-vak.bezet { fill: #eef0f8; stroke: #b9bfdd; }
   .veld-vak.actief { fill: #2A3176; stroke: #2A3176; }
   .veld-nr { font-size: 25px; font-weight: 800; fill: #aeaeb2; text-anchor: middle; }
+  .veld-botst { font-size: 15px; font-weight: 800; fill: #ff3b30; text-anchor: end; }
   .veld-halnr { font-size: 13px; font-weight: 600; fill: #c7c7cc; text-anchor: middle; }
   .veld-vak-groep.bezet .veld-nr { fill: #2A3176; }
   .veld-vak-groep.actief .veld-nr { fill: #9CD0C1; }
@@ -546,6 +547,9 @@ function teken() {
         svg += '<line class="net" x1="'+(bx+8)+'" y1="'+midy+'" x2="'+(bx+bw-8)+'" y2="'+midy+'"/>';
       }
       svg += '<text class="veld-nr" x="'+(bx+30)+'" y="'+(by+28)+'">'+esc(labelVan(v))+'</text>';
+      if (bezet.length > 1) {
+        svg += '<text class="veld-botst" x="'+(bx+bw-14)+'" y="'+(by+28)+'">'+bezet.length+' tegelijk</text>';
+      }
       svg += '<text class="veld-halnr" x="'+(bx+30)+'" y="'+(by+46)+'">hal '+esc(halVan(v))+'</text>';
       bezet.slice(0,3).forEach(function(w, k) {
         var basis = midy - 6 + k*42;
