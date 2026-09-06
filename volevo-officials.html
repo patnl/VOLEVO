@@ -87,6 +87,11 @@
   .taak-dwf     { background: #fff4e5; color: #7a4b00; }
   .b-samen { font-size: 0.66rem; color: #17493c; font-weight: 700; }
 
+  .beurt.eigen-wedstrijd { border-left-color: #2A3176; }
+  .b-wie { font-size: 0.76rem; color: #636366; white-space: nowrap; }
+  .b-wie strong { color: #1d1d1f; font-weight: 800; }
+  .b-geen { font-size: 0.72rem; color: #aeaeb2; font-style: italic; }
+
   .melding { text-align: center; padding: 60px 30px; color: #86868b; }
   .waarschuwing {
     background: #fff0f0; border: 1px solid #ffc9c9; color: #a11;
@@ -166,6 +171,7 @@ var MND_LANG = ['januari','februari','maart','april','mei','juni','juli','august
                 'september','oktober','november','december'];
 
 var beurten = [], botsingen = [], teams = [], taken = [];
+var eigenWedstrijden = {}, alleOfficials = {};
 var filterTaken = {};   // taak -> aan/uit; leeg = alles
 
 function esc(s) {
@@ -209,7 +215,20 @@ async function laden() {
       });
     });
 
+    // Wedstrijden van elk VOLEVO-team, om te kunnen tonen wie er bij hún
+    // wedstrijden fluit en telt - dat zijn andere teams dan zijzelf.
+    eigenWedstrijden = {};
+    ((mat || {}).wedstrijden || []).forEach(function(w) {
+      [w.thuis, w.uit].forEach(function(n) {
+        if (n && n.toUpperCase().indexOf('VOLEVO') === 0) {
+          var t = n.replace(/^VOLEVO\s*/i, '').trim();
+          (eigenWedstrijden[t] = eigenWedstrijden[t] || []).push(w);
+        }
+      });
+    });
+
     botsingen = off.botsingen || [];
+    alleOfficials = off.perWedstrijd || {};
     beurten = [];
     Object.keys(off.perWedstrijd || {}).forEach(function(k) {
       var deel = k.split('|'), w = wedstrijden[k] || {};
@@ -270,6 +289,43 @@ async function laden() {
     document.getElementById('uitslag').innerHTML =
       '<div class="melding" style="color:#ff3b30">' + esc(e.message) + '</div>';
   }
+}
+
+
+// Wie fluit en telt er bij de wedstrijden van dit team? Dat zijn andere teams,
+// dus die staan niet in de lijst hierboven - vandaar dit tweede blok.
+function eigenBlok(team) {
+  if (!team) return '';
+  var nu = Date.now();
+  var lijst = (eigenWedstrijden[team] || []).filter(function(w) {
+    return new Date(w.tijdstip).getTime() >= nu - 3*3600*1000;
+  }).sort(function(a, b) { return a.tijdstip < b.tijdstip ? -1 : 1; });
+  if (!lijst.length) return '';
+
+  return '<div class="dagkop" style="padding-top:26px">Bij de wedstrijden van ' + esc(team) + '</div>' +
+    lijst.map(function(w) {
+      var thuisWedstrijd = (w.thuis || '').toUpperCase().indexOf('VOLEVO') === 0;
+      var off = alleOfficials[w.tijdstip + '|' + w.thuis + '|' + w.uit] || [];
+      var d = new Date(w.tijdstip);
+      var wie = off.length
+        ? off.slice().sort(function(a, b) {
+            var r = function(t) { return /teller/i.test(t) ? 1 : /dwf/i.test(t) ? 2 : 0; };
+            return r(a.taak) - r(b.taak);
+          }).map(function(o) {
+            return '<span class="b-wie">' + esc(taakKort(o.taak)) + ' <strong>' + esc(o.team) + '</strong></span>';
+          }).join('')
+        : '<span class="b-geen">' + (thuisWedstrijd ? 'geen officials in het schema' : 'uitwedstrijd — de thuisclub regelt de officials') + '</span>';
+      return '<div class="beurt eigen-wedstrijd">' +
+        '<div class="b-tijd">' + w.tijdstip.slice(11,16) + '</div>' +
+        '<div class="b-mid">' +
+          '<div class="b-wedstrijd"><span class="thuis">' + esc(w.thuis) + '</span> – ' + esc(w.uit) + '</div>' +
+          '<div class="b-plek">' + d.getDate() + ' ' + MND_LANG[d.getMonth()] +
+            (w.hal ? ' · ' + esc(w.hal) : '') +
+            (w.veld ? ' <span class="b-veld">veld ' + esc(w.veld) + '</span>' : '') + '</div>' +
+        '</div>' +
+        '<div class="b-rechts">' + wie + '</div>' +
+      '</div>';
+    }).join('');
 }
 
 function teken() {
@@ -338,6 +394,7 @@ function teken() {
           '</div>';
         }).join('');
     }).join('') +
+    eigenBlok(team) +
     '<div class="voet">Bron: het officialschema op volevo.nl, automatisch ingelezen. ' +
     'Kan je team niet? Dan zorgt je team zelf voor een vervanger — zie de ' +
     '<a href="https://volevo.nl/officialbeurten/">uitleg op volevo.nl</a>.</div>';
