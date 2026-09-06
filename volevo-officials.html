@@ -87,6 +87,11 @@
   .taak-dwf     { background: #fff4e5; color: #7a4b00; }
   .b-samen { font-size: 0.66rem; color: #17493c; font-weight: 700; }
 
+  .beurt.bij-eigen { border-left-color: #2A3176; background: #fcfcfe; }
+  .b-bij {
+    font-size: 0.6rem; font-weight: 800; letter-spacing: 0.3px; text-transform: uppercase;
+    color: #2A3176; background: rgba(42,49,118,0.08); border-radius: 4px; padding: 1px 6px;
+  }
   .beurt.eigen-wedstrijd { border-left-color: #2A3176; }
   .b-wie { font-size: 0.76rem; color: #636366; white-space: nowrap; }
   .b-wie strong { color: #1d1d1f; font-weight: 800; }
@@ -339,8 +344,30 @@ function teken() {
     b.classList.toggle('aan', !!filterTaken[b.getAttribute('data-taak')]);
   });
 
-  var lijst = beurten.filter(function(b) {
-    if (team && b.team !== team) return false;
+  // Is er een team gekozen, dan horen ook de beurten bij hun eigen wedstrijden
+  // in de lijst: die staan op naam van een ander team en zouden anders
+  // wegvallen, terwijl je juist wilt weten wie er bij jou komt tellen.
+  var basis = beurten;
+  if (team) {
+    var eigenSleutels = {};
+    (eigenWedstrijden[team] || []).forEach(function(w) {
+      eigenSleutels[w.tijdstip + '|' + w.thuis + '|' + w.uit] = w;
+    });
+    basis = beurten.map(function(b) {
+      var k = b.tijdstip + '|' + b.thuis + '|' + b.uit;
+      if (b.team === team) return b;
+      if (eigenSleutels[k]) {
+        var kopie = {};
+        for (var sleutel in b) kopie[sleutel] = b[sleutel];
+        kopie.bijEigenWedstrijd = true;   // niet jouw taak, wel jouw wedstrijd
+        return kopie;
+      }
+      return null;
+    }).filter(Boolean);
+  }
+
+  var lijst = basis.filter(function(b) {
+    if (team && b.team !== team && !b.bijEigenWedstrijd) return false;
     if (gekozenTaken.length && gekozenTaken.indexOf(b.taak) === -1) return false;
     var t = new Date(b.tijdstip).getTime();
     if (wanneer === 'komend' && t < nu - 3*3600*1000) return false;
@@ -369,7 +396,7 @@ function teken() {
 
   host.innerHTML = waarschuwing +
     '<div class="telling">' + lijst.length + (lijst.length === 1 ? ' beurt' : ' beurten') +
-      (team ? ' voor ' + esc(team) : '') + '</div>' +
+      (team ? ' voor en bij ' + esc(team) : '') + '</div>' +
     Object.keys(perDag).sort().map(function(dag) {
       var d = new Date(dag + 'T12:00:00');
       return '<div class="dagkop">' + DAG_LANG[d.getDay()] + ' ' + d.getDate() + ' ' +
@@ -380,21 +407,24 @@ function teken() {
           if (b.hal) plek.push(esc(b.hal));
           if (b.veld) plek.push('<span class="b-veld">veld ' + esc(b.veld) + '</span>');
           if (b.opmerking) plek.push('<span class="b-opm">' + esc(b.opmerking) + '</span>');
-          return '<div class="beurt' + (b.zelfBezig ? ' eigen' : '') + '">' +
+          return '<div class="beurt' + (b.zelfBezig ? ' eigen' : '') +
+            (b.bijEigenWedstrijd ? ' bij-eigen' : '') + '">' +
             '<div class="b-tijd">' + tijd + '</div>' +
             '<div class="b-mid">' +
               '<div class="b-wedstrijd"><span class="thuis">' + esc(b.thuis) + '</span> – ' + esc(b.uit) + '</div>' +
               (plek.length ? '<div class="b-plek">' + plek.join('') + '</div>' : '') +
             '</div>' +
             '<div class="b-rechts">' +
+              (b.bijEigenWedstrijd
+                ? '<span class="b-bij">bij jullie wedstrijd</span>' : '') +
               '<span class="b-team">' + esc(b.team) + '</span>' +
               '<span class="b-taak ' + taakKlasse(b.taak) + '">' + esc(taakKort(b.taak)) + '</span>' +
-              (b.zelfBezig ? '<span class="b-samen">speelt zelf die dag</span>' : '') +
+              (b.zelfBezig && !b.bijEigenWedstrijd
+                ? '<span class="b-samen">speelt zelf die dag</span>' : '') +
             '</div>' +
           '</div>';
         }).join('');
     }).join('') +
-    eigenBlok(team) +
     '<div class="voet">Bron: het officialschema op volevo.nl, automatisch ingelezen. ' +
     'Kan je team niet? Dan zorgt je team zelf voor een vervanger — zie de ' +
     '<a href="https://volevo.nl/officialbeurten/">uitleg op volevo.nl</a>.</div>';
