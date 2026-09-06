@@ -260,7 +260,8 @@ async function laden() {
     var params = new URLSearchParams(location.search);
     document.getElementById('team').innerHTML =
       '<option value="">Alle teams</option>' + teams.map(function(t) {
-        return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
+        var naam = t.toLowerCase() === 'ouders' ? 'ouders (alle telbeurten van ouders)' : t;
+        return '<option value="' + esc(t) + '">' + esc(naam) + '</option>';
       }).join('');
     if (params.get('team') && teams.indexOf(params.get('team')) !== -1) {
       document.getElementById('team').value = params.get('team');
@@ -333,6 +334,16 @@ function eigenBlok(team) {
     }).join('');
 }
 
+
+// In het schema staat alleen "ouders", niet wiens ouders. Dat volgt wel uit de
+// wedstrijd: het zijn de ouders van het VOLEVO-team dat thuis speelt. Alle 61
+// oudersbeurten staan bij B- en C-jeugd, precies zoals het beleid voorschrijft.
+function teamLabel(b) {
+  if ((b.team || '').toLowerCase() !== 'ouders') return b.team;
+  var thuis = (b.thuis || '').replace(/^VOLEVO\s*/i, '').trim();
+  return thuis ? 'ouders van ' + thuis : 'ouders';
+}
+
 function teken() {
   var team = document.getElementById('team').value;
   var wanneer = document.getElementById('wanneer').value;
@@ -373,7 +384,8 @@ function teken() {
     if (wanneer === 'komend' && t < nu - 3*3600*1000) return false;
     if (wanneer === 'verstreken' && t >= nu) return false;
     if (zoek) {
-      var hooi = [b.team, b.thuis, b.uit, b.taak, b.hal, b.plaats, b.opmerking].join(' ').toLowerCase();
+      var hooi = [teamLabel(b), b.team, b.thuis, b.uit, b.taak, b.hal, b.plaats, b.opmerking]
+        .join(' ').toLowerCase();
       if (hooi.indexOf(zoek) === -1) return false;
     }
     return true;
@@ -417,7 +429,7 @@ function teken() {
             '<div class="b-rechts">' +
               (b.bijEigenWedstrijd
                 ? '<span class="b-bij">bij jullie wedstrijd</span>' : '') +
-              '<span class="b-team">' + esc(b.team) + '</span>' +
+              '<span class="b-team">' + esc(teamLabel(b)) + '</span>' +
               '<span class="b-taak ' + taakKlasse(b.taak) + '">' + esc(taakKort(b.taak)) + '</span>' +
               (b.zelfBezig && !b.bijEigenWedstrijd
                 ? '<span class="b-samen">speelt zelf die dag</span>' : '') +
