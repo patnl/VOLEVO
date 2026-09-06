@@ -14,27 +14,52 @@ import json, os, re, sys, urllib.request
 import openpyxl
 
 PAGINA = 'https://volevo.nl/officialbeurten/'
-UA = {'User-Agent': 'volevo-pages-mirror'}
+KOPIE = 'data/officialbeurten.xlsx'
+# volevo.nl weigert het Excel-bestand aan de GitHub-runners (404), terwijl de
+# pagina zelf wel binnenkomt. Daarom doen we ons voor als een gewone browser
+# en ligt er een kopie in de repo als dat alsnog niet lukt.
+KOPPEN = {
+    'User-Agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+                   '(KHTML, like Gecko) Chrome/124.0 Safari/537.36'),
+    'Accept': '*/*',
+    'Accept-Language': 'nl,en;q=0.8',
+    'Referer': PAGINA,
+}
 
 
 def haal(url, binair=False):
-    req = urllib.request.Request(url, headers=UA)
+    req = urllib.request.Request(url, headers=KOPPEN)
     with urllib.request.urlopen(req, timeout=90) as r:
         data = r.read()
     return data if binair else data.decode('utf-8', 'replace')
 
 
-# ── 1. Link naar het Excel-bestand zoeken ──
-html = haal(PAGINA)
-links = re.findall(r'href="(https://volevo\.nl/wp-content/uploads/[^"]+\.xlsx)"', html)
-if not links:
-    sys.exit('Geen xlsx-link gevonden op %s - staat het schema er nog?' % PAGINA)
-bron = links[0]
-print('bron:', bron)
+# ── 1. Link naar het Excel-bestand zoeken en ophalen ──
+bron, inhoud = None, None
+try:
+    html = haal(PAGINA)
+    links = re.findall(r'href="(https://volevo\.nl/wp-content/uploads/[^"]+\.xlsx)"', html)
+    if not links:
+        raise RuntimeError('geen xlsx-link op de pagina gevonden')
+    bron = links[0]
+    print('bron:', bron)
+    inhoud = haal(bron, binair=True)
+    # Nieuwe versie meteen in de repo bewaren, zodat de terugval meegroeit
+    os.makedirs('data', exist_ok=True)
+    with open(KOPIE, 'wb') as f:
+        f.write(inhoud)
+except Exception as e:
+    print('Live ophalen mislukt (%s)' % e, file=sys.stderr)
+    if not os.path.exists(KOPIE):
+        sys.exit('Geen kopie in %s om op terug te vallen - niets bijgewerkt' % KOPIE)
+    print('Terugval op de kopie in de repo: %s' % KOPIE, file=sys.stderr)
+    bron = bron or KOPIE
+    with open(KOPIE, 'rb') as f:
+        inhoud = f.read()
 
-pad = 'officialbeurten.xlsx'
+pad = 'officialbeurten-tijdelijk.xlsx'
 with open(pad, 'wb') as f:
-    f.write(haal(bron, binair=True))
+    f.write(inhoud)
 
 # ── 2. Beurten uitlezen ──
 wb = openpyxl.load_workbook(pad, data_only=True)
