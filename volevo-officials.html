@@ -103,7 +103,19 @@
     border-radius: 12px; padding: 11px 14px; margin-bottom: 14px;
     font-size: 0.78rem; font-weight: 600;
   }
-  .voet { margin-top: 22px; padding: 0 4px; font-size: 0.72rem; color: #aeaeb2; line-height: 1.6; }
+  .bron {
+    margin-top: 22px; padding: 10px 13px; border-radius: 10px;
+    background: #f0f0f5; color: #636366;
+    font-size: 0.72rem; line-height: 1.6;
+  }
+  .bron a { color: #2A3176; font-weight: 600; text-decoration: none; }
+  .bron a:hover { text-decoration: underline; }
+  .bron-let-op {
+    background: #fff4e5; color: #7a4b00; border-radius: 5px;
+    padding: 1px 7px; font-weight: 700; margin-left: 5px;
+  }
+
+  .voet { margin-top: 10px; padding: 0 4px; font-size: 0.72rem; color: #aeaeb2; line-height: 1.6; }
   .voet a { color: #86868b; font-weight: 600; }
 
   @media (max-width: 700px) {
@@ -176,7 +188,7 @@ var MND_LANG = ['januari','februari','maart','april','mei','juni','juli','august
                 'september','oktober','november','december'];
 
 var beurten = [], botsingen = [], teams = [], taken = [];
-var eigenWedstrijden = {}, alleOfficials = {};
+var eigenWedstrijden = {}, alleOfficials = {}, bronInfo = {};
 var filterTaken = {};   // taak -> aan/uit; leeg = alles
 
 function esc(s) {
@@ -234,6 +246,7 @@ async function laden() {
 
     botsingen = off.botsingen || [];
     alleOfficials = off.perWedstrijd || {};
+    bronInfo = off;
     beurten = [];
     Object.keys(off.perWedstrijd || {}).forEach(function(k) {
       var deel = k.split('|'), w = wedstrijden[k] || {};
@@ -344,6 +357,29 @@ function teamLabel(b) {
   return thuis ? 'ouders van ' + thuis : 'ouders';
 }
 
+
+// Welke versie van het officialschema zit hierachter? Het bestand op volevo.nl
+// wordt af en toe vervangen, soms onder een nieuwe naam, dus dat wil je zien.
+function bronRegel() {
+  if (!bronInfo || !bronInfo.bestand) return '';
+  var wanneer = '';
+  if (bronInfo.ingelezen) {
+    var d = new Date(bronInfo.ingelezen);
+    if (!isNaN(d)) {
+      wanneer = ', ingelezen op ' + d.getDate() + ' ' + MND_LANG[d.getMonth()] + ' ' +
+        d.getFullYear() + ' om ' + String(d.getHours()).padStart(2,'0') + ':' +
+        String(d.getMinutes()).padStart(2,'0');
+    }
+  }
+  return '<div class="bron">' +
+    'Bron: <a href="' + esc(bronInfo.bron) + '">' + esc(bronInfo.bestand) + '</a>' +
+    esc(wanneer) + ' · ' + (bronInfo.aantal || 0) + ' beurten' +
+    (bronInfo.terugval
+      ? ' <span class="bron-let-op">volevo.nl was niet bereikbaar; dit is de bewaarde kopie</span>'
+      : '') +
+    '</div>';
+}
+
 function teken() {
   var team = document.getElementById('team').value;
   var wanneer = document.getElementById('wanneer').value;
@@ -437,8 +473,8 @@ function teken() {
           '</div>';
         }).join('');
     }).join('') +
-    '<div class="voet">Bron: het officialschema op volevo.nl, automatisch ingelezen. ' +
-    'Kan je team niet? Dan zorgt je team zelf voor een vervanger — zie de ' +
+    bronRegel() +
+    '<div class="voet">Kan je team niet? Dan zorgt je team zelf voor een vervanger — zie de ' +
     '<a href="https://volevo.nl/officialbeurten/">uitleg op volevo.nl</a>.</div>';
 }
 

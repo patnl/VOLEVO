@@ -9,7 +9,7 @@ Elke beurt wordt gekoppeld aan een wedstrijd op datum, tijd en beide
 teamnamen. Lukt dat voor een groot deel niet, dan stopt het script met een
 foutmelding in plaats van een half bestand weg te schrijven.
 """
-import json, os, re, sys, urllib.request
+import json, os, re, sys, time, urllib.request
 
 import openpyxl
 
@@ -35,7 +35,7 @@ def haal(url, binair=False):
 
 
 # ── 1. Link naar het Excel-bestand zoeken en ophalen ──
-bron, inhoud = None, None
+bron, inhoud, terugval = None, None, False
 try:
     html = haal(PAGINA)
     links = re.findall(r'href="(https://volevo\.nl/wp-content/uploads/[^"]+\.xlsx)"', html)
@@ -53,6 +53,7 @@ except Exception as e:
     if not os.path.exists(KOPIE):
         sys.exit('Geen kopie in %s om op terug te vallen - niets bijgewerkt' % KOPIE)
     print('Terugval op de kopie in de repo: %s' % KOPIE, file=sys.stderr)
+    terugval = True
     bron = bron or KOPIE
     with open(KOPIE, 'rb') as f:
         inhoud = f.read()
@@ -173,6 +174,9 @@ if veel_tegelijk:
 
 data = {
     'bron': bron,
+    'bestand': bron.split('/')[-1],
+    'ingelezen': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+    'terugval': terugval,
     'veelTegelijk': veel_tegelijk,
     'aantal': len(beurten),
     'nietGekoppeld': los,
@@ -184,7 +188,10 @@ data = {
 try:
     oud = json.load(open('data/officials.json', encoding='utf-8'))
     velden = ('bron', 'perWedstrijd', 'botsingen', 'nietGekoppeld', 'veelTegelijk')
-    if all(oud.get(k) == data[k] for k in velden):
+    # Ook opnieuw schrijven als het bestaande bestand nog velden mist die we
+    # inmiddels wel opnemen - anders blijft een uitbreiding onzichtbaar.
+    compleet = all(k in oud for k in data)
+    if compleet and all(oud.get(k) == data[k] for k in velden):
         print('Officialbeurten ongewijzigd - bestand niet aangeraakt')
         os.remove(pad)
         raise SystemExit(0)
