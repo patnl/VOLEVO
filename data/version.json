@@ -1,6 +1,6 @@
 {
-  "commit": "c2df6f7",
-  "date": "2026-09-06T21:08:19+02:00",
+  "commit": "94c548f",
+  "date": "2026-09-06T21:10:25+02:00",
   "files": {
     "index.html": {
       "commit": "3d7b0c3",
@@ -27,8 +27,8 @@
       "date": "2026-09-05T07:15:38+02:00"
     },
     "volevo-officials.html": {
-      "commit": "632bb5f",
-      "date": "2026-09-06T20:50:09+02:00"
+      "commit": "94c548f",
+      "date": "2026-09-06T21:10:25+02:00"
     },
     "volevo-plattegrond.html": {
       "commit": "c2df6f7",
