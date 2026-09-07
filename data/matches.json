@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-07T12:53:51+00:00",
+ "gegenereerd": "2026-09-07T21:40:58+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -1459,6 +1459,20 @@
   },
   {
    "tijdstip": "2026-10-03T12:30:00+02:00",
+   "thuis": "VOLEVO MB 1",
+   "uit": "Leython DC MB 1",
+   "status": "gepland",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "4",
+   "dwf": "https://dwf.nevobo.nl/matches/c63593d2-fd7b-4100-9462-53d6387c3abf"
+  },
+  {
+   "tijdstip": "2026-10-03T12:30:00+02:00",
    "thuis": "VOLEVO MB 2",
    "uit": "Ancora RVV MB 2",
    "status": "gepland",
@@ -1582,20 +1596,6 @@
    "lon": 4.39517,
    "veld": "7",
    "dwf": "https://dwf.nevobo.nl/matches/2d20c780-03dc-4832-8f1f-5a8a64b4fc89"
-  },
-  {
-   "tijdstip": "2026-10-03T15:00:00+02:00",
-   "thuis": "VOLEVO MB 1",
-   "uit": "Leython DC MB 1",
-   "status": "gepland",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/c63593d2-fd7b-4100-9462-53d6387c3abf"
   },
   {
    "tijdstip": "2026-10-03T15:00:00+02:00",
