@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Mon, 07 Sep 2026 06:20:53 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 11:34:45 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[10 sep 21:00: VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1]]></title>
@@ -2015,12 +2015,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[20 nov 21:30: Sovicos HS 5 - VOLEVO HS 6]]></title>
+      <title><![CDATA[Vervallen: 20 nov 21:30: Sovicos HS 5 - VOLEVO HS 6]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019360</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2019360</guid>
-      <description><![CDATA[Wedstrijd: 3000H4B   AD, Datum: vrijdag 20 november, 21:30, Speellocatie: Steenwijklaan, Steenwijklaan 16, 2541RL  's-Gravenhage]]></description>
+      <description><![CDATA[Vervallen wedstrijd: 3000H4B   AD, Datum: vrijdag 20 november, 21:30, Speellocatie: Steenwijklaan, Steenwijklaan 16, 2541RL  's-Gravenhage]]></description>
       <pubDate>Fri, 20 Nov 2026 21:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>vervallen</nevobo:status>
     </item>
     <item>
       <title><![CDATA[21 nov 11:00: VCH MA 1 - VOLEVO MA 1]]></title>
@@ -2399,11 +2399,11 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[3 dec 20:30: VOLEVO DS 2 - Compaen DS 2]]></title>
+      <title><![CDATA[3 dec 21:00: VOLEVO DS 2 - Compaen DS 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009740</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009740</guid>
-      <description><![CDATA[Wedstrijd: 30003BD   IG, Datum: donderdag 3 december, 20:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 03 Dec 2026 20:30:00 +0100</pubDate>
+      <description><![CDATA[Wedstrijd: 30003BD   IG, Datum: donderdag 3 december, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 03 Dec 2026 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
@@ -2983,11 +2983,11 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[4 feb 20:30: VOLEVO DS 2 - Switch Hooglanderveen DS 1]]></title>
+      <title><![CDATA[4 feb 21:00: VOLEVO DS 2 - Switch Hooglanderveen DS 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009720</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009720</guid>
-      <description><![CDATA[Wedstrijd: 30003BD   IC, Datum: donderdag 4 februari, 20:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 04 Feb 2027 20:30:00 +0100</pubDate>
+      <description><![CDATA[Wedstrijd: 30003BD   IC, Datum: donderdag 4 februari, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 04 Feb 2027 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
@@ -3407,12 +3407,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 mrt 21:00: VOLEVO HS 6 - Sovicos HS 5]]></title>
+      <title><![CDATA[Vervallen: 19 mrt 21:00: VOLEVO HS 6 - Sovicos HS 5]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019457</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2019457</guid>
-      <description><![CDATA[Wedstrijd: 3000H4B   DA, Datum: vrijdag 19 maart, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Vervallen wedstrijd: 3000H4B   DA, Datum: vrijdag 19 maart, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Fri, 19 Mar 2027 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>vervallen</nevobo:status>
     </item>
     <item>
       <title><![CDATA[19 mrt 21:00: VOLEVO HS 6 - SKC HS 8]]></title>
