@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-05T20:34:45+00:00",
+ "gegenereerd": "2026-09-07T12:53:51+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -3687,15 +3687,14 @@
    "tijdstip": "2026-11-20T21:30:00+01:00",
    "thuis": "Sovicos HS 5",
    "uit": "VOLEVO HS 6",
-   "status": "gepland",
+   "status": "vervallen",
    "hal": "Steenwijklaan",
    "plaats": "'s-Gravenhage",
    "adres": "Steenwijklaan 16",
    "postcode": "2541RL",
    "lat": 52.04496,
    "lon": 4.28492,
-   "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/6c47d00b-4256-4100-b0cb-13112f62978c"
+   "veld": "4"
   },
   {
    "tijdstip": "2026-11-21T11:00:00+01:00",
@@ -4356,7 +4355,7 @@
    "dwf": "https://dwf.nevobo.nl/matches/8997e4b0-de67-4b03-b3fe-977b05c609c6"
   },
   {
-   "tijdstip": "2026-12-03T20:30:00+01:00",
+   "tijdstip": "2026-12-03T21:00:00+01:00",
    "thuis": "VOLEVO DS 2",
    "uit": "Compaen DS 2",
    "status": "gepland",
@@ -5378,7 +5377,7 @@
    "dwf": "https://dwf.nevobo.nl/matches/bd0e2abb-11cc-4f20-9b70-0db483e199b7"
   },
   {
-   "tijdstip": "2027-02-04T20:30:00+01:00",
+   "tijdstip": "2027-02-04T21:00:00+01:00",
    "thuis": "VOLEVO DS 2",
    "uit": "Switch Hooglanderveen DS 1",
    "status": "gepland",
@@ -6123,15 +6122,14 @@
    "tijdstip": "2027-03-19T21:00:00+01:00",
    "thuis": "VOLEVO HS 6",
    "uit": "Sovicos HS 5",
-   "status": "gepland",
+   "status": "vervallen",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
    "postcode": "2262ED",
    "lat": 52.09332,
    "lon": 4.39517,
-   "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/bd52e79c-9e60-473d-aa49-c7bfcaf35fe5"
+   "veld": "7"
   },
   {
    "tijdstip": "2027-03-19T21:00:00+01:00",
