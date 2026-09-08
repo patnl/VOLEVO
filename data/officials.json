@@ -1,7 +1,7 @@
 {
  "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260905-Officialbeurten-sept-dec-web2.xlsx",
  "bestand": "20260905-Officialbeurten-sept-dec-web2.xlsx",
- "ingelezen": "2026-09-06T20:05:21Z",
+ "ingelezen": "2026-09-08T09:06:00Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -219,7 +219,35 @@
   }
  ],
  "aantal": 331,
- "nietGekoppeld": [],
+ "nietGekoppeld": [
+  {
+   "dag": "2026-10-03",
+   "tijd": "15:00",
+   "thuis": "VOLEVO MB 1",
+   "uit": "Leython DC MB 1",
+   "taak": "scheidsrechter (spelregeltoets)",
+   "team": "DS 4",
+   "opmerking": "Let op! Spelen hoofdklasse"
+  },
+  {
+   "dag": "2026-10-03",
+   "tijd": "15:00",
+   "thuis": "VOLEVO MB 1",
+   "uit": "Leython DC MB 1",
+   "taak": "teller",
+   "team": "ouders",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-12-03",
+   "tijd": "20:30",
+   "thuis": "VOLEVO DS 2",
+   "uit": "Compaen DS 2",
+   "taak": "teller",
+   "team": "HS 6",
+   "opmerking": null
+  }
+ ],
  "botsingen": [],
  "perWedstrijd": {
   "2026-09-03T21:00:00+02:00|VOLEVO DS 3|SKC DS 2": [
@@ -848,18 +876,6 @@
    {
     "taak": "teller",
     "team": "MC 1",
-    "opmerking": null
-   }
-  ],
-  "2026-10-03T15:00:00+02:00|VOLEVO MB 1|Leython DC MB 1": [
-   {
-    "taak": "scheidsrechter (spelregeltoets)",
-    "team": "DS 4",
-    "opmerking": "Let op! Spelen hoofdklasse"
-   },
-   {
-    "taak": "teller",
-    "team": "ouders",
     "opmerking": null
    }
   ],
@@ -2036,13 +2052,6 @@
    {
     "taak": "teller",
     "team": "ouders",
-    "opmerking": null
-   }
-  ],
-  "2026-12-03T20:30:00+01:00|VOLEVO DS 2|Compaen DS 2": [
-   {
-    "taak": "teller",
-    "team": "HS 6",
     "opmerking": null
    }
   ],
