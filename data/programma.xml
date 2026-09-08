@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Tue, 08 Sep 2026 15:53:44 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 19:46:27 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[10 sep 21:00: VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1]]></title>
@@ -15,11 +15,11 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[11 sep 21:15: Netwerk MA 1 - VOLEVO MA 5]]></title>
+      <title><![CDATA[11 sep 19:30: Netwerk MA 1 - VOLEVO MA 5]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035427</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035427</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2L1 DE, Datum: vrijdag 11 september, 21:15, Speellocatie: Viergang, Sportlaan 1 a, 2641AZ  Pijnacker]]></description>
-      <pubDate>Fri, 11 Sep 2026 21:15:00 +0200</pubDate>
+      <description><![CDATA[Wedstrijd: 3000MA2L1 DE, Datum: vrijdag 11 september, 19:30, Speellocatie: Viergang, Sportlaan 1 a, 2641AZ  Pijnacker]]></description>
+      <pubDate>Fri, 11 Sep 2026 19:30:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
