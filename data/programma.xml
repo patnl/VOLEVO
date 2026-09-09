@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 09 Sep 2026 08:25:09 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 13:43:41 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[10 sep 21:00: VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1]]></title>
@@ -247,12 +247,156 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[19 sep 9:30: VELO L2 1 - VOLEVO L2 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062087</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062087</guid>
+      <description><![CDATA[Wedstrijd: 3000VH21BAAE, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:30: VOLEVO L3 1 - Netwerk L3 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062115</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062115</guid>
+      <description><![CDATA[Wedstrijd: 3000VH31BAAE, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:30: VOLEVO L3 2 - Netwerk L3 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062122</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062122</guid>
+      <description><![CDATA[Wedstrijd: 3000VH31BACG, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:30: Kalinko L3 2 - VOLEVO L3 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062129</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062129</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CAAE, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:30: VELO L3 2 - VOLEVO L3 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062136</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062136</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CACG, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:40: VELO L3 1 - VOLEVO L3 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062137</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062137</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CAFD, Datum: zaterdag 19 september, 9:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:40:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:40: VOLEVO L3 5 - Monza L3 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062130</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062130</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CAGB, Datum: zaterdag 19 september, 9:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:40:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[19 sep 9:45: Inter Rijswijk JC 1 - VOLEVO MC 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025711</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025711</guid>
       <description><![CDATA[Wedstrijd: 3000XCHB1 GD, Datum: zaterdag 19 september, 9:45, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
       <pubDate>Sat, 19 Sep 2026 09:45:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:50: Kalinko L2 4 - VOLEVO L2 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062089</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062089</guid>
+      <description><![CDATA[Wedstrijd: 3000VH21BADE, Datum: zaterdag 19 september, 9:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:50: VOLEVO L3 2 - VOLEVO L3 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062124</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062124</guid>
+      <description><![CDATA[Wedstrijd: 3000VH31BACA, Datum: zaterdag 19 september, 9:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 9:50: VOLEVO L3 4 - VOLEVO L3 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062131</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062131</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CADE, Datum: zaterdag 19 september, 9:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 09:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:00: Inter Rijswijk L3 5 - VOLEVO L3 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062118</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062118</guid>
+      <description><![CDATA[Wedstrijd: 3000VH31BABA, Datum: zaterdag 19 september, 10:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:00: VELO L3 1 - VOLEVO L3 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062139</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062139</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CAFG, Datum: zaterdag 19 september, 10:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:10: VOLEVO L2 1 - Kalinko L2 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062098</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062098</guid>
+      <description><![CDATA[Wedstrijd: 3000VH21BAEB, Datum: zaterdag 19 september, 10:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:10: Inter Rijswijk L3 4 - VOLEVO L3 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062119</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062119</guid>
+      <description><![CDATA[Wedstrijd: 3000VH31BADC, Datum: zaterdag 19 september, 10:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:10: VOLEVO L3 4 - VELO L3 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062133</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062133</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CADC, Datum: zaterdag 19 september, 10:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:10: VOLEVO L3 3 - Monza L3 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062140</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062140</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CAEB, Datum: zaterdag 19 september, 10:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:20: VOLEVO L3 1 - Zovoc L3 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062120</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062120</guid>
+      <description><![CDATA[Wedstrijd: 3000VH31BAAF, Datum: zaterdag 19 september, 10:20, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:20:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:20: VOLEVO L3 5 - VOLEVO L3 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062141</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062141</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CAGD, Datum: zaterdag 19 september, 10:20, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:20:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
     </item>
     <item>
       <title><![CDATA[19 sep 10:30: VSTS MA 1 - VOLEVO MA 4]]></title>
@@ -263,12 +407,148 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[19 sep 10:30: VOLEVO L2 1 - Zovoc L2 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062100</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062100</guid>
+      <description><![CDATA[Wedstrijd: 3000VH21BAEF, Datum: zaterdag 19 september, 10:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:30: Inter Rijswijk L3 5 - VOLEVO L3 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062121</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062121</guid>
+      <description><![CDATA[Wedstrijd: 3000VH31BABC, Datum: zaterdag 19 september, 10:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 10:30: VOLEVO L3 3 - VELO L3 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062142</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062142</guid>
+      <description><![CDATA[Wedstrijd: 3000VH32CAEF, Datum: zaterdag 19 september, 10:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[19 sep 11:00: VCH MB 1 - VOLEVO MB 3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029416</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029416</guid>
       <description><![CDATA[Wedstrijd: 3000MB1H1 AC, Datum: zaterdag 19 september, 11:00, Speellocatie: Concordia, Concordiaplein 1, 2851VV  Haastrecht]]></description>
       <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:00: VOLEVO L4 6 - Zovoc L4 6]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062155</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062155</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CAAF, Datum: zaterdag 19 september, 11:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:00: Sovicos L4 2 - VOLEVO L4 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062158</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062158</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CABE, Datum: zaterdag 19 september, 11:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:00: VOLEVO L4 4 - VELO L4 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062161</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062161</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CACD, Datum: zaterdag 19 september, 11:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:00: VOLEVO L4 1 - Kalinko L4 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062179</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062179</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42FAAF, Datum: zaterdag 19 september, 11:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:20: VOLEVO L4 2 - VOLEVO L4 6]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062156</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062156</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CAEA, Datum: zaterdag 19 september, 11:20, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:20:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:20: Zovoc L4 6 - VOLEVO L4 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062162</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062162</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CAFC, Datum: zaterdag 19 september, 11:20, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:20:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:20: Kratos '08 L4 2 - VOLEVO L4 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062180</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062180</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42FAEA, Datum: zaterdag 19 september, 11:20, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:20:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:40: VELO L4 2 - VOLEVO L4 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062166</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062166</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42DAAD, Datum: zaterdag 19 september, 11:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:40:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:40: VOLEVO L4 5 - Sovicos L4 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062169</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062169</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42DABC, Datum: zaterdag 19 september, 11:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:40:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 12:00: VOLEVO L4 6 - VELO L4 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062157</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062157</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CAAD, Datum: zaterdag 19 september, 12:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 12:00: Sovicos L4 2 - VOLEVO L4 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062160</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062160</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CABC, Datum: zaterdag 19 september, 12:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 12:00: VOLEVO L4 2 - Zovoc L4 6]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062163</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062163</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42CAEF, Datum: zaterdag 19 september, 12:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 12:00: VOLEVO L4 1 - DEO L4 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062181</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062181</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42FAAD, Datum: zaterdag 19 september, 12:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 12:20: VOLEVO L4 3 - VOLEVO L4 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062168</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062168</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42DADB, Datum: zaterdag 19 september, 12:20, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:20:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
     </item>
     <item>
       <title><![CDATA[19 sep 12:30: VOLEVO JA 1 - ZVH JA 2]]></title>
@@ -327,12 +607,252 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[19 sep 12:40: VOLEVO L4 5 - Kalinko L4 6]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062167</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062167</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42DABE, Datum: zaterdag 19 september, 12:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:40:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 12:40: Sovicos L4 1 - VOLEVO L4 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062170</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062170</guid>
+      <description><![CDATA[Wedstrijd: 3000VH42DACD, Datum: zaterdag 19 september, 12:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:40:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:10: Zovoc L5 1 - VOLEVO L5 8]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062191</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062191</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51AABE, Datum: zaterdag 19 september, 13:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:10: VOLEVO L5 9 - Zovoc L5 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062197</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062197</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51BAAE, Datum: zaterdag 19 september, 13:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:10: Kalinko L5 2 - VOLEVO L5 10]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062203</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062203</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51BABD, Datum: zaterdag 19 september, 13:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:10: VOLEVO L5 7 - PQV Westland - Data Giants L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062216</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062216</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52DAAD, Datum: zaterdag 19 september, 13:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:10: Kalinko L5 4 - VOLEVO L5 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062219</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062219</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52DABC, Datum: zaterdag 19 september, 13:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:30: VOLEVO L5 8 - Inter Rijswijk L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062189</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062189</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51AAEA, Datum: zaterdag 19 september, 13:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:30: VOLEVO L5 10 - VOLEVO L5 9]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062198</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062198</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51BADA, Datum: zaterdag 19 september, 13:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:30: VOLEVO L5 5 - VOLEVO L5 7]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062217</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062217</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52DACA, Datum: zaterdag 19 september, 13:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:50: Kalinko L5 3 - VOLEVO L5 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062209</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062209</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CAAD, Datum: zaterdag 19 september, 13:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:50: VOLEVO L5 4 - Monza L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062212</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062212</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CABC, Datum: zaterdag 19 september, 13:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:50: VELO L5 2 - VOLEVO L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062215</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062215</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CAEF, Datum: zaterdag 19 september, 13:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:50: VOLEVO L5 3 - VELO L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062224</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062224</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52EAAB, Datum: zaterdag 19 september, 13:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 13:50: VOLEVO L5 6 - Zovoc L5 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062227</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062227</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52EACD, Datum: zaterdag 19 september, 13:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 13:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:10: VOLEVO L5 8 - Zovoc L5 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062196</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062196</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51AAEF, Datum: zaterdag 19 september, 14:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:10: Kalinko L5 2 - VOLEVO L5 9]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062200</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062200</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51BABA, Datum: zaterdag 19 september, 14:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:10: Zovoc L5 2 - VOLEVO L5 10]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062205</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062205</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51BAED, Datum: zaterdag 19 september, 14:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:10: VOLEVO L5 7 - Kalinko L5 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062218</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062218</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52DAAB, Datum: zaterdag 19 september, 14:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:10: VOLEVO L5 5 - PQV Westland - Data Giants L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062221</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062221</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52DACD, Datum: zaterdag 19 september, 14:10, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:10:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[19 sep 14:15: Inter Rijswijk DS 2 - VOLEVO DS 3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2033022</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2033022</guid>
       <description><![CDATA[Wedstrijd: 3000BD1A16DA, Datum: zaterdag 19 september, 14:15, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
       <pubDate>Sat, 19 Sep 2026 14:15:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:30: VOLEVO L5 9 - Inter Rijswijk L5 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062201</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062201</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51BAAC, Datum: zaterdag 19 september, 14:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:30: VOLEVO L5 2 - VOLEVO L5 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062211</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062211</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CADB, Datum: zaterdag 19 september, 14:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:30: VOLEVO L5 1 - Monza L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062214</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062214</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CAFC, Datum: zaterdag 19 september, 14:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:30: VOLEVO L5 6 - VOLEVO L5 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062223</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062223</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52EACA, Datum: zaterdag 19 september, 14:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:50: VOLEVO L5 10 - Inter Rijswijk L5 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062202</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062202</guid>
+      <description><![CDATA[Wedstrijd: 3000VH51BADC, Datum: zaterdag 19 september, 14:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:50: Kalinko L5 3 - VOLEVO L5 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062207</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062207</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CAAF, Datum: zaterdag 19 september, 14:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:50: VOLEVO L5 4 - VELO L5 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062210</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062210</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CABE, Datum: zaterdag 19 september, 14:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:50: Monza L5 1 - VOLEVO L5 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062213</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062213</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52CACD, Datum: zaterdag 19 september, 14:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:50: VOLEVO L5 3 - Zovoc L5 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062222</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062222</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52EAAD, Datum: zaterdag 19 september, 14:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 14:50: VELO L5 1 - VOLEVO L5 6]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2062225</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2062225</guid>
+      <description><![CDATA[Wedstrijd: 3000VH52EABC, Datum: zaterdag 19 september, 14:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <pubDate>Sat, 19 Sep 2026 14:50:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
     </item>
     <item>
       <title><![CDATA[19 sep 15:00: VOLEVO JA 2 - VCH JA 2]]></title>
@@ -559,7 +1079,7 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 12:00: Grillroom-snackbar Alev/Punch HS 14 - VOLEVO HS 6]]></title>
+      <title><![CDATA[26 sep 12:00: Punch HS 14 - VOLEVO HS 6]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019394</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2019394</guid>
       <description><![CDATA[Wedstrijd: 3000H4B   BD, Datum: zaterdag 26 september, 12:00, Speellocatie: TU-Sportcentrum, Mekelweg 8, 2628CD  Delft]]></description>
@@ -1855,7 +2375,7 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[13 nov 21:00: VOLEVO HS 6 - Grillroom-snackbar Alev/Punch HS 14]]></title>
+      <title><![CDATA[13 nov 21:00: VOLEVO HS 6 - Punch HS 14]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019461</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2019461</guid>
       <description><![CDATA[Wedstrijd: 3000H4B   DB, Datum: vrijdag 13 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
