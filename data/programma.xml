@@ -4,16 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 10 Sep 2026 23:33:01 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 01:24:22 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1, Uitslag: 3-0]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2033015</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2033015</guid>
-      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1, Uitslag: 3-0, Setstanden: 25-15, 25-12, 25-19]]></description>
-      <pubDate>Thu, 10 Sep 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[11 sep 19:30: Netwerk MA 1 - VOLEVO MA 5]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035427</link>
