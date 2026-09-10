@@ -1,7 +1,7 @@
 {
  "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260905-Officialbeurten-sept-dec-web2.xlsx",
  "bestand": "20260905-Officialbeurten-sept-dec-web2.xlsx",
- "ingelezen": "2026-09-08T09:06:00Z",
+ "ingelezen": "2026-09-10T09:11:01Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -236,6 +236,24 @@
    "uit": "Leython DC MB 1",
    "taak": "teller",
    "team": "ouders",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-11-13",
+   "tijd": "21:00",
+   "thuis": "VOLEVO HS 6",
+   "uit": "Grillroom-snackbar Alev/Punch HS 14",
+   "taak": "scheidsrechter (spelregeltoets)",
+   "team": "HS 1",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-11-13",
+   "tijd": "21:00",
+   "thuis": "VOLEVO HS 6",
+   "uit": "Grillroom-snackbar Alev/Punch HS 14",
+   "taak": "teller",
+   "team": "HS 1",
    "opmerking": null
   },
   {
@@ -1724,18 +1742,6 @@
    {
     "taak": "teller",
     "team": "DS 7",
-    "opmerking": null
-   }
-  ],
-  "2026-11-13T21:00:00+01:00|VOLEVO HS 6|Grillroom-snackbar Alev/Punch HS 14": [
-   {
-    "taak": "scheidsrechter (spelregeltoets)",
-    "team": "HS 1",
-    "opmerking": null
-   },
-   {
-    "taak": "teller",
-    "team": "HS 1",
     "opmerking": null
    }
   ],
