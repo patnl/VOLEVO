@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-09T11:39:55+00:00",
+ "gegenereerd": "2026-09-10T21:05:47+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -173,7 +173,7 @@
    "tijdstip": "2026-09-10T21:00:00+02:00",
    "thuis": "VOLEVO DS 3",
    "uit": "Volleybaldirect/Gemini-Kangeroes DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -181,7 +181,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/10c1ca7c-7e32-4ef4-841f-0f00c349399b"
+   "dwf": "https://dwf.nevobo.nl/results/10c1ca7c-7e32-4ef4-841f-0f00c349399b/scoresheets/64e0bc2e-d937-46d6-bbfc-133ccc25ee94"
   },
   {
    "tijdstip": "2026-09-11T19:30:00+02:00",
