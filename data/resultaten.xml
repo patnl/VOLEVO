@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 10 Sep 2026 20:58:15 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 23:33:02 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1, Uitslag: 3-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2033015</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2033015</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - Volleybaldirect/Gemini-Kangeroes DS 1, Uitslag: 3-0, Setstanden: 25-15, 25-12, 25-19]]></description>
+      <pubDate>Thu, 10 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[SPORTJA LeythonDC HS 1 - VOLEVO HS 1, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1964394</link>
