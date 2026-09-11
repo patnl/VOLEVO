@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-10T21:05:47+00:00",
+ "gegenereerd": "2026-09-11T21:08:55+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -187,7 +187,7 @@
    "tijdstip": "2026-09-11T19:30:00+02:00",
    "thuis": "Netwerk MA 1",
    "uit": "VOLEVO MA 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Viergang",
    "plaats": "Pijnacker",
    "adres": "Sportlaan 1",
@@ -195,7 +195,7 @@
    "lat": 52.02438,
    "lon": 4.42115,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/8f715bfa-5f8c-4297-8f05-5ee4b679bfa4"
+   "dwf": "https://dwf.nevobo.nl/results/8f715bfa-5f8c-4297-8f05-5ee4b679bfa4/scoresheets/48caeadd-0bdd-4bb8-b51d-b9178e4598a2"
   },
   {
    "tijdstip": "2026-09-11T21:30:00+02:00",
