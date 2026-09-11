@@ -4,24 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 11 Sep 2026 23:19:42 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 01:28:47 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[Netwerk MA 1 - VOLEVO MA 5, Uitslag: 3-1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2035427</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035427</guid>
-      <description><![CDATA[Wedstrijd: Netwerk MA 1 - VOLEVO MA 5, Uitslag: 3-1, Setstanden: 26-24, 26-24, 24-26, 25-14]]></description>
-      <pubDate>Fri, 11 Sep 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[11 sep 21:30: Monza HS 1 - VOLEVO HS 2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2010534</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2010534</guid>
-      <description><![CDATA[Wedstrijd: 3000BH1A16BD, Datum: vrijdag 11 september, 21:30, Speellocatie: De Wielepet, Heijdseweg 9, 2681VN  Monster]]></description>
-      <pubDate>Fri, 11 Sep 2026 21:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[12 sep 11:00: Leython DC JA 2 - VOLEVO JA 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2027947</link>
