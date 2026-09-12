@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-12T15:43:33+00:00",
+ "gegenereerd": "2026-09-12T20:46:27+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -495,7 +495,7 @@
    "tijdstip": "2026-09-12T16:30:00+02:00",
    "thuis": "Inter Rijswijk DS 1",
    "uit": "VOLEVO DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -503,13 +503,13 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/c51dd560-911a-44cf-834d-1953e1c45bd4"
+   "dwf": "https://dwf.nevobo.nl/results/c51dd560-911a-44cf-834d-1953e1c45bd4/scoresheets/79ee79f2-9435-4b7e-b9d0-26e9f2f03f7f"
   },
   {
    "tijdstip": "2026-09-12T16:30:00+02:00",
    "thuis": "Inter Rijswijk HS 2",
    "uit": "VOLEVO HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -517,13 +517,13 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/d7295c6f-b83a-478a-8380-ab8dae91a5a4"
+   "dwf": "https://dwf.nevobo.nl/results/d7295c6f-b83a-478a-8380-ab8dae91a5a4/scoresheets/74ac0c48-0125-4a1e-8472-f99caffeea1d"
   },
   {
    "tijdstip": "2026-09-12T16:30:00+02:00",
    "thuis": "Kalinko MC 1",
    "uit": "VOLEVO MC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -531,7 +531,7 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/dce9d036-1dc5-417c-bd82-3766d34b0176"
+   "dwf": "https://dwf.nevobo.nl/results/dce9d036-1dc5-417c-bd82-3766d34b0176/scoresheets/77d51d22-4a18-48f2-926b-0962b631724e"
   },
   {
    "tijdstip": "2026-09-18T21:00:00+02:00",
