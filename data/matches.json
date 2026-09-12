@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-11T21:08:55+00:00",
+ "gegenereerd": "2026-09-12T04:52:05+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -201,7 +201,7 @@
    "tijdstip": "2026-09-11T21:30:00+02:00",
    "thuis": "Monza HS 1",
    "uit": "VOLEVO HS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Wielepet",
    "plaats": "Monster",
    "adres": "Heijdseweg 9",
@@ -209,7 +209,7 @@
    "lat": 52.02805,
    "lon": 4.16851,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/a9f17131-a778-4db8-83d3-2663f35ac4fb"
+   "dwf": "https://dwf.nevobo.nl/results/a9f17131-a778-4db8-83d3-2663f35ac4fb/scoresheets/086e5e2c-9ae8-4c48-b96e-7756afbac849"
   },
   {
    "tijdstip": "2026-09-12T11:00:00+02:00",
