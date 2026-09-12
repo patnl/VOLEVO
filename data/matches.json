@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-12T04:52:05+00:00",
+ "gegenereerd": "2026-09-12T11:04:29+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -215,7 +215,7 @@
    "tijdstip": "2026-09-12T11:00:00+02:00",
    "thuis": "Leython DC JA 2",
    "uit": "VOLEVO JA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -223,7 +223,7 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/06633aa8-6e87-4613-a442-2f2a045f51db"
+   "dwf": "https://dwf.nevobo.nl/results/06633aa8-6e87-4613-a442-2f2a045f51db/scoresheets/c55cb60d-3dc7-4351-aca6-5adaa372e54a"
   },
   {
    "tijdstip": "2026-09-12T12:00:00+02:00",
