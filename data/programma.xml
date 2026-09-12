@@ -4,15 +4,15 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 12 Sep 2026 08:21:39 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 13:06:00 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
-      <title><![CDATA[12 sep 11:00: Leython DC JA 2 - VOLEVO JA 2]]></title>
+      <title><![CDATA[Leython DC JA 2 - VOLEVO JA 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2027947</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2027947</guid>
-      <description><![CDATA[Wedstrijd: 3000JA2E1 AB, Datum: zaterdag 12 september, 11:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <description><![CDATA[Wedstrijd: Leython DC JA 2 - VOLEVO JA 2, Uitslag: 0-4, Setstanden: 5-25, 11-25, 13-25, 17-25]]></description>
       <pubDate>Sat, 12 Sep 2026 11:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[12 sep 12:00: Inter Rijswijk MA 2 - VOLEVO MA 3]]></title>

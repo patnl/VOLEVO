@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 12 Sep 2026 08:21:40 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 13:06:01 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Leython DC JA 2 - VOLEVO JA 2, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2027947</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2027947</guid>
+      <description><![CDATA[Wedstrijd: Leython DC JA 2 - VOLEVO JA 2, Uitslag: 0-4, Setstanden: 5-25, 11-25, 13-25, 17-25]]></description>
+      <pubDate>Sat, 12 Sep 2026 11:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Monza HS 1 - VOLEVO HS 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2010534</link>
