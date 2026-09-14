@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-14T05:14:56+00:00",
+ "gegenereerd": "2026-09-14T13:11:13+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -425,7 +425,7 @@
    "tijdstip": "2026-09-12T15:00:00+02:00",
    "thuis": "VOLEVO JB 2",
    "uit": "Netwerk JB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -433,7 +433,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/416ee7b3-6c8e-487e-8b10-bad5c1345d75"
+   "dwf": "https://dwf.nevobo.nl/results/416ee7b3-6c8e-487e-8b10-bad5c1345d75/scoresheets/cf20f108-08f9-48d6-b552-81fc6552b0fd"
   },
   {
    "tijdstip": "2026-09-12T15:00:00+02:00",
