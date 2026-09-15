@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-14T13:11:13+00:00",
+ "gegenereerd": "2026-09-15T12:00:32+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -563,20 +563,6 @@
   },
   {
    "tijdstip": "2026-09-19T09:00:00+02:00",
-   "thuis": "Leython DC MB 1",
-   "uit": "VOLEVO MB 1",
-   "status": "gepland",
-   "hal": "De Bloemerd",
-   "plaats": "Leiderdorp",
-   "adres": "Bloemerd 1",
-   "postcode": "2353BZ",
-   "lat": 52.16411,
-   "lon": 4.54493,
-   "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/fa8e22f3-c9c5-4658-a0c1-91207d6a01d9"
-  },
-  {
-   "tijdstip": "2026-09-19T09:00:00+02:00",
    "thuis": "Leython DC MB 2",
    "uit": "VOLEVO MB 2",
    "status": "gepland",
@@ -910,6 +896,20 @@
    "lon": 4.75181,
    "veld": "1",
    "dwf": "https://dwf.nevobo.nl/matches/71707e53-8fa7-45d4-a3bf-ef8d7c91e033"
+  },
+  {
+   "tijdstip": "2026-09-19T11:00:00+02:00",
+   "thuis": "Leython DC MB 1",
+   "uit": "VOLEVO MB 1",
+   "status": "gepland",
+   "hal": "De Bloemerd",
+   "plaats": "Leiderdorp",
+   "adres": "Bloemerd 1",
+   "postcode": "2353BZ",
+   "lat": 52.16411,
+   "lon": 4.54493,
+   "veld": "4",
+   "dwf": "https://dwf.nevobo.nl/matches/fa8e22f3-c9c5-4658-a0c1-91207d6a01d9"
   },
   {
    "tijdstip": "2026-09-19T11:00:00+02:00",
