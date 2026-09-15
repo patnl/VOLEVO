@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Tue, 15 Sep 2026 07:53:44 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 13:13:16 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[18 sep 21:00: Zovoc DS 2 - VOLEVO DS 4]]></title>
@@ -27,14 +27,6 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029568</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029568</guid>
       <description><![CDATA[Wedstrijd: 3000MB1I1 EF, Datum: zaterdag 19 september, 9:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
-      <pubDate>Sat, 19 Sep 2026 09:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[19 sep 9:00: Leython DC MB 1 - VOLEVO MB 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2025607</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025607</guid>
-      <description><![CDATA[Wedstrijd: 3000MBHB1 DE, Datum: zaterdag 19 september, 9:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
       <pubDate>Sat, 19 Sep 2026 09:00:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
@@ -227,6 +219,14 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029416</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029416</guid>
       <description><![CDATA[Wedstrijd: 3000MB1H1 AC, Datum: zaterdag 19 september, 11:00, Speellocatie: Concordia, Concordiaplein 1, 2851VV  Haastrecht]]></description>
+      <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 sep 11:00: Leython DC MB 1 - VOLEVO MB 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025607</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025607</guid>
+      <description><![CDATA[Wedstrijd: 3000MBHB1 DE, Datum: zaterdag 19 september, 11:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
       <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
