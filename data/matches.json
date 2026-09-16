@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-16T17:13:51+00:00",
+ "gegenereerd": "2026-09-16T21:33:53+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -3306,6 +3306,20 @@
    "dwf": "https://dwf.nevobo.nl/matches/79784aa7-a057-4644-90bb-39f0f4f6b643"
   },
   {
+   "tijdstip": "2026-10-28T19:45:00+01:00",
+   "thuis": "Monza DS 1",
+   "uit": "VOLEVO DS 5",
+   "status": "gepland",
+   "hal": "De Wielepet",
+   "plaats": "Monster",
+   "adres": "Heijdseweg 9",
+   "postcode": "2681VN",
+   "lat": 52.02805,
+   "lon": 4.16851,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/f90b1653-61fc-4bdd-b6ba-6177e690c1d3"
+  },
+  {
    "tijdstip": "2026-10-29T21:00:00+01:00",
    "thuis": "VOLEVO DS 3",
    "uit": "Zovoc DS 1",
@@ -3374,20 +3388,6 @@
    "lon": 4.26821,
    "veld": "3",
    "dwf": "https://dwf.nevobo.nl/matches/3666cd54-a621-452d-9ac7-2206e54a1a23"
-  },
-  {
-   "tijdstip": "2026-10-30T21:30:00+01:00",
-   "thuis": "Monza DS 1",
-   "uit": "VOLEVO DS 5",
-   "status": "gepland",
-   "hal": "De Wielepet",
-   "plaats": "Monster",
-   "adres": "Heijdseweg 9",
-   "postcode": "2681VN",
-   "lat": 52.02805,
-   "lon": 4.16851,
-   "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/f90b1653-61fc-4bdd-b6ba-6177e690c1d3"
   },
   {
    "tijdstip": "2026-10-31T11:00:00+01:00",
