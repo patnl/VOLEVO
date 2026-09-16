@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 16 Sep 2026 16:59:55 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 20:49:43 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[18 sep 21:00: Zovoc DS 2 - VOLEVO DS 4]]></title>
@@ -1591,6 +1591,14 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[28 okt 19:45: Monza DS 1 - VOLEVO DS 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041543</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041543</guid>
+      <description><![CDATA[Wedstrijd: 3000D2K   JD, Datum: woensdag 28 oktober, 19:45, Speellocatie: De Wielepet, Heijdseweg 9, 2681VN  Monster]]></description>
+      <pubDate>Wed, 28 Oct 2026 19:45:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[29 okt 21:00: VOLEVO DS 3 - Zovoc DS 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009714</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009714</guid>
@@ -1628,14 +1636,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2018124</guid>
       <description><![CDATA[Wedstrijd: 3000H2I   JD, Datum: vrijdag 30 oktober, 21:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
       <pubDate>Fri, 30 Oct 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[30 okt 21:30: Monza DS 1 - VOLEVO DS 5]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041543</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041543</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   JD, Datum: vrijdag 30 oktober, 21:30, Speellocatie: De Wielepet, Heijdseweg 9, 2681VN  Monster]]></description>
-      <pubDate>Fri, 30 Oct 2026 21:30:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
