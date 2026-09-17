@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-16T21:33:53+00:00",
+ "gegenereerd": "2026-09-17T17:15:24+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -4635,20 +4635,6 @@
    "veld": "4"
   },
   {
-   "tijdstip": "2026-11-20T21:30:00+01:00",
-   "thuis": "Sovicos HS 5",
-   "uit": "VOLEVO HS 6",
-   "status": "gepland",
-   "hal": "Steenwijklaan",
-   "plaats": "'s-Gravenhage",
-   "adres": "Steenwijklaan 16",
-   "postcode": "2541RL",
-   "lat": 52.04496,
-   "lon": 4.28492,
-   "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/826062c3-0066-4a46-b273-a2fa31ae3323"
-  },
-  {
    "tijdstip": "2026-11-21T11:00:00+01:00",
    "thuis": "VCH MA 1",
    "uit": "VOLEVO MA 1",
@@ -7096,20 +7082,6 @@
    "lon": 4.39517,
    "veld": "7",
    "dwf": "https://dwf.nevobo.nl/matches/1d856078-7746-45ba-83a6-a0f0c705a326"
-  },
-  {
-   "tijdstip": "2027-03-19T21:00:00+01:00",
-   "thuis": "VOLEVO HS 6",
-   "uit": "Sovicos HS 5",
-   "status": "gepland",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/b373e187-5b89-4c19-9a6e-d6b52205a23e"
   },
   {
    "tijdstip": "2027-03-19T21:30:00+01:00",
