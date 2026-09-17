@@ -1,8 +1,8 @@
 {
- "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260905-Officialbeurten-sept-dec-web2.xlsx",
- "bestand": "20260905-Officialbeurten-sept-dec-web2.xlsx",
- "ingelezen": "2026-09-10T09:11:01Z",
- "terugval": false,
+ "bron": "data/officialbeurten.xlsx",
+ "bestand": "officialbeurten.xlsx",
+ "ingelezen": "2026-09-17T09:39:17Z",
+ "terugval": true,
  "veelTegelijk": [
   {
    "team": "DS 1",
