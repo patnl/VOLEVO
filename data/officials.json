@@ -1,8 +1,8 @@
 {
- "bron": "data/officialbeurten.xlsx",
- "bestand": "officialbeurten.xlsx",
- "ingelezen": "2026-09-17T09:39:17Z",
- "terugval": true,
+ "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260911-Officialbeurten-sept-dec-web.xlsx",
+ "bestand": "20260911-Officialbeurten-sept-dec-web.xlsx",
+ "ingelezen": "2026-09-18T09:12:07Z",
+ "terugval": false,
  "veelTegelijk": [
   {
    "team": "DS 1",
@@ -1061,7 +1061,7 @@
    },
    {
     "taak": "teller",
-    "team": "DS 4",
+    "team": "DS 3",
     "opmerking": null
    }
   ],
