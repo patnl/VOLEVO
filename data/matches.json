@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-17T17:15:24+00:00",
+ "gegenereerd": "2026-09-18T11:36:12+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -898,6 +898,20 @@
    "dwf": "https://dwf.nevobo.nl/matches/71707e53-8fa7-45d4-a3bf-ef8d7c91e033"
   },
   {
+   "tijdstip": "2026-09-19T10:45:00+02:00",
+   "thuis": "VCH MB 1",
+   "uit": "VOLEVO MB 3",
+   "status": "gepland",
+   "hal": "Concordia",
+   "plaats": "Haastrecht",
+   "adres": "Concordiaplein 1",
+   "postcode": "2851VV",
+   "lat": 51.99958,
+   "lon": 4.77624,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/a53287b1-4e0e-44e1-89e7-dd79a15ca664"
+  },
+  {
    "tijdstip": "2026-09-19T10:50:00+02:00",
    "thuis": "VOLEVO L2 1",
    "uit": "Zovoc L2 2",
@@ -938,20 +952,6 @@
    "lon": 4.46189,
    "veld": "C4",
    "dwf": "https://dwf.nevobo.nl/matches/09800871-0711-42a0-8d4f-6d53e0445da2"
-  },
-  {
-   "tijdstip": "2026-09-19T11:00:00+02:00",
-   "thuis": "VCH MB 1",
-   "uit": "VOLEVO MB 3",
-   "status": "gepland",
-   "hal": "Concordia",
-   "plaats": "Haastrecht",
-   "adres": "Concordiaplein 1",
-   "postcode": "2851VV",
-   "lat": 51.99958,
-   "lon": 4.77624,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/a53287b1-4e0e-44e1-89e7-dd79a15ca664"
   },
   {
    "tijdstip": "2026-09-19T11:00:00+02:00",
