@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 18 Sep 2026 10:30:26 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 15:09:55 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[18 sep 21:00: Zovoc DS 2 - VOLEVO DS 4]]></title>
@@ -215,19 +215,19 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[19 sep 10:45: VCH MB 1 - VOLEVO MB 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2029416</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2029416</guid>
+      <description><![CDATA[Wedstrijd: 3000MB1H1 AC, Datum: zaterdag 19 september, 10:45, Speellocatie: Concordia, Concordiaplein 1, 2851VV  Haastrecht]]></description>
+      <pubDate>Sat, 19 Sep 2026 10:45:00 +0200</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[19 sep 10:50: VOLEVO L2 1 - Zovoc L2 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2066815</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2066815</guid>
       <description><![CDATA[Wedstrijd: 3000VH21BADE, Datum: zaterdag 19 september, 10:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
       <pubDate>Sat, 19 Sep 2026 10:50:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[19 sep 11:00: VCH MB 1 - VOLEVO MB 3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2029416</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2029416</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1H1 AC, Datum: zaterdag 19 september, 11:00, Speellocatie: Concordia, Concordiaplein 1, 2851VV  Haastrecht]]></description>
-      <pubDate>Sat, 19 Sep 2026 11:00:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
