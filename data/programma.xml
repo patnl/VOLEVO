@@ -4,24 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 18 Sep 2026 19:05:06 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 01:54:37 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[18 sep 21:00: Zovoc DS 2 - VOLEVO DS 4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2033017</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2033017</guid>
-      <description><![CDATA[Wedstrijd: 3000BD1A14DA, Datum: vrijdag 18 september, 21:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
-      <pubDate>Fri, 18 Sep 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[18 sep 21:30: Inter Rijswijk DS 3 - VOLEVO DS 2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2033019</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2033019</guid>
-      <description><![CDATA[Wedstrijd: 3000BD1A15DA, Datum: vrijdag 18 september, 21:30, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
-      <pubDate>Fri, 18 Sep 2026 21:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[19 sep 9:00: Leython DC MB 2 - VOLEVO MB 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029568</link>

@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 18 Sep 2026 19:05:07 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 01:54:38 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Inter Rijswijk DS 3 - VOLEVO DS 2, Uitslag: 3-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2033019</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2033019</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk DS 3 - VOLEVO DS 2, Uitslag: 3-0, Setstanden: 25-15, 25-20, 25-21]]></description>
+      <pubDate>Fri, 18 Sep 2026 21:30:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Kalinko MC 1 - VOLEVO MC 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025667</link>
