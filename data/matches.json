@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-19T11:19:25+00:00",
+ "gegenereerd": "2026-09-19T16:02:21+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -1116,7 +1116,7 @@
    "tijdstip": "2026-09-19T12:30:00+02:00",
    "thuis": "VOLEVO JA 1",
    "uit": "ZVH JA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1124,13 +1124,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/e2f788e5-b102-4297-8202-f27ec288e18f"
+   "dwf": "https://dwf.nevobo.nl/results/e2f788e5-b102-4297-8202-f27ec288e18f/scoresheets/e47ed3aa-1228-46ea-ab01-ba24acd0f044"
   },
   {
    "tijdstip": "2026-09-19T12:30:00+02:00",
    "thuis": "VOLEVO JB 2",
    "uit": "VVV Delta JB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1138,7 +1138,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/1290be5c-44cc-49c6-8f5f-40a870450e92"
+   "dwf": "https://dwf.nevobo.nl/results/1290be5c-44cc-49c6-8f5f-40a870450e92/scoresheets/f86ff6e0-3ea6-4623-a47d-eeaf6cbd07c0"
   },
   {
    "tijdstip": "2026-09-19T12:30:00+02:00",
@@ -1158,7 +1158,7 @@
    "tijdstip": "2026-09-19T12:30:00+02:00",
    "thuis": "VOLEVO MA 6",
    "uit": "Zovoc MA 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1166,13 +1166,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/d660e119-ab39-4086-8a6c-a081349c38c3"
+   "dwf": "https://dwf.nevobo.nl/results/d660e119-ab39-4086-8a6c-a081349c38c3/scoresheets/ebc98888-1f33-4329-8628-406e2e66d1b4"
   },
   {
    "tijdstip": "2026-09-19T12:30:00+02:00",
    "thuis": "VOLEVO MB 4",
    "uit": "Zovoc MB 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1180,13 +1180,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/cc4bffb4-906c-4e40-9670-652a86131f41"
+   "dwf": "https://dwf.nevobo.nl/results/cc4bffb4-906c-4e40-9670-652a86131f41/scoresheets/1dd70041-d8c9-48af-a66e-cdad09ec3e1a"
   },
   {
    "tijdstip": "2026-09-19T12:30:00+02:00",
    "thuis": "VOLEVO MC 3",
    "uit": "VVV Delta MC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1194,13 +1194,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/71ab16b7-ea51-448c-87e6-c2b7e8c1bfcb"
+   "dwf": "https://dwf.nevobo.nl/results/71ab16b7-ea51-448c-87e6-c2b7e8c1bfcb/scoresheets/55fe7418-61c8-4f2a-8d0f-143de626a12f"
   },
   {
    "tijdstip": "2026-09-19T12:30:00+02:00",
    "thuis": "VOLEVO MC 5",
    "uit": "Zovoc MC 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1208,7 +1208,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/8cc32522-f071-42fc-a40c-5242a29f2ee1"
+   "dwf": "https://dwf.nevobo.nl/results/8cc32522-f071-42fc-a40c-5242a29f2ee1/scoresheets/94337f30-921a-4edf-94c3-d88eaae3a944"
   },
   {
    "tijdstip": "2026-09-19T12:40:00+02:00",
@@ -1240,259 +1240,241 @@
    "tijdstip": "2026-09-19T13:10:00+02:00",
    "thuis": "Kalinko L5 2",
    "uit": "VOLEVO L5 10",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/0aceb658-e559-4219-b0ae-cb86b517775c"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-09-19T13:10:00+02:00",
    "thuis": "Kalinko L5 4",
    "uit": "VOLEVO L5 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/e4ae059e-61e0-4439-baa0-538508822c96"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-09-19T13:10:00+02:00",
    "thuis": "VOLEVO L5 7",
    "uit": "PQV Westland - Data Giants L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/462a3761-3660-424d-8081-8c68717891a6"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-09-19T13:10:00+02:00",
    "thuis": "VOLEVO L5 9",
    "uit": "Zovoc L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/acc0472e-1b98-469c-878d-9824d9cb4778"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-09-19T13:10:00+02:00",
    "thuis": "Zovoc L5 1",
    "uit": "VOLEVO L5 8",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/d21cd48f-4bc9-41ce-91c6-a1f13233ca25"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-09-19T13:30:00+02:00",
    "thuis": "VOLEVO L5 10",
    "uit": "VOLEVO L5 9",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/af2cbb91-dbbd-4e48-9fde-7f6c4e7fbae9"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-09-19T13:30:00+02:00",
    "thuis": "VOLEVO L5 5",
    "uit": "VOLEVO L5 7",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/92fb8fb8-9e83-40ea-9b66-6373ba5b3b48"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-09-19T13:30:00+02:00",
    "thuis": "VOLEVO L5 8",
    "uit": "Inter Rijswijk L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/ec0b3abb-f8e7-45ee-b192-c74011c70e73"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-09-19T13:50:00+02:00",
    "thuis": "Kalinko L5 3",
    "uit": "VOLEVO L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/6e643299-4675-4009-be1e-cc2664de6385"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-09-19T13:50:00+02:00",
    "thuis": "VELO L5 2",
    "uit": "VOLEVO L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/b05f4ea5-8abf-4a97-a2bd-b6e900b0f4d6"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-09-19T13:50:00+02:00",
    "thuis": "VOLEVO L5 3",
    "uit": "VELO L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/6c221bd4-09d8-4f8a-80ab-799c030937ca"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-09-19T13:50:00+02:00",
    "thuis": "VOLEVO L5 4",
    "uit": "Monza L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/95d9ebb5-b365-41c4-87dc-3ab325375f87"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-09-19T13:50:00+02:00",
    "thuis": "VOLEVO L5 6",
    "uit": "Zovoc L5 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/b3475d63-2143-4bca-8615-32050b5da4da"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-09-19T14:10:00+02:00",
    "thuis": "Kalinko L5 2",
    "uit": "VOLEVO L5 9",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/c1f8161a-f120-47d5-8788-6517eb744974"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-09-19T14:10:00+02:00",
    "thuis": "VOLEVO L5 5",
    "uit": "PQV Westland - Data Giants L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/4922fe90-3161-445a-a5a7-b1cd118f4aee"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-09-19T14:10:00+02:00",
    "thuis": "VOLEVO L5 7",
    "uit": "Kalinko L5 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/e0415d56-9d87-417e-9542-8f6396428cdf"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-09-19T14:10:00+02:00",
    "thuis": "VOLEVO L5 8",
    "uit": "Zovoc L5 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/fd7494e2-bb62-4f10-b4ab-a117cfacf5cc"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-09-19T14:10:00+02:00",
    "thuis": "Zovoc L5 2",
    "uit": "VOLEVO L5 10",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/e38d81df-6371-4832-901b-59d96971fadb"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-09-19T14:15:00+02:00",
    "thuis": "Inter Rijswijk DS 2",
    "uit": "VOLEVO DS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -1500,153 +1482,143 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/12ef72c3-f5af-4087-90fb-fe1b5631cf5c"
+   "dwf": "https://dwf.nevobo.nl/results/12ef72c3-f5af-4087-90fb-fe1b5631cf5c/scoresheets/1368c992-662b-454c-9580-c389784bdec9"
   },
   {
    "tijdstip": "2026-09-19T14:30:00+02:00",
    "thuis": "VOLEVO L5 1",
    "uit": "Monza L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/ec684de6-032d-4280-88b6-36b709e14b9b"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-09-19T14:30:00+02:00",
    "thuis": "VOLEVO L5 2",
    "uit": "VOLEVO L5 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/a773f3f8-ac33-4e83-a1af-56e25e0a99c8"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-09-19T14:30:00+02:00",
    "thuis": "VOLEVO L5 6",
    "uit": "VOLEVO L5 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/814e46f8-1068-4119-9ad5-0b506260e024"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-09-19T14:30:00+02:00",
    "thuis": "VOLEVO L5 9",
    "uit": "Inter Rijswijk L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/8e607a84-2a8c-454f-8940-3dd2c4893572"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-09-19T14:50:00+02:00",
    "thuis": "Kalinko L5 3",
    "uit": "VOLEVO L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/9ecd3b4a-11a0-4ff1-abc4-9ba80d139896"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-09-19T14:50:00+02:00",
    "thuis": "Monza L5 1",
    "uit": "VOLEVO L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/e06e012e-20f4-4044-82a5-ebaa88fabb99"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-09-19T14:50:00+02:00",
    "thuis": "VELO L5 1",
    "uit": "VOLEVO L5 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/bafa0e3f-d0b1-4749-bfa0-f338ae736c03"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-09-19T14:50:00+02:00",
    "thuis": "VOLEVO L5 10",
    "uit": "Inter Rijswijk L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/b0567ba6-aace-442a-a639-77bb31c35012"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-09-19T14:50:00+02:00",
    "thuis": "VOLEVO L5 3",
    "uit": "Zovoc L5 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/049e3e90-e095-41f8-813f-b88c3c77fb12"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-09-19T14:50:00+02:00",
    "thuis": "VOLEVO L5 4",
    "uit": "VELO L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/8245c5ed-62ec-4eed-917e-25714e91d99d"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-09-19T15:00:00+02:00",
    "thuis": "VOLEVO HS 1",
    "uit": "Ancora RVV HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1654,13 +1626,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/b26ea7c0-8230-4c80-bd10-0e8c5dcd714c"
+   "dwf": "https://dwf.nevobo.nl/results/b26ea7c0-8230-4c80-bd10-0e8c5dcd714c/scoresheets/19162aa3-2af0-4f65-b43f-615479b3f848"
   },
   {
    "tijdstip": "2026-09-19T15:00:00+02:00",
    "thuis": "VOLEVO JA 2",
    "uit": "VCH JA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1668,13 +1640,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/93b6fa5b-fc96-4b8f-8ec0-30e995192937"
+   "dwf": "https://dwf.nevobo.nl/results/93b6fa5b-fc96-4b8f-8ec0-30e995192937/scoresheets/f5c7cbc5-7518-4318-a0f9-8c5592295e5a"
   },
   {
    "tijdstip": "2026-09-19T15:00:00+02:00",
    "thuis": "VOLEVO JB 1",
    "uit": "Zovoc JB 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1682,13 +1654,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/04d852bf-e24b-4ec2-ac16-74222469e9ff"
+   "dwf": "https://dwf.nevobo.nl/results/04d852bf-e24b-4ec2-ac16-74222469e9ff/scoresheets/053a94c0-a336-4999-a09c-fa98fe6ce251"
   },
   {
    "tijdstip": "2026-09-19T15:00:00+02:00",
    "thuis": "VOLEVO JC 1",
    "uit": "Ancora RVV MC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1696,13 +1668,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/0021f982-20c4-4233-997a-f5538fc6690c"
+   "dwf": "https://dwf.nevobo.nl/results/0021f982-20c4-4233-997a-f5538fc6690c/scoresheets/abda60ca-3eb2-4a6c-9cdf-a0322a46bd1e"
   },
   {
    "tijdstip": "2026-09-19T15:00:00+02:00",
    "thuis": "VOLEVO MA 5",
    "uit": "WVV MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1710,13 +1682,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/e825f49a-2343-41cd-9dbe-135f79d6fb83"
+   "dwf": "https://dwf.nevobo.nl/results/e825f49a-2343-41cd-9dbe-135f79d6fb83/scoresheets/f3002691-4c94-4903-ac1e-74525993329f"
   },
   {
    "tijdstip": "2026-09-19T15:00:00+02:00",
    "thuis": "VOLEVO MC 2",
    "uit": "Ancora RVV JC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1724,7 +1696,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/75c50ed6-c3c5-46d9-bb03-5c60b9c02a4e"
+   "dwf": "https://dwf.nevobo.nl/results/75c50ed6-c3c5-46d9-bb03-5c60b9c02a4e/scoresheets/f4385661-2cbc-4a08-bbc5-f7078b139cd9"
   },
   {
    "tijdstip": "2026-09-19T16:15:00+02:00",
