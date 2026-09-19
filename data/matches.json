@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-19T16:02:21+00:00",
+ "gegenereerd": "2026-09-19T20:56:21+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -1702,7 +1702,7 @@
    "tijdstip": "2026-09-19T16:15:00+02:00",
    "thuis": "Limes MA 1",
    "uit": "VOLEVO MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Sporthal De Paperclip",
    "plaats": "Vleuten",
    "adres": "Parkzichtlaan 203",
@@ -1710,13 +1710,13 @@
    "lat": 52.09347,
    "lon": 5.03579,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/9c7e7e1d-e09c-4cac-be23-9a617b965f1d"
+   "dwf": "https://dwf.nevobo.nl/results/9c7e7e1d-e09c-4cac-be23-9a617b965f1d/scoresheets/e60c25fe-6f58-4a14-b626-29acd8193a41"
   },
   {
    "tijdstip": "2026-09-19T17:30:00+02:00",
    "thuis": "VOLEVO DS 1",
    "uit": "Van Rhijn Bouw Leython DC DS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1724,13 +1724,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/dc9eea6b-b0cf-4939-8ad7-88c73840c665"
+   "dwf": "https://dwf.nevobo.nl/results/dc9eea6b-b0cf-4939-8ad7-88c73840c665/scoresheets/0357ebab-0312-4fc2-8f00-d818894c4713"
   },
   {
    "tijdstip": "2026-09-19T17:30:00+02:00",
    "thuis": "VOLEVO HS 2",
    "uit": "VELO HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -1738,13 +1738,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/a4a28ff4-63c3-4a7f-8b7f-14d1757d4059"
+   "dwf": "https://dwf.nevobo.nl/results/a4a28ff4-63c3-4a7f-8b7f-14d1757d4059/scoresheets/2b93ae68-4ef8-405c-ab46-fb35ce890ff3"
   },
   {
    "tijdstip": "2026-09-19T18:00:00+02:00",
    "thuis": "Zovoc MA 2",
    "uit": "VOLEVO MA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
@@ -1752,7 +1752,7 @@
    "lat": 52.06786,
    "lon": 4.46189,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/f84c924c-3943-4e32-9a9e-d0bbd93809a1"
+   "dwf": "https://dwf.nevobo.nl/results/f84c924c-3943-4e32-9a9e-d0bbd93809a1/scoresheets/aeb62ea5-62fb-48b6-8a7c-530114906ac9"
   },
   {
    "tijdstip": "2026-09-25T19:00:00+02:00",
