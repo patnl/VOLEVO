@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-18T11:36:12+00:00",
+ "gegenereerd": "2026-09-19T04:51:22+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -551,7 +551,7 @@
    "tijdstip": "2026-09-18T21:30:00+02:00",
    "thuis": "Inter Rijswijk DS 3",
    "uit": "VOLEVO DS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -559,7 +559,7 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/fbcaf288-6ad6-493b-b020-e35653503a35"
+   "dwf": "https://dwf.nevobo.nl/results/fbcaf288-6ad6-493b-b020-e35653503a35/scoresheets/8c219000-f9fa-4897-bb7d-3e26664e6159"
   },
   {
    "tijdstip": "2026-09-19T09:00:00+02:00",
