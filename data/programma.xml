@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 19 Sep 2026 20:36:50 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 23:02:52 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Leython DC MB 2 - VOLEVO MB 2, Uitslag: 0-4]]></title>
@@ -711,12 +711,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 17:30: VOLEVO DS 1 - Van Rhijn Bouw Leython DC DS 2]]></title>
+      <title><![CDATA[VOLEVO DS 1 - Van Rhijn Bouw Leython DC DS 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1964243</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1964243</guid>
-      <description><![CDATA[Wedstrijd: 9000NBD1Q DA, Datum: zaterdag 19 september, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 1 - Van Rhijn Bouw Leython DC DS 2, Uitslag: 1-3, Setstanden: 21-25, 25-23, 20-25, 21-25]]></description>
       <pubDate>Sat, 19 Sep 2026 17:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[Zovoc MA 2 - VOLEVO MA 2, Uitslag: 2-3]]></title>
@@ -1236,14 +1236,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026325</guid>
       <description><![CDATA[Wedstrijd: 3000MA1J1 FA, Datum: vrijdag 9 oktober, 19:30, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
       <pubDate>Fri, 09 Oct 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[9 okt 21:00: VOLEVO DS 6 - DEO DS 2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041522</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041522</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   CF, Datum: vrijdag 9 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Fri, 09 Oct 2026 21:00:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
@@ -3588,6 +3580,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009384</guid>
       <description><![CDATA[Wedstrijd: 30003BD   AI, Datum: zaterdag 6 maart, 16:30, Speellocatie: Amstelcampus, Tweede Boerhaavestraat 10, 1091AN  Amsterdam]]></description>
       <pubDate>Sat, 06 Mar 2027 16:30:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[11 mrt 21:00: VOLEVO DS 6 - DEO DS 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041522</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041522</guid>
+      <description><![CDATA[Wedstrijd: 3000D2K   CF, Datum: donderdag 11 maart, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 11 Mar 2027 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
