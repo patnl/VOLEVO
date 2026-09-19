@@ -4,8 +4,24 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 19 Sep 2026 18:04:36 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 20:36:52 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Zovoc MA 2 - VOLEVO MA 2, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026332</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026332</guid>
+      <description><![CDATA[Wedstrijd: Zovoc MA 2 - VOLEVO MA 2, Uitslag: 2-3, Setstanden: 26-24, 26-24, 23-25, 16-25, 14-16]]></description>
+      <pubDate>Sat, 19 Sep 2026 18:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO HS 2 - VELO HS 1, Uitslag: 3-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2010540</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2010540</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 2 - VELO HS 1, Uitslag: 3-0, Setstanden: 25-16, 25-16, 25-21]]></description>
+      <pubDate>Sat, 19 Sep 2026 17:30:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Limes MA 1 - VOLEVO MA 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025489</link>
