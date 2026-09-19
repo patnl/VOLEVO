@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 19 Sep 2026 05:25:02 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 10:13:39 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[19 sep 9:00: Leython DC MB 2 - VOLEVO MB 2]]></title>
@@ -15,60 +15,60 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:30: VOLEVO L3 1 - Netwerk L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 1 - Netwerk L3 1, Uitslag: 1-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062115</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062115</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BAAE, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 1 - Netwerk L3 1, Uitslag: 1-1, Setstanden: 15-15]]></description>
       <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:30: VOLEVO L3 2 - Netwerk L3 4]]></title>
+      <title><![CDATA[VOLEVO L3 2 - Netwerk L3 4, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062122</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062122</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BACG, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - Netwerk L3 4, Uitslag: 2-0, Setstanden: 4-1]]></description>
       <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:30: Kalinko L3 2 - VOLEVO L3 3]]></title>
+      <title><![CDATA[Kalinko L3 2 - VOLEVO L3 3, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062129</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062129</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32CAAE, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko L3 2 - VOLEVO L3 3, Uitslag: 0-2, Setstanden: 10-11]]></description>
       <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:30: VELO L3 2 - VOLEVO L3 5]]></title>
+      <title><![CDATA[VELO L3 2 - VOLEVO L3 5, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062136</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062136</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32CACG, Datum: zaterdag 19 september, 9:30, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VELO L3 2 - VOLEVO L3 5, Uitslag: 2-0, Setstanden: 19-10]]></description>
       <pubDate>Sat, 19 Sep 2026 09:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:40: VELO L2 3 - VOLEVO L2 1]]></title>
+      <title><![CDATA[VELO L2 3 - VOLEVO L2 1, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2066809</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2066809</guid>
-      <description><![CDATA[Wedstrijd: 3000VH21BACD, Datum: zaterdag 19 september, 9:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VELO L2 3 - VOLEVO L2 1, Uitslag: 2-0, Setstanden: 38-18]]></description>
       <pubDate>Sat, 19 Sep 2026 09:40:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:40: VELO L3 1 - VOLEVO L3 4]]></title>
+      <title><![CDATA[VELO L3 1 - VOLEVO L3 4, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062137</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062137</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32CAFD, Datum: zaterdag 19 september, 9:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VELO L3 1 - VOLEVO L3 4, Uitslag: 0-2, Setstanden: 10-23]]></description>
       <pubDate>Sat, 19 Sep 2026 09:40:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:40: VOLEVO L3 5 - Monza L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 5 - Monza L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062130</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062130</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32CAGB, Datum: zaterdag 19 september, 9:40, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - Monza L3 1, Uitslag: 0-2, Setstanden: 4-36]]></description>
       <pubDate>Sat, 19 Sep 2026 09:40:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[19 sep 9:45: Inter Rijswijk JC 1 - VOLEVO MC 1]]></title>
@@ -79,28 +79,28 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:50: Inter Rijswijk L2 1 - VOLEVO L2 1]]></title>
+      <title><![CDATA[Inter Rijswijk L2 1 - VOLEVO L2 1, Uitslag: 1-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2066810</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2066810</guid>
-      <description><![CDATA[Wedstrijd: 3000VH21BAFD, Datum: zaterdag 19 september, 9:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L2 1 - VOLEVO L2 1, Uitslag: 1-1, Setstanden: 10-10]]></description>
       <pubDate>Sat, 19 Sep 2026 09:50:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:50: VOLEVO L3 2 - VOLEVO L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 2 - VOLEVO L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062124</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062124</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BACA, Datum: zaterdag 19 september, 9:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - VOLEVO L3 1, Uitslag: 0-2, Setstanden: 13-23]]></description>
       <pubDate>Sat, 19 Sep 2026 09:50:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 9:50: VOLEVO L3 4 - VOLEVO L3 3]]></title>
+      <title><![CDATA[VOLEVO L3 4 - VOLEVO L3 3, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062131</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062131</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32CADE, Datum: zaterdag 19 september, 9:50, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 4 - VOLEVO L3 3, Uitslag: 2-0, Setstanden: 14-12]]></description>
       <pubDate>Sat, 19 Sep 2026 09:50:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[19 sep 10:00: Inter Rijswijk L3 5 - VOLEVO L3 1]]></title>
@@ -111,12 +111,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[19 sep 10:00: VELO L3 1 - VOLEVO L3 5]]></title>
+      <title><![CDATA[VELO L3 1 - VOLEVO L3 5, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2062139</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2062139</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32CAFG, Datum: zaterdag 19 september, 10:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: VELO L3 1 - VOLEVO L3 5, Uitslag: 2-0, Setstanden: 28-15]]></description>
       <pubDate>Sat, 19 Sep 2026 10:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[19 sep 10:10: Inter Rijswijk L3 4 - VOLEVO L3 2]]></title>
