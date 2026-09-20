@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-19T20:56:21+00:00",
+ "gegenereerd": "2026-09-20T05:08:53+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2663,20 +2663,6 @@
    "lon": 4.6614,
    "veld": "2",
    "dwf": "https://dwf.nevobo.nl/matches/75b2e6a6-1a47-42ab-a369-c93d5e81f664"
-  },
-  {
-   "tijdstip": "2026-10-09T21:00:00+02:00",
-   "thuis": "VOLEVO DS 6",
-   "uit": "DEO DS 2",
-   "status": "gepland",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/0928c543-863a-4b98-99b3-98339512b784"
   },
   {
    "tijdstip": "2026-10-09T21:00:00+02:00",
@@ -6764,6 +6750,20 @@
    "lon": 4.91002,
    "veld": "3",
    "dwf": "https://dwf.nevobo.nl/matches/0da400db-9504-4ce4-bcff-3fab8330f44d"
+  },
+  {
+   "tijdstip": "2027-03-11T21:00:00+01:00",
+   "thuis": "VOLEVO DS 6",
+   "uit": "DEO DS 2",
+   "status": "gepland",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/0928c543-863a-4b98-99b3-98339512b784"
   },
   {
    "tijdstip": "2027-03-11T21:00:00+01:00",
