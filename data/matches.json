@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-20T11:42:47+00:00",
+ "gegenereerd": "2026-09-20T16:23:00+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -537,15 +537,14 @@
    "tijdstip": "2026-09-18T21:00:00+02:00",
    "thuis": "Zovoc DS 2",
    "uit": "VOLEVO DS 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
    "postcode": "2717AX",
    "lat": 52.06786,
    "lon": 4.46189,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/9662e04e-9738-4122-8392-8e73387f82d4"
+   "veld": "1"
   },
   {
    "tijdstip": "2026-09-18T21:30:00+02:00",
