@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sun, 20 Sep 2026 08:16:53 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 13:42:58 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[25 sep 19:00: Kalinko DS 2 - VOLEVO DS 3]]></title>
@@ -799,14 +799,6 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 15:00: VOLEVO MB 1 - Ancora RVV MB 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2025619</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025619</guid>
-      <description><![CDATA[Wedstrijd: 3000MBHB1 EC, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
       <title><![CDATA[17 okt 15:00: VOLEVO MC 2 - ZVH JC 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030157</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030157</guid>
@@ -1332,6 +1324,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030123</guid>
       <description><![CDATA[Wedstrijd: 3000MB2N1 FD, Datum: woensdag 11 november, 12:15, Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
       <pubDate>Wed, 11 Nov 2026 12:15:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[12 nov 19:30: VOLEVO MB 1 - Ancora RVV MB 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025619</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025619</guid>
+      <description><![CDATA[Wedstrijd: 3000MBHB1 EC, Datum: donderdag 12 november, 19:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 12 Nov 2026 19:30:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
