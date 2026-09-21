@@ -1,7 +1,7 @@
 {
  "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260911-Officialbeurten-sept-dec-web.xlsx",
  "bestand": "20260911-Officialbeurten-sept-dec-web.xlsx",
- "ingelezen": "2026-09-20T09:27:25Z",
+ "ingelezen": "2026-09-21T10:12:34Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -254,6 +254,24 @@
    "uit": "DEO DS 2",
    "taak": "teller",
    "team": "DS 9",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-10-17",
+   "tijd": "15:00",
+   "thuis": "VOLEVO MB 1",
+   "uit": "Ancora RVV MB 1",
+   "taak": "scheidsrechter (spelregeltoets)",
+   "team": "HS 4",
+   "opmerking": "Let op! Spelen hoofdklasse"
+  },
+  {
+   "dag": "2026-10-17",
+   "tijd": "15:00",
+   "thuis": "VOLEVO MB 1",
+   "uit": "Ancora RVV MB 1",
+   "taak": "teller",
+   "team": "ouders",
    "opmerking": null
   },
   {
@@ -1219,18 +1237,6 @@
    {
     "taak": "teller",
     "team": "MC 5",
-    "opmerking": null
-   }
-  ],
-  "2026-10-17T15:00:00+02:00|VOLEVO MB 1|Ancora RVV MB 1": [
-   {
-    "taak": "scheidsrechter (spelregeltoets)",
-    "team": "HS 4",
-    "opmerking": "Let op! Spelen hoofdklasse"
-   },
-   {
-    "taak": "teller",
-    "team": "ouders",
     "opmerking": null
    }
   ],
