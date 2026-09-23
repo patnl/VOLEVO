@@ -4,8 +4,24 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 23 Sep 2026 12:53:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 17:19:06 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[: VOLEVO DS 3 - Inter Rijswijk DS 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2070604</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070604</guid>
+      <description><![CDATA[Wedstrijd: 3000BD2A  16, Datum: , Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate/>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[: VELO HS 2 - VOLEVO HS 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2070691</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070691</guid>
+      <description><![CDATA[Wedstrijd: 3000BH2A  17, Datum: , Speellocatie: Velo-hal, Noordweg 26, 2291EE  Wateringen]]></description>
+      <pubDate/>
+      <nevobo:status>concept</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[25 sep 19:00: Kalinko DS 2 - VOLEVO DS 3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009485</link>
@@ -687,12 +703,36 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[17 okt 11:00: Leython DC MA 2 - VOLEVO MA 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2067854</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067854</guid>
+      <description><![CDATA[Wedstrijd: 3000BM2A  13, Datum: zaterdag 17 oktober, 11:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <pubDate>Sat, 17 Oct 2026 11:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[17 okt 12:15: ZVH MC 1 - VOLEVO JC 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029791</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029791</guid>
       <description><![CDATA[Wedstrijd: 3000XC1H1 GE, Datum: zaterdag 17 oktober, 12:15, Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
       <pubDate>Sat, 17 Oct 2026 12:15:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[17 okt 12:30: VOLEVO MB 1 - Zovoc MB 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2067980</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067980</guid>
+      <description><![CDATA[Wedstrijd: 3000BM2B  13, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[17 okt 12:30: VOLEVO JC 1 - VELO MC 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2067992</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067992</guid>
+      <description><![CDATA[Wedstrijd: 3000BX2C  13, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
     </item>
     <item>
       <title><![CDATA[17 okt 12:30: VOLEVO MA 5 - DEO MA 1]]></title>
