@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 23 Sep 2026 07:47:57 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 12:53:02 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Zovoc MA 2 - VOLEVO MA 2, Uitslag: 2-3]]></title>
@@ -395,6 +395,14 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035432</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035432</guid>
       <description><![CDATA[Wedstrijd: VOLEVO MA 6 - Zovoc MA 3, Uitslag: 0-4, Setstanden: 18-25, 12-25, 15-25, 18-25]]></description>
+      <pubDate>Sat, 19 Sep 2026 12:30:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MA 3 - Kalinko MA 1, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026280</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026280</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 3 - Kalinko MA 1, Uitslag: 0-4, Setstanden: 23-25, 12-25, 9-25, 10-25]]></description>
       <pubDate>Sat, 19 Sep 2026 12:30:00 +0200</pubDate>
       <nevobo:status>gespeeld</nevobo:status>
     </item>
