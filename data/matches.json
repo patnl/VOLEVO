@@ -1,6 +1,34 @@
 {
- "gegenereerd": "2026-09-23T11:56:39+00:00",
+ "gegenereerd": "2026-09-23T17:22:33+00:00",
  "wedstrijden": [
+  {
+   "tijdstip": null,
+   "thuis": "VELO HS 2",
+   "uit": "VOLEVO HS 2",
+   "status": "concept",
+   "hal": "Velo-hal",
+   "plaats": "Wateringen",
+   "adres": "Noordweg 26",
+   "postcode": "2291EE",
+   "lat": 52.03117,
+   "lon": 4.27459,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/8ca3b770-970f-4f70-8af4-9c48f6fb499d"
+  },
+  {
+   "tijdstip": null,
+   "thuis": "VOLEVO DS 3",
+   "uit": "Inter Rijswijk DS 3",
+   "status": "concept",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/3cda0cff-b7dd-4d4d-86bb-47998d1a031e"
+  },
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
    "thuis": "VOLEVO DS 3",
@@ -2943,6 +2971,20 @@
    "dwf": "https://dwf.nevobo.nl/matches/054dba16-2c30-4f78-bb3e-a0919f2008f8"
   },
   {
+   "tijdstip": "2026-10-17T11:00:00+02:00",
+   "thuis": "Leython DC MA 2",
+   "uit": "VOLEVO MA 1",
+   "status": "concept",
+   "hal": "De Bloemerd",
+   "plaats": "Leiderdorp",
+   "adres": "Bloemerd 1",
+   "postcode": "2353BZ",
+   "lat": 52.16411,
+   "lon": 4.54493,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/0cf36b74-9d8a-4cfa-a8f1-12e111f2ea85"
+  },
+  {
    "tijdstip": "2026-10-17T12:15:00+02:00",
    "thuis": "ZVH MC 1",
    "uit": "VOLEVO JC 1",
@@ -2955,6 +2997,20 @@
    "lon": 4.583,
    "veld": "1",
    "dwf": "https://dwf.nevobo.nl/matches/cbd6d22d-d941-455e-a642-9c5ad58e2082"
+  },
+  {
+   "tijdstip": "2026-10-17T12:30:00+02:00",
+   "thuis": "VOLEVO JC 1",
+   "uit": "VELO MC 1",
+   "status": "concept",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/51bbde9f-82b8-40df-a3dd-a0a9da6f22ff"
   },
   {
    "tijdstip": "2026-10-17T12:30:00+02:00",
@@ -2983,6 +3039,20 @@
    "lon": 4.39517,
    "veld": "7",
    "dwf": "https://dwf.nevobo.nl/matches/8764bbc4-40c8-4066-9ad9-b175832c6948"
+  },
+  {
+   "tijdstip": "2026-10-17T12:30:00+02:00",
+   "thuis": "VOLEVO MB 1",
+   "uit": "Zovoc MB 1",
+   "status": "concept",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/5b4cd726-bc09-4358-966f-d02bf388994f"
   },
   {
    "tijdstip": "2026-10-17T12:30:00+02:00",
