@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-20T16:23:00+00:00",
+ "gegenereerd": "2026-09-23T11:56:39+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -1143,15 +1143,14 @@
    "tijdstip": "2026-09-19T12:30:00+02:00",
    "thuis": "VOLEVO MA 3",
    "uit": "Kalinko MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
    "postcode": "2262ED",
    "lat": 52.09332,
    "lon": 4.39517,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/5fb0baa8-f9ca-43b1-bafc-5e97d4060387"
+   "veld": "1"
   },
   {
    "tijdstip": "2026-09-19T12:30:00+02:00",
