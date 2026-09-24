@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-23T17:22:33+00:00",
+ "gegenereerd": "2026-09-24T12:04:51+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -2677,6 +2677,20 @@
    "dwf": "https://dwf.nevobo.nl/matches/89fefca3-12e8-4641-87cf-9bd7bee77ee6"
   },
   {
+   "tijdstip": "2026-10-09T20:15:00+02:00",
+   "thuis": "ZVH MB 2",
+   "uit": "VOLEVO MB 4",
+   "status": "gepland",
+   "hal": "Swanla",
+   "plaats": "Zevenhuizen ZH",
+   "adres": "Burgemeester Klinkhamerweg 86",
+   "postcode": "2761BJ",
+   "lat": 52.01443,
+   "lon": 4.583,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/fe2cee7a-4cf1-434e-988d-42686ceeed98"
+  },
+  {
    "tijdstip": "2026-10-09T21:00:00+02:00",
    "thuis": "Castellum HS 1",
    "uit": "VOLEVO HS 2",
@@ -4117,20 +4131,6 @@
    "lon": 4.46189,
    "veld": "4",
    "dwf": "https://dwf.nevobo.nl/matches/c4e651c7-f8ac-4697-84af-22f874964388"
-  },
-  {
-   "tijdstip": "2026-11-11T12:15:00+01:00",
-   "thuis": "ZVH MB 2",
-   "uit": "VOLEVO MB 4",
-   "status": "gepland",
-   "hal": "Swanla",
-   "plaats": "Zevenhuizen ZH",
-   "adres": "Burgemeester Klinkhamerweg 86",
-   "postcode": "2761BJ",
-   "lat": 52.01443,
-   "lon": 4.583,
-   "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/fe2cee7a-4cf1-434e-988d-42686ceeed98"
   },
   {
    "tijdstip": "2026-11-12T19:30:00+01:00",
