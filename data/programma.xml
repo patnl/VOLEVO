@@ -4,24 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 25 Sep 2026 13:17:31 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 17:52:59 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[: VOLEVO DS 3 - Inter Rijswijk DS 3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2070604</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070604</guid>
-      <description><![CDATA[Wedstrijd: 3000BD2A  16, Datum: , Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate/>
-      <nevobo:status>concept</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[: VELO HS 2 - VOLEVO HS 2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2070691</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070691</guid>
-      <description><![CDATA[Wedstrijd: 3000BH2A  17, Datum: , Speellocatie: Velo-hal, Noordweg 26, 2291EE  Wateringen]]></description>
-      <pubDate/>
-      <nevobo:status>concept</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[25 sep 19:00: Kalinko DS 2 - VOLEVO DS 3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009485</link>
@@ -661,6 +645,22 @@
       <description><![CDATA[Wedstrijd: 3000XCHB1 FD, Datum: zaterdag 10 oktober, 17:00, Speellocatie: De Dijk, Sportcomplex Schenkeldijk 10, 3328LE  Dordrecht]]></description>
       <pubDate>Sat, 10 Oct 2026 17:00:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[14 okt 21:00: VELO HS 2 - VOLEVO HS 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2070691</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070691</guid>
+      <description><![CDATA[Wedstrijd: 3000BH2A  17, Datum: woensdag 14 oktober, 21:00, Speellocatie: Velo-hal, Noordweg 26, 2291EE  Wateringen]]></description>
+      <pubDate>Wed, 14 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[15 okt 21:00: VOLEVO DS 3 - Inter Rijswijk DS 3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2070604</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070604</guid>
+      <description><![CDATA[Wedstrijd: 3000BD2A  16, Datum: donderdag 15 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
     </item>
     <item>
       <title><![CDATA[15 okt 21:00: VOLEVO DS 5 - Sovicos DS 2]]></title>
