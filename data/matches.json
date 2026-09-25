@@ -1,20 +1,6 @@
 {
- "gegenereerd": "2026-09-24T12:04:51+00:00",
+ "gegenereerd": "2026-09-25T12:05:12+00:00",
  "wedstrijden": [
-  {
-   "tijdstip": null,
-   "thuis": "VELO HS 2",
-   "uit": "VOLEVO HS 2",
-   "status": "concept",
-   "hal": "Velo-hal",
-   "plaats": "Wateringen",
-   "adres": "Noordweg 26",
-   "postcode": "2291EE",
-   "lat": 52.03117,
-   "lon": 4.27459,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/8ca3b770-970f-4f70-8af4-9c48f6fb499d"
-  },
   {
    "tijdstip": null,
    "thuis": "VOLEVO DS 3",
@@ -2118,7 +2104,7 @@
   },
   {
    "tijdstip": "2026-09-26T15:45:00+02:00",
-   "thuis": "Quadrant Bouw VTC Woerden DS 1",
+   "thuis": "VTC Woerden DS 1",
    "uit": "VOLEVO DS 2",
    "status": "gepland",
    "hal": "Thijs van der Polshal",
@@ -2901,6 +2887,20 @@
    "dwf": "https://dwf.nevobo.nl/matches/5be0f43e-bbd1-457e-86ae-8d303cf741a5"
   },
   {
+   "tijdstip": "2026-10-14T21:00:00+02:00",
+   "thuis": "VELO HS 2",
+   "uit": "VOLEVO HS 2",
+   "status": "concept",
+   "hal": "Velo-hal",
+   "plaats": "Wateringen",
+   "adres": "Noordweg 26",
+   "postcode": "2291EE",
+   "lat": 52.03117,
+   "lon": 4.27459,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/8ca3b770-970f-4f70-8af4-9c48f6fb499d"
+  },
+  {
    "tijdstip": "2026-10-15T21:00:00+02:00",
    "thuis": "VOLEVO DS 5",
    "uit": "Sovicos DS 2",
@@ -2958,6 +2958,20 @@
   },
   {
    "tijdstip": "2026-10-16T19:30:00+02:00",
+   "thuis": "Leython DC MA 2",
+   "uit": "VOLEVO MA 1",
+   "status": "concept",
+   "hal": "De Bloemerd",
+   "plaats": "Leiderdorp",
+   "adres": "Bloemerd 1",
+   "postcode": "2353BZ",
+   "lat": 52.16411,
+   "lon": 4.54493,
+   "veld": "2",
+   "dwf": "https://dwf.nevobo.nl/matches/0cf36b74-9d8a-4cfa-a8f1-12e111f2ea85"
+  },
+  {
+   "tijdstip": "2026-10-16T19:30:00+02:00",
    "thuis": "Liusna JA 1",
    "uit": "VOLEVO JA 2",
    "status": "gepland",
@@ -2983,20 +2997,6 @@
    "lon": 4.46244,
    "veld": "1",
    "dwf": "https://dwf.nevobo.nl/matches/054dba16-2c30-4f78-bb3e-a0919f2008f8"
-  },
-  {
-   "tijdstip": "2026-10-17T11:00:00+02:00",
-   "thuis": "Leython DC MA 2",
-   "uit": "VOLEVO MA 1",
-   "status": "concept",
-   "hal": "De Bloemerd",
-   "plaats": "Leiderdorp",
-   "adres": "Bloemerd 1",
-   "postcode": "2353BZ",
-   "lat": 52.16411,
-   "lon": 4.54493,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/0cf36b74-9d8a-4cfa-a8f1-12e111f2ea85"
   },
   {
    "tijdstip": "2026-10-17T12:15:00+02:00",
@@ -7689,7 +7689,7 @@
   {
    "tijdstip": "2027-04-17T15:00:00+02:00",
    "thuis": "VOLEVO DS 2",
-   "uit": "Quadrant Bouw VTC Woerden DS 1",
+   "uit": "VTC Woerden DS 1",
    "status": "gepland",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
