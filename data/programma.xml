@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 25 Sep 2026 07:53:29 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 13:17:31 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: VOLEVO DS 3 - Inter Rijswijk DS 3]]></title>
@@ -215,7 +215,7 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 15:45: Quadrant Bouw VTC Woerden DS 1 - VOLEVO DS 2]]></title>
+      <title><![CDATA[26 sep 15:45: VTC Woerden DS 1 - VOLEVO DS 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009429</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009429</guid>
       <description><![CDATA[Wedstrijd: 30003BD   BI, Datum: zaterdag 26 september, 15:45, Speellocatie: Thijs van der Polshal, Jozef Israëlslaan 58, 3443CT  Woerden]]></description>
@@ -695,6 +695,14 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[16 okt 19:30: Leython DC MA 2 - VOLEVO MA 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2067854</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067854</guid>
+      <description><![CDATA[Wedstrijd: 3000BM2A  13, Datum: vrijdag 16 oktober, 19:30, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <pubDate>Fri, 16 Oct 2026 19:30:00 +0200</pubDate>
+      <nevobo:status>concept</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[16 okt 19:30: Liusna JA 1 - VOLEVO JA 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028013</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028013</guid>
@@ -709,14 +717,6 @@
       <description><![CDATA[Wedstrijd: 3000DPE   AH, Datum: vrijdag 16 oktober, 21:30, Speellocatie: Universitair SC, Goliuspad 22, 2333BH  Leiden]]></description>
       <pubDate>Fri, 16 Oct 2026 21:30:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[17 okt 11:00: Leython DC MA 2 - VOLEVO MA 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2067854</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067854</guid>
-      <description><![CDATA[Wedstrijd: 3000BM2A  13, Datum: zaterdag 17 oktober, 11:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
-      <pubDate>Sat, 17 Oct 2026 11:00:00 +0200</pubDate>
-      <nevobo:status>concept</nevobo:status>
     </item>
     <item>
       <title><![CDATA[17 okt 12:15: ZVH MC 1 - VOLEVO JC 1]]></title>
@@ -3407,7 +3407,7 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 apr 15:00: VOLEVO DS 2 - Quadrant Bouw VTC Woerden DS 1]]></title>
+      <title><![CDATA[17 apr 15:00: VOLEVO DS 2 - VTC Woerden DS 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009715</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009715</guid>
       <description><![CDATA[Wedstrijd: 30003BD   IB, Datum: zaterdag 17 april, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
