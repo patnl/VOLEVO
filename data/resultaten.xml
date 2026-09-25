@@ -4,8 +4,64 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 25 Sep 2026 21:51:18 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 01:06:50 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[DEO MA 1 - VOLEVO MA 5, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2035440</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035440</guid>
+      <description><![CDATA[Wedstrijd: DEO MA 1 - VOLEVO MA 5, Uitslag: 3-2, Setstanden: 25-16, 17-25, 25-23, 18-25, 15-9]]></description>
+      <pubDate>Fri, 25 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko HS 3 - VOLEVO HS 2, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2020045</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2020045</guid>
+      <description><![CDATA[Wedstrijd: Kalinko HS 3 - VOLEVO HS 2, Uitslag: 1-3, Setstanden: 28-26, 21-25, 16-25, 10-25]]></description>
+      <pubDate>Fri, 25 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO HS 4 - Jupiter HS 2, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2017929</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017929</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 4 - Jupiter HS 2, Uitslag: 3-1, Setstanden: 21-25, 25-14, 25-15, 25-12]]></description>
+      <pubDate>Fri, 25 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko HS 4 - VOLEVO HS 3, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2016861</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2016861</guid>
+      <description><![CDATA[Wedstrijd: Kalinko HS 4 - VOLEVO HS 3, Uitslag: 1-3, Setstanden: 25-17, 19-25, 17-25, 10-25]]></description>
+      <pubDate>Fri, 25 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 9 - Castellum DS 3, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041554</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041554</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 9 - Castellum DS 3, Uitslag: 0-4, Setstanden: 2-25, 20-25, 6-25, 3-25]]></description>
+      <pubDate>Fri, 25 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 7 - VVV Delta DS 3, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041502</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041502</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 7 - VVV Delta DS 3, Uitslag: 1-3, Setstanden: 17-25, 10-25, 25-22, 20-25]]></description>
+      <pubDate>Fri, 25 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Sliedrecht Sport HS 4 - VOLEVO HS 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1963808</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1963808</guid>
+      <description><![CDATA[Wedstrijd: Sliedrecht Sport HS 4 - VOLEVO HS 1, Uitslag: 3-1, Setstanden: 25-20, 25-20, 28-26, 26-28]]></description>
+      <pubDate>Fri, 25 Sep 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Netwerk MC 1 - VOLEVO MC 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030987</link>
