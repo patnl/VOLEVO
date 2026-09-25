@@ -4,87 +4,87 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 25 Sep 2026 17:52:59 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 21:51:17 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
-      <title><![CDATA[25 sep 19:00: Kalinko DS 2 - VOLEVO DS 3]]></title>
+      <title><![CDATA[Kalinko DS 2 - VOLEVO DS 3, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009485</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009485</guid>
-      <description><![CDATA[Wedstrijd: 30003CD   CH, Datum: vrijdag 25 september, 19:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko DS 2 - VOLEVO DS 3, Uitslag: 1-3, Setstanden: 26-28, 20-25, 25-20, 18-25]]></description>
       <pubDate>Fri, 25 Sep 2026 19:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:00: VOLEVO DS 6 - Kalinko DS 7]]></title>
+      <title><![CDATA[VOLEVO DS 6 - Kalinko DS 7, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041524</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041524</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   CH, Datum: vrijdag 25 september, 19:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 6 - Kalinko DS 7, Uitslag: 4-0, Setstanden: 26-24, 25-22, 25-20, 25-16]]></description>
       <pubDate>Fri, 25 Sep 2026 19:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:00: VOLEVO DS 5 - SKC DS 6]]></title>
+      <title><![CDATA[VOLEVO DS 5 - SKC DS 6, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041531</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041531</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   DG, Datum: vrijdag 25 september, 19:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 5 - SKC DS 6, Uitslag: 2-3, Setstanden: 25-23, 25-17, 22-25, 18-25, 9-15]]></description>
       <pubDate>Fri, 25 Sep 2026 19:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:00: VOLEVO DS 8 - Kratos '08 DS 6]]></title>
+      <title><![CDATA[VOLEVO DS 8 - Kratos '08 DS 6, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041574</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041574</guid>
-      <description><![CDATA[Wedstrijd: 3000D3M   DG, Datum: vrijdag 25 september, 19:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 8 - Kratos '08 DS 6, Uitslag: 0-4, Setstanden: 14-25, 23-25, 21-25, 23-25]]></description>
       <pubDate>Fri, 25 Sep 2026 19:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:00: VOLEVO HS 5 - Punch HS 6]]></title>
+      <title><![CDATA[VOLEVO HS 5 - Punch HS 6, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025768</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025768</guid>
-      <description><![CDATA[Wedstrijd: 3000H2F   DG, Datum: vrijdag 25 september, 19:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 5 - Punch HS 6, Uitslag: 3-2, Setstanden: 19-25, 30-28, 25-18, 22-25, 15-10]]></description>
       <pubDate>Fri, 25 Sep 2026 19:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:00: Kalinko MB 2 - VOLEVO MB 2]]></title>
+      <title><![CDATA[Kalinko MB 2 - VOLEVO MB 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029545</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029545</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1I1 DF, Datum: vrijdag 25 september, 19:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko MB 2 - VOLEVO MB 2, Uitslag: 0-4, Setstanden: 17-25, 14-25, 30-32, 12-25]]></description>
       <pubDate>Fri, 25 Sep 2026 19:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:00: Castellum MB 1 - VOLEVO MB 4]]></title>
+      <title><![CDATA[Castellum MB 1 - VOLEVO MB 4, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030058</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030058</guid>
-      <description><![CDATA[Wedstrijd: 3000MB2N1 AD, Datum: vrijdag 25 september, 19:00, Speellocatie: Sporthal de Meteoor, Henry Dunantweg 3, 2402NM  Alphen aan den Rijn]]></description>
+      <description><![CDATA[Wedstrijd: Castellum MB 1 - VOLEVO MB 4, Uitslag: 1-3, Setstanden: 21-25, 19-25, 17-25, 25-8]]></description>
       <pubDate>Fri, 25 Sep 2026 19:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:30: Scarabee JA 1 - VOLEVO JA 2]]></title>
+      <title><![CDATA[Scarabee JA 1 - VOLEVO JA 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028024</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028024</guid>
-      <description><![CDATA[Wedstrijd: 3000JA2E1 FB, Datum: vrijdag 25 september, 19:30, Speellocatie: Sporthal de Vaart, Beverlanderhof 28, 2461BT  Ter Aar]]></description>
+      <description><![CDATA[Wedstrijd: Scarabee JA 1 - VOLEVO JA 2, Uitslag: 0-4, Setstanden: 12-25, 20-25, 19-25, 12-25]]></description>
       <pubDate>Fri, 25 Sep 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:30: Inter Rijswijk JB 3 - VOLEVO JB 1]]></title>
+      <title><![CDATA[Inter Rijswijk JB 3 - VOLEVO JB 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026709</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026709</guid>
-      <description><![CDATA[Wedstrijd: 3000JB1C1 AC, Datum: vrijdag 25 september, 19:30, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk JB 3 - VOLEVO JB 1, Uitslag: 0-4, Setstanden: 13-25, 7-25, 12-25, 15-25]]></description>
       <pubDate>Fri, 25 Sep 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[25 sep 19:30: Netwerk MC 1 - VOLEVO MC 4]]></title>
+      <title><![CDATA[Netwerk MC 1 - VOLEVO MC 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030987</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030987</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2O1 DB, Datum: vrijdag 25 september, 19:30, Speellocatie: Viergang, Sportlaan 1 a, 2641AZ  Pijnacker]]></description>
+      <description><![CDATA[Wedstrijd: Netwerk MC 1 - VOLEVO MC 4, Uitslag: 4-0, Setstanden: 25-14, 25-19, 25-14, 25-17]]></description>
       <pubDate>Fri, 25 Sep 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[25 sep 21:00: Sliedrecht Sport HS 4 - VOLEVO HS 1]]></title>
