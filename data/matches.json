@@ -1,20 +1,6 @@
 {
- "gegenereerd": "2026-09-25T12:05:12+00:00",
+ "gegenereerd": "2026-09-25T17:27:08+00:00",
  "wedstrijden": [
-  {
-   "tijdstip": null,
-   "thuis": "VOLEVO DS 3",
-   "uit": "Inter Rijswijk DS 3",
-   "status": "concept",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/3cda0cff-b7dd-4d4d-86bb-47998d1a031e"
-  },
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
    "thuis": "VOLEVO DS 3",
@@ -2899,6 +2885,20 @@
    "lon": 4.27459,
    "veld": "1",
    "dwf": "https://dwf.nevobo.nl/matches/8ca3b770-970f-4f70-8af4-9c48f6fb499d"
+  },
+  {
+   "tijdstip": "2026-10-15T21:00:00+02:00",
+   "thuis": "VOLEVO DS 3",
+   "uit": "Inter Rijswijk DS 3",
+   "status": "concept",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/3cda0cff-b7dd-4d4d-86bb-47998d1a031e"
   },
   {
    "tijdstip": "2026-10-15T21:00:00+02:00",
