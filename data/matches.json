@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-26T11:40:16+00:00",
+ "gegenereerd": "2026-09-26T16:36:32+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2036,7 +2036,7 @@
    "tijdstip": "2026-09-26T13:00:00+02:00",
    "thuis": "Dinto MB 2",
    "uit": "VOLEVO MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Doorbraak",
    "plaats": "Warmenhuizen",
    "adres": "Doorbraak 18",
@@ -2044,13 +2044,13 @@
    "lat": 52.72151,
    "lon": 4.74297,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/daf7e325-8e23-4ae1-9a83-713ec975e142"
+   "dwf": "https://dwf.nevobo.nl/results/daf7e325-8e23-4ae1-9a83-713ec975e142/scoresheets/2ffd86c5-ef43-4a43-95b3-b744b1e74067"
   },
   {
    "tijdstip": "2026-09-26T13:00:00+02:00",
    "thuis": "Sliedrecht Sport DS 3",
    "uit": "VOLEVO DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Basis",
    "plaats": "Sliedrecht",
    "adres": "Benedenveer 3",
@@ -2058,13 +2058,13 @@
    "lat": 51.82752,
    "lon": 4.74483,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/8c6eea98-5b3a-4acb-9cad-8d6d2d29c9a7"
+   "dwf": "https://dwf.nevobo.nl/results/8c6eea98-5b3a-4acb-9cad-8d6d2d29c9a7/scoresheets/c719ac95-5213-4376-b47e-0f424cbfd62a"
   },
   {
    "tijdstip": "2026-09-26T14:15:00+02:00",
    "thuis": "ZVH MB 1",
    "uit": "VOLEVO MB 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Swanla",
    "plaats": "Zevenhuizen ZH",
    "adres": "Burgemeester Klinkhamerweg 86",
@@ -2072,13 +2072,13 @@
    "lat": 52.01443,
    "lon": 4.583,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/53939e7b-5260-4dd9-b779-93b6a5bdadae"
+   "dwf": "https://dwf.nevobo.nl/results/53939e7b-5260-4dd9-b779-93b6a5bdadae/scoresheets/27e75ef9-53ac-40e4-9cbd-adeff8c5d022"
   },
   {
    "tijdstip": "2026-09-26T14:30:00+02:00",
    "thuis": "Kalinko MA 1",
    "uit": "VOLEVO MA 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -2086,13 +2086,13 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/e5924df3-6070-4f6d-a87d-16c037c0b0e4"
+   "dwf": "https://dwf.nevobo.nl/results/e5924df3-6070-4f6d-a87d-16c037c0b0e4/scoresheets/3f939044-4269-4adb-ba6e-4eaaf1b4fc48"
   },
   {
    "tijdstip": "2026-09-26T15:45:00+02:00",
    "thuis": "VTC Woerden DS 1",
    "uit": "VOLEVO DS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Thijs van der Polshal",
    "plaats": "Woerden",
    "adres": "Jozef Israëlslaan 58",
@@ -2100,13 +2100,13 @@
    "lat": 52.09199,
    "lon": 4.86971,
    "veld": "H1",
-   "dwf": "https://dwf.nevobo.nl/matches/f2f1af17-d08b-41be-8e7d-54dfc0ac90c4"
+   "dwf": "https://dwf.nevobo.nl/results/f2f1af17-d08b-41be-8e7d-54dfc0ac90c4/scoresheets/3850fde2-73a7-4a4f-9ccc-fd17d177b491"
   },
   {
    "tijdstip": "2026-09-26T16:00:00+02:00",
    "thuis": "Monza MA 1",
    "uit": "VOLEVO MA 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Wielepet",
    "plaats": "Monster",
    "adres": "Heijdseweg 9",
@@ -2114,13 +2114,13 @@
    "lat": 52.02805,
    "lon": 4.16851,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/8946b63b-6d07-4c4b-87d0-a5574d57d179"
+   "dwf": "https://dwf.nevobo.nl/results/8946b63b-6d07-4c4b-87d0-a5574d57d179/scoresheets/7ed6e55a-8e80-4f0f-be86-0e821c0c1dd1"
   },
   {
    "tijdstip": "2026-09-26T16:00:00+02:00",
    "thuis": "Monza MC 1",
    "uit": "VOLEVO MC 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Wielepet",
    "plaats": "Monster",
    "adres": "Heijdseweg 9",
@@ -2128,13 +2128,13 @@
    "lat": 52.02805,
    "lon": 4.16851,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/24436963-b9f5-42d5-94a2-b395652d9961"
+   "dwf": "https://dwf.nevobo.nl/results/24436963-b9f5-42d5-94a2-b395652d9961/scoresheets/ed9e2478-f01f-4a83-b5f5-b29c169e40ea"
   },
   {
    "tijdstip": "2026-09-26T17:00:00+02:00",
    "thuis": "Dosko/Thor JA 1",
    "uit": "VOLEVO JA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Waard",
    "plaats": "Bergambacht",
    "adres": "Meidoornstraat 7",
@@ -2142,7 +2142,7 @@
    "lat": 51.93325,
    "lon": 4.79014,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/6586f5d8-8eb4-466c-a527-e5d236febbe1"
+   "dwf": "https://dwf.nevobo.nl/results/6586f5d8-8eb4-466c-a527-e5d236febbe1/scoresheets/0373a100-4a08-42c0-9f85-ae476a5d0dd0"
   },
   {
    "tijdstip": "2026-10-01T21:00:00+02:00",
