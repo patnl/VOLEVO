@@ -4,13 +4,29 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 26 Sep 2026 17:54:12 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 21:03:32 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Dosko/Thor JA 1 - VOLEVO JA 1, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026578</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026578</guid>
+      <description><![CDATA[Wedstrijd: Dosko/Thor JA 1 - VOLEVO JA 1, Uitslag: 0-4, Setstanden: 14-25, 18-25, 15-25, 21-25]]></description>
+      <pubDate>Sat, 26 Sep 2026 17:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Monza MC 1 - VOLEVO MC 3, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035499</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035499</guid>
       <description><![CDATA[Wedstrijd: Monza MC 1 - VOLEVO MC 3, Uitslag: 0-4, Setstanden: 12-25, 15-25, 20-25, 11-25]]></description>
+      <pubDate>Sat, 26 Sep 2026 16:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Monza MA 1 - VOLEVO MA 6, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2028391</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2028391</guid>
+      <description><![CDATA[Wedstrijd: Monza MA 1 - VOLEVO MA 6, Uitslag: 3-1, Setstanden: 26-24, 24-26, 25-22, 25-23]]></description>
       <pubDate>Sat, 26 Sep 2026 16:00:00 +0200</pubDate>
       <nevobo:status>gespeeld</nevobo:status>
     </item>
