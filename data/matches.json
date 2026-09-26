@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-25T21:47:19+00:00",
+ "gegenereerd": "2026-09-26T11:40:16+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -1994,7 +1994,7 @@
    "tijdstip": "2026-09-26T11:00:00+02:00",
    "thuis": "Leython DC MA 1",
    "uit": "VOLEVO MA 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -2002,13 +2002,13 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/b1def3f3-a7ee-4ed5-b9d9-939e3d16daa4"
+   "dwf": "https://dwf.nevobo.nl/results/b1def3f3-a7ee-4ed5-b9d9-939e3d16daa4/scoresheets/415d3f50-bcb7-455f-b0b2-e05276c53f3e"
   },
   {
    "tijdstip": "2026-09-26T12:00:00+02:00",
    "thuis": "Punch HS 14",
    "uit": "VOLEVO HS 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "TU-Sportcentrum",
    "plaats": "Delft",
    "adres": "Mekelweg 8",
@@ -2016,13 +2016,13 @@
    "lat": 51.99555,
    "lon": 4.37641,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/0b1eabd7-0b0e-45fd-bb6f-f9336f90fd86"
+   "dwf": "https://dwf.nevobo.nl/results/0b1eabd7-0b0e-45fd-bb6f-f9336f90fd86/scoresheets/a40a988b-619e-44fb-a87a-6045396baba2"
   },
   {
    "tijdstip": "2026-09-26T12:15:00+02:00",
    "thuis": "ZVH JC 1",
    "uit": "VOLEVO MC 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Swanla",
    "plaats": "Zevenhuizen ZH",
    "adres": "Burgemeester Klinkhamerweg 86",
@@ -2030,7 +2030,7 @@
    "lat": 52.01443,
    "lon": 4.583,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/b31bc743-c812-40d1-9dc2-0aff7cf4805d"
+   "dwf": "https://dwf.nevobo.nl/results/b31bc743-c812-40d1-9dc2-0aff7cf4805d/scoresheets/9df988e3-f078-4309-af57-c7e291f9c563"
   },
   {
    "tijdstip": "2026-09-26T13:00:00+02:00",
