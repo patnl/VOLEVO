@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 26 Sep 2026 13:48:58 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 17:54:10 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Leython DC MA 1 - VOLEVO MA 3, Uitslag: 3-1]]></title>
@@ -31,44 +31,44 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 13:00: Sliedrecht Sport DS 3 - VOLEVO DS 1]]></title>
+      <title><![CDATA[Sliedrecht Sport DS 3 - VOLEVO DS 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1963676</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963676</guid>
-      <description><![CDATA[Wedstrijd: 90002ED   CH, Datum: zaterdag 26 september, 13:00, Speellocatie: De Basis, Benedenveer 3, 3363AW  Sliedrecht]]></description>
+      <description><![CDATA[Wedstrijd: Sliedrecht Sport DS 3 - VOLEVO DS 1, Uitslag: 3-1, Setstanden: 28-30, 26-24, 25-17, 25-17]]></description>
       <pubDate>Sat, 26 Sep 2026 13:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 13:00: Dinto MB 2 - VOLEVO MB 1]]></title>
+      <title><![CDATA[Dinto MB 2 - VOLEVO MB 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025561</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025561</guid>
-      <description><![CDATA[Wedstrijd: 3000MBHB1 AE, Datum: zaterdag 26 september, 13:00, Speellocatie: De Doorbraak, Doorbraak 18, 1749AM  Warmenhuizen]]></description>
+      <description><![CDATA[Wedstrijd: Dinto MB 2 - VOLEVO MB 1, Uitslag: 1-3, Setstanden: 17-25, 13-25, 18-25, 25-19]]></description>
       <pubDate>Sat, 26 Sep 2026 13:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 14:15: ZVH MB 1 - VOLEVO MB 3]]></title>
+      <title><![CDATA[ZVH MB 1 - VOLEVO MB 3, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029507</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029507</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1H1 FC, Datum: zaterdag 26 september, 14:15, Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
+      <description><![CDATA[Wedstrijd: ZVH MB 1 - VOLEVO MB 3, Uitslag: 4-0, Setstanden: 25-12, 25-20, 25-13, 25-18]]></description>
       <pubDate>Sat, 26 Sep 2026 14:15:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 14:30: Kalinko MA 1 - VOLEVO MA 4]]></title>
+      <title><![CDATA[Kalinko MA 1 - VOLEVO MA 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026309</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026309</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1J1 EA, Datum: zaterdag 26 september, 14:30, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko MA 1 - VOLEVO MA 4, Uitslag: 4-0, Setstanden: 25-15, 25-13, 25-9, 25-14]]></description>
       <pubDate>Sat, 26 Sep 2026 14:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 15:45: VTC Woerden DS 1 - VOLEVO DS 2]]></title>
+      <title><![CDATA[VTC Woerden DS 1 - VOLEVO DS 2, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009429</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009429</guid>
-      <description><![CDATA[Wedstrijd: 30003BD   BI, Datum: zaterdag 26 september, 15:45, Speellocatie: Thijs van der Polshal, Jozef Israëlslaan 58, 3443CT  Woerden]]></description>
+      <description><![CDATA[Wedstrijd: VTC Woerden DS 1 - VOLEVO DS 2, Uitslag: 3-1, Setstanden: 25-14, 25-17, 20-25, 25-18]]></description>
       <pubDate>Sat, 26 Sep 2026 15:45:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[26 sep 16:00: Monza MA 1 - VOLEVO MA 6]]></title>
@@ -79,12 +79,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[26 sep 16:00: Monza MC 1 - VOLEVO MC 3]]></title>
+      <title><![CDATA[Monza MC 1 - VOLEVO MC 3, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035499</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035499</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2S1 AD, Datum: zaterdag 26 september, 16:00, Speellocatie: De Wielepet, Heijdseweg 9, 2681VN  Monster]]></description>
+      <description><![CDATA[Wedstrijd: Monza MC 1 - VOLEVO MC 3, Uitslag: 0-4, Setstanden: 12-25, 15-25, 20-25, 11-25]]></description>
       <pubDate>Sat, 26 Sep 2026 16:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[26 sep 17:00: Dosko/Thor JA 1 - VOLEVO JA 1]]></title>

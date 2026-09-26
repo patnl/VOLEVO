@@ -4,8 +4,56 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 26 Sep 2026 13:49:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 17:54:12 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Monza MC 1 - VOLEVO MC 3, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2035499</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035499</guid>
+      <description><![CDATA[Wedstrijd: Monza MC 1 - VOLEVO MC 3, Uitslag: 0-4, Setstanden: 12-25, 15-25, 20-25, 11-25]]></description>
+      <pubDate>Sat, 26 Sep 2026 16:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VTC Woerden DS 1 - VOLEVO DS 2, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2009429</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009429</guid>
+      <description><![CDATA[Wedstrijd: VTC Woerden DS 1 - VOLEVO DS 2, Uitslag: 3-1, Setstanden: 25-14, 25-17, 20-25, 25-18]]></description>
+      <pubDate>Sat, 26 Sep 2026 15:45:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko MA 1 - VOLEVO MA 4, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026309</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026309</guid>
+      <description><![CDATA[Wedstrijd: Kalinko MA 1 - VOLEVO MA 4, Uitslag: 4-0, Setstanden: 25-15, 25-13, 25-9, 25-14]]></description>
+      <pubDate>Sat, 26 Sep 2026 14:30:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[ZVH MB 1 - VOLEVO MB 3, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2029507</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2029507</guid>
+      <description><![CDATA[Wedstrijd: ZVH MB 1 - VOLEVO MB 3, Uitslag: 4-0, Setstanden: 25-12, 25-20, 25-13, 25-18]]></description>
+      <pubDate>Sat, 26 Sep 2026 14:15:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Dinto MB 2 - VOLEVO MB 1, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025561</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025561</guid>
+      <description><![CDATA[Wedstrijd: Dinto MB 2 - VOLEVO MB 1, Uitslag: 1-3, Setstanden: 17-25, 13-25, 18-25, 25-19]]></description>
+      <pubDate>Sat, 26 Sep 2026 13:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Sliedrecht Sport DS 3 - VOLEVO DS 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1963676</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1963676</guid>
+      <description><![CDATA[Wedstrijd: Sliedrecht Sport DS 3 - VOLEVO DS 1, Uitslag: 3-1, Setstanden: 28-30, 26-24, 25-17, 25-17]]></description>
+      <pubDate>Sat, 26 Sep 2026 13:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[ZVH JC 1 - VOLEVO MC 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030141</link>
