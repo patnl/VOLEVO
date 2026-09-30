@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 30 Sep 2026 21:52:33 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 01:30:35 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[1 okt 21:00: VOLEVO DS 3 - Irene DS 1]]></title>
@@ -223,6 +223,14 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[8 okt 19:30: VOLEVO MB 1 - Zovoc MB 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2067980</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067980</guid>
+      <description><![CDATA[Wedstrijd: 3000BM2B  13, Datum: donderdag 8 oktober, 19:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 08 Oct 2026 19:30:00 +0200</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[9 okt 19:00: VOLEVO DS 7 - Sovicos DS 3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041500</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041500</guid>
@@ -420,7 +428,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2070691</guid>
       <description><![CDATA[Wedstrijd: 3000BH2A  17, Datum: woensdag 14 oktober, 21:00, Speellocatie: Velo-hal, Noordweg 26, 2291EE  Wateringen]]></description>
       <pubDate>Wed, 14 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[15 okt 21:00: VOLEVO DS 3 - Inter Rijswijk DS 3]]></title>
@@ -428,7 +436,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2070604</guid>
       <description><![CDATA[Wedstrijd: 3000BD2A  16, Datum: donderdag 15 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[15 okt 21:00: VOLEVO DS 5 - Sovicos DS 2]]></title>
@@ -468,7 +476,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2067854</guid>
       <description><![CDATA[Wedstrijd: 3000BM2A  13, Datum: vrijdag 16 oktober, 19:30, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
       <pubDate>Fri, 16 Oct 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[16 okt 19:30: Liusna JA 1 - VOLEVO JA 2]]></title>
@@ -495,20 +503,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO MB 1 - Zovoc MB 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2067980</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067980</guid>
-      <description><![CDATA[Wedstrijd: 3000BM2B  13, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>concept</nevobo:status>
-    </item>
-    <item>
       <title><![CDATA[17 okt 12:30: VOLEVO JC 1 - VELO MC 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2067992</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2067992</guid>
       <description><![CDATA[Wedstrijd: 3000BX2C  13, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[17 okt 12:30: VOLEVO MA 5 - DEO MA 1]]></title>
