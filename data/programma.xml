@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 30 Sep 2026 10:06:03 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 16:55:41 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[1 okt 21:00: VOLEVO DS 3 - Irene DS 1]]></title>
@@ -44,14 +44,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2018007</guid>
       <description><![CDATA[Wedstrijd: 3000H2I   FD, Datum: vrijdag 2 oktober, 21:15, Speellocatie: Viergang, Sportlaan 1 a, 2641AZ  Pijnacker]]></description>
       <pubDate>Fri, 02 Oct 2026 21:15:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[2 okt 21:30: DEO DS 2 - VOLEVO DS 5]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041537</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041537</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   FD, Datum: vrijdag 2 oktober, 21:30, Speellocatie: Jan Janssenhal, Sportparkweg 34, 2631GA  Nootdorp]]></description>
-      <pubDate>Fri, 02 Oct 2026 21:30:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
@@ -2231,6 +2223,14 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[19 jan 21:00: VOLEVO DS 6 - VOLEVO DS 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041520</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041520</guid>
+      <description><![CDATA[Wedstrijd: 3000D2K   CD, Datum: dinsdag 19 januari, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Tue, 19 Jan 2027 21:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[22 jan 19:00: VOLEVO DS 9 - Kratos '08 DS 7]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041553</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041553</guid>
@@ -2239,18 +2239,18 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[22 jan 19:30: DEO DS 2 - VOLEVO DS 5]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041537</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041537</guid>
+      <description><![CDATA[Wedstrijd: 3000D2K   FD, Datum: vrijdag 22 januari, 19:30, Speellocatie: Jan Janssenhal, Sportparkweg 34, 2631GA  Nootdorp]]></description>
+      <pubDate>Fri, 22 Jan 2027 19:30:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[22 jan 21:00: VOLEVO DS 2 - VIVES DS 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009745</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009745</guid>
       <description><![CDATA[Wedstrijd: 30003BD   IH, Datum: vrijdag 22 januari, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Fri, 22 Jan 2027 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[22 jan 21:00: VOLEVO DS 6 - VOLEVO DS 5]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041520</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041520</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   CD, Datum: vrijdag 22 januari, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Fri, 22 Jan 2027 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
