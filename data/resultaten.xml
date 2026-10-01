@@ -4,8 +4,32 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 01 Oct 2026 18:38:13 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 23:22:59 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO HS 3 - Volley2B HS 4, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2017061</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017061</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 3 - Volley2B HS 4, Uitslag: 4-0, Setstanden: 25-19, 25-12, 25-21, 25-23]]></description>
+      <pubDate>Thu, 01 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 4 - VCS DS 1, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2016282</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2016282</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 4 - VCS DS 1, Uitslag: 0-4, Setstanden: 20-25, 23-25, 15-25, 9-25]]></description>
+      <pubDate>Thu, 01 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 3 - Irene DS 1, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2009684</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009684</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - Irene DS 1, Uitslag: 0-4, Setstanden: 20-25, 19-25, 17-25, 16-25]]></description>
+      <pubDate>Thu, 01 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Dosko/Thor JA 1 - VOLEVO JA 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026578</link>
