@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-09-30T22:29:26+00:00",
+ "gegenereerd": "2026-10-01T22:52:22+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2148,7 +2148,7 @@
    "tijdstip": "2026-10-01T21:00:00+02:00",
    "thuis": "VOLEVO DS 3",
    "uit": "Irene DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2156,13 +2156,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/24fc9a59-c168-4a05-af6c-a7135188690f"
+   "dwf": "https://dwf.nevobo.nl/results/24fc9a59-c168-4a05-af6c-a7135188690f/scoresheets/3204dbe0-f44c-435f-9969-790d49160acc"
   },
   {
    "tijdstip": "2026-10-01T21:00:00+02:00",
    "thuis": "VOLEVO DS 4",
    "uit": "VCS DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2170,13 +2170,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/410d83e8-7a24-4c7e-ac67-dadad78e9a6a"
+   "dwf": "https://dwf.nevobo.nl/results/410d83e8-7a24-4c7e-ac67-dadad78e9a6a/scoresheets/93c6f44a-d462-4e5a-89bf-59c665a84133"
   },
   {
    "tijdstip": "2026-10-01T21:00:00+02:00",
    "thuis": "VOLEVO HS 3",
    "uit": "Volley2B HS 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2184,7 +2184,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/088f028d-2a9f-44ef-b9f3-580addc48c06"
+   "dwf": "https://dwf.nevobo.nl/results/088f028d-2a9f-44ef-b9f3-580addc48c06/scoresheets/f7c44d50-249f-4d4b-b23a-375db935fcd8"
   },
   {
    "tijdstip": "2026-10-02T21:00:00+02:00",
