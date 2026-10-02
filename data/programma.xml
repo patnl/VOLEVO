@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 02 Oct 2026 09:00:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 15:51:45 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[2 okt 21:00: Netwerk DS 3 - VOLEVO DS 8]]></title>
@@ -399,6 +399,14 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[14 okt 18:00: VOLEVO JC 1 - VELO MC 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2067992</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067992</guid>
+      <description><![CDATA[Wedstrijd: 3000BX2C  13, Datum: woensdag 14 oktober, 18:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0200</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[14 okt 21:00: VELO HS 2 - VOLEVO HS 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2070691</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2070691</guid>
@@ -476,14 +484,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029791</guid>
       <description><![CDATA[Wedstrijd: 3000XC1H1 GE, Datum: zaterdag 17 oktober, 12:15, Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
       <pubDate>Sat, 17 Oct 2026 12:15:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO JC 1 - VELO MC 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2067992</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067992</guid>
-      <description><![CDATA[Wedstrijd: 3000BX2C  13, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
