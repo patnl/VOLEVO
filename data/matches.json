@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-02T12:58:38+00:00",
+ "gegenereerd": "2026-10-02T22:28:24+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2190,7 +2190,7 @@
    "tijdstip": "2026-10-02T21:00:00+02:00",
    "thuis": "Netwerk DS 3",
    "uit": "VOLEVO DS 8",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Viergang",
    "plaats": "Pijnacker",
    "adres": "Sportlaan 1",
@@ -2198,13 +2198,13 @@
    "lat": 52.02438,
    "lon": 4.42115,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/39b3699f-d64a-4825-b127-e6b01135b424"
+   "dwf": "https://dwf.nevobo.nl/results/39b3699f-d64a-4825-b127-e6b01135b424/scoresheets/c988deda-4477-4585-ad64-3dfff2b46fb0"
   },
   {
    "tijdstip": "2026-10-02T21:15:00+02:00",
    "thuis": "Netwerk HS 1",
    "uit": "VOLEVO HS 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Viergang",
    "plaats": "Pijnacker",
    "adres": "Sportlaan 1",
@@ -2212,13 +2212,13 @@
    "lat": 52.02438,
    "lon": 4.42115,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/ce482509-409e-4f52-bd5a-59d496e9c737"
+   "dwf": "https://dwf.nevobo.nl/results/ce482509-409e-4f52-bd5a-59d496e9c737/scoresheets/14c92a66-1452-479e-9e0b-48152757f034"
   },
   {
    "tijdstip": "2026-10-02T21:30:00+02:00",
    "thuis": "Kratos '08 DS 7",
    "uit": "VOLEVO DS 9",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
@@ -2226,13 +2226,13 @@
    "lat": 51.97869,
    "lon": 4.36797,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/ebe69857-20fd-460e-b82d-d4938f0a9f38"
+   "dwf": "https://dwf.nevobo.nl/results/ebe69857-20fd-460e-b82d-d4938f0a9f38/scoresheets/808d01fd-0152-42cd-98af-e815fd51253d"
   },
   {
    "tijdstip": "2026-10-02T21:30:00+02:00",
    "thuis": "VELO DS 2",
    "uit": "VOLEVO DS 7",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Velo-hal",
    "plaats": "Wateringen",
    "adres": "Noordweg 26",
@@ -2240,7 +2240,7 @@
    "lat": 52.03117,
    "lon": 4.27459,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/453844e2-d4c6-4110-9b48-fd91a1ffa973"
+   "dwf": "https://dwf.nevobo.nl/results/453844e2-d4c6-4110-9b48-fd91a1ffa973/scoresheets/423601ba-94ca-46ac-9c00-cb250afa6b7f"
   },
   {
    "tijdstip": "2026-10-03T11:00:00+02:00",
