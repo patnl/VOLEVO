@@ -4,40 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 02 Oct 2026 21:00:15 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 00:57:32 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[2 okt 21:00: Netwerk DS 3 - VOLEVO DS 8]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041578</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041578</guid>
-      <description><![CDATA[Wedstrijd: 3000D3M   FD, Datum: vrijdag 2 oktober, 21:00, Speellocatie: Viergang, Sportlaan 1 a, 2641AZ  Pijnacker]]></description>
-      <pubDate>Fri, 02 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[2 okt 21:15: Netwerk HS 1 - VOLEVO HS 4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2018007</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2018007</guid>
-      <description><![CDATA[Wedstrijd: 3000H2I   FD, Datum: vrijdag 2 oktober, 21:15, Speellocatie: Viergang, Sportlaan 1 a, 2641AZ  Pijnacker]]></description>
-      <pubDate>Fri, 02 Oct 2026 21:15:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[2 okt 21:30: VELO DS 2 - VOLEVO DS 7]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041506</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041506</guid>
-      <description><![CDATA[Wedstrijd: 3000D2L   FD, Datum: vrijdag 2 oktober, 21:30, Speellocatie: Velo-hal, Noordweg 26, 2291EE  Wateringen]]></description>
-      <pubDate>Fri, 02 Oct 2026 21:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[2 okt 21:30: Kratos '08 DS 7 - VOLEVO DS 9]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041560</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041560</guid>
-      <description><![CDATA[Wedstrijd: 3000D3J   GC, Datum: vrijdag 2 oktober, 21:30, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
-      <pubDate>Fri, 02 Oct 2026 21:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[3 okt 11:00: Spaarnestad MA 1 - VOLEVO MA 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025474</link>
