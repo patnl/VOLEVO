@@ -461,23 +461,23 @@ function parseLocation(desc) {
 // De sporthallen in de Nevobo-API hebben een gevalideerd adres met coordinaten.
 // Die zijn nauwkeuriger dan een postcode-zoekopdracht bij Nominatim, en kosten
 // geen externe aanvraag per locatie.
+// Bij elke verversing opnieuw opgebouwd, zodat nieuwe veldcorrecties meekomen.
 var VENUES = {};
-var venuesLoaded = false;
 async function loadVenues() {
-  if (venuesLoaded) return;
-  venuesLoaded = true;
   try {
     var r = await fetch('./data/matches.json?t=' + Date.now());
     if (!r.ok) return;
     var d = await r.json();
     await Velden.laad();
+    var nieuw = {};
     Velden.corrigeer(d.wedstrijden || []).forEach(function(w) {
       if (!w.tijdstip) return;
       var t = new Date(w.tijdstip).getTime();
-      VENUES[t + '|' + w.thuis + '|' + w.uit] = w;
+      nieuw[t + '|' + w.thuis + '|' + w.uit] = w;
       var k = w.thuis + '|' + w.uit;
-      if (!(k in VENUES)) VENUES[k] = w;
+      if (!(k in nieuw)) nieuw[k] = w;
     });
+    VENUES = nieuw;
   } catch(e) {}
 }
 function venueFor(time, home, away) {
