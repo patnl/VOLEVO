@@ -93,6 +93,7 @@ main{max-width:1100px;margin:-15px auto 0;padding:0 14px 28px}.team-panel{backgr
   <a class="nav-item" href="./volevo-kaart.html"><span class="nav-icon">⌖</span><span>Kaart</span></a>
 </nav>
 
+<script src="./velden.js"></script>
 <script>
 (function(){
   var allMatches=[];
@@ -125,7 +126,7 @@ main{max-width:1100px;margin:-15px auto 0;padding:0 14px 28px}.team-panel{backgr
     var where=[m.adres,m.postcode,m.plaats].filter(Boolean).join(' · ');
     return '<article class="match">'+
       '<div class="match-top"><div><div class="time">'+esc(showDate?fmtDate(d)+' · '+fmtTime(d):fmtTime(d))+'</div></div>'+
-      '<div class="pill-row">'+(done?'<span class="pill done">GESPEELD</span>':'')+'<span class="pill '+(home?'home':'away')+'">'+(home?'THUIS':'UIT')+'</span>'+(m.veld?'<span class="pill field">VELD '+esc(m.veld)+'</span>':'')+'</div></div>'+
+      '<div class="pill-row">'+(done?'<span class="pill done">GESPEELD</span>':'')+'<span class="pill '+(home?'home':'away')+'">'+(home?'THUIS':'UIT')+'</span>'+(Velden.label(m)?'<span class="pill field">'+esc(Velden.label(m).toUpperCase())+'</span>':'')+'</div></div>'+
       '<div class="teams"><div class="team">'+esc(clubTeam||m.thuis)+'</div><div class="versus">tegen</div><div class="team other">'+esc(opponent||m.uit)+'</div></div>'+
       ((m.hal||where)?'<div class="venue"><div class="venue-icon">⌖</div><div class="venue-text"><div class="venue-name">'+esc(m.hal||m.plaats||'Speellocatie')+'</div><div class="venue-sub">'+esc(where)+'</div></div>'+(route?'<a class="route" target="_blank" rel="noopener" href="'+route+'">Route</a>':'')+'</div>':'')+
       '</article>';
@@ -149,7 +150,7 @@ main{max-width:1100px;margin:-15px auto 0;padding:0 14px 28px}.team-panel{backgr
     todayBox.innerHTML='<div class="empty">Wedstrijden laden…</div>';nextBox.innerHTML='';
     try{
       var r=await fetch('./data/matches.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
-      var data=await r.json();allMatches=Array.isArray(data.wedstrijden)?data.wedstrijden:[];
+      var data=await r.json();await Velden.laad();allMatches=Array.isArray(data.wedstrijden)?Velden.corrigeer(data.wedstrijden):[];
       select.innerHTML='<option value="">Alle VOLEVO-teams</option>';fillTeams();render();
       if(data.gegenereerd){var gd=new Date(data.gegenereerd);if(!isNaN(gd))document.getElementById('updatedText').textContent='Nevobo-data bijgewerkt '+gd.toLocaleString('nl-NL',{dateStyle:'medium',timeStyle:'short'});}
     }catch(e){todayBox.innerHTML='<div class="error">De wedstrijdgegevens konden niet worden geladen. Probeer opnieuw.</div>';nextBox.innerHTML='';}

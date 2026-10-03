@@ -170,6 +170,7 @@
   <div id="uitslag"><div class="melding">Officialbeurten laden…</div></div>
 </div>
 
+<script src="./velden.js"></script>
 <script>
 var hdrLogoUrls = ['https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
                    'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'];
@@ -215,6 +216,8 @@ async function laden() {
     var haal = async function(u) { var r = await fetch(u + '?t=' + Date.now()); return r.ok ? r.json() : null; };
     var off = await haal('./data/officials.json');
     var mat = await haal('./data/matches.json');
+    await Velden.laad();
+    Velden.corrigeer((mat || {}).wedstrijden);
     if (!off) throw new Error('Kan de officialbeurten niet laden.');
 
     var wedstrijden = {};
@@ -259,7 +262,7 @@ async function laden() {
         beurten.push({
           tijdstip: deel[0], thuis: deel[1], uit: deel[2],
           taak: b.taak, team: b.team, opmerking: b.opmerking,
-          hal: w.hal, veld: w.veld, plaats: w.plaats,
+          hal: w.hal, veld: w.veld, veldUitSchema: w.veldUitSchema, plaats: w.plaats,
           zelfBezig: zelfBezig
         });
       });
@@ -340,7 +343,7 @@ function eigenBlok(team) {
           '<div class="b-wedstrijd"><span class="thuis">' + esc(w.thuis) + '</span> – ' + esc(w.uit) + '</div>' +
           '<div class="b-plek">' + d.getDate() + ' ' + MND_LANG[d.getMonth()] +
             (w.hal ? ' · ' + esc(w.hal) : '') +
-            (w.veld ? ' <span class="b-veld">veld ' + esc(w.veld) + '</span>' : '') + '</div>' +
+            (Velden.label(w) ? ' <span class="b-veld">' + esc(Velden.label(w)) + '</span>' : '') + '</div>' +
         '</div>' +
         '<div class="b-rechts">' + wie + '</div>' +
       '</div>';
@@ -453,7 +456,7 @@ function teken() {
           var tijd = b.tijdstip.slice(11,16);
           var plek = [];
           if (b.hal) plek.push(esc(b.hal));
-          if (b.veld) plek.push('<span class="b-veld">veld ' + esc(b.veld) + '</span>');
+          if (Velden.label(b)) plek.push('<span class="b-veld">' + esc(Velden.label(b)) + '</span>');
           if (b.opmerking) plek.push('<span class="b-opm">' + esc(b.opmerking) + '</span>');
           return '<div class="beurt' + (b.zelfBezig ? ' eigen' : '') +
             (b.bijEigenWedstrijd ? ' bij-eigen' : '') + '">' +
