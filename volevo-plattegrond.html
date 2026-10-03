@@ -149,8 +149,8 @@
 
   @media (max-width: 700px) {
     .header, .voorlopig, .kiezers, .content { padding-left: 16px; padding-right: 16px; }
-    .rij-label { width: 100%; }
-    .rij { flex-wrap: nowrap; }
+    .rij { flex-direction: column; align-items: stretch; overflow-x: visible; }
+    #dagen, #rondes { overflow-x: auto; padding-bottom: 3px; }
     .kiezers { gap: 10px; }
     .veld-nr { font-size: 34px; }
     .veld-team { font-size: 22px; }
@@ -424,6 +424,7 @@ async function laden() {
         : (perDag[vandaag] ? vandaag
           : (dagen.filter(function(k){ return k >= vandaag; })[0] || dagen[dagen.length-1]));
     }
+    if (!gekozenRonde && params.get('ronde')) gekozenRonde = params.get('ronde');
     if (!gekozenVeld && params.get('veld')) gekozenVeld = params.get('veld');
     teken();
   } catch(e) {
@@ -483,6 +484,11 @@ function teken() {
     return '<button class="chip' + (t === gekozenRonde ? ' active' : '') + '" data-ronde="' + t + '">' +
       '<span>' + t + '</span><span class="sub">' + n + ' wedstr.</span></button>';
   }).join('');
+  // Gekozen dag en ronde horizontaal in beeld, zonder de pagina te verschuiven
+  ['dagen', 'rondes'].forEach(function(id) {
+    var rij = document.getElementById(id), act = rij.querySelector('.chip.active');
+    if (act) rij.scrollLeft = act.offsetLeft - rij.offsetLeft - (rij.clientWidth - act.offsetWidth) / 2;
+  });
 
   Array.prototype.forEach.call(document.querySelectorAll('[data-dag]'), function(b) {
     b.addEventListener('click', function() {
@@ -556,9 +562,7 @@ function teken() {
       }).map(function(w) {
         var vv = veldVan(w);
         return '<div class="wl-item' + (gekozenVeld === vv ? ' actief' : '') + '" data-kies="' + esc(vv) + '">' +
-          '<span class="wl-veld">Veld ' + esc(vv || '?') +
-            (halNr(vv) ? ' <span class="wl-halnr">(hal ' + esc(halNr(vv)) + ')</span>' : '') +
-            (isGecorrigeerd(w) ? ' <span class="wl-gewijzigd" title="Handmatig aangepast">gewijzigd</span>' : '') + '</span>' +
+          '<span class="wl-veld">' + esc(vv ? veldLabel(vv) : 'veld ?') + '</span>' +
           '<span class="wl-thuis">' + esc(w.thuis) + '</span>' +
           '<span class="wl-tegen">vs ' + esc(w.uit) + '</span>' +
           '<span class="wl-tijd">' + esc(tijd(w.tijdstip)) + '</span>' +
