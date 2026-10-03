@@ -237,9 +237,8 @@ var ZAAL = {
   // fw/fh = breedte/hoogte), zodat elke indeling te tekenen is.
   // net: 'h' = net horizontaal, 'v' = net verticaal.
   //
-  // Nog te bevestigen: welke Bocht-velden achteraan liggen. Afgeleid van het
-  // schema van 18 april 2026 (toen Bocht 8|7 achter, 5|6 bij de ingang), één lager.
-  bevestigd: false,
+  // Indeling bevestigd door de wedstrijdsecretaris (schets, 3 okt 2026).
+  bevestigd: true,
   viewBox: '0 0 1240 660',
   zalen: [
     { naam: 'De Tas', x: 30, y: 80, w: 560, h: 520,
@@ -255,7 +254,11 @@ var ZAAL = {
         { veld:'4', hal:'4', fx:0,   fy:1/2, fw:1/2, fh:1/2, net:'v' },
         { veld:'5', hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } }
   ],
-  ingang: { x: 30, y: 616, w: 220, h: 30, tekst: 'Ingang / plein' }
+  // Beide zalen hebben een eigen ingang aan de tribunekant.
+  ingangen: [
+    { x: 370, y: 616, w: 220, h: 30, tekst: 'Ingang De Tas' },
+    { x: 620, y: 616, w: 220, h: 30, tekst: 'Ingang De Bocht' }
+  ]
 };
 
 // Alle schemanummers van een vlak, als lijst
@@ -541,11 +544,10 @@ function teken() {
       svg += '</g>';
     });
   });
-  if (ZAAL.ingang) {
-    var gg = ZAAL.ingang;
+  (ZAAL.ingangen || []).forEach(function(gg) {
     svg += '<rect class="bouwdeel" x="'+gg.x+'" y="'+gg.y+'" width="'+gg.w+'" height="'+gg.h+'" rx="6"/>';
     svg += '<text class="bouwdeel-tekst" x="'+(gg.x+gg.w/2)+'" y="'+(gg.y+gg.h/2+5)+'">'+esc(gg.tekst)+'</text>';
-  }
+  });
   svg += '</svg>';
 
   var lijstHtml = actief.length
