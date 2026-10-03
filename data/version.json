@@ -1,10 +1,10 @@
 {
-  "commit": "25f650b",
-  "date": "2026-10-03T10:04:05+02:00",
+  "commit": "47ae3ed",
+  "date": "2026-10-03T12:55:29+02:00",
   "files": {
     "index.html": {
-      "commit": "45ecacb",
-      "date": "2026-10-03T09:57:57+02:00"
+      "commit": "47ae3ed",
+      "date": "2026-10-03T12:55:29+02:00"
     },
     "rss-inspect.html": {
       "commit": "2124d61",
@@ -23,20 +23,20 @@
       "date": "2026-10-03T10:04:05+02:00"
     },
     "volevo-mobiel.html": {
-      "commit": "45ecacb",
-      "date": "2026-10-03T09:57:57+02:00"
+      "commit": "47ae3ed",
+      "date": "2026-10-03T12:55:29+02:00"
     },
     "volevo-officials.html": {
       "commit": "45ecacb",
       "date": "2026-10-03T09:57:57+02:00"
     },
     "volevo-plattegrond.html": {
-      "commit": "45ecacb",
-      "date": "2026-10-03T09:57:57+02:00"
+      "commit": "47ae3ed",
+      "date": "2026-10-03T12:55:29+02:00"
     },
     "volevo-programma.html": {
-      "commit": "45ecacb",
-      "date": "2026-10-03T09:57:57+02:00"
+      "commit": "47ae3ed",
+      "date": "2026-10-03T12:55:29+02:00"
     },
     "volevo-uitslagen.html": {
       "commit": "0370c60",
