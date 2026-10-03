@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-03T16:38:18+00:00",
+ "gegenereerd": "2026-10-03T21:36:36+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2470,7 +2470,7 @@
    "tijdstip": "2026-10-03T17:30:00+02:00",
    "thuis": "VOLEVO DS 1",
    "uit": "Zaanstad DS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2478,13 +2478,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/b3a447be-6d69-43c2-b33c-4e6cf70aaabb"
+   "dwf": "https://dwf.nevobo.nl/results/b3a447be-6d69-43c2-b33c-4e6cf70aaabb/scoresheets/0a6d20fd-e75a-49ea-a117-99886b783d94"
   },
   {
    "tijdstip": "2026-10-03T17:30:00+02:00",
    "thuis": "VOLEVO JA 2",
    "uit": "Castellum JA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2492,13 +2492,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/89f83aed-7028-45e6-acda-0ac8e2da8ab4"
+   "dwf": "https://dwf.nevobo.nl/results/89f83aed-7028-45e6-acda-0ac8e2da8ab4/scoresheets/3fff6eb1-0f44-4657-93fe-0758abf65716"
   },
   {
    "tijdstip": "2026-10-03T17:30:00+02:00",
    "thuis": "VOLEVO MA 5",
    "uit": "Netwerk MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2506,13 +2506,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/4772c4f7-5390-4593-8dcf-48eb867d3bdb"
+   "dwf": "https://dwf.nevobo.nl/results/4772c4f7-5390-4593-8dcf-48eb867d3bdb/scoresheets/673696a5-3776-4d7c-bea3-44c8217d725b"
   },
   {
    "tijdstip": "2026-10-03T17:30:00+02:00",
    "thuis": "VOLEVO MB 3",
    "uit": "Zovoc MB 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2520,7 +2520,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/6290daa5-fb84-4be1-bbd1-63068ad71801"
+   "dwf": "https://dwf.nevobo.nl/results/6290daa5-fb84-4be1-bbd1-63068ad71801/scoresheets/d56e8428-3f54-4136-8818-5d62f31fe358"
   },
   {
    "tijdstip": "2026-10-08T19:30:00+02:00",
