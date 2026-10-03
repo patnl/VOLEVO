@@ -245,6 +245,7 @@
   <a class="nav-item" href="./volevo-kaart.html"><span class="nav-icon">⌖</span><span>Kaart</span></a>
 </nav>
 
+<script src="./velden.js"></script>
 <script>
 (function () {
   var allMatches = [];
@@ -280,7 +281,7 @@
     var where = [m.hal, m.plaats].filter(Boolean).join(' · ');
     var address = [m.adres, m.postcode].filter(Boolean).join(' · ');
     var badges = '<span class="pill ' + (home ? 'home' : '') + '">' + (home ? 'THUIS' : 'UIT') + '</span>';
-    if (m.veld) badges += '<span class="pill field">VELD ' + esc(m.veld) + '</span>';
+    if (Velden.label(m)) badges += '<span class="pill field">' + esc(Velden.label(m).toUpperCase()) + '</span>';
     return '<article class="match">' +
       '<div class="match-top"><div><div class="time">' + (showDate ? esc(fmtDay(d)) + ' · ' : '') + esc(fmtTime(d)) + '</div></div><div class="pill-row">' + badges + '</div></div>' +
       '<div class="teams">' +
@@ -331,8 +332,9 @@
     todayBox.innerHTML = '<div class="empty">Wedstrijden laden…</div>';
     fetch('./data/matches.json?t=' + Date.now(), {cache:'no-store'})
       .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(data) { return Velden.laad().then(function() { return data; }); })
       .then(function(data) {
-        allMatches = (data.wedstrijden || []).slice().sort(function(a,b){ return new Date(a.tijdstip) - new Date(b.tijdstip); });
+        allMatches = Velden.corrigeer(data.wedstrijden || []).slice().sort(function(a,b){ return new Date(a.tijdstip) - new Date(b.tijdstip); });
         while (select.options.length > 1) select.remove(1);
         buildTeams();
         if (data.gegenereerd) {

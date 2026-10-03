@@ -482,7 +482,11 @@ function tekenRaster() {
   }).join('') + '</tbody>';
 
   var aantal = wedstrijden.length;
+  var zonderSchema = wedstrijden.filter(function(w) { return !isGecorrigeerd(w); }).length;
   host.innerHTML =
+    (zonderSchema ? '<div class="dag-waarschuwing">Voor ' +
+      (zonderSchema === aantal ? 'deze dag' : zonderSchema + (zonderSchema === 1 ? ' wedstrijd' : ' wedstrijden')) +
+      ' is het zaalschema nog niet ingevoerd. De velden zijn de Nevobo-nummers en kloppen waarschijnlijk niet.</div>' : '') +
     (function() {
       var n = 0;
       tijden.forEach(function(t) {

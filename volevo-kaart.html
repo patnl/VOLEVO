@@ -309,6 +309,7 @@
   <p>Er staan momenteel geen VOLEVO-wedstrijden in de planning.</p>
 </div>
 
+<script src="./velden.js"></script>
 <script>
 // ── DEMO_MODE moet als eerste gedeclareerd worden ─────────────────────────────
 var DEMO_MODE = new URLSearchParams(window.location.search).has('demo');
@@ -469,7 +470,8 @@ async function loadVenues() {
     var r = await fetch('./data/matches.json?t=' + Date.now());
     if (!r.ok) return;
     var d = await r.json();
-    (d.wedstrijden || []).forEach(function(w) {
+    await Velden.laad();
+    Velden.corrigeer(d.wedstrijden || []).forEach(function(w) {
       if (!w.tijdstip) return;
       var t = new Date(w.tijdstip).getTime();
       VENUES[t + '|' + w.thuis + '|' + w.uit] = w;
@@ -601,7 +603,7 @@ function buildPopupHtml(venue, addrLine, matches, route) {
     var aCode = getClubCode(m.away);
     html += '<div class="popup-match">';
     html += '<div class="popup-time">🕐 ' + ft(m.time) +
-      (m.veld ? '<span class="popup-veld">veld ' + m.veld + '</span>' : '') + '</div>';
+      (Velden.label({ hal: m.venue, veld: m.veld, veldUitSchema: m.veldUitSchema }) ? '<span class="popup-veld">' + Velden.label({ hal: m.venue, veld: m.veld, veldUitSchema: m.veldUitSchema }) + '</span>' : '') + '</div>';
     html += '<div class="popup-teams">';
     html += '<div class="popup-team">' + logoHtml(hCode, m.home, hVol, 40);
     html += '<div class="popup-team-name'+(hVol?' volevo':'')+'">'+m.home+'</div></div>';
@@ -727,7 +729,7 @@ async function loadData() {
       var v = venueFor(pub, home, away);
       if (v) {
         if (v.hal)    m.venue = v.hal;
-        if (v.veld)   m.veld = v.veld;
+        if (v.veld)   { m.veld = v.veld; m.veldUitSchema = v.veldUitSchema; }
         if (v.plaats) m.city = v.plaats;
         if (v.adres)  m.addrLine = [v.adres, v.plaats].filter(Boolean).join(', ');
         if (v.lat && v.lon) m.coords = { lat: v.lat, lng: v.lon, display: v.hal };

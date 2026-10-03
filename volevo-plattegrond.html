@@ -583,6 +583,9 @@ function teken() {
   var meldingHtml = melding
     ? '<div class="melding-balk"><span>📣</span><span>' + esc(melding) + '</span></div>' : '';
 
+  if (actief.some(function(w) { return OVERRIDES.velden[wedstrijdSleutel(w)] === undefined; }))
+    meldingHtml += '<div class="melding-balk"><span>⚠️</span><span>Voor deze speelronde is het zaalschema nog niet ingevoerd. ' +
+      'De velden zijn de Nevobo-nummers en kloppen waarschijnlijk niet.</span></div>';
   document.getElementById('plan').innerHTML = meldingHtml +
     '<div class="plan-kaart">' + standKnoppen + svg +
       '<div class="legenda">' +

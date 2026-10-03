@@ -554,9 +554,11 @@ function venueHtml(m) {
   var out = [pin];
   if (v.hal)   out.push('<span class="venue-hal">' + v.hal + '</span>');
   var vv = veldVan(v);
-  if (vv)  out.push(v.hal === 'De Fluit'
-    ? '<a class="venue-veld" href="./volevo-zaal.html">' + veldLabel(vv) + '</a>'
-    : '<span class="venue-veld">veld ' + vv + '</span>');
+  // In De Fluit zegt het Nevobo-nummer niets; alleen het veld uit het zaalschema tonen
+  if (vv && v.hal === 'De Fluit' && isGecorrigeerd(v))
+    out.push('<a class="venue-veld" href="./volevo-zaal.html">' + veldLabel(vv) + '</a>');
+  else if (vv && v.hal !== 'De Fluit')
+    out.push('<span class="venue-veld">veld ' + vv + '</span>');
   var rest = [];
   if (v.adres)  rest.push(v.adres);
   if (v.plaats) rest.push(v.plaats);
