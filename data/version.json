@@ -1,10 +1,10 @@
 {
-  "commit": "4f8f9c2",
-  "date": "2026-10-03T09:44:18+02:00",
+  "commit": "45ecacb",
+  "date": "2026-10-03T09:57:57+02:00",
   "files": {
     "index.html": {
-      "commit": "3d7b0c3",
-      "date": "2026-09-06T20:50:53+02:00"
+      "commit": "45ecacb",
+      "date": "2026-10-03T09:57:57+02:00"
     },
     "rss-inspect.html": {
       "commit": "2124d61",
@@ -19,32 +19,32 @@
       "date": "2026-09-04T21:59:14+02:00"
     },
     "volevo-kaart.html": {
-      "commit": "07063b6",
-      "date": "2026-09-04T22:30:23+02:00"
+      "commit": "45ecacb",
+      "date": "2026-10-03T09:57:57+02:00"
     },
     "volevo-mobiel.html": {
-      "commit": "5de4ddc",
-      "date": "2026-09-05T07:15:38+02:00"
+      "commit": "45ecacb",
+      "date": "2026-10-03T09:57:57+02:00"
     },
     "volevo-officials.html": {
-      "commit": "4a8ded3",
-      "date": "2026-09-06T22:06:11+02:00"
+      "commit": "45ecacb",
+      "date": "2026-10-03T09:57:57+02:00"
     },
     "volevo-plattegrond.html": {
-      "commit": "4f8f9c2",
-      "date": "2026-10-03T09:44:18+02:00"
+      "commit": "45ecacb",
+      "date": "2026-10-03T09:57:57+02:00"
     },
     "volevo-programma.html": {
-      "commit": "4f8f9c2",
-      "date": "2026-10-03T09:44:18+02:00"
+      "commit": "45ecacb",
+      "date": "2026-10-03T09:57:57+02:00"
     },
     "volevo-uitslagen.html": {
       "commit": "0370c60",
       "date": "2026-09-04T21:59:14+02:00"
     },
     "volevo-zaal.html": {
-      "commit": "4f8f9c2",
-      "date": "2026-10-03T09:44:18+02:00"
+      "commit": "45ecacb",
+      "date": "2026-10-03T09:57:57+02:00"
     }
   }
 }
