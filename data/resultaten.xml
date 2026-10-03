@@ -4,8 +4,64 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 03 Oct 2026 14:44:10 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 18:46:02 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO MC 3 - Netwerk JC 1, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2035513</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035513</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 3 - Netwerk JC 1, Uitslag: 4-0, Setstanden: 25-8, 25-18, 25-16, 25-7]]></description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MA 4 - VOLEVO MA 3, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026238</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026238</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 4 - VOLEVO MA 3, Uitslag: 3-1, Setstanden: 24-26, 25-19, 25-23, 26-24]]></description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MA 4 - VOLEVO MA 3, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026238</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026238</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 4 - VOLEVO MA 3, Uitslag: 3-1, Setstanden: 24-26, 25-19, 25-23, 26-24]]></description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO JA 1 - Dosko/Thor JA 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026625</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026625</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO JA 1 - Dosko/Thor JA 1, Uitslag: 3-1, Setstanden: 25-15, 25-11, 25-23, 23-25]]></description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VELO HS 5 - VOLEVO HS 6, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2019524</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2019524</guid>
+      <description><![CDATA[Wedstrijd: VELO HS 5 - VOLEVO HS 6, Uitslag: 4-0, Setstanden: 25-16, 25-20, 25-21, 26-24]]></description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 2 - US DS 3, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2009710</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009710</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 2 - US DS 3, Uitslag: 3-1, Setstanden: 25-22, 28-26, 25-20, 22-25]]></description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO HS 1 - Next Volley Dordrecht HS 2, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1963923</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1963923</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 1 - Next Volley Dordrecht HS 2, Uitslag: 4-0, Setstanden: 25-17, 25-17, 25-18, 27-25]]></description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Kratos '08 JB 1 - VOLEVO JB 2, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028092</link>
