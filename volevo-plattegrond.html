@@ -191,9 +191,8 @@
 
 <div class="voorlopig" id="voorlopig">
   <span>⚠️</span>
-  <span><strong>Eén ding nog niet bevestigd:</strong> de volgorde van de velden binnen De Bocht.
-  De indeling van De Tas komt van de zaalfoto, de verdeling over de twee zalen is afgeleid uit
-  de wedstrijdgegevens. Let op het verschil tussen het schemanummer en het nummer in de hal.</span>
+  <span><strong>Eén ding nog niet bevestigd:</strong> welke velden in De Bocht achteraan liggen.
+  De velden volgen het zaalschema van de club (De Tas 1–3, De Bocht 4–7), niet de Nevobo-nummers.</span>
 </div>
 
 <div class="kiezers">
@@ -228,56 +227,38 @@ function hdrLogoFallback() {
 // ═══════════════════════════════════════════════════════════════════════════
 var ZAAL = {
   naam: 'De Fluit',
-  // In de hal lopen de nummers door over beide zalen: De Bocht 1 t/m 4,
-  // De Tas 5 t/m 8. Het wedstrijdschema kent er zeven (1 t/m 7).
-  // `veld` = schemanummer, `hal` = nummer op de bordjes. Beide mogen een
-  // lijstje zijn: bij een gemengde stand beslaat een groot veld twee plekken
-  // en kan de wedstrijd onder het ene of het andere nummer ingepland staan.
-  //
-  // Standen per zaal:
-  //   drie    3-deling, velden verticaal
-  //   vier    4-deling, velden horizontaal (de kwartslag)
-  //   gemengd halve zaal een groot veld, andere helft twee kleine
+  // Veldnummers volgen het zaalschema van de wedstrijdsecretaris: De Tas 1 t/m 3,
+  // De Bocht 4 t/m 7. De Nevobo-veldnummers kloppen niet met de zaal (3 okt 2026:
+  // Nevobo-veld 6 viel op Tas 1, Tas 3 en Bocht 4), dus de juiste velden komen
+  // per speeldag via data/overrides.json.
+  // `veld` = nummer in het schema, `hal` = nummer op de bordjes.
   //
   // Vlakken staan in breukdelen van de zaal (fx/fy = linkerbovenhoek,
   // fw/fh = breedte/hoogte), zodat elke indeling te tekenen is.
   // net: 'h' = net horizontaal, 'v' = net verticaal.
   //
-  // Nog te bevestigen: de volgorde binnen De Bocht.
-  bevestigd: false,
+  // Indeling bevestigd door de wedstrijdsecretaris (schets, 3 okt 2026).
+  bevestigd: true,
   viewBox: '0 0 1240 660',
   zalen: [
-    { naam: 'De Bocht', x: 30, y: 80, w: 590, h: 520,
+    { naam: 'De Tas', x: 30, y: 80, w: 560, h: 520,
       drie: { omschrijving: '3-deling · verticaal', velden: [
-        { veld:'1', hal:'1', fx:0,     fy:0, fw:1/3, fh:1, net:'h' },
-        { veld:'2', hal:'2', fx:1/3,   fy:0, fw:1/3, fh:1, net:'h' },
-        { veld:'3', hal:'3', fx:2/3,   fy:0, fw:1/3, fh:1, net:'h' } ] },
-      vier: { omschrijving: '4-deling · horizontaal', velden: [
-        { veld:'1',  hal:'1', fx:0, fy:0,    fw:1, fh:1/4, net:'v' },
-        { veld:'2',  hal:'2', fx:0, fy:1/4,  fw:1, fh:1/4, net:'v' },
-        { veld:'3',  hal:'3', fx:0, fy:2/4,  fw:1, fh:1/4, net:'v' },
-        { veld:'h4', hal:'4', fx:0, fy:3/4,  fw:1, fh:1/4, net:'v' } ] },
-      gemengd: { omschrijving: 'gemengd · groot veld plus twee', velden: [
-        { veld:['1','2'], hal:['1','2'], fx:0,   fy:0,   fw:1/2, fh:1,   net:'h' },
-        { veld:'3',       hal:'3',       fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
-        { veld:null,      hal:'4',       fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } },
+        { veld:'3', hal:'3', fx:0,   fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'2', hal:'2', fx:1/3, fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'1', hal:'1', fx:2/3, fy:0, fw:1/3, fh:1, net:'h' } ] } },
 
-    { naam: 'De Tas', x: 650, y: 80, w: 560, h: 520,
-      drie: { omschrijving: '3-deling · verticaal', velden: [
-        { veld:'7', hal:'8', fx:0,   fy:0, fw:1/3, fh:1, net:'h' },
-        { veld:'6', hal:'7', fx:1/3, fy:0, fw:1/3, fh:1, net:'h' },
-        { veld:'5', hal:'6', fx:2/3, fy:0, fw:1/3, fh:1, net:'h' } ] },
-      vier: { omschrijving: '4-deling · horizontaal', velden: [
-        { veld:'7', hal:'8', fx:0, fy:0,   fw:1, fh:1/4, net:'v' },
-        { veld:'6', hal:'7', fx:0, fy:1/4, fw:1, fh:1/4, net:'v' },
-        { veld:'5', hal:'6', fx:0, fy:2/4, fw:1, fh:1/4, net:'v' },
-        { veld:'4', hal:'5', fx:0, fy:3/4, fw:1, fh:1/4, net:'v' } ] },
-      gemengd: { omschrijving: 'gemengd · groot veld plus twee', velden: [
-        { veld:'7',       hal:'8',       fx:0,   fy:0,   fw:1/2, fh:1/2, net:'v' },
-        { veld:'6',       hal:'7',       fx:0,   fy:1/2, fw:1/2, fh:1/2, net:'v' },
-        { veld:['5','4'], hal:['6','5'], fx:1/2, fy:0,   fw:1/2, fh:1,   net:'h' } ] } }
+    { naam: 'De Bocht', x: 620, y: 80, w: 590, h: 520,
+      vier: { omschrijving: '4-deling · 2 bij 2', velden: [
+        { veld:'7', hal:'7', fx:0,   fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:'6', hal:'6', fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:'4', hal:'4', fx:0,   fy:1/2, fw:1/2, fh:1/2, net:'v' },
+        { veld:'5', hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } }
   ],
-  ingang: { x: 30, y: 616, w: 220, h: 30, tekst: 'Ingang / plein' }
+  // Beide zalen hebben een eigen ingang aan de tribunekant.
+  ingangen: [
+    { x: 370, y: 616, w: 220, h: 30, tekst: 'Ingang De Tas' },
+    { x: 620, y: 616, w: 220, h: 30, tekst: 'Ingang De Bocht' }
+  ]
 };
 
 // Alle schemanummers van een vlak, als lijst
@@ -305,6 +286,7 @@ function standVan(zaal, perVeld) {
   // bestaat, dan staat de zaal gekanteld. Een gemengde stand valt niet uit
   // het schema af te leiden; die kies je met de knopjes of via de correcties.
   if (!zaal.vier) return zaal.drie;
+  if (!zaal.drie) return zaal.vier;
   var alleenInVier = [];
   zaal.vier.velden.forEach(function(v) {
     veldenVan(v).forEach(function(nr) {
@@ -350,11 +332,14 @@ function isGecorrigeerd(w) {
   return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
 }
 
-// Weergavenaam van een veldnummer. Nummers die met "h" beginnen zijn plekken
-// die de zaal wel heeft maar het wedstrijdschema niet kent (hal 4).
+// Weergavenaam van een veldnummer uit het zaalschema van De Fluit:
+// De Tas 1 t/m 3, De Bocht 4 t/m 7.
 function veldLabel(nr) {
   if (!nr) return '';
-  return String(nr).charAt(0) === 'h' ? 'hal ' + String(nr).slice(1) : 'veld ' + nr;
+  var n = parseInt(nr, 10);
+  if (n >= 1 && n <= 3) return 'Tas ' + n;
+  if (n >= 4 && n <= 7) return 'Bocht ' + n;
+  return 'veld ' + nr;
 }
 
 var REFRESH_MS = 10 * 60 * 1000;
@@ -559,11 +544,10 @@ function teken() {
       svg += '</g>';
     });
   });
-  if (ZAAL.ingang) {
-    var gg = ZAAL.ingang;
+  (ZAAL.ingangen || []).forEach(function(gg) {
     svg += '<rect class="bouwdeel" x="'+gg.x+'" y="'+gg.y+'" width="'+gg.w+'" height="'+gg.h+'" rx="6"/>';
     svg += '<text class="bouwdeel-tekst" x="'+(gg.x+gg.w/2)+'" y="'+(gg.y+gg.h/2+5)+'">'+esc(gg.tekst)+'</text>';
-  }
+  });
   svg += '</svg>';
 
   var lijstHtml = actief.length
