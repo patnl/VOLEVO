@@ -31,5 +31,23 @@ var Velden = (function() {
     return n <= 3 ? 'Tas ' + n : 'Bocht ' + n;
   }
 
-  return { laad: laad, corrigeer: corrigeer, label: label };
+  // Plattegrond op de dag en speelronde van deze wedstrijd, met het veld
+  // geselecteerd. Alleen als het veld uit het zaalschema komt.
+  function plattegrond(w) {
+    if (!label(w) || w.hal !== 'De Fluit') return '';
+    var d = new Date(w.tijdstip);
+    var p = function(n) { return String(n).padStart(2, '0'); };
+    return './volevo-plattegrond.html?dag=' + d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) +
+      '&ronde=' + p(d.getHours()) + ':' + p(d.getMinutes()) + '&veld=' + encodeURIComponent(w.veld);
+  }
+
+  // Klik op een kaart met data-plattegrond opent de plattegrond,
+  // behalve als er op een eigen link in de kaart (zoals Route) geklikt is.
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('a')) return;
+    var kaart = e.target.closest('[data-plattegrond]');
+    if (kaart) location.href = kaart.getAttribute('data-plattegrond');
+  });
+
+  return { laad: laad, corrigeer: corrigeer, label: label, plattegrond: plattegrond };
 })();

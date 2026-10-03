@@ -118,6 +118,7 @@
     align-items: stretch;
   }
   .match-card.played { opacity: 0.5; }
+  .match-card[data-plattegrond] { cursor: pointer; }
 
   .accent-bar { background: #9CD0C1; }
   .match-card.no-volevo .accent-bar { background: #e5e5ea; }
@@ -545,6 +546,23 @@ function venueFor(m) {
   var t = new Date(m.time).getTime();
   return VENUES[t + '|' + m.home + '|' + m.away] || VENUES[m.home + '|' + m.away] || null;
 }
+// Plattegrond op de dag en speelronde van deze wedstrijd, met het veld
+// geselecteerd. Alleen voor De Fluit met een veld uit het zaalschema.
+function plattegrondUrl(m) {
+  var v = venueFor(m);
+  if (!v || v.hal !== 'De Fluit' || !isGecorrigeerd(v) || !veldVan(v)) return '';
+  var d = new Date(v.tijdstip);
+  var p = function(n) { return String(n).padStart(2, '0'); };
+  return './volevo-plattegrond.html?dag=' + d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) +
+    '&ronde=' + p(d.getHours()) + ':' + p(d.getMinutes()) + '&veld=' + encodeURIComponent(veldVan(v));
+}
+// Klik op een wedstrijd met een veld opent de plattegrond (eigen links gaan voor)
+document.addEventListener('click', function(e) {
+  if (e.target.closest('a')) return;
+  var kaart = e.target.closest('[data-plattegrond]');
+  if (kaart) location.href = kaart.getAttribute('data-plattegrond');
+});
+
 function venueHtml(m) {
   var v = venueFor(m);
   if (!v || (!v.hal && !v.veld)) return '';
@@ -556,7 +574,7 @@ function venueHtml(m) {
   var vv = veldVan(v);
   // In De Fluit zegt het Nevobo-nummer niets; alleen het veld uit het zaalschema tonen
   if (vv && v.hal === 'De Fluit' && isGecorrigeerd(v))
-    out.push('<a class="venue-veld" href="./volevo-zaal.html">' + veldLabel(vv) + '</a>');
+    out.push('<a class="venue-veld" href="' + plattegrondUrl(m) + '">' + veldLabel(vv) + '</a>');
   else if (vv && v.hal !== 'De Fluit')
     out.push('<span class="venue-veld">veld ' + vv + '</span>');
   var rest = [];
@@ -585,7 +603,8 @@ function renderCard(m){
     : DAG_LANG[new Date(m.time).getDay()];
   var hCode=hVol?'CNZ6B97':m.homeCode;
   var aCode=aVol?'CNZ6B97':m.awayCode;
-  return '<div class="'+cls+'">'+
+  var plattegrond=plattegrondUrl(m);
+  return '<div class="'+cls+'"'+(plattegrond?' data-plattegrond="'+plattegrond+'"':'')+'>'+
     '<div class="accent-bar"></div>'+
     '<div class="match-time-col"><div class="'+tCls+'">'+ft(m.time)+'</div></div>'+
     '<div class="team-col home">'+

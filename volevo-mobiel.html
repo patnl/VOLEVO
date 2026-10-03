@@ -106,7 +106,8 @@
     background: #f0f0f5; color: #5b5b62;
   }
   .pill.home { background: rgba(42,49,118,.09); color: var(--blue); }
-  .pill.field { background: rgba(156,208,193,.28); color: #176354; }
+  .pill.field { background: rgba(156,208,193,.28); color: #176354; text-decoration: none; }
+  .match[data-plattegrond] { cursor: pointer; }
   .teams { margin-top: 13px; display: grid; gap: 5px; }
   .team { font-size: 1rem; font-weight: 780; line-height: 1.22; }
   .team.other { color: #55555b; font-weight: 650; }
@@ -281,8 +282,10 @@
     var where = [m.hal, m.plaats].filter(Boolean).join(' · ');
     var address = [m.adres, m.postcode].filter(Boolean).join(' · ');
     var badges = '<span class="pill ' + (home ? 'home' : '') + '">' + (home ? 'THUIS' : 'UIT') + '</span>';
-    if (Velden.label(m)) badges += '<span class="pill field">' + esc(Velden.label(m).toUpperCase()) + '</span>';
-    return '<article class="match">' +
+    var plattegrond = Velden.plattegrond(m);
+    if (plattegrond) badges += '<a class="pill field" href="' + esc(plattegrond) + '">' + esc(Velden.label(m).toUpperCase()) + '</a>';
+    else if (Velden.label(m)) badges += '<span class="pill field">' + esc(Velden.label(m).toUpperCase()) + '</span>';
+    return '<article class="match"' + (plattegrond ? ' data-plattegrond="' + esc(plattegrond) + '"' : '') + '>' +
       '<div class="match-top"><div><div class="time">' + (showDate ? esc(fmtDay(d)) + ' · ' : '') + esc(fmtTime(d)) + '</div></div><div class="pill-row">' + badges + '</div></div>' +
       '<div class="teams">' +
         '<div class="team ' + (!isVolevo(m.thuis) ? 'other' : '') + '">' + esc(m.thuis) + '</div>' +
