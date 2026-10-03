@@ -562,7 +562,8 @@ function teken() {
       }).map(function(w) {
         var vv = veldVan(w);
         return '<div class="wl-item' + (gekozenVeld === vv ? ' actief' : '') + '" data-kies="' + esc(vv) + '">' +
-          '<span class="wl-veld">' + esc(vv ? veldLabel(vv) : 'veld ?') + '</span>' +
+          // Zonder zaalschema is het Nevobo-nummer geen echte plek in de zaal
+          '<span class="wl-veld">' + esc(!vv ? 'veld ?' : isGecorrigeerd(w) ? veldLabel(vv) : 'Nevobo-veld ' + vv) + '</span>' +
           '<span class="wl-thuis">' + esc(w.thuis) + '</span>' +
           '<span class="wl-tegen">vs ' + esc(w.uit) + '</span>' +
           '<span class="wl-tijd">' + esc(tijd(w.tijdstip)) + '</span>' +
