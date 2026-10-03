@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 03 Oct 2026 18:46:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 21:41:02 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Spaarnestad MA 1 - VOLEVO MA 1, Uitslag: 4-0]]></title>
@@ -135,36 +135,36 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[3 okt 17:30: VOLEVO DS 1 - Zaanstad DS 3]]></title>
+      <title><![CDATA[VOLEVO DS 1 - Zaanstad DS 3, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1963740</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963740</guid>
-      <description><![CDATA[Wedstrijd: 90002ED   HB, Datum: zaterdag 3 oktober, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 1 - Zaanstad DS 3, Uitslag: 3-1, Setstanden: 24-26, 25-13, 25-16, 25-23]]></description>
       <pubDate>Sat, 03 Oct 2026 17:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[3 okt 17:30: VOLEVO JA 2 - Castellum JA 1]]></title>
+      <title><![CDATA[VOLEVO JA 2 - Castellum JA 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2027970</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2027970</guid>
-      <description><![CDATA[Wedstrijd: 3000JA2E1 BD, Datum: zaterdag 3 oktober, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JA 2 - Castellum JA 1, Uitslag: 3-1, Setstanden: 25-13, 25-21, 19-25, 26-24]]></description>
       <pubDate>Sat, 03 Oct 2026 17:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[3 okt 17:30: VOLEVO MA 5 - Netwerk MA 1]]></title>
+      <title><![CDATA[VOLEVO MA 5 - Netwerk MA 1, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035433</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035433</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2L1 ED, Datum: zaterdag 3 oktober, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 5 - Netwerk MA 1, Uitslag: 4-0, Setstanden: 26-24, 25-22, 25-20, 25-21]]></description>
       <pubDate>Sat, 03 Oct 2026 17:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[3 okt 17:30: VOLEVO MB 3 - Zovoc MB 3]]></title>
+      <title><![CDATA[VOLEVO MB 3 - Zovoc MB 3, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029465</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029465</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1H1 CE, Datum: zaterdag 3 oktober, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MB 3 - Zovoc MB 3, Uitslag: 2-3, Setstanden: 25-20, 18-25, 18-25, 25-20, 10-15]]></description>
       <pubDate>Sat, 03 Oct 2026 17:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[8 okt 19:30: VOLEVO MB 1 - Zovoc MB 1]]></title>
