@@ -414,11 +414,14 @@ function isGecorrigeerd(w) {
   return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
 }
 
-// Weergavenaam van een veldnummer. Nummers die met "h" beginnen zijn plekken
-// die de zaal wel heeft maar het wedstrijdschema niet kent (hal 4).
+// Weergavenaam van een veldnummer uit het zaalschema van De Fluit:
+// De Tas 1 t/m 3, De Bocht 4 t/m 7.
 function veldLabel(nr) {
   if (!nr) return '';
-  return String(nr).charAt(0) === 'h' ? 'hal ' + String(nr).slice(1) : 'veld ' + nr;
+  var n = parseInt(nr, 10);
+  if (n >= 1 && n <= 3) return 'Tas ' + n;
+  if (n >= 4 && n <= 7) return 'Bocht ' + n;
+  return 'veld ' + nr;
 }
 
 var REFRESH_MS=5*60*1000;
@@ -553,7 +556,7 @@ function venueHtml(m) {
   var vv = veldVan(v);
   if (vv)  out.push(v.hal === 'De Fluit'
     ? '<a class="venue-veld" href="./volevo-zaal.html">' + veldLabel(vv) + '</a>'
-    : '<span class="venue-veld">' + veldLabel(vv) + '</span>');
+    : '<span class="venue-veld">veld ' + vv + '</span>');
   var rest = [];
   if (v.adres)  rest.push(v.adres);
   if (v.plaats) rest.push(v.plaats);
