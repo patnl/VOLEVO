@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-03T21:36:36+00:00",
+ "gegenereerd": "2026-10-05T15:07:18+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -3028,20 +3028,6 @@
   },
   {
    "tijdstip": "2026-10-17T12:30:00+02:00",
-   "thuis": "VOLEVO MA 1",
-   "uit": "Limes MA 1",
-   "status": "gepland",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/bda3797d-3243-4331-95a0-86531933ac20"
-  },
-  {
-   "tijdstip": "2026-10-17T12:30:00+02:00",
    "thuis": "VOLEVO MA 5",
    "uit": "DEO MA 1",
    "status": "gepland",
@@ -4467,6 +4453,20 @@
    "lon": 4.61868,
    "veld": "3",
    "dwf": "https://dwf.nevobo.nl/matches/186ac2b1-fe28-4678-85da-c22d7704e82e"
+  },
+  {
+   "tijdstip": "2026-11-18T21:00:00+01:00",
+   "thuis": "VOLEVO MA 1",
+   "uit": "Limes MA 1",
+   "status": "gepland",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/bda3797d-3243-4331-95a0-86531933ac20"
   },
   {
    "tijdstip": "2026-11-19T21:00:00+01:00",
