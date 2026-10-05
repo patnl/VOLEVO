@@ -1,7 +1,7 @@
 {
- "bron": "https://volevo.nl/wp-content/uploads/2026/09/20260911-Officialbeurten-sept-dec-web.xlsx",
- "bestand": "20260911-Officialbeurten-sept-dec-web.xlsx",
- "ingelezen": "2026-09-26T09:31:37Z",
+ "bron": "https://volevo.nl/wp-content/uploads/2026/10/20261003-Officialbeurten-sept-dec-web.xlsx",
+ "bestand": "20261003-Officialbeurten-sept-dec-web.xlsx",
+ "ingelezen": "2026-10-05T11:50:33Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -218,7 +218,7 @@
    ]
   }
  ],
- "aantal": 331,
+ "aantal": 336,
  "nietGekoppeld": [
   {
    "dag": "2026-10-03",
@@ -245,7 +245,7 @@
    "uit": "DEO DS 2",
    "taak": "scheidsrechter (vaardigheidstraining)",
    "team": "HS 4",
-   "opmerking": null
+   "opmerking": "Verplaatst naar maart"
   },
   {
    "dag": "2026-10-09",
@@ -254,7 +254,25 @@
    "uit": "DEO DS 2",
    "taak": "teller",
    "team": "DS 9",
-   "opmerking": null
+   "opmerking": "Verplaatst naar maart"
+  },
+  {
+   "dag": "2026-10-14",
+   "tijd": "18.00",
+   "thuis": "VOLEVO JC 1",
+   "uit": "Velo JC 1",
+   "taak": "scheidsrechter (spelregeltoets)",
+   "team": "HS 6",
+   "opmerking": "Nieuw ingepland: bekerwedstrijd"
+  },
+  {
+   "dag": "2026-10-14",
+   "tijd": "18.00",
+   "thuis": "VOLEVO JC 1",
+   "uit": "Velo JC 1",
+   "taak": "teller",
+   "team": "ouders",
+   "opmerking": "Nieuw ingepland: bekerwedstrijd"
   },
   {
    "dag": "2026-10-17",
@@ -263,7 +281,7 @@
    "uit": "Ancora RVV MB 1",
    "taak": "scheidsrechter (spelregeltoets)",
    "team": "HS 4",
-   "opmerking": "Let op! Spelen hoofdklasse"
+   "opmerking": "Verplaatst naar 12 november"
   },
   {
    "dag": "2026-10-17",
@@ -272,7 +290,7 @@
    "uit": "Ancora RVV MB 1",
    "taak": "teller",
    "team": "ouders",
-   "opmerking": null
+   "opmerking": "Verplaatst naar 12 november"
   },
   {
    "dag": "2026-11-13",
@@ -302,22 +320,7 @@
    "opmerking": null
   }
  ],
- "botsingen": [
-  {
-   "dag": "2026-10-15",
-   "tijd": "21:00",
-   "team": "DS 3",
-   "taak": "scheidsrechter (vaardigheidstraining)",
-   "wedstrijd": "VOLEVO DS 7 - Sovicos DS 5"
-  },
-  {
-   "dag": "2026-10-15",
-   "tijd": "21:00",
-   "team": "DS 3",
-   "taak": "teller",
-   "wedstrijd": "VOLEVO DS 7 - Sovicos DS 5"
-  }
- ],
+ "botsingen": [],
  "perWedstrijd": {
   "2026-09-03T21:00:00+02:00|VOLEVO DS 3|SKC DS 2": [
    {
@@ -545,7 +548,7 @@
    {
     "taak": "scheidsrechter (spelregeltoets)",
     "team": "MA 6",
-    "opmerking": null
+    "opmerking": "No show: overgenomen door DS 9"
    },
    {
     "taak": "teller",
@@ -1080,6 +1083,13 @@
     "opmerking": null
    }
   ],
+  "2026-10-15T21:00:00+02:00|VOLEVO DS 3|Inter Rijswijk DS 3": [
+   {
+    "taak": "teller",
+    "team": "HS 2",
+    "opmerking": "Nieuw ingepland: bekerwedstrijd"
+   }
+  ],
   "2026-10-15T21:00:00+02:00|VOLEVO DS 5|Sovicos DS 2": [
    {
     "taak": "scheidsrechter (vaardigheidstraining)",
@@ -1095,13 +1105,13 @@
   "2026-10-15T21:00:00+02:00|VOLEVO DS 7|Sovicos DS 5": [
    {
     "taak": "scheidsrechter (vaardigheidstraining)",
-    "team": "DS 3",
-    "opmerking": null
+    "team": "HS 4",
+    "opmerking": "DS 3 heeft eigen bekerwedstrijd"
    },
    {
     "taak": "teller",
-    "team": "DS 3",
-    "opmerking": null
+    "team": "DS 8",
+    "opmerking": "DS 3 heeft eigen bekerwedstrijd"
    }
   ],
   "2026-10-15T21:00:00+02:00|VOLEVO DS 9|Sovicos DS 7": [
@@ -1678,6 +1688,18 @@
    {
     "taak": "teller",
     "team": "JB 2",
+    "opmerking": null
+   }
+  ],
+  "2026-11-12T19:30:00+01:00|VOLEVO MB 1|Ancora RVV MB 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "HS 4",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
     "opmerking": null
    }
   ],
