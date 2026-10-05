@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Mon, 05 Oct 2026 06:22:20 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 13:44:39 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[8 okt 19:30: VOLEVO MB 1 - Zovoc MB 1]]></title>
@@ -299,14 +299,6 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035435</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035435</guid>
       <description><![CDATA[Wedstrijd: 3000MA2L1 EF, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO MA 1 - Limes MA 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2025503</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025503</guid>
-      <description><![CDATA[Wedstrijd: 3000MAHC1 CB, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
@@ -1116,6 +1108,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963912</guid>
       <description><![CDATA[Wedstrijd: 90002EH   GH, Datum: zaterdag 14 november, 19:00, Speellocatie: De Boog, Krimpenerbosweg 2 A, 2923LA  Krimpen aan den IJssel]]></description>
       <pubDate>Sat, 14 Nov 2026 19:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[18 nov 21:00: VOLEVO MA 1 - Limes MA 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025503</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025503</guid>
+      <description><![CDATA[Wedstrijd: 3000MAHC1 CB, Datum: woensdag 18 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Wed, 18 Nov 2026 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
