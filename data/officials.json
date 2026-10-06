@@ -1,7 +1,7 @@
 {
  "bron": "https://volevo.nl/wp-content/uploads/2026/10/20261003-Officialbeurten-sept-dec-web.xlsx",
  "bestand": "20261003-Officialbeurten-sept-dec-web.xlsx",
- "ingelezen": "2026-10-05T11:50:33Z",
+ "ingelezen": "2026-10-06T11:30:44Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -273,6 +273,24 @@
    "taak": "teller",
    "team": "ouders",
    "opmerking": "Nieuw ingepland: bekerwedstrijd"
+  },
+  {
+   "dag": "2026-10-17",
+   "tijd": "12:30",
+   "thuis": "VOLEVO MA 1",
+   "uit": "Limes MA 1",
+   "taak": "scheidsrechter (spelregeltoets)",
+   "team": "DS 2",
+   "opmerking": "Let op! Spelen hoofdklasse"
+  },
+  {
+   "dag": "2026-10-17",
+   "tijd": "12:30",
+   "thuis": "VOLEVO MA 1",
+   "uit": "Limes MA 1",
+   "taak": "teller",
+   "team": "MA 6",
+   "opmerking": null
   },
   {
    "dag": "2026-10-17",
@@ -1135,18 +1153,6 @@
    {
     "taak": "teller",
     "team": "HS 5",
-    "opmerking": null
-   }
-  ],
-  "2026-10-17T12:30:00+02:00|VOLEVO MA 1|Limes MA 1": [
-   {
-    "taak": "scheidsrechter (spelregeltoets)",
-    "team": "DS 2",
-    "opmerking": "Let op! Spelen hoofdklasse"
-   },
-   {
-    "taak": "teller",
-    "team": "MA 6",
     "opmerking": null
    }
   ],
