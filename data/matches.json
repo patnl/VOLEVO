@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-05T15:07:18+00:00",
+ "gegenereerd": "2026-10-08T23:32:39+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2526,7 +2526,7 @@
    "tijdstip": "2026-10-08T19:30:00+02:00",
    "thuis": "VOLEVO MB 1",
    "uit": "Zovoc MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -2534,7 +2534,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/5b4cd726-bc09-4358-966f-d02bf388994f"
+   "dwf": "https://dwf.nevobo.nl/results/5b4cd726-bc09-4358-966f-d02bf388994f/scoresheets/00362e83-8f45-4718-88bc-885c847ad027"
   },
   {
    "tijdstip": "2026-10-09T19:00:00+02:00",
@@ -3783,6 +3783,20 @@
    "dwf": "https://dwf.nevobo.nl/matches/1a4b1d2a-ff5f-4833-9574-3df0469b0891"
   },
   {
+   "tijdstip": "2026-11-07T11:00:00+01:00",
+   "thuis": "VCH JA 2",
+   "uit": "VOLEVO JA 2",
+   "status": "gepland",
+   "hal": "FBK-hal",
+   "plaats": "Hoofddorp",
+   "adres": "Arnolduspark 3",
+   "postcode": "2132CR",
+   "lat": 52.30584,
+   "lon": 4.70443,
+   "veld": "4",
+   "dwf": "https://dwf.nevobo.nl/matches/32fcc8af-6c37-4039-9d94-a541ee7d43a7"
+  },
+  {
    "tijdstip": "2026-11-07T12:00:00+01:00",
    "thuis": "Inter Rijswijk MB 3",
    "uit": "VOLEVO MB 2",
@@ -4047,20 +4061,6 @@
    "lon": 4.36797,
    "veld": "4",
    "dwf": "https://dwf.nevobo.nl/matches/be7dae14-de55-489e-93a1-bf68d3ecdd86"
-  },
-  {
-   "tijdstip": "2026-11-07T17:00:00+01:00",
-   "thuis": "VCH JA 2",
-   "uit": "VOLEVO JA 2",
-   "status": "gepland",
-   "hal": "FBK-hal",
-   "plaats": "Hoofddorp",
-   "adres": "Arnolduspark 3",
-   "postcode": "2132CR",
-   "lat": 52.30584,
-   "lon": 4.70443,
-   "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/32fcc8af-6c37-4039-9d94-a541ee7d43a7"
   },
   {
    "tijdstip": "2026-11-07T17:30:00+01:00",
