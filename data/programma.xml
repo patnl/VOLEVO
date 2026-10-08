@@ -4,15 +4,15 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 08 Oct 2026 17:31:06 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 22:49:51 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
-      <title><![CDATA[8 okt 19:30: VOLEVO MB 1 - Zovoc MB 1]]></title>
+      <title><![CDATA[VOLEVO MB 1 - Zovoc MB 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2067980</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2067980</guid>
-      <description><![CDATA[Wedstrijd: 3000BM2B  13, Datum: donderdag 8 oktober, 19:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MB 1 - Zovoc MB 1, Uitslag: 3-1, Setstanden: 25-16, 22-25, 25-19, 25-20]]></description>
       <pubDate>Thu, 08 Oct 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[9 okt 19:00: VOLEVO DS 7 - Sovicos DS 3]]></title>
@@ -727,6 +727,14 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
+      <title><![CDATA[7 nov 11:00: VCH JA 2 - VOLEVO JA 2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2027983</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2027983</guid>
+      <description><![CDATA[Wedstrijd: 3000JA2E1 CB, Datum: zaterdag 7 november, 11:00, Speellocatie: FBK-hal, Arnolduspark 3, 2132CR  Hoofddorp]]></description>
+      <pubDate>Sat, 07 Nov 2026 11:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
       <title><![CDATA[7 nov 12:00: Inter Rijswijk MB 3 - VOLEVO MB 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029525</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029525</guid>
@@ -867,14 +875,6 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017868</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2017868</guid>
       <description><![CDATA[Wedstrijd: 3000H2I   CD, Datum: zaterdag 7 november, 17:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
-      <pubDate>Sat, 07 Nov 2026 17:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[7 nov 17:00: VCH JA 2 - VOLEVO JA 2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2027983</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2027983</guid>
-      <description><![CDATA[Wedstrijd: 3000JA2E1 CB, Datum: zaterdag 7 november, 17:00, Speellocatie: FBK-hal, Arnolduspark 3, 2132CR  Hoofddorp]]></description>
       <pubDate>Sat, 07 Nov 2026 17:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
