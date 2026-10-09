@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 09 Oct 2026 09:18:49 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 16:30:15 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[9 okt 19:00: VOLEVO DS 7 - Sovicos DS 3]]></title>
@@ -315,14 +315,6 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2031045</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2031045</guid>
       <description><![CDATA[Wedstrijd: 3000XC2P1 DB, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO MC 3 - Kratos '08 MC 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2035516</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035516</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2S1 DF, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
@@ -900,6 +892,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025536</guid>
       <description><![CDATA[Wedstrijd: 3000MAHC1 EC, Datum: zaterdag 7 november, 18:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
       <pubDate>Sat, 07 Nov 2026 18:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[12 nov 18:00: VOLEVO MC 3 - Kratos '08 MC 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2035516</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035516</guid>
+      <description><![CDATA[Wedstrijd: 3000XC2S1 DF, Datum: donderdag 12 november, 18:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
