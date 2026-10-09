@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-08T23:32:39+00:00",
+ "gegenereerd": "2026-10-09T13:37:37+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -3084,20 +3084,6 @@
   },
   {
    "tijdstip": "2026-10-17T12:30:00+02:00",
-   "thuis": "VOLEVO MC 3",
-   "uit": "Kratos '08 MC 1",
-   "status": "gepland",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/bc88b59c-3f17-4403-ba57-37393971f576"
-  },
-  {
-   "tijdstip": "2026-10-17T12:30:00+02:00",
    "thuis": "VOLEVO MC 5",
    "uit": "Ancora RVV MC 3",
    "status": "gepland",
@@ -4103,6 +4089,20 @@
    "lon": 4.46189,
    "veld": "4",
    "dwf": "https://dwf.nevobo.nl/matches/c4e651c7-f8ac-4697-84af-22f874964388"
+  },
+  {
+   "tijdstip": "2026-11-12T18:00:00+01:00",
+   "thuis": "VOLEVO MC 3",
+   "uit": "Kratos '08 MC 1",
+   "status": "gepland",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/bc88b59c-3f17-4403-ba57-37393971f576"
   },
   {
    "tijdstip": "2026-11-12T19:30:00+01:00",
