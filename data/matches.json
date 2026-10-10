@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-09T22:51:28+00:00",
+ "gegenereerd": "2026-10-10T12:50:42+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2708,7 +2708,7 @@
    "tijdstip": "2026-10-10T10:45:00+02:00",
    "thuis": "Ancora RVV MB 1",
    "uit": "VOLEVO MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Boorsmazaal",
    "plaats": "Katwijk ZH",
    "adres": "Zwanenburgstraat 61",
@@ -2716,13 +2716,13 @@
    "lat": 52.20326,
    "lon": 4.40189,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/d07fcc1b-cc9e-42d3-b910-5b282ddd4af1"
+   "dwf": "https://dwf.nevobo.nl/results/d07fcc1b-cc9e-42d3-b910-5b282ddd4af1/scoresheets/a72b3fc1-3d2c-4a2f-8b3a-6e6a372c15c4"
   },
   {
    "tijdstip": "2026-10-10T12:00:00+02:00",
    "thuis": "Inter Rijswijk MA 1",
    "uit": "VOLEVO MA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -2730,13 +2730,13 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/75058dec-db16-4100-861a-5ac91830c428"
+   "dwf": "https://dwf.nevobo.nl/results/75058dec-db16-4100-861a-5ac91830c428/scoresheets/8942f8fd-69e8-4390-9985-e47dd5fb38aa"
   },
   {
    "tijdstip": "2026-10-10T12:00:00+02:00",
    "thuis": "Inter Rijswijk MC 2",
    "uit": "VOLEVO JC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -2744,13 +2744,13 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/2286377e-1316-4a50-bbee-3d118e147c5c"
+   "dwf": "https://dwf.nevobo.nl/results/2286377e-1316-4a50-bbee-3d118e147c5c/scoresheets/9d56d32a-6fc4-4b0c-ae87-9fd532ff8e0e"
   },
   {
    "tijdstip": "2026-10-10T13:00:00+02:00",
    "thuis": "Ancora RVV MC 3",
    "uit": "VOLEVO MC 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Boorsmazaal",
    "plaats": "Katwijk ZH",
    "adres": "Zwanenburgstraat 61",
@@ -2758,7 +2758,7 @@
    "lat": 52.20326,
    "lon": 4.40189,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/4db45e8e-6936-42ad-83c4-6b4f7b5a6a81"
+   "dwf": "https://dwf.nevobo.nl/results/4db45e8e-6936-42ad-83c4-6b4f7b5a6a81/scoresheets/223a97dc-c9a0-4144-ad9c-dade17f82dac"
   },
   {
    "tijdstip": "2026-10-10T13:00:00+02:00",
@@ -2778,7 +2778,7 @@
    "tijdstip": "2026-10-10T13:00:00+02:00",
    "thuis": "Kratos '08 MC 1",
    "uit": "VOLEVO MC 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
@@ -2786,7 +2786,7 @@
    "lat": 51.97869,
    "lon": 4.36797,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/ebb70eca-4243-47df-a04a-8ddaf885d20c"
+   "dwf": "https://dwf.nevobo.nl/results/ebb70eca-4243-47df-a04a-8ddaf885d20c/scoresheets/7ca1f368-b532-46b4-a903-ef42364291a7"
   },
   {
    "tijdstip": "2026-10-10T14:00:00+02:00",
