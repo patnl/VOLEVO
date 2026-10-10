@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 10 Oct 2026 06:36:09 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 12:48:57 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Ancora RVV MB 1 - VOLEVO MB 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025592</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025592</guid>
+      <description><![CDATA[Wedstrijd: Ancora RVV MB 1 - VOLEVO MB 1, Uitslag: 3-1, Setstanden: 25-22, 25-15, 25-16, 18-25]]></description>
+      <pubDate>Sat, 10 Oct 2026 10:45:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Castellum HS 1 - VOLEVO HS 2, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019966</link>
