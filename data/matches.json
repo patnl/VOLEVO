@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-10T12:50:42+00:00",
+ "gegenereerd": "2026-10-10T21:58:54+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -2764,7 +2764,7 @@
    "tijdstip": "2026-10-10T13:00:00+02:00",
    "thuis": "De Hollandse Pot - USV Protos DS 2",
    "uit": "VOLEVO DS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Olympos, De Uithof",
    "plaats": "Utrecht",
    "adres": "Uppsalalaan 3",
@@ -2772,7 +2772,7 @@
    "lat": 52.09115,
    "lon": 5.17513,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/61801879-5575-41a7-a440-6cef721de61d"
+   "dwf": "https://dwf.nevobo.nl/results/61801879-5575-41a7-a440-6cef721de61d/scoresheets/bdf1179d-9c77-44ac-9587-d3bfa7d6e2c5"
   },
   {
    "tijdstip": "2026-10-10T13:00:00+02:00",
@@ -2792,7 +2792,7 @@
    "tijdstip": "2026-10-10T14:00:00+02:00",
    "thuis": "Volley Zuid DS 1",
    "uit": "VOLEVO DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Sporthal Stadionpark",
    "plaats": "Rotterdam",
    "adres": "Marathonstraat 5",
@@ -2800,13 +2800,13 @@
    "lat": 51.89263,
    "lon": 4.52761,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/a0fabbbd-4698-4bfe-918e-ba78191f79a8"
+   "dwf": "https://dwf.nevobo.nl/results/a0fabbbd-4698-4bfe-918e-ba78191f79a8/scoresheets/40b171a8-2d10-4a58-9d19-de3c7496257d"
   },
   {
    "tijdstip": "2026-10-10T14:15:00+02:00",
    "thuis": "ZVH MA 1",
    "uit": "VOLEVO MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Swanla",
    "plaats": "Zevenhuizen ZH",
    "adres": "Burgemeester Klinkhamerweg 86",
@@ -2814,13 +2814,13 @@
    "lat": 52.01443,
    "lon": 4.583,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/f865c733-87fd-488f-9b5f-a10d4ab2e0ef"
+   "dwf": "https://dwf.nevobo.nl/results/f865c733-87fd-488f-9b5f-a10d4ab2e0ef/scoresheets/2129c057-ada5-4a8e-a385-e305c4d7975c"
   },
   {
    "tijdstip": "2026-10-10T16:00:00+02:00",
    "thuis": "Volley Zuid HS 1",
    "uit": "VOLEVO HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Sporthal Stadionpark",
    "plaats": "Rotterdam",
    "adres": "Marathonstraat 5",
@@ -2828,13 +2828,13 @@
    "lat": 51.89263,
    "lon": 4.52761,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/0713b3e0-cba2-471c-9bd4-e66b2381aaed"
+   "dwf": "https://dwf.nevobo.nl/results/0713b3e0-cba2-471c-9bd4-e66b2381aaed/scoresheets/8a4f33a5-189b-40c4-b45a-c95127e71c5b"
   },
   {
    "tijdstip": "2026-10-10T16:00:00+02:00",
    "thuis": "Zovoc MA 3",
    "uit": "VOLEVO MA 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
@@ -2842,13 +2842,13 @@
    "lat": 52.06786,
    "lon": 4.46189,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/81e6e958-9989-4fac-bdf2-684c449d3cd5"
+   "dwf": "https://dwf.nevobo.nl/results/81e6e958-9989-4fac-bdf2-684c449d3cd5/scoresheets/40629632-73d0-4f33-8d1f-296b14dfd392"
   },
   {
    "tijdstip": "2026-10-10T16:30:00+02:00",
    "thuis": "Kalinko MA 1",
    "uit": "VOLEVO MA 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -2856,13 +2856,13 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/b8d762aa-3efc-4f6b-87f6-4fe909f4fa95"
+   "dwf": "https://dwf.nevobo.nl/results/b8d762aa-3efc-4f6b-87f6-4fe909f4fa95/scoresheets/c45efd6a-eb9c-4665-a1da-aaa179b3f0a3"
   },
   {
    "tijdstip": "2026-10-10T17:00:00+02:00",
    "thuis": "Next Volley Dordrecht JC 1",
    "uit": "VOLEVO MC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Dijk",
    "plaats": "Dordrecht",
    "adres": "Sportcomplex Schenkeldijk 10",
@@ -2870,7 +2870,7 @@
    "lat": 51.77835,
    "lon": 4.69357,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/5be0f43e-bbd1-457e-86ae-8d303cf741a5"
+   "dwf": "https://dwf.nevobo.nl/results/5be0f43e-bbd1-457e-86ae-8d303cf741a5/scoresheets/2a5d6143-d0bf-4541-84e7-44184cc6da9a"
   },
   {
    "tijdstip": "2026-10-14T18:00:00+02:00",
