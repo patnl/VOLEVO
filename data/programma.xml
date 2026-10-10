@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 10 Oct 2026 18:06:49 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 22:03:57 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Ancora RVV MB 1 - VOLEVO MB 1, Uitslag: 3-1]]></title>
@@ -71,12 +71,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[10 okt 16:00: Volley Zuid HS 1 - VOLEVO HS 1]]></title>
+      <title><![CDATA[Volley Zuid HS 1 - VOLEVO HS 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1963773</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963773</guid>
-      <description><![CDATA[Wedstrijd: 90002EH   AH, Datum: zaterdag 10 oktober, 16:00, Speellocatie: Sporthal Stadionpark, Marathonstraat 5, 3078XX  Rotterdam]]></description>
+      <description><![CDATA[Wedstrijd: Volley Zuid HS 1 - VOLEVO HS 1, Uitslag: 1-3, Setstanden: 13-25, 20-25, 25-18, 19-25]]></description>
       <pubDate>Sat, 10 Oct 2026 16:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[Zovoc MA 3 - VOLEVO MA 6, Uitslag: 4-0]]></title>
@@ -95,12 +95,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[10 okt 17:00: Next Volley Dordrecht JC 1 - VOLEVO MC 1]]></title>
+      <title><![CDATA[Next Volley Dordrecht JC 1 - VOLEVO MC 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025702</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025702</guid>
-      <description><![CDATA[Wedstrijd: 3000XCHB1 FD, Datum: zaterdag 10 oktober, 17:00, Speellocatie: De Dijk, Sportcomplex Schenkeldijk 10, 3328LE  Dordrecht]]></description>
+      <description><![CDATA[Wedstrijd: Next Volley Dordrecht JC 1 - VOLEVO MC 1, Uitslag: 0-4, Setstanden: 23-25, 18-25, 14-25, 24-26]]></description>
       <pubDate>Sat, 10 Oct 2026 17:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[14 okt 18:00: VOLEVO JC 1 - VELO MC 1]]></title>
