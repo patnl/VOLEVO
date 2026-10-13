@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-10T21:58:54+00:00",
+ "gegenereerd": "2026-10-13T14:30:23+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -5141,20 +5141,6 @@
   },
   {
    "tijdstip": "2026-11-28T12:30:00+01:00",
-   "thuis": "AVV Keistad DS 3",
-   "uit": "VOLEVO DS 2",
-   "status": "gepland",
-   "hal": "Sportcomplex Amerena",
-   "plaats": "Amersfoort",
-   "adres": "De Velduil 2",
-   "postcode": "3815XT",
-   "lat": 52.15984,
-   "lon": 5.41312,
-   "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/e4d74e3a-10f2-497f-936b-c54194026283"
-  },
-  {
-   "tijdstip": "2026-11-28T12:30:00+01:00",
    "thuis": "Kalinko MA 2",
    "uit": "VOLEVO MA 2",
    "status": "gepland",
@@ -6104,6 +6090,20 @@
    "lon": 4.44556,
    "veld": "1",
    "dwf": "https://dwf.nevobo.nl/matches/202e3a56-ea68-479b-80f5-00825bdfffa8"
+  },
+  {
+   "tijdstip": "2027-01-27T19:30:00+01:00",
+   "thuis": "AVV Keistad DS 3",
+   "uit": "VOLEVO DS 2",
+   "status": "gepland",
+   "hal": "Sportcomplex Amerena",
+   "plaats": "Amersfoort",
+   "adres": "De Velduil 2",
+   "postcode": "3815XT",
+   "lat": 52.15984,
+   "lon": 5.41312,
+   "veld": "3",
+   "dwf": "https://dwf.nevobo.nl/matches/e4d74e3a-10f2-497f-936b-c54194026283"
   },
   {
    "tijdstip": "2027-01-28T21:00:00+01:00",
