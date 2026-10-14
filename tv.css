@@ -76,3 +76,8 @@ html { font-size: calc(100vw / 120 * var(--tv-zoom)); }
 .popup-poule { font-size: 1.2rem; color: #636366; padding-left: 76px; }
 #page-badge { font-size: 1.3rem; padding: 12px 28px; }
 .badge-dot { width: 12px; height: 12px; }
+
+/* Inline SVG-iconen i.p.v. emoji: het tv-lettertype heeft geen emoji */
+.ico { width: 1em; height: 1em; vertical-align: -0.12em; display: inline-block; }
+.hero-icon .ico { width: 1em; height: 1em; }
+.section-label .ico { font-size: 1.5rem; }
