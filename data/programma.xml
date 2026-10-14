@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 14 Oct 2026 07:17:01 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 12:27:12 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[14 okt 18:00: VOLEVO JC 1 - VELO MC 1]]></title>
@@ -179,14 +179,6 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029459</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029459</guid>
       <description><![CDATA[Wedstrijd: 3000MB1H1 CB, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[17 okt 15:00: VOLEVO MC 2 - ZVH JC 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2030157</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2030157</guid>
-      <description><![CDATA[Wedstrijd: 3000XC1I1 DA, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
@@ -916,6 +908,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025503</guid>
       <description><![CDATA[Wedstrijd: 3000MAHC1 CB, Datum: woensdag 18 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Wed, 18 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 nov 18:00: VOLEVO MC 2 - ZVH JC 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2030157</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2030157</guid>
+      <description><![CDATA[Wedstrijd: 3000XC1I1 DA, Datum: donderdag 19 november, 18:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
