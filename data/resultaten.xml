@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 14 Oct 2026 17:08:09 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 21:35:19 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO JC 1 - VELO MC 1, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2067992</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2067992</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO JC 1 - VELO MC 1, Uitslag: 3-2, Setstanden: 25-21, 14-25, 19-25, 25-19, 17-15]]></description>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Next Volley Dordrecht JC 1 - VOLEVO MC 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025702</link>

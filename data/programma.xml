@@ -4,15 +4,15 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 14 Oct 2026 17:23:01 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 21:35:17 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
-      <title><![CDATA[14 okt 18:00: VOLEVO JC 1 - VELO MC 1]]></title>
+      <title><![CDATA[VOLEVO JC 1 - VELO MC 1, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2067992</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2067992</guid>
-      <description><![CDATA[Wedstrijd: 3000BX2C  13, Datum: woensdag 14 oktober, 18:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JC 1 - VELO MC 1, Uitslag: 3-2, Setstanden: 25-21, 14-25, 19-25, 25-19, 17-15]]></description>
       <pubDate>Wed, 14 Oct 2026 18:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[14 okt 21:00: VELO HS 2 - VOLEVO HS 2]]></title>
