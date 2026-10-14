@@ -1,6 +1,6 @@
 {
-  "commit": "2c61aa2",
-  "date": "2026-10-14T20:51:40+02:00",
+  "commit": "c3249d7",
+  "date": "2026-10-14T20:52:08+02:00",
   "files": {
     "index.html": {
       "commit": "47ae3ed",
@@ -15,12 +15,16 @@
       "date": "2026-10-03T09:44:18+02:00"
     },
     "volevo-felicitatie.html": {
-      "commit": "52e0a28",
-      "date": "2026-10-14T18:51:30Z"
+      "commit": "426219c",
+      "date": "2026-10-14T18:44:57Z"
+    },
+    "volevo-inmeten.html": {
+      "commit": "bca1712",
+      "date": "2026-10-14T18:46:01Z"
     },
     "volevo-kaart.html": {
-      "commit": "52e0a28",
-      "date": "2026-10-14T18:51:30Z"
+      "commit": "b68722a",
+      "date": "2026-10-14T18:44:14Z"
     },
     "volevo-mobiel.html": {
       "commit": "47ae3ed",
@@ -35,12 +39,12 @@
       "date": "2026-10-14T18:51:30Z"
     },
     "volevo-programma.html": {
-      "commit": "52e0a28",
-      "date": "2026-10-14T18:51:30Z"
+      "commit": "b68722a",
+      "date": "2026-10-14T18:44:14Z"
     },
     "volevo-uitslagen.html": {
-      "commit": "52e0a28",
-      "date": "2026-10-14T18:51:30Z"
+      "commit": "b68722a",
+      "date": "2026-10-14T18:44:14Z"
     },
     "volevo-zaal.html": {
       "commit": "52e0a28",
