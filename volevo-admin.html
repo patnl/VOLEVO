@@ -172,16 +172,18 @@ var PLEKKEN = [
   { zaal: 'De Bocht', hal: '4', veld: '4' },
   { zaal: 'De Bocht', hal: '5', veld: '5' },
   { zaal: 'De Bocht', hal: '6', veld: '6' },
-  { zaal: 'De Bocht', hal: '7', veld: '7' }
+  { zaal: 'De Bocht', hal: '7', veld: '7' },
+  // Veld 4 groot: de halve zaal links, in de lengte vanaf de tribune (neemt 4 en 7 in beslag)
+  { zaal: 'De Bocht', hal: '4', veld: '4G' }
 ];
 function omschrijf(veld) {
   if (!veld) return '?';
   var p = PLEKKEN.filter(function(x) { return x.veld === String(veld); })[0];
   if (!p) return 'veld ' + veld;
-  return p.zaal.replace('De ', '') + ' ' + p.veld;
+  return p.zaal.replace('De ', '') + ' ' + p.veld.replace(/G$/, ' groot');
 }
 function plekLabel(p) {
-  return p.zaal.replace('De ', '') + ' ' + p.veld;
+  return p.zaal.replace('De ', '') + ' ' + p.veld.replace(/G$/, ' groot');
 }
 
 var wedstrijden = [], perDag = {}, dagen = [];

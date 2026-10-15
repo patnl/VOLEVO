@@ -12,7 +12,8 @@ verwachten). Andere sporthallen komen in het schema overeen met Nevobo en
 worden overgeslagen. Bestaande correcties blijven staan; alleen nieuwe of
 gewijzigde velden worden bijgewerkt.
 
-Veld = nummer: 1 t/m 3 is De Tas, 4 t/m 7 De Bocht (zie velden.js).
+Veld = nummer: 1 t/m 3 is De Tas, 4 t/m 7 De Bocht (zie velden.js). '4G' is veld 4
+groot: de halve zaal links, in de lengte vanaf de tribune.
 Wedstrijden die niet in data/matches.json staan (verplaatst of vervallen)
 worden gemeld en niet verwerkt: de sleutel zou nergens op passen.
 """
@@ -52,18 +53,21 @@ def main(pad):
         if not tijdstip:
             niet_gevonden.append(label)
             continue
-        if not isinstance(veld, int) or not 1 <= veld <= 7:
+        # '4G' = veld 4 groot (halve zaal in de lengte vanaf de tribune)
+        tekst = str(veld).strip().upper()
+        nummer = int(tekst[:-1]) if tekst.endswith('G') and tekst[:-1].isdigit() else (int(tekst) if tekst.isdigit() else 0)
+        if not 1 <= nummer <= 7 or (tekst.endswith('G') and nummer != 4):
             geen_nummer.append('%s (veld %r)' % (label, veld))
             continue
         # De kolom Zaal (Tas/Bocht) spreekt soms het veldnummer tegen; het nummer wint
-        if (zaal == 'Tas' and veld > 3) or (zaal == 'Bocht' and veld < 4):
-            tegenspraak.append('%s: zaal %s, veld %d' % (label, zaal, veld))
+        if (zaal == 'Tas' and nummer > 3) or (zaal == 'Bocht' and nummer < 4):
+            tegenspraak.append('%s: zaal %s, veld %s' % (label, zaal, tekst))
         sleutel = '%s|%s|%s' % (tijdstip, thuis, uit)
         if sleutel not in velden:
             nieuw += 1
-        elif velden[sleutel] != str(veld):
+        elif velden[sleutel] != tekst:
             gewijzigd += 1
-        velden[sleutel] = str(veld)
+        velden[sleutel] = tekst
 
     over['velden'] = dict(sorted(velden.items()))
     over['gewijzigd'] = datetime.datetime.now().astimezone().replace(microsecond=0).isoformat()

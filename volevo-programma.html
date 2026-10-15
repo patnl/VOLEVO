@@ -422,7 +422,9 @@ function veldLabel(nr) {
   if (!nr) return '';
   var n = parseInt(nr, 10);
   if (n >= 1 && n <= 3) return 'Tas ' + n;
-  if (n >= 4 && n <= 7) return 'Bocht ' + n;
+  // '4G' = veld 4 groot (halve zaal in de lengte vanaf de tribune)
+  var groot = /g$/i.test(String(nr)) ? ' groot' : '';
+  if (n >= 4 && n <= 7) return 'Bocht ' + n + groot;
   return 'veld ' + nr;
 }
 
