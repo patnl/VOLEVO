@@ -1,6 +1,6 @@
 {
   "toelichting": "Handmatige correcties die voorrang krijgen op de Nevobo-gegevens. Samen te stellen met volevo-admin.html.",
-  "gewijzigd": "2026-10-15T12:57:50+00:00",
+  "gewijzigd": "2026-10-15T13:01:55+00:00",
   "standen": {},
   "velden": {
     "2026-10-03T12:30:00+02:00|VOLEVO HS 2|DEO HS 1": "1",
@@ -29,7 +29,7 @@
     "2026-10-17T12:30:00+02:00|VOLEVO MB 4|ZVH MB 2": "5",
     "2026-10-17T12:30:00+02:00|VOLEVO MC 1|Inter Rijswijk JC 1": "1",
     "2026-10-17T12:30:00+02:00|VOLEVO MC 5|Ancora RVV MC 3": "6",
-    "2026-10-17T15:00:00+02:00|VOLEVO DS 2|Spaarnestad DS 3": "7",
+    "2026-10-17T15:00:00+02:00|VOLEVO DS 2|Spaarnestad DS 3": "1",
     "2026-10-17T15:00:00+02:00|VOLEVO JB 1|VHZ JB 1": "3",
     "2026-10-17T15:00:00+02:00|VOLEVO MA 4|Inter Rijswijk MA 2": "4",
     "2026-10-17T15:00:00+02:00|VOLEVO MA 6|Kratos '08 MA 1": "7",
