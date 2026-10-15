@@ -157,6 +157,7 @@
     .veld-tegen { font-size: 18px; }
   }
 </style>
+<script src="./overrides.js"></script>
 </head>
 <body>
 
@@ -317,9 +318,8 @@ async function loadOverrides() {
   if (overridesGeladen) return;
   overridesGeladen = true;
   try {
-    var r = await fetch('./data/overrides.json?t=' + Date.now());
-    if (!r.ok) return;
-    var d = await r.json();
+    var d = await laadOverrides();
+    if (!d) return;
     OVERRIDES = {
       standen:   d.standen   || {},
       velden:    d.velden    || {},

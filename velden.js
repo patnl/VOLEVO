@@ -7,8 +7,8 @@ var Velden = (function() {
 
   async function laad() {
     try {
-      var r = await fetch('./data/overrides.json?t=' + Date.now(), { cache: 'no-store' });
-      if (r.ok) correcties = (await r.json()).velden || {};
+      var d = typeof laadOverrides === 'function' ? await laadOverrides() : null;
+      if (d) correcties = d.velden || {};
     } catch (e) {}
   }
 
