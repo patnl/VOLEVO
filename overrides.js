@@ -18,3 +18,19 @@ async function laadOverrides() {
   } catch (e) {}
   return null;
 }
+
+// Het trainingsschema (data/trainingen.json), op dezelfde manier: eerst de API, dan het bestand.
+async function laadTrainingen() {
+  var t = '?t=' + Date.now();
+  if (VOLEVO_API) {
+    try {
+      var r = await fetch(VOLEVO_API + '/trainingen' + t, { cache: 'no-store' });
+      if (r.ok) return await r.json();
+    } catch (e) {}
+  }
+  try {
+    var r2 = await fetch('./data/trainingen.json' + t, { cache: 'no-store' });
+    if (r2.ok) return await r2.json();
+  } catch (e) {}
+  return null;
+}

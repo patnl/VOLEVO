@@ -4,6 +4,7 @@ Een kleine Cloudflare Worker die de handmatige correcties (velden, standen, meld
 
 - `GET /overrides`: openbaar, geeft de opgeslagen correcties (404 zolang er niets is opgeslagen).
 - `PUT /overrides`: alleen met `Authorization: Bearer <wachtwoord>`. Controleert de inhoud, bewaart hem en houdt de vorige versie als `overrides:vorig` apart.
+- `GET /trainingen` en `PUT /trainingen`: hetzelfde voor het trainingsschema (door de wedstrijdsecretaris te uploaden op `volevo-schema.html`; de vorige versie blijft als `trainingen:vorig` bewaard). Zolang er niets is opgeslagen geldt `data/trainingen.json` uit de repo.
 
 ## Eenmalig aanzetten
 
