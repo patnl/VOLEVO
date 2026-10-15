@@ -1,6 +1,6 @@
 {
-  "commit": "5b480c4",
-  "date": "2026-10-15T15:58:13+02:00",
+  "commit": "d20c68f",
+  "date": "2026-10-15T16:27:40+02:00",
   "files": {
     "index.html": {
       "commit": "b6f231e",
@@ -43,16 +43,16 @@
       "date": "2026-10-15T13:06:37Z"
     },
     "volevo-schema.html": {
-      "commit": "ee88e87",
-      "date": "2026-10-15T12:50:33Z"
+      "commit": "50e8e9f",
+      "date": "2026-10-15T14:03:12Z"
     },
     "volevo-uitslagen.html": {
       "commit": "5f27907",
       "date": "2026-10-15T13:06:37Z"
     },
     "volevo-wijzigingen.html": {
-      "commit": "34e2796",
-      "date": "2026-10-15T13:50:48Z"
+      "commit": "50e8e9f",
+      "date": "2026-10-15T14:03:12Z"
     },
     "volevo-zaal.html": {
       "commit": "ee88e87",
