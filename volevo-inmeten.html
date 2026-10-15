@@ -70,6 +70,12 @@
   var q = new URLSearchParams(location.search);
   var diag = parseFloat(q.get('diag')) || 55;
   var zoom = parseFloat(q.get('zoom')) || 1;
+  // Staat de pagina als ?scherm=<naam> in Yodeck, dan gaat hij na twee minuten terug naar die pagina,
+  // zodat een scherm niet op de inmeetpagina blijft hangen.
+  var terug = q.get('scherm');
+  if (['kaart', 'uitslagen', 'programma', 'felicitatie'].indexOf(terug) !== -1) {
+    setTimeout(function () { location.replace('volevo-' + terug + '.html'); }, 2 * 60 * 1000);
+  }
   document.documentElement.style.setProperty('--tv-zoom', zoom);
 
   var W = window.innerWidth, H = window.innerHeight, dpr = window.devicePixelRatio || 1;
