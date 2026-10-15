@@ -1,0 +1,13 @@
+name = "volevo-beheer"
+main = "index.js"
+compatibility_date = "2026-10-01"
+
+# Adres van de site (zonder slash aan het eind); alleen die mag de API aanroepen
+[vars]
+ALLOWED_ORIGIN = "https://patnl.github.io"
+
+# Opslag voor de correcties. Maak hem aan met:  npx wrangler kv namespace create OVERRIDES
+# en zet het getoonde id hieronder.
+[[kv_namespaces]]
+binding = "OVERRIDES"
+id = "VERVANG-DOOR-HET-KV-ID"

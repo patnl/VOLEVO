@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Schema beheren</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f5f5f7; color: #1d1d1f; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 22px 18px 60px; }
+  h1 { font-size: 1.6rem; font-weight: 800; }
+  .sub { color: #636366; font-size: 0.9rem; margin: 4px 0 18px; }
+  .kaart { background: white; border-radius: 16px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04); }
+  .kaart h2 { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
+  .kaart p.uitleg { color: #636366; font-size: 0.85rem; margin-bottom: 12px; line-height: 1.45; }
+  .rij { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  button, .knop { font: inherit; font-weight: 700; font-size: 0.85rem; border: 0; border-radius: 10px; padding: 9px 16px; cursor: pointer; background: #2A3176; color: white; }
+  button.grijs { background: #e5e5ea; color: #1d1d1f; }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  input[type=password], select { font: inherit; font-size: 0.85rem; padding: 8px 10px; border: 1px solid #d1d1d6; border-radius: 8px; background: white; }
+  input[type=file] { font-size: 0.85rem; }
+  .stand { font-size: 0.85rem; color: #3a3a3c; line-height: 1.5; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .badge { font-size: 0.8rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; background: #f2f2f7; color: #3a3a3c; }
+  .badge.goed { background: #e3f5e8; color: #1a8a3a; }
+  .badge.let-op { background: #fff1d6; color: #9a5b00; }
+  .badge.fout { background: #fde4e2; color: #c9261b; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; color: #86868b; padding: 6px 8px; border-bottom: 1px solid #e5e5ea; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2f7; vertical-align: top; }
+  tr.uit td { opacity: 0.45; }
+  .opm { color: #9a5b00; font-size: 0.78rem; margin-top: 2px; }
+  .opm.fout { color: #c9261b; }
+  .melding { padding: 10px 14px; border-radius: 10px; font-size: 0.85rem; margin-top: 10px; }
+  .melding.ok { background: #e3f5e8; color: #1a8a3a; }
+  .melding.fout { background: #fde4e2; color: #c9261b; }
+  .melding.info { background: #eef0f8; color: #2A3176; }
+  .lijst { font-size: 0.85rem; line-height: 1.55; padding-left: 18px; }
+  @media (max-width: 700px) { th:nth-child(1), td:nth-child(1) { display: none; } }
+</style>
+<script src="./overrides.js"></script>
+<!-- SheetJS 0.18.5 (Apache-2.0), zelf gehost zodat er geen script van een derde partij meeloopt op een pagina met wachtwoord -->
+<script src="./vendor/xlsx.full.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <h1>Schema beheren</h1>
+  <div class="sub">Upload het wedstrijdschema, zie wat het voor de schermen betekent, pas aan en zet het live. De wedstrijden zelf blijven live uit Nevobo komen; dit bestand bepaalt alleen het veld in De Fluit.</div>
+
+  <div class="kaart">
+    <h2>1. Wachtwoord</h2>
+    <p class="uitleg">Nodig om te publiceren. Bekijken, uploaden en downloaden kan zonder.</p>
+    <div class="rij"><input type="password" id="wachtwoord" placeholder="Beheerwachtwoord" autocomplete="current-password"><span class="stand" id="bron"></span></div>
+  </div>
+
+  <div class="kaart">
+    <h2>2. Huidig schema downloaden</h2>
+    <p class="uitleg">Excel met alle komende wedstrijden zoals de schermen ze nu laten zien (Nevobo plus jullie veldindeling). Pas het aan en upload het hieronder weer.</p>
+    <button id="download-excel" disabled>Download Excel</button>
+  </div>
+
+  <div class="kaart">
+    <h2>3. Schema uploaden</h2>
+    <p class="uitleg">Kies het Excel-bestand (zelfde kolommen als het bestuursschema: Datum, Tijd, Team thuis, Team uit, Veld, Zaalcode). Er wordt nog niets opgeslagen; je ziet eerst wat er verandert.</p>
+    <input type="file" id="bestand" accept=".xlsx,.xls">
+    <div id="leesmelding"></div>
+  </div>
+
+  <div class="kaart" id="gevolgen" hidden>
+    <h2>4. Wat verandert er?</h2>
+    <div class="badges" id="badges"></div>
+    <div id="tabel"></div>
+    <div id="lijsten"></div>
+  </div>
+
+  <div class="kaart" id="publiceer" hidden>
+    <h2>5. Live zetten</h2>
+    <p class="uitleg">De schermen en pagina's gebruiken de nieuwe indeling binnen enkele minuten. Een stap terug bewaart de beheer-API automatisch.</p>
+    <div class="rij">
+      <button id="publiceer-knop" disabled>Publiceren naar de schermen</button>
+      <button class="grijs" id="download-json">Download overrides.json</button>
+    </div>
+    <div id="publiceermelding"></div>
+  </div>
+</div>
+
+<script>
+// ── Hulpfuncties ──
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function(c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+function sleutelVan(w) { return (w.tijdstip || '') + '|' + (w.thuis || '') + '|' + (w.uit || ''); }
+function ymd(w) { return w.tijdstip.slice(0, 10); }
+function hm(w) { return w.tijdstip.slice(11, 16); }
+function isFluit(w) { return w.hal === 'De Fluit'; }
+function veldNaam(v) {
+  if (!v) return '–';
+  var n = parseInt(v, 10), groot = /g$/i.test(v) ? ' groot' : '';
+  return (n <= 3 ? 'Tas ' : 'Bocht ') + n + groot;
+}
+var VELDKEUZEN = ['1', '2', '3', '4', '4G', '5', '6', '7'];
+var VELD_RE = /^([1-7])(G?)$/;
+
+var matches = [];                 // alle VOLEVO-wedstrijden uit data/matches.json
+var huidig = { standen: {}, velden: {}, meldingen: {}, toelichting: '' };
+var plan = [];                    // regels uit de upload
+var verouderd = [];               // correcties zonder wedstrijd in Nevobo
+var wegVerouderd = true;          // bij publiceren die verouderde correcties verwijderen
+var metWachtwoord = function() { return sessionStorage.getItem('volevoWachtwoord') || ''; };
+
+// ── Inladen: wedstrijden en huidige correcties ──
+async function start() {
+  try {
+    var r = await fetch('./data/matches.json?t=' + Date.now());
+    matches = (await r.json()).wedstrijden || [];
+  } catch (e) {
+    document.getElementById('bron').textContent = 'Wedstrijden konden niet geladen worden.';
+    return;
+  }
+  var o = await laadOverrides();
+  if (o) huidig = { standen: o.standen || {}, velden: o.velden || {}, meldingen: o.meldingen || {}, toelichting: o.toelichting || '', gewijzigd: o.gewijzigd };
+  var aantal = Object.keys(huidig.velden).length;
+  document.getElementById('bron').textContent = aantal + ' veldcorrecties live' +
+    (huidig.gewijzigd ? ', laatst gewijzigd ' + new Date(huidig.gewijzigd).toLocaleString('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }) : '') +
+    (VOLEVO_API ? '' : ' (publiceren via de API is nog niet ingesteld)');
+  document.getElementById('download-excel').disabled = false;
+  var pw = document.getElementById('wachtwoord');
+  pw.value = metWachtwoord();
+  pw.addEventListener('input', function() { sessionStorage.setItem('volevoWachtwoord', pw.value); zetKnop(); });
+}
+
+// ── Excel downloaden: komende wedstrijden zoals de schermen ze tonen ──
+function effectiefVeld(w) {
+  var o = huidig.velden[sleutelVan(w)];
+  if (o) return o;
+  return isFluit(w) ? '' : (w.veld == null ? '' : String(w.veld));   // het Nevobo-nummer zegt in De Fluit niets
+}
+function excelDatum(s) {   // 'jjjj-mm-dd' -> Excel-serienummer
+  var p = s.split('-');
+  return Date.UTC(+p[0], +p[1] - 1, +p[2]) / 86400000 + 25569;
+}
+function downloadExcel() {
+  var vandaag = new Date().toISOString().slice(0, 10);
+  var lijst = matches.filter(function(w) { return w.status !== 'gespeeld' && ymd(w) >= vandaag; })
+    .sort(function(a, b) { return a.tijdstip < b.tijdstip ? -1 : 1; });
+  var kop = ['Datum', 'Tijd', 'Team thuis', 'Team uit', 'Locatie', 'Zaal', 'Veld', 'Zaalcode', 'Plaats'];
+  var rijen = [kop];
+  lijst.forEach(function(w) {
+    var v = effectiefVeld(w), n = parseInt(v, 10);
+    rijen.push([
+      { t: 'n', v: excelDatum(ymd(w)), z: 'dd-mm-yyyy' },
+      w.status === 'vervallen' ? 'Vervallen' : hm(w),
+      w.thuis, w.uit, (w.hal || '') + (w.plaats ? ', ' + w.plaats : ''),
+      isFluit(w) && v ? (n <= 3 ? 'Tas' : 'Bocht') : '',
+      /^\d+$/.test(v) ? +v : v,
+      isFluit(w) ? 'LSDFL' : '', w.plaats || ''
+    ]);
+  });
+  var ws = XLSX.utils.aoa_to_sheet(rijen);
+  ws['!cols'] = [12, 8, 26, 26, 30, 8, 8, 10, 16].map(function(c) { return { wch: c }; });
+  var wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Wedstrijden');
+  XLSX.writeFile(wb, 'Wedstrijdschema_' + vandaag + '.xlsx');
+}
+
+// ── Excel lezen ──
+function leesDatum(v) {
+  if (v instanceof Date) return v.getFullYear() + '-' + String(v.getMonth() + 1).padStart(2, '0') + '-' + String(v.getDate()).padStart(2, '0');
+  if (typeof v === 'number') return new Date(Math.round((v - 25569) * 86400000)).toISOString().slice(0, 10);
+  var s = String(v || '').trim(), m;
+  if ((m = s.match(/^(\d{4})-(\d{2})-(\d{2})/))) return m[1] + '-' + m[2] + '-' + m[3];
+  if ((m = s.match(/^(\d{1,2})[-\/.](\d{1,2})[-\/.](\d{4})/))) return m[3] + '-' + m[2].padStart(2, '0') + '-' + m[1].padStart(2, '0');
+  return '';
+}
+function leesTijd(v) {
+  if (typeof v === 'number') { var min = Math.round((v % 1) * 1440); return String(Math.floor(min / 60)).padStart(2, '0') + ':' + String(min % 60).padStart(2, '0'); }
+  var m = String(v || '').match(/(\d{1,2}):(\d{2})/);
+  return m ? m[1].padStart(2, '0') + ':' + m[2] : '';
+}
+function leesWerkboek(buf) {
+  var wb = XLSX.read(buf, { type: 'array' });
+  var ws = wb.Sheets[wb.SheetNames[0]];
+  var rijen = XLSX.utils.sheet_to_json(ws, { header: 1, raw: true, defval: null });
+  var kopI = rijen.findIndex(function(r) { return r.some(function(c) { return String(c || '').trim().toLowerCase() === 'team thuis'; }); });
+  if (kopI === -1) throw new Error('Geen kolom "Team thuis" gevonden. Is dit het wedstrijdschema?');
+  var kop = rijen[kopI].map(function(c) { return String(c || '').trim().toLowerCase(); });
+  var kol = function(naam) { return kop.indexOf(naam); };
+  var c = { datum: kol('datum'), tijd: kol('tijd'), thuis: kol('team thuis'), uit: kol('team uit'), veld: kol('veld'),
+            code: kol('zaalcode'), loc: kol('locatie'), zaal: kol('zaal') };
+  ['datum', 'tijd', 'thuis', 'uit', 'veld'].forEach(function(k) { if (c[k] === -1) throw new Error('Kolom "' + k + '" ontbreekt in het bestand.'); });
+  var uit = [];
+  rijen.slice(kopI + 1).forEach(function(r) {
+    if (!r[c.thuis] || !r[c.uit]) return;
+    var tijd = r[c.tijd];
+    if (String(tijd).toLowerCase().indexOf('vervallen') !== -1) return;
+    var code = c.code === -1 ? '' : String(r[c.code] || '').trim().toUpperCase();
+    var loc = c.loc === -1 ? '' : String(r[c.loc] || '');
+    uit.push({ datum: leesDatum(r[c.datum]), tijd: leesTijd(tijd), thuis: String(r[c.thuis]).trim(), uit: String(r[c.uit]).trim(),
+      veld: r[c.veld] == null ? '' : String(r[c.veld]).trim().toUpperCase(),
+      zaal: c.zaal === -1 ? '' : String(r[c.zaal] || '').trim(),
+      fluit: code === 'LSDFL' || /^de fluit/i.test(loc) });
+  });
+  return uit;
+}
+
+// ── Gevolgen berekenen ──
+function berekenPlan(rijen) {
+  var perSleutel = {};
+  matches.forEach(function(w) { perSleutel[ymd(w) + ' ' + hm(w) + '|' + w.thuis + '|' + w.uit] = w; });
+  var perTeams = {};
+  matches.forEach(function(w) { (perTeams[w.thuis + '|' + w.uit] = perTeams[w.thuis + '|' + w.uit] || []).push(w); });
+  plan = [];
+  rijen.filter(function(r) { return r.fluit; }).forEach(function(r) {
+    var regel = { r: r, w: perSleutel[r.datum + ' ' + r.tijd + '|' + r.thuis + '|' + r.uit], nieuw: '', opm: [], fout: '', aan: false };
+    if (!regel.w) {
+      var alt = (perTeams[r.thuis + '|' + r.uit] || []).filter(function(x) { return x.status !== 'gespeeld' && x.status !== 'vervallen'; })[0];
+      regel.fout = alt
+        ? 'Staat in Nevobo op ' + ymd(alt).split('-').reverse().join('-') + ' ' + hm(alt) + ', niet op deze datum. Datum in het schema of in Nevobo is anders.'
+        : 'Niet gevonden in Nevobo.';
+    } else {
+      var m = VELD_RE.exec(r.veld);
+      if (!m || (m[2] && m[1] !== '4')) regel.fout = 'Veld "' + r.veld + '" is niet herkend (1 t/m 7, of 4G voor veld 4 groot).';
+      else {
+        regel.nieuw = r.veld;
+        var n = +m[1];
+        if ((r.zaal === 'Tas' && n > 3) || (r.zaal === 'Bocht' && n < 4)) regel.opm.push('Kolom Zaal zegt ' + r.zaal + ', maar veld ' + r.veld + ' is ' + veldNaam(r.veld) + '. Het veldnummer is gebruikt.');
+        regel.aan = huidig.velden[sleutelVan(regel.w)] !== regel.nieuw;
+      }
+    }
+    plan.push(regel);
+  });
+  var nu = new Date().toISOString().slice(0, 10);
+  verouderd = Object.keys(huidig.velden).filter(function(k) {
+    return k.slice(0, 10) >= nu && !matches.some(function(w) { return sleutelVan(w) === k; });
+  });
+  teken();
+}
+
+// De velden zoals ze na publiceren zouden zijn
+function voorstel() {
+  var v = {};
+  Object.keys(huidig.velden).forEach(function(k) { if (!wegVerouderd || verouderd.indexOf(k) === -1) v[k] = huidig.velden[k]; });
+  plan.forEach(function(p) { if (p.aan && p.w && p.nieuw) v[sleutelVan(p.w)] = p.nieuw; });
+  return v;
+}
+
+function botsingen(velden) {
+  var nu = new Date().toISOString().slice(0, 10), groepen = {}, uit = [];
+  matches.forEach(function(w) {
+    if (!isFluit(w) || w.status === 'vervallen' || w.status === 'gespeeld' || ymd(w) < nu) return;
+    (groepen[w.tijdstip] = groepen[w.tijdstip] || []).push(w);
+  });
+  Object.keys(groepen).forEach(function(t) {
+    var gebruikt = {};
+    groepen[t].forEach(function(w) {
+      var v = velden[sleutelVan(w)];
+      if (!v) return;
+      var sleutels = v === '4G' ? ['4', '7'] : [v];      // veld 4 groot beslaat de halve zaal links: 4 en 7
+      sleutels.forEach(function(s) { (gebruikt[s] = gebruikt[s] || []).push(w); });
+    });
+    Object.keys(gebruikt).forEach(function(s) {
+      if (gebruikt[s].length > 1) uit.push(ymd(gebruikt[s][0]).split('-').reverse().join('-') + ' ' + hm(gebruikt[s][0]) + ': ' + veldNaam(s) + ' is dubbel gebruikt (' +
+        gebruikt[s].map(function(w) { return w.thuis.replace(/^VOLEVO /, ''); }).join(' en ') + ')');
+    });
+  });
+  return uit;
+}
+
+function zonderVeld(velden) {
+  var nu = new Date().toISOString().slice(0, 10);
+  return matches.filter(function(w) { return isFluit(w) && w.status === 'gepland' && ymd(w) >= nu && !velden[sleutelVan(w)]; });
+}
+
+// ── Tekenen ──
+function teken() {
+  var velden = voorstel();
+  var nieuw = plan.filter(function(p) { return p.nieuw && p.aan && huidig.velden[sleutelVan(p.w)] === undefined; }).length;
+  var wijzigt = plan.filter(function(p) { return p.nieuw && p.aan && huidig.velden[sleutelVan(p.w)] !== undefined; }).length;
+  var gelijk = plan.filter(function(p) { return p.nieuw && !p.aan && huidig.velden[sleutelVan(p.w)] === p.nieuw; }).length;
+  var fouten = plan.filter(function(p) { return p.fout; });
+  var bots = botsingen(velden), zonder = zonderVeld(velden);
+
+  document.getElementById('badges').innerHTML =
+    '<span class="badge goed">' + nieuw + ' nieuw veld</span>' +
+    '<span class="badge">' + wijzigt + ' wijzigt</span>' +
+    '<span class="badge">' + gelijk + ' ongewijzigd</span>' +
+    '<span class="badge ' + (fouten.length ? 'fout' : '') + '">' + fouten.length + ' niet te verwerken</span>' +
+    '<span class="badge ' + (bots.length ? 'fout' : 'goed') + '">' + bots.length + ' botsingen</span>' +
+    '<span class="badge ' + (zonder.length ? 'let-op' : 'goed') + '">' + zonder.length + ' thuiswedstrijden zonder veld</span>' +
+    (verouderd.length ? '<span class="badge let-op">' + verouderd.length + ' verouderde correcties</span>' : '');
+
+  var rijen = plan.filter(function(p) { return p.fout || (p.nieuw && (p.aan || huidig.velden[sleutelVan(p.w)] !== p.nieuw)) || p.opm.length; });
+  document.getElementById('tabel').innerHTML = rijen.length
+    ? '<table><thead><tr><th>Toepassen</th><th>Wedstrijd</th><th>Nu</th><th>Nieuw veld</th></tr></thead><tbody>' + rijen.map(function(p) {
+        var i = plan.indexOf(p), k = p.w ? sleutelVan(p.w) : '';
+        var nu = p.w ? (huidig.velden[k] ? veldNaam(huidig.velden[k]) : 'nog geen veld') : '–';
+        return '<tr class="' + (p.nieuw && !p.aan ? 'uit' : '') + '"><td>' + (p.nieuw ? '<input type="checkbox" data-aan="' + i + '"' + (p.aan ? ' checked' : '') + '>' : '') + '</td>' +
+          '<td><strong>' + esc(p.r.datum.split('-').reverse().join('-') + ' ' + p.r.tijd) + '</strong> ' + esc(p.r.thuis) + ' – ' + esc(p.r.uit) +
+          (p.fout ? '<div class="opm fout">' + esc(p.fout) + '</div>' : '') +
+          p.opm.map(function(o) { return '<div class="opm">' + esc(o) + '</div>'; }).join('') + '</td>' +
+          '<td>' + esc(nu) + '</td>' +
+          '<td>' + (p.nieuw ? '<select data-veld="' + i + '">' + VELDKEUZEN.map(function(v) { return '<option value="' + v + '"' + (v === p.nieuw ? ' selected' : '') + '>' + veldNaam(v) + '</option>'; }).join('') + '</select>' : '') + '</td></tr>';
+      }).join('') + '</tbody></table>'
+    : '<div class="stand">Het schema wijkt niet af van wat er nu live staat.</div>';
+
+  document.getElementById('lijsten').innerHTML =
+    (bots.length ? '<div class="melding fout"><strong>Botsingen na publiceren:</strong><ul class="lijst">' + bots.map(function(b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>Veld 4 groot telt als veld 4 en veld 7.</div>' : '') +
+    (zonder.length ? '<div class="melding info"><strong>Thuiswedstrijden in De Fluit zonder veld</strong> (staan wel in Nevobo, niet in dit schema):<ul class="lijst">' +
+      zonder.slice(0, 15).map(function(w) { return '<li>' + esc(ymd(w).split('-').reverse().join('-') + ' ' + hm(w) + ' ' + w.thuis + ' – ' + w.uit) + '</li>'; }).join('') +
+      (zonder.length > 15 ? '<li>… en ' + (zonder.length - 15) + ' meer</li>' : '') + '</ul></div>' : '') +
+    (verouderd.length ? '<div class="melding info"><strong>' + verouderd.length + ' correcties horen bij wedstrijden die niet meer in Nevobo staan</strong> (verplaatst of vervallen). ' +
+      '<label><input type="checkbox" id="weg-verouderd"' + (wegVerouderd ? ' checked' : '') + '> verwijderen bij publiceren</label></div>' : '');
+  var weg = document.getElementById('weg-verouderd'); if (weg) weg.onchange = function() { wegVerouderd = weg.checked; teken(); };
+
+  document.getElementById('gevolgen').hidden = false;
+  document.getElementById('publiceer').hidden = false;
+  zetKnop();
+}
+
+function zetKnop() {
+  document.getElementById('publiceer-knop').disabled = !(plan.length && VOLEVO_API && metWachtwoord());
+  document.getElementById('publiceer-knop').title = !VOLEVO_API ? 'De beheer-API is nog niet ingesteld.' : (!metWachtwoord() ? 'Vul het wachtwoord in.' : '');
+}
+
+function resultaat() {
+  return { toelichting: huidig.toelichting || 'Handmatige correcties die voorrang krijgen op de Nevobo-gegevens.', standen: huidig.standen, velden: voorstel(), meldingen: huidig.meldingen };
+}
+
+async function publiceer() {
+  var el = document.getElementById('publiceermelding'), knop = document.getElementById('publiceer-knop');
+  knop.disabled = true; el.innerHTML = '<div class="melding info">Bezig met publiceren…</div>';
+  try {
+    var r = await fetch(VOLEVO_API + '/overrides', { method: 'PUT', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + metWachtwoord() }, body: JSON.stringify(resultaat()) });
+    var d = await r.json().catch(function() { return {}; });
+    if (!r.ok) throw new Error(d.fout || ('Fout ' + r.status));
+    el.innerHTML = '<div class="melding ok">Gepubliceerd: ' + d.velden + ' veldcorrecties live. De schermen pakken het binnen enkele minuten op.</div>';
+    huidig = Object.assign({}, huidig, { velden: resultaat().velden, gewijzigd: d.gewijzigd });
+    berekenPlan(plan.map(function(p) { return p.r; }));
+  } catch (e) {
+    el.innerHTML = '<div class="melding fout">' + esc(e.message) + '</div>';
+  }
+  zetKnop();
+}
+
+// ── Bedienen ──
+document.getElementById('download-excel').onclick = downloadExcel;
+document.getElementById('publiceer-knop').onclick = publiceer;
+document.getElementById('download-json').onclick = function() {
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(resultaat(), null, 2)], { type: 'application/json' }));
+  a.download = 'overrides.json'; a.click();
+};
+document.getElementById('bestand').onchange = function(e) {
+  var f = e.target.files[0], el = document.getElementById('leesmelding');
+  if (!f) return;
+  var lezer = new FileReader();
+  lezer.onload = function() {
+    try {
+      var rijen = leesWerkboek(new Uint8Array(lezer.result));
+      berekenPlan(rijen);
+      el.innerHTML = '<div class="melding ok">' + rijen.length + ' wedstrijden gelezen, waarvan ' + plan.length + ' in De Fluit.</div>';
+    } catch (err) {
+      el.innerHTML = '<div class="melding fout">' + esc(err.message) + '</div>';
+    }
+  };
+  lezer.readAsArrayBuffer(f);
+};
+document.addEventListener('change', function(e) {
+  var a = e.target.getAttribute && e.target.getAttribute('data-aan'), v = e.target.getAttribute && e.target.getAttribute('data-veld');
+  if (a !== null && a !== undefined) { plan[+a].aan = e.target.checked; teken(); }
+  if (v !== null && v !== undefined) { plan[+v].nieuw = e.target.value; plan[+v].r.veld = e.target.value; plan[+v].aan = true; teken(); }
+});
+
+start();
+</script>
+</body>
+</html>

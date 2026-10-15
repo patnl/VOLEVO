@@ -89,6 +89,7 @@
   button.actie.grijs { background: #f2f2f7; color: #3a3a3c; }
   .gelukt { font-size: 0.76rem; color: #34c759; font-weight: 700; align-self: center; }
 </style>
+<script src="./overrides.js"></script>
 </head>
 <body>
 
@@ -215,11 +216,8 @@ async function start() {
 
   // Bestaande correcties inlezen, zodat je verder werkt en niet overschrijft
   try {
-    var ro = await fetch('./data/overrides.json?t=' + Date.now());
-    if (ro.ok) {
-      var o = await ro.json();
-      overrides = { standen: o.standen || {}, velden: o.velden || {}, meldingen: o.meldingen || {} };
-    }
+    var o = await laadOverrides();
+    if (o) overrides = { standen: o.standen || {}, velden: o.velden || {}, meldingen: o.meldingen || {} };
   } catch(e) {}
 
   var vandaag = dagSleutel(new Date().toISOString());
