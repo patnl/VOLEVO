@@ -28,7 +28,9 @@ var Velden = (function() {
     if (w.hal !== 'De Fluit') return 'veld ' + w.veld;
     if (!w.veldUitSchema) return '';
     var n = parseInt(w.veld, 10);
-    return n <= 3 ? 'Tas ' + n : 'Bocht ' + n;
+    // '4G' = veld 4 groot: de halve zaal in de lengte vanaf de tribune
+    var groot = /g$/i.test(String(w.veld)) ? ' groot' : '';
+    return (n <= 3 ? 'Tas ' + n : 'Bocht ' + n) + groot;
   }
 
   // Plattegrond op de dag en speelronde van deze wedstrijd, met het veld

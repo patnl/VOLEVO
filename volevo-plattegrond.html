@@ -252,7 +252,13 @@ var ZAAL = {
         { veld:'7', hal:'7', fx:0,   fy:0,   fw:1/2, fh:1/2, net:'v' },
         { veld:'6', hal:'6', fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
         { veld:'4', hal:'4', fx:0,   fy:1/2, fw:1/2, fh:1/2, net:'v' },
-        { veld:'5', hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } }
+        { veld:'5', hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] },
+      // Bij 3 wedstrijden staat veld 4 groot: de halve zaal links, in de lengte
+      // vanaf de tribune. Rechts blijven 6 (achter) en 5 (bij de tribune).
+      gemengd: { omschrijving: 'veld 4 groot · 4G, 5 en 6', velden: [
+        { veld:['4G'], hal:'4', fx:0,   fy:0,   fw:1/2, fh:1,   net:'h' },
+        { veld:'6',   hal:'6', fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:'5',   hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } }
   ],
   // Beide zalen hebben een eigen ingang aan de tribunekant.
   ingangen: [
@@ -272,7 +278,7 @@ function halVan(v) {
 }
 function labelVan(v) {
   var l = veldenVan(v).filter(function(nr) { return String(nr).charAt(0) !== 'h'; });
-  return l.length ? l.join(' of ') : '–';
+  return l.length ? l.map(function(nr) { return /g$/i.test(nr) ? nr.replace(/g$/i, ' groot') : nr; }).join(' of ') : '–';
 }
 
 // Welke stand staat deze speelronde in deze zaal? Is een veld in gebruik dat
@@ -285,6 +291,8 @@ function standVan(zaal, perVeld) {
   // Automatisch: staat er een veld in gebruik dat alleen in de 4-deling
   // bestaat, dan staat de zaal gekanteld. Een gemengde stand valt niet uit
   // het schema af te leiden; die kies je met de knopjes of via de correcties.
+  // Veld 4 groot ('4G') bestaat alleen in de gemengde stand
+  if (zaal.gemengd && Object.keys(perVeld).some(function(nr) { return /g$/i.test(nr) && (perVeld[nr] || []).length; })) return zaal.gemengd;
   if (!zaal.vier) return zaal.drie;
   if (!zaal.drie) return zaal.vier;
   var alleenInVier = [];
@@ -338,7 +346,9 @@ function veldLabel(nr) {
   if (!nr) return '';
   var n = parseInt(nr, 10);
   if (n >= 1 && n <= 3) return 'Tas ' + n;
-  if (n >= 4 && n <= 7) return 'Bocht ' + n;
+  // '4G' = veld 4 groot (halve zaal in de lengte vanaf de tribune)
+  var groot = /g$/i.test(String(nr)) ? ' groot' : '';
+  if (n >= 4 && n <= 7) return 'Bocht ' + n + groot;
   return 'veld ' + nr;
 }
 
@@ -537,11 +547,13 @@ function teken() {
       } else {
         svg += '<line class="net" x1="'+(bx+8)+'" y1="'+midy+'" x2="'+(bx+bw-8)+'" y2="'+midy+'"/>';
       }
-      svg += '<text class="veld-nr" x="'+(bx+30)+'" y="'+(by+28)+'">'+esc(labelVan(v))+'</text>';
+      var nrTekst = labelVan(v);
+      // Lange labels ('4 groot') links uitlijnen, anders valt het begin buiten het vak
+      svg += '<text class="veld-nr" x="'+(nrTekst.length > 2 ? bx+16 : bx+30)+'" y="'+(by+28)+'"'+(nrTekst.length > 2 ? ' style="text-anchor:start"' : '')+'>'+esc(nrTekst)+'</text>';
       if (bezet.length > 1) {
         svg += '<text class="veld-botst" x="'+(bx+bw-14)+'" y="'+(by+28)+'">'+bezet.length+' tegelijk</text>';
       }
-      svg += '<text class="veld-halnr" x="'+(bx+30)+'" y="'+(by+46)+'">hal '+esc(halVan(v))+'</text>';
+      svg += '<text class="veld-halnr" x="'+(nrTekst.length > 2 ? bx+16 : bx+30)+'" y="'+(by+46)+'"'+(nrTekst.length > 2 ? ' style="text-anchor:start"' : '')+'>hal '+esc(halVan(v))+'</text>';
       bezet.slice(0,3).forEach(function(w, k) {
         var basis = midy - 6 + k*42;
         svg += '<text class="veld-team" x="'+midx+'" y="'+basis+'">'+esc(w.thuis.replace(/^VOLEVO\s*/,''))+'</text>';
