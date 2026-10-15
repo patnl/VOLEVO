@@ -82,6 +82,22 @@
     </div>
     <div id="publiceermelding"></div>
   </div>
+
+  <div class="kaart" id="training">
+    <h2>Trainingsschema</h2>
+    <p class="uitleg">Het schema waarmee de wijzigingenpagina controleert of een verplaatste wedstrijd past naast een training. Nu live: <strong id="tr-huidig">…</strong>. Kies het Excel van het bestuur (zelfde indeling als het trainingsschema: dagen onder elkaar, De Tas links en De Bocht rechts, veldnummers in de kopregel). Er wordt nog niets opgeslagen; je ziet eerst wat er verandert.</p>
+    <input type="file" id="tr-bestand" accept=".xlsx,.xls">
+    <div id="tr-melding"></div>
+    <div id="tr-gevolgen" hidden>
+      <div class="badges" id="tr-badges" style="margin-top:12px"></div>
+      <div id="tr-tabel"></div>
+      <div class="rij" style="margin-top:12px">
+        <button id="tr-publiceer" disabled>Trainingsschema publiceren</button>
+        <button class="grijs" id="tr-download">Download trainingen.json</button>
+      </div>
+      <div id="tr-publiceermelding"></div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -104,7 +120,11 @@ var huidig = { standen: {}, velden: {}, meldingen: {}, toelichting: '' };
 var plan = [];                    // regels uit de upload
 var verouderd = [];               // correcties zonder wedstrijd in Nevobo
 var wegVerouderd = true;          // bij publiceren die verouderde correcties verwijderen
-var metWachtwoord = function() { return sessionStorage.getItem('volevoWachtwoord') || ''; };
+// Het wachtwoord uit het veld zelf (dat is altijd actueel), anders uit deze tab
+var metWachtwoord = function() {
+  var veld = document.getElementById('wachtwoord');
+  return (veld && veld.value) || sessionStorage.getItem('volevoWachtwoord') || '';
+};
 
 // ── Inladen: wedstrijden en huidige correcties ──
 async function start() {
@@ -369,7 +389,133 @@ document.addEventListener('change', function(e) {
   if (v !== null && v !== undefined) { plan[+v].nieuw = e.target.value; plan[+v].r.veld = e.target.value; plan[+v].aan = true; teken(); }
 });
 
+// ── Trainingsschema uploaden ──
+// Zelfde omzetting als scripts/import_trainingsschema.py; pas beide aan als de indeling van het Excel verandert.
+var TR_DAGEN = { maandag: 'ma', dinsdag: 'di', woensdag: 'wo', donderdag: 'do', vrijdag: 'vr' };
+var TR_DAGNAAM = { ma: 'maandag', di: 'dinsdag', wo: 'woensdag', do: 'donderdag', vr: 'vrijdag' };
+var TR_TIJD = /(\d{1,2})[.:](\d{2})\s*-\s*(\d{1,2})[.:](\d{2})/;
+var trHuidig = null, trNieuw = null;
+function trHhmm(u, m) { return String(u).padStart(2, '0') + ':' + m; }
+function trBlokTijd(s) { var m = TR_TIJD.exec(String(s == null ? '' : s)); return m ? [trHhmm(m[1], m[2]), trHhmm(m[3], m[4])] : null; }
+function trCel(v) {
+  var t = String(v).trim();
+  if (/^wedstrijd/i.test(t)) return { team: null, wedstrijd: true, opm: t };
+  if (t.toUpperCase() === 'X') return { team: null, opm: 'X (niet beschikbaar)' };
+  if (/^vanaf/i.test(t)) return { team: null, opm: t };
+  var m = /^(.*?)\s+(\d{1,2}[.:]\d{2}\s*-\s*\d{1,2}[.:]\d{2})$/.exec(t);
+  if (m) { var tt = trBlokTijd(m[2]); return { team: m[1].trim(), van: tt[0], tot: tt[1] }; }
+  return { team: t };
+}
+function trLeesWerkboek(buf, huidig) {
+  var wb = XLSX.read(buf, { type: 'array' });
+  var rijen = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], { header: 1, raw: true, defval: null });
+  var versie = String((rijen[0] || [])[0] || '').replace('Versie', '').trim();
+  var kop = {};                                   // kolom -> [veldnummer, positie]
+  rijen.slice(0, 6).forEach(function(r) {
+    r.forEach(function(c, i) { var m = /^\s*Veld\s+(\d+)\s*\((\w+)\)/.exec(String(c || '')); if (m) kop[i] = [m[1], m[2]]; });
+  });
+  var kolommen = { Tas: [], Bocht: [] };
+  Object.keys(kop).map(Number).sort(function(a, b) { return a - b; }).forEach(function(i) { kolommen[i < 6 ? 'Tas' : 'Bocht'].push(i); });
+  if (!kolommen.Tas.length || !kolommen.Bocht.length) throw new Error('Geen kolommen "Veld 1 (RV)" e.d. gevonden. Is dit het trainingsschema?');
+  var tijdkolom = { Tas: 1, Bocht: 7 }, POS = { RV: 'rechtsvoor', LV: 'linksvoor', LA: 'linksachter', RA: 'rechtsachter' };
+  var velden = { Tas: {}, Bocht: {} };
+  ['Tas', 'Bocht'].forEach(function(h) { kolommen[h].forEach(function(i) { velden[h][kop[i][0]] = POS[kop[i][1]] || kop[i][1]; }); });
+  var dagen = {}, dag = null, opm = [];
+  rijen.slice(4).forEach(function(r) {
+    var a = String(r[0] || '').trim().toLowerCase();
+    if (TR_DAGEN[a]) dag = TR_DAGEN[a];
+    if (!dag) return;
+    ['Tas', 'Bocht'].forEach(function(h) {
+      var tijd = trBlokTijd(r[tijdkolom[h]]);
+      if (!tijd) return;
+      var v = {};
+      kolommen[h].forEach(function(i) { if (r[i] !== null && r[i] !== '') v[kop[i][0]] = trCel(r[i]); });
+      if (Object.keys(v).length) (dagen[dag] = dagen[dag] || []).push({ hal: h, van: tijd[0], tot: tijd[1], velden: v });
+    });
+    var tekst = String(r[8] || '');
+    if (/^bij wedstrijddagen/i.test(tekst)) opm.push(tekst.trim() + '.');
+  });
+  var cellen = Object.keys(dagen).reduce(function(n, d) { return n + dagen[d].reduce(function(m, b) { return m + Object.keys(b.velden).length; }, 0); }, 0);
+  if (cellen < 20) throw new Error('Er zijn maar ' + cellen + ' cellen gevonden; dit lijkt geen compleet trainingsschema.');
+  return { versie: versie, toelichting: 'Trainingsschema van De Fluit, overgenomen uit het Excel van het bestuur. Cijfer tussen haakjes = eerste of tweede training van het team. De Tas heeft bij trainingen veld 1 t/m 4, bij wedstrijden 1 t/m 3; De Bocht heeft veld 4 t/m 7, net als in het wedstrijdschema.',
+    opmerkingen: opm, wedstrijdDuurMinuten: (huidig && huidig.wedstrijdDuurMinuten) || 120, velden: velden, dagen: dagen };
+}
+function trPlat(t) {
+  var m = {};
+  Object.keys((t && t.dagen) || {}).forEach(function(d) {
+    t.dagen[d].forEach(function(b) {
+      Object.keys(b.velden).forEach(function(v) {
+        var c = b.velden[v];
+        m[d + '|' + b.hal + '|' + b.van + '–' + b.tot + '|' + v] = (c.team || c.opm || '') + (c.van ? ' ' + c.van + '–' + c.tot : '');
+      });
+    });
+  });
+  return m;
+}
+function trVerschil(oud, nieuw) {
+  var a = trPlat(oud), b = trPlat(nieuw), uit = [];
+  Object.keys(Object.assign({}, a, b)).forEach(function(k) {
+    if (a[k] !== b[k]) { var p = k.split('|'); uit.push({ waar: TR_DAGNAAM[p[0]] + ' · De ' + p[1] + ' ' + p[2] + ' · veld ' + p[3], oud: a[k], nieuw: b[k] }); }
+  });
+  return uit;
+}
+function trTeken() {
+  var verschil = trVerschil(trHuidig, trNieuw);
+  var nieuw = verschil.filter(function(x) { return x.oud === undefined; }).length, weg = verschil.filter(function(x) { return x.nieuw === undefined; }).length;
+  document.getElementById('tr-badges').innerHTML =
+    '<span class="badge">versie ' + esc(trHuidig ? trHuidig.versie : '–') + ' → <strong>' + esc(trNieuw.versie || '?') + '</strong></span>' +
+    '<span class="badge ' + (verschil.length ? 'let-op' : 'goed') + '">' + verschil.length + ' verschillen</span>' +
+    (nieuw ? '<span class="badge">' + nieuw + ' nieuw</span>' : '') + (weg ? '<span class="badge">' + weg + ' vervallen</span>' : '');
+  document.getElementById('tr-tabel').innerHTML = verschil.length
+    ? '<table><thead><tr><th>Waar</th><th>Nu</th><th>Nieuw</th></tr></thead><tbody>' + verschil.slice(0, 60).map(function(x) {
+        return '<tr><td>' + esc(x.waar) + '</td><td>' + esc(x.oud === undefined ? '–' : x.oud) + '</td><td><strong>' + esc(x.nieuw === undefined ? 'vervalt' : x.nieuw) + '</strong></td></tr>';
+      }).join('') + '</tbody></table>' + (verschil.length > 60 ? '<div class="stand">… en ' + (verschil.length - 60) + ' meer</div>' : '')
+    : '<div class="stand">Dit schema is gelijk aan het schema dat nu live staat.</div>';
+  document.getElementById('tr-gevolgen').hidden = false;
+  trKnop();
+}
+function trKnop() { document.getElementById('tr-publiceer').disabled = !(trNieuw && VOLEVO_API && metWachtwoord()); }
+async function trStart() {
+  trHuidig = await laadTrainingen();
+  document.getElementById('tr-huidig').textContent = trHuidig ? 'versie ' + trHuidig.versie : 'nog geen schema';
+}
+document.getElementById('tr-bestand').onchange = function(e) {
+  var f = e.target.files[0], el = document.getElementById('tr-melding');
+  if (!f) return;
+  var lezer = new FileReader();
+  lezer.onload = function() {
+    try {
+      trNieuw = trLeesWerkboek(new Uint8Array(lezer.result), trHuidig);
+      el.innerHTML = '<div class="melding ok">Trainingsschema gelezen' + (trNieuw.versie ? ' (versie ' + esc(trNieuw.versie) + ')' : '') + '.</div>';
+      trTeken();
+    } catch (err) {
+      trNieuw = null; document.getElementById('tr-gevolgen').hidden = true;
+      el.innerHTML = '<div class="melding fout">' + esc(err.message) + '</div>';
+    }
+  };
+  lezer.readAsArrayBuffer(f);
+};
+document.getElementById('tr-publiceer').onclick = async function() {
+  var el = document.getElementById('tr-publiceermelding'), knop = this;
+  knop.disabled = true; el.innerHTML = '<div class="melding info">Bezig met publiceren…</div>';
+  try {
+    var r = await fetch(VOLEVO_API + '/trainingen', { method: 'PUT', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + metWachtwoord() }, body: JSON.stringify(trNieuw) });
+    var d = await r.json().catch(function() { return {}; });
+    if (!r.ok) throw new Error(d.fout || ('Fout ' + r.status));
+    el.innerHTML = '<div class="melding ok">Gepubliceerd: trainingsschema versie ' + esc(d.versie || trNieuw.versie) + ' staat live. De wijzigingenpagina gebruikt het meteen.</div>';
+    trHuidig = trNieuw; document.getElementById('tr-huidig').textContent = 'versie ' + trHuidig.versie; trTeken();
+  } catch (e) { el.innerHTML = '<div class="melding fout">' + esc(e.message) + '</div>'; }
+  trKnop();
+};
+document.getElementById('tr-download').onclick = function() {
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(trNieuw, null, 1)], { type: 'application/json' }));
+  a.download = 'trainingen.json'; a.click();
+};
+document.getElementById('wachtwoord').addEventListener('input', trKnop);
+
 start();
+trStart();
 </script>
 </body>
 </html>

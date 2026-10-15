@@ -180,8 +180,8 @@ function tekenSchema() {
 async function start() {
   try {
     var t = '?t=' + Date.now();
-    var r = await Promise.all([fetch('./data/wijzigingen.json' + t), fetch('./data/matches.json' + t), fetch('./data/trainingen.json' + t).catch(function() { return null; })]);
-    if (r[2] && r[2].ok) trainingen = await r[2].json();
+    var r = await Promise.all([fetch('./data/wijzigingen.json' + t), fetch('./data/matches.json' + t)]);
+    trainingen = await laadTrainingen();
     var log = await r[0].json();
     wijzigingen = log.wijzigingen || [];
     matches = (await r[1].json()).wedstrijden || [];
