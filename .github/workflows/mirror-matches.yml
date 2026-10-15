@@ -31,6 +31,7 @@ jobs:
 
       # Vergelijkt met de versie in git, dus dit moet vóór het committen
       - name: Wijzigingen bepalen
+        continue-on-error: true   # een fout hier mag het ophalen van de wedstrijden nooit blokkeren
         run: python3 scripts/detect_wijzigingen.py --nieuw "$RUNNER_TEMP/nieuw-wijzigingen.json"
 
       - name: Committen als er iets is veranderd
@@ -56,6 +57,7 @@ jobs:
 
       # Pas na een geslaagde push, zodat een mislukte push niet voor dubbele mail zorgt
       - name: Wijzigingen mailen
+        continue-on-error: true   # mail die niet lukt mag de run niet laten falen; de wijzigingenpagina blijft werken
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
