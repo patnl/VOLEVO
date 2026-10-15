@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Wijzigingen</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f5f5f7; color: #1d1d1f; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 22px 18px 60px; }
+  h1 { font-size: 1.6rem; font-weight: 800; }
+  .sub { color: #636366; font-size: 0.9rem; margin: 4px 0 16px; line-height: 1.45; }
+  .rij { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 0.85rem; }
+  .rij a { color: #2A3176; font-weight: 700; text-decoration: none; }
+  .kaart { background: white; border-radius: 16px; padding: 16px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04); }
+  .kaart.oud { opacity: 0.55; }
+  .kop { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .soort { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 20px; background: #eef0f8; color: #2A3176; }
+  .soort.rood { background: #fde4e2; color: #c9261b; }
+  .soort.groen { background: #e3f5e8; color: #1a8a3a; }
+  .teams { font-weight: 800; font-size: 1.05rem; }
+  .gezien { margin-left: auto; font-size: 0.75rem; color: #86868b; }
+  .tijden { display: grid; grid-template-columns: 70px 1fr; gap: 3px 10px; font-size: 0.9rem; margin-bottom: 8px; }
+  .tijden .l { color: #86868b; }
+  .blok { font-size: 0.85rem; line-height: 1.5; padding: 9px 12px; border-radius: 10px; margin-top: 8px; background: #f5f5f7; }
+  .blok.let-op { background: #fff1d6; color: #7a4800; }
+  .blok.goed { background: #e3f5e8; color: #1a6e31; }
+  .blok.rood { background: #fde4e2; color: #a01f16; }
+  .leeg { text-align: center; color: #86868b; padding: 40px 10px; font-size: 0.95rem; }
+  label { cursor: pointer; }
+</style>
+<script src="./overrides.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <h1>Wijzigingen</h1>
+  <div class="sub">Wedstrijden die in Nevobo zijn verplaatst, vervallen of van zaal veranderd. Bij een verplaatsing raken het veld en de officialbeurten hun koppeling kwijt (die hangen aan datum, tijd en teams); hier zie je wat opnieuw geregeld moet worden.</div>
+  <div class="rij">
+    <label><input type="checkbox" id="alleen-komend" checked> alleen wedstrijden die nog moeten komen</label>
+    <span id="bijgewerkt"></span>
+    <a href="./volevo-schema.html">Schema beheren</a>
+    <a href="https://volevo.nl/officialbeurten/">Officialschema op volevo.nl</a>
+  </div>
+  <div id="lijst"><div class="leeg">Laden…</div></div>
+</div>
+<script>
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function(c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+var DAGEN = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+function wanneer(p) {
+  if (!p) return '–';
+  var d = new Date(p.tijdstip.slice(0, 16));      // de kloktijd in het tijdstip zelf, niet die van het apparaat
+  return DAGEN[d.getDay()] + ' ' + d.getDate() + '-' + (d.getMonth() + 1) + ' ' + p.tijdstip.slice(11, 16) + (p.hal ? ' · ' + p.hal : '');
+}
+function veldNaam(v) {
+  var n = parseInt(v, 10);
+  return (n <= 3 ? 'Tas ' : 'Bocht ') + n + (/g$/i.test(v) ? ' groot' : '');
+}
+var SOORT = { verplaatst: ['Verplaatst', ''], vervallen: ['Vervallen', 'rood'], hersteld: ['Weer gepland', 'groen'], nieuw: ['Nieuwe wedstrijd', 'groen'], verwijderd: ['Verwijderd uit Nevobo', 'rood'], 'andere zaal': ['Andere zaal', ''] };
+
+var wijzigingen = [], matches = [], velden = {};
+function sleutel(w) { return w.tijdstip + '|' + w.thuis + '|' + w.uit; }
+
+// Welke velden zijn in De Fluit vrij op dit tijdstip? Veld 4 groot beslaat 4 en 7.
+function vrijeVelden(tijdstip, eigen) {
+  var bezet = {};
+  matches.forEach(function(w) {
+    if (w.hal !== 'De Fluit' || w.tijdstip !== tijdstip || w.status === 'vervallen' || sleutel(w) === eigen) return;
+    var v = velden[sleutel(w)];
+    if (!v) return;
+    (v === '4G' ? ['4', '7'] : [v]).forEach(function(s) { bezet[s] = true; });
+  });
+  var vrij = ['1', '2', '3', '4', '5', '6', '7'].filter(function(v) { return !bezet[v]; });
+  var groot = !bezet['4'] && !bezet['7'];
+  return { vrij: vrij, groot: groot, aantalBezet: 7 - vrij.length };
+}
+
+function kaart(w) {
+  var s = SOORT[w.soort] || [w.soort, ''];
+  var h = '<div class="kaart' + (w.naar && w.naar.tijdstip.slice(0, 10) < new Date().toISOString().slice(0, 10) ? ' oud' : '') + '">';
+  h += '<div class="kop"><span class="soort ' + s[1] + '">' + s[0] + '</span><span class="teams">' + esc(w.thuis) + ' – ' + esc(w.uit) + '</span>' +
+       '<span class="gezien">gezien ' + new Date(w.gezien).toLocaleString('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }) + '</span></div>';
+  h += '<div class="tijden">' + (w.van ? '<span class="l">Was</span><span>' + esc(wanneer(w.van)) + '</span>' : '') +
+       (w.naar && w.soort !== 'vervallen' ? '<span class="l">Wordt</span><span><strong>' + esc(wanneer(w.naar)) + '</strong></span>' : '') + '</div>';
+
+  if (w.naar && w.naar.hal === 'De Fluit' && (w.soort === 'verplaatst' || w.soort === 'nieuw' || w.soort === 'hersteld')) {
+    var eigen = sleutel({ tijdstip: w.naar.tijdstip, thuis: w.thuis, uit: w.uit });
+    var toegewezen = velden[eigen];
+    var vv = vrijeVelden(w.naar.tijdstip, eigen);
+    if (toegewezen) h += '<div class="blok goed">Veld al toegewezen: <strong>' + veldNaam(toegewezen) + '</strong>.</div>';
+    else if (!vv.vrij.length) h += '<div class="blok rood">Op dat tijdstip zijn alle velden in De Fluit bezet door andere wedstrijden. Er moet iets schuiven, of er moet extra zaal bij.</div>';
+    else h += '<div class="blok let-op">Nog geen veld. Vrij tussen de wedstrijden op dat tijdstip: <strong>' + vv.vrij.map(veldNaam).join(', ') + '</strong>' +
+      (vv.groot ? ' (veld 4 groot kan ook)' : '') + '. ' + vv.aantalBezet + ' van 7 velden zijn al bezet door wedstrijden.</div>';
+    h += '<div class="blok">Is het een trainingsdag? Het trainingsrooster is hier nog niet gekoppeld: controleer of er genoeg tijd is, of de zaal langer gehuurd moet worden, of dat een trainend team naar een ander veld kan.</div>';
+  }
+  if (w.veldVoorheen) h += '<div class="blok let-op">Het veld op de oude tijd was <strong>' + veldNaam(w.veldVoorheen) + '</strong>. Die correctie hoort bij de oude tijd en geldt niet voor de nieuwe.</div>';
+  if (w.officials && w.officials.length) {
+    h += '<div class="blok let-op"><strong>Officials op de oude tijd:</strong> ' + w.officials.map(function(o) { return esc(o.taak.split(' (')[0] + ' ' + o.team); }).join(', ') +
+         '. Laat de officialdelers het officialschema aanpassen; tot dan staan deze beurten niet bij de nieuwe tijd.</div>';
+  }
+  return h + '</div>';
+}
+
+function teken() {
+  var alleenKomend = document.getElementById('alleen-komend').checked, vandaag = new Date().toISOString().slice(0, 10);
+  var lijst = wijzigingen.filter(function(w) {
+    if (!alleenKomend) return true;
+    var p = w.naar || w.van;
+    return !p || p.tijdstip.slice(0, 10) >= vandaag;
+  });
+  document.getElementById('lijst').innerHTML = lijst.length ? lijst.map(kaart).join('')
+    : '<div class="leeg">Geen wijzigingen' + (alleenKomend && wijzigingen.length ? ' voor wedstrijden die nog komen' : '') + '. Verplaatsingen verschijnen hier binnen een paar uur nadat Nevobo ze doorgeeft.</div>';
+}
+
+async function start() {
+  try {
+    var t = '?t=' + Date.now();
+    var r = await Promise.all([fetch('./data/wijzigingen.json' + t), fetch('./data/matches.json' + t)]);
+    var log = await r[0].json();
+    wijzigingen = log.wijzigingen || [];
+    matches = (await r[1].json()).wedstrijden || [];
+    var o = await laadOverrides();
+    velden = (o && o.velden) || {};
+    document.getElementById('bijgewerkt').textContent = log.bijgewerkt ? 'Laatst gecontroleerd ' + new Date(log.bijgewerkt).toLocaleString('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }) : '';
+  } catch (e) {
+    document.getElementById('lijst').innerHTML = '<div class="leeg">De gegevens konden niet geladen worden.</div>';
+    return;
+  }
+  document.getElementById('alleen-komend').onchange = teken;
+  teken();
+}
+start();
+</script>
+</body>
+</html>
