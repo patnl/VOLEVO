@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-14T21:54:10+00:00",
+ "gegenereerd": "2026-10-15T11:51:47+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -5729,20 +5729,6 @@
   },
   {
    "tijdstip": "2026-12-17T21:00:00+01:00",
-   "thuis": "VOLEVO DS 5",
-   "uit": "Kalinko DS 7",
-   "status": "gepland",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/4773457e-e605-4ff7-92f8-53db08fa3147"
-  },
-  {
-   "tijdstip": "2026-12-17T21:00:00+01:00",
    "thuis": "VOLEVO HS 4",
    "uit": "VCH HS 2",
    "status": "gepland",
@@ -6650,6 +6636,20 @@
    "lon": 4.74464,
    "veld": "H1",
    "dwf": "https://dwf.nevobo.nl/matches/96871bb1-631c-4c6b-81a7-aba2bfdccfd3"
+  },
+  {
+   "tijdstip": "2027-02-16T21:00:00+01:00",
+   "thuis": "VOLEVO DS 5",
+   "uit": "Kalinko DS 7",
+   "status": "gepland",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "7",
+   "dwf": "https://dwf.nevobo.nl/matches/4773457e-e605-4ff7-92f8-53db08fa3147"
   },
   {
    "tijdstip": "2027-02-20T15:30:00+01:00",
