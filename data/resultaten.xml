@@ -4,8 +4,48 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 15 Oct 2026 20:52:03 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 00:02:19 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO HS 6 - SKC HS 8, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2019474</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2019474</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 6 - SKC HS 8, Uitslag: 4-0, Setstanden: 25-15, 25-11, 25-10, 25-14]]></description>
+      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 9 - Sovicos DS 7, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041550</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041550</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 9 - Sovicos DS 7, Uitslag: 2-3, Setstanden: 17-25, 25-23, 27-25, 25-27, 13-15]]></description>
+      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 7 - Sovicos DS 5, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041498</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041498</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 7 - Sovicos DS 5, Uitslag: 1-3, Setstanden: 24-26, 17-25, 22-25, 25-23]]></description>
+      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 5 - Sovicos DS 2, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041529</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041529</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 5 - Sovicos DS 2, Uitslag: 3-1, Setstanden: 21-25, 25-11, 25-17, 25-17]]></description>
+      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 3 - Inter Rijswijk DS 3, Uitslag: 0-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2070604</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070604</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - Inter Rijswijk DS 3, Uitslag: 0-3, Setstanden: 16-25, 22-25, 10-25]]></description>
+      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VELO HS 2 - VOLEVO HS 2, Uitslag: 3-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2070691</link>

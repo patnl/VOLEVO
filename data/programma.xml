@@ -4,48 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 15 Oct 2026 21:12:17 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 00:22:25 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[15 okt 21:00: VOLEVO DS 3 - Inter Rijswijk DS 3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2070604</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2070604</guid>
-      <description><![CDATA[Wedstrijd: 3000BD2A  16, Datum: donderdag 15 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[15 okt 21:00: VOLEVO DS 5 - Sovicos DS 2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041529</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041529</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   DE, Datum: donderdag 15 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[15 okt 21:00: VOLEVO DS 7 - Sovicos DS 5]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041498</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041498</guid>
-      <description><![CDATA[Wedstrijd: 3000D2L   DA, Datum: donderdag 15 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[15 okt 21:00: VOLEVO DS 9 - Sovicos DS 7]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041550</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041550</guid>
-      <description><![CDATA[Wedstrijd: 3000D3J   CD, Datum: donderdag 15 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[15 okt 21:00: VOLEVO HS 6 - SKC HS 8]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2019474</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2019474</guid>
-      <description><![CDATA[Wedstrijd: 3000H4B   DG, Datum: donderdag 15 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 15 Oct 2026 21:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[16 okt 19:30: Leython DC MA 2 - VOLEVO MA 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2067854</link>
