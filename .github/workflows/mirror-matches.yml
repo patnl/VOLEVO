@@ -29,6 +29,10 @@ jobs:
       - name: Wedstrijdgegevens ophalen
         run: python3 scripts/build_matches.py
 
+      # Vergelijkt met de versie in git, dus dit moet vóór het committen
+      - name: Wijzigingen bepalen
+        run: python3 scripts/detect_wijzigingen.py --nieuw "$RUNNER_TEMP/nieuw-wijzigingen.json"
+
       - name: Committen als er iets is veranderd
         run: |
           set -euo pipefail
@@ -38,7 +42,7 @@ jobs:
           fi
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data/matches.json
+          git add data/matches.json data/wijzigingen.json
           git commit -m "Wedstrijdgegevens bijwerken ($(date -u '+%Y-%m-%d %H:%M UTC'))"
           # De andere workflows committen ook naar main; als er tussendoor een
           # commit is bijgekomen wordt de push geweigerd. Dan rebasen en opnieuw.
@@ -49,3 +53,15 @@ jobs:
           done
           echo "Push bleef falen." >&2
           exit 1
+
+      # Pas na een geslaagde push, zodat een mislukte push niet voor dubbele mail zorgt
+      - name: Wijzigingen mailen
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_VAN: ${{ vars.MAIL_VAN }}
+          MAIL_AAN: ${{ vars.MAIL_AAN }}
+          PAGINA_URL: ${{ vars.PAGINA_URL }}
+        run: python3 scripts/meld_wijzigingen.py "$RUNNER_TEMP/nieuw-wijzigingen.json"
