@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 15 Oct 2026 07:36:10 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 12:19:29 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[15 okt 21:00: VOLEVO DS 3 - Inter Rijswijk DS 3]]></title>
@@ -1623,14 +1623,6 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 dec 21:00: VOLEVO DS 5 - Kalinko DS 7]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041532</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041532</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   DH, Datum: donderdag 17 december, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 17 Dec 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
       <title><![CDATA[17 dec 21:00: VOLEVO HS 4 - VCH HS 2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017939</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2017939</guid>
@@ -2148,6 +2140,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009788</guid>
       <description><![CDATA[Wedstrijd: 30003CD   JH, Datum: zaterdag 13 februari, 19:00, Speellocatie: De Zebra, Goverwellesingel 10, 2807DZ  Gouda]]></description>
       <pubDate>Sat, 13 Feb 2027 19:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[16 feb 21:00: VOLEVO DS 5 - Kalinko DS 7]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041532</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041532</guid>
+      <description><![CDATA[Wedstrijd: 3000D2K   DH, Datum: dinsdag 16 februari, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <pubDate>Tue, 16 Feb 2027 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
