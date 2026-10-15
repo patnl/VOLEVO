@@ -1,9 +1,8 @@
 {
  "versie": "14/10/2026",
- "toelichting": "Trainingsschema van De Fluit, overgenomen uit het schema van het bestuur. Cijfer tussen haakjes = eerste of tweede training van het team. Veldnummers zijn die van het trainingsschema (De Tas 1 t/m 4, De Bocht 5 t/m 8) en wijken af van de nummers in het wedstrijdschema.",
+ "toelichting": "Trainingsschema van De Fluit, overgenomen uit het Excel van het bestuur. Cijfer tussen haakjes = eerste of tweede training van het team. De Tas heeft bij trainingen veld 1 t/m 4, bij wedstrijden 1 t/m 3; De Bocht heeft veld 4 t/m 7, net als in het wedstrijdschema.",
  "opmerkingen": [
-  "Bij wedstrijddagen is De Bocht tot 22:30 gehuurd, anders tot 20:30.",
-  "Donderdag staan in De Bocht drie velden van 21:00 tot 23:00 voor wedstrijden gereserveerd; veld 8 is dan niet beschikbaar."
+  "Bij wedstrijddagen tot 22.30 uur huren, anders 20.30 uur."
  ],
  "wedstrijdDuurMinuten": 120,
  "velden": {
@@ -14,10 +13,10 @@
    "4": "rechtsachter"
   },
   "Bocht": {
-   "5": "linksvoor",
-   "6": "rechtsvoor",
-   "7": "rechtsachter",
-   "8": "linksachter"
+   "4": "linksvoor",
+   "5": "rechtsvoor",
+   "6": "rechtsachter",
+   "7": "linksachter"
   }
  },
  "dagen": {
@@ -37,7 +36,26 @@
       "team": "JA2 (1)"
      },
      "4": {
-      "team": "JB (1)"
+      "team": "JB(1)"
+     }
+    }
+   },
+   {
+    "hal": "Bocht",
+    "van": "17:30",
+    "tot": "19:00",
+    "velden": {
+     "4": {
+      "team": "MA3 (1)"
+     },
+     "5": {
+      "team": "N5+ (1)"
+     },
+     "6": {
+      "team": "N5+ (1)"
+     },
+     "7": {
+      "team": "MB4 (1)"
      }
     }
    },
@@ -61,12 +79,31 @@
     }
    },
    {
+    "hal": "Bocht",
+    "van": "19:00",
+    "tot": "20:30",
+    "velden": {
+     "4": {
+      "team": "MA2 (1)"
+     },
+     "5": {
+      "team": "Recreanten 1"
+     },
+     "6": {
+      "team": "Recreanten 2"
+     },
+     "7": {
+      "team": "MA6"
+     }
+    }
+   },
+   {
     "hal": "Tas",
     "van": "20:30",
     "tot": "22:00",
     "velden": {
      "1": {
-      "team": "D6 (1)"
+      "team": "D6(1)"
      },
      "2": {
       "team": "H3 (1)"
@@ -81,57 +118,19 @@
    },
    {
     "hal": "Bocht",
-    "van": "17:30",
-    "tot": "19:00",
-    "velden": {
-     "5": {
-      "team": "MA3 (1)"
-     },
-     "6": {
-      "team": "N5+ (1)"
-     },
-     "7": {
-      "team": "N5+ (1)"
-     },
-     "8": {
-      "team": "MB4 (1)"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
-    "van": "19:00",
-    "tot": "20:30",
-    "velden": {
-     "5": {
-      "team": "MA2 (1)"
-     },
-     "6": {
-      "team": "Recreanten 1"
-     },
-     "7": {
-      "team": "Recreanten 2"
-     },
-     "8": {
-      "team": "MA6"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
     "van": "20:30",
     "tot": "22:15",
     "velden": {
-     "5": {
+     "4": {
       "team": "D9"
+     },
+     "5": {
+      "team": "VolleyAll"
      },
      "6": {
       "team": "VolleyAll"
      },
      "7": {
-      "team": "VolleyAll"
-     },
-     "8": {
       "team": "D8"
      }
     }
@@ -158,6 +157,25 @@
     }
    },
    {
+    "hal": "Bocht",
+    "van": "17:30",
+    "tot": "19:00",
+    "velden": {
+     "4": {
+      "team": "MC4 (1)"
+     },
+     "5": {
+      "team": "MA4 (1)"
+     },
+     "6": {
+      "team": "MB3 (1)"
+     },
+     "7": {
+      "team": "MC5 (1)"
+     }
+    }
+   },
+   {
     "hal": "Tas",
     "van": "19:00",
     "tot": "20:30",
@@ -177,7 +195,7 @@
      },
      "4": {
       "team": null,
-      "opm": "vanaf 19:00 3 velden"
+      "opm": "vanaf 19.00 3 velden"
      }
     }
    },
@@ -203,45 +221,7 @@
      },
      "4": {
       "team": null,
-      "opm": "vanaf 19:00 3 velden"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
-    "van": "17:30",
-    "tot": "19:00",
-    "velden": {
-     "5": {
-      "team": "MC4 (1)"
-     },
-     "6": {
-      "team": "MA4 (1)"
-     },
-     "7": {
-      "team": "MB3 (1)"
-     },
-     "8": {
-      "team": "MC5 (1)"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
-    "van": "19:00",
-    "tot": "22:15",
-    "velden": {
-     "5": {
-      "team": "Badminton"
-     },
-     "6": {
-      "team": "Badminton"
-     },
-     "7": {
-      "team": "Badminton"
-     },
-     "8": {
-      "team": "Badminton"
+      "opm": "vanaf 19.00 3 velden"
      }
     }
    }
@@ -267,6 +247,25 @@
     }
    },
    {
+    "hal": "Bocht",
+    "van": "17:30",
+    "tot": "19:00",
+    "velden": {
+     "4": {
+      "team": "CMV"
+     },
+     "5": {
+      "team": "CMV"
+     },
+     "6": {
+      "team": "CMV"
+     },
+     "7": {
+      "team": "CMV"
+     }
+    }
+   },
+   {
     "hal": "Tas",
     "van": "19:00",
     "tot": "20:30",
@@ -286,6 +285,25 @@
     }
    },
    {
+    "hal": "Bocht",
+    "van": "19:00",
+    "tot": "20:30",
+    "velden": {
+     "4": {
+      "team": "MB4 (2)"
+     },
+     "5": {
+      "team": "MA3 (2)"
+     },
+     "6": {
+      "team": "MA2 (2)"
+     },
+     "7": {
+      "team": "D6 (2)"
+     }
+    }
+   },
+   {
     "hal": "Tas",
     "van": "20:30",
     "tot": "22:00",
@@ -301,45 +319,7 @@
      },
      "4": {
       "team": null,
-      "opm": "vanaf 20:30 3 velden"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
-    "van": "17:30",
-    "tot": "19:00",
-    "velden": {
-     "5": {
-      "team": "CMV"
-     },
-     "6": {
-      "team": "CMV"
-     },
-     "7": {
-      "team": "CMV"
-     },
-     "8": {
-      "team": "CMV"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
-    "van": "19:00",
-    "tot": "20:30",
-    "velden": {
-     "5": {
-      "team": "MB4 (2)"
-     },
-     "6": {
-      "team": "MA3 (2)"
-     },
-     "7": {
-      "team": "MA2 (2)"
-     },
-     "8": {
-      "team": "D6 (2)"
+      "opm": "vanaf 20.30 3 velden"
      }
     }
    },
@@ -348,16 +328,16 @@
     "van": "20:30",
     "tot": "22:15",
     "velden": {
-     "5": {
+     "4": {
       "team": "Recreanten 3"
      },
-     "6": {
+     "5": {
       "team": "Retro's"
      },
-     "7": {
+     "6": {
       "team": "H6"
      },
-     "8": {
+     "7": {
       "team": "Recreanten 4"
      }
     }
@@ -384,6 +364,25 @@
     }
    },
    {
+    "hal": "Bocht",
+    "van": "17:30",
+    "tot": "19:00",
+    "velden": {
+     "4": {
+      "team": "JC1 (1)"
+     },
+     "5": {
+      "team": "MC4 (2)"
+     },
+     "6": {
+      "team": "MC5 (2)"
+     },
+     "7": {
+      "team": "JC2 (2)"
+     }
+    }
+   },
+   {
     "hal": "Tas",
     "van": "19:00",
     "tot": "20:30",
@@ -403,7 +402,26 @@
      },
      "4": {
       "team": null,
-      "opm": "vanaf 19:00 3 velden"
+      "opm": "vanaf 19.00 3 velden"
+     }
+    }
+   },
+   {
+    "hal": "Bocht",
+    "van": "19:00",
+    "tot": "20:30",
+    "velden": {
+     "4": {
+      "team": "MB1 (2)"
+     },
+     "5": {
+      "team": "MB3 (2)"
+     },
+     "6": {
+      "team": "MA5"
+     },
+     "7": {
+      "team": "MA4 (2)"
      }
     }
    },
@@ -427,45 +445,7 @@
      },
      "4": {
       "team": null,
-      "opm": "vanaf 19:00 3 velden"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
-    "van": "17:30",
-    "tot": "19:00",
-    "velden": {
-     "5": {
-      "team": "JC1 (1)"
-     },
-     "6": {
-      "team": "MC4 (2)"
-     },
-     "7": {
-      "team": "MC5 (2)"
-     },
-     "8": {
-      "team": "JC2 (2)"
-     }
-    }
-   },
-   {
-    "hal": "Bocht",
-    "van": "19:00",
-    "tot": "20:30",
-    "velden": {
-     "5": {
-      "team": "MB1 (2)"
-     },
-     "6": {
-      "team": "MB3 (2)"
-     },
-     "7": {
-      "team": "MA5"
-     },
-     "8": {
-      "team": "MA4 (2)"
+      "opm": "vanaf 19.00 3 velden"
      }
     }
    },
@@ -474,10 +454,15 @@
     "van": "20:30",
     "tot": "22:30",
     "velden": {
-     "5": {
+     "4": {
       "team": null,
       "wedstrijd": true,
       "opm": "Wedstrijd 1/3 veld 21.00-23.00"
+     },
+     "5": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-23.00"
      },
      "6": {
       "team": null,
@@ -486,12 +471,117 @@
      },
      "7": {
       "team": null,
-      "wedstrijd": true,
-      "opm": "Wedstrijd 21.00-23.00"
-     },
-     "8": {
-      "team": null,
       "opm": "X (niet beschikbaar)"
+     }
+    }
+   }
+  ],
+  "vr": [
+   {
+    "hal": "Tas",
+    "van": "19:00",
+    "tot": "21:00",
+    "velden": {
+     "1": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     },
+     "2": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     },
+     "3": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     },
+     "4": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     }
+    }
+   },
+   {
+    "hal": "Bocht",
+    "van": "19:00",
+    "tot": "21:00",
+    "velden": {
+     "4": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     },
+     "5": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     },
+     "6": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     },
+     "7": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 19.00-20.30"
+     }
+    }
+   },
+   {
+    "hal": "Tas",
+    "van": "21:00",
+    "tot": "22:30",
+    "velden": {
+     "1": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
+     },
+     "2": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
+     },
+     "3": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
+     },
+     "4": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
+     }
+    }
+   },
+   {
+    "hal": "Bocht",
+    "van": "21:00",
+    "tot": "22:30",
+    "velden": {
+     "4": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
+     },
+     "5": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
+     },
+     "6": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
+     },
+     "7": {
+      "team": null,
+      "wedstrijd": true,
+      "opm": "Wedstrijd 21.00-22.30"
      }
     }
    }

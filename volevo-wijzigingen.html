@@ -76,8 +76,8 @@ function vrijeVelden(tijdstip, eigen) {
 }
 
 // ── Trainingen die tijdens een wedstrijd plaatsvinden ──
-var DAGCODE = { 1: 'ma', 2: 'di', 3: 'wo', 4: 'do' };
-var DAGNAAM = { ma: 'maandag', di: 'dinsdag', wo: 'woensdag', do: 'donderdag' };
+var DAGCODE = { 1: 'ma', 2: 'di', 3: 'wo', 4: 'do', 5: 'vr' };
+var DAGNAAM = { ma: 'maandag', di: 'dinsdag', wo: 'woensdag', do: 'donderdag', vr: 'vrijdag' };
 function minuten(hm) { var p = hm.split(':'); return +p[0] * 60 + +p[1]; }
 function hhmm(m) { return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
 // Welke trainingen overlappen met de wedstrijd? Alleen de hal van het toegewezen veld, anders beide.
@@ -101,17 +101,25 @@ function trainingenBij(tijdstip, hal) {
 function trainingHtml(w, toegewezen) {
   var hal = toegewezen ? (parseInt(toegewezen, 10) <= 3 ? 'Tas' : 'Bocht') : null;
   var r = trainingenBij(w.naar.tijdstip, hal);
+  var veldNr = toegewezen ? String(parseInt(toegewezen, 10)) : null;   // trainingen en wedstrijden gebruiken dezelfde veldnummers
   if (!r) return '<div class="blok">Is het een trainingsdag? Het trainingsschema kon niet geladen worden: controleer of er genoeg tijd is, of de zaal langer gehuurd moet worden, of dat een trainend team naar een ander veld kan.</div>';
   var kop = 'Wedstrijd ' + hhmm(r.start) + ' tot ca. ' + hhmm(r.eind) + (hal ? ' in De ' + hal : ' (hal nog niet bekend, beide zalen getoond)');
-  if (!r.dag) return '<div class="blok goed">' + kop + '. Geen trainingen in het schema op dit dagdeel (alleen maandag t/m donderdag).</div>';
+  if (!r.dag) return '<div class="blok goed">' + kop + '. Geen trainingen in het schema op dit dagdeel (alleen maandag t/m vrijdag).</div>';
   if (!r.blokken.length) return '<div class="blok goed">' + kop + '. Geen trainingen in het schema die hiermee overlappen.</div>';
-  return '<div class="blok let-op"><strong>' + kop + ', op ' + DAGNAAM[r.dag] + ' trainen dan:</strong><ul style="margin:4px 0 0 18px">' +
-    r.blokken.map(function(b) {
-      return '<li>De ' + b.hal + ' ' + b.van + '–' + b.tot + ': ' + b.cellen.map(function(c) {
-        return esc(c.team) + ' (veld ' + c.veld + (c.van !== b.van || c.tot !== b.tot ? ', ' + c.van + '–' + c.tot : '') + ')';
-      }).join(', ') + '</li>';
-    }).join('') + '</ul>Zo kan duidelijk worden of de zaal langer gehuurd moet worden of een trainend team moet uitwijken. ' +
-    'Teams die zelf spelen trainen die avond waarschijnlijk niet. Het trainingsschema gebruikt eigen veldnummers (Bocht 5 t/m 8); hier is per zaal vergeleken.</div>';
+  var zelfde = [];     // trainingen op precies het veld van de wedstrijd
+  var lijst = r.blokken.map(function(b) {
+    return '<li>De ' + b.hal + ' ' + b.van + '–' + b.tot + ': ' + b.cellen.map(function(c) {
+      var gelijk = veldNr && c.veld === veldNr;
+      if (gelijk) zelfde.push(c.team + ' (' + b.hal + ' ' + c.veld + ', ' + c.van + '–' + c.tot + ')');
+      var tekst = esc(c.team) + ' (veld ' + c.veld + (c.van !== b.van || c.tot !== b.tot ? ', ' + c.van + '–' + c.tot : '') + ')';
+      return gelijk ? '<strong>' + tekst + ' op hetzelfde veld</strong>' : tekst;
+    }).join(', ') + '</li>';
+  }).join('');
+  var gelijkTekst = zelfde.length
+    ? '<div class="blok rood" style="margin:0 0 6px"><strong>Op ' + esc(veldNaam(toegewezen)) + ' traint dan ook:</strong> ' + zelfde.map(esc).join(', ') + '. Dat team moet uitwijken, of de wedstrijd moet naar een ander veld.</div>' : '';
+  return gelijkTekst + '<div class="blok let-op"><strong>' + kop + ', op ' + DAGNAAM[r.dag] + ' trainen dan:</strong><ul style="margin:4px 0 0 18px">' + lijst + '</ul>' +
+    'Zo kan duidelijk worden of de zaal langer gehuurd moet worden of een trainend team moet uitwijken. ' +
+    'Teams die zelf spelen trainen die avond waarschijnlijk niet. De Tas heeft bij trainingen veld 1 t/m 4 en bij wedstrijden veld 1 t/m 3.</div>';
 }
 
 function kaart(w) {
