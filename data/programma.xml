@@ -4,31 +4,31 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 16 Oct 2026 20:23:07 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 23:31:13 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
-      <title><![CDATA[16 okt 19:30: Leython DC MA 2 - VOLEVO MA 1]]></title>
+      <title><![CDATA[Leython DC MA 2 - VOLEVO MA 1, Uitslag: 0-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2067854</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2067854</guid>
-      <description><![CDATA[Wedstrijd: 3000BM2A  13, Datum: vrijdag 16 oktober, 19:30, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <description><![CDATA[Wedstrijd: Leython DC MA 2 - VOLEVO MA 1, Uitslag: 0-3, Setstanden: 10-25, 15-25, 9-25]]></description>
       <pubDate>Fri, 16 Oct 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[16 okt 19:30: Liusna JA 1 - VOLEVO JA 2]]></title>
+      <title><![CDATA[Liusna JA 1 - VOLEVO JA 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028013</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028013</guid>
-      <description><![CDATA[Wedstrijd: 3000JA2E1 EB, Datum: vrijdag 16 oktober, 19:30, Speellocatie: De Waterkanten, Sportlaan 21, 2161VA  Lisse]]></description>
+      <description><![CDATA[Wedstrijd: Liusna JA 1 - VOLEVO JA 2, Uitslag: 1-3, Setstanden: 13-25, 23-25, 25-20, 15-25]]></description>
       <pubDate>Fri, 16 Oct 2026 19:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[16 okt 21:30: SKC DS 2 - VOLEVO DS 4]]></title>
+      <title><![CDATA[SKC DS 2 - VOLEVO DS 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2016001</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2016001</guid>
-      <description><![CDATA[Wedstrijd: 3000DPE   AH, Datum: vrijdag 16 oktober, 21:30, Speellocatie: Universitair SC, Goliuspad 22, 2333BH  Leiden]]></description>
+      <description><![CDATA[Wedstrijd: SKC DS 2 - VOLEVO DS 4, Uitslag: 4-0, Setstanden: 25-18, 25-13, 25-15, 25-19]]></description>
       <pubDate>Fri, 16 Oct 2026 21:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[17 okt 12:15: ZVH MC 1 - VOLEVO JC 1]]></title>
