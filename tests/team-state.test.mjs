@@ -36,3 +36,13 @@ test('een storing in teamuitslagen krijgt een herstelknop', async () => {
   assert.match(target.innerHTML, /Opnieuw proberen/);
   assert.doesNotMatch(target.innerHTML, /geen uitslagen beschikbaar/);
 });
+
+test('een verse uitslag herkent een wedstrijd die in het oudere programma nog gepland staat', () => {
+  const context = vm.createContext({});
+  vm.runInContext(readFileSync(new URL('../app/resultaten.js', import.meta.url), 'utf8'), context);
+  const wedstrijd = { thuis: 'VOLEVO MB 4', uit: 'ZVH MB 2', tijdstip: '2026-10-17T12:30:00+02:00', status: 'gepland' };
+  const uitslag = { thuis: 'VOLEVO MB 4', uit: 'ZVH MB 2', tijd: new Date('2026-10-17T10:30:00Z') };
+  assert.equal(context.Resultaten.heeftUitslag(wedstrijd, [uitslag]), true);
+  assert.equal(context.Resultaten.heeftUitslag({ ...wedstrijd, tijdstip: '2026-12-12T12:30:00+01:00' }, [uitslag]), false);
+  assert.equal(context.Resultaten.heeftUitslag({ ...wedstrijd, thuis: 'Ander team' }, [uitslag]), false);
+});
