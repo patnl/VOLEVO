@@ -158,6 +158,7 @@
   }
 </style>
 <script src="./overrides.js"></script>
+<script src="./shared/wedstrijden.js"></script>
 </head>
 <body>
 
@@ -424,7 +425,7 @@ async function laden() {
     var r = await fetch('./data/matches.json?t=' + Date.now());
     if (!r.ok) throw new Error('Kan wedstrijdgegevens niet laden (' + r.status + ').');
     var d = await r.json();
-    var lijst = (d.wedstrijden || []).filter(function(w) { return w.hal === ZAAL.naam && w.tijdstip; });
+    var lijst = Wedstrijden.speelbaar(d.wedstrijden).filter(function(w) { return w.hal === ZAAL.naam && w.tijdstip; });
     if (!lijst.length) throw new Error('Geen wedstrijden in ' + ZAAL.naam + ' gevonden.');
 
     perDag = {};
