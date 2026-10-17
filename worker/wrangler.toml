@@ -10,4 +10,4 @@ ALLOWED_ORIGIN = "https://patnl.github.io"
 # en zet het getoonde id hieronder.
 [[kv_namespaces]]
 binding = "OVERRIDES"
-id = "VERVANG-DOOR-HET-KV-ID"
+id = "80cd00406d194ba384e7f0cde8630844"
