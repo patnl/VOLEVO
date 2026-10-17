@@ -80,3 +80,19 @@ test('trainingsschema: ongeldige zaal, tijd of dag wordt geweigerd', async () =>
   assert.equal((await putT(env, { ...echt, versie: '' })).status, 400);
   assert.equal(env.opslag.size, 0);
 });
+
+// ── Inloggen ──
+const login = (env, wachtwoord) => worker.fetch(new Request('https://x/login', {
+  headers: wachtwoord === undefined ? {} : { Authorization: 'Bearer ' + wachtwoord } }), env);
+
+test('inloggen: juist wachtwoord geeft 200, fout of ontbrekend wachtwoord 401, en er wordt niets bewaard', async () => {
+  const env = omgeving();
+  assert.equal((await login(env, 'geheim')).status, 200);
+  assert.equal((await login(env, 'fout')).status, 401);
+  assert.equal((await login(env)).status, 401);
+  assert.equal(env.opslag.size, 0);
+});
+
+test('inloggen: zonder ingesteld wachtwoord kom je er nooit in', async () => {
+  assert.equal((await login(omgeving(''), '')).status, 401);
+});
