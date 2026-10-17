@@ -39,7 +39,10 @@ var laatsteTeam = null;
 document.addEventListener('click', function (e) { if (e.target.id === 'meer') { getoond += AANTAL; App.hertoon(); } });
 App.start({
   pagina: 'programma', titel: 'Programma', teamKeuze: 'optioneel',
+  bewaar: function () { return { getoond: getoond }; },
+  herstel: function (e) { if (e && e.getoond) { getoond = e.getoond; laatsteTeam = undefined; } },
   toon: function (D, naam) {
+    if (laatsteTeam === undefined) laatsteTeam = naam;
     if (naam !== laatsteTeam) { getoond = AANTAL; laatsteTeam = naam; }
     return toonProgramma(D, naam);
   }
