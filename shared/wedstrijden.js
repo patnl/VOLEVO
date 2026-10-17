@@ -41,6 +41,9 @@
       return (o === undefined || o === null || o === '') ? w.veld : String(o);
     },
 
+    // Staat er voor deze wedstrijd een veld uit het zaalschema (correctie)?
+    heeftCorrectie: function (w, correcties) { return (correcties || {})[Wedstrijden.sleutel(w)] !== undefined; },
+
     // Korte taaknaam zoals de zaalschermen die tonen: 'scheidsrechter', 'teller', 'dwf'
     taakKort: function (taak) {
       taak = taak || '';
