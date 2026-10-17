@@ -55,6 +55,20 @@ var App = (function () {
     }).join('');
   }
 
+  // Uitleg om VOLEVO als icoon op de telefoon te zetten; weg als de app al zo geopend is.
+  // De gewone link blijft altijd bruikbaar. De menunamen verschillen per toestel en versie.
+  function beginschermKaart() {
+    var alsApp = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true;
+    if (alsApp) return '';
+    return '<h2>Zet VOLEVO op je beginscherm</h2><details class="kaart uitleg"><summary>Zo open je VOLEVO met één tik</summary>' +
+      '<h3>iPhone (Safari)</h3><ol><li>Open deze pagina in Safari.</li><li>Tik op <strong>Deel</strong> (het vierkantje met een pijl). Die staat onderin of achter de drie puntjes.</li>' +
+      '<li>Kies <strong>Zet op beginscherm</strong>.</li><li>Zet <strong>Open als webapp</strong> aan, als die keuze er staat.</li><li>Tik op <strong>Voeg toe</strong>.</li></ol>' +
+      '<h3>Android (Chrome)</h3><ol><li>Open deze pagina in Chrome.</li><li>Tik op de drie puntjes rechtsboven.</li>' +
+      '<li>Kies <strong>Installeren</strong> of <strong>App installeren</strong>, en tik op <strong>Installeren</strong>.</li>' +
+      '<li>Staat die keuze er niet? Kies dan <strong>Toevoegen aan startscherm</strong> (of <strong>Snelkoppeling maken</strong>), noem hem VOLEVO en tik op <strong>Toevoegen</strong>.</li></ol>' +
+      '<p class="sub">Lukt het niet? Je kunt VOLEVO ook gewoon via de link blijven gebruiken.</p></details>';
+  }
+
   async function json(url) { var r = await fetch(url + '?t=' + Date.now(), { cache: 'no-store' }); if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); }
 
   async function laadGegevens() {
@@ -120,5 +134,5 @@ var App = (function () {
   }
 
   return { start: start, esc: esc, pad: pad, dagSleutel: dagSleutel, tijd: tijd, dagTekst: dagTekst, kort: kort, teamNaam: teamNaam, team: team,
-           wedstrijdKaart: wedstrijdKaart, vervallenMeldingen: vervallenMeldingen };
+           wedstrijdKaart: wedstrijdKaart, vervallenMeldingen: vervallenMeldingen, beginschermKaart: beginschermKaart };
 })();
