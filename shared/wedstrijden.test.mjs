@@ -87,3 +87,13 @@ test('isVervallen kijkt alleen naar de status vervallen', () => {
   assert.equal(Wedstrijden.isVervallen('gepland'), false);
   assert.equal(Wedstrijden.isVervallen(undefined), false);
 });
+
+test('heeftCorrectie is waar voor precies de wedstrijden met een correctie, net als de oude eigen versie van het scherm', () => {
+  let met = 0;
+  for (const w of echt) {
+    const oud = correcties[w.tijdstip + '|' + w.thuis + '|' + w.uit] !== undefined;
+    assert.equal(Wedstrijden.heeftCorrectie(w, correcties), oud);
+    if (oud) met++;
+  }
+  assert.ok(met > 100, 'de test verwacht veel wedstrijden met een correctie');
+});
