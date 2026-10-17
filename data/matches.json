@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-17T15:49:38+00:00",
+ "gegenereerd": "2026-10-17T20:49:42+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -3198,7 +3198,7 @@
    "tijdstip": "2026-10-17T17:30:00+02:00",
    "thuis": "VOLEVO JA 1",
    "uit": "Inter Rijswijk JA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3206,13 +3206,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/91d0b77c-368d-4e0f-9819-7861128eb356"
+   "dwf": "https://dwf.nevobo.nl/results/91d0b77c-368d-4e0f-9819-7861128eb356/scoresheets/77b34e0c-39f1-415f-8d0f-18cc2508f24d"
   },
   {
    "tijdstip": "2026-10-17T17:30:00+02:00",
    "thuis": "VOLEVO JB 2",
    "uit": "VELO JB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3220,13 +3220,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/37b5f95e-bd09-463e-8da6-b89dd1abf333"
+   "dwf": "https://dwf.nevobo.nl/results/37b5f95e-bd09-463e-8da6-b89dd1abf333/scoresheets/edd78aa4-c045-42b7-968e-c0b66a1443a1"
   },
   {
    "tijdstip": "2026-10-17T17:30:00+02:00",
    "thuis": "VOLEVO MA 2",
    "uit": "Inter Rijswijk MA 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3234,7 +3234,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/79784aa7-a057-4644-90bb-39f0f4f6b643"
+   "dwf": "https://dwf.nevobo.nl/results/79784aa7-a057-4644-90bb-39f0f4f6b643/scoresheets/65b36b8a-91d3-4670-a680-09be9c7d2f5c"
   },
   {
    "tijdstip": "2026-10-28T19:45:00+01:00",
