@@ -1,7 +1,7 @@
 {
  "bron": "https://volevo.nl/wp-content/uploads/2026/10/20261003-Officialbeurten-sept-dec-web.xlsx",
  "bestand": "20261003-Officialbeurten-sept-dec-web.xlsx",
- "ingelezen": "2026-10-06T11:30:44Z",
+ "ingelezen": "2026-10-17T08:13:30Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -294,6 +294,24 @@
   },
   {
    "dag": "2026-10-17",
+   "tijd": "12:30",
+   "thuis": "VOLEVO MC 3",
+   "uit": "Kratos '08 MC 1",
+   "taak": "scheidsrechter (spelregeltoets)",
+   "team": "MA 4",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-10-17",
+   "tijd": "12:30",
+   "thuis": "VOLEVO MC 3",
+   "uit": "Kratos '08 MC 1",
+   "taak": "teller",
+   "team": "ouders",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-10-17",
    "tijd": "15:00",
    "thuis": "VOLEVO MB 1",
    "uit": "Ancora RVV MB 1",
@@ -309,6 +327,24 @@
    "taak": "teller",
    "team": "ouders",
    "opmerking": "Verplaatst naar 12 november"
+  },
+  {
+   "dag": "2026-10-17",
+   "tijd": "15:00",
+   "thuis": "VOLEVO MC 2",
+   "uit": "ZVH JC 1",
+   "taak": "scheidsrechter (spelregeltoets)",
+   "team": "MA 1",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-10-17",
+   "tijd": "15:00",
+   "thuis": "VOLEVO MC 2",
+   "uit": "ZVH JC 1",
+   "taak": "teller",
+   "team": "ouders",
+   "opmerking": null
   },
   {
    "dag": "2026-11-13",
@@ -335,6 +371,24 @@
    "uit": "Compaen DS 2",
    "taak": "teller",
    "team": "HS 6",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-12-17",
+   "tijd": "21:00",
+   "thuis": "VOLEVO DS 5",
+   "uit": "Kalinko DS 7",
+   "taak": "scheidsrechter (vaardigheidstraining)",
+   "team": "HS 3",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-12-17",
+   "tijd": "21:00",
+   "thuis": "VOLEVO DS 5",
+   "uit": "Kalinko DS 7",
+   "taak": "teller",
+   "team": "DS 9",
    "opmerking": null
   }
  ],
@@ -1204,18 +1258,6 @@
     "opmerking": null
    }
   ],
-  "2026-10-17T12:30:00+02:00|VOLEVO MC 3|Kratos '08 MC 1": [
-   {
-    "taak": "scheidsrechter (spelregeltoets)",
-    "team": "MA 4",
-    "opmerking": null
-   },
-   {
-    "taak": "teller",
-    "team": "ouders",
-    "opmerking": null
-   }
-  ],
   "2026-10-17T12:30:00+02:00|VOLEVO MC 5|Ancora RVV MC 3": [
    {
     "taak": "scheidsrechter (spelregeltoets)",
@@ -1275,18 +1317,6 @@
    {
     "taak": "scheidsrechter (spelregeltoets)",
     "team": "DS 5",
-    "opmerking": null
-   },
-   {
-    "taak": "teller",
-    "team": "ouders",
-    "opmerking": null
-   }
-  ],
-  "2026-10-17T15:00:00+02:00|VOLEVO MC 2|ZVH JC 1": [
-   {
-    "taak": "scheidsrechter (spelregeltoets)",
-    "team": "MA 1",
     "opmerking": null
    },
    {
@@ -2266,18 +2296,6 @@
    {
     "taak": "teller",
     "team": "HS 6",
-    "opmerking": null
-   }
-  ],
-  "2026-12-17T21:00:00+01:00|VOLEVO DS 5|Kalinko DS 7": [
-   {
-    "taak": "scheidsrechter (vaardigheidstraining)",
-    "team": "HS 3",
-    "opmerking": null
-   },
-   {
-    "taak": "teller",
-    "team": "DS 9",
     "opmerking": null
    }
   ],
