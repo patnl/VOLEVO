@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2A3176">
+<title>VOLEVO · Vandaag</title>
+<link rel="stylesheet" href="app.css">
+<script>var VOLEVO_DATA = '../';</script>
+<script src="../overrides.js"></script>
+<script src="../shared/wedstrijden.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<script>
+App.start({
+  pagina: 'vandaag', titel: 'Vandaag', teamKeuze: 'optioneel',
+  toon: function (D, naam) {
+    var nu = new Date(), vandaag = App.dagSleutel(nu);
+    var alle = D.wedstrijden.filter(function (w) { return !naam || App.team(w, naam); });
+    var speel = Wedstrijden.speelbaar(alle).sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
+    var vandaagLijst = speel.filter(function (w) { return App.dagSleutel(new Date(w.tijdstip)) === vandaag; });
+    var hierna = speel.filter(function (w) { var d = new Date(w.tijdstip); return d > nu && App.dagSleutel(d) !== vandaag; }).slice(0, 5);
+    var html = '<h2>Vandaag, ' + App.esc(App.dagTekst(nu)) + '</h2>';
+    if (D.meldingen[vandaag]) html += '<div class="melding"><strong>Melding van de club</strong>' + App.esc(D.meldingen[vandaag]) + '</div>';
+    html += vandaagLijst.length
+      ? '<div class="lijst">' + vandaagLijst.map(function (w) { return App.wedstrijdKaart(w, D); }).join('') + '</div>'
+      : '<div class="melding leeg"><strong>Vandaag speelt ' + App.esc(naam ? App.teamNaam(naam) : 'VOLEVO') + ' niet</strong>Hieronder staan de volgende wedstrijden.</div>';
+    if (vandaagLijst.some(function (w) { return w.hal === 'De Fluit'; }))
+      html += '<div class="acties" style="margin-top:10px"><a class="knop" href="../volevo-plattegrond.html?dag=' + vandaag + '">Bekijk de velden in De Fluit</a></div>';
+    html += '<h2>Volgende wedstrijden</h2>' + App.vervallenMeldingen(alle);
+    html += hierna.length
+      ? '<div class="lijst">' + hierna.map(function (w) { return App.wedstrijdKaart(w, D, { metDatum: true }); }).join('') + '</div><div class="acties" style="margin-top:12px"><a class="knop vol" href="programma.html">Hele programma</a></div>'
+      : '<div class="melding leeg"><strong>Geen komende wedstrijden gevonden</strong>Kijk later nog eens, of in het programma.</div>';
+    return html;
+  }
+});
+</script>
+</body>
+</html>
