@@ -192,18 +192,8 @@ async function loadOverrides() {
     };
   } catch(e) {}
 }
-// Sleutel van een wedstrijd: tijdstip|thuis|uit
-function wedstrijdSleutel(w) {
-  return (w.tijdstip || '') + '|' + (w.thuis || '') + '|' + (w.uit || '');
-}
-// Veldnummer met correctie meegerekend
-function veldVan(w) {
-  var o = OVERRIDES.velden[wedstrijdSleutel(w)];
-  return (o === undefined || o === null || o === '') ? w.veld : String(o);
-}
-function isGecorrigeerd(w) {
-  return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
-}
+// Sleutel, veld met correctie en officials komen uit shared/wedstrijden.js (dezelfde regels als de app)
+function veldVan(w) { return Wedstrijden.veldNummer(w, OVERRIDES.velden); }
 
 
 var DAG_LANG = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
@@ -236,24 +226,6 @@ async function loadOfficials() {
     var d = await r.json();
     OFFICIALS = d.perWedstrijd || {};
   } catch(e) {}
-}
-function officialsVoor(tijdstip, thuis, uit) {
-  return OFFICIALS[tijdstip + '|' + thuis + '|' + uit] || [];
-}
-function taakKort(t) {
-  t = t || '';
-  if (/teller/i.test(t)) return 'teller';
-  if (/dwf/i.test(t)) return 'dwf';
-  if (/scheidsrechter/i.test(t)) return 'scheidsrechter';
-  return t;
-}
-// "scheidsrechter DS 4 · teller ouders"
-function officialsTekst(lijst) {
-  // Let op: 0 is falsy, dus geen || gebruiken - scheidsrechter zou dan
-  // achteraan belanden in plaats van vooraan.
-  var volgorde = { scheidsrechter: 0, teller: 1, dwf: 2 };
-  function rang(t) { var k = taakKort(t); return k in volgorde ? volgorde[k] : 9; }
-  return lijst.slice().sort(function(a, b) { return rang(a.taak) - rang(b.taak); }).map(function(o) { return taakKort(o.taak) + ' ' + o.team; });
 }
 
 var perDag = {}, dagen = [];
@@ -347,7 +319,7 @@ function teken() {
         var thuisNaam = w.thuis.replace(/^VOLEVO\s*/, '');
         svg += '<text class="veld-team" x="'+midx+'" y="'+basis+'" style="font-size:'+pas(thuisNaam, bw, 28)+'px">'+esc(thuisNaam)+'</text>';
         svg += '<text class="veld-tegen" x="'+midx+'" y="'+(basis+26)+'" style="font-size:'+pas(w.uit, bw, 22)+'px">'+esc(w.uit)+'</text>';
-        var off = officialsTekst(officialsVoor(w.tijdstip, w.thuis, w.uit)).filter(function(t) { return /^scheidsrechter/.test(t); });
+        var off = Wedstrijden.officialsRegels(OFFICIALS, w).filter(function(t) { return /^scheidsrechter/.test(t); });
         if (off.length) svg += '<text class="veld-off" x="'+midx+'" y="'+(basis+48)+'">'+esc(off[0])+'</text>';
       });
       svg += '</g>';

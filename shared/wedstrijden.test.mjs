@@ -52,3 +52,38 @@ test('taken: taken van een team en de helpers bij een wedstrijd komen uit de ech
   assert.ok(van.some((t) => t.sleutel === sleutel && t.soort === 'Tellen'));
   assert.ok(van.every((t) => t.team === 'DS 8'));
 });
+
+// ── Gelijk aan wat de zaalschermen tot nu toe zelf deden ──
+// De schermen mogen door het delen van deze regels niets anders gaan tonen. Deze vergelijking
+// houdt de oude eigen versies vast (zoals ze in volevo-zaalscherm.html stonden) en loopt alle echte gegevens langs.
+const correcties = JSON.parse(readFileSync(new URL('../data/overrides.json', import.meta.url), 'utf8')).velden;
+
+function oudTaakKort(t) { t = t || ''; if (/teller/i.test(t)) return 'teller'; if (/dwf/i.test(t)) return 'dwf'; if (/scheidsrechter/i.test(t)) return 'scheidsrechter'; return t; }
+function oudOfficialsTekst(lijst) {
+  const volgorde = { scheidsrechter: 0, teller: 1, dwf: 2 };
+  const rang = (t) => { const k = oudTaakKort(t); return k in volgorde ? volgorde[k] : 9; };
+  return lijst.slice().sort((a, b) => rang(a.taak) - rang(b.taak)).map((o) => oudTaakKort(o.taak) + ' ' + o.team);
+}
+
+test('officialsRegels geeft voor elke wedstrijd in de echte gegevens dezelfde tekst als de oude eigen versie van het scherm', () => {
+  const sleutels = Object.keys(officials);
+  assert.ok(sleutels.length > 100);
+  for (const s of sleutels) {
+    const [tijdstip, thuis, uit] = s.split('|');
+    assert.deepEqual(Wedstrijden.officialsRegels(officials, { tijdstip, thuis, uit }), oudOfficialsTekst(officials[s]), s);
+  }
+});
+
+test('veldNummer geeft voor elke echte wedstrijd hetzelfde veld als de oude eigen versie van het scherm', () => {
+  for (const w of echt) {
+    const o = correcties[w.tijdstip + '|' + w.thuis + '|' + w.uit];
+    const oud = (o === undefined || o === null || o === '') ? w.veld : String(o);
+    assert.equal(Wedstrijden.veldNummer(w, correcties), oud);
+  }
+});
+
+test('isVervallen kijkt alleen naar de status vervallen', () => {
+  assert.equal(Wedstrijden.isVervallen('vervallen'), true);
+  assert.equal(Wedstrijden.isVervallen('gepland'), false);
+  assert.equal(Wedstrijden.isVervallen(undefined), false);
+});
