@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLEVO Zaalscherm</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    background: #f5f5f7; color: #1d1d1f; overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased; display: flex; flex-direction: column;
+  }
+  .header {
+    background: white; border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 12px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-shrink: 0;
+  }
+  .header-left { display: flex; align-items: center; gap: 20px; }
+  #header-logo-wrap { height: 100px; width: 112px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  #header-logo-img { max-height: 100px; max-width: 112px; object-fit: contain; display: block; }
+  .hdr-logo-fb { background: #2A3176; border-radius: 16px; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; }
+  .hdr-logo-fb span { color: #9CD0C1; font-size: 1rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+  .header-divider { width: 1px; height: 64px; background: #e5e5ea; }
+  .page-label { font-size: 3rem; font-weight: 800; letter-spacing: -0.5px; line-height: 1; }
+  .page-sub { font-size: 1.1rem; color: #86868b; font-weight: 500; margin-top: 6px; }
+  .ronde-groot { text-align: right; }
+  .ronde-groot .tijd { font-size: 3.6rem; font-weight: 800; color: #2A3176; line-height: 1; letter-spacing: -1px; }
+  .ronde-groot .sub { font-size: 1.1rem; color: #86868b; font-weight: 600; margin-top: 6px; }
+  .melding-balk {
+    background: #eef6ff; border-bottom: 1px solid #cfe4ff; color: #1b4a7a;
+    padding: 12px 40px; font-size: 1.4rem; font-weight: 600; flex-shrink: 0;
+  }
+  .plan-vak { flex: 1; min-height: 0; padding: 16px 40px 8px; display: flex; align-items: center; justify-content: center; }
+  svg.plan { width: 100%; height: 100%; display: block; }
+  .rondes { flex-shrink: 0; padding: 8px 40px 16px; display: flex; gap: 12px; align-items: center; }
+  .rondes .lbl { font-size: 1.1rem; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #aeaeb2; margin-right: 8px; }
+  .ronde-chip { background: white; color: #636366; border-radius: 12px; padding: 8px 22px; font-size: 1.6rem; font-weight: 700; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+  .ronde-chip.active { background: #2A3176; color: white; }
+  .melding { text-align: center; padding: 60px 30px; color: #86868b; font-size: 1.6rem; }
+
+  .zaal-omtrek { fill: #fbfbfd; stroke: #d1d1d6; stroke-width: 3; }
+  .veld-vak { fill: #f2f2f7; stroke: #d1d1d6; stroke-width: 2; }
+  .veld-vak.bezet { fill: #eef0f8; stroke: #b9bfdd; }
+  .veld-nr { font-size: 38px; font-weight: 800; fill: #aeaeb2; text-anchor: middle; }
+  .veld-botst { font-size: 22px; font-weight: 800; fill: #ff3b30; text-anchor: end; }
+  .veld-halnr { font-size: 18px; font-weight: 600; fill: #aeaeb2; text-anchor: middle; }
+  .veld-vak-groep.bezet .veld-nr { fill: #2A3176; }
+  .net { stroke: #c7c7cc; stroke-width: 2; stroke-dasharray: 5 4; }
+  .veld-team { font-size: 28px; font-weight: 800; fill: #2A3176; text-anchor: middle; }
+  .veld-tegen { font-size: 22px; fill: #636366; text-anchor: middle; }
+  .veld-off { font-size: 16px; fill: #86868b; text-anchor: middle; }
+  .zaal-naam { font-size: 34px; font-weight: 800; fill: #2A3176; }
+  .zaal-sub  { font-size: 22px; font-weight: 600; fill: #aeaeb2; }
+  .bouwdeel { fill: #f2f2f7; stroke: #e5e5ea; stroke-width: 2; }
+  .bouwdeel-tekst { font-size: 20px; font-weight: 600; fill: #aeaeb2; text-anchor: middle; }
+</style>
+<script src="./overrides.js"></script>
+</head>
+<body>
+<div class="header">
+  <div class="header-left">
+    <div id="header-logo-wrap"><img id="header-logo-img" src="./LOGO.png" alt="Volevo" onerror="hdrLogoFallback()"></div>
+    <div class="header-divider"></div>
+    <div>
+      <div class="page-label">Zaalindeling</div>
+      <div class="page-sub"><span id="dagtitel">–</span> · De Fluit</div>
+    </div>
+  </div>
+  <div class="ronde-groot"><div class="tijd" id="rondetijd">–</div><div class="sub" id="rondesub"></div></div>
+</div>
+<div id="melding"></div>
+<div class="plan-vak" id="plan"><div class="melding">Zaalindeling laden…</div></div>
+<div class="rondes" id="rondes"></div>
+
+<script>
+// ── Header logo fallback ──
+var hdrLogoUrls = ['https://assets.nevobo.nl/organisatie/logo/CNZ6B97.jpg',
+                   'https://www.volleybal.nl/api/v1/clubs/CNZ6B97/logo'];
+var hdrLogoIdx = 0;
+function hdrLogoFallback() {
+  var img = document.getElementById('header-logo-img');
+  if (img && hdrLogoIdx < hdrLogoUrls.length) { img.src = hdrLogoUrls[hdrLogoIdx++]; }
+  else {
+    var wrap = document.getElementById('header-logo-wrap');
+    if (wrap) wrap.innerHTML = '<div class="hdr-logo-fb"><span>VOLEVO</span></div>';
+  }
+}
+
+var ZAAL = {
+  naam: 'De Fluit',
+  // Veldnummers volgen het zaalschema van de wedstrijdsecretaris: De Tas 1 t/m 3,
+  // De Bocht 4 t/m 7. De Nevobo-veldnummers kloppen niet met de zaal (3 okt 2026:
+  // Nevobo-veld 6 viel op Tas 1, Tas 3 en Bocht 4), dus de juiste velden komen
+  // per speeldag via data/overrides.json.
+  // `veld` = nummer in het schema, `hal` = nummer op de bordjes.
+  //
+  // Vlakken staan in breukdelen van de zaal (fx/fy = linkerbovenhoek,
+  // fw/fh = breedte/hoogte), zodat elke indeling te tekenen is.
+  // net: 'h' = net horizontaal, 'v' = net verticaal.
+  //
+  // Indeling bevestigd door de wedstrijdsecretaris (schets, 3 okt 2026).
+  bevestigd: true,
+  viewBox: '0 0 1240 660',
+  zalen: [
+    { naam: 'De Tas', x: 30, y: 80, w: 560, h: 520,
+      drie: { omschrijving: '3-deling · verticaal', velden: [
+        { veld:'3', hal:'3', fx:0,   fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'2', hal:'2', fx:1/3, fy:0, fw:1/3, fh:1, net:'h' },
+        { veld:'1', hal:'1', fx:2/3, fy:0, fw:1/3, fh:1, net:'h' } ] } },
+
+    { naam: 'De Bocht', x: 620, y: 80, w: 590, h: 520,
+      vier: { omschrijving: '4-deling · 2 bij 2', velden: [
+        { veld:'7', hal:'7', fx:0,   fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:'6', hal:'6', fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:'4', hal:'4', fx:0,   fy:1/2, fw:1/2, fh:1/2, net:'v' },
+        { veld:'5', hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] },
+      // Bij 3 wedstrijden staat veld 4 groot: de halve zaal links, in de lengte
+      // vanaf de tribune. Rechts blijven 6 (achter) en 5 (bij de tribune).
+      gemengd: { omschrijving: 'veld 4 groot, 5 en 6', velden: [
+        { veld:['4G'], hal:'4', fx:0,   fy:0,   fw:1/2, fh:1,   net:'h' },
+        { veld:'6',   hal:'6', fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
+        { veld:'5',   hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } }
+  ],
+  // Beide zalen hebben een eigen ingang aan de tribunekant.
+  ingangen: [
+    { x: 370, y: 616, w: 220, h: 30, tekst: 'Ingang De Tas' },
+    { x: 620, y: 616, w: 220, h: 30, tekst: 'Ingang De Bocht' }
+  ]
+};
+
+// Alle schemanummers van een vlak, als lijst
+function veldenVan(v) {
+  if (!v.veld) return [];
+  return Array.isArray(v.veld) ? v.veld : [v.veld];
+}
+function halVan(v) {
+  var h = Array.isArray(v.hal) ? v.hal : [v.hal];
+  return h.join(' / ');
+}
+function labelVan(v) {
+  var l = veldenVan(v).filter(function(nr) { return String(nr).charAt(0) !== 'h'; });
+  return l.length ? l.map(function(nr) { return /g$/i.test(nr) ? nr.replace(/g$/i, ' groot') : nr; }).join(' of ') : '–';
+}
+
+// Welke stand staat deze speelronde in deze zaal? Is een veld in gebruik dat
+// alleen in de 4-deling bestaat, dan staat de zaal gedraaid.
+var standKeuze = {};   // zaalnaam -> 'drie' | 'vier', gezet door de knopjes
+function standVan(zaal, perVeld) {
+  if (standKeuze[zaal.naam] && zaal[standKeuze[zaal.naam]]) return zaal[standKeuze[zaal.naam]];
+  var vast = (OVERRIDES.standen[gekozenDag + '|' + gekozenRonde] || {})[zaal.naam];
+  if (vast && zaal[vast]) return zaal[vast];
+  // Automatisch: staat er een veld in gebruik dat alleen in de 4-deling
+  // bestaat, dan staat de zaal gekanteld. Een gemengde stand valt niet uit
+  // het schema af te leiden; die kies je met de knopjes of via de correcties.
+  // Veld 4 groot ('4G') bestaat alleen in de gemengde stand
+  if (zaal.gemengd && Object.keys(perVeld).some(function(nr) { return /g$/i.test(nr) && (perVeld[nr] || []).length; })) return zaal.gemengd;
+  // Bocht met drie velden: geen wedstrijd op veld 7 maar wel op 4, 5 of 6. Het bestuur zet dan veld 4
+  // groot (links, met 5 en 6 rechts), ook als er gewoon "veld 4" in het schema staat.
+  if (zaal.gemengd && zaal.vier && !zaal.drie && !(perVeld['7'] || []).length &&
+      ['4', '5', '6'].some(function(nr) { return (perVeld[nr] || []).length; })) return zaal.gemengd;
+  if (!zaal.vier) return zaal.drie;
+  if (!zaal.drie) return zaal.vier;
+  var alleenInVier = [];
+  zaal.vier.velden.forEach(function(v) {
+    veldenVan(v).forEach(function(nr) {
+      var ookInDrie = zaal.drie.velden.some(function(d) { return veldenVan(d).indexOf(nr) !== -1; });
+      if (!ookInDrie) alleenInVier.push(nr);
+    });
+  });
+  var gedraaid = alleenInVier.some(function(nr) { return (perVeld[nr] || []).length; });
+  return gedraaid ? zaal.vier : zaal.drie;
+}
+
+// ── Handmatige correcties uit data/overrides.json ──
+// De planning is niet altijd de werkelijkheid: een zaal kan anders staan dan
+// bedacht, of een wedstrijd verhuist naar een ander veld. Dit bestand krijgt
+// voorrang op de Nevobo-gegevens en wordt samengesteld met volevo-admin.html.
+var OVERRIDES = { standen: {}, velden: {}, meldingen: {} };
+var overridesGeladen = false;
+async function loadOverrides() {
+  if (overridesGeladen) return;
+  overridesGeladen = true;
+  try {
+    var d = await laadOverrides();
+    if (!d) return;
+    OVERRIDES = {
+      standen:   d.standen   || {},
+      velden:    d.velden    || {},
+      meldingen: d.meldingen || {}
+    };
+  } catch(e) {}
+}
+// Sleutel van een wedstrijd: tijdstip|thuis|uit
+function wedstrijdSleutel(w) {
+  return (w.tijdstip || '') + '|' + (w.thuis || '') + '|' + (w.uit || '');
+}
+// Veldnummer met correctie meegerekend
+function veldVan(w) {
+  var o = OVERRIDES.velden[wedstrijdSleutel(w)];
+  return (o === undefined || o === null || o === '') ? w.veld : String(o);
+}
+function isGecorrigeerd(w) {
+  return OVERRIDES.velden[wedstrijdSleutel(w)] !== undefined;
+}
+
+
+var DAG_LANG = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+var MND_LANG = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+var standKeuze = {}, gekozenDag = null, gekozenRonde = null;
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function dagSleutel(iso) {
+  var d = new Date(iso);
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function tijd(iso) {
+  var d = new Date(iso);
+  return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+}
+
+// ── Officialbeurten uit data/officials.json ──
+// Wie fluit, telt of doet het DWF bij een wedstrijd. Gevuld vanuit het
+// officialschema op volevo.nl door .github/workflows/mirror-officials.yml.
+var OFFICIALS = {};
+var officialsGeladen = false;
+async function loadOfficials() {
+  if (officialsGeladen) return;
+  officialsGeladen = true;
+  try {
+    var r = await fetch('./data/officials.json?t=' + Date.now());
+    if (!r.ok) return;
+    var d = await r.json();
+    OFFICIALS = d.perWedstrijd || {};
+  } catch(e) {}
+}
+function officialsVoor(tijdstip, thuis, uit) {
+  return OFFICIALS[tijdstip + '|' + thuis + '|' + uit] || [];
+}
+function taakKort(t) {
+  t = t || '';
+  if (/teller/i.test(t)) return 'teller';
+  if (/dwf/i.test(t)) return 'dwf';
+  if (/scheidsrechter/i.test(t)) return 'scheidsrechter';
+  return t;
+}
+// "scheidsrechter DS 4 · teller ouders"
+function officialsTekst(lijst) {
+  // Let op: 0 is falsy, dus geen || gebruiken - scheidsrechter zou dan
+  // achteraan belanden in plaats van vooraan.
+  var volgorde = { scheidsrechter: 0, teller: 1, dwf: 2 };
+  function rang(t) { var k = taakKort(t); return k in volgorde ? volgorde[k] : 9; }
+  return lijst.slice().sort(function(a, b) { return rang(a.taak) - rang(b.taak); }).map(function(o) { return taakKort(o.taak) + ' ' + o.team; });
+}
+
+var perDag = {}, dagen = [];
+
+async function laden() {
+  try {
+    await loadOverrides();
+    await loadOfficials();
+    var r = await fetch('./data/matches.json?t=' + Date.now());
+    if (!r.ok) throw new Error('Kan wedstrijdgegevens niet laden (' + r.status + ').');
+    var d = await r.json();
+    var lijst = (d.wedstrijden || []).filter(function(w) { return w.hal === ZAAL.naam && w.tijdstip; });
+    perDag = {};
+    lijst.forEach(function(w) { (perDag[dagSleutel(w.tijdstip)] = perDag[dagSleutel(w.tijdstip)] || []).push(w); });
+    dagen = Object.keys(perDag).sort();
+    teken();
+  } catch(e) {
+    document.getElementById('plan').innerHTML = '<div class="melding" style="color:#ff3b30">' + esc(e.message) + '</div>';
+  }
+}
+
+function rondesVan(dag) {
+  var t = {};
+  (perDag[dag] || []).forEach(function(w) { t[tijd(w.tijdstip)] = true; });
+  return Object.keys(t).sort();
+}
+
+// Toont de ronde die nu bezig is; vanaf een half uur voor de volgende start springt hij daarheen.
+// Is er vandaag niets meer, dan de eerstvolgende speeldag. ?dag= en ?ronde= forceren (voor testen).
+function kies() {
+  var q = new URLSearchParams(location.search);
+  var nu = new Date(), vandaag = dagSleutel(nu.toISOString());
+  var dag = q.get('dag') && perDag[q.get('dag')] ? q.get('dag') : null;
+  if (!dag) {
+    var rVandaag = rondesVan(vandaag);
+    var klaarVandaag = rVandaag.length && new Date(vandaag + 'T' + rVandaag[rVandaag.length - 1] + ':00').getTime() + 2.5 * 3600e3 < nu.getTime();
+    dag = (perDag[vandaag] && !klaarVandaag) ? vandaag
+        : (dagen.filter(function(k) { return k > vandaag; })[0] || dagen[dagen.length - 1]);
+  }
+  var rondes = rondesVan(dag), ronde = q.get('ronde') && rondes.indexOf(q.get('ronde')) !== -1 ? q.get('ronde') : null;
+  if (!ronde) {
+    ronde = rondes[0];
+    rondes.forEach(function(t) { if (new Date(dag + 'T' + t + ':00').getTime() - 30 * 60e3 <= nu.getTime()) ronde = t; });
+  }
+  gekozenDag = dag; gekozenRonde = ronde;
+  return rondes;
+}
+
+// Lettergrootte waarmee een tekst in een vak past (grove schatting: 0,55 em per teken)
+function pas(tekst, breedte, max) { return Math.min(max, Math.floor(breedte * 0.92 / (Math.max(tekst.length, 1) * 0.55))); }
+
+function teken() {
+  if (!dagen.length) { document.getElementById('plan').innerHTML = '<div class="melding">Geen wedstrijden in ' + esc(ZAAL.naam) + ' gevonden.</div>'; return; }
+  var rondes = kies();
+  var d = new Date(gekozenDag + 'T12:00:00');
+  document.getElementById('dagtitel').textContent = DAG_LANG[d.getDay()] + ' ' + d.getDate() + ' ' + MND_LANG[d.getMonth()];
+
+  var actief = (perDag[gekozenDag] || []).filter(function(w) { return tijd(w.tijdstip) === gekozenRonde; });
+  document.getElementById('rondetijd').textContent = gekozenRonde;
+  document.getElementById('rondesub').textContent = actief.length + (actief.length === 1 ? ' wedstrijd' : ' wedstrijden');
+  var perVeld = {};
+  actief.forEach(function(w) { var v = veldVan(w) || '?'; (perVeld[v] = perVeld[v] || []).push(w); });
+
+  var svg = '<svg class="plan" viewBox="' + ZAAL.viewBox + '" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">';
+  ZAAL.zalen.forEach(function(z) {
+    var stand = standVan(z, perVeld);
+    svg += '<rect class="zaal-omtrek" x="'+z.x+'" y="'+z.y+'" width="'+z.w+'" height="'+z.h+'" rx="10"/>';
+    svg += '<text class="zaal-naam" x="'+(z.x+16)+'" y="'+(z.y-18)+'">'+esc(z.naam)+'</text>';
+    svg += '<text class="zaal-sub" x="'+(z.x+36+z.naam.length*19)+'" y="'+(z.y-18)+'">'+esc(stand.omschrijving)+'</text>';
+    var marge = 16, spleet = 6;
+    stand.velden.forEach(function(v) {
+      var bx = z.x + marge + v.fx * (z.w - 2*marge) + spleet/2;
+      var by = z.y + marge + v.fy * (z.h - 2*marge) + spleet/2;
+      var bw = v.fw * (z.w - 2*marge) - spleet, bh = v.fh * (z.h - 2*marge) - spleet;
+      var midx = bx + bw/2, midy = by + bh/2;
+      var nummers = veldenVan(v);
+      var zoek = nummers.indexOf('4G') !== -1 && nummers.indexOf('4') === -1 ? nummers.concat('4') : nummers;
+      var bezet = [];
+      zoek.forEach(function(nr) { bezet = bezet.concat(perVeld[nr] || []); });
+      svg += '<g class="veld-vak-groep' + (bezet.length ? ' bezet' : '') + '">';
+      svg += '<rect class="veld-vak'+(bezet.length?' bezet':'')+'" x="'+bx+'" y="'+by+'" width="'+bw+'" height="'+bh+'" rx="8"/>';
+      svg += v.net === 'v'
+        ? '<line class="net" x1="'+midx+'" y1="'+(by+8)+'" x2="'+midx+'" y2="'+(by+bh-8)+'"/>'
+        : '<line class="net" x1="'+(bx+8)+'" y1="'+midy+'" x2="'+(bx+bw-8)+'" y2="'+midy+'"/>';
+      var nr = labelVan(v), links = nr.length > 2;
+      svg += '<text class="veld-nr" x="'+(links ? bx+16 : bx+34)+'" y="'+(by+40)+'"'+(links ? ' style="text-anchor:start"' : '')+'>'+esc(nr)+'</text>';
+      if (bezet.length > 1) svg += '<text class="veld-botst" x="'+(bx+bw-14)+'" y="'+(by+34)+'">'+bezet.length+' tegelijk</text>';
+      bezet.slice(0, 2).forEach(function(w, k) {
+        var basis = midy - 10 + k * 84;
+        // Lange namen in smalle velden krimpen mee, zodat ze niet over het naastliggende veld lopen
+        var thuisNaam = w.thuis.replace(/^VOLEVO\s*/, '');
+        svg += '<text class="veld-team" x="'+midx+'" y="'+basis+'" style="font-size:'+pas(thuisNaam, bw, 28)+'px">'+esc(thuisNaam)+'</text>';
+        svg += '<text class="veld-tegen" x="'+midx+'" y="'+(basis+26)+'" style="font-size:'+pas(w.uit, bw, 22)+'px">'+esc(w.uit)+'</text>';
+        var off = officialsTekst(officialsVoor(w.tijdstip, w.thuis, w.uit)).filter(function(t) { return /^scheidsrechter/.test(t); });
+        if (off.length) svg += '<text class="veld-off" x="'+midx+'" y="'+(basis+48)+'">'+esc(off[0])+'</text>';
+      });
+      svg += '</g>';
+    });
+  });
+  (ZAAL.ingangen || []).forEach(function(gg) {
+    svg += '<rect class="bouwdeel" x="'+gg.x+'" y="'+gg.y+'" width="'+gg.w+'" height="'+gg.h+'" rx="6"/>';
+    svg += '<text class="bouwdeel-tekst" x="'+(gg.x+gg.w/2)+'" y="'+(gg.y+gg.h/2+7)+'">'+esc(gg.tekst)+'</text>';
+  });
+  svg += '</svg>';
+  document.getElementById('plan').innerHTML = svg;
+
+  var melding = OVERRIDES.meldingen[gekozenDag];
+  document.getElementById('melding').innerHTML = melding ? '<div class="melding-balk">' + esc(melding) + '</div>' : '';
+  document.getElementById('rondes').innerHTML = rondes.length > 1
+    ? '<span class="lbl">Speelrondes</span>' + rondes.map(function(t) {
+        return '<span class="ronde-chip' + (t === gekozenRonde ? ' active' : '') + '">' + t + '</span>';
+      }).join('') : '';
+}
+
+laden();
+setInterval(laden, 10 * 60 * 1000);   // gegevens opnieuw
+setInterval(teken, 60 * 1000);        // ronde laten doorschakelen
+</script>
+<link rel="stylesheet" href="tv.css">
+<script src="./tv.js"></script>
+</body>
+</html>
