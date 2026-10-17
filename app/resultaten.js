@@ -38,5 +38,12 @@ function kaart(u, naam) {
     (u.sets ? '<p class="sets">Setstanden (thuis–uit): ' + App.esc(u.sets) + '</p>' : '') +
     (App.bronKnop(u.id, 'Bekijk bij Nevobo') ? '<div class="acties">' + App.bronKnop(u.id, 'Bekijk bij Nevobo') + '</div>' : '') + '</article>';
 }
-return { parse: parse, laad: laad, kaart: kaart };
+// De uitslagenfeed wordt vaker ververst dan de zaal-/programmabron.
+// Een gepubliceerde uitslag is daarom ook leidend als die wedstrijd daar nog gepland staat.
+function heeftUitslag(w, uitslagen) {
+  return uitslagen.some(function (u) {
+    return w.thuis === u.thuis && w.uit === u.uit && new Date(w.tijdstip).getTime() === u.tijd.getTime();
+  });
+}
+return { parse: parse, laad: laad, kaart: kaart, heeftUitslag: heeftUitslag };
 })();
