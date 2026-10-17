@@ -6,6 +6,7 @@
 //   PUT  /overrides   -> bewaart nieuwe correcties; header Authorization: Bearer <wachtwoord>
 //   GET  /trainingen  -> opgeslagen trainingsschema (404 zolang er niets is opgeslagen)
 //   PUT  /trainingen  -> bewaart een nieuw trainingsschema; zelfde wachtwoord
+//   GET  /login       -> 200 bij het juiste wachtwoord, anders 401; bewaart niets
 //
 // Instellingen (zie README.md): KV-opslag `OVERRIDES`, geheim `BEHEER_WACHTWOORD`,
 // variabele `ALLOWED_ORIGIN` (adres van de site, zonder slash aan het eind).
@@ -107,6 +108,11 @@ function controleerTrainingen(d) {
   return { versie: d.versie, toelichting: String(d.toelichting || '').slice(0, 400), opmerkingen, wedstrijdDuurMinuten: duur, velden, dagen };
 }
 
+async function wachtwoordKlopt(request, env) {
+  const wachtwoord = (request.headers.get('Authorization') || '').replace(/^Bearer\s+/i, '');
+  return Boolean(env.BEHEER_WACHTWOORD && wachtwoord && (await gelijk(wachtwoord, env.BEHEER_WACHTWOORD)));
+}
+
 // Per pad: onder welke sleutel het bewaard wordt en hoe het gecontroleerd wordt
 const ONDERDELEN = {
   '/overrides': { sleutel: 'overrides', controleer: controleer, nieuw: (s) => { s.gewijzigd = new Date().toISOString(); } },
@@ -117,6 +123,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(env) });
+    if (url.pathname === '/login' && request.method === 'GET')
+      return (await wachtwoordKlopt(request, env)) ? antwoord(env, 200, { ok: true }) : antwoord(env, 401, { fout: 'Onjuist wachtwoord.' });
     const onderdeel = ONDERDELEN[url.pathname];
     if (!onderdeel) return antwoord(env, 404, { fout: 'Niet gevonden.' });
 
@@ -126,8 +134,7 @@ export default {
     }
 
     if (request.method === 'PUT') {
-      const wachtwoord = (request.headers.get('Authorization') || '').replace(/^Bearer\s+/i, '');
-      if (!env.BEHEER_WACHTWOORD || !wachtwoord || !(await gelijk(wachtwoord, env.BEHEER_WACHTWOORD)))
+      if (!(await wachtwoordKlopt(request, env)))
         return antwoord(env, 401, { fout: 'Onjuist wachtwoord.' });
 
       const tekst = await request.text();

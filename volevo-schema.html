@@ -13,6 +13,7 @@
   .kaart { background: white; border-radius: 16px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04); }
   .kaart h2 { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
   .kaart p.uitleg { color: #636366; font-size: 0.85rem; margin-bottom: 12px; line-height: 1.45; }
+  [hidden] { display: none !important; }
   .rij { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
   button, .knop { font: inherit; font-weight: 700; font-size: 0.85rem; border: 0; border-radius: 10px; padding: 9px 16px; cursor: pointer; background: #2A3176; color: white; }
   button.grijs { background: #e5e5ea; color: #1d1d1f; }
@@ -47,11 +48,22 @@
   <h1>Schema beheren</h1>
   <div class="sub">Upload het wedstrijdschema, zie wat het voor de schermen betekent, pas aan en zet het live. De wedstrijden zelf blijven live uit Nevobo komen; dit bestand bepaalt alleen het veld in De Fluit.</div>
 
-  <div class="kaart">
-    <h2>1. Wachtwoord</h2>
-    <p class="uitleg">Nodig om te publiceren. Bekijken, uploaden en downloaden kan zonder.</p>
-    <div class="rij"><input type="password" id="wachtwoord" placeholder="Beheerwachtwoord" autocomplete="current-password"><span class="stand" id="bron"></span></div>
+  <div class="kaart" id="login-kaart">
+    <h2>1. Inloggen</h2>
+    <p class="uitleg">Log in met het beheerwachtwoord om het schema te downloaden, te uploaden en te publiceren.</p>
+    <div class="rij" id="login-rij">
+      <input type="password" id="wachtwoord" placeholder="Beheerwachtwoord" autocomplete="current-password">
+      <button id="login-knop">Inloggen</button>
+    </div>
+    <div class="rij" id="uitlog-rij" hidden>
+      <span class="stand"><strong>Ingelogd.</strong></span>
+      <button class="grijs" id="uitlog-knop">Uitloggen</button>
+    </div>
+    <div id="login-melding"></div>
+    <div class="stand" id="bron" style="margin-top:8px"></div>
   </div>
+
+  <div id="beheer" hidden>
 
   <div class="kaart">
     <h2>2. Huidig schema downloaden</h2>
@@ -98,6 +110,8 @@
       <div id="tr-publiceermelding"></div>
     </div>
   </div>
+
+  </div><!-- /beheer -->
 </div>
 
 <script>
@@ -142,10 +156,46 @@ async function start() {
     (huidig.gewijzigd ? ', laatst gewijzigd ' + new Date(huidig.gewijzigd).toLocaleString('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }) : '') +
     (VOLEVO_API ? '' : ' (publiceren via de API is nog niet ingesteld)');
   document.getElementById('download-excel').disabled = false;
-  var pw = document.getElementById('wachtwoord');
-  pw.value = metWachtwoord();
-  pw.addEventListener('input', function() { sessionStorage.setItem('volevoWachtwoord', pw.value); zetKnop(); });
+  // Nog ingelogd in dit tabblad? Controleer het bewaarde wachtwoord stil.
+  if (sessionStorage.getItem('volevoWachtwoord')) inloggen(true);
 }
+
+// ── Inloggen: de beheer-API controleert het wachtwoord; pas daarna verschijnen de beheerkaarten ──
+function toonIngelogd(ja) {
+  document.getElementById('beheer').hidden = !ja;
+  document.getElementById('login-rij').hidden = ja;
+  document.getElementById('uitlog-rij').hidden = !ja;
+  zetKnop(); trKnop();
+}
+async function inloggen(stil) {
+  var meld = document.getElementById('login-melding'), pw = metWachtwoord();
+  if (!pw) { meld.innerHTML = stil ? '' : '<div class="melding fout">Vul het wachtwoord in.</div>'; return; }
+  if (!VOLEVO_API) { meld.innerHTML = '<div class="melding fout">De beheer-API is nog niet ingesteld.</div>'; return; }
+  var knop = document.getElementById('login-knop');
+  knop.disabled = true;
+  try {
+    var r = await fetch(VOLEVO_API + '/login', { headers: { Authorization: 'Bearer ' + pw }, cache: 'no-store' });
+    if (r.status === 401) throw new Error('Onjuist wachtwoord.');
+    if (!r.ok) throw new Error('De beheer-API gaf fout ' + r.status + '.');
+    sessionStorage.setItem('volevoWachtwoord', pw);
+    meld.innerHTML = '';
+    toonIngelogd(true);
+  } catch (e) {
+    sessionStorage.removeItem('volevoWachtwoord');
+    toonIngelogd(false);
+    meld.innerHTML = '<div class="melding fout">' + esc(e instanceof TypeError ? 'De beheer-API is niet bereikbaar.' : e.message) + '</div>';
+  }
+  knop.disabled = false;
+}
+function uitloggen() {
+  sessionStorage.removeItem('volevoWachtwoord');
+  document.getElementById('wachtwoord').value = '';
+  document.getElementById('login-melding').innerHTML = '';
+  toonIngelogd(false);
+}
+document.getElementById('login-knop').addEventListener('click', function() { inloggen(false); });
+document.getElementById('uitlog-knop').addEventListener('click', uitloggen);
+document.getElementById('wachtwoord').addEventListener('keydown', function(e) { if (e.key === 'Enter') inloggen(false); });
 
 // ── Excel downloaden: komende wedstrijden zoals de schermen ze tonen ──
 function effectiefVeld(w) {
