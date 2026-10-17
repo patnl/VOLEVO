@@ -9,7 +9,7 @@ Elke beurt wordt gekoppeld aan een wedstrijd op datum, tijd en beide
 teamnamen. Lukt dat voor een groot deel niet, dan stopt het script met een
 foutmelding in plaats van een half bestand weg te schrijven.
 """
-import json, os, re, sys, time, urllib.request
+import io, json, os, re, sys, time, urllib.request
 
 import openpyxl
 
@@ -41,9 +41,22 @@ try:
     links = re.findall(r'href="(https://volevo\.nl/wp-content/uploads/[^"]+\.xlsx)"', html)
     if not links:
         raise RuntimeError('geen xlsx-link op de pagina gevonden')
-    bron = links[0]
+    # Op de pagina staan meer Excel-bestanden (bijvoorbeeld Zaal.xlsx met de zaalindeling).
+    # Het officialschema is het bestand met het tabblad "Thuiswedstrijden"; de volgorde
+    # op de pagina zegt niets, dus we kijken in elk bestand.
+    for link in links:
+        data = haal(link, binair=True)
+        try:
+            tabbladen = openpyxl.load_workbook(io.BytesIO(data), data_only=True).sheetnames
+        except Exception:
+            tabbladen = []
+        if 'Thuiswedstrijden' in tabbladen:
+            bron, inhoud = link, data
+            break
+        print('overgeslagen (geen tabblad "Thuiswedstrijden", wel %s): %s' % (tabbladen, link))
+    if inhoud is None:
+        raise RuntimeError('geen xlsx met tabblad "Thuiswedstrijden" op de pagina gevonden')
     print('bron:', bron)
-    inhoud = haal(bron, binair=True)
     # Nieuwe versie meteen in de repo bewaren, zodat de terugval meegroeit
     os.makedirs('data', exist_ok=True)
     with open(KOPIE, 'wb') as f:
