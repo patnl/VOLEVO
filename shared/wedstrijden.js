@@ -32,13 +32,40 @@
       return m ? m[1].trim() : null;
     },
 
-    // 'scheidsrechter (spelregeltoets)' -> 'Fluiten', 'teller' -> 'Tellen'
-    taakSoort: function (taak) {
+    // Statustekst uit een Nevobo-feed ('vervallen', 'gepland', 'gespeeld'): doorgaan of niet
+    isVervallen: function (status) { return status === 'vervallen'; },
+
+    // Veldnummer in het schema: de correctie als die er is, anders het nummer uit Nevobo
+    veldNummer: function (w, correcties) {
+      var o = (correcties || {})[Wedstrijden.sleutel(w)];
+      return (o === undefined || o === null || o === '') ? w.veld : String(o);
+    },
+
+    // Korte taaknaam zoals de zaalschermen die tonen: 'scheidsrechter', 'teller', 'dwf'
+    taakKort: function (taak) {
       taak = taak || '';
-      if (/teller/i.test(taak)) return 'Tellen';
-      if (/dwf/i.test(taak)) return 'Digitaal wedstrijdformulier';
-      if (/scheidsrechter/i.test(taak)) return 'Fluiten';
+      if (/teller/i.test(taak)) return 'teller';
+      if (/dwf/i.test(taak)) return 'dwf';
+      if (/scheidsrechter/i.test(taak)) return 'scheidsrechter';
       return taak;
+    },
+
+    // 'scheidsrechter (spelregeltoets)' -> 'Fluiten', 'teller' -> 'Tellen' (woorden voor de app)
+    taakSoort: function (taak) {
+      var k = Wedstrijden.taakKort(taak);
+      if (k === 'teller') return 'Tellen';
+      if (k === 'dwf') return 'Digitaal wedstrijdformulier';
+      if (k === 'scheidsrechter') return 'Fluiten';
+      return taak || '';
+    },
+
+    // Zelfde beurten als helpersBij, in de korte schermtekst: ['scheidsrechter DS 4', 'teller ouders']
+    officialsRegels: function (perWedstrijd, w) {
+      var volgorde = { scheidsrechter: 0, teller: 1, dwf: 2 };
+      var rang = function (t) { var k = Wedstrijden.taakKort(t); return k in volgorde ? volgorde[k] : 9; };
+      return ((perWedstrijd || {})[Wedstrijden.sleutel(w)] || []).slice()
+        .sort(function (a, b) { return rang(a.taak) - rang(b.taak); })
+        .map(function (o) { return Wedstrijden.taakKort(o.taak) + ' ' + o.team; });
     },
 
     // Wie fluit, telt of doet het DWF bij deze wedstrijd (kunnen andere teams zijn)
@@ -47,7 +74,7 @@
         return { soort: Wedstrijden.taakSoort(t.taak), taak: t.taak, team: t.team, opmerking: t.opmerking || null };
       }).sort(function (a, b) { return Wedstrijden._rang(a.soort) - Wedstrijden._rang(b.soort); });
     },
-    _rang: function (soort) { var r = { Fluiten: 0, Tellen: 1 }; return soort in r ? r[soort] : 2; },
+    _rang: function (soort) { var r = { Fluiten: 0, Tellen: 1, 'Digitaal wedstrijdformulier': 2 }; return soort in r ? r[soort] : 9; },
 
     // Taken die dit team zelf heeft (bij wedstrijden van andere teams, of van zichzelf), op tijd
     takenVanTeam: function (perWedstrijd, code) {
