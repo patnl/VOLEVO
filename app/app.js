@@ -32,7 +32,7 @@ var App = (function () {
   function team(w, naam) { return w.thuis === naam || w.uit === naam; }
 
   // Waar kom je vandaan als je naar de zaalindeling gaat, en waar brengt Terug je naar toe
-  var VAN = { vandaag: ['index.html', 'Vandaag'], programma: ['programma.html', 'Programma'], uitslagen: ['uitslagen.html', 'Uitslagen'], fluiten: ['fluiten.html', 'Fluiten en tellen'] };
+  var VAN = { vandaag: ['index.html', 'Vandaag'], programma: ['programma.html', 'Programma'], uitslagen: ['uitslagen.html', 'Uitslagen'], fluiten: ['fluiten.html', 'Fluiten en tellen'], team: ['team.html', 'Teamoverzicht'] };
   var huidigTeam = '', huidigePagina = '', paginaConfig = null, hersteld = false;
 
   // Link naar de zaalindeling (in dezelfde app) voor elke wedstrijd in De Fluit. Staat het veld in het zaalschema,
@@ -48,6 +48,15 @@ var App = (function () {
   function bronKnop(url, label) {
     var u = Wedstrijden.bronLink(url);
     return u ? '<a class="knop bron" target="_blank" rel="noopener noreferrer" href="' + esc(u) + '">' + esc(label) + ' <span aria-hidden="true">↗</span><span class="alleen-lezer"> (opent Nevobo in een nieuw venster)</span></a>' : '';
+  }
+
+  function teamStand(D, naam) {
+    var bron = D.teamstanden, t = bron && bron.teams && bron.teams[naam];
+    if (!bron) return { tekst: 'Stand kon niet worden geladen', bron: '', datum: '', oud: false };
+    var datum = new Date(bron.opgehaald), geldig = !isNaN(datum);
+    return { beschikbaar: !!(t && t.stand), tekst: t && t.stand ? t.stand : 'Geen stand gepubliceerd door Nevobo', bron: t ? t.bron : '',
+      seizoen: t ? t.seizoen : '', datum: geldig ? datum.toLocaleString('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }) : '',
+      oud: !geldig || Date.now() - datum.getTime() > 48 * 60 * 60 * 1000 };
   }
 
   // Een wedstrijdkaart: eerst tijd en thuis/uit, dan wie tegen wie, dan waar. Met een gekozen team staat dat team vooraan.
@@ -131,13 +140,18 @@ var App = (function () {
   // terwijl de beurten alleen niet geladen konden worden.
   async function laadGegevens() {
     var m = await json('../data/matches.json');
-    var over = null, off = {}, officialsOk = false;
+    var over = null, off = {}, officialsOk = false, teamstanden = null;
     try { over = await laadOverrides(); } catch (e) {}
     try {
       var o = await json('../data/officials.json');
       if (o && typeof o.perWedstrijd === 'object' && o.perWedstrijd !== null) { off = o.perWedstrijd; officialsOk = true; }
     } catch (e) {}
+    try {
+      var standen = await json('../data/teamstanden.json');
+      if (standen && standen.teams && typeof standen.teams === 'object') teamstanden = standen;
+    } catch (e) {}
     return { wedstrijden: m.wedstrijden || [], gegenereerd: m.gegenereerd || null,
+      teamstanden: teamstanden,
       correctiesOk: !!over, correcties: (over && over.velden) || {}, meldingen: (over && over.meldingen) || {}, standen: (over && over.standen) || {},
       officialsOk: officialsOk, officials: off };
   }
@@ -192,6 +206,7 @@ var App = (function () {
       '<button id="vernieuw" aria-label="Gegevens vernieuwen" title="Gegevens vernieuwen">↻</button></header>' +
       '<main><div class="teamkeuze"><label for="team">Mijn team</label><select id="team"></select></div>' +
       (config.zonderZaalKnop ? '' : '<p class="zaalingang"><a class="knop vol" data-bewaar href="zaal.html' + (VAN[config.pagina] ? '?van=' + config.pagina : '') + '">Zaalindeling De Fluit</a></p>') +
+      '<div id="teamstand"></div>' +
       '<div id="waarschuwing"></div><div id="inhoud" aria-live="polite"></div>' +
       '<p class="stand" id="stand"></p>' +
       '<aside class="clubblok" aria-label="Club en bronnen"><a class="knop" target="_blank" rel="noopener" href="https://volevo.nl/">Clubwebsite volevo.nl <span aria-hidden="true">↗</span><span class="alleen-lezer"> (opent in een nieuw venster)</span></a>' +
@@ -203,6 +218,12 @@ var App = (function () {
 
     function toon() {
       if (!D) return;
+      var info = document.getElementById('teamstand');
+      if (gekozen && config.pagina !== 'team' && !config.zonderZaalKnop) {
+        var stand = teamStand(D, gekozen);
+        info.innerHTML = '<a class="teamoverzicht-link" href="team.html?van=' + encodeURIComponent(config.pagina) + '"><span class="sub">Stand volgens Nevobo</span><strong>' + esc(stand.tekst) + '</strong>' +
+          (stand.oud ? '<span class="sub">Stand mogelijk verouderd</span>' : '') + '<span>Teamoverzicht: stand, uitslagen en programma →</span></a>';
+      } else info.innerHTML = '';
       waarschuw.innerHTML = D.correctiesOk ? '' : '<div class="melding"><strong>Veldindeling niet gecontroleerd</strong>De actuele veldindeling en de meldingen van de club konden niet worden opgehaald. Velden en meldingen kunnen afwijken.' +
         '<div class="acties" style="margin-top:10px"><button class="knop" data-herlaad>Opnieuw proberen</button></div></div>';
       if (config.teamKeuze === 'verplicht' && !gekozen) {
@@ -218,6 +239,8 @@ var App = (function () {
       try {
         D = await laadGegevens();
         var teams = teamsUit(D.wedstrijden);
+        Object.keys((D.teamstanden && D.teamstanden.teams) || {}).forEach(function (naam) { if (teams.indexOf(naam) === -1) teams.push(naam); });
+        teams.sort(function (a, b) { return a.localeCompare(b, 'nl', { numeric: true }); });
         if (gekozen && teams.indexOf(gekozen) === -1) gekozen = '';
         select.innerHTML = '<option value="">' + (config.teamKeuze === 'verplicht' ? 'Kies je team' : 'Alle VOLEVO-teams') + '</option>' +
           teams.map(function (t) { return '<option value="' + esc(t) + '"' + (t === gekozen ? ' selected' : '') + '>' + esc(teamNaam(t)) + '</option>'; }).join('');
@@ -247,5 +270,5 @@ var App = (function () {
 
   return { start: start, esc: esc, pad: pad, dagSleutel: dagSleutel, tijd: tijd, dagTekst: dagTekst, kort: kort, teamNaam: teamNaam, team: team,
            wedstrijdKaart: wedstrijdKaart, vervallenMeldingen: vervallenMeldingen, beginschermKaart: beginschermKaart,
-           dagKaart: dagKaart, zaalLink: zaalLink, zaalLabel: zaalLabel, bronKnop: bronKnop, herstelStaat: herstelStaat, VAN: VAN };
+           dagKaart: dagKaart, zaalLink: zaalLink, zaalLabel: zaalLabel, bronKnop: bronKnop, teamStand: teamStand, herstelStaat: herstelStaat, VAN: VAN };
 })();

@@ -12,6 +12,7 @@ on:
   push:
     paths:
       - '.github/workflows/mirror-feeds.yml'
+      - 'scripts/build_teamstanden.py'
 
 permissions:
   contents: write
@@ -40,6 +41,10 @@ jobs:
             grep -q '<item>' "data/$feed.tmp"
             mv "data/$feed.tmp" "data/$feed.xml"
           done
+
+      - name: Officiële teamstanden ophalen
+        continue-on-error: true
+        run: python3 scripts/build_teamstanden.py
 
       - name: Committen als er iets is veranderd
         run: |

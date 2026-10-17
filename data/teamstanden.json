@@ -1,0 +1,335 @@
+{
+  "opgehaald": "2026-10-17T11:43:38.968029+00:00",
+  "teams": {
+    "VOLEVO DS 1": {
+      "stand": "4e in Dames Tweede divisie E",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/1"
+    },
+    "VOLEVO DS 2": {
+      "stand": "6e in Dames Derde Divisie B",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/2"
+    },
+    "VOLEVO DS 3": {
+      "stand": "4e in Dames Derde Divisie C",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/3"
+    },
+    "VOLEVO DS 4": {
+      "stand": "10e in Dames Promotieklasse E",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/4"
+    },
+    "VOLEVO DS 5": {
+      "stand": "3e in Dames 2e Klasse K",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/5"
+    },
+    "VOLEVO DS 6": {
+      "stand": "5e in Dames 2e Klasse K",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/6"
+    },
+    "VOLEVO DS 7": {
+      "stand": "10e in Dames 2e Klasse L",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/7"
+    },
+    "VOLEVO DS 8": {
+      "stand": "10e in Dames 3e Klasse M",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/8"
+    },
+    "VOLEVO DS 9": {
+      "stand": "8e in Dames 3e Klasse J",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/9"
+    },
+    "VOLEVO DS 10": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/10"
+    },
+    "VOLEVO DS 11": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/11"
+    },
+    "VOLEVO DS 12": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/12"
+    },
+    "VOLEVO HS 1": {
+      "stand": "3e in Heren Tweede divisie E",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/heren/1"
+    },
+    "VOLEVO HS 2": {
+      "stand": "4e in Heren Promotieklasse C",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/heren/2"
+    },
+    "VOLEVO HS 3": {
+      "stand": "3e in Heren 1e Klasse G",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/heren/3"
+    },
+    "VOLEVO HS 4": {
+      "stand": "3e in Heren 2e Klasse I",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/heren/4"
+    },
+    "VOLEVO HS 5": {
+      "stand": "6e in Heren 2e Klasse F",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/heren/5"
+    },
+    "VOLEVO HS 6": {
+      "stand": "1e in Heren 4e Klasse B",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/heren/6"
+    },
+    "VOLEVO HS 7": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/heren/7"
+    },
+    "VOLEVO MA 1": {
+      "stand": "4e in Meiden A Hoofdklasse C Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-a/1"
+    },
+    "VOLEVO MA 2": {
+      "stand": "4e in Meiden A 1e Klasse K eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-a/2"
+    },
+    "VOLEVO MA 3": {
+      "stand": "6e in Meiden A 1e Klasse J eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-a/3"
+    },
+    "VOLEVO MA 4": {
+      "stand": "5e in Meiden A 1e Klasse J eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-a/4"
+    },
+    "VOLEVO MA 5": {
+      "stand": "2e in Meiden A 2e Klasse L Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-a/5"
+    },
+    "VOLEVO MA 6": {
+      "stand": "6e in Meiden A 2e Klasse M Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-a/6"
+    },
+    "VOLEVO MA 7": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-a/7"
+    },
+    "VOLEVO JA 1": {
+      "stand": "1e in Jongens A 1e Klasse D Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-a/1"
+    },
+    "VOLEVO MB 1": {
+      "stand": "4e in Meiden B Hoofdklasse B Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-b/1"
+    },
+    "VOLEVO MB 2": {
+      "stand": "1e in Meiden B 1e Klasse I Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-b/2"
+    },
+    "VOLEVO MB 3": {
+      "stand": "5e in Meiden B 1e Klasse H Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-b/3"
+    },
+    "VOLEVO MB 4": {
+      "stand": "5e in Meiden B 2e Klasse N Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-b/4"
+    },
+    "VOLEVO JB 1": {
+      "stand": "2e in Jongens B 1e Klasse C Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-b/1"
+    },
+    "VOLEVO JB 2": {
+      "stand": "2e in Jongens B 2e/3e Klasse G Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-b/2"
+    },
+    "VOLEVO MC 1": {
+      "stand": "2e in C Jeugd Hoofdklasse B Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/1"
+    },
+    "VOLEVO MC 2": {
+      "stand": "3e in C Jeugd 1e Klasse I Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/2"
+    },
+    "VOLEVO MC 3": {
+      "stand": "2e in C Jeugd 2e Klasse S Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/3"
+    },
+    "VOLEVO MC 4": {
+      "stand": "4e in C Jeugd 2e Klasse O Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/4"
+    },
+    "VOLEVO MC 5": {
+      "stand": "5e in C Jeugd 2e Klasse P Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/5"
+    },
+    "VOLEVO MC 6": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/6"
+    },
+    "VOLEVO JC 1": {
+      "stand": "1e in C Jeugd 1e Klasse H Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-c/1"
+    },
+    "VOLEVO JA 2": {
+      "stand": "1e in Jongens A 2e/3e Klasse E Eerste helft",
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-a/2"
+    },
+    "VOLEVO MB 5": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-b/5"
+    },
+    "VOLEVO L2 1": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-2/1"
+    },
+    "VOLEVO L3 1": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/1"
+    },
+    "VOLEVO L3 2": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/2"
+    },
+    "VOLEVO L4 1": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-4/1"
+    },
+    "VOLEVO L4 2": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-4/2"
+    },
+    "VOLEVO L5 1": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/1"
+    },
+    "VOLEVO L5 2": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/2"
+    },
+    "VOLEVO L3 3": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/3"
+    },
+    "VOLEVO L3 4": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/4"
+    },
+    "VOLEVO L3 5": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/5"
+    },
+    "VOLEVO L5 3": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/3"
+    },
+    "VOLEVO L5 4": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/4"
+    },
+    "VOLEVO L5 5": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/5"
+    },
+    "VOLEVO L4 3": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-4/3"
+    },
+    "VOLEVO L4 4": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-4/4"
+    },
+    "VOLEVO L4 5": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-4/5"
+    },
+    "VOLEVO L4 6": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-4/6"
+    },
+    "VOLEVO L5 6": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/6"
+    },
+    "VOLEVO L5 7": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/7"
+    },
+    "VOLEVO L5 8": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/8"
+    },
+    "VOLEVO L5 9": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/9"
+    },
+    "VOLEVO L5 10": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-5/10"
+    },
+    "VOLEVO L3 6": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/6"
+    },
+    "VOLEVO L3 7": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/7"
+    }
+  }
+}
