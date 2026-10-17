@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#2A3176">
 <title>VOLEVO · Uitslagen</title>
-<link rel="stylesheet" href="app.css?v=902e3ad3f328">
+<link rel="stylesheet" href="app.css?v=b02a7fc83271">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="VOLEVO">
 <script>var VOLEVO_DATA = '../';</script>
 <script src="../overrides.js?v=f23fd34a8eec"></script>
 <script src="../shared/wedstrijden.js?v=47d9ac833da4"></script>
-<script src="app.js?v=c91b1b96ea0b"></script>
+<script src="app.js?v=f1542e1f40da"></script>
+<script src="resultaten.js?v=478d277abedf"></script>
 </head>
 <body>
 <script>
@@ -20,51 +21,19 @@ var AANTAL = 12, getoond = AANTAL, uitslagen = null, laadVolgnummer = 0, tekenVo
 async function laadUitslagen() {
   if (uitslagen) return uitslagen;
   var aanvraag = ++laadVolgnummer;
-  var r = await fetch('../data/resultaten.xml?t=' + Date.now(), { cache: 'no-store' });
-  if (!r.ok) throw new Error('resultaten ' + r.status);
-  var xml = new DOMParser().parseFromString(await r.text(), 'text/xml'), lijst = [];
-  if (xml.querySelector('parsererror') || !xml.querySelector('rss > channel')) throw new Error('Ongeldige uitslagenfeed');
-  xml.querySelectorAll('item').forEach(function (item) {
-    var titel = (item.querySelector('title') || {}).textContent || '', uitleg = (item.querySelector('description') || {}).textContent || '';
-    var st = item.getElementsByTagNameNS('*', 'status')[0];
-    if (st && Wedstrijden.isVervallen(st.textContent.trim())) return;
-    var i = titel.indexOf(', Uitslag:'); if (i === -1) return;
-    var paar = titel.substring(0, i).split(' - '); if (paar.length < 2) return;
-    var sets = /Setstanden:\s*([^\r\n<]+)/i.exec(uitleg);
-    var id = ((item.querySelector('guid') || {}).textContent || (item.querySelector('link') || {}).textContent || '').trim();
-    lijst.push({ id: id, thuis: paar[0].trim(), uit: paar.slice(1).join(' - ').trim(), score: titel.substring(i + 10).trim(),
-      sets: sets ? sets[1].trim() : '', tijd: new Date((item.querySelector('pubDate') || {}).textContent) });
-  });
-  // Een wedstrijd tussen twee VOLEVO-teams staat twee keer in de feed: één keer tonen
-  var gesorteerd = Wedstrijden.ontdubbel(lijst).sort(function (a, b) { return b.tijd - a.tijd; });
+  var gesorteerd = await Resultaten.laad();
   // Een oudere aanvraag mag ook de cache voor de volgende pagina niet terugdraaien.
   if (aanvraag === laadVolgnummer) uitslagen = gesorteerd;
   return gesorteerd;
 }
 // De uitslag als twee regels, thuis en uit, met de score bij het juiste team; de winnaar staat er in woorden bij
-function uitslagKaart(u, naam) {
-  var k = Wedstrijden.uitkomst(u.score), res = Wedstrijden.resultaatVoorTeam(u, naam);
-  var badge = '';
-  if (naam && (u.thuis === naam || u.uit === naam)) {
-    badge = res ? '<span class="uitslag-badge ' + res.toLowerCase() + '">' + res + '</span>' : '<span class="uitslag-badge onbekend">Uitslag onbekend</span>';
-  }
-  function regel(team, punten, wint) {
-    return '<p class="teams" style="margin:4px 0 0;display:flex;justify-content:space-between;gap:10px"><span class="' + (wint ? 'winnaar' : '') + '">' + App.esc(team) + '</span><span class="score">' + App.esc(punten) + '</span></p>';
-  }
-  var winnaarTekst = k.winnaar === 'thuis' ? 'Winnaar: ' + u.thuis : (k.winnaar === 'uit' ? 'Winnaar: ' + u.uit : (k.winnaar === 'gelijk' ? 'Gelijkspel' : 'Uitslag onvolledig of onbekend'));
-  return '<article class="kaart"><div class="rij1"><span class="sub" style="margin:0">' + App.esc(App.kort(u.tijd)) + '</span>' + badge + '</div>' +
-    regel(u.thuis + ' (thuis)', k.winnaar ? String(k.thuis) : '–', k.winnaar === 'thuis') + regel(u.uit + ' (uit)', k.winnaar ? String(k.uit) : '–', k.winnaar === 'uit') +
-    '<p class="plek" style="margin-top:8px"><strong>' + App.esc(winnaarTekst) + '</strong></p>' +
-    (u.sets ? '<p class="sets">Setstanden (thuis–uit): ' + App.esc(u.sets) + '</p>' : '') +
-    (App.bronKnop(u.id, 'Bekijk bij Nevobo') ? '<div class="acties">' + App.bronKnop(u.id, 'Bekijk bij Nevobo') + '</div>' : '') + '</article>';
-}
 async function toonUitslagen(naam) {
   var alle = await laadUitslagen();
   var lijst = alle.filter(function (u) { return !naam || u.thuis === naam || u.uit === naam; });
   var html = '<h2>' + (naam ? 'Uitslagen ' + App.esc(App.teamNaam(naam)) : 'Uitslagen alle teams') + '</h2>';
   if (!lijst.length) return html + '<div class="melding leeg"><strong>Geen uitslagen voor deze keuze</strong>Er zijn nog geen uitslagen binnen. Kijk later nog eens.</div>';
   html += '<p class="sub">' + Math.min(getoond, lijst.length) + ' van ' + lijst.length + ' uitslagen, nieuwste eerst</p><div class="lijst">';
-  lijst.slice(0, getoond).forEach(function (u) { html += uitslagKaart(u, naam); });
+  lijst.slice(0, getoond).forEach(function (u) { html += Resultaten.kaart(u, naam); });
   html += '</div>';
   if (lijst.length > getoond) html += '<div class="acties" style="margin-top:14px"><button class="knop vol" id="meer">Toon meer uitslagen</button></div>';
   return html;

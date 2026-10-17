@@ -34,6 +34,7 @@ function omgeving() {
     App: { start: (c) => { config = c; }, esc: String, kort: () => 'datum', teamNaam: String,
       bronKnop: () => '', herstelStaat: () => {} }
   });
+  vm.runInContext(readFileSync(new URL('../app/resultaten.js', import.meta.url), 'utf8'), scope);
   vm.runInContext(script, scope);
   const resolve = (index, text) => pending[index].resolve({ ok: true, text: async () => text });
   return { scope, pending, inhoud, config, resolve };
