@@ -16,12 +16,14 @@
 </head>
 <body>
 <script>
-var AANTAL = 12, getoond = AANTAL, uitslagen = null;
+var AANTAL = 12, getoond = AANTAL, uitslagen = null, laadVolgnummer = 0, tekenVolgnummer = 0, laatsteTeam = null;
 async function laadUitslagen() {
   if (uitslagen) return uitslagen;
+  var aanvraag = ++laadVolgnummer;
   var r = await fetch('../data/resultaten.xml?t=' + Date.now(), { cache: 'no-store' });
   if (!r.ok) throw new Error('resultaten ' + r.status);
   var xml = new DOMParser().parseFromString(await r.text(), 'text/xml'), lijst = [];
+  if (xml.querySelector('parsererror') || !xml.querySelector('rss > channel')) throw new Error('Ongeldige uitslagenfeed');
   xml.querySelectorAll('item').forEach(function (item) {
     var titel = (item.querySelector('title') || {}).textContent || '', uitleg = (item.querySelector('description') || {}).textContent || '';
     var st = item.getElementsByTagNameNS('*', 'status')[0];
@@ -34,8 +36,10 @@ async function laadUitslagen() {
       sets: sets ? sets[1].trim() : '', tijd: new Date((item.querySelector('pubDate') || {}).textContent) });
   });
   // Een wedstrijd tussen twee VOLEVO-teams staat twee keer in de feed: één keer tonen
-  uitslagen = Wedstrijden.ontdubbel(lijst).sort(function (a, b) { return b.tijd - a.tijd; });
-  return uitslagen;
+  var gesorteerd = Wedstrijden.ontdubbel(lijst).sort(function (a, b) { return b.tijd - a.tijd; });
+  // Een oudere aanvraag mag ook de cache voor de volgende pagina niet terugdraaien.
+  if (aanvraag === laadVolgnummer) uitslagen = gesorteerd;
+  return gesorteerd;
 }
 // De uitslag als twee regels, thuis en uit, met de score bij het juiste team; de winnaar staat er in woorden bij
 function uitslagKaart(u, naam) {
@@ -50,7 +54,7 @@ function uitslagKaart(u, naam) {
   var winnaarTekst = k.winnaar === 'thuis' ? 'Winnaar: ' + u.thuis : (k.winnaar === 'uit' ? 'Winnaar: ' + u.uit : (k.winnaar === 'gelijk' ? 'Gelijkspel' : 'Uitslag onvolledig of onbekend'));
   return '<article class="kaart"><div class="rij1"><span class="sub" style="margin:0">' + App.esc(App.kort(u.tijd)) + '</span>' + badge + '</div>' +
     regel(u.thuis + ' (thuis)', k.winnaar ? String(k.thuis) : '–', k.winnaar === 'thuis') + regel(u.uit + ' (uit)', k.winnaar ? String(k.uit) : '–', k.winnaar === 'uit') +
-    '<p class="plek" style="margin-top:8px"><strong>' + App.esc(winnaarTekst) + '</strong>' + (naam && badge === '' ? '' : '') + '</p>' +
+    '<p class="plek" style="margin-top:8px"><strong>' + App.esc(winnaarTekst) + '</strong></p>' +
     (u.sets ? '<p class="sets">Setstanden (thuis–uit): ' + App.esc(u.sets) + '</p>' : '') +
     (App.bronKnop(u.id, 'Bekijk bij Nevobo') ? '<div class="acties">' + App.bronKnop(u.id, 'Bekijk bij Nevobo') + '</div>' : '') + '</article>';
 }
@@ -66,16 +70,25 @@ async function toonUitslagen(naam) {
   return html;
 }
 async function teken(naam) {
-  var inhoud = document.getElementById('inhoud');
-  try { inhoud.innerHTML = await toonUitslagen(naam); }
-  catch (e) { inhoud.innerHTML = '<div class="melding fout"><strong>De uitslagen kunnen nu niet worden opgehaald.</strong>Probeer het opnieuw met de knop rechtsboven.</div>'; return; }
+  var inhoud = document.getElementById('inhoud'), versie = ++tekenVolgnummer;
+  try {
+    var html = await toonUitslagen(naam);
+    if (versie !== tekenVolgnummer) return;
+    inhoud.innerHTML = html;
+  } catch (e) {
+    if (versie !== tekenVolgnummer) return;
+    inhoud.innerHTML = '<div class="melding fout"><strong>De uitslagen kunnen nu niet worden opgehaald.</strong>Probeer het opnieuw met de knop rechtsboven.</div>'; return;
+  }
   var m = document.getElementById('meer');
   if (m) m.addEventListener('click', function () { getoond += AANTAL; teken(naam); });
   App.herstelStaat();
 }
 App.start({
   pagina: 'uitslagen', titel: 'Uitslagen', teamKeuze: 'optioneel',
-  toon: function (D, naam) { uitslagen = null; teken(naam); return '<div class="melding leeg">Uitslagen ophalen…</div>'; }
+  toon: function (D, naam) {
+    if (naam !== laatsteTeam) { getoond = AANTAL; laatsteTeam = naam; }
+    uitslagen = null; teken(naam); return '<div class="melding leeg">Uitslagen ophalen…</div>';
+  }
 });
 </script>
 </body>
