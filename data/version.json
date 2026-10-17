@@ -1,6 +1,6 @@
 {
-  "commit": "f8b010f",
-  "date": "2026-10-17T10:17:27+02:00",
+  "commit": "174567d",
+  "date": "2026-10-17T11:13:13+02:00",
   "files": {
     "index.html": {
       "commit": "b6f231e",
@@ -57,6 +57,10 @@
     "volevo-zaal.html": {
       "commit": "ee88e87",
       "date": "2026-10-15T12:50:33Z"
+    },
+    "volevo-zaalscherm.html": {
+      "commit": "174567d",
+      "date": "2026-10-17T11:13:13+02:00"
     }
   }
 }
