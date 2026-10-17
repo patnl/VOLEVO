@@ -24,13 +24,13 @@ App.start({
     var speel = Wedstrijden.speelbaar(alle).sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
     var vandaagLijst = speel.filter(function (w) { return App.dagSleutel(new Date(w.tijdstip)) === vandaag; });
     var hierna = speel.filter(function (w) { var d = new Date(w.tijdstip); return d > nu && App.dagSleutel(d) !== vandaag; }).slice(0, 5);
-    var html = '<h2>Vandaag, ' + App.esc(App.dagTekst(nu)) + '</h2>';
+    var html = '<h2>Vandaag, ' + App.esc(App.dagTekst(nu)) + '</h2>' + App.dagKaart(D, naam, vandaag);
     if (D.meldingen[vandaag]) html += '<div class="melding"><strong>Melding van de club</strong>' + App.esc(D.meldingen[vandaag]) + '</div>';
     html += vandaagLijst.length
       ? '<div class="lijst">' + vandaagLijst.map(function (w) { return App.wedstrijdKaart(w, D); }).join('') + '</div>'
       : '<div class="melding leeg"><strong>Vandaag speelt ' + App.esc(naam ? App.teamNaam(naam) : 'VOLEVO') + ' niet</strong>Hieronder staan de volgende wedstrijden.</div>';
     if (vandaagLijst.some(function (w) { return w.hal === 'De Fluit'; }))
-      html += '<div class="acties" style="margin-top:10px"><a class="knop" href="zaal.html?dag=' + vandaag + '">Bekijk de zaalindeling</a></div>';
+      html += '<div class="acties" style="margin-top:10px"><a class="knop" data-bewaar href="zaal.html?dag=' + vandaag + '&van=vandaag">Bekijk de zaalindeling</a></div>';
     html += '<h2>Volgende wedstrijden</h2>' + App.vervallenMeldingen(alle);
     html += hierna.length
       ? '<div class="lijst">' + hierna.map(function (w) { return App.wedstrijdKaart(w, D, { metDatum: true }); }).join('') + '</div><div class="acties" style="margin-top:12px"><a class="knop vol" href="programma.html">Hele programma</a></div>'

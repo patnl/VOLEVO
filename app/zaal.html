@@ -19,8 +19,11 @@
 <script>
 // Zaalindeling in De Fluit voor op de telefoon. Een wedstrijdkaart linkt hierheen met ?dag=&ronde=&veld=,
 // dan kleurt het veld van die wedstrijd. Zonder ?veld= kleuren de wedstrijden van het gekozen team.
+var QZ = new URLSearchParams(location.search);
+var VAN = App.VAN[QZ.get('van')] ? QZ.get('van') : '';                   // waar je vandaan komt (in dezelfde app)
+var TERUG = VAN ? App.VAN[VAN] : App.VAN.programma;                      // zonder herkomst (direct geopend): terug naar Programma
 function zaalPagina(D, naam) {
-  var q = new URLSearchParams(location.search), nu = new Date();
+  var q = QZ, nu = new Date();
   var fluit = Wedstrijden.speelbaar(D.wedstrijden).filter(function (w) { return w.hal === 'De Fluit' && w.tijdstip; });
   var perDag = {};
   fluit.forEach(function (w) { var k = App.dagSleutel(new Date(w.tijdstip)); (perDag[k] = perDag[k] || []).push(w); });
@@ -45,17 +48,18 @@ function zaalPagina(D, naam) {
     if (veldParam) { var v = Wedstrijden.veldNummer(w, D.correcties); return v === veldParam || (veldParam === '4G' && v === '4') || (veldParam === '4' && v === '4G'); }
     return !!naam && App.team(w, naam);
   }
-  var gekozen = actief.filter(isGekozen);
+  var gekozen = actief.filter(isGekozen), eigenGekozen = gekozen.filter(function (w) { return !!naam && App.team(w, naam); });
 
   var d = new Date(dag + 'T12:00:00');
-  var html = '<div class="rij1" style="margin-top:6px"><h2 style="margin:12px 2px 6px">' + App.esc(App.dagTekst(d)) + '</h2><button class="knop" id="terug">← Terug</button></div>';
+  var html = '<p style="margin:10px 0 0"><a class="knop" id="terug" href="' + TERUG[0] + '">← Terug naar ' + App.esc(TERUG[1]) + '</a></p><h2 style="margin:14px 2px 6px">' + App.esc(App.dagTekst(d)) + '</h2>';
   html += '<div class="rondes" role="group" aria-label="Speelronde">' + rondes.map(function (t) {
     return '<a class="knop' + (t === ronde ? ' vol' : '') + '"' + (t === ronde ? ' aria-current="true"' : '') + ' href="zaal.html?dag=' + dag + '&ronde=' + t + '">' + t + '</a>';
   }).join('') + '</div>';
   var di = dagen.indexOf(dag);
   if (gekozen.length) {
-    html += '<div class="melding"><strong>' + (gekozen.length === 1 ? 'Jouw wedstrijd' : 'Jullie wedstrijden') + ' in de zaal</strong>' + gekozen.map(function (w) {
-      return App.esc(App.teamNaam(Wedstrijden.teamCode(w.thuis) !== null ? w.thuis : w.uit)) + ': ' + App.esc(Wedstrijden.veldTekst(w, D.correcties));
+    html += '<div class="melding"><strong>' + (eigenGekozen.length ? (eigenGekozen.length === 1 ? 'Jouw wedstrijd in de zaal' : 'Jullie wedstrijden in de zaal') : 'Gekozen veld in de zaal') + '</strong>' + gekozen.map(function (w) {
+      var p = Wedstrijden.perspectief(w, naam);
+      return App.esc(App.teamNaam(p.eigen)) + ' tegen ' + App.esc(p.tegen) + ': ' + App.esc(Wedstrijden.veldTekst(w, D.correcties));
     }).join('<br>') + '</div>';
   } else if (veldParam || naam) {
     html += '<div class="melding leeg">' + (naam ? 'Voor ' + App.esc(App.teamNaam(naam)) + ' staat in deze speelronde niets in de zaal.' : 'Geen wedstrijd op dit veld in deze speelronde.') + '</div>';
@@ -77,12 +81,14 @@ function zaalPagina(D, naam) {
       var hier = []; Zaal.zoekNummers(v).forEach(function (nr) { hier = hier.concat(perVeld[nr] || []); });
       var gek = hier.filter(isGekozen).length > 0;
       var cls = gek ? 'gekozen' : (hier.length ? 'bezet' : 'vrij');
-      svg += '<g class="veld ' + cls + '"><rect x="' + bx + '" y="' + by + '" width="' + bw + '" height="' + bh + '" rx="10"/>';
+      var vtekst = 'Veld ' + Zaal.labelVan(v) + (hier.length ? ', ' + hier.map(function (w) { return Wedstrijden.teamCode(w.thuis) !== null ? Wedstrijden.teamCode(w.thuis) : (Wedstrijden.teamCode(w.uit) || w.thuis); }).join(' en ') : ', vrij') + (gek ? ', gekozen veld' : '');
+      svg += '<g class="veld ' + cls + '" role="group" aria-label="' + App.esc(vtekst) + '"><title>' + App.esc(vtekst) + '</title><rect x="' + bx + '" y="' + by + '" width="' + bw + '" height="' + bh + '" rx="10"/>';
       svg += '<text class="nr" x="' + mx + '" y="' + (by + 54) + '">' + App.esc(Zaal.labelVan(v)) + '</text>';
       hier.slice(0, 2).forEach(function (w, k) {
         var code = Wedstrijden.teamCode(w.thuis) !== null ? Wedstrijden.teamCode(w.thuis) : (Wedstrijden.teamCode(w.uit) || w.thuis);
         svg += '<text class="team" x="' + mx + '" y="' + (my + 18 + k * 48) + '">' + App.esc(code) + '</text>';
       });
+      if (gek) svg += '<text class="gekozen-tekst" x="' + mx + '" y="' + (by + bh - 16) + '">GEKOZEN VELD</text>';
       if (hier.length > 2) svg += '<text class="meer" x="' + mx + '" y="' + (by + bh - 18) + '">+' + (hier.length - 2) + '</text>';
       svg += '</g>';
     });
@@ -91,19 +97,28 @@ function zaalPagina(D, naam) {
     });
     html += '<div class="kaart zaalkaart">' + svg + '</svg><p class="sub" style="margin:4px 4px 0">' + App.esc(st.omschrijving) + '</p></div>';
   });
-  html += '<div class="legenda"><span><i class="lg gekozen"></i>jouw wedstrijd</span><span><i class="lg bezet"></i>bezet</span><span><i class="lg vrij"></i>vrij</span></div>';
+  html += '<div class="legenda"><span><i class="lg gekozen"></i>gekozen veld</span><span><i class="lg bezet"></i>bezet</span><span><i class="lg vrij"></i>vrij</span></div>';
 
   html += '<div class="rondes" style="margin-top:14px">' + (di > 0 ? '<a class="knop" href="zaal.html?dag=' + dagen[di - 1] + '">← Vorige speeldag</a>' : '') +
     (di < dagen.length - 1 ? '<a class="knop" href="zaal.html?dag=' + dagen[di + 1] + '">Volgende speeldag →</a>' : '') + '</div>';
   html += '<h2>Wedstrijden van ' + App.esc(ronde) + '</h2><div class="lijst">' + actief.slice().sort(function (a, b) {
     return String(Wedstrijden.veldNummer(a, D.correcties)).localeCompare(String(Wedstrijden.veldNummer(b, D.correcties)), 'nl', { numeric: true });
   }).map(function (w) {
-    return (isGekozen(w) ? '<div class="gekozen-rand">' : '<div>') + App.wedstrijdKaart(w, D, { zonderRoute: true, helpers: true }) + '</div>';
+    return (isGekozen(w) ? '<div class="gekozen-rand"><span class="label gekozen-label">Gekozen veld</span>' : '<div>') + App.wedstrijdKaart(w, D, { zonderRoute: true, zonderZaal: true, helpers: true, metBron: false }) + '</div>';
   }).join('') + '</div>';
-  setTimeout(function () { var t = document.getElementById('terug'); if (t) t.addEventListener('click', function () { if (history.length > 1) history.back(); else location.href = 'index.html'; }); }, 0);
+  // Terug: dezelfde stap terug als je uit de app kwam (dan blijft de stand van de lijst), anders naar de pagina van herkomst
+  setTimeout(function () {
+    var t = document.getElementById('terug');
+    if (!t) return;
+    t.addEventListener('click', function (e) {
+      try { sessionStorage.setItem('volevo-terug', String(Date.now())); } catch (x) {}
+      var kwamVanApp = history.length > 1 && document.referrer && new URL(document.referrer).origin === location.origin && document.referrer.indexOf('/' + TERUG[0]) !== -1;
+      if (kwamVanApp) { e.preventDefault(); history.back(); }
+    });
+  }, 0);
   return html;
 }
-App.start({ pagina: 'zaal', titel: 'Zaalindeling', teamKeuze: 'optioneel', toon: zaalPagina });
+App.start({ pagina: VAN, titel: 'Zaalindeling', teamKeuze: 'optioneel', zonderZaalKnop: true, toon: zaalPagina });
 </script>
 </body>
 </html>

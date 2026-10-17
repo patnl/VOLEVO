@@ -27,11 +27,18 @@ function takenHtml(D, naam) {
     return '<article class="kaart"><div class="rij1"><span class="tijd">' + App.esc(App.kort(d)) + '</span><span class="label">' + App.esc(t.soort) + '</span></div>' +
       '<p class="teams">' + App.esc(t.thuis) + '<br><span class="tegen">tegen ' + App.esc(t.uit) + '</span></p>' +
       '<p class="plek"><strong>' + App.esc(w && w.hal ? w.hal : 'Sporthal nog niet bekend') + '</strong>' + (veld ? ' · ' + App.esc(veld) : '') + '</p>' +
-      (t.opmerking ? '<p class="officials">' + App.esc(t.opmerking) + '</p>' : '') + '</article>';
+      (t.opmerking ? '<p class="officials">' + App.esc(t.opmerking) + '</p>' : '') +
+      (w && App.zaalLink(w, D, 'fluiten') ? '<div class="acties"><a class="knop vol" data-bewaar href="' + App.esc(App.zaalLink(w, D, 'fluiten')) + '">Bekijk veld in de zaal</a></div>' : '') + '</article>';
   }
   var dezeWeek = taken.filter(function (t) { return new Date(t.tijdstip) < week; }), later = taken.filter(function (t) { return new Date(t.tijdstip) >= week; });
-  var html = '<h2>Taken voor ' + App.esc(App.teamNaam(naam)) + '</h2><p class="sub">Je team heeft deze beurten. Wie de beurt uitvoert, spreek je af met je teamcontactpersoon.</p>';
-  if (!taken.length) html += '<div class="melding leeg"><strong>Geen beurten gevonden voor jullie team</strong>Er staan nu geen fluit- of telbeurten op de planning.</div>';
+  var html = '<h2>Taken voor ' + App.esc(App.teamNaam(naam)) + '</h2>';
+  if (!D.officialsOk) {
+    html += '<div class="melding fout"><strong>Taken konden niet worden geladen</strong>De fluit- en telbeurten zijn nu niet beschikbaar. Dit betekent niet dat er geen beurten zijn.' +
+      '<div class="acties" style="margin-top:10px"><button class="knop vol" data-herlaad>Opnieuw proberen</button></div></div>';
+  } else {
+    html += '<p class="sub">Je team heeft deze beurten. Wie de beurt uitvoert, spreek je af met je teamcontactpersoon.</p>';
+  }
+  if (D.officialsOk && !taken.length) html += '<div class="melding leeg"><strong>Geen beurten gevonden voor jullie team</strong>Er staan nu geen fluit- of telbeurten op de planning.</div>';
   if (dezeWeek.length) html += '<h3 class="dag">Deze week</h3><div class="lijst">' + dezeWeek.map(kaart).join('') + '</div>';
   if (later.length) html += '<h3 class="dag">Later</h3><div class="lijst">' + later.slice(0, 20).map(kaart).join('') + '</div>' + (later.length > 20 ? '<p class="sub">En nog ' + (later.length - 20) + ' latere beurten.</p>' : '');
 
@@ -39,7 +46,7 @@ function takenHtml(D, naam) {
     .filter(function (w) { return new Date(w.tijdstip) >= start; }).sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); }).slice(0, 4);
   html += '<h2>Wie helpt bij jullie wedstrijd?</h2><p class="sub">Bij jullie eigen wedstrijden fluiten en tellen vaak andere teams.</p>';
   html += eigen.length ? '<div class="lijst">' + eigen.map(function (w) {
-    return App.wedstrijdKaart(w, D, { metDatum: true, helpers: true, zonderRoute: true }).replace('</article>', (Wedstrijden.helpersBij(D.officials, w).length ? '' : '<p class="officials">Nog niet bevestigd. Vraag je teamcontactpersoon wat voor jullie geldt.</p>') + '</article>');
+    return App.wedstrijdKaart(w, D, { metDatum: true, helpers: true, zonderRoute: true, van: 'fluiten' }).replace('</article>', (D.officialsOk && !Wedstrijden.helpersBij(D.officials, w).length ? '<p class="officials">Nog niet bevestigd. Vraag je teamcontactpersoon wat voor jullie geldt.</p>' : '') + '</article>');
   }).join('') + '</div>' : '<div class="melding leeg"><strong>Geen komende wedstrijden gevonden</strong></div>';
   return html;
 }

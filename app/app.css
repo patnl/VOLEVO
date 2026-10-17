@@ -81,3 +81,23 @@ svg.zaal .ingang-t { font-size: 22px; font-weight: 700; fill: #6b6b72; text-anch
 .legenda i.gekozen { background: var(--blauw); border-color: var(--blauw); }
 .legenda i.vrij { background: #f2f2f7; }
 .gekozen-rand > .kaart { outline: 3px solid var(--blauw); }
+
+.alleen-lezer { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.knop.bron { background: #fff; border: 1px solid var(--lijn); }
+.clubblok { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--lijn); }
+.dagkaart { margin-top: 14px; border-left: 5px solid var(--mint); }
+.dag-lijst { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dag-lijst li { display: flex; gap: 12px; align-items: flex-start; }
+.dag-lijst .dt { flex: none; min-width: 3.4em; font-weight: 800; color: var(--blauw); font-size: 1.1rem; }
+.dag-lijst .plek-klein { color: var(--zacht); font-size: .9rem; }
+.uitslag-badge { display: inline-block; font-size: .85rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; }
+.uitslag-badge.gewonnen { background: #dff3e6; color: #14663a; }
+.uitslag-badge.verloren { background: #fde4e2; color: #982d27; }
+.uitslag-badge.gelijk, .uitslag-badge.onbekend { background: #eee; color: #444; }
+.kaart .teams .winnaar { font-weight: 800; }
+.kaart .teams .winnaar::after { content: " ✓ winnaar"; font-size: .8rem; color: #14663a; font-weight: 700; }
+svg.zaal .gekozen-tekst { font-size: 22px; font-weight: 800; fill: var(--mint); text-anchor: middle; letter-spacing: .06em; }
+.gekozen-label { background: var(--blauw); color: #fff; margin: 0 0 6px 4px; }
+.gekozen-rand { margin-bottom: 0; }
+.zaalingang { margin: 10px 0 0; }
+.zaalingang .knop { width: 100%; justify-content: center; }
