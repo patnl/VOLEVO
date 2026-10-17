@@ -256,7 +256,7 @@ var ZAAL = {
         { veld:'5', hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] },
       // Bij 3 wedstrijden staat veld 4 groot: de halve zaal links, in de lengte
       // vanaf de tribune. Rechts blijven 6 (achter) en 5 (bij de tribune).
-      gemengd: { omschrijving: 'veld 4 groot · 4G, 5 en 6', velden: [
+      gemengd: { omschrijving: 'veld 4 groot, 5 en 6', velden: [
         { veld:['4G'], hal:'4', fx:0,   fy:0,   fw:1/2, fh:1,   net:'h' },
         { veld:'6',   hal:'6', fx:1/2, fy:0,   fw:1/2, fh:1/2, net:'v' },
         { veld:'5',   hal:'5', fx:1/2, fy:1/2, fw:1/2, fh:1/2, net:'v' } ] } }
@@ -294,6 +294,10 @@ function standVan(zaal, perVeld) {
   // het schema af te leiden; die kies je met de knopjes of via de correcties.
   // Veld 4 groot ('4G') bestaat alleen in de gemengde stand
   if (zaal.gemengd && Object.keys(perVeld).some(function(nr) { return /g$/i.test(nr) && (perVeld[nr] || []).length; })) return zaal.gemengd;
+  // Bocht met drie velden: geen wedstrijd op veld 7 maar wel op 4, 5 of 6. Het bestuur zet dan veld 4
+  // groot (links, met 5 en 6 rechts), ook als er gewoon "veld 4" in het schema staat.
+  if (zaal.gemengd && zaal.vier && !zaal.drie && !(perVeld['7'] || []).length &&
+      ['4', '5', '6'].some(function(nr) { return (perVeld[nr] || []).length; })) return zaal.gemengd;
   if (!zaal.vier) return zaal.drie;
   if (!zaal.drie) return zaal.vier;
   var alleenInVier = [];
@@ -535,12 +539,16 @@ function teken() {
       var midx = bx + bw/2, midy = by + bh/2;
 
       var nummers = veldenVan(v);
+      // Het grote veld 4 ('4G') is ook veld 4 in het schema: wedstrijden op "4" horen er dus ook op
+      var zoek = nummers.indexOf('4G') !== -1 && nummers.indexOf('4') === -1 ? nummers.concat('4') : nummers;
       var bezet = [];
-      nummers.forEach(function(nr) { bezet = bezet.concat(perVeld[nr] || []); });
-      var isActief = nummers.length && nummers.indexOf(gekozenVeld) !== -1;
+      zoek.forEach(function(nr) { bezet = bezet.concat(perVeld[nr] || []); });
+      var isActief = zoek.length && zoek.indexOf(gekozenVeld) !== -1;
+      // Klikken kiest het veld zoals het in het schema van de wedstrijd staat, zodat de lijst meekleurt
+      var kies = (bezet.length && veldVan(bezet[0])) || nummers[0];
       var cls = 'veld-vak-groep' + (isActief ? ' actief' : (bezet.length ? ' bezet' : ''));
 
-      svg += '<g class="'+cls+'"' + (nummers.length ? ' data-veld="'+esc(nummers[0])+'"' : '') + '>';
+      svg += '<g class="'+cls+'"' + (nummers.length ? ' data-veld="'+esc(kies)+'"' : '') + '>';
       svg += '<rect class="veld-vak'+(isActief?' actief':(bezet.length?' bezet':''))+'" x="'+bx+'" y="'+by+'" width="'+bw+'" height="'+bh+'" rx="8"/>';
       if (v.net === 'v') {
         svg += '<line class="net" x1="'+midx+'" y1="'+(by+8)+'" x2="'+midx+'" y2="'+(by+bh-8)+'"/>';
