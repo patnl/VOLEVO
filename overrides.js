@@ -2,7 +2,7 @@
 // Staat VOLEVO_API ingesteld, dan komen ze van de beheer-API (daar werkt de
 // wedstrijdsecretaris ze bij via volevo-schema.html). Is die er niet of niet
 // bereikbaar, dan geldt data/overrides.json uit de repo.
-var VOLEVO_API = '';   // bijvoorbeeld 'https://volevo-beheer.<account>.workers.dev'; leeg = alleen het bestand
+var VOLEVO_API = 'https://volevo-beheer.volevo-zaal.workers.dev';   // bijvoorbeeld 'https://volevo-beheer.<account>.workers.dev'; leeg = alleen het bestand
 
 async function laadOverrides() {
   var t = '?t=' + Date.now();
