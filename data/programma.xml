@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 17 Oct 2026 13:43:34 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 17:25:59 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[17 okt 12:15: ZVH MC 1 - VOLEVO JC 1]]></title>
@@ -15,20 +15,20 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO MA 5 - DEO MA 1]]></title>
+      <title><![CDATA[VOLEVO MA 5 - DEO MA 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035435</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035435</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2L1 EF, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 5 - DEO MA 1, Uitslag: 3-1, Setstanden: 23-25, 25-15, 25-15, 25-17]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO MB 2 - Kalinko MB 2]]></title>
+      <title><![CDATA[VOLEVO MB 2 - Kalinko MB 2, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029593</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029593</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1I1 FD, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MB 2 - Kalinko MB 2, Uitslag: 4-0, Setstanden: 25-17, 25-17, 25-11, 25-16]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[VOLEVO MB 4 - ZVH MB 2, Uitslag: 0-4]]></title>
@@ -39,76 +39,76 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO MC 5 - Ancora RVV MC 3]]></title>
+      <title><![CDATA[VOLEVO MC 5 - Ancora RVV MC 3, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2031045</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2031045</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2P1 DB, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 5 - Ancora RVV MC 3, Uitslag: 1-3, Setstanden: 23-25, 0-25, 25-20, 10-25]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 12:30: VOLEVO MC 1 - Inter Rijswijk JC 1]]></title>
+      <title><![CDATA[VOLEVO MC 1 - Inter Rijswijk JC 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025684</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025684</guid>
-      <description><![CDATA[Wedstrijd: 3000XCHB1 DG, Datum: zaterdag 17 oktober, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 1 - Inter Rijswijk JC 1, Uitslag: 3-1, Setstanden: 25-23, 21-25, 25-10, 25-14]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 14:00: SKC DS 6 - VOLEVO DS 6]]></title>
+      <title><![CDATA[SKC DS 6 - VOLEVO DS 6, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041538</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041538</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   GC, Datum: zaterdag 17 oktober, 14:00, Speellocatie: Universitair SC, Goliuspad 22, 2333BH  Leiden]]></description>
+      <description><![CDATA[Wedstrijd: SKC DS 6 - VOLEVO DS 6, Uitslag: 3-1, Setstanden: 25-9, 25-17, 26-24, 20-25]]></description>
       <pubDate>Sat, 17 Oct 2026 14:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 15:00: VOLEVO DS 2 - Spaarnestad DS 3]]></title>
+      <title><![CDATA[VOLEVO DS 2 - Spaarnestad DS 3, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009750</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009750</guid>
-      <description><![CDATA[Wedstrijd: 30003BD   IJ, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 2 - Spaarnestad DS 3, Uitslag: 1-3, Setstanden: 13-25, 25-15, 18-25, 15-25]]></description>
       <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 15:00: VOLEVO JB 1 - VHZ JB 1]]></title>
+      <title><![CDATA[VOLEVO JB 1 - VHZ JB 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026731</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026731</guid>
-      <description><![CDATA[Wedstrijd: 3000JB1C1 CB, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JB 1 - VHZ JB 1, Uitslag: 3-1, Setstanden: 25-15, 20-25, 25-14, 25-23]]></description>
       <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 15:00: VOLEVO MA 4 - Inter Rijswijk MA 2]]></title>
+      <title><![CDATA[VOLEVO MA 4 - Inter Rijswijk MA 2, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026251</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026251</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1J1 AF, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 4 - Inter Rijswijk MA 2, Uitslag: 2-3, Setstanden: 25-20, 25-20, 20-25, 18-25, 1-15]]></description>
       <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 15:00: VOLEVO MA 6 - Kratos '08 MA 1]]></title>
+      <title><![CDATA[VOLEVO MA 6 - Kratos '08 MA 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028414</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028414</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2M1 EB, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 6 - Kratos '08 MA 1, Uitslag: 1-3, Setstanden: 16-25, 18-25, 8-25, 25-23]]></description>
       <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 15:00: VOLEVO MB 3 - Inter Rijswijk MB 2]]></title>
+      <title><![CDATA[VOLEVO MB 3 - Inter Rijswijk MB 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029459</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029459</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1H1 CB, Datum: zaterdag 17 oktober, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MB 3 - Inter Rijswijk MB 2, Uitslag: 1-3, Setstanden: 23-25, 13-25, 26-24, 16-25]]></description>
       <pubDate>Sat, 17 Oct 2026 15:00:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[17 okt 15:30: Donar HS 2 - VOLEVO HS 5]]></title>
+      <title><![CDATA[Donar HS 2 - VOLEVO HS 5, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017871</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2017871</guid>
-      <description><![CDATA[Wedstrijd: 3000H2F   FD, Datum: zaterdag 17 oktober, 15:30, Speellocatie: Broekplein, Broekplein 2, 2318TJ  Leiden]]></description>
+      <description><![CDATA[Wedstrijd: Donar HS 2 - VOLEVO HS 5, Uitslag: 3-1, Setstanden: 21-25, 25-23, 25-18, 25-13]]></description>
       <pubDate>Sat, 17 Oct 2026 15:30:00 +0200</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[17 okt 17:30: VOLEVO JA 1 - Inter Rijswijk JA 2]]></title>
