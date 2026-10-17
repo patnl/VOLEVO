@@ -31,6 +31,13 @@ var App = (function () {
   }
   function team(w, naam) { return w.thuis === naam || w.uit === naam; }
 
+  // Link naar de zaalindeling met het veld van deze wedstrijd gekleurd; alleen als het veld uit het zaalschema komt
+  function zaalLink(w, D) {
+    if (w.hal !== 'De Fluit' || !Wedstrijden.heeftCorrectie(w, D.correcties)) return '';
+    var d = new Date(w.tijdstip);
+    return 'zaal.html?dag=' + dagSleutel(d) + '&ronde=' + tijd(d) + '&veld=' + encodeURIComponent(Wedstrijden.veldNummer(w, D.correcties));
+  }
+
   // Een wedstrijdkaart: eerst tijd en thuis/uit, dan wie tegen wie, dan waar
   function wedstrijdKaart(w, D, opties) {
     opties = opties || {};
@@ -44,7 +51,9 @@ var App = (function () {
       '<p class="teams">' + esc(teamNaam(eigen || w.thuis)) + '<br><span class="tegen">tegen ' + esc(tegen) + '</span></p>' +
       '<p class="plek"><strong>' + esc(w.hal || 'Sporthal nog niet bekend') + '</strong>' + (veld ? ' · ' + esc(veld) : '') + (adres ? '<br>' + esc(adres) : '') + '</p>' +
       (helpers.length ? '<p class="officials">' + helpers.map(function (h) { return esc(h.soort + ': ' + h.team); }).join(' · ') + '</p>' : '') +
-      (route && !opties.zonderRoute ? '<div class="acties"><a class="knop" target="_blank" rel="noopener" aria-label="Route naar ' + esc(w.hal || 'de sporthal') + '" href="' + esc(route) + '">Route naar sporthal</a></div>' : '') +
+      ((route && !opties.zonderRoute) || (zaalLink(w, D) && !opties.zonderZaal) ? '<div class="acties">' +
+        (zaalLink(w, D) && !opties.zonderZaal ? '<a class="knop vol" href="' + esc(zaalLink(w, D)) + '">Bekijk veld in de zaal</a>' : '') +
+        (route && !opties.zonderRoute ? '<a class="knop" target="_blank" rel="noopener" aria-label="Route naar ' + esc(w.hal || 'de sporthal') + '" href="' + esc(route) + '">Route naar sporthal</a>' : '') + '</div>' : '') +
       '</article>';
   }
 
@@ -76,7 +85,7 @@ var App = (function () {
     var over = null, off = {};
     try { over = await laadOverrides(); } catch (e) {}
     try { off = (await json('../data/officials.json')).perWedstrijd || {}; } catch (e) {}
-    return { wedstrijden: m.wedstrijden || [], gegenereerd: m.gegenereerd || null, correcties: (over && over.velden) || {}, meldingen: (over && over.meldingen) || {}, officials: off };
+    return { wedstrijden: m.wedstrijden || [], gegenereerd: m.gegenereerd || null, correcties: (over && over.velden) || {}, meldingen: (over && over.meldingen) || {}, standen: (over && over.standen) || {}, officials: off };
   }
 
   function teamsUit(wedstrijden) {
