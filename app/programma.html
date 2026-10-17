@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2A3176">
+<title>VOLEVO · Programma</title>
+<link rel="stylesheet" href="app.css">
+<script>var VOLEVO_DATA = '../';</script>
+<script src="../overrides.js"></script>
+<script src="../shared/wedstrijden.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<script>
+var AANTAL = 12, getoond = AANTAL;
+function toonProgramma(D, naam) {
+  var start = new Date(); start.setHours(0, 0, 0, 0);
+  var alle = D.wedstrijden.filter(function (w) { return !naam || App.team(w, naam); });
+  var lijst = Wedstrijden.speelbaar(alle).filter(function (w) { return new Date(w.tijdstip) >= start; })
+    .sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
+  var html = '<h2>' + (naam ? 'Programma ' + App.esc(App.teamNaam(naam)) : 'Programma alle teams') + '</h2>' + App.vervallenMeldingen(alle);
+  if (!lijst.length) return html + '<div class="melding leeg"><strong>Geen wedstrijden voor deze keuze</strong>Kies een ander team, of kijk later nog eens.</div>';
+  var zichtbaar = lijst.slice(0, getoond), dag = '';
+  html += '<p class="sub">' + zichtbaar.length + ' van ' + lijst.length + ' wedstrijden vanaf vandaag</p>';
+  zichtbaar.forEach(function (w) {
+    var d = new Date(w.tijdstip), k = App.dagSleutel(d);
+    if (k !== dag) { html += (dag ? '</div>' : '') + '<h3 class="dag">' + App.esc(App.dagTekst(d)) + '</h3><div class="lijst">'; dag = k; }
+    html += App.wedstrijdKaart(w, D);
+  });
+  html += '</div>';
+  if (lijst.length > getoond) html += '<div class="acties" style="margin-top:14px"><button class="knop vol" id="meer">Toon meer wedstrijden</button></div>';
+  return html;
+}
+var laatsteTeam = null;
+document.addEventListener('click', function (e) { if (e.target.id === 'meer') { getoond += AANTAL; App.hertoon(); } });
+App.start({
+  pagina: 'programma', titel: 'Programma', teamKeuze: 'optioneel',
+  toon: function (D, naam) {
+    if (naam !== laatsteTeam) { getoond = AANTAL; laatsteTeam = naam; }
+    return toonProgramma(D, naam);
+  }
+});
+</script>
+</body>
+</html>
