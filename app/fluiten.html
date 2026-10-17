@@ -28,7 +28,7 @@ function takenHtml(D, naam) {
       '<p class="teams">' + App.esc(t.thuis) + '<br><span class="tegen">tegen ' + App.esc(t.uit) + '</span></p>' +
       '<p class="plek"><strong>' + App.esc(w && w.hal ? w.hal : 'Sporthal nog niet bekend') + '</strong>' + (veld ? ' · ' + App.esc(veld) : '') + '</p>' +
       (t.opmerking ? '<p class="officials">' + App.esc(t.opmerking) + '</p>' : '') +
-      (w && App.zaalLink(w, D, 'fluiten') ? '<div class="acties"><a class="knop vol" data-bewaar href="' + App.esc(App.zaalLink(w, D, 'fluiten')) + '">Bekijk veld in de zaal</a></div>' : '') + '</article>';
+      (w && App.zaalLink(w, D, 'fluiten') ? '<div class="acties"><a class="knop vol" data-bewaar href="' + App.esc(App.zaalLink(w, D, 'fluiten')) + '">' + App.zaalLabel(w, D) + '</a></div>' : '') + '</article>';
   }
   var dezeWeek = taken.filter(function (t) { return new Date(t.tijdstip) < week; }), later = taken.filter(function (t) { return new Date(t.tijdstip) >= week; });
   var html = '<h2>Taken voor ' + App.esc(App.teamNaam(naam)) + '</h2>';

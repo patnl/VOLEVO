@@ -130,8 +130,9 @@ test('MA 4 kiest: de onderlinge wedstrijd tegen MA 3 staat met MA 4 vooraan en a
   await q.sluit();
   const z = await pagina({ team: '', klok: '2026-11-21T09:00:00+01:00' });
   await z.ga('programma.html');
-  const t3 = (await z.locator('#inhoud .kaart', { hasText: 'VOLEVO MA 3' }).first().textContent()).replace(/\s+/g, ' ');
-  assert.match(t3, /VOLEVO MA 3 ?tegen VOLEVO MA 4/, 'zonder teamkeuze blijft de thuisvolgorde');
+  const rij = z.locator('#inhoud .kaart', { hasText: 'tegen VOLEVO MA 4' });
+  assert.equal(await rij.count(), 1, 'één kaart voor MA 3 – MA 4');
+  assert.match((await rij.first().textContent()).replace(/\s+/g, ' '), /Meisjes A 3 \(MA 3\) ?tegen VOLEVO MA 4/, 'zonder teamkeuze blijft de thuisvolgorde');
   await z.sluit();
 });
 
@@ -365,5 +366,65 @@ test('een andere sporthal houdt zijn route met coördinaten', SKIP, async () => 
   const uit = await p.locator('#inhoud a:has-text("Route naar sporthal")').evaluateAll((els) => els.map((e) => new URL(e.href).searchParams.get('query')).filter((q) => !/Fluit/.test(q)));
   assert.ok(uit.length >= 1);
   assert.ok(uit.every((q) => /^-?\d+\.\d+,-?\d+\.\d+$/.test(q)), 'coördinaten: ' + uit.slice(0, 3));
+  await p.sluit();
+});
+
+// ── Zaalknop op elke wedstrijd in De Fluit, ook zonder veldcorrectie, en van= blijft bij ronde- en dagwissel ──
+test('zonder veldcorrectie: Programma toont "Veld nog niet bevestigd" en "Bekijk zaalindeling" zonder veld, de zaal markeert niets; met correctie blijft het veld gemarkeerd', SKIP, async () => {
+  const leeg = (r) => r.fulfill({ status: 200, contentType: 'application/json', body: '{"velden":{},"meldingen":{},"standen":{}}' });
+  const p = await pagina({ mocks: { 'data/overrides\\.json': leeg } });
+  await p.ga('programma.html');
+  const kaart = p.locator('#inhoud .kaart', { hasText: 'De Fluit' }).first();
+  const t = (await kaart.textContent()).replace(/\s+/g, ' ');
+  assert.match(t, /Veld nog niet bevestigd/);
+  const link = kaart.locator('a[href*="zaal.html"]');
+  assert.equal((await link.textContent()).trim(), 'Bekijk zaalindeling');
+  const href = await link.getAttribute('href');
+  assert.match(href, /dag=\d{4}-\d{2}-\d{2}&ronde=\d{2}:\d{2}/); assert.doesNotMatch(href, /veld=/, 'geen verzonnen veld in de link'); assert.match(href, /van=programma/);
+  await link.click(); await p.waitForURL(/zaal\.html/); await p.waitForSelector('svg.zaal');
+  assert.equal(await p.locator('svg.zaal .veld.gekozen').count(), 0, 'niets gemarkeerd');
+  assert.equal(await p.locator('svg.zaal .veld.bezet').count(), 0, 'geen verzonnen bezette velden uit Nevobo-nummers');
+  assert.doesNotMatch(await p.locator('svg.zaal').first().textContent() + await p.locator('svg.zaal').last().textContent(), /GEKOZEN VELD/);
+  assert.match(await tekst(p), /Veld nog niet bevestigd/);
+  assert.match(await tekst(p, 'h1'), /Zaalindeling/);
+  await p.sluit();
+  // met correctie: veld bekend, knop "Bekijk veld in de zaal" en het veld is gemarkeerd
+  const q = await pagina();
+  await q.ga('programma.html');
+  const bekend = q.locator('#inhoud .kaart', { hasText: 'Bocht · veld' }).first().locator('a[href*="zaal.html"]');
+  assert.equal((await bekend.textContent()).trim(), 'Bekijk veld in de zaal');
+  assert.match(await bekend.getAttribute('href'), /veld=/);
+  await bekend.click(); await q.waitForURL(/zaal\.html/); await q.waitForSelector('svg.zaal');
+  assert.ok(await q.locator('svg.zaal .veld.gekozen').count() >= 1);
+  await q.sluit();
+});
+
+test('elke wedstrijd in De Fluit heeft een zaalknop in Programma, ook zonder team gekozen', SKIP, async () => {
+  const p = await pagina({ team: '' });
+  await p.ga('programma.html');
+  const kaarten = p.locator('#inhoud .kaart', { hasText: 'De Fluit' });
+  const n = await kaarten.count();
+  assert.ok(n >= 3);
+  for (let i = 0; i < n; i++) assert.equal(await kaarten.nth(i).locator('a[href*="zaal.html"]').count(), 1, 'kaart ' + i);
+  const buiten = p.locator('#inhoud .kaart').filter({ hasNotText: 'De Fluit' });
+  for (let i = 0; i < await buiten.count(); i++) assert.equal(await buiten.nth(i).locator('a[href*="zaal.html"]').count(), 0, 'geen zaalknop bij een andere sporthal');
+  await p.sluit();
+});
+
+test('van Fluiten en tellen: wisselen van ronde of speeldag in de zaal behoudt de herkomst en Terug gaat naar Fluiten en tellen', SKIP, async () => {
+  const p = await pagina();
+  await p.ga('fluiten.html');
+  await p.locator('#inhoud .kaart', { hasText: 'VOLEVO MC 5' }).first().locator('a[href*="zaal.html"]').click();
+  await p.waitForURL(/zaal\.html/); await p.waitForSelector('svg.zaal');
+  await p.locator('.rondes a', { hasText: '15:00' }).click();
+  await p.waitForURL(/ronde=15:00/); await p.waitForSelector('svg.zaal');
+  assert.match(p.url(), /van=fluiten/, 'van blijft na een rondewissel');
+  assert.match(await p.locator('#terug').textContent(), /Terug naar Fluiten en tellen/);
+  await p.locator('a', { hasText: 'Volgende speeldag' }).click();
+  await p.waitForURL(/dag=2026-10-2\d|dag=2026-1[12]/); await p.waitForSelector('svg.zaal');
+  assert.match(p.url(), /van=fluiten/, 'van blijft na een dagwissel');
+  assert.match(await p.locator('#terug').textContent(), /Terug naar Fluiten en tellen/);
+  assert.match(await p.locator('.onderbalk a[aria-current="page"]').getAttribute('href'), /fluiten\.html/);
+  await p.click('#terug'); await p.waitForURL(/fluiten\.html/);
   await p.sluit();
 });

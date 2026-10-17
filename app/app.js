@@ -35,13 +35,15 @@ var App = (function () {
   var VAN = { vandaag: ['index.html', 'Vandaag'], programma: ['programma.html', 'Programma'], uitslagen: ['uitslagen.html', 'Uitslagen'], fluiten: ['fluiten.html', 'Fluiten en tellen'] };
   var huidigTeam = '', huidigePagina = '', paginaConfig = null, hersteld = false;
 
-  // Link naar de zaalindeling (in dezelfde app) met het veld van deze wedstrijd gekleurd; alleen als het veld
-  // uit het zaalschema komt. `van` zegt waar Terug naartoe gaat.
+  // Link naar de zaalindeling (in dezelfde app) voor elke wedstrijd in De Fluit. Staat het veld in het zaalschema,
+  // dan wordt dat veld gemarkeerd; anders opent de zaal voor die dag en ronde zonder markering (we verzinnen geen veld).
+  // `van` zegt waar Terug naartoe gaat.
   function zaalLink(w, D, van) {
-    if (w.hal !== 'De Fluit' || !Wedstrijden.heeftCorrectie(w, D.correcties)) return '';
-    var d = new Date(w.tijdstip), v = van || huidigePagina;
-    return 'zaal.html?dag=' + dagSleutel(d) + '&ronde=' + tijd(d) + '&veld=' + encodeURIComponent(Wedstrijden.veldNummer(w, D.correcties)) + (VAN[v] ? '&van=' + v : '');
+    if (w.hal !== 'De Fluit') return '';
+    var d = new Date(w.tijdstip), v = van || huidigePagina, bekend = Wedstrijden.heeftCorrectie(w, D.correcties);
+    return 'zaal.html?dag=' + dagSleutel(d) + '&ronde=' + tijd(d) + (bekend ? '&veld=' + encodeURIComponent(Wedstrijden.veldNummer(w, D.correcties)) : '') + (VAN[v] ? '&van=' + v : '');
   }
+  function zaalLabel(w, D) { return Wedstrijden.heeftCorrectie(w, D.correcties) ? 'Bekijk veld in de zaal' : 'Bekijk zaalindeling'; }
   // Externe bronlink (Nevobo), herkenbaar als extern; alleen bekende https-adressen
   function bronKnop(url, label) {
     var u = Wedstrijden.bronLink(url);
@@ -56,7 +58,7 @@ var App = (function () {
     var adres = Wedstrijden.locatie(w).adres;
     var helpers = opties.helpers && D.officialsOk ? Wedstrijden.helpersBij(D.officials, w) : [];
     var zl = opties.zonderZaal ? '' : zaalLink(w, D, opties.van);
-    var knoppen = (zl ? '<a class="knop vol" data-bewaar href="' + esc(zl) + '">Bekijk veld in de zaal</a>' : '') +
+    var knoppen = (zl ? '<a class="knop vol" data-bewaar href="' + esc(zl) + '">' + zaalLabel(w, D) + '</a>' : '') +
       (route && !opties.zonderRoute ? '<a class="knop" target="_blank" rel="noopener" aria-label="Route naar ' + esc(w.hal || 'de sporthal') + '" href="' + esc(route) + '">Route naar sporthal</a>' : '') +
       (opties.metBron === false ? '' : bronKnop(w.dwf, 'Wedstrijdformulier'));
     return '<article class="kaart"><div class="rij1"><span class="tijd">' + esc(opties.metDatum ? kort(d) : tijd(d)) + '</span>' +
@@ -77,7 +79,7 @@ var App = (function () {
     Wedstrijden.speelbaar(D.wedstrijden).filter(function (w) { return team(w, naam) && dagSleutel(new Date(w.tijdstip)) === dag; }).forEach(function (w) {
       var p = Wedstrijden.perspectief(w, naam), veld = Wedstrijden.veldTekst(w, D.correcties), zl = zaalLink(w, D);
       rijen.push({ t: w.tijdstip, soort: 'Wedstrijd', kop: p.eigenThuis ? 'Eigen wedstrijd, thuis' : 'Eigen wedstrijd, uit',
-        tekst: teamNaam(p.eigen) + ' tegen ' + p.tegen, plek: [w.hal, veld].filter(Boolean).join(' · '), link: zl });
+        tekst: teamNaam(p.eigen) + ' tegen ' + p.tegen, plek: [w.hal, veld].filter(Boolean).join(' · '), link: zl, linkLabel: zaalLabel(w, D) });
     });
     if (D.officialsOk && code) {
       var perSleutel = {}; D.wedstrijden.forEach(function (w) { perSleutel[Wedstrijden.sleutel(w)] = w; });
@@ -85,7 +87,7 @@ var App = (function () {
         var w = perSleutel[t.sleutel]; if (w && w.status === 'vervallen') return;
         var kop = t.soort === 'Fluiten' ? 'Je team fluit' : (t.soort === 'Tellen' ? 'Je team telt' : 'Je team doet: ' + t.soort);
         rijen.push({ t: t.tijdstip, soort: t.soort, kop: kop, tekst: 'bij ' + t.thuis + ' – ' + t.uit,
-          plek: w ? [w.hal, Wedstrijden.veldTekst(w, D.correcties)].filter(Boolean).join(' · ') : '', link: w ? zaalLink(w, D) : '' });
+          plek: w ? [w.hal, Wedstrijden.veldTekst(w, D.correcties)].filter(Boolean).join(' · ') : '', link: w ? zaalLink(w, D) : '', linkLabel: w ? zaalLabel(w, D) : '' });
       });
     }
     rijen.sort(function (a, b) { return a.t < b.t ? -1 : a.t > b.t ? 1 : 0; });
@@ -96,7 +98,7 @@ var App = (function () {
       (rijen.length ? '<ol class="dag-lijst">' + rijen.map(function (r) {
         return '<li><span class="dt">' + esc(tijd(new Date(r.t))) + '</span><div><strong>' + esc(r.kop) + '</strong><br>' + esc(r.tekst) +
           (r.plek ? '<br><span class="plek-klein">' + esc(r.plek) + '</span>' : '') +
-          (r.link ? '<br><a data-bewaar href="' + esc(r.link) + '">Bekijk veld in de zaal</a>' : '') + '</div></li>';
+          (r.link ? '<br><a data-bewaar href="' + esc(r.link) + '">' + esc(r.linkLabel) + '</a>' : '') + '</div></li>';
       }).join('') + '</ol>' : '') + melding +
       '<p style="margin:10px 0 0"><a class="knop" href="fluiten.html">Alle taken: Fluiten/tellen</a></p></section>';
   }
@@ -245,5 +247,5 @@ var App = (function () {
 
   return { start: start, esc: esc, pad: pad, dagSleutel: dagSleutel, tijd: tijd, dagTekst: dagTekst, kort: kort, teamNaam: teamNaam, team: team,
            wedstrijdKaart: wedstrijdKaart, vervallenMeldingen: vervallenMeldingen, beginschermKaart: beginschermKaart,
-           dagKaart: dagKaart, zaalLink: zaalLink, bronKnop: bronKnop, herstelStaat: herstelStaat, VAN: VAN };
+           dagKaart: dagKaart, zaalLink: zaalLink, zaalLabel: zaalLabel, bronKnop: bronKnop, herstelStaat: herstelStaat, VAN: VAN };
 })();

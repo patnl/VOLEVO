@@ -39,21 +39,26 @@ function zaalPagina(D, naam) {
     rondes.forEach(function (t) { if (new Date(dag + 'T' + t + ':00').getTime() - 30 * 60e3 <= nu.getTime()) ronde = t; });
   }
   var actief = perDag[dag].filter(function (w) { return App.tijd(new Date(w.tijdstip)) === ronde; });
+  // Alleen een veld uit het zaalschema staat in de tekening; zonder correctie zou het Nevobo-nummer een verzonnen plek geven
+  var bevestigd = actief.filter(function (w) { return Wedstrijden.heeftCorrectie(w, D.correcties); });
+  var onbevestigd = actief.filter(function (w) { return !Wedstrijden.heeftCorrectie(w, D.correcties); });
   var perVeld = {};
-  actief.forEach(function (w) { var v = Wedstrijden.veldNummer(w, D.correcties) || '?'; (perVeld[v] = perVeld[v] || []).push(w); });
+  bevestigd.forEach(function (w) { var v = Wedstrijden.veldNummer(w, D.correcties) || '?'; (perVeld[v] = perVeld[v] || []).push(w); });
 
   // Welke wedstrijden kleuren? Het veld uit de link, anders de wedstrijden van het gekozen team
   var veldParam = q.get('veld');
   function isGekozen(w) {
+    if (!Wedstrijden.heeftCorrectie(w, D.correcties)) return false;   // zonder bevestigd veld kleuren we niets
     if (veldParam) { var v = Wedstrijden.veldNummer(w, D.correcties); return v === veldParam || (veldParam === '4G' && v === '4') || (veldParam === '4' && v === '4G'); }
     return !!naam && App.team(w, naam);
   }
-  var gekozen = actief.filter(isGekozen), eigenGekozen = gekozen.filter(function (w) { return !!naam && App.team(w, naam); });
+  var gekozen = bevestigd.filter(isGekozen), eigenGekozen = gekozen.filter(function (w) { return !!naam && App.team(w, naam); });
 
+  var vanQ = VAN ? '&van=' + VAN : '';   // de herkomst blijft behouden als je van ronde of dag wisselt
   var d = new Date(dag + 'T12:00:00');
   var html = '<p style="margin:10px 0 0"><a class="knop" id="terug" href="' + TERUG[0] + '">← Terug naar ' + App.esc(TERUG[1]) + '</a></p><h2 style="margin:14px 2px 6px">' + App.esc(App.dagTekst(d)) + '</h2>';
   html += '<div class="rondes" role="group" aria-label="Speelronde">' + rondes.map(function (t) {
-    return '<a class="knop' + (t === ronde ? ' vol' : '') + '"' + (t === ronde ? ' aria-current="true"' : '') + ' href="zaal.html?dag=' + dag + '&ronde=' + t + '">' + t + '</a>';
+    return '<a class="knop' + (t === ronde ? ' vol' : '') + '"' + (t === ronde ? ' aria-current="true"' : '') + ' href="zaal.html?dag=' + dag + '&ronde=' + t + vanQ + '">' + t + '</a>';
   }).join('') + '</div>';
   var di = dagen.indexOf(dag);
   if (gekozen.length) {
@@ -61,7 +66,14 @@ function zaalPagina(D, naam) {
       var p = Wedstrijden.perspectief(w, naam);
       return App.esc(App.teamNaam(p.eigen)) + ' tegen ' + App.esc(p.tegen) + ': ' + App.esc(Wedstrijden.veldTekst(w, D.correcties));
     }).join('<br>') + '</div>';
-  } else if (veldParam || naam) {
+  }
+  var onbevestigdEigen = onbevestigd.filter(function (w) { return !!naam && App.team(w, naam); });
+  if (onbevestigdEigen.length) {
+    html += '<div class="melding"><strong>Veld nog niet bevestigd</strong>' + onbevestigdEigen.map(function (w) {
+      var p = Wedstrijden.perspectief(w, naam);
+      return App.esc(App.teamNaam(p.eigen)) + ' tegen ' + App.esc(p.tegen) + ': veld nog niet bevestigd';
+    }).join('<br>') + '</div>';
+  } else if (!gekozen.length && (veldParam || naam)) {
     html += '<div class="melding leeg">' + (naam ? 'Voor ' + App.esc(App.teamNaam(naam)) + ' staat in deze speelronde niets in de zaal.' : 'Geen wedstrijd op dit veld in deze speelronde.') + '</div>';
   }
 
@@ -97,13 +109,16 @@ function zaalPagina(D, naam) {
     });
     html += '<div class="kaart zaalkaart">' + svg + '</svg><p class="sub" style="margin:4px 4px 0">' + App.esc(st.omschrijving) + '</p></div>';
   });
+  if (onbevestigd.length) {
+    html += '<div class="melding" style="margin-top:10px"><strong>' + (onbevestigd.length === 1 ? 'Eén wedstrijd staat nog niet in de tekening' : onbevestigd.length + ' wedstrijden staan nog niet in de tekening') + '</strong>Het veld is nog niet bevestigd. Die wedstrijden staan hieronder in de lijst.</div>';
+  }
   html += '<div class="legenda"><span><i class="lg gekozen"></i>gekozen veld</span><span><i class="lg bezet"></i>bezet</span><span><i class="lg vrij"></i>vrij</span></div>';
 
-  html += '<div class="rondes" style="margin-top:14px">' + (di > 0 ? '<a class="knop" href="zaal.html?dag=' + dagen[di - 1] + '">← Vorige speeldag</a>' : '') +
-    (di < dagen.length - 1 ? '<a class="knop" href="zaal.html?dag=' + dagen[di + 1] + '">Volgende speeldag →</a>' : '') + '</div>';
-  html += '<h2>Wedstrijden van ' + App.esc(ronde) + '</h2><div class="lijst">' + actief.slice().sort(function (a, b) {
+  html += '<div class="rondes" style="margin-top:14px">' + (di > 0 ? '<a class="knop" href="zaal.html?dag=' + dagen[di - 1] + vanQ + '">← Vorige speeldag</a>' : '') +
+    (di < dagen.length - 1 ? '<a class="knop" href="zaal.html?dag=' + dagen[di + 1] + vanQ + '">Volgende speeldag →</a>' : '') + '</div>';
+  html += '<h2>Wedstrijden van ' + App.esc(ronde) + '</h2><div class="lijst">' + bevestigd.slice().sort(function (a, b) {
     return String(Wedstrijden.veldNummer(a, D.correcties)).localeCompare(String(Wedstrijden.veldNummer(b, D.correcties)), 'nl', { numeric: true });
-  }).map(function (w) {
+  }).concat(onbevestigd).map(function (w) {
     return (isGekozen(w) ? '<div class="gekozen-rand"><span class="label gekozen-label">Gekozen veld</span>' : '<div>') + App.wedstrijdKaart(w, D, { zonderRoute: true, zonderZaal: true, helpers: true, metBron: false }) + '</div>';
   }).join('') + '</div>';
   // Terug: dezelfde stap terug als je uit de app kwam (dan blijft de stand van de lijst), anders naar de pagina van herkomst
