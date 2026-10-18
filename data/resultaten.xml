@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sun, 18 Oct 2026 00:23:02 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 01:52:03 +0200</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[VOLEVO MA 2 - Inter Rijswijk MA 3, Uitslag: 4-0]]></title>
@@ -124,6 +124,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035435</guid>
       <description><![CDATA[Wedstrijd: VOLEVO MA 5 - DEO MA 1, Uitslag: 3-1, Setstanden: 23-25, 25-15, 25-15, 25-17]]></description>
       <pubDate>Sat, 17 Oct 2026 12:30:00 +0200</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[ZVH MC 1 - VOLEVO JC 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2029791</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2029791</guid>
+      <description><![CDATA[Wedstrijd: ZVH MC 1 - VOLEVO JC 1, Uitslag: 3-1, Setstanden: 25-20, 25-22, 26-28, 27-25]]></description>
+      <pubDate>Sat, 17 Oct 2026 12:15:00 +0200</pubDate>
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
