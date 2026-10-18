@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-17T20:49:42+00:00",
+ "gegenereerd": "2026-10-18T04:53:36+00:00",
  "wedstrijden": [
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
@@ -3016,7 +3016,7 @@
    "tijdstip": "2026-10-17T12:15:00+02:00",
    "thuis": "ZVH MC 1",
    "uit": "VOLEVO JC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Swanla",
    "plaats": "Zevenhuizen ZH",
    "adres": "Burgemeester Klinkhamerweg 86",
@@ -3024,7 +3024,7 @@
    "lat": 52.01443,
    "lon": 4.583,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/cbd6d22d-d941-455e-a642-9c5ad58e2082"
+   "dwf": "https://dwf.nevobo.nl/results/cbd6d22d-d941-455e-a642-9c5ad58e2082/scoresheets/d0634656-ed62-4115-8c5e-5a485634b763"
   },
   {
    "tijdstip": "2026-10-17T12:30:00+02:00",
