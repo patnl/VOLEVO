@@ -1,7 +1,7 @@
 {
- "bron": "https://volevo.nl/wp-content/uploads/2026/10/20261003-Officialbeurten-sept-dec-web.xlsx",
- "bestand": "20261003-Officialbeurten-sept-dec-web.xlsx",
- "ingelezen": "2026-10-17T08:13:30Z",
+ "bron": "https://volevo.nl/wp-content/uploads/2026/10/20261012-Officialbeurten-sept-dec-web.xlsx",
+ "bestand": "20261012-Officialbeurten-sept-dec-web.xlsx",
+ "ingelezen": "2026-10-18T09:04:49Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -218,7 +218,7 @@
    ]
   }
  ],
- "aantal": 336,
+ "aantal": 340,
  "nietGekoppeld": [
   {
    "dag": "2026-10-03",
@@ -281,7 +281,7 @@
    "uit": "Limes MA 1",
    "taak": "scheidsrechter (spelregeltoets)",
    "team": "DS 2",
-   "opmerking": "Let op! Spelen hoofdklasse"
+   "opmerking": "Verplaatst naar 18 november"
   },
   {
    "dag": "2026-10-17",
@@ -290,7 +290,7 @@
    "uit": "Limes MA 1",
    "taak": "teller",
    "team": "MA 6",
-   "opmerking": null
+   "opmerking": "Verplaatst naar 18 november"
   },
   {
    "dag": "2026-10-17",
@@ -299,7 +299,7 @@
    "uit": "Kratos '08 MC 1",
    "taak": "scheidsrechter (spelregeltoets)",
    "team": "MA 4",
-   "opmerking": null
+   "opmerking": "Verplaatst naar 12 november"
   },
   {
    "dag": "2026-10-17",
@@ -308,7 +308,7 @@
    "uit": "Kratos '08 MC 1",
    "taak": "teller",
    "team": "ouders",
-   "opmerking": null
+   "opmerking": "Verplaatst naar 12 november"
   },
   {
    "dag": "2026-10-17",
@@ -972,7 +972,7 @@
    {
     "taak": "scheidsrechter (spelregeltoets)",
     "team": "JA 1",
-    "opmerking": null
+    "opmerking": "No show: overgenomen door DS 7"
    },
    {
     "taak": "teller",
@@ -1727,6 +1727,18 @@
     "opmerking": null
    }
   ],
+  "2026-11-12T18:00:00+01:00|VOLEVO MC 3|Kratos '08 MC 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 7",
+    "opmerking": null
+   },
+   {
+    "taak": "teller",
+    "team": "ouders",
+    "opmerking": null
+   }
+  ],
   "2026-11-12T19:30:00+01:00|VOLEVO MB 1|Ancora RVV MB 1": [
    {
     "taak": "scheidsrechter (spelregeltoets)",
@@ -1827,6 +1839,18 @@
    {
     "taak": "teller",
     "team": "DS 7",
+    "opmerking": null
+   }
+  ],
+  "2026-11-18T21:00:00+01:00|VOLEVO MA 1|Limes MA 1": [
+   {
+    "taak": "scheidsrechter (spelregeltoets)",
+    "team": "DS 2",
+    "opmerking": "Let op! Spelen hoofdklasse"
+   },
+   {
+    "taak": "teller",
+    "team": "DS 6",
     "opmerking": null
    }
   ],
