@@ -1,6 +1,62 @@
 {
- "gegenereerd": "2026-10-26T13:27:33+00:00",
+ "gegenereerd": "2026-10-27T12:35:54+00:00",
  "wedstrijden": [
+  {
+   "tijdstip": null,
+   "thuis": "Ancora RVV MC 1",
+   "uit": "VOLEVO MC 1",
+   "status": "gepland",
+   "hal": "Boorsmazaal",
+   "plaats": "Katwijk ZH",
+   "adres": "Zwanenburgstraat 61",
+   "postcode": "2225DZ",
+   "lat": 52.20326,
+   "lon": 4.40189,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/d302707c-1dbf-47ea-a80d-99e2176bde34"
+  },
+  {
+   "tijdstip": null,
+   "thuis": "Dosko MA 1",
+   "uit": "VOLEVO MA 1",
+   "status": "gepland",
+   "hal": "De Stolp",
+   "plaats": "Stolwijk",
+   "adres": "Jan Steenlaan 16",
+   "postcode": "2821VB",
+   "lat": 51.97357,
+   "lon": 4.77239,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/8117bcff-e79a-4e43-8aaf-576047cf6b5c"
+  },
+  {
+   "tijdstip": null,
+   "thuis": "VSTS MB 1",
+   "uit": "VOLEVO MB 1",
+   "status": "gepland",
+   "hal": "De Sporthoeve",
+   "plaats": "Bodegraven",
+   "adres": "Vromade 1",
+   "postcode": "2411LG",
+   "lat": 52.07717,
+   "lon": 4.75181,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/6853e033-6d4c-4336-ba38-35cc2d402a01"
+  },
+  {
+   "tijdstip": null,
+   "thuis": "ZVH JC 1",
+   "uit": "VOLEVO JC 1",
+   "status": "gepland",
+   "hal": "Swanla",
+   "plaats": "Zevenhuizen ZH",
+   "adres": "Burgemeester Klinkhamerweg 86",
+   "postcode": "2761BJ",
+   "lat": 52.01443,
+   "lon": 4.583,
+   "veld": "CC",
+   "dwf": "https://dwf.nevobo.nl/matches/3ff102e2-d336-4245-ba97-4b0047cdc2c9"
+  },
   {
    "tijdstip": "2026-09-03T21:00:00+02:00",
    "thuis": "VOLEVO DS 3",
