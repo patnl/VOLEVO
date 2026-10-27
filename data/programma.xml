@@ -4,8 +4,40 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Tue, 27 Oct 2026 08:51:37 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 15:01:27 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2080199</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080199</guid>
+      <description><![CDATA[Wedstrijd: 3000BM3A  07, Datum: , Speellocatie: De Stolp, Jan Steenlaan 16, 2821VB  Stolwijk]]></description>
+      <pubDate/>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[: VSTS MB 1 - VOLEVO MB 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2080206</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080206</guid>
+      <description><![CDATA[Wedstrijd: 3000BM3B  07, Datum: , Speellocatie: De Sporthoeve, Vromade 1, 2411LG  Bodegraven]]></description>
+      <pubDate/>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[: ZVH JC 1 - VOLEVO JC 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2080212</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080212</guid>
+      <description><![CDATA[Wedstrijd: 3000BX3C  06, Datum: , Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
+      <pubDate/>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[: Ancora RVV MC 1 - VOLEVO MC 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2080213</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080213</guid>
+      <description><![CDATA[Wedstrijd: 3000BX3C  07, Datum: , Speellocatie: Boorsmazaal, Zwanenburgstraat 61, 2225DZ  Katwijk ZH]]></description>
+      <pubDate/>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[28 okt 19:45: Monza DS 1 - VOLEVO DS 5]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041543</link>
