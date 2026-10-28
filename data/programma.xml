@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 28 Oct 2026 16:45:10 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:48:07 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -39,12 +39,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 okt 19:45: Monza DS 1 - VOLEVO DS 5]]></title>
+      <title><![CDATA[Monza DS 1 - VOLEVO DS 5, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041543</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041543</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   JD, Datum: woensdag 28 oktober, 19:45, Speellocatie: De Wielepet, Heijdseweg 9, 2681VN  Monster]]></description>
+      <description><![CDATA[Wedstrijd: Monza DS 1 - VOLEVO DS 5, Uitslag: 4-0, Setstanden: 25-18, 26-24, 25-22, 25-20]]></description>
       <pubDate>Wed, 28 Oct 2026 19:45:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[29 okt 21:00: VOLEVO DS 3 - Zovoc DS 1]]></title>
