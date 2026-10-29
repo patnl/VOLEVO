@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-28T22:49:16+00:00",
+ "gegenereerd": "2026-10-29T22:58:46+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -3310,7 +3310,7 @@
    "tijdstip": "2026-10-29T21:00:00+01:00",
    "thuis": "VOLEVO DS 3",
    "uit": "Zovoc DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3318,13 +3318,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/6b301789-a62e-4181-b159-c8530fe190a3"
+   "dwf": "https://dwf.nevobo.nl/results/6b301789-a62e-4181-b159-c8530fe190a3/scoresheets/8c85fef3-39f1-4ca0-becb-7873289cf9e8"
   },
   {
    "tijdstip": "2026-10-29T21:00:00+01:00",
    "thuis": "VOLEVO HS 3",
    "uit": "VollinGo HS 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3332,7 +3332,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/af2e6806-b758-44bd-9561-358ea9342899"
+   "dwf": "https://dwf.nevobo.nl/results/af2e6806-b758-44bd-9561-358ea9342899/scoresheets/b47190e7-62da-4c11-9dbf-40eebf4a9b38"
   },
   {
    "tijdstip": "2026-10-30T19:30:00+01:00",
