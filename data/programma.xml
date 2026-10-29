@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 29 Oct 2026 20:13:25 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 00:19:35 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -36,22 +36,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2080213</guid>
       <description><![CDATA[Wedstrijd: 3000BX3C  07, Datum: , Speellocatie: Boorsmazaal, Zwanenburgstraat 61, 2225DZ  Katwijk ZH]]></description>
       <pubDate/>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[29 okt 21:00: VOLEVO DS 3 - Zovoc DS 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2009714</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009714</guid>
-      <description><![CDATA[Wedstrijd: 30003CD   HI, Datum: donderdag 29 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 29 Oct 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[29 okt 21:00: VOLEVO HS 3 - VollinGo HS 4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2017090</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017090</guid>
-      <description><![CDATA[Wedstrijd: 3000H1G   HI, Datum: donderdag 29 oktober, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 29 Oct 2026 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
