@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-29T22:58:46+00:00",
+ "gegenereerd": "2026-10-30T13:19:52+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -3478,15 +3478,14 @@
    "tijdstip": "2026-10-31T10:00:00+01:00",
    "thuis": "Kalinko L2 4",
    "uit": "VOLEVO L2 1",
-   "status": "gepland",
+   "status": "vervallen",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/0895759c-3015-4206-ada5-07b1acd1c038"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-10-31T10:00:00+01:00",
