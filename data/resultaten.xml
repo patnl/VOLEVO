@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 30 Oct 2026 16:57:37 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 21:32:27 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Monza DS 4 - VOLEVO DS 9, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041558</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041558</guid>
+      <description><![CDATA[Wedstrijd: Monza DS 4 - VOLEVO DS 9, Uitslag: 4-0, Setstanden: 25-23, 25-17, 25-22, 25-19]]></description>
+      <pubDate>Fri, 30 Oct 2026 19:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VOLEVO HS 3 - VollinGo HS 4, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017090</link>
