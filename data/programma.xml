@@ -4,21 +4,13 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 30 Oct 2026 10:39:53 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 17:14:41 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2080199</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2080199</guid>
       <description><![CDATA[Wedstrijd: 3000BM3A  07, Datum: , Speellocatie: De Stolp, Jan Steenlaan 16, 2821VB  Stolwijk]]></description>
-      <pubDate/>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[: VSTS MB 1 - VOLEVO MB 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2080206</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080206</guid>
-      <description><![CDATA[Wedstrijd: 3000BM3B  07, Datum: , Speellocatie: De Sporthoeve, Vromade 1, 2411LG  Bodegraven]]></description>
       <pubDate/>
       <nevobo:status>gepland</nevobo:status>
     </item>
@@ -119,12 +111,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:00: Kalinko L2 4 - VOLEVO L2 1]]></title>
+      <title><![CDATA[Vervallen: 31 okt 10:00: Kalinko L2 4 - VOLEVO L2 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077488</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077488</guid>
-      <description><![CDATA[Wedstrijd: 3000VH22ABCB, Datum: zaterdag 31 oktober, 10:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Vervallen wedstrijd: 3000VH22ABCB, Datum: zaterdag 31 oktober, 10:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
       <pubDate>Sat, 31 Oct 2026 10:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>vervallen</nevobo:status>
     </item>
     <item>
       <title><![CDATA[31 okt 10:00: VOLEVO L3 6 - VOLEVO L3 7]]></title>
@@ -2156,6 +2148,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2031037</guid>
       <description><![CDATA[Wedstrijd: 3000XC2P1 CD, Datum: zaterdag 19 december, 9:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
       <pubDate>Sat, 19 Dec 2026 09:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[19 dec 10:30: VSTS MB 1 - VOLEVO MB 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2080206</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080206</guid>
+      <description><![CDATA[Wedstrijd: 3000BM3B  07, Datum: zaterdag 19 december, 10:30, Speellocatie: De Sporthoeve, Vromade 1, 2411LG  Bodegraven]]></description>
+      <pubDate>Sat, 19 Dec 2026 10:30:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
