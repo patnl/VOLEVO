@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-30T13:19:52+00:00",
+ "gegenereerd": "2026-10-30T22:35:34+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -28,20 +28,6 @@
    "lon": 4.77239,
    "veld": "1",
    "dwf": "https://dwf.nevobo.nl/matches/8117bcff-e79a-4e43-8aaf-576047cf6b5c"
-  },
-  {
-   "tijdstip": null,
-   "thuis": "VSTS MB 1",
-   "uit": "VOLEVO MB 1",
-   "status": "gepland",
-   "hal": "De Sporthoeve",
-   "plaats": "Bodegraven",
-   "adres": "Vromade 1",
-   "postcode": "2411LG",
-   "lat": 52.07717,
-   "lon": 4.75181,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/6853e033-6d4c-4336-ba38-35cc2d402a01"
   },
   {
    "tijdstip": null,
@@ -3338,7 +3324,7 @@
    "tijdstip": "2026-10-30T19:30:00+01:00",
    "thuis": "Monza DS 4",
    "uit": "VOLEVO DS 9",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Wielepet",
    "plaats": "Monster",
    "adres": "Heijdseweg 9",
@@ -3346,13 +3332,13 @@
    "lat": 52.02805,
    "lon": 4.16851,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/ccc753b8-c36d-413d-a4cc-3867c0dd8ab2"
+   "dwf": "https://dwf.nevobo.nl/results/ccc753b8-c36d-413d-a4cc-3867c0dd8ab2/scoresheets/4fb9dd6c-ddf1-4ddb-a9e9-c9ae8c6633b7"
   },
   {
    "tijdstip": "2026-10-30T21:00:00+01:00",
    "thuis": "Kalinko DS 6",
    "uit": "VOLEVO DS 7",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -3360,13 +3346,13 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/8395eb23-15a2-49a7-a55c-afd5feb5a404"
+   "dwf": "https://dwf.nevobo.nl/results/8395eb23-15a2-49a7-a55c-afd5feb5a404/scoresheets/953a5d1f-5228-40ed-bffe-776b8c6d6216"
   },
   {
    "tijdstip": "2026-10-30T21:00:00+01:00",
    "thuis": "Kalinko HS 6",
    "uit": "VOLEVO HS 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -3374,7 +3360,7 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/3666cd54-a621-452d-9ac7-2206e54a1a23"
+   "dwf": "https://dwf.nevobo.nl/results/3666cd54-a621-452d-9ac7-2206e54a1a23/scoresheets/0f71b2a6-b4ea-4e0a-8cdc-c76610155069"
   },
   {
    "tijdstip": "2026-10-31T09:30:00+01:00",
@@ -7041,6 +7027,20 @@
    "lon": 4.54493,
    "veld": "2",
    "dwf": "https://dwf.nevobo.nl/matches/1ed153aa-78f7-4084-a208-0ebe5ae9aa60"
+  },
+  {
+   "tijdstip": "2026-12-19T10:30:00+01:00",
+   "thuis": "VSTS MB 1",
+   "uit": "VOLEVO MB 1",
+   "status": "gepland",
+   "hal": "De Sporthoeve",
+   "plaats": "Bodegraven",
+   "adres": "Vromade 1",
+   "postcode": "2411LG",
+   "lat": 52.07717,
+   "lon": 4.75181,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/6853e033-6d4c-4336-ba38-35cc2d402a01"
   },
   {
    "tijdstip": "2026-12-19T14:15:00+01:00",

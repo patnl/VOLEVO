@@ -1,6 +1,27 @@
 {
-  "bijgewerkt": "2026-10-30T13:19:52+00:00",
+  "bijgewerkt": "2026-10-30T22:35:34+00:00",
   "wijzigingen": [
+    {
+      "id": "verplaatst|None|VSTS MB 1|VOLEVO MB 1|2026-12-19T10:30:00+01:00|VSTS MB 1|VOLEVO MB 1",
+      "gezien": "2026-10-30T22:35:34+00:00",
+      "soort": "verplaatst",
+      "thuis": "VSTS MB 1",
+      "uit": "VOLEVO MB 1",
+      "van": {
+        "tijdstip": null,
+        "hal": "De Sporthoeve",
+        "plaats": "Bodegraven",
+        "status": "gepland"
+      },
+      "naar": {
+        "tijdstip": "2026-12-19T10:30:00+01:00",
+        "hal": "De Sporthoeve",
+        "plaats": "Bodegraven",
+        "status": "gepland"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
     {
       "id": "vervallen|2026-10-31T10:00:00+01:00|Kalinko L2 4|VOLEVO L2 1|2026-10-31T10:00:00+01:00|Kalinko L2 4|VOLEVO L2 1",
       "gezien": "2026-10-30T13:19:52+00:00",
