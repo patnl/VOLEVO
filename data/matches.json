@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-10-31T12:56:26+00:00",
+ "gegenereerd": "2026-10-31T21:51:26+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -3901,7 +3901,7 @@
    "tijdstip": "2026-10-31T12:30:00+01:00",
    "thuis": "Kalinko MC 3",
    "uit": "VOLEVO MC 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -3909,13 +3909,13 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/1d477655-93e8-44e1-8191-a66dae74a9d0"
+   "dwf": "https://dwf.nevobo.nl/results/1d477655-93e8-44e1-8191-a66dae74a9d0/scoresheets/c1feaf8d-2a8d-4ece-9036-129a10c4fd8e"
   },
   {
    "tijdstip": "2026-10-31T12:30:00+01:00",
    "thuis": "VIVES DS 2",
    "uit": "VOLEVO DS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "IJsselhal",
    "plaats": "IJsselstein UT",
    "adres": "Oranje Nassaulaan 50",
@@ -3923,13 +3923,13 @@
    "lat": 52.02613,
    "lon": 5.04742,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/3940864f-2bbd-469d-ab03-289d2c39d860"
+   "dwf": "https://dwf.nevobo.nl/results/3940864f-2bbd-469d-ab03-289d2c39d860/scoresheets/96c0ef1a-5aab-40a0-86e0-fb5a755625cf"
   },
   {
    "tijdstip": "2026-10-31T12:30:00+01:00",
    "thuis": "VOLEVO DS 4",
    "uit": "Zovoc DS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3937,13 +3937,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/c44e5e40-4acd-4a09-bdd8-296adb2f074f"
+   "dwf": "https://dwf.nevobo.nl/results/c44e5e40-4acd-4a09-bdd8-296adb2f074f/scoresheets/d6af7104-a456-4e6b-b633-9db369c34ac9"
   },
   {
    "tijdstip": "2026-10-31T12:30:00+01:00",
    "thuis": "VOLEVO JA 2",
    "uit": "Leython DC JA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3951,13 +3951,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/51184559-a2db-43c3-a1c0-ef1a873d2c95"
+   "dwf": "https://dwf.nevobo.nl/results/51184559-a2db-43c3-a1c0-ef1a873d2c95/scoresheets/628f3b92-c442-410f-8f60-1ed7b4dd56d3"
   },
   {
    "tijdstip": "2026-10-31T12:30:00+01:00",
    "thuis": "VOLEVO MA 2",
    "uit": "Zovoc MA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3965,13 +3965,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/ae4cb367-8161-43b0-9c9b-cdd74f22d214"
+   "dwf": "https://dwf.nevobo.nl/results/ae4cb367-8161-43b0-9c9b-cdd74f22d214/scoresheets/dced047c-ed7d-4619-ab9e-23705ba2e73d"
   },
   {
    "tijdstip": "2026-10-31T12:30:00+01:00",
    "thuis": "VOLEVO MB 2",
    "uit": "Gemini-Kangeroes MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3979,13 +3979,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/906e5709-ab82-4f33-bbdd-7d7508e7cc07"
+   "dwf": "https://dwf.nevobo.nl/results/906e5709-ab82-4f33-bbdd-7d7508e7cc07/scoresheets/9d52de33-b7e6-4a3e-9c11-66b3a25a8a3f"
   },
   {
    "tijdstip": "2026-10-31T12:30:00+01:00",
    "thuis": "VOLEVO MB 4",
    "uit": "Kalinko MB 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -3993,7 +3993,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/8f06dd02-94da-4c1c-a1bc-d13abedd4fb6"
+   "dwf": "https://dwf.nevobo.nl/results/8f06dd02-94da-4c1c-a1bc-d13abedd4fb6/scoresheets/118a48ec-c172-4272-859a-f99f722161b8"
   },
   {
    "tijdstip": "2026-10-31T12:30:00+01:00",
@@ -4066,15 +4066,14 @@
    "tijdstip": "2026-10-31T13:00:00+01:00",
    "thuis": "VOLEVO L4 1",
    "uit": "VOLEVO L4 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/ac0b1c62-b2f5-4766-ae3b-cc1382081319"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-10-31T13:00:00+01:00",
@@ -4106,7 +4105,7 @@
    "tijdstip": "2026-10-31T13:30:00+01:00",
    "thuis": "VVV Delta MC 1",
    "uit": "VOLEVO MC 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Kerkpolder",
    "plaats": "Delft",
    "adres": "Kerkpolderweg 14",
@@ -4114,125 +4113,117 @@
    "lat": 51.98857,
    "lon": 4.32616,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/0001a8e2-f386-4c1d-90b8-da5137c4e7e8"
+   "dwf": "https://dwf.nevobo.nl/results/0001a8e2-f386-4c1d-90b8-da5137c4e7e8/scoresheets/64450633-71b4-4b51-bb40-8d0b5e82fc5f"
   },
   {
    "tijdstip": "2026-10-31T13:40:00+01:00",
    "thuis": "Kratos '08 L4 2",
    "uit": "VOLEVO L4 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/460a549f-5482-413b-b072-ca8f02997051"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-10-31T13:40:00+01:00",
    "thuis": "Sovicos L4 3",
    "uit": "VOLEVO L4 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/d94f7844-7c90-4b13-a67b-912e59942e3a"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-10-31T13:40:00+01:00",
    "thuis": "VOLEVO L4 1",
    "uit": "Zovoc L4 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/fde6d310-958c-4def-9edf-b081612a985b"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-10-31T13:40:00+01:00",
    "thuis": "VOLEVO L4 4",
    "uit": "VELO L4 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/26826586-f65c-4c2a-82b0-79a01bfbbbbb"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-10-31T14:00:00+01:00",
    "thuis": "Kalinko L4 6",
    "uit": "VOLEVO L4 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/a2772545-7d8d-41c6-af91-2bc8bd20f158"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-10-31T14:00:00+01:00",
    "thuis": "VOLEVO L4 2",
    "uit": "Sovicos L4 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/378eebf8-8ecc-4fb2-ac7f-24e61b1c6210"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-10-31T14:00:00+01:00",
    "thuis": "VOLEVO L4 3",
    "uit": "Sovicos L4 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/ae5643c6-2009-420a-baac-62aba860f0b3"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-10-31T14:00:00+01:00",
    "thuis": "VOLEVO L4 4",
    "uit": "DEO L4 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/41b67a59-931c-4ec8-a42f-2e8b3fcdcefe"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-10-31T14:00:00+01:00",
    "thuis": "Zovoc HS 3",
    "uit": "VOLEVO HS 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
@@ -4240,97 +4231,91 @@
    "lat": 52.06786,
    "lon": 4.46189,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/beaee8f7-450f-4234-a971-8900382badb8"
+   "dwf": "https://dwf.nevobo.nl/results/beaee8f7-450f-4234-a971-8900382badb8/scoresheets/cc57aa70-8589-4c99-bd49-a9d6020ceecb"
   },
   {
    "tijdstip": "2026-10-31T14:20:00+01:00",
    "thuis": "Kalinko L5 4",
    "uit": "VOLEVO L5 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/80de8bb3-02dd-4ea8-9d66-1d39c242e56d"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-10-31T14:20:00+01:00",
    "thuis": "Monza L5 2",
    "uit": "VOLEVO L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/fc37c2ad-d91a-4df8-88a6-bf11ad9ac463"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-10-31T14:20:00+01:00",
    "thuis": "VOLEVO L5 10",
    "uit": "VOLEVO L5 8",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/493cf713-06bf-43c1-ad51-2d110d57aa21"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-10-31T14:20:00+01:00",
    "thuis": "VOLEVO L5 3",
    "uit": "VELO L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/5edf451b-b3ef-4bce-b741-e142ed0bdc5f"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-10-31T14:20:00+01:00",
    "thuis": "VOLEVO L5 5",
    "uit": "VOLEVO L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/a5e6b8da-9875-44e5-a1cb-6290bc1632c9"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-10-31T14:20:00+01:00",
    "thuis": "VOLEVO L5 6",
    "uit": "Zovoc L5 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/dd072423-c669-40b3-9221-53267efb0af0"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-10-31T14:30:00+01:00",
    "thuis": "Kalinko MA 3",
    "uit": "VOLEVO MA 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -4338,83 +4323,78 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/17686028-7518-45e0-8185-9a531a4032a6"
+   "dwf": "https://dwf.nevobo.nl/results/17686028-7518-45e0-8185-9a531a4032a6/scoresheets/711ae9ee-e684-4540-91fa-849429c0abf7"
   },
   {
    "tijdstip": "2026-10-31T14:40:00+01:00",
    "thuis": "Monza L5 1",
    "uit": "VOLEVO L5 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/c2271be8-4d90-4616-a7d7-13b6e1c80b38"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-10-31T14:40:00+01:00",
    "thuis": "PQV Westland - Data Giants L5 1",
    "uit": "VOLEVO L5 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/d25cd777-c03b-44a8-9051-b0c024408943"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-10-31T14:40:00+01:00",
    "thuis": "VELO L5 1",
    "uit": "VOLEVO L5 7",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/f7e20354-9661-4f36-9fbb-a3e02ca7025f"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-10-31T14:40:00+01:00",
    "thuis": "VOLEVO L4 2",
    "uit": "Kratos '08 L4 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/05830a63-11f9-4077-ae3a-56b5dfe4059d"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-10-31T14:40:00+01:00",
    "thuis": "VOLEVO L5 4",
    "uit": "VOLEVO L5 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/42ffb3c2-31b4-43a2-b8b8-178cf9168adf"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO HS 1",
    "uit": "Kratos '08 HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4422,55 +4402,52 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/83d39241-3fe7-43ca-af12-1298cca33ae1"
+   "dwf": "https://dwf.nevobo.nl/results/83d39241-3fe7-43ca-af12-1298cca33ae1/scoresheets/00a9b0a0-e9f5-4c83-a080-aede889b2f9e"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO L5 2",
    "uit": "Zovoc L5 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/2c34fcf6-55b7-455a-b197-08c5f8b06abe"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO L5 7",
    "uit": "VOLEVO L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/428556a4-3f48-4984-8bff-3355de938c9a"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO L5 9",
    "uit": "VOLEVO L5 8",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/cfe80088-3d02-4ad8-8a52-70f276482c19"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO MA 3",
    "uit": "Inter Rijswijk MA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4478,13 +4455,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/3ee3cae5-9cf4-49f3-8881-af8b07f51756"
+   "dwf": "https://dwf.nevobo.nl/results/3ee3cae5-9cf4-49f3-8881-af8b07f51756/scoresheets/9de6d223-da98-4595-a62c-51c242db729f"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO MA 6",
    "uit": "Monza MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4492,13 +4469,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/4afc9ae8-4725-476d-8ff4-5f1e63e88b52"
+   "dwf": "https://dwf.nevobo.nl/results/4afc9ae8-4725-476d-8ff4-5f1e63e88b52/scoresheets/03088d43-6c3e-497b-81c1-913d9f5f1120"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO MB 1",
    "uit": "Dinto MB 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4506,13 +4483,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/620161e8-dce8-4779-a584-48d0568e28e1"
+   "dwf": "https://dwf.nevobo.nl/results/620161e8-dce8-4779-a584-48d0568e28e1/scoresheets/3a65d6fd-c760-440c-843f-fb70169da200"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO MB 3",
    "uit": "ZVH MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4520,13 +4497,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/3e87cfdf-e5cb-417b-8a9d-b51e1059c12b"
+   "dwf": "https://dwf.nevobo.nl/results/3e87cfdf-e5cb-417b-8a9d-b51e1059c12b/scoresheets/adea2feb-f76b-47ff-8398-ee8be8473741"
   },
   {
    "tijdstip": "2026-10-31T15:00:00+01:00",
    "thuis": "VOLEVO MC 2",
    "uit": "Zovoc JC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4534,223 +4511,208 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/38a2b030-36cd-428a-a627-be01a7865eef"
+   "dwf": "https://dwf.nevobo.nl/results/38a2b030-36cd-428a-a627-be01a7865eef/scoresheets/c49b44b4-6110-46c1-9cb3-accce92a62e0"
   },
   {
    "tijdstip": "2026-10-31T15:20:00+01:00",
    "thuis": "VOLEVO L5 1",
    "uit": "VOLEVO L5 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/bcb10c46-61ff-42e5-9f8a-03f50e6420a9"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-10-31T15:20:00+01:00",
    "thuis": "VOLEVO L5 10",
    "uit": "Inter Rijswijk L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/6a34aacb-88ad-4b07-8aa9-2922c78787f6"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-10-31T15:20:00+01:00",
    "thuis": "VOLEVO L5 4",
    "uit": "VELO L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/27ba1c61-c72a-4057-8645-8d5661d9ea5c"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-10-31T15:20:00+01:00",
    "thuis": "VOLEVO L5 5",
    "uit": "Kalinko L5 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/96518c22-c8be-4fb8-b0f0-5ff02004c400"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-10-31T15:20:00+01:00",
    "thuis": "VOLEVO L5 6",
    "uit": "Inter Rijswijk L5 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/66d603eb-ccf5-47ae-bb5f-33752975d965"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-10-31T15:20:00+01:00",
    "thuis": "VOLEVO L5 8",
    "uit": "Kalinko L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/daadff11-13c1-4cdc-b32b-8f8463e6c49d"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-10-31T15:40:00+01:00",
    "thuis": "PQV Westland - Data Giants L5 1",
    "uit": "VOLEVO L5 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/45875fc6-f633-48f4-bfbc-5d5454c8dd31"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-10-31T15:40:00+01:00",
    "thuis": "VOLEVO L5 7",
    "uit": "VOLEVO L5 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/3dca2827-216a-47c9-ba15-02191cba998e"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-10-31T15:40:00+01:00",
    "thuis": "VOLEVO L5 9",
    "uit": "VOLEVO L5 10",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/af8739af-4bdd-4596-a5fd-eddd0c1c98a2"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-10-31T15:40:00+01:00",
    "thuis": "Zovoc L5 5",
    "uit": "VOLEVO L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/71140ee6-4940-416b-bab9-6395b834a383"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-10-31T16:00:00+01:00",
    "thuis": "Kalinko L5 1",
    "uit": "VOLEVO L5 9",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/3702c1d0-5e0b-4c8f-b421-eade21b73493"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-10-31T16:00:00+01:00",
    "thuis": "VOLEVO L5 1",
    "uit": "PQV Westland - Data Giants L5 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/95e543d9-23c7-41cb-a812-98f45f0d3bc5"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-10-31T16:00:00+01:00",
    "thuis": "VOLEVO L5 3",
    "uit": "VOLEVO L5 7",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/d898e9c8-7e4f-4ed8-9483-7a5d71c48778"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-10-31T16:00:00+01:00",
    "thuis": "VOLEVO L5 6",
    "uit": "Inter Rijswijk L5 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/7f12616d-5285-4481-a86a-08483dc534de"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-10-31T16:00:00+01:00",
    "thuis": "VOLEVO L5 8",
    "uit": "Kalinko L5 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/7debcdf6-af2b-4b01-855f-e784bbd543e9"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-10-31T16:00:00+01:00",
    "thuis": "Zovoc DS 6",
    "uit": "VOLEVO DS 8",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
@@ -4758,55 +4720,52 @@
    "lat": 52.06786,
    "lon": 4.46189,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/6a2f27cc-bfb1-49e1-a18c-0772654fb6b7"
+   "dwf": "https://dwf.nevobo.nl/results/6a2f27cc-bfb1-49e1-a18c-0772654fb6b7/scoresheets/11836950-fa02-4d4b-955b-af3391833c41"
   },
   {
    "tijdstip": "2026-10-31T16:20:00+01:00",
    "thuis": "Kalinko L5 2",
    "uit": "VOLEVO L5 9",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/592d7de4-30f3-4224-aeee-20423b5dad2d"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-10-31T16:20:00+01:00",
    "thuis": "VOLEVO L5 2",
    "uit": "Kalinko L5 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/005c4ce2-bad8-4813-8324-8a14bbcecee7"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-10-31T16:20:00+01:00",
    "thuis": "Zovoc L5 1",
    "uit": "VOLEVO L5 10",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Tanthof",
    "plaats": "Delft",
    "adres": "Henk van Riessenlaan 5",
    "postcode": "2626AB",
    "lat": 51.97869,
    "lon": 4.36797,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/ae6b532d-1329-4ba4-ba99-2594374ef7b4"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-10-31T17:30:00+01:00",
    "thuis": "VOLEVO DS 1",
    "uit": "VC WIK Groot-Ammers DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4814,13 +4773,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/db778734-79a0-4e1c-bda5-381f1bc6204f"
+   "dwf": "https://dwf.nevobo.nl/results/db778734-79a0-4e1c-bda5-381f1bc6204f/scoresheets/268bc593-6987-41b4-ac93-b374d3fa1d0d"
   },
   {
    "tijdstip": "2026-10-31T17:30:00+01:00",
    "thuis": "VOLEVO HS 2",
    "uit": "Monza HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4828,13 +4787,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/f266ef84-a874-4581-89e1-7ab2f088fa42"
+   "dwf": "https://dwf.nevobo.nl/results/f266ef84-a874-4581-89e1-7ab2f088fa42/scoresheets/bcaff84d-d0ca-477f-96da-f2d9bf17c2fb"
   },
   {
    "tijdstip": "2026-10-31T18:00:00+01:00",
    "thuis": "Zovoc MC 1",
    "uit": "VOLEVO JC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
@@ -4842,7 +4801,7 @@
    "lat": 52.06786,
    "lon": 4.46189,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/6a9196a0-0f8a-43ad-a556-bb01f152afdb"
+   "dwf": "https://dwf.nevobo.nl/results/6a9196a0-0f8a-43ad-a556-bb01f152afdb/scoresheets/4d9aac5d-dd5b-438f-8a0d-7b8922958794"
   },
   {
    "tijdstip": "2026-11-04T19:15:00+01:00",
