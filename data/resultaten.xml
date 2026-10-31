@@ -4,8 +4,32 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 30 Oct 2026 21:32:27 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 01:26:08 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Vervallen: 31 okt 10:00: Kalinko L2 4 - VOLEVO L2 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2077488</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2077488</guid>
+      <description><![CDATA[Vervallen wedstrijd: 3000VH22ABCB, Datum: zaterdag 31 oktober, 10:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 +0100</pubDate>
+      <nevobo:status>vervallen</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko HS 6 - VOLEVO HS 4, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2018124</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2018124</guid>
+      <description><![CDATA[Wedstrijd: Kalinko HS 6 - VOLEVO HS 4, Uitslag: 1-3, Setstanden: 21-25, 23-25, 25-27, 25-21]]></description>
+      <pubDate>Fri, 30 Oct 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko DS 6 - VOLEVO DS 7, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041509</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041509</guid>
+      <description><![CDATA[Wedstrijd: Kalinko DS 6 - VOLEVO DS 7, Uitslag: 3-1, Setstanden: 25-18, 17-25, 25-14, 25-19]]></description>
+      <pubDate>Fri, 30 Oct 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Monza DS 4 - VOLEVO DS 9, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041558</link>
