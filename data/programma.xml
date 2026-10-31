@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 31 Oct 2026 07:07:52 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 13:29:21 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -31,60 +31,60 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 9:30: VOLEVO L2 1 - VELO L2 1]]></title>
+      <title><![CDATA[VOLEVO L2 1 - VELO L2 1, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077476</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077476</guid>
-      <description><![CDATA[Wedstrijd: 3000VH22ABBA, Datum: zaterdag 31 oktober, 9:30, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L2 1 - VELO L2 1, Uitslag: 2-0, Setstanden: 11-6]]></description>
       <pubDate>Sat, 31 Oct 2026 09:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 9:30: VOLEVO L3 1 - Zovoc L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 1 - Zovoc L3 1, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077499</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077499</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABCH, Datum: zaterdag 31 oktober, 9:30, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 1 - Zovoc L3 1, Uitslag: 2-0, Setstanden: 26-12]]></description>
       <pubDate>Sat, 31 Oct 2026 09:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 9:40: VELO L2 2 - VOLEVO L2 1]]></title>
+      <title><![CDATA[VELO L2 2 - VOLEVO L2 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077482</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077482</guid>
-      <description><![CDATA[Wedstrijd: 3000VH22ABFB, Datum: zaterdag 31 oktober, 9:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VELO L2 2 - VOLEVO L2 1, Uitslag: 0-2, Setstanden: 6-8]]></description>
       <pubDate>Sat, 31 Oct 2026 09:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 9:40: Kalinko L3 1 - VOLEVO L3 1]]></title>
+      <title><![CDATA[Kalinko L3 1 - VOLEVO L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077492</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077492</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABAC, Datum: zaterdag 31 oktober, 9:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko L3 1 - VOLEVO L3 1, Uitslag: 0-2, Setstanden: 15-16]]></description>
       <pubDate>Sat, 31 Oct 2026 09:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 9:40: VOLEVO L3 7 - VELO L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 7 - VELO L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077904</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077904</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABGD, Datum: zaterdag 31 oktober, 9:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - VELO L3 1, Uitslag: 0-2, Setstanden: 9-28]]></description>
       <pubDate>Sat, 31 Oct 2026 09:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 9:50: VOLEVO L3 2 - Inter Rijswijk L3 3]]></title>
+      <title><![CDATA[VOLEVO L3 2 - Inter Rijswijk L3 3, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077501</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077501</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABFG, Datum: zaterdag 31 oktober, 9:50, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - Inter Rijswijk L3 3, Uitslag: 2-0, Setstanden: 29-16]]></description>
       <pubDate>Sat, 31 Oct 2026 09:50:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 9:50: Zovoc L3 3 - VOLEVO L3 6]]></title>
+      <title><![CDATA[Zovoc L3 3 - VOLEVO L3 6, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077905</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077905</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABEF, Datum: zaterdag 31 oktober, 9:50, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc L3 3 - VOLEVO L3 6, Uitslag: 0-2, Setstanden: 15-18]]></description>
       <pubDate>Sat, 31 Oct 2026 09:50:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[Vervallen: 31 okt 10:00: Kalinko L2 4 - VOLEVO L2 1]]></title>
@@ -95,268 +95,268 @@
       <nevobo:status>vervallen</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:00: VOLEVO L3 6 - VOLEVO L3 7]]></title>
+      <title><![CDATA[VOLEVO L3 6 - VOLEVO L3 7, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077899</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077899</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABFG, Datum: zaterdag 31 oktober, 10:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 6 - VOLEVO L3 7, Uitslag: 2-0, Setstanden: 18-9]]></description>
       <pubDate>Sat, 31 Oct 2026 10:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:10: VOLEVO L3 2 - Kalinko L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 2 - Kalinko L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077495</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077495</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABFA, Datum: zaterdag 31 oktober, 10:10, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - Kalinko L3 1, Uitslag: 0-2, Setstanden: 12-15]]></description>
       <pubDate>Sat, 31 Oct 2026 10:10:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:10: VOLEVO L3 7 - VELO L3 2]]></title>
+      <title><![CDATA[VOLEVO L3 7 - VELO L3 2, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077892</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077892</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABGB, Datum: zaterdag 31 oktober, 10:10, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - VELO L3 2, Uitslag: 0-2, Setstanden: 11-13]]></description>
       <pubDate>Sat, 31 Oct 2026 10:10:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:20: VOLEVO L2 1 - Zovoc L2 3]]></title>
+      <title><![CDATA[VOLEVO L2 1 - Zovoc L2 3, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077489</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077489</guid>
-      <description><![CDATA[Wedstrijd: 3000VH22ABBD, Datum: zaterdag 31 oktober, 10:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L2 1 - Zovoc L2 3, Uitslag: 0-2, Setstanden: 5-6]]></description>
       <pubDate>Sat, 31 Oct 2026 10:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:20: VOLEVO L3 1 - Netwerk L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 1 - Netwerk L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077496</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077496</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABCD, Datum: zaterdag 31 oktober, 10:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 1 - Netwerk L3 1, Uitslag: 0-2, Setstanden: 14-22]]></description>
       <pubDate>Sat, 31 Oct 2026 10:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:20: VOLEVO L3 2 - Zovoc L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 2 - Zovoc L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077504</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077504</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABFH, Datum: zaterdag 31 oktober, 10:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - Zovoc L3 1, Uitslag: 0-2, Setstanden: 18-22]]></description>
       <pubDate>Sat, 31 Oct 2026 10:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:20: VOLEVO L3 6 - Monza L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 6 - Monza L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077893</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077893</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABFA, Datum: zaterdag 31 oktober, 10:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 6 - Monza L3 1, Uitslag: 0-2, Setstanden: 13-28]]></description>
       <pubDate>Sat, 31 Oct 2026 10:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:30: VOLEVO L3 7 - Zovoc L3 3]]></title>
+      <title><![CDATA[VOLEVO L3 7 - Zovoc L3 3, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077907</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077907</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABGE, Datum: zaterdag 31 oktober, 10:30, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - Zovoc L3 3, Uitslag: 0-2, Setstanden: 9-22]]></description>
       <pubDate>Sat, 31 Oct 2026 10:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:40: VOLEVO L2 1 - Zovoc L2 4]]></title>
+      <title><![CDATA[VOLEVO L2 1 - Zovoc L2 4, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077485</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077485</guid>
-      <description><![CDATA[Wedstrijd: 3000VH22ABBE, Datum: zaterdag 31 oktober, 10:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L2 1 - Zovoc L2 4, Uitslag: 2-0, Setstanden: 19-2]]></description>
       <pubDate>Sat, 31 Oct 2026 10:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:40: Netwerk L3 3 - VOLEVO L3 1]]></title>
+      <title><![CDATA[Netwerk L3 3 - VOLEVO L3 1, Uitslag: 1-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077498</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077498</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABEC, Datum: zaterdag 31 oktober, 10:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Netwerk L3 3 - VOLEVO L3 1, Uitslag: 1-1, Setstanden: 3-3]]></description>
       <pubDate>Sat, 31 Oct 2026 10:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:40: VOLEVO L3 2 - Netwerk L3 2]]></title>
+      <title><![CDATA[VOLEVO L3 2 - Netwerk L3 2, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077505</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077505</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABFB, Datum: zaterdag 31 oktober, 10:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - Netwerk L3 2, Uitslag: 0-2, Setstanden: 16-22]]></description>
       <pubDate>Sat, 31 Oct 2026 10:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:40: VOLEVO L3 4 - Inter Rijswijk L3 2]]></title>
+      <title><![CDATA[VOLEVO L3 4 - Inter Rijswijk L3 2, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077517</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077517</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBEB, Datum: zaterdag 31 oktober, 10:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 4 - Inter Rijswijk L3 2, Uitslag: 0-2, Setstanden: 20-21]]></description>
       <pubDate>Sat, 31 Oct 2026 10:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:40: VOLEVO L3 3 - Inter Rijswijk L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 3 - Inter Rijswijk L3 1, Uitslag: 1-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077522</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077522</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBFA, Datum: zaterdag 31 oktober, 10:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 3 - Inter Rijswijk L3 1, Uitslag: 1-1, Setstanden: 23-23]]></description>
       <pubDate>Sat, 31 Oct 2026 10:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:40: VOLEVO L3 6 - DEO L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 6 - DEO L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077902</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077902</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABFH, Datum: zaterdag 31 oktober, 10:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 6 - DEO L3 1, Uitslag: 0-2, Setstanden: 13-28]]></description>
       <pubDate>Sat, 31 Oct 2026 10:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:50: Netwerk L3 2 - VOLEVO L3 1]]></title>
+      <title><![CDATA[Netwerk L3 2 - VOLEVO L3 1, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077508</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077508</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABBC, Datum: zaterdag 31 oktober, 10:50, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Netwerk L3 2 - VOLEVO L3 1, Uitslag: 2-0, Setstanden: 20-15]]></description>
       <pubDate>Sat, 31 Oct 2026 10:50:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:50: VOLEVO L3 5 - Kalinko L3 2]]></title>
+      <title><![CDATA[VOLEVO L3 5 - Kalinko L3 2, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077516</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077516</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBGC, Datum: zaterdag 31 oktober, 10:50, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - Kalinko L3 2, Uitslag: 0-2, Setstanden: 17-26]]></description>
       <pubDate>Sat, 31 Oct 2026 10:50:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 10:50: VOLEVO L3 7 - DEO L3 1]]></title>
+      <title><![CDATA[VOLEVO L3 7 - DEO L3 1, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077895</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077895</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABGH, Datum: zaterdag 31 oktober, 10:50, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - DEO L3 1, Uitslag: 0-2, Setstanden: 7-20]]></description>
       <pubDate>Sat, 31 Oct 2026 10:50:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:00: Leython DC MA 1 - VOLEVO MA 4]]></title>
+      <title><![CDATA[Leython DC MA 1 - VOLEVO MA 4, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026254</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026254</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1J1 BA, Datum: zaterdag 31 oktober, 11:00, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <description><![CDATA[Wedstrijd: Leython DC MA 1 - VOLEVO MA 4, Uitslag: 1-3, Setstanden: 24-26, 25-21, 24-26, 24-26]]></description>
       <pubDate>Sat, 31 Oct 2026 11:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:00: Netwerk L3 3 - VOLEVO L3 2]]></title>
+      <title><![CDATA[Netwerk L3 3 - VOLEVO L3 2, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077507</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077507</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31ABEF, Datum: zaterdag 31 oktober, 11:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Netwerk L3 3 - VOLEVO L3 2, Uitslag: 2-0, Setstanden: 25-16]]></description>
       <pubDate>Sat, 31 Oct 2026 11:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:00: VOLEVO L3 3 - VOLEVO L3 5]]></title>
+      <title><![CDATA[VOLEVO L3 3 - VOLEVO L3 5, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077515</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077515</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBFG, Datum: zaterdag 31 oktober, 11:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 3 - VOLEVO L3 5, Uitslag: 2-0, Setstanden: 24-14]]></description>
       <pubDate>Sat, 31 Oct 2026 11:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:00: VOLEVO L3 6 - VELO L3 2]]></title>
+      <title><![CDATA[VOLEVO L3 6 - VELO L3 2, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077903</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077903</guid>
-      <description><![CDATA[Wedstrijd: 3000VH32ABFB, Datum: zaterdag 31 oktober, 11:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 6 - VELO L3 2, Uitslag: 2-0, Setstanden: 10-0]]></description>
       <pubDate>Sat, 31 Oct 2026 11:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:10: Inter Rijswijk L3 2 - VOLEVO L3 3]]></title>
+      <title><![CDATA[Inter Rijswijk L3 2 - VOLEVO L3 3, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077513</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077513</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBBF, Datum: zaterdag 31 oktober, 11:10, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L3 2 - VOLEVO L3 3, Uitslag: 0-2, Setstanden: 17-22]]></description>
       <pubDate>Sat, 31 Oct 2026 11:10:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:10: Kalinko L3 2 - VOLEVO L3 4]]></title>
+      <title><![CDATA[Kalinko L3 2 - VOLEVO L3 4, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077520</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077520</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBCE, Datum: zaterdag 31 oktober, 11:10, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko L3 2 - VOLEVO L3 4, Uitslag: 0-2, Setstanden: 18-26]]></description>
       <pubDate>Sat, 31 Oct 2026 11:10:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:20: VOLEVO L3 3 - VOLEVO L3 4]]></title>
+      <title><![CDATA[VOLEVO L3 3 - VOLEVO L3 4, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077524</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077524</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBFE, Datum: zaterdag 31 oktober, 11:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 3 - VOLEVO L3 4, Uitslag: 2-0, Setstanden: 34-14]]></description>
       <pubDate>Sat, 31 Oct 2026 11:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:20: Zovoc L4 8 - VOLEVO L4 3]]></title>
+      <title><![CDATA[Zovoc L4 8 - VOLEVO L4 3, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077584</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077584</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42BBFE, Datum: zaterdag 31 oktober, 11:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc L4 8 - VOLEVO L4 3, Uitslag: 0-4, Setstanden: 7-19, 13-16]]></description>
       <pubDate>Sat, 31 Oct 2026 11:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:30: VOLEVO L3 5 - Netwerk L3 4]]></title>
+      <title><![CDATA[VOLEVO L3 5 - Netwerk L3 4, Uitslag: 0-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077512</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077512</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBGD, Datum: zaterdag 31 oktober, 11:30, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - Netwerk L3 4, Uitslag: 0-2, Setstanden: 13-19]]></description>
       <pubDate>Sat, 31 Oct 2026 11:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:40: VOLEVO L3 5 - VOLEVO L3 4]]></title>
+      <title><![CDATA[VOLEVO L3 5 - VOLEVO L3 4, Uitslag: 1-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077523</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077523</guid>
-      <description><![CDATA[Wedstrijd: 3000VH31BBGE, Datum: zaterdag 31 oktober, 11:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - VOLEVO L3 4, Uitslag: 1-1, Setstanden: 18-18]]></description>
       <pubDate>Sat, 31 Oct 2026 11:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 11:40: VOLEVO L4 3 - VOLEVO L4 5]]></title>
+      <title><![CDATA[VOLEVO L4 3 - VOLEVO L4 5, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077585</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077585</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42BBEI, Datum: zaterdag 31 oktober, 11:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 3 - VOLEVO L4 5, Uitslag: 4-0, Setstanden: 18-4, 18-14]]></description>
       <pubDate>Sat, 31 Oct 2026 11:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:00: Punch HS 12 - VOLEVO HS 6]]></title>
+      <title><![CDATA[Punch HS 12 - VOLEVO HS 6, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019638</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2019638</guid>
-      <description><![CDATA[Wedstrijd: 3000H4B   ID, Datum: zaterdag 31 oktober, 12:00, Speellocatie: TU-Sportcentrum, Mekelweg 8, 2628CD  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Punch HS 12 - VOLEVO HS 6, Uitslag: 1-3, Setstanden: 10-25, 14-25, 25-22, 16-25]]></description>
       <pubDate>Sat, 31 Oct 2026 12:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:00: Monza L4 1 - VOLEVO L4 4]]></title>
+      <title><![CDATA[Monza L4 1 - VOLEVO L4 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077591</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077591</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42BBBD, Datum: zaterdag 31 oktober, 12:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Monza L4 1 - VOLEVO L4 4, Uitslag: 4-0, Setstanden: 12-7, 21-7]]></description>
       <pubDate>Sat, 31 Oct 2026 12:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:00: VOLEVO L4 6 - Zovoc L4 9]]></title>
+      <title><![CDATA[VOLEVO L4 6 - Zovoc L4 9, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077595</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077595</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42CBBA, Datum: zaterdag 31 oktober, 12:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 6 - Zovoc L4 9, Uitslag: 2-2, Setstanden: 12-10, 10-19]]></description>
       <pubDate>Sat, 31 Oct 2026 12:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:20: VOLEVO L4 4 - VOLEVO L4 5]]></title>
+      <title><![CDATA[VOLEVO L4 4 - VOLEVO L4 5, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077592</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077592</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42BBDI, Datum: zaterdag 31 oktober, 12:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 4 - VOLEVO L4 5, Uitslag: 2-2, Setstanden: 14-12, 3-26]]></description>
       <pubDate>Sat, 31 Oct 2026 12:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:20: VOLEVO L4 3 - DEO L4 3]]></title>
+      <title><![CDATA[VOLEVO L4 3 - DEO L4 3, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077587</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077587</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42BBEG, Datum: zaterdag 31 oktober, 12:20, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 3 - DEO L4 3, Uitslag: 0-4, Setstanden: 10-13, 13-16]]></description>
       <pubDate>Sat, 31 Oct 2026 12:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[31 okt 12:30: VIVES DS 2 - VOLEVO DS 2]]></title>
@@ -431,28 +431,28 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:40: VOLEVO L4 1 - DEO L4 2]]></title>
+      <title><![CDATA[VOLEVO L4 1 - DEO L4 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077944</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077944</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42ABDG, Datum: zaterdag 31 oktober, 12:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 1 - DEO L4 2, Uitslag: 0-4, Setstanden: 7-13, 12-13]]></description>
       <pubDate>Sat, 31 Oct 2026 12:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:40: DEO L4 3 - VOLEVO L4 5]]></title>
+      <title><![CDATA[DEO L4 3 - VOLEVO L4 5, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077588</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077588</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42BBGI, Datum: zaterdag 31 oktober, 12:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: DEO L4 3 - VOLEVO L4 5, Uitslag: 4-0, Setstanden: 19-3, 19-3]]></description>
       <pubDate>Sat, 31 Oct 2026 12:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 12:40: VOLEVO L4 6 - Zovoc L4 10]]></title>
+      <title><![CDATA[VOLEVO L4 6 - Zovoc L4 10, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077597</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077597</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42CBBF, Datum: zaterdag 31 oktober, 12:40, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 6 - Zovoc L4 10, Uitslag: 4-0, Setstanden: 20-6, 14-10]]></description>
       <pubDate>Sat, 31 Oct 2026 12:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[31 okt 13:00: VOLEVO L4 1 - VOLEVO L4 2]]></title>
@@ -463,12 +463,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[31 okt 13:00: Zovoc L4 7 - VOLEVO L4 6]]></title>
+      <title><![CDATA[Zovoc L4 7 - VOLEVO L4 6, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2077604</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2077604</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42CBCB, Datum: zaterdag 31 oktober, 13:00, Speellocatie: Tanthof, Henk van Riessenlaan 5, 2626AB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc L4 7 - VOLEVO L4 6, Uitslag: 0-4, Setstanden: 13-14, 12-16]]></description>
       <pubDate>Sat, 31 Oct 2026 13:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[31 okt 13:20: Monza L4 1 - VOLEVO L4 5]]></title>
