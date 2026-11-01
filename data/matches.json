@@ -1,20 +1,6 @@
 {
- "gegenereerd": "2026-10-31T21:51:26+00:00",
+ "gegenereerd": "2026-11-01T18:05:08+00:00",
  "wedstrijden": [
-  {
-   "tijdstip": null,
-   "thuis": "Ancora RVV MC 1",
-   "uit": "VOLEVO MC 1",
-   "status": "gepland",
-   "hal": "Boorsmazaal",
-   "plaats": "Katwijk ZH",
-   "adres": "Zwanenburgstraat 61",
-   "postcode": "2225DZ",
-   "lat": 52.20326,
-   "lon": 4.40189,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/d302707c-1dbf-47ea-a80d-99e2176bde34"
-  },
   {
    "tijdstip": null,
    "thuis": "Dosko MA 1",
@@ -6901,6 +6887,20 @@
    "lon": 4.39517,
    "veld": "7",
    "dwf": "https://dwf.nevobo.nl/matches/d0a35b38-4983-4b01-a132-2e1d04955ebc"
+  },
+  {
+   "tijdstip": "2026-12-18T19:00:00+01:00",
+   "thuis": "Ancora RVV MC 1",
+   "uit": "VOLEVO MC 1",
+   "status": "gepland",
+   "hal": "Boorsmazaal",
+   "plaats": "Katwijk ZH",
+   "adres": "Zwanenburgstraat 61",
+   "postcode": "2225DZ",
+   "lat": 52.20326,
+   "lon": 4.40189,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/d302707c-1dbf-47ea-a80d-99e2176bde34"
   },
   {
    "tijdstip": "2026-12-18T19:30:00+01:00",
