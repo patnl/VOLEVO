@@ -1,5 +1,5 @@
 {
-  "opgehaald": "2026-11-04T15:39:36.452145+00:00",
+  "opgehaald": "2026-11-04T21:30:09.587403+00:00",
   "teams": {
     "VOLEVO DS 1": {
       "stand": "2e in Dames Tweede divisie E",
@@ -167,7 +167,7 @@
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-b/2"
     },
     "VOLEVO MC 1": {
-      "stand": "2e in C Jeugd Hoofdklasse B Eerste helft",
+      "stand": "1e in C Jeugd Hoofdklasse B Eerste helft",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/1"
     },
@@ -330,6 +330,16 @@
       "stand": null,
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/7"
+    },
+    "VOLEVO L2 2": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-2/2"
+    },
+    "VOLEVO L3 8": {
+      "stand": null,
+      "seizoen": "2026-2027",
+      "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/volley-stars-level-3/8"
     }
   }
 }
