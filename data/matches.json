@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-01T18:05:08+00:00",
+ "gegenereerd": "2026-11-05T07:11:45+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -4793,7 +4793,7 @@
    "tijdstip": "2026-11-04T19:15:00+01:00",
    "thuis": "Smash'66 MC 1",
    "uit": "VOLEVO MC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Blokweer",
    "plaats": "Alblasserdam",
    "adres": "Sportlaan 3",
@@ -4801,7 +4801,7 @@
    "lat": 51.86864,
    "lon": 4.66353,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/5e219677-400f-4bea-ae23-f6d358534258"
+   "dwf": "https://dwf.nevobo.nl/results/5e219677-400f-4bea-ae23-f6d358534258/scoresheets/d43e012b-3a41-4310-a96c-950ed15fc709"
   },
   {
    "tijdstip": "2026-11-05T21:00:00+01:00",
