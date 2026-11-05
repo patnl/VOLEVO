@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Wed, 04 Nov 2026 22:30:05 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 02:44:00 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -21,14 +21,6 @@
       <description><![CDATA[Wedstrijd: 3000BX3C  06, Datum: , Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
       <pubDate/>
       <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Smash'66 MC 1 - VOLEVO MC 1, Uitslag: 3-2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2025650</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025650</guid>
-      <description><![CDATA[Wedstrijd: Smash'66 MC 1 - VOLEVO MC 1, Uitslag: 3-2, Setstanden: 21-25, 25-19, 25-15, 22-25, 15-12]]></description>
-      <pubDate>Wed, 04 Nov 2026 19:15:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[5 nov 21:00: VOLEVO DS 3 - VollinGo DS 2]]></title>
