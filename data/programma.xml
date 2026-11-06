@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 06 Nov 2026 18:38:39 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 23:24:07 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -23,28 +23,28 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[6 nov 19:30: Yaarana DS 1 - VOLEVO DS 8]]></title>
+      <title><![CDATA[Yaarana DS 1 - VOLEVO DS 8, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2041568</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041568</guid>
-      <description><![CDATA[Wedstrijd: 3000D3M   CD, Datum: vrijdag 6 november, 19:30, Speellocatie: Sporthal Roemer Visscherstraat, Roemer Visscherstraat 108, 2533VG  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Yaarana DS 1 - VOLEVO DS 8, Uitslag: 3-1, Setstanden: 25-14, 25-8, 21-25, 25-8]]></description>
       <pubDate>Fri, 06 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[6 nov 19:30: SKC HS 7 - VOLEVO HS 6]]></title>
+      <title><![CDATA[SKC HS 7 - VOLEVO HS 6, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019429</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2019429</guid>
-      <description><![CDATA[Wedstrijd: 3000H4B   CD, Datum: vrijdag 6 november, 19:30, Speellocatie: Universitair SC, Goliuspad 22, 2333BH  Leiden]]></description>
+      <description><![CDATA[Wedstrijd: SKC HS 7 - VOLEVO HS 6, Uitslag: 1-3, Setstanden: 22-25, 23-25, 22-25, 25-19]]></description>
       <pubDate>Fri, 06 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[6 nov 21:00: NOVO HS 2 - VOLEVO HS 5]]></title>
+      <title><![CDATA[NOVO HS 2 - VOLEVO HS 5, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017754</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2017754</guid>
-      <description><![CDATA[Wedstrijd: 3000H2F   CD, Datum: vrijdag 6 november, 21:00, Speellocatie: Sportpark Duinwetering, Duinwetering 105, 2203HM  Noordwijk ZH]]></description>
+      <description><![CDATA[Wedstrijd: NOVO HS 2 - VOLEVO HS 5, Uitslag: 4-0, Setstanden: 25-16, 25-11, 25-13, 25-13]]></description>
       <pubDate>Fri, 06 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[7 nov 10:45: Ancora RVV JC 1 - VOLEVO MC 2]]></title>

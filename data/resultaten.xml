@@ -4,8 +4,32 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 06 Nov 2026 18:36:42 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 23:12:03 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[NOVO HS 2 - VOLEVO HS 5, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2017754</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017754</guid>
+      <description><![CDATA[Wedstrijd: NOVO HS 2 - VOLEVO HS 5, Uitslag: 4-0, Setstanden: 25-16, 25-11, 25-13, 25-13]]></description>
+      <pubDate>Fri, 06 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[SKC HS 7 - VOLEVO HS 6, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2019429</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2019429</guid>
+      <description><![CDATA[Wedstrijd: SKC HS 7 - VOLEVO HS 6, Uitslag: 1-3, Setstanden: 22-25, 23-25, 22-25, 25-19]]></description>
+      <pubDate>Fri, 06 Nov 2026 19:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Yaarana DS 1 - VOLEVO DS 8, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041568</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041568</guid>
+      <description><![CDATA[Wedstrijd: Yaarana DS 1 - VOLEVO DS 8, Uitslag: 3-1, Setstanden: 25-14, 25-8, 21-25, 25-8]]></description>
+      <pubDate>Fri, 06 Nov 2026 19:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VOLEVO HS 3 - Inter Rijswijk HS 4, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017095</link>
