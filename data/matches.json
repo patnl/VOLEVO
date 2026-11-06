@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-05T07:11:45+00:00",
+ "gegenereerd": "2026-11-06T07:10:23+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -4807,7 +4807,7 @@
    "tijdstip": "2026-11-05T21:00:00+01:00",
    "thuis": "VOLEVO DS 3",
    "uit": "VollinGo DS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4815,7 +4815,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/6fd06f49-7285-4709-ba5c-4a30ce801203"
+   "dwf": "https://dwf.nevobo.nl/results/6fd06f49-7285-4709-ba5c-4a30ce801203/scoresheets/2d286cb9-bdb1-4561-b92e-8bacd62e24c5"
   },
   {
    "tijdstip": "2026-11-05T21:00:00+01:00",
