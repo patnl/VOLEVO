@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-06T07:10:23+00:00",
+ "gegenereerd": "2026-11-06T19:39:43+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -4821,7 +4821,7 @@
    "tijdstip": "2026-11-05T21:00:00+01:00",
    "thuis": "VOLEVO HS 3",
    "uit": "Inter Rijswijk HS 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4829,7 +4829,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/9c9522c0-dc30-46b5-92a2-35682cfdd51c"
+   "dwf": "https://dwf.nevobo.nl/results/9c9522c0-dc30-46b5-92a2-35682cfdd51c/scoresheets/f32d5b8e-81fa-430d-a499-87815220563b"
   },
   {
    "tijdstip": "2026-11-06T19:30:00+01:00",
