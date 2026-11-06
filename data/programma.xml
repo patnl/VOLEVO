@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 05 Nov 2026 23:33:57 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 03:50:20 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -20,22 +20,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2080212</guid>
       <description><![CDATA[Wedstrijd: 3000BX3C  06, Datum: , Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
       <pubDate/>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[VOLEVO DS 3 - VollinGo DS 2, Uitslag: 3-2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2009719</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009719</guid>
-      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - VollinGo DS 2, Uitslag: 3-2, Setstanden: 25-20, 20-25, 25-7, 23-25, 16-14]]></description>
-      <pubDate>Thu, 05 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[5 nov 21:00: VOLEVO HS 3 - Inter Rijswijk HS 4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2017095</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017095</guid>
-      <description><![CDATA[Wedstrijd: 3000H1G   HJ, Datum: donderdag 5 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 05 Nov 2026 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
