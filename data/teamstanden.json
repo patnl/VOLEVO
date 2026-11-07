@@ -1,13 +1,13 @@
 {
-  "opgehaald": "2026-11-07T08:48:59.675118+00:00",
+  "opgehaald": "2026-11-07T15:27:36.936214+00:00",
   "teams": {
     "VOLEVO DS 1": {
-      "stand": "2e in Dames Tweede divisie E",
+      "stand": "3e in Dames Tweede divisie E",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/1"
     },
     "VOLEVO DS 2": {
-      "stand": "5e in Dames Derde Divisie B",
+      "stand": "6e in Dames Derde Divisie B",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/dames/2"
     },
@@ -162,17 +162,17 @@
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-b/1"
     },
     "VOLEVO JB 2": {
-      "stand": "3e in Jongens B 2e/3e Klasse G Eerste helft",
+      "stand": "2e in Jongens B 2e/3e Klasse G Eerste helft",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-b/2"
     },
     "VOLEVO MC 1": {
-      "stand": "1e in C Jeugd Hoofdklasse B Eerste helft",
+      "stand": "2e in C Jeugd Hoofdklasse B Eerste helft",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/1"
     },
     "VOLEVO MC 2": {
-      "stand": "3e in C Jeugd 1e Klasse I Eerste helft",
+      "stand": "4e in C Jeugd 1e Klasse I Eerste helft",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/2"
     },
@@ -187,7 +187,7 @@
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/4"
     },
     "VOLEVO MC 5": {
-      "stand": "5e in C Jeugd 2e Klasse P Eerste helft",
+      "stand": "6e in C Jeugd 2e Klasse P Eerste helft",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/5"
     },
@@ -197,7 +197,7 @@
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/meiden-c/6"
     },
     "VOLEVO JC 1": {
-      "stand": "4e in C Jeugd 1e Klasse H Eerste helft",
+      "stand": "3e in C Jeugd 1e Klasse H Eerste helft",
       "seizoen": "2026-2027",
       "bron": "https://www.volleybal.nl/competitie/vereniging/cnz6b97/jongens-c/1"
     },

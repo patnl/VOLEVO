@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 07 Nov 2026 09:48:57 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 16:27:34 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -31,76 +31,76 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 11:00: VCH JA 2 - VOLEVO JA 2]]></title>
+      <title><![CDATA[VCH JA 2 - VOLEVO JA 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2027983</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2027983</guid>
-      <description><![CDATA[Wedstrijd: 3000JA2E1 CB, Datum: zaterdag 7 november, 11:00, Speellocatie: FBK-hal, Arnolduspark 3, 2132CR  Hoofddorp]]></description>
+      <description><![CDATA[Wedstrijd: VCH JA 2 - VOLEVO JA 2, Uitslag: 1-3, Setstanden: 17-25, 23-25, 14-25, 26-24]]></description>
       <pubDate>Sat, 07 Nov 2026 11:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:00: Inter Rijswijk MB 3 - VOLEVO MB 2]]></title>
+      <title><![CDATA[Inter Rijswijk MB 3 - VOLEVO MB 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029525</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029525</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1I1 CF, Datum: zaterdag 7 november, 12:00, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk MB 3 - VOLEVO MB 2, Uitslag: 0-4, Setstanden: 8-25, 10-25, 9-25, 22-25]]></description>
       <pubDate>Sat, 07 Nov 2026 12:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:30: VOLEVO DS 4 - Inter Rijswijk DS 3]]></title>
+      <title><![CDATA[VOLEVO DS 4 - Inter Rijswijk DS 3, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2016304</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2016304</guid>
-      <description><![CDATA[Wedstrijd: 3000DPE   HJ, Datum: zaterdag 7 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 4 - Inter Rijswijk DS 3, Uitslag: 1-3, Setstanden: 25-15, 16-25, 12-25, 12-25]]></description>
       <pubDate>Sat, 07 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:30: VOLEVO MA 3 - Leython DC MA 1]]></title>
+      <title><![CDATA[VOLEVO MA 3 - Leython DC MA 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026273</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026273</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1J1 CB, Datum: zaterdag 7 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 3 - Leython DC MA 1, Uitslag: 1-3, Setstanden: 25-18, 13-25, 24-26, 22-25]]></description>
       <pubDate>Sat, 07 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:30: VOLEVO MA 5 - Kalinko MA 3]]></title>
+      <title><![CDATA[VOLEVO MA 5 - Kalinko MA 3, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028410</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028410</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2L1 EC, Datum: zaterdag 7 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 5 - Kalinko MA 3, Uitslag: 4-0, Setstanden: 25-17, 25-14, 25-18, 25-16]]></description>
       <pubDate>Sat, 07 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:30: VOLEVO MB 4 - Castellum MB 1]]></title>
+      <title><![CDATA[VOLEVO MB 4 - Castellum MB 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030087</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030087</guid>
-      <description><![CDATA[Wedstrijd: 3000MB2N1 DA, Datum: zaterdag 7 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MB 4 - Castellum MB 1, Uitslag: 0-4, Setstanden: 12-25, 19-25, 22-25, 17-25]]></description>
       <pubDate>Sat, 07 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:30: VOLEVO MB 1 - Spaarnestad MB 1]]></title>
+      <title><![CDATA[VOLEVO MB 1 - Spaarnestad MB 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025616</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025616</guid>
-      <description><![CDATA[Wedstrijd: 3000MBHB1 EB, Datum: zaterdag 7 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MB 1 - Spaarnestad MB 1, Uitslag: 1-3, Setstanden: 18-25, 13-25, 15-25, 25-23]]></description>
       <pubDate>Sat, 07 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:30: VOLEVO JC 1 - ZVH MC 1]]></title>
+      <title><![CDATA[VOLEVO JC 1 - ZVH MC 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029781</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029781</guid>
-      <description><![CDATA[Wedstrijd: 3000XC1H1 EG, Datum: zaterdag 7 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JC 1 - ZVH MC 1, Uitslag: 3-1, Setstanden: 25-16, 25-22, 25-19, 23-25]]></description>
       <pubDate>Sat, 07 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 12:30: VOLEVO MC 3 - VELO MC 1]]></title>
+      <title><![CDATA[VOLEVO MC 3 - VELO MC 1, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035514</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035514</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2S1 DC, Datum: zaterdag 7 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 3 - VELO MC 1, Uitslag: 2-3, Setstanden: 18-25, 21-25, 26-24, 25-14, 5-15]]></description>
       <pubDate>Sat, 07 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[7 nov 15:00: VOLEVO HS 1 - Ancora RVV HS 1]]></title>
@@ -119,12 +119,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 15:00: VOLEVO JB 2 - Kratos '08 JB 1]]></title>
+      <title><![CDATA[VOLEVO JB 2 - Kratos '08 JB 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028121</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028121</guid>
-      <description><![CDATA[Wedstrijd: 3000JB2G1 FC, Datum: zaterdag 7 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JB 2 - Kratos '08 JB 1, Uitslag: 3-1, Setstanden: 20-25, 25-21, 25-11, 25-18]]></description>
       <pubDate>Sat, 07 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[7 nov 15:00: VOLEVO MA 4 - VSTS MA 1]]></title>
@@ -143,12 +143,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[7 nov 15:00: VOLEVO MC 4 - Netwerk MC 1]]></title>
+      <title><![CDATA[VOLEVO MC 4 - Netwerk MC 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030951</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030951</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2O1 BD, Datum: zaterdag 7 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 4 - Netwerk MC 1, Uitslag: 0-4, Setstanden: 18-25, 19-25, 23-25, 15-25]]></description>
       <pubDate>Sat, 07 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[7 nov 16:00: Zovoc JB 2 - VOLEVO JB 1]]></title>
