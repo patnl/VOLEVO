@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T06:24:00+00:00",
+ "gegenereerd": "2026-11-07T13:28:32+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -4891,7 +4891,7 @@
    "tijdstip": "2026-11-07T11:00:00+01:00",
    "thuis": "VCH JA 2",
    "uit": "VOLEVO JA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "FBK-hal",
    "plaats": "Hoofddorp",
    "adres": "Arnolduspark 3",
@@ -4899,13 +4899,13 @@
    "lat": 52.30584,
    "lon": 4.70443,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/32fcc8af-6c37-4039-9d94-a541ee7d43a7"
+   "dwf": "https://dwf.nevobo.nl/results/32fcc8af-6c37-4039-9d94-a541ee7d43a7/scoresheets/5011aba2-7aa8-4c83-8651-0dac6cd92fdb"
   },
   {
    "tijdstip": "2026-11-07T12:00:00+01:00",
    "thuis": "Inter Rijswijk MB 3",
    "uit": "VOLEVO MB 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -4913,13 +4913,13 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/9a0c1be3-35ca-42f6-bcad-79ff32dacd3e"
+   "dwf": "https://dwf.nevobo.nl/results/9a0c1be3-35ca-42f6-bcad-79ff32dacd3e/scoresheets/1e1bd035-eacc-4bd2-9e50-ffb5ed83d3ee"
   },
   {
    "tijdstip": "2026-11-07T12:30:00+01:00",
    "thuis": "VOLEVO DS 4",
    "uit": "Inter Rijswijk DS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4927,13 +4927,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/0ec4d59c-4e38-4860-bda4-9925eec54e94"
+   "dwf": "https://dwf.nevobo.nl/results/0ec4d59c-4e38-4860-bda4-9925eec54e94/scoresheets/aa7a6977-f5d5-4428-ae09-da79bf7f7062"
   },
   {
    "tijdstip": "2026-11-07T12:30:00+01:00",
    "thuis": "VOLEVO JC 1",
    "uit": "ZVH MC 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4941,13 +4941,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/72a6fc71-2b92-40a8-8e2b-a8abbee780b0"
+   "dwf": "https://dwf.nevobo.nl/results/72a6fc71-2b92-40a8-8e2b-a8abbee780b0/scoresheets/dcf5b3db-b7dc-4c85-a10d-5107be348428"
   },
   {
    "tijdstip": "2026-11-07T12:30:00+01:00",
    "thuis": "VOLEVO MA 3",
    "uit": "Leython DC MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4955,13 +4955,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/1b910c2d-7300-43ee-bbf2-03742c951ef1"
+   "dwf": "https://dwf.nevobo.nl/results/1b910c2d-7300-43ee-bbf2-03742c951ef1/scoresheets/7c195cfd-a6dc-4b15-9ce4-79e48653fdf7"
   },
   {
    "tijdstip": "2026-11-07T12:30:00+01:00",
    "thuis": "VOLEVO MA 5",
    "uit": "Kalinko MA 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4969,13 +4969,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/2736a320-a19e-4fb7-a626-f85f7f13b4f0"
+   "dwf": "https://dwf.nevobo.nl/results/2736a320-a19e-4fb7-a626-f85f7f13b4f0/scoresheets/543df5fe-972d-4cfa-82f1-dfc7ecb07a60"
   },
   {
    "tijdstip": "2026-11-07T12:30:00+01:00",
    "thuis": "VOLEVO MB 1",
    "uit": "Spaarnestad MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4983,13 +4983,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/91553ea5-47ba-498b-ac47-604575919313"
+   "dwf": "https://dwf.nevobo.nl/results/91553ea5-47ba-498b-ac47-604575919313/scoresheets/9af133fc-d078-4136-898c-01ed1298947c"
   },
   {
    "tijdstip": "2026-11-07T12:30:00+01:00",
    "thuis": "VOLEVO MB 4",
    "uit": "Castellum MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -4997,7 +4997,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/485fd195-ffec-48c6-8fd7-88cc4a1a895c"
+   "dwf": "https://dwf.nevobo.nl/results/485fd195-ffec-48c6-8fd7-88cc4a1a895c/scoresheets/4f415723-1f18-47f5-b16c-242b32533b15"
   },
   {
    "tijdstip": "2026-11-07T12:30:00+01:00",
