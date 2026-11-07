@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 07 Nov 2026 20:12:05 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 00:02:54 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Zovoc MA 1 - VOLEVO MA 1, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025536</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025536</guid>
+      <description><![CDATA[Wedstrijd: Zovoc MA 1 - VOLEVO MA 1, Uitslag: 3-2, Setstanden: 25-16, 20-25, 23-25, 25-21, 16-14]]></description>
+      <pubDate>Sat, 07 Nov 2026 18:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VOLEVO HS 2 - VollinGo HS 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2020220</link>
@@ -75,6 +83,14 @@
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026337</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026337</guid>
       <description><![CDATA[Wedstrijd: VOLEVO MA 2 - VELO MA 1, Uitslag: 3-1, Setstanden: 25-17, 25-23, 25-22, 20-25]]></description>
+      <pubDate>Sat, 07 Nov 2026 15:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MA 4 - VSTS MA 1, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026244</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026244</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 4 - VSTS MA 1, Uitslag: 2-3, Setstanden: 25-14, 18-25, 25-23, 22-25, 14-16]]></description>
       <pubDate>Sat, 07 Nov 2026 15:00:00 +0100</pubDate>
       <nevobo:status>gespeeld</nevobo:status>
     </item>
