@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-06T19:39:43+00:00",
+ "gegenereerd": "2026-11-07T06:24:00+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -4835,7 +4835,7 @@
    "tijdstip": "2026-11-06T19:30:00+01:00",
    "thuis": "SKC HS 7",
    "uit": "VOLEVO HS 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Universitair SC",
    "plaats": "Leiden",
    "adres": "Goliuspad 22",
@@ -4843,13 +4843,13 @@
    "lat": 52.16739,
    "lon": 4.46244,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/55fb94da-bc3b-4811-94d6-046d1f0873b2"
+   "dwf": "https://dwf.nevobo.nl/results/55fb94da-bc3b-4811-94d6-046d1f0873b2/scoresheets/7906c5e7-2b1f-4e85-9925-f54eb3600dc4"
   },
   {
    "tijdstip": "2026-11-06T19:30:00+01:00",
    "thuis": "Yaarana DS 1",
    "uit": "VOLEVO DS 8",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Sporthal Roemer Visscherstraat",
    "plaats": "'s-Gravenhage",
    "adres": "Roemer Visscherstraat 108",
@@ -4857,13 +4857,13 @@
    "lat": 52.05097,
    "lon": 4.29078,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/65e01f6c-a289-4a57-8c15-0919411f07cc"
+   "dwf": "https://dwf.nevobo.nl/results/65e01f6c-a289-4a57-8c15-0919411f07cc/scoresheets/f8a87fa9-3da7-47a4-bf9f-a7e147f0ca20"
   },
   {
    "tijdstip": "2026-11-06T21:00:00+01:00",
    "thuis": "NOVO HS 2",
    "uit": "VOLEVO HS 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Sportpark Duinwetering",
    "plaats": "Noordwijk ZH",
    "adres": "Duinwetering 105",
@@ -4871,7 +4871,7 @@
    "lat": 52.24332,
    "lon": 4.44556,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/c5dfdb3d-4a57-4980-b17f-52d2f2833ef0"
+   "dwf": "https://dwf.nevobo.nl/results/c5dfdb3d-4a57-4980-b17f-52d2f2833ef0/scoresheets/07b49f42-8c71-40df-89bc-e72f26534427"
   },
   {
    "tijdstip": "2026-11-07T10:45:00+01:00",
