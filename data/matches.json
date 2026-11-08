@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T22:10:50+00:00",
+ "gegenereerd": "2026-11-08T06:30:11+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5073,7 +5073,7 @@
    "tijdstip": "2026-11-07T15:00:00+01:00",
    "thuis": "VOLEVO MA 4",
    "uit": "VSTS MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5081,7 +5081,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/3fae3e25-13bb-42f2-b560-9c9ca8ddeea9"
+   "dwf": "https://dwf.nevobo.nl/results/3fae3e25-13bb-42f2-b560-9c9ca8ddeea9/scoresheets/7316ae5a-a67d-4b70-80f0-9004548a30b9"
   },
   {
    "tijdstip": "2026-11-07T15:00:00+01:00",
