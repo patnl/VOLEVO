@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 12 Nov 2026 12:17:19 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 19:51:02 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO MC 3 - Kratos '08 MC 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2035516</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035516</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 3 - Kratos '08 MC 1, Uitslag: 3-1, Setstanden: 25-23, 25-19, 14-25, 25-21]]></description>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Zovoc MA 1 - VOLEVO MA 1, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025536</link>
