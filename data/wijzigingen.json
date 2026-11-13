@@ -1,6 +1,38 @@
 {
-  "bijgewerkt": "2026-11-12T20:17:36+00:00",
+  "bijgewerkt": "2026-11-13T07:05:18+00:00",
   "wijzigingen": [
+    {
+      "id": "verplaatst|2026-12-10T21:00:00+01:00|VOLEVO HS 3|Kratos '08 HS 5|2026-12-17T21:00:00+01:00|VOLEVO HS 3|Kratos '08 HS 5",
+      "gezien": "2026-11-13T07:05:18+00:00",
+      "soort": "verplaatst",
+      "thuis": "VOLEVO HS 3",
+      "uit": "Kratos '08 HS 5",
+      "van": {
+        "tijdstip": "2026-12-10T21:00:00+01:00",
+        "hal": "De Fluit",
+        "plaats": "Leidschendam",
+        "status": "gepland"
+      },
+      "naar": {
+        "tijdstip": "2026-12-17T21:00:00+01:00",
+        "hal": "De Fluit",
+        "plaats": "Leidschendam",
+        "status": "gepland"
+      },
+      "veldVoorheen": "5",
+      "officials": [
+        {
+          "taak": "scheidsrechter (vaardigheidstraining)",
+          "team": "HS 1",
+          "opmerking": null
+        },
+        {
+          "taak": "teller",
+          "team": "DS 1",
+          "opmerking": null
+        }
+      ]
+    },
     {
       "id": "verplaatst|2026-11-21T09:30:00+01:00|VOLEVO L2 2|Inter Rijswijk L2 2|2026-11-21T10:10:00+01:00|VOLEVO L2 2|Inter Rijswijk L2 2",
       "gezien": "2026-11-12T20:17:36+00:00",
@@ -2603,22 +2635,6 @@
       "van": null,
       "naar": {
         "tijdstip": "2026-11-21T15:00:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "nieuw|None|2026-11-21T15:20:00+01:00|VOLEVO L5 10|Inter Rijswijk L5 3",
-      "gezien": "2026-11-12T07:33:20+00:00",
-      "soort": "nieuw",
-      "thuis": "VOLEVO L5 10",
-      "uit": "Inter Rijswijk L5 3",
-      "van": null,
-      "naar": {
-        "tijdstip": "2026-11-21T15:20:00+01:00",
         "hal": "Houtrust sporthal",
         "plaats": "'s-Gravenhage",
         "status": "concept"

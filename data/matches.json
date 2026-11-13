@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T20:17:36+00:00",
+ "gegenereerd": "2026-11-13T07:05:18+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5227,7 +5227,7 @@
    "tijdstip": "2026-11-12T19:30:00+01:00",
    "thuis": "VOLEVO MB 1",
    "uit": "Ancora RVV MB 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5235,13 +5235,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/5c1af240-6e42-41cf-ac5d-8f8703096f9f"
+   "dwf": "https://dwf.nevobo.nl/results/5c1af240-6e42-41cf-ac5d-8f8703096f9f/scoresheets/8e12e23f-01aa-45fa-af5a-0195940c8765"
   },
   {
    "tijdstip": "2026-11-12T21:30:00+01:00",
    "thuis": "Goedemiddag! - Erasmus Volley DS 1",
    "uit": "VOLEVO DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Woudestein",
    "plaats": "Rotterdam",
    "adres": "Burgemeester Oudlaan 50",
@@ -5249,7 +5249,7 @@
    "lat": 51.91906,
    "lon": 4.52516,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/56f94eb9-006f-4bdd-8892-70b715371a05"
+   "dwf": "https://dwf.nevobo.nl/results/56f94eb9-006f-4bdd-8892-70b715371a05/scoresheets/2216df51-fc01-41fd-8ff8-65fecbb1b341"
   },
   {
    "tijdstip": "2026-11-13T19:00:00+01:00",
@@ -7687,20 +7687,6 @@
    "dwf": "https://dwf.nevobo.nl/matches/5628d3ce-f8cc-4703-b68a-0dd53285d02f"
   },
   {
-   "tijdstip": "2026-12-10T21:00:00+01:00",
-   "thuis": "VOLEVO HS 3",
-   "uit": "Kratos '08 HS 5",
-   "status": "gepland",
-   "hal": "De Fluit",
-   "plaats": "Leidschendam",
-   "adres": "Fluitpolderplein 1",
-   "postcode": "2262ED",
-   "lat": 52.09332,
-   "lon": 4.39517,
-   "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/6d66493b-5c45-495a-ad67-f2d50fe04e57"
-  },
-  {
    "tijdstip": "2026-12-11T19:00:00+01:00",
    "thuis": "Kalinko DS 7",
    "uit": "VOLEVO DS 5",
@@ -8105,6 +8091,20 @@
    "lon": 4.46189,
    "veld": "3",
    "dwf": "https://dwf.nevobo.nl/matches/829e9e52-29c3-4fd7-b840-95e3e003c21e"
+  },
+  {
+   "tijdstip": "2026-12-17T21:00:00+01:00",
+   "thuis": "VOLEVO HS 3",
+   "uit": "Kratos '08 HS 5",
+   "status": "gepland",
+   "hal": "De Fluit",
+   "plaats": "Leidschendam",
+   "adres": "Fluitpolderplein 1",
+   "postcode": "2262ED",
+   "lat": 52.09332,
+   "lon": 4.39517,
+   "veld": "7",
+   "dwf": "https://dwf.nevobo.nl/matches/6d66493b-5c45-495a-ad67-f2d50fe04e57"
   },
   {
    "tijdstip": "2026-12-17T21:00:00+01:00",
