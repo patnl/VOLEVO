@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T19:59:07+00:00",
+ "gegenereerd": "2026-11-14T06:54:47+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5283,7 +5283,7 @@
    "tijdstip": "2026-11-13T19:00:00+01:00",
    "thuis": "VOLEVO MA 1",
    "uit": "Spaarnestad MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5291,7 +5291,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/3ccd9184-1cfc-4d9f-8699-3e5ba39866b9"
+   "dwf": "https://dwf.nevobo.nl/results/3ccd9184-1cfc-4d9f-8699-3e5ba39866b9/scoresheets/452534c8-04ec-457e-a0cd-dc2f54af5271"
   },
   {
    "tijdstip": "2026-11-13T19:00:00+01:00",
@@ -5311,7 +5311,7 @@
    "tijdstip": "2026-11-13T19:15:00+01:00",
    "thuis": "WVV MA 1",
    "uit": "VOLEVO MA 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Duinpan",
    "plaats": "Wassenaar",
    "adres": "Dr. Mansveltkade 11",
@@ -5319,13 +5319,13 @@
    "lat": 52.15375,
    "lon": 4.38851,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/a1879970-e93e-47b0-bf34-a0d20982274d"
+   "dwf": "https://dwf.nevobo.nl/results/a1879970-e93e-47b0-bf34-a0d20982274d/scoresheets/ec2e5588-c60a-40b8-98cb-6ec82e65f96e"
   },
   {
    "tijdstip": "2026-11-13T19:30:00+01:00",
    "thuis": "Inter Rijswijk DS 7",
    "uit": "VOLEVO DS 9",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Altis",
    "plaats": "Rijswijk ZH",
    "adres": "de Bruyn Kopsstraat 1",
@@ -5333,13 +5333,13 @@
    "lat": 52.04474,
    "lon": 4.33363,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/3da906ca-0853-4d28-a42a-402d0bf4e203"
+   "dwf": "https://dwf.nevobo.nl/results/3da906ca-0853-4d28-a42a-402d0bf4e203/scoresheets/05fc1662-0707-4996-b88f-4ae5b9a82631"
   },
   {
    "tijdstip": "2026-11-13T19:30:00+01:00",
    "thuis": "Monza DS 1",
    "uit": "VOLEVO DS 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Wielepet",
    "plaats": "Monster",
    "adres": "Heijdseweg 9",
@@ -5347,13 +5347,13 @@
    "lat": 52.02805,
    "lon": 4.16851,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/903bd4fb-07f0-47cc-9dcd-2b28987ecf36"
+   "dwf": "https://dwf.nevobo.nl/results/903bd4fb-07f0-47cc-9dcd-2b28987ecf36/scoresheets/8a760ad9-ba49-4127-9435-f8d9a9627db3"
   },
   {
    "tijdstip": "2026-11-13T19:30:00+01:00",
    "thuis": "VELO HS 3",
    "uit": "VOLEVO HS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Velo-hal",
    "plaats": "Wateringen",
    "adres": "Noordweg 26",
@@ -5361,13 +5361,13 @@
    "lat": 52.03117,
    "lon": 4.27459,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/3db38bf6-0c35-4b95-9571-bb658380be95"
+   "dwf": "https://dwf.nevobo.nl/results/3db38bf6-0c35-4b95-9571-bb658380be95/scoresheets/c1c4f30a-cb76-4891-b5bb-5839655b5090"
   },
   {
    "tijdstip": "2026-11-13T21:00:00+01:00",
    "thuis": "VOLEVO DS 3",
    "uit": "VIVES DS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5375,13 +5375,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/6495ce3c-ce87-4a9f-a7e9-b1506a6dc78f"
+   "dwf": "https://dwf.nevobo.nl/results/6495ce3c-ce87-4a9f-a7e9-b1506a6dc78f/scoresheets/2df59f50-57ef-4c91-ad15-55ffdec62f3e"
   },
   {
    "tijdstip": "2026-11-13T21:00:00+01:00",
    "thuis": "VOLEVO DS 5",
    "uit": "Kalinko DS 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5389,13 +5389,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/b283b850-761b-443b-baf5-e62d55d17d00"
+   "dwf": "https://dwf.nevobo.nl/results/b283b850-761b-443b-baf5-e62d55d17d00/scoresheets/c1fd7966-eb4c-4b74-9744-548836ef2af5"
   },
   {
    "tijdstip": "2026-11-13T21:00:00+01:00",
    "thuis": "VOLEVO DS 8",
    "uit": "PQV Westland - Data Giants DS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5403,13 +5403,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/e96cf393-538b-49d6-99d7-59b5b6a82bd6"
+   "dwf": "https://dwf.nevobo.nl/results/e96cf393-538b-49d6-99d7-59b5b6a82bd6/scoresheets/058d2fd8-281f-4e98-9ac7-eb0af46fdbac"
   },
   {
    "tijdstip": "2026-11-13T21:00:00+01:00",
    "thuis": "VOLEVO HS 5",
    "uit": "Castellum HS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5417,13 +5417,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/c8d7377b-7260-4cfc-a67d-00cad67b3c88"
+   "dwf": "https://dwf.nevobo.nl/results/c8d7377b-7260-4cfc-a67d-00cad67b3c88/scoresheets/b3262c8a-129b-435f-94ec-6b037fd5781d"
   },
   {
    "tijdstip": "2026-11-13T21:00:00+01:00",
    "thuis": "VOLEVO HS 6",
    "uit": "Punch HS 14",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5431,13 +5431,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/0661bd96-44c7-4338-b4d7-b3c14fd4d0a4"
+   "dwf": "https://dwf.nevobo.nl/results/0661bd96-44c7-4338-b4d7-b3c14fd4d0a4/scoresheets/d001092f-0057-4ff0-bd98-9c049588bddf"
   },
   {
    "tijdstip": "2026-11-13T21:30:00+01:00",
    "thuis": "VVV Delta HS 1",
    "uit": "VOLEVO HS 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Kerkpolder",
    "plaats": "Delft",
    "adres": "Kerkpolderweg 14",
@@ -5445,7 +5445,7 @@
    "lat": 51.98857,
    "lon": 4.32616,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/af9881f9-987f-41e9-b701-75f2e858ac18"
+   "dwf": "https://dwf.nevobo.nl/results/af9881f9-987f-41e9-b701-75f2e858ac18/scoresheets/6d6c2059-4424-44d8-b546-7f99f252df15"
   },
   {
    "tijdstip": "2026-11-14T10:30:00+01:00",
