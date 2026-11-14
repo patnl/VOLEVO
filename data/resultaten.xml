@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 14 Nov 2026 08:40:36 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:39:41 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VollinGo MC 1 - VOLEVO MC 4, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2030916</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2030916</guid>
+      <description><![CDATA[Wedstrijd: VollinGo MC 1 - VOLEVO MC 4, Uitslag: 4-0, Setstanden: 25-21, 25-19, 25-16, 25-23]]></description>
+      <pubDate>Sat, 14 Nov 2026 12:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VVV Delta HS 1 - VOLEVO HS 2, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2020186</link>

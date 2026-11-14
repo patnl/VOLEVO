@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 14 Nov 2026 09:03:06 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 16:04:47 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -39,20 +39,20 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[14 nov 12:30: VollinGo MC 1 - VOLEVO MC 4]]></title>
+      <title><![CDATA[VollinGo MC 1 - VOLEVO MC 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030916</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030916</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2O1 AB, Datum: zaterdag 14 november, 12:30, Speellocatie: De Zebra, Goverwellesingel 10, 2807DZ  Gouda]]></description>
+      <description><![CDATA[Wedstrijd: VollinGo MC 1 - VOLEVO MC 4, Uitslag: 4-0, Setstanden: 25-21, 25-19, 25-16, 25-23]]></description>
       <pubDate>Sat, 14 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[14 nov 14:30: VELO JB 1 - VOLEVO JB 2]]></title>
+      <title><![CDATA[VELO JB 1 - VOLEVO JB 2, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028115</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028115</guid>
-      <description><![CDATA[Wedstrijd: 3000JB2G1 EF, Datum: zaterdag 14 november, 14:30, Speellocatie: Velo-hal, Noordweg 26, 2291EE  Wateringen]]></description>
+      <description><![CDATA[Wedstrijd: VELO JB 1 - VOLEVO JB 2, Uitslag: 1-3, Setstanden: 21-25, 27-29, 18-25, 25-23]]></description>
       <pubDate>Sat, 14 Nov 2026 14:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[14 nov 16:00: Zovoc MC 4 - VOLEVO MC 5]]></title>
