@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T06:54:47+00:00",
+ "gegenereerd": "2026-11-14T18:25:14+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5465,7 +5465,7 @@
    "tijdstip": "2026-11-14T12:30:00+01:00",
    "thuis": "VollinGo MB 1",
    "uit": "VOLEVO MB 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Zebra",
    "plaats": "Gouda",
    "adres": "Goverwellesingel 10",
@@ -5473,13 +5473,13 @@
    "lat": 52.00562,
    "lon": 4.74464,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/25401063-5606-42c7-8c67-9e6cbaf2a0fa"
+   "dwf": "https://dwf.nevobo.nl/results/25401063-5606-42c7-8c67-9e6cbaf2a0fa/scoresheets/a4b581fd-19e5-4639-8dcd-80b72277d2c1"
   },
   {
    "tijdstip": "2026-11-14T12:30:00+01:00",
    "thuis": "VollinGo MC 1",
    "uit": "VOLEVO MC 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Zebra",
    "plaats": "Gouda",
    "adres": "Goverwellesingel 10",
@@ -5487,13 +5487,13 @@
    "lat": 52.00562,
    "lon": 4.74464,
    "veld": "4",
-   "dwf": "https://dwf.nevobo.nl/matches/43dc5318-6bc9-4bd8-9787-acd2a2e607b4"
+   "dwf": "https://dwf.nevobo.nl/results/43dc5318-6bc9-4bd8-9787-acd2a2e607b4/scoresheets/4b523a6c-6056-4c5c-99f9-d86785561111"
   },
   {
    "tijdstip": "2026-11-14T14:30:00+01:00",
    "thuis": "VELO JB 1",
    "uit": "VOLEVO JB 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Velo-hal",
    "plaats": "Wateringen",
    "adres": "Noordweg 26",
@@ -5501,13 +5501,13 @@
    "lat": 52.03117,
    "lon": 4.27459,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/982c0a41-863c-450f-8485-25d02f51feb6"
+   "dwf": "https://dwf.nevobo.nl/results/982c0a41-863c-450f-8485-25d02f51feb6/scoresheets/109bf972-5a60-45bf-9e05-880252ff3f95"
   },
   {
    "tijdstip": "2026-11-14T16:00:00+01:00",
    "thuis": "Zovoc MC 4",
    "uit": "VOLEVO MC 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
@@ -5515,7 +5515,7 @@
    "lat": 52.06786,
    "lon": 4.46189,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/c3ae5cb9-e24e-45ab-9127-162d0e1fdc2c"
+   "dwf": "https://dwf.nevobo.nl/results/c3ae5cb9-e24e-45ab-9127-162d0e1fdc2c/scoresheets/aa2788e7-6e47-4c4a-bbed-c82ed0b8e422"
   },
   {
    "tijdstip": "2026-11-14T18:00:00+01:00",
