@@ -4,8 +4,56 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 13 Nov 2026 22:05:26 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 02:41:11 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VVV Delta HS 1 - VOLEVO HS 2, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2020186</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2020186</guid>
+      <description><![CDATA[Wedstrijd: VVV Delta HS 1 - VOLEVO HS 2, Uitslag: 3-2, Setstanden: 26-24, 19-25, 18-25, 25-19, 15-13]]></description>
+      <pubDate>Fri, 13 Nov 2026 21:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO HS 6 - Punch HS 14, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2019461</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2019461</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 6 - Punch HS 14, Uitslag: 4-0, Setstanden: 25-12, 25-11, 25-15, 25-9]]></description>
+      <pubDate>Fri, 13 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO HS 5 - Castellum HS 2, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2017780</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017780</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 5 - Castellum HS 2, Uitslag: 1-3, Setstanden: 20-25, 20-25, 23-25, 25-17]]></description>
+      <pubDate>Fri, 13 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 8 - PQV Westland - Data Giants DS 3, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041570</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041570</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 8 - PQV Westland - Data Giants DS 3, Uitslag: 1-3, Setstanden: 24-26, 9-25, 14-25, 25-20]]></description>
+      <pubDate>Fri, 13 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 5 - Kalinko DS 5, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041527</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041527</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 5 - Kalinko DS 5, Uitslag: 1-3, Setstanden: 21-25, 10-25, 25-21, 17-25]]></description>
+      <pubDate>Fri, 13 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 3 - VIVES DS 3, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2009709</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009709</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - VIVES DS 3, Uitslag: 3-1, Setstanden: 23-25, 25-16, 25-20, 25-16]]></description>
+      <pubDate>Fri, 13 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VELO HS 3 - VOLEVO HS 3, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2040781</link>
