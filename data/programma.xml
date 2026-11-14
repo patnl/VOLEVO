@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 14 Nov 2026 16:04:47 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 20:55:49 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -31,12 +31,12 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[14 nov 12:30: VollinGo MB 1 - VOLEVO MB 3]]></title>
+      <title><![CDATA[VollinGo MB 1 - VOLEVO MB 3, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029474</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029474</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1H1 DC, Datum: zaterdag 14 november, 12:30, Speellocatie: De Zebra, Goverwellesingel 10, 2807DZ  Gouda]]></description>
+      <description><![CDATA[Wedstrijd: VollinGo MB 1 - VOLEVO MB 3, Uitslag: 3-2, Setstanden: 26-24, 15-25, 16-25, 25-9, 15-13]]></description>
       <pubDate>Sat, 14 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[VollinGo MC 1 - VOLEVO MC 4, Uitslag: 4-0]]></title>
@@ -55,36 +55,36 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[14 nov 16:00: Zovoc MC 4 - VOLEVO MC 5]]></title>
+      <title><![CDATA[Zovoc MC 4 - VOLEVO MC 5, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2031094</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2031094</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2P1 FD, Datum: zaterdag 14 november, 16:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc MC 4 - VOLEVO MC 5, Uitslag: 3-1, Setstanden: 25-17, 22-25, 25-18, 25-14]]></description>
       <pubDate>Sat, 14 Nov 2026 16:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[14 nov 18:00: Jupiter DS 1 - VOLEVO DS 4]]></title>
+      <title><![CDATA[Jupiter DS 1 - VOLEVO DS 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2016268</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2016268</guid>
-      <description><![CDATA[Wedstrijd: 3000DPE   GH, Datum: zaterdag 14 november, 18:00, Speellocatie: De Noort Syde, Touwslag 1, 3421JH  Oudewater]]></description>
+      <description><![CDATA[Wedstrijd: Jupiter DS 1 - VOLEVO DS 4, Uitslag: 4-0, Setstanden: 25-10, 25-17, 25-18, 25-15]]></description>
       <pubDate>Sat, 14 Nov 2026 18:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[14 nov 18:00: Ancora RVV MB 2 - VOLEVO MB 2]]></title>
+      <title><![CDATA[Ancora RVV MB 2 - VOLEVO MB 2, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029490</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029490</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1I1 AF, Datum: zaterdag 14 november, 18:00, Speellocatie: Boorsmazaal, Zwanenburgstraat 61, 2225DZ  Katwijk ZH]]></description>
+      <description><![CDATA[Wedstrijd: Ancora RVV MB 2 - VOLEVO MB 2, Uitslag: 2-3, Setstanden: 15-25, 25-23, 18-25, 25-19, 9-15]]></description>
       <pubDate>Sat, 14 Nov 2026 18:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[14 nov 18:30: VELO MA 1 - VOLEVO MA 2]]></title>
+      <title><![CDATA[VELO MA 1 - VOLEVO MA 2, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026321</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026321</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1K1 CE, Datum: zaterdag 14 november, 18:30, Speellocatie: Velo-hal, Noordweg 26, 2291EE  Wateringen]]></description>
+      <description><![CDATA[Wedstrijd: VELO MA 1 - VOLEVO MA 2, Uitslag: 3-1, Setstanden: 25-18, 25-16, 25-20, 15-25]]></description>
       <pubDate>Sat, 14 Nov 2026 18:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[14 nov 19:00: Volley Lek en IJssel HS 1 - VOLEVO HS 1]]></title>
