@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T07:50:32+00:00",
+ "gegenereerd": "2026-11-18T20:49:54+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5764,8 +5764,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/4d6dca5f-6770-429e-a886-f177a2df4f6b"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T09:30:00+01:00",
@@ -5778,8 +5777,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/c00ec960-f22e-4b71-8929-2da64100edac"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-11-21T09:30:00+01:00",
@@ -5792,8 +5790,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/045ef657-8a98-4d70-a55d-9aa34b76d395"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T09:30:00+01:00",
@@ -5806,8 +5803,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/8b88e89f-6a0d-4642-b9d6-24a529f3db1f"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T09:30:00+01:00",
@@ -5820,8 +5816,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/3015a909-6721-40ee-998f-7f17f3ead83a"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T09:40:00+01:00",
@@ -5834,8 +5829,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/187adde3-8774-4c84-92de-2b278a3ebec7"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T09:40:00+01:00",
@@ -5848,8 +5842,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/2d1291b0-0467-473b-b243-8a7813750b5b"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-11-21T09:40:00+01:00",
@@ -5862,8 +5855,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/60740941-804d-4f4d-b200-5e5c7d81203b"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T09:40:00+01:00",
@@ -5876,8 +5868,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/c2a465cb-cf14-4c15-b468-80d00589c538"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T09:40:00+01:00",
@@ -5890,8 +5881,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/97abe2d2-a56d-4890-8da7-b8f8d74bb689"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T09:50:00+01:00",
@@ -5904,8 +5894,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/d0e3c2fb-4502-4ce3-82df-739bd891f902"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T09:50:00+01:00",
@@ -5918,8 +5907,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/90eb2ed4-9751-4a59-82fc-43b73b83d7de"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T09:50:00+01:00",
@@ -5932,8 +5920,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/ef309f31-74f0-46b3-90f1-2702aa6b37d4"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T10:00:00+01:00",
@@ -5946,8 +5933,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/7e5d3944-71dc-4543-b48b-57716fd84517"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T10:10:00+01:00",
@@ -5960,8 +5946,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/8263d127-4c36-4706-be44-3d3073b0f5f0"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T10:10:00+01:00",
@@ -5974,8 +5959,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/b4df5b25-72aa-47ad-a871-6dc37b4ef8a3"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T10:10:00+01:00",
@@ -5988,8 +5972,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/8c1b2e7d-2c9c-488d-a749-7080ee60705f"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T10:10:00+01:00",
@@ -6002,8 +5985,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/2ff90fda-5016-46f8-b64e-a564ea18b8f3"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T10:10:00+01:00",
@@ -6016,8 +5998,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/9021145f-4a22-43df-9684-ee09e5d5d43c"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T10:20:00+01:00",
@@ -6030,8 +6011,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/12ce9adb-9764-492f-861b-bf3ce0dddd0b"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T10:20:00+01:00",
@@ -6044,8 +6024,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/670f0812-e94a-44ef-beb8-4f097f8692c5"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T10:20:00+01:00",
@@ -6058,8 +6037,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/dbab4b11-d029-47b7-b2e7-231f8ebbaf86"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T10:20:00+01:00",
@@ -6072,8 +6050,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/30b3e396-bf3d-4d1d-839d-043a6c2500dc"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T10:30:00+01:00",
@@ -6086,8 +6063,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/7a1c1498-b889-4bca-8bc4-1c04e3cfafda"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T10:30:00+01:00",
@@ -6100,8 +6076,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/8cf54684-b90c-4bf5-aaf7-13aef3a65379"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T10:30:00+01:00",
@@ -6114,8 +6089,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/7b336206-9114-4bab-92c8-64252941c6f3"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T10:30:00+01:00",
@@ -6128,8 +6102,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/b8fb3988-4900-4d5f-8535-4584e87f200b"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T10:30:00+01:00",
@@ -6142,8 +6115,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/adb589c8-1ecd-4f24-832f-97862c0dd9a3"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T10:40:00+01:00",
@@ -6156,8 +6128,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/241845ca-fb56-41a8-9242-677af4264d3b"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T10:40:00+01:00",
@@ -6170,8 +6141,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/59bbe2b7-229f-4b4b-a87c-fe1bc7c3ed9e"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T10:50:00+01:00",
@@ -6184,8 +6154,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/a0fe1db6-8d45-499b-807c-2321b95279d7"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T10:50:00+01:00",
@@ -6198,8 +6167,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/1d70cbf5-0647-48c5-bca8-d5ad4615dceb"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T10:50:00+01:00",
@@ -6212,8 +6180,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/c68ff1b4-c975-4d2a-a86d-b92f12d20d05"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T11:00:00+01:00",
@@ -6226,8 +6193,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/db11bce0-696b-4eb1-9c4d-506d50792d54"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T11:00:00+01:00",
@@ -6254,8 +6220,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/bd9a9a2b-f212-4dcf-b317-6a217c433567"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T11:10:00+01:00",
@@ -6268,8 +6233,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/d57e4a05-365a-4139-850f-f35cf8f6133d"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T11:20:00+01:00",
@@ -6282,8 +6246,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/aa1083c4-0a93-44a1-a173-7d84e3744ac2"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T11:20:00+01:00",
@@ -6296,8 +6259,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/dd80e299-7732-49a7-9c10-e3338a4c35c2"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T11:20:00+01:00",
@@ -6310,8 +6272,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/4f690550-1eaf-4101-b137-f60f740bd404"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T11:30:00+01:00",
@@ -6324,8 +6285,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/2d45eda4-b169-4eb9-b2b3-1f11a8a46a56"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T11:30:00+01:00",
@@ -6338,8 +6298,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/040474e5-5da1-431c-9005-fa664ff61680"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T11:30:00+01:00",
@@ -6352,8 +6311,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/05d15768-7722-4f8a-92aa-73a6cb001e31"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T11:40:00+01:00",
@@ -6366,8 +6324,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/7f2813ef-ffbe-4c99-9105-dd7c24e8e920"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T11:40:00+01:00",
@@ -6380,8 +6337,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/8d805e52-bac5-497e-81f5-868e0bc924d6"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T11:40:00+01:00",
@@ -6394,8 +6350,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/eab73629-f9cc-4db6-97e6-7a6316117c34"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T12:00:00+01:00",
@@ -6422,8 +6377,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/5c8b161b-0f72-49d6-8c40-d83ca67358af"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T12:00:00+01:00",
@@ -6436,8 +6390,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/c15c088b-1852-4791-a83f-585cb5cff58c"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T12:00:00+01:00",
@@ -6450,8 +6403,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/f0f94f0e-d474-4851-8713-8242798dba15"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-11-21T12:20:00+01:00",
@@ -6464,8 +6416,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/d66eacb6-fedd-4fcc-9dcb-70a5447da252"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T12:20:00+01:00",
@@ -6478,8 +6429,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/8403093e-1266-457d-8c86-f8d303518d3a"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T12:30:00+01:00",
@@ -6576,8 +6526,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/b83c2db0-66d0-462c-8cc1-e9358d2b7f34"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T12:40:00+01:00",
@@ -6590,8 +6539,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/7504b218-3150-4050-ae15-88f50804ae1c"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-11-21T12:40:00+01:00",
@@ -6604,8 +6552,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/ac8835af-01cf-4415-ac89-cdceeabf6813"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T13:00:00+01:00",
@@ -6618,8 +6565,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/d5ec41eb-b315-4a2a-bcd9-cc077896f437"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-11-21T13:00:00+01:00",
@@ -6632,8 +6578,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/e05b82aa-cf6d-495a-8540-cb6aab2cee6c"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T13:00:00+01:00",
@@ -6660,8 +6605,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/30d24d43-06b0-4f0b-b21c-5cfc8bfb17ad"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T13:20:00+01:00",
@@ -6674,8 +6618,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/b4fa9c17-f476-4456-bfdf-6bc20e6f3f85"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T13:40:00+01:00",
@@ -6688,8 +6631,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/6aecd499-0e2e-4e0a-b820-9613fa8cbba1"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T13:40:00+01:00",
@@ -6702,8 +6644,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/8a184cae-985a-48ba-a714-ae39f5dd51d7"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T13:40:00+01:00",
@@ -6716,8 +6657,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/f85c3cc0-3ae7-4567-8ce3-7fd65542cc29"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-11-21T14:00:00+01:00",
@@ -6730,8 +6670,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/6880ffcb-d0a0-4566-8ee4-9460bc4dc15a"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T14:00:00+01:00",
@@ -6744,8 +6683,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/a6d80c8c-11d4-488c-8c84-70a38ac73161"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T14:00:00+01:00",
@@ -6758,8 +6696,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/16b320bb-93d4-4490-ae8c-6dbc1cd9a50a"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T14:00:00+01:00",
@@ -6772,8 +6709,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/c8371fa8-dd5d-416b-92cc-58ad6f6c359d"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T14:15:00+01:00",
@@ -6800,8 +6736,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/b2d33f0a-8bc6-4c45-89ea-cf4e664ac6f6"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T14:20:00+01:00",
@@ -6814,8 +6749,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/ea2de5e9-b0c0-4f93-b76f-51266696fb17"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T14:20:00+01:00",
@@ -6828,8 +6762,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/704f0f89-8100-4c7e-9584-b67d9c5443a4"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T14:20:00+01:00",
@@ -6842,8 +6775,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/344cfd7c-f470-463c-b0a7-f851d253967a"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T14:40:00+01:00",
@@ -6856,8 +6788,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/b567f547-f137-4c65-9398-3bd8e4fc865a"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T14:40:00+01:00",
@@ -6870,8 +6801,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/7679b538-f32d-4821-b2c1-579756a4c442"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T14:40:00+01:00",
@@ -6884,8 +6814,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/5f1c7a6f-7ad5-45b5-ba2b-46808067b028"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T14:40:00+01:00",
@@ -6898,8 +6827,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/ec30c1f0-0890-4cd5-a7e0-ec9f357a43bc"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T14:40:00+01:00",
@@ -6912,8 +6840,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/c6f1ff51-e54d-4039-acd4-e7fc165f5b82"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T15:00:00+01:00",
@@ -6982,8 +6909,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/ab53733d-353e-4209-94fd-1cc1f20b5a4a"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T15:00:00+01:00",
@@ -6996,8 +6922,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/1cd131d1-b324-4835-a2c8-dc30a9063ffa"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T15:00:00+01:00",
@@ -7010,8 +6935,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/534c448a-cd7c-4937-a7f1-f5291993e812"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T15:00:00+01:00",
@@ -7024,8 +6948,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/6c214157-a0f9-4f38-a885-c7ada03e651d"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T15:00:00+01:00",
@@ -7038,8 +6961,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/0a7ca2b4-da2c-40ed-97df-50bf89a436c4"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T15:00:00+01:00",
@@ -7080,8 +7002,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/8d5a06fb-b2df-4d03-bff9-d5b299e927af"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T15:20:00+01:00",
@@ -7094,8 +7015,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/bb554830-e74c-4913-be96-baaa5265b0d7"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T15:20:00+01:00",
@@ -7108,8 +7028,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/324d9bfd-f455-4423-b113-94d7ce00e8ec"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T15:20:00+01:00",
@@ -7122,8 +7041,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C3",
-   "dwf": "https://dwf.nevobo.nl/matches/14f3cf15-708f-478d-90d1-4847c5b8dcf8"
+   "veld": "C3"
   },
   {
    "tijdstip": "2026-11-21T15:20:00+01:00",
@@ -7136,8 +7054,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C9",
-   "dwf": "https://dwf.nevobo.nl/matches/2aa348c7-e4b5-45b8-a0f4-47198a98d9ea"
+   "veld": "C9"
   },
   {
    "tijdstip": "2026-11-21T15:40:00+01:00",
@@ -7150,8 +7067,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C2",
-   "dwf": "https://dwf.nevobo.nl/matches/4f9e80d3-fc19-414c-901c-88a84db8b9cc"
+   "veld": "C2"
   },
   {
    "tijdstip": "2026-11-21T15:40:00+01:00",
@@ -7164,8 +7080,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/5401ac8d-879d-4d0a-9331-99426e0732da"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T15:40:00+01:00",
@@ -7178,8 +7093,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C8",
-   "dwf": "https://dwf.nevobo.nl/matches/1b7272a4-e2f4-4e24-9406-a56764a47f6b"
+   "veld": "C8"
   },
   {
    "tijdstip": "2026-11-21T15:40:00+01:00",
@@ -7192,8 +7106,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/c1e45400-5b8d-4b94-8aa2-43f3e0db6cbb"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T16:00:00+01:00",
@@ -7206,8 +7119,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C7",
-   "dwf": "https://dwf.nevobo.nl/matches/0e667494-4b97-4771-a47e-2229541b8b89"
+   "veld": "C7"
   },
   {
    "tijdstip": "2026-11-21T16:00:00+01:00",
@@ -7220,8 +7132,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C5",
-   "dwf": "https://dwf.nevobo.nl/matches/8513eaca-d895-4537-a969-1ce753075623"
+   "veld": "C5"
   },
   {
    "tijdstip": "2026-11-21T16:00:00+01:00",
@@ -7234,8 +7145,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C6",
-   "dwf": "https://dwf.nevobo.nl/matches/ad7ac8ce-66e1-4e5b-89fb-23fe00da890a"
+   "veld": "C6"
   },
   {
    "tijdstip": "2026-11-21T16:00:00+01:00",
@@ -7248,8 +7158,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C1",
-   "dwf": "https://dwf.nevobo.nl/matches/b0039394-bf29-49c9-b6fd-236c5dfcd212"
+   "veld": "C1"
   },
   {
    "tijdstip": "2026-11-21T16:00:00+01:00",
@@ -7262,8 +7171,7 @@
    "postcode": "2566EC",
    "lat": 52.08632,
    "lon": 4.26821,
-   "veld": "C4",
-   "dwf": "https://dwf.nevobo.nl/matches/9f17d2b3-09f3-4f22-bd6e-425251f69745"
+   "veld": "C4"
   },
   {
    "tijdstip": "2026-11-21T17:30:00+01:00",
