@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T20:49:54+00:00",
+ "gegenereerd": "2026-11-19T07:46:34+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5590,7 +5590,7 @@
    "tijdstip": "2026-11-18T21:00:00+01:00",
    "thuis": "VOLEVO MA 1",
    "uit": "Limes MA 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5598,7 +5598,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/bda3797d-3243-4331-95a0-86531933ac20"
+   "dwf": "https://dwf.nevobo.nl/results/bda3797d-3243-4331-95a0-86531933ac20/scoresheets/15de4d66-13f1-4904-82cc-973476e28b9d"
   },
   {
    "tijdstip": "2026-11-19T18:00:00+01:00",
