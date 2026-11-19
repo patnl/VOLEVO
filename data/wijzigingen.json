@@ -1,6 +1,102 @@
 {
-  "bijgewerkt": "2026-11-19T07:46:34+00:00",
+  "bijgewerkt": "2026-11-19T20:54:54+00:00",
   "wijzigingen": [
+    {
+      "id": "nieuw|None|2026-11-29T09:00:00+01:00|VOLEVO MC|Albatros MC",
+      "gezien": "2026-11-19T20:54:54+00:00",
+      "soort": "nieuw",
+      "thuis": "VOLEVO MC",
+      "uit": "Albatros MC",
+      "van": null,
+      "naar": {
+        "tijdstip": "2026-11-29T09:00:00+01:00",
+        "hal": "Topsportcentrum Almere",
+        "plaats": "Almere",
+        "status": "concept"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
+    {
+      "id": "nieuw|None|2026-11-29T09:50:00+01:00|AMSTMB 0|VOLEVO MB",
+      "gezien": "2026-11-19T20:54:54+00:00",
+      "soort": "nieuw",
+      "thuis": "AMSTMB 0",
+      "uit": "VOLEVO MB",
+      "van": null,
+      "naar": {
+        "tijdstip": "2026-11-29T09:50:00+01:00",
+        "hal": "Topsportcentrum Almere",
+        "plaats": "Almere",
+        "status": "concept"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
+    {
+      "id": "nieuw|None|2026-11-29T10:50:00+01:00|vc De Where MC|VOLEVO MC",
+      "gezien": "2026-11-19T20:54:54+00:00",
+      "soort": "nieuw",
+      "thuis": "vc De Where MC",
+      "uit": "VOLEVO MC",
+      "van": null,
+      "naar": {
+        "tijdstip": "2026-11-29T10:50:00+01:00",
+        "hal": "Topsportcentrum Almere",
+        "plaats": "Almere",
+        "status": "concept"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
+    {
+      "id": "nieuw|None|2026-11-29T11:40:00+01:00|VOLEVO MB|VV Utrecht MB",
+      "gezien": "2026-11-19T20:54:54+00:00",
+      "soort": "nieuw",
+      "thuis": "VOLEVO MB",
+      "uit": "VV Utrecht MB",
+      "van": null,
+      "naar": {
+        "tijdstip": "2026-11-29T11:40:00+01:00",
+        "hal": "Topsportcentrum Almere",
+        "plaats": "Almere",
+        "status": "concept"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
+    {
+      "id": "nieuw|None|2026-11-29T11:45:00+01:00|Ardea MC|VOLEVO MC",
+      "gezien": "2026-11-19T20:54:54+00:00",
+      "soort": "nieuw",
+      "thuis": "Ardea MC",
+      "uit": "VOLEVO MC",
+      "van": null,
+      "naar": {
+        "tijdstip": "2026-11-29T11:45:00+01:00",
+        "hal": "Topsportcentrum Almere",
+        "plaats": "Almere",
+        "status": "concept"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
+    {
+      "id": "nieuw|None|2026-11-29T12:30:00+01:00|VOLEVO MB|WHERMB 0",
+      "gezien": "2026-11-19T20:54:54+00:00",
+      "soort": "nieuw",
+      "thuis": "VOLEVO MB",
+      "uit": "WHERMB 0",
+      "van": null,
+      "naar": {
+        "tijdstip": "2026-11-29T12:30:00+01:00",
+        "hal": "Topsportcentrum Almere",
+        "plaats": "Almere",
+        "status": "concept"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
     {
       "id": "verplaatst|2026-11-21T14:00:00+01:00|Kalinko L5 4|VOLEVO L5 7|2026-11-21T14:40:00+01:00|Kalinko L5 4|VOLEVO L5 7",
       "gezien": "2026-11-16T22:27:34+00:00",
@@ -2788,127 +2884,6 @@
       "uit": "Zovoc L4 9",
       "van": {
         "tijdstip": "2026-11-21T13:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": null,
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T13:40:00+01:00|VOLEVO L4 5|Kratos '08 L4 3|2026-11-21T13:20:00+01:00|VOLEVO L4 5|Kratos '08 L4 3",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "VOLEVO L4 5",
-      "uit": "Kratos '08 L4 3",
-      "van": {
-        "tijdstip": "2026-11-21T13:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T13:20:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T13:40:00+01:00|VOLEVO L5 4|VOLEVO L5 2|2026-11-21T15:40:00+01:00|VOLEVO L5 4|VOLEVO L5 2",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "VOLEVO L5 4",
-      "uit": "VOLEVO L5 2",
-      "van": {
-        "tijdstip": "2026-11-21T13:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T15:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T14:00:00+01:00|VOLEVO L4 2|DEO L4 1|2026-11-21T14:20:00+01:00|VOLEVO L4 2|DEO L4 1",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "VOLEVO L4 2",
-      "uit": "DEO L4 1",
-      "van": {
-        "tijdstip": "2026-11-21T14:00:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T14:20:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T14:00:00+01:00|Zovoc L4 11|VOLEVO L4 5|2026-11-21T13:40:00+01:00|Zovoc L4 11|VOLEVO L4 5",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "Zovoc L4 11",
-      "uit": "VOLEVO L4 5",
-      "van": {
-        "tijdstip": "2026-11-21T14:00:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T13:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T14:20:00+01:00|VELO L4 1|VOLEVO L4 2|2026-11-21T14:40:00+01:00|VELO L4 1|VOLEVO L4 2",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "VELO L4 1",
-      "uit": "VOLEVO L4 2",
-      "van": {
-        "tijdstip": "2026-11-21T14:20:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T14:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verwijderd|2026-11-21T14:20:00+01:00|VELO L5 2|VOLEVO L5 4|None",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verwijderd",
-      "thuis": "VELO L5 2",
-      "uit": "VOLEVO L5 4",
-      "van": {
-        "tijdstip": "2026-11-21T14:20:00+01:00",
         "hal": "Houtrust sporthal",
         "plaats": "'s-Gravenhage",
         "status": "concept"
