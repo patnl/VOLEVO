@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-19T20:54:54+00:00",
+ "gegenereerd": "2026-11-20T07:38:55+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5618,7 +5618,7 @@
    "tijdstip": "2026-11-19T21:00:00+01:00",
    "thuis": "VOLEVO DS 3",
    "uit": "Majella DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5626,13 +5626,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/c9dcf762-9910-42ef-894e-920c95ae15fa"
+   "dwf": "https://dwf.nevobo.nl/results/c9dcf762-9910-42ef-894e-920c95ae15fa/scoresheets/5092a46e-687e-45dd-b6fa-5c139776566b"
   },
   {
    "tijdstip": "2026-11-19T21:00:00+01:00",
    "thuis": "VOLEVO HS 3",
    "uit": "Dosko HS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -5640,7 +5640,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/be6e32b8-cdec-4cf3-8d16-aa2e1d4d7ab3"
+   "dwf": "https://dwf.nevobo.nl/results/be6e32b8-cdec-4cf3-8d16-aa2e1d4d7ab3/scoresheets/116651fd-7b5b-4253-bdcb-253d56f57362"
   },
   {
    "tijdstip": "2026-11-20T19:00:00+01:00",
@@ -7583,7 +7583,7 @@
    "tijdstip": "2026-11-29T09:00:00+01:00",
    "thuis": "VOLEVO MC",
    "uit": "Albatros MC",
-   "status": "concept",
+   "status": "gepland",
    "hal": "Topsportcentrum Almere",
    "plaats": "Almere",
    "adres": "Pierre de Coubertinlaan 7",
@@ -7595,9 +7595,9 @@
   },
   {
    "tijdstip": "2026-11-29T09:50:00+01:00",
-   "thuis": "AMSTMB 0",
+   "thuis": "VV Amsterdam MB",
    "uit": "VOLEVO MB",
-   "status": "concept",
+   "status": "gepland",
    "hal": "Topsportcentrum Almere",
    "plaats": "Almere",
    "adres": "Pierre de Coubertinlaan 7",
@@ -7611,7 +7611,7 @@
    "tijdstip": "2026-11-29T10:50:00+01:00",
    "thuis": "vc De Where MC",
    "uit": "VOLEVO MC",
-   "status": "concept",
+   "status": "gepland",
    "hal": "Topsportcentrum Almere",
    "plaats": "Almere",
    "adres": "Pierre de Coubertinlaan 7",
@@ -7625,7 +7625,7 @@
    "tijdstip": "2026-11-29T11:40:00+01:00",
    "thuis": "VOLEVO MB",
    "uit": "VV Utrecht MB",
-   "status": "concept",
+   "status": "gepland",
    "hal": "Topsportcentrum Almere",
    "plaats": "Almere",
    "adres": "Pierre de Coubertinlaan 7",
@@ -7639,7 +7639,7 @@
    "tijdstip": "2026-11-29T11:45:00+01:00",
    "thuis": "Ardea MC",
    "uit": "VOLEVO MC",
-   "status": "concept",
+   "status": "gepland",
    "hal": "Topsportcentrum Almere",
    "plaats": "Almere",
    "adres": "Pierre de Coubertinlaan 7",
@@ -7652,8 +7652,8 @@
   {
    "tijdstip": "2026-11-29T12:30:00+01:00",
    "thuis": "VOLEVO MB",
-   "uit": "WHERMB 0",
-   "status": "concept",
+   "uit": "vc De Where MB",
+   "status": "gepland",
    "hal": "Topsportcentrum Almere",
    "plaats": "Almere",
    "adres": "Pierre de Coubertinlaan 7",
