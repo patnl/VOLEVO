@@ -4,8 +4,40 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 19 Nov 2026 18:49:29 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:32:30 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Vervallen: 20 nov 21:30: Sovicos HS 5 - VOLEVO HS 6]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2019360</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2019360</guid>
+      <description><![CDATA[Vervallen wedstrijd: 3000H4B   AD, Datum: vrijdag 20 november, 21:30, Speellocatie: Steenwijklaan, Steenwijklaan 16, 2541RL  's-Gravenhage]]></description>
+      <pubDate>Fri, 20 Nov 2026 21:30:00 +0100</pubDate>
+      <nevobo:status>vervallen</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO HS 3 - Dosko HS 3, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2017080</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017080</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 3 - Dosko HS 3, Uitslag: 4-0, Setstanden: 25-12, 25-19, 25-20, 25-21]]></description>
+      <pubDate>Thu, 19 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 3 - Majella DS 1, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2009704</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009704</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 3 - Majella DS 1, Uitslag: 1-3, Setstanden: 27-25, 26-28, 20-25, 16-25]]></description>
+      <pubDate>Thu, 19 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MC 2 - ZVH JC 1, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2030157</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2030157</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 2 - ZVH JC 1, Uitslag: 3-2, Setstanden: 25-10, 25-19, 17-25, 20-25, 15-9]]></description>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VOLEVO MA 1 - Limes MA 1, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025503</link>

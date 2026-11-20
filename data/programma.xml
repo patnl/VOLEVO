@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Thu, 19 Nov 2026 18:59:10 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:32:28 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -28,30 +28,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099692</guid>
       <description><![CDATA[Wedstrijd: 3000MA1J1 DC, Datum: , Speellocatie: De Sporthoeve, Vromade 1, 2411LG  Bodegraven]]></description>
       <pubDate/>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[19 nov 18:00: VOLEVO MC 2 - ZVH JC 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2030157</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2030157</guid>
-      <description><![CDATA[Wedstrijd: 3000XC1I1 DA, Datum: donderdag 19 november, 18:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[19 nov 21:00: VOLEVO DS 3 - Majella DS 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2009704</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009704</guid>
-      <description><![CDATA[Wedstrijd: 30003CD   HF, Datum: donderdag 19 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 19 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[19 nov 21:00: VOLEVO HS 3 - Dosko HS 3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2017080</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017080</guid>
-      <description><![CDATA[Wedstrijd: 3000H1G   HF, Datum: donderdag 19 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Thu, 19 Nov 2026 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
@@ -1220,7 +1196,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101317</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MCAAD, Datum: zondag 29 november, 9:00, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
       <pubDate>Sun, 29 Nov 2026 09:00:00 +0100</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[29 nov 9:50: AMSTMB 0 - VOLEVO MB]]></title>
@@ -1228,7 +1204,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101409</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MBCEC, Datum: zondag 29 november, 9:50, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
       <pubDate>Sun, 29 Nov 2026 09:50:00 +0100</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[29 nov 10:50: vc De Where MC - VOLEVO MC]]></title>
@@ -1236,7 +1212,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101326</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MCAFA, Datum: zondag 29 november, 10:50, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
       <pubDate>Sun, 29 Nov 2026 10:50:00 +0100</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[29 nov 11:40: VOLEVO MB - VV Utrecht MB]]></title>
@@ -1244,7 +1220,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101405</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MBCCA, Datum: zondag 29 november, 11:40, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
       <pubDate>Sun, 29 Nov 2026 11:40:00 +0100</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[29 nov 11:45: Ardea MC - VOLEVO MC]]></title>
@@ -1252,7 +1228,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101323</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MCAEA, Datum: zondag 29 november, 11:45, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
       <pubDate>Sun, 29 Nov 2026 11:45:00 +0100</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[29 nov 12:30: VOLEVO MB - WHERMB 0]]></title>
@@ -1260,7 +1236,7 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101406</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MBCCF, Datum: zondag 29 november, 12:30, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
       <pubDate>Sun, 29 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>concept</nevobo:status>
+      <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
       <title><![CDATA[3 dec 19:30: VOLEVO MB 3 - VCH MB 1]]></title>
