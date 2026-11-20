@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 20 Nov 2026 01:32:28 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 08:46:10 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -1199,7 +1199,7 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[29 nov 9:50: AMSTMB 0 - VOLEVO MB]]></title>
+      <title><![CDATA[29 nov 9:50: VV Amsterdam MB - VOLEVO MB]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2101409</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101409</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MBCEC, Datum: zondag 29 november, 9:50, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
@@ -1231,7 +1231,7 @@
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[29 nov 12:30: VOLEVO MB - WHERMB 0]]></title>
+      <title><![CDATA[29 nov 12:30: VOLEVO MB - vc De Where MB]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2101406</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2101406</guid>
       <description><![CDATA[Wedstrijd: 3000WH1MBCCF, Datum: zondag 29 november, 12:30, Speellocatie: Topsportcentrum Almere, Pierre de Coubertinlaan 7, 1362LA  Almere]]></description>
