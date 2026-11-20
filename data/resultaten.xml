@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 20 Nov 2026 08:46:13 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 17:27:53 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Vervallen: 20 nov 21:30: Sovicos HS 5 - VOLEVO HS 6]]></title>
