@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T07:38:55+00:00",
+ "gegenereerd": "2026-11-20T20:39:57+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -5646,7 +5646,7 @@
    "tijdstip": "2026-11-20T19:00:00+01:00",
    "thuis": "Kalinko DS 5",
    "uit": "VOLEVO DS 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -5654,13 +5654,13 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/cb587237-e59a-4af0-946a-6bb342964ae5"
+   "dwf": "https://dwf.nevobo.nl/results/cb587237-e59a-4af0-946a-6bb342964ae5/scoresheets/6e5ff61f-9b9f-45ad-b170-06b683907709"
   },
   {
    "tijdstip": "2026-11-20T19:30:00+01:00",
    "thuis": "Netwerk JC 1",
    "uit": "VOLEVO MC 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Viergang",
    "plaats": "Pijnacker",
    "adres": "Sportlaan 1",
@@ -5668,13 +5668,13 @@
    "lat": 52.02438,
    "lon": 4.42115,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/3716349f-3028-413d-bfc2-6c5c00ffa3d7"
+   "dwf": "https://dwf.nevobo.nl/results/3716349f-3028-413d-bfc2-6c5c00ffa3d7/scoresheets/11f29cbb-70df-49ab-b4fb-b538d9838f56"
   },
   {
    "tijdstip": "2026-11-20T19:30:00+01:00",
    "thuis": "Sovicos DS 5",
    "uit": "VOLEVO DS 7",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Steenwijklaan",
    "plaats": "'s-Gravenhage",
    "adres": "Steenwijklaan 16",
@@ -5682,7 +5682,7 @@
    "lat": 52.04496,
    "lon": 4.28492,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/33cc1f73-0cf0-49b7-94ac-0fcfd3a29f96"
+   "dwf": "https://dwf.nevobo.nl/results/33cc1f73-0cf0-49b7-94ac-0fcfd3a29f96/scoresheets/08352a97-cb93-47c8-a461-a792aa695bc4"
   },
   {
    "tijdstip": "2026-11-20T21:00:00+01:00",
