@@ -147,10 +147,13 @@ if gekoppeld < len(beurten) * 0.8:
 # ── 4. Botsingen signaleren: een beurt tijdens een eigen wedstrijd ──
 speelt = {}
 for w in wedstrijden:
+    t = w.get('tijdstip')
+    if not t:
+        continue  # nog niet ingepland: kan niet botsen
     for naam in (w.get('thuis'), w.get('uit')):
         if (naam or '').upper().startswith('VOLEVO'):
             speelt.setdefault(naam.replace('VOLEVO', '').strip(), set()).add(
-                (w['tijdstip'][:10], w['tijdstip'][11:16]))
+                (t[:10], t[11:16]))
 
 botsingen = []
 for b in beurten:

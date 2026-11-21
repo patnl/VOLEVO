@@ -1,7 +1,7 @@
 {
  "bron": "https://volevo.nl/wp-content/uploads/2026/10/20261012-Officialbeurten-sept-dec-web.xlsx",
  "bestand": "20261012-Officialbeurten-sept-dec-web.xlsx",
- "ingelezen": "2026-10-18T09:04:49Z",
+ "ingelezen": "2026-11-20T13:46:50Z",
  "terugval": false,
  "veelTegelijk": [
   {
@@ -374,6 +374,24 @@
    "opmerking": null
   },
   {
+   "dag": "2026-12-10",
+   "tijd": "21:00",
+   "thuis": "VOLEVO HS 3",
+   "uit": "Kratos '08 HS 5",
+   "taak": "scheidsrechter (vaardigheidstraining)",
+   "team": "HS 1",
+   "opmerking": null
+  },
+  {
+   "dag": "2026-12-10",
+   "tijd": "21:00",
+   "thuis": "VOLEVO HS 3",
+   "uit": "Kratos '08 HS 5",
+   "taak": "teller",
+   "team": "DS 1",
+   "opmerking": null
+  },
+  {
    "dag": "2026-12-17",
    "tijd": "21:00",
    "thuis": "VOLEVO DS 5",
@@ -392,7 +410,15 @@
    "opmerking": null
   }
  ],
- "botsingen": [],
+ "botsingen": [
+  {
+   "dag": "2026-12-17",
+   "tijd": "21:00",
+   "team": "HS 3",
+   "taak": "scheidsrechter (vaardigheidstraining)",
+   "wedstrijd": "VOLEVO DS 5 - Kalinko DS 7"
+  }
+ ],
  "perWedstrijd": {
   "2026-09-03T21:00:00+02:00|VOLEVO DS 3|SKC DS 2": [
    {
@@ -2171,18 +2197,6 @@
    }
   ],
   "2026-12-10T21:00:00+01:00|VOLEVO DS 3|Inter Rijswijk DS 2": [
-   {
-    "taak": "teller",
-    "team": "DS 1",
-    "opmerking": null
-   }
-  ],
-  "2026-12-10T21:00:00+01:00|VOLEVO HS 3|Kratos '08 HS 5": [
-   {
-    "taak": "scheidsrechter (vaardigheidstraining)",
-    "team": "HS 1",
-    "opmerking": null
-   },
    {
     "taak": "teller",
     "team": "DS 1",
