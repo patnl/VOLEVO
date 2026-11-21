@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 20 Nov 2026 23:50:01 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 04:46:55 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -29,70 +29,6 @@
       <description><![CDATA[Wedstrijd: 3000MA1J1 DC, Datum: , Speellocatie: De Sporthoeve, Vromade 1, 2411LG  Bodegraven]]></description>
       <pubDate/>
       <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Kalinko DS 5 - VOLEVO DS 6, Uitslag: 4-0]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041516</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041516</guid>
-      <description><![CDATA[Wedstrijd: Kalinko DS 5 - VOLEVO DS 6, Uitslag: 4-0, Setstanden: 25-17, 25-15, 25-12, 25-15]]></description>
-      <pubDate>Fri, 20 Nov 2026 19:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Sovicos DS 5 - VOLEVO DS 7, Uitslag: 1-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041496</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041496</guid>
-      <description><![CDATA[Wedstrijd: Sovicos DS 5 - VOLEVO DS 7, Uitslag: 1-3, Setstanden: 25-16, 16-25, 26-28, 18-25]]></description>
-      <pubDate>Fri, 20 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Netwerk JC 1 - VOLEVO MC 3, Uitslag: 1-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2035504</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035504</guid>
-      <description><![CDATA[Wedstrijd: Netwerk JC 1 - VOLEVO MC 3, Uitslag: 1-3, Setstanden: 13-25, 25-19, 23-25, 10-25]]></description>
-      <pubDate>Fri, 20 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Punch DS 9 - VOLEVO DS 8, Uitslag: 3-2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041566</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041566</guid>
-      <description><![CDATA[Wedstrijd: Punch DS 9 - VOLEVO DS 8, Uitslag: 3-2, Setstanden: 22-25, 21-25, 25-12, 25-11, 15-1]]></description>
-      <pubDate>Fri, 20 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Ancora RVV HS 2 - VOLEVO HS 5, Uitslag: 3-1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2017702</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017702</guid>
-      <description><![CDATA[Wedstrijd: Ancora RVV HS 2 - VOLEVO HS 5, Uitslag: 3-1, Setstanden: 25-11, 25-23, 25-17, 26-28]]></description>
-      <pubDate>Fri, 20 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Netwerk DS 2 - VOLEVO DS 9, Uitslag: 3-1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041548</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041548</guid>
-      <description><![CDATA[Wedstrijd: Netwerk DS 2 - VOLEVO DS 9, Uitslag: 3-1, Setstanden: 25-17, 25-15, 25-6, 25-27]]></description>
-      <pubDate>Fri, 20 Nov 2026 21:15:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Sovicos DS 4 - VOLEVO DS 5, Uitslag: 0-4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041515</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041515</guid>
-      <description><![CDATA[Wedstrijd: Sovicos DS 4 - VOLEVO DS 5, Uitslag: 0-4, Setstanden: 19-25, 16-25, 15-25, 23-25]]></description>
-      <pubDate>Fri, 20 Nov 2026 21:30:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Vervallen: 20 nov 21:30: Sovicos HS 5 - VOLEVO HS 6]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2019360</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2019360</guid>
-      <description><![CDATA[Vervallen wedstrijd: 3000H4B   AD, Datum: vrijdag 20 november, 21:30, Speellocatie: Steenwijklaan, Steenwijklaan 16, 2541RL  's-Gravenhage]]></description>
-      <pubDate>Fri, 20 Nov 2026 21:30:00 +0100</pubDate>
-      <nevobo:status>vervallen</nevobo:status>
     </item>
     <item>
       <title><![CDATA[21 nov 9:30: Zovoc L2 2 - VOLEVO L2 2]]></title>
