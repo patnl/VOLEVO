@@ -95,6 +95,22 @@
         route: (w.lat && w.lon) ? (w.lat + ',' + w.lon) : [w.hal, w.adres, w.postcode, w.plaats].filter(Boolean).join(', ') };
     },
 
+    // Schatting van reistijd en vertrektijd naar een uitwedstrijd, vanaf De Fluit.
+    // Rekent met hemelsbreed x 1,3 wegfactor en 65 km/u gemiddeld, afgerond op 5 minuten, en
+    // wil 45 minuten voor de aanvang aanwezig zijn. Alleen een schatting: geen routeplanner of file.
+    // Geen resultaat voor wedstrijden in De Fluit, zonder coordinaten of zonder aanvangstijd.
+    reis: function (w) {
+      if (!w || w.hal === 'De Fluit' || !w.tijdstip || typeof w.lat !== 'number' || typeof w.lon !== 'number') return null;
+      var aanvang = new Date(w.tijdstip);
+      if (isNaN(aanvang)) return null;
+      var rad = Math.PI / 180, dLat = (w.lat - 52.09332) * rad, dLon = (w.lon - 4.39517) * rad;
+      var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(52.09332 * rad) * Math.cos(w.lat * rad) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      var km = 2 * 6371 * Math.asin(Math.sqrt(a)) * 1.3;
+      var minuten = Math.max(5, Math.round(km / 65 * 60 / 5) * 5);
+      return { km: Math.round(km), minuten: minuten, vertrek: new Date(aanvang.getTime() - (minuten + 45) * 60000) };
+    },
+
     // Statustekst uit een Nevobo-feed ('vervallen', 'gepland', 'gespeeld'): doorgaan of niet
     isVervallen: function (status) { return status === 'vervallen'; },
 

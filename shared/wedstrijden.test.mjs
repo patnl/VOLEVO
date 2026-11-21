@@ -208,3 +208,15 @@ test('een andere hal die ook De Fluit heet, in een andere plaats, wordt niet gec
   const l = Wedstrijden.locatie({ hal: 'De Fluit', plaats: 'Ergens Anders', adres: 'Straat 5', postcode: '9999ZZ', lat: 51.1, lon: 5.2 });
   assert.equal(l.route, '51.1,5.2');
 });
+
+test('reis: uitwedstrijd geeft een schatting, De Fluit en ontbrekende gegevens niet', () => {
+  const uit = { hal: 'De Stolp', tijdstip: '2026-11-28T14:00:00+01:00', lat: 51.97357, lon: 4.77239 };
+  const r = Wedstrijden.reis(uit);
+  assert.ok(r.km > 20 && r.km < 50, 'afstand Leidschendam-Stolwijk: ' + r.km);
+  assert.equal(r.minuten % 5, 0);
+  assert.equal(new Date(uit.tijdstip) - r.vertrek, (r.minuten + 45) * 60000);
+  assert.equal(Wedstrijden.reis({ hal: 'De Fluit', tijdstip: uit.tijdstip, lat: 52.09, lon: 4.39 }), null);
+  assert.equal(Wedstrijden.reis({ ...uit, tijdstip: null }), null);
+  assert.equal(Wedstrijden.reis({ ...uit, lat: null }), null);
+  assert.equal(Wedstrijden.reis(null), null);
+});

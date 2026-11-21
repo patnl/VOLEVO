@@ -59,6 +59,13 @@ var App = (function () {
       oud: !geldig || Date.now() - datum.getTime() > 48 * 60 * 60 * 1000 };
   }
 
+  // Reistijd en vertrektijd naar een uitwedstrijd (schatting, zie Wedstrijden.reis)
+  function reisRegel(w) {
+    var r = Wedstrijden.reis(w);
+    if (!r) return '';
+    return '<p class="reis">Reis ca. ' + r.minuten + ' min (' + r.km + ' km) · vertrek rond <strong>' + esc(tijd(r.vertrek)) + '</strong> <span class="sub">(schatting, 45 min v\u00f3\u00f3r aanvang aanwezig)</span></p>';
+  }
+
   // Een wedstrijdkaart: eerst tijd en thuis/uit, dan wie tegen wie, dan waar. Met een gekozen team staat dat team vooraan.
   function wedstrijdKaart(w, D, opties) {
     opties = opties || {};
@@ -74,6 +81,7 @@ var App = (function () {
       '<span class="label ' + (p.eigenThuis ? '' : 'uit') + '">' + (p.eigenThuis ? 'Thuis' : 'Uit') + '</span></div>' +
       '<p class="teams">' + esc(teamNaam(p.eigen)) + '<br><span class="tegen">tegen ' + esc(p.tegen) + '</span></p>' +
       '<p class="plek"><strong>' + esc(w.hal || 'Sporthal nog niet bekend') + '</strong>' + (veld ? ' · ' + esc(veld) : '') + (adres ? '<br>' + esc(adres) : '') + '</p>' +
+      reisRegel(w) +
       (helpers.length ? '<p class="officials">' + helpers.map(function (h) { return esc(h.soort + ': ' + h.team); }).join(' · ') + '</p>' : '') +
       (opties.helpers && !D.officialsOk ? '<p class="officials">Fluit- en telbeurten konden niet worden geladen.</p>' : '') +
       (knoppen ? '<div class="acties">' + knoppen + '</div>' : '') +
