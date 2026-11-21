@@ -1,0 +1,51 @@
+name: Verslagen schrijven
+
+# Laat Claude per gespeelde VOLEVO-wedstrijd een kort verslag schrijven (data/verslagen.json),
+# dat de uitslagenkaart in de app toont. Heeft het repo-secret ANTHROPIC_API_KEY nodig;
+# zonder secret doet de workflow niets en slaagt hij gewoon.
+
+on:
+  schedule:
+    - cron: '41 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/mirror-verslagen.yml'
+      - 'scripts/build_verslagen.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-verslagen
+  cancel-in-progress: false
+
+jobs:
+  verslagen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Verslagen schrijven
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/build_verslagen.py
+
+      - name: Committen als er iets is veranderd
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain data/verslagen.json)" ]; then
+            echo "Geen nieuwe verslagen."
+            exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/verslagen.json
+          git commit -m "Verslagen bijwerken ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+          for poging in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push geweigerd, opnieuw na rebase (poging $poging)"
+            git pull --rebase --autostash origin main
+          done
+          echo "Push bleef falen." >&2
+          exit 1

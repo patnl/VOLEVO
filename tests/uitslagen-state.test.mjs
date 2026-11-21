@@ -29,7 +29,9 @@ function omgeving() {
   }
   const scope = vm.createContext({
     Date, URL, DOMParser: Parser, Wedstrijden,
-    fetch: () => new Promise((resolve, reject) => pending.push({ resolve, reject })),
+    // verslagen.json is optioneel en wordt hier direct 'afwezig'; alleen de uitslagenaanvragen zijn handmatig te sturen
+    fetch: (url) => /verslagen\.json/.test(url) ? Promise.resolve({ ok: false })
+      : new Promise((resolve, reject) => pending.push({ resolve, reject })),
     document: { getElementById: (id) => id === 'inhoud' ? inhoud : null },
     App: { start: (c) => { config = c; }, esc: String, kort: () => 'datum', teamNaam: String,
       bronKnop: () => '', herstelStaat: () => {} }
@@ -87,4 +89,11 @@ test('een geldig leeg uitslagenoverzicht toont wel de lege toestand', async () =
   e.resolve(0, '[]');
   await render;
   assert.match(e.inhoud.innerHTML, /Geen uitslagen/);
+});
+
+test('een uitslagkaart toont het verslag als dat er is, en anders niets extra', () => {
+  const e = omgeving();
+  const u = { id: 'g1', thuis: 'VOLEVO MA 4', uit: 'Andere club MA 1', score: '3-1', sets: '25-20', tijd: new Date() };
+  assert.doesNotMatch(e.scope.Resultaten.kaart(u, 'VOLEVO MA 4'), /class="verslag"/);
+  assert.match(e.scope.Resultaten.kaart({ ...u, verslag: 'Mooie winst!' }, 'VOLEVO MA 4'), /class="verslag"[^>]*>Mooie winst!</);
 });
