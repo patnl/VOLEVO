@@ -12,7 +12,7 @@
 <script>var VOLEVO_DATA = '../';</script>
 <script src="../overrides.js?v=f23fd34a8eec"></script>
 <script src="../shared/wedstrijden.js?v=47d9ac833da4"></script>
-<script src="app.js?v=f1542e1f40da"></script>
+<script src="app.js?v=983cd6e68258"></script>
 </head>
 <body>
 <script>
@@ -38,6 +38,7 @@ function takenHtml(D, naam) {
   } else {
     html += '<p class="sub">Je team heeft deze beurten. Wie de beurt uitvoert, spreek je af met je teamcontactpersoon.</p>';
   }
+  html += App.officialsMelding(D, code);
   if (D.officialsOk && !taken.length) html += '<div class="melding leeg"><strong>Geen beurten gevonden voor jullie team</strong>Er staan nu geen fluit- of telbeurten op de planning.</div>';
   if (dezeWeek.length) html += '<h3 class="dag">Deze week</h3><div class="lijst">' + dezeWeek.map(kaart).join('') + '</div>';
   if (later.length) html += '<h3 class="dag">Later</h3><div class="lijst">' + later.slice(0, 20).map(kaart).join('') + '</div>' + (later.length > 20 ? '<p class="sub">En nog ' + (later.length - 20) + ' latere beurten.</p>' : '');
