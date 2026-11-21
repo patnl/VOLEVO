@@ -1,13 +1,29 @@
 name: Verslagen schrijven
 
-# Laat Claude per gespeelde VOLEVO-wedstrijd een kort verslag schrijven (data/verslagen.json),
-# dat de uitslagenkaart in de app toont. Heeft het repo-secret ANTHROPIC_API_KEY nodig;
-# zonder secret doet de workflow niets en slaagt hij gewoon.
+# Laat een taalmodel per gespeelde VOLEVO-wedstrijd een kort verslag schrijven (data/verslagen.json),
+# dat de uitslagenkaart in de app toont. Welk model en welke aanbieder staat in repo-instellingen,
+# zie scripts/llm.py:
+#   Secret    LLM_API_KEY    de sleutel (ANTHROPIC_API_KEY blijft werken als terugval)
+#   Variabele LLM_PROVIDER   anthropic (standaard) of openai
+#   Variabele LLM_BASE_URL   adres van de API; leeg = Anthropic zelf, of vul het Foundry-adres in
+#   Variabele LLM_MODEL      modelnaam, in Azure de naam van je deployment
+# Zonder sleutel doet de workflow niets en slaagt hij gewoon.
+# Handmatig starten met "proef" laat zien wat een model zou schrijven, zonder iets op te slaan;
+# vul bij "model" een andere naam in om modellen naast elkaar te proberen.
 
 on:
   schedule:
     - cron: '41 * * * *'
   workflow_dispatch:
+    inputs:
+      proef:
+        description: 'Proef: toon drie teksten in de log en sla niets op'
+        type: boolean
+        default: true
+      model:
+        description: 'Model of deployment voor deze run (leeg = instelling van de repo)'
+        type: string
+        default: ''
   push:
     paths:
       - '.github/workflows/mirror-verslagen.yml'
@@ -28,8 +44,13 @@ jobs:
 
       - name: Verslagen schrijven
         env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 scripts/build_verslagen.py
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ inputs.model || vars.LLM_MODEL }}
+          PROEF: ${{ inputs.proef && '--proef' || '' }}
+        run: python3 scripts/build_verslagen.py $PROEF
 
       - name: Committen als er iets is veranderd
         run: |
