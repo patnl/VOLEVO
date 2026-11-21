@@ -1,6 +1,6 @@
 {
-  "commit": "3000db7",
-  "date": "2026-11-21T15:51:12+01:00",
+  "commit": "556ff05",
+  "date": "2026-11-21T15:53:55+01:00",
   "files": {
     "index.html": {
       "commit": "206d57f",
@@ -41,6 +41,10 @@
     "volevo-programma.html": {
       "commit": "5409fb4",
       "date": "2026-10-17T12:58:25+02:00"
+    },
+    "volevo-qr.html": {
+      "commit": "556ff05",
+      "date": "2026-11-21T15:53:55+01:00"
     },
     "volevo-schema.html": {
       "commit": "4d42936",
