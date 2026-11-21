@@ -4,8 +4,464 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 21 Nov 2026 04:35:39 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 13:10:03 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO L4 3 - Zovoc L4 7, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097621</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097621</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 3 - Zovoc L4 7, Uitslag: 4-0, Setstanden: 15-9, 19-8]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L4 5 - Kratos '08 L4 3, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097615</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097615</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 5 - Kratos '08 L4 3, Uitslag: 4-0, Setstanden: 5-0, 5-0]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L4 4 - Zovoc L4 6, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099316</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099316</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 4 - Zovoc L4 6, Uitslag: 4-0, Setstanden: 15-11, 12-11]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[DEO L4 3 - VOLEVO L4 3, Uitslag: 2-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097620</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097620</guid>
+      <description><![CDATA[Wedstrijd: DEO L4 3 - VOLEVO L4 3, Uitslag: 2-2, Setstanden: 11-14, 18-8]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L4 1 - Sovicos L4 2, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099306</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099306</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 1 - Sovicos L4 2, Uitslag: 4-0, Setstanden: 15-12, 17-8]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L4 5 - Kalinko L4 4, Uitslag: 2-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097613</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097613</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 5 - Kalinko L4 4, Uitslag: 2-2, Setstanden: 6-21, 13-12]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc L4 9 - VOLEVO L4 4, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099314</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099314</guid>
+      <description><![CDATA[Wedstrijd: Zovoc L4 9 - VOLEVO L4 4, Uitslag: 4-0, Setstanden: 18-5, 14-10]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc L4 8 - VOLEVO L4 1, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099300</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099300</guid>
+      <description><![CDATA[Wedstrijd: Zovoc L4 8 - VOLEVO L4 1, Uitslag: 0-4, Setstanden: 7-15, 10-16]]></description>
+      <pubDate>Sat, 21 Nov 2026 12:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc L3 3 - VOLEVO L3 8, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099593</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099593</guid>
+      <description><![CDATA[Wedstrijd: Zovoc L3 3 - VOLEVO L3 8, Uitslag: 2-0, Setstanden: 24-19]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 1 - Netwerk L3 5, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097517</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097517</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 1 - Netwerk L3 5, Uitslag: 2-0, Setstanden: 28-11]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Inter Rijswijk L3 2 - VOLEVO L3 5, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097512</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097512</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L3 2 - VOLEVO L3 5, Uitslag: 0-2, Setstanden: 17-23]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VELO L3 3 - VOLEVO L3 8, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099592</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099592</guid>
+      <description><![CDATA[Wedstrijd: VELO L3 3 - VOLEVO L3 8, Uitslag: 2-0, Setstanden: 20-14]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc L3 1 - VOLEVO L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097518</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097518</guid>
+      <description><![CDATA[Wedstrijd: Zovoc L3 1 - VOLEVO L3 1, Uitslag: 0-2, Setstanden: 13-20]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 5 - Netwerk L3 4, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097508</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097508</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - Netwerk L3 4, Uitslag: 2-0, Setstanden: 10-0]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 8 - VELO L3 2, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099595</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099595</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 8 - VELO L3 2, Uitslag: 0-2, Setstanden: 12-21]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 5 - Zovoc L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097519</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097519</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - Zovoc L3 1, Uitslag: 0-2, Setstanden: 21-28]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Inter Rijswijk L3 2 - VOLEVO L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097514</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097514</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L3 2 - VOLEVO L3 1, Uitslag: 0-2, Setstanden: 13-28]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 8 - VELO L3 5, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099598</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099598</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 8 - VELO L3 5, Uitslag: 2-0, Setstanden: 28-10]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:10:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 8 - Kalinko L3 2, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099596</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099596</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 8 - Kalinko L3 2, Uitslag: 0-2, Setstanden: 21-31]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Netwerk L3 5 - VOLEVO L3 5, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097515</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097515</guid>
+      <description><![CDATA[Wedstrijd: Netwerk L3 5 - VOLEVO L3 5, Uitslag: 0-2, Setstanden: 19-25]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VCH MA 1 - VOLEVO MA 1, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025521</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025521</guid>
+      <description><![CDATA[Wedstrijd: VCH MA 1 - VOLEVO MA 1, Uitslag: 3-1, Setstanden: 25-19, 25-23, 12-25, 25-15]]></description>
+      <pubDate>Sat, 21 Nov 2026 11:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Netwerk L3 3 - VOLEVO L3 2, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099589</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099589</guid>
+      <description><![CDATA[Wedstrijd: Netwerk L3 3 - VOLEVO L3 2, Uitslag: 2-0, Setstanden: 25-13]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 5 - VOLEVO L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097516</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097516</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - VOLEVO L3 1, Uitslag: 0-2, Setstanden: 11-32]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 5 - VOLEVO L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097516</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097516</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 5 - VOLEVO L3 1, Uitslag: 0-2, Setstanden: 11-32]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 4 - Netwerk L3 2, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099573</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099573</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 4 - Netwerk L3 2, Uitslag: 0-2, Setstanden: 14-22]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 7 - VOLEVO L3 6, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097539</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097539</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - VOLEVO L3 6, Uitslag: 0-2, Setstanden: 15-30]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 7 - VOLEVO L3 6, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097539</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097539</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - VOLEVO L3 6, Uitslag: 0-2, Setstanden: 15-30]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Inter Rijswijk L3 4 - VOLEVO L3 3, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099580</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099580</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L3 4 - VOLEVO L3 3, Uitslag: 0-2, Setstanden: 11-18]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 2 - Kalinko L3 1, Uitslag: 1-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099587</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099587</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - Kalinko L3 1, Uitslag: 1-1, Setstanden: 18-18]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 1 - Netwerk L3 4, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097510</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097510</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 1 - Netwerk L3 4, Uitslag: 0-2, Setstanden: 0-10]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Netwerk L3 2 - VOLEVO L3 3, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099579</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099579</guid>
+      <description><![CDATA[Wedstrijd: Netwerk L3 2 - VOLEVO L3 3, Uitslag: 2-0, Setstanden: 24-14]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 4 - Netwerk L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099571</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099571</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 4 - Netwerk L3 1, Uitslag: 0-2, Setstanden: 16-18]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc L2 1 - VOLEVO L2 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099563</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099563</guid>
+      <description><![CDATA[Wedstrijd: Zovoc L2 1 - VOLEVO L2 1, Uitslag: 0-2, Setstanden: 3-5]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko L3 3 - VOLEVO L3 7, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097550</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097550</guid>
+      <description><![CDATA[Wedstrijd: Kalinko L3 3 - VOLEVO L3 7, Uitslag: 2-0, Setstanden: 24-18]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 6 - VELO L3 4, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097537</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097537</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 6 - VELO L3 4, Uitslag: 0-2, Setstanden: 16-26]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Inter Rijswijk L3 3 - VOLEVO L3 2, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099586</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099586</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L3 3 - VOLEVO L3 2, Uitslag: 0-2, Setstanden: 11-16]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 4 - Inter Rijswijk L3 1, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099570</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099570</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 4 - Inter Rijswijk L3 1, Uitslag: 2-0, Setstanden: 17-13]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:20:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VELO L3 4 - VOLEVO L3 7, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097544</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097544</guid>
+      <description><![CDATA[Wedstrijd: VELO L3 4 - VOLEVO L3 7, Uitslag: 2-0, Setstanden: 22-21]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:10:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VELO L3 1 - VOLEVO L3 6, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097549</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097549</guid>
+      <description><![CDATA[Wedstrijd: VELO L3 1 - VOLEVO L3 6, Uitslag: 2-0, Setstanden: 29-14]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:10:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 3 - Netwerk L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099569</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099569</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 3 - Netwerk L3 1, Uitslag: 0-2, Setstanden: 15-20]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:10:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L2 1 - Inter Rijswijk L2 2, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099556</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099556</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L2 1 - Inter Rijswijk L2 2, Uitslag: 2-0, Setstanden: 9-4]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:10:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Inter Rijswijk L2 1 - VOLEVO L2 2, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099562</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099562</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L2 1 - VOLEVO L2 2, Uitslag: 2-0, Setstanden: 10-6]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:10:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L2 2 - Kalinko L2 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099555</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099555</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L2 2 - Kalinko L2 1, Uitslag: 0-2, Setstanden: 9-16]]></description>
+      <pubDate>Sat, 21 Nov 2026 10:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 7 - DEO L3 1, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097534</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097534</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - DEO L3 1, Uitslag: 2-0, Setstanden: 22-4]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 2 - Netwerk L3 3, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099583</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099583</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 2 - Netwerk L3 3, Uitslag: 0-2, Setstanden: 7-15]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 3 - VOLEVO L3 4, Uitslag: 1-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099568</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099568</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 3 - VOLEVO L3 4, Uitslag: 1-1, Setstanden: 15-15]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 3 - VOLEVO L3 4, Uitslag: 1-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099568</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099568</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 3 - VOLEVO L3 4, Uitslag: 1-1, Setstanden: 15-15]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:50:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 7 - Zovoc L3 2, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097548</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097548</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 7 - Zovoc L3 2, Uitslag: 0-2, Setstanden: 10-18]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc L3 4 - VOLEVO L3 6, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097533</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097533</guid>
+      <description><![CDATA[Wedstrijd: Zovoc L3 4 - VOLEVO L3 6, Uitslag: 2-0, Setstanden: 33-16]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Inter Rijswijk L3 4 - VOLEVO L3 4, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099567</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099567</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L3 4 - VOLEVO L3 4, Uitslag: 0-2, Setstanden: 11-18]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L2 2 - Inter Rijswijk L2 2, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099553</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099553</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L2 2 - Inter Rijswijk L2 2, Uitslag: 2-0, Setstanden: 8-7]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L2 1 - Inter Rijswijk L2 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099565</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099565</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L2 1 - Inter Rijswijk L2 1, Uitslag: 0-2, Setstanden: 9-10]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:40:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO L3 6 - DEO L3 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2097540</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2097540</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 6 - DEO L3 1, Uitslag: 0-2, Setstanden: 11-14]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko L3 1 - VOLEVO L3 2, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099581</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099581</guid>
+      <description><![CDATA[Wedstrijd: Kalinko L3 1 - VOLEVO L3 2, Uitslag: 0-2, Setstanden: 14-20]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Inter Rijswijk L3 1 - VOLEVO L3 3, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099566</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099566</guid>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L3 1 - VOLEVO L3 3, Uitslag: 2-0, Setstanden: 20-18]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko L2 1 - VOLEVO L2 1, Uitslag: 0-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099564</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099564</guid>
+      <description><![CDATA[Wedstrijd: Kalinko L2 1 - VOLEVO L2 1, Uitslag: 0-2, Setstanden: 16-20]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc L2 2 - VOLEVO L2 2, Uitslag: 2-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2099552</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2099552</guid>
+      <description><![CDATA[Wedstrijd: Zovoc L2 2 - VOLEVO L2 2, Uitslag: 2-0, Setstanden: 7-4]]></description>
+      <pubDate>Sat, 21 Nov 2026 09:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Vervallen: 20 nov 21:30: Sovicos HS 5 - VOLEVO HS 6]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2019360</link>
