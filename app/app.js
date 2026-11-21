@@ -114,9 +114,33 @@ var App = (function () {
 
   function vervallenMeldingen(lijst) {
     var nu = new Date();
-    return Wedstrijden.vervallen(lijst).filter(function (w) { return new Date(w.tijdstip) > nu; }).map(function (w) {
+    // Een wedstrijd zonder tijdstip valt uit elke lijst (er is niets om op te sorteren). Dat melden we, zodat
+    // niemand denkt dat de wedstrijd er niet is.
+    var zonderTijd = Wedstrijden.speelbaar(lijst).filter(function (w) { return !w.tijdstip || isNaN(new Date(w.tijdstip)); }).map(function (w) {
+      return '<div class="melding"><strong>Tijdstip nog niet bekend</strong>' + esc(w.thuis) + ' – ' + esc(w.uit) +
+        ' staat nog zonder tijd in het programma en is daarom niet in de lijst opgenomen. Kijk later nog eens, of vraag het je teamcontactpersoon.' +
+        '<br><small>Voor degene die het programma beheert: vul het tijdstip van deze wedstrijd in bij Nevobo (of zet het als correctie in de beheerpagina). De app pakt het bij de volgende update vanzelf op.</small></div>';
+    }).join('');
+    return zonderTijd + Wedstrijden.vervallen(lijst).filter(function (w) { return new Date(w.tijdstip) > nu; }).map(function (w) {
       return '<div class="melding"><strong>Vervallen</strong>' + esc(w.thuis) + ' – ' + esc(w.uit) + ' op ' + esc(kort(new Date(w.tijdstip))) + ' gaat niet door.</div>';
     }).join('');
+  }
+
+  // Zijn de fluit- en telbeurten verouderd, of konden beurten niet aan een wedstrijd worden gekoppeld? Dan zeggen we dat.
+  function officialsMelding(D, code) {
+    if (!D.officialsOk) return '';
+    var html = '', ingelezen = new Date(D.officialsIngelezen);
+    if (isNaN(ingelezen) || Date.now() - ingelezen.getTime() > 3 * 24 * 3600e3)
+      html += '<div class="melding"><strong>Beurten mogelijk niet actueel</strong>De fluit- en telbeurten zijn ' +
+        (isNaN(ingelezen) ? 'al een tijd niet' : 'sinds ' + esc(kort(ingelezen)) + ' niet') + ' bijgewerkt. Controleer het schema op volevo.nl als het ergens niet klopt.' +
+        '<br><small>Voor degene die het officialsschema beheert: kijk of het Excel-bestand op volevo.nl nog een tabblad "Thuiswedstrijden" heeft en of elke wedstrijd een tijd heeft. Daarna werkt de koppeling zichzelf binnen een dag bij.</small></div>';
+    var los = (D.officialsNietGekoppeld || []).filter(function (b) { return !code || b.team === code; });
+    if (los.length)
+      html += '<div class="melding"><strong>' + los.length + ' ' + (los.length === 1 ? 'beurt' : 'beurten') + ' niet aan een wedstrijd te koppelen</strong>' +
+        los.slice(0, 3).map(function (b) { return esc(b.dag + ' ' + b.tijd + ': ' + (b.taak || 'beurt') + ' bij ' + b.thuis + ' – ' + b.uit); }).join('<br>') +
+        (los.length > 3 ? '<br>… en ' + (los.length - 3) + ' andere' : '') +
+        '<br><small>Voor degene die het schema beheert: controleer datum, tijd en teamnamen van deze beurten in het Excel-bestand; ze moeten precies overeenkomen met het programma van Nevobo.</small></div>';
+    return html;
   }
 
   // Uitleg om VOLEVO als icoon op de telefoon te zetten; weg als de app al zo geopend is.
@@ -140,11 +164,11 @@ var App = (function () {
   // terwijl de beurten alleen niet geladen konden worden.
   async function laadGegevens() {
     var m = await json('../data/matches.json');
-    var over = null, off = {}, officialsOk = false, teamstanden = null;
+    var over = null, off = {}, officialsOk = false, teamstanden = null, ingelezen = null, nietGekoppeld = [];
     try { over = await laadOverrides(); } catch (e) {}
     try {
       var o = await json('../data/officials.json');
-      if (o && typeof o.perWedstrijd === 'object' && o.perWedstrijd !== null) { off = o.perWedstrijd; officialsOk = true; }
+      if (o && typeof o.perWedstrijd === 'object' && o.perWedstrijd !== null) { off = o.perWedstrijd; officialsOk = true; ingelezen = o.ingelezen || null; nietGekoppeld = Array.isArray(o.nietGekoppeld) ? o.nietGekoppeld : []; }
     } catch (e) {}
     try {
       var standen = await json('../data/teamstanden.json');
@@ -153,7 +177,7 @@ var App = (function () {
     return { wedstrijden: m.wedstrijden || [], gegenereerd: m.gegenereerd || null,
       teamstanden: teamstanden,
       correctiesOk: !!over, correcties: (over && over.velden) || {}, meldingen: (over && over.meldingen) || {}, standen: (over && over.standen) || {},
-      officialsOk: officialsOk, officials: off };
+      officialsOk: officialsOk, officials: off, officialsIngelezen: ingelezen, officialsNietGekoppeld: nietGekoppeld };
   }
 
   function teamsUit(wedstrijden) {
@@ -269,6 +293,6 @@ var App = (function () {
   }
 
   return { start: start, esc: esc, pad: pad, dagSleutel: dagSleutel, tijd: tijd, dagTekst: dagTekst, kort: kort, teamNaam: teamNaam, team: team,
-           wedstrijdKaart: wedstrijdKaart, vervallenMeldingen: vervallenMeldingen, beginschermKaart: beginschermKaart,
+           wedstrijdKaart: wedstrijdKaart, vervallenMeldingen: vervallenMeldingen, officialsMelding: officialsMelding, beginschermKaart: beginschermKaart,
            dagKaart: dagKaart, zaalLink: zaalLink, zaalLabel: zaalLabel, bronKnop: bronKnop, teamStand: teamStand, herstelStaat: herstelStaat, VAN: VAN };
 })();
