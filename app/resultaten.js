@@ -20,7 +20,16 @@ function parse(xml) {
 async function laad() {
   var r = await fetch('../data/resultaten.xml?t=' + Date.now(), { cache: 'no-store' });
   if (!r.ok) throw new Error('resultaten ' + r.status);
-  return parse(new DOMParser().parseFromString(await r.text(), 'text/xml'));
+  var lijst = parse(new DOMParser().parseFromString(await r.text(), 'text/xml'));
+  // Verslagen zijn een extraatje: ontbreken of niet laden mag de uitslagen nooit blokkeren
+  try {
+    // Maximaal 4 seconden wachten: een trage verslagenbron mag de uitslagen niet ophouden
+    var v = await Promise.race([fetch('../data/verslagen.json?t=' + Date.now(), { cache: 'no-store' }),
+      new Promise(function (klaar) { if (typeof setTimeout === 'function') setTimeout(function () { klaar(null); }, 4000); })]);
+    var verslagen = v && v.ok ? ((await v.json()).verslagen || {}) : {};
+    lijst.forEach(function (u) { if (verslagen[u.id] && verslagen[u.id].tekst) u.verslag = verslagen[u.id].tekst; });
+  } catch (e) {}
+  return lijst;
 }
 function kaart(u, naam) {
   var k = Wedstrijden.uitkomst(u.score), res = Wedstrijden.resultaatVoorTeam(u, naam);
@@ -35,6 +44,7 @@ function kaart(u, naam) {
   return '<article class="kaart"><div class="rij1"><span class="sub" style="margin:0">' + App.esc(App.kort(u.tijd)) + '</span>' + badge + '</div>' +
     regel(u.thuis + ' (thuis)', k.winnaar ? String(k.thuis) : '–', k.winnaar === 'thuis') + regel(u.uit + ' (uit)', k.winnaar ? String(k.uit) : '–', k.winnaar === 'uit') +
     '<p class="plek" style="margin-top:8px"><strong>' + App.esc(winnaarTekst) + '</strong></p>' +
+    (u.verslag ? '<p class="verslag" style="margin:6px 0 0;font-style:italic">' + App.esc(u.verslag) + '</p>' : '') +
     (u.sets ? '<p class="sets">Setstanden (thuis–uit): ' + App.esc(u.sets) + '</p>' : '') +
     (App.bronKnop(u.id, 'Bekijk bij Nevobo') ? '<div class="acties">' + App.bronKnop(u.id, 'Bekijk bij Nevobo') + '</div>' : '') + '</article>';
 }
