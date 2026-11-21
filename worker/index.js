@@ -17,7 +17,7 @@ const SLEUTEL = /^\d{4}-\d{2}-\d{2}T[\d:+.-]+\|.{1,120}\|.{1,120}$/;
 
 function cors(env) {
   return {
-    'Access-Control-Allow-Origin': env.ALLOWED_ORIGIN || 'https://volevo.app',
+    'Access-Control-Allow-Origin': env.ALLOWED_ORIGIN || 'https://patnl.github.io',
     'Access-Control-Allow-Methods': 'GET, PUT, OPTIONS',
     'Access-Control-Allow-Headers': 'Authorization, Content-Type',
     'Vary': 'Origin'
