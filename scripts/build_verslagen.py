@@ -3,22 +3,25 @@
 
 Leest data/resultaten.xml (de gespiegelde Nevobo-uitslagen) en laat Claude per nieuwe
 uitslag een of twee zinnen schrijven, alleen op basis van score en setstanden.
-Zonder ANTHROPIC_API_KEY doet het script niets (en slaagt), zodat de workflow veilig
-kan draaien voordat het secret is ingesteld. Een fout bij een wedstrijd slaat alleen die
+Het model en de aanbieder staan in de omgeving (LLM_PROVIDER, LLM_BASE_URL, LLM_MODEL,
+LLM_API_KEY; zie scripts/llm.py), dus Anthropic, Claude in Foundry en OpenAI werken allemaal.
+Zonder sleutel doet het script niets (en slaagt), zodat de workflow veilig kan draaien voordat
+het secret is ingesteld. Met --proef schrijft het niets weg en toont het alleen de teksten. Een fout bij een wedstrijd slaat alleen die
 wedstrijd over; bestaande verslagen blijven staan.
 """
 import json
 import os
 import re
 import sys
-import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import llm  # noqa: E402
+
 BRON = 'data/resultaten.xml'
 UIT = 'data/verslagen.json'
-MODEL = os.environ.get('VERSLAG_MODEL', 'claude-haiku-5-5')
 MAX_PER_RUN = 10          # begrenst de kosten bij een eerste run of na een storing
 NIEUW_BINNEN_DAGEN = 14   # oudere uitslagen krijgen geen verslag meer
 BEWAAR_DAGEN = 60         # oudere verslagen worden opgeruimd
@@ -59,15 +62,8 @@ def prompt(u):
         'Bij verlies: sportief en opbeurend. Geef alleen de tekst terug.')
 
 
-def vraag_claude(u, sleutel):
-    body = json.dumps({'model': MODEL, 'max_tokens': 200,
-                       'messages': [{'role': 'user', 'content': prompt(u)}]}).encode()
-    req = urllib.request.Request('https://api.anthropic.com/v1/messages', data=body, headers={
-        'x-api-key': sleutel, 'anthropic-version': '2023-06-01', 'content-type': 'application/json'})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        data = json.load(r)
-    tekst = ''.join(b.get('text', '') for b in data.get('content', []) if b.get('type') == 'text').strip()
-    return tekst[:400]
+def schrijf_verslag(u, cfg):
+    return llm.vraag(prompt(u), max_tokens=300, cfg=cfg)[:400]
 
 
 def laad_bestaand():
@@ -78,26 +74,43 @@ def laad_bestaand():
         return {}
 
 
-def main():
-    sleutel = os.environ.get('ANTHROPIC_API_KEY', '').strip()
-    if not sleutel:
-        print('Geen ANTHROPIC_API_KEY ingesteld - geen verslagen gemaakt')
+def main(argv=None):
+    proef = '--proef' in (argv if argv is not None else sys.argv[1:])
+    try:
+        cfg = llm.configuratie()
+    except llm.LlmFout as e:
+        print('Fout: %s' % e, file=sys.stderr)
+        return 1
+    if not cfg['sleutel']:
+        print('Geen LLM_API_KEY ingesteld - geen verslagen gemaakt')
         return 0
     nu = datetime.now(timezone.utc)
     verslagen = laad_bestaand()
-    nieuw = [u for u in uitslagen(BRON) if u['id'] and u['id'] not in verslagen
-             and nu - u['tijd'] <= timedelta(days=NIEUW_BINNEN_DAGEN)]
-    nieuw.sort(key=lambda u: u['tijd'], reverse=True)
+    uitgelezen = uitslagen(BRON)
+    # Een proef bekijkt de nieuwste uitslagen, ook als daar al een verslag van is
+    kandidaten = [u for u in uitgelezen if u['id'] and (proef or u['id'] not in verslagen)
+                  and nu - u['tijd'] <= timedelta(days=NIEUW_BINNEN_DAGEN)]
+    kandidaten.sort(key=lambda u: u['tijd'], reverse=True)
+    kandidaten = kandidaten[:3] if proef else kandidaten[:MAX_PER_RUN]
+    print('%s via %s, model %s' % ('Proef' if proef else 'Verslagen', cfg['provider'], cfg['model']))
     gemaakt = 0
-    for u in nieuw[:MAX_PER_RUN]:
+    for u in kandidaten:
         try:
-            tekst = vraag_claude(u, sleutel)
+            tekst = schrijf_verslag(u, cfg)
         except Exception as e:  # een mislukte wedstrijd mag de rest niet blokkeren
             print('Verslag mislukt voor %s - %s: %s' % (u['thuis'], u['uit'], e), file=sys.stderr)
             continue
-        if tekst:
-            verslagen[u['id']] = {'tekst': tekst, 'gemaakt': nu.isoformat(), 'tijd': u['tijd'].isoformat()}
-            gemaakt += 1
+        if not tekst:
+            continue
+        if proef:
+            print('\n%s - %s (%s)\n  %s' % (u['thuis'], u['uit'], u['score'], tekst))
+        else:
+            verslagen[u['id']] = {'tekst': tekst, 'gemaakt': nu.isoformat(), 'tijd': u['tijd'].isoformat(),
+                                  'model': cfg['model']}
+        gemaakt += 1
+    if proef:
+        print('\nProef klaar: %d tekst(en), niets opgeslagen' % gemaakt)
+        return 0
     grens = nu - timedelta(days=BEWAAR_DAGEN)
     verslagen = {k: v for k, v in verslagen.items()
                  if (datetime.fromisoformat(v.get('tijd', nu.isoformat())) > grens)}
