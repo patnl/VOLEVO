@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 21 Nov 2026 13:10:01 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 20:15:40 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
@@ -399,12 +399,12 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 12:00: Inter Rijswijk MA 4 - VOLEVO MA 5]]></title>
+      <title><![CDATA[Inter Rijswijk MA 4 - VOLEVO MA 5, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028359</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028359</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2L1 BE, Datum: zaterdag 21 november, 12:00, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk MA 4 - VOLEVO MA 5, Uitslag: 1-3, Setstanden: 23-25, 6-25, 14-25, 25-22]]></description>
       <pubDate>Sat, 21 Nov 2026 12:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[Zovoc L4 8 - VOLEVO L4 1, Uitslag: 0-4]]></title>
@@ -447,52 +447,52 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 12:30: VOLEVO HS 2 - Dosko HS 1]]></title>
+      <title><![CDATA[VOLEVO HS 2 - Dosko HS 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2020211</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2020211</guid>
-      <description><![CDATA[Wedstrijd: 3000HPC   HF, Datum: zaterdag 21 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 2 - Dosko HS 1, Uitslag: 0-4, Setstanden: 26-28, 19-25, 22-25, 27-29]]></description>
       <pubDate>Sat, 21 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 12:30: VOLEVO JB 1 - Inter Rijswijk JB 3]]></title>
+      <title><![CDATA[VOLEVO JB 1 - Inter Rijswijk JB 3, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026728</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026728</guid>
-      <description><![CDATA[Wedstrijd: 3000JB1C1 CA, Datum: zaterdag 21 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JB 1 - Inter Rijswijk JB 3, Uitslag: 4-0, Setstanden: 25-9, 25-15, 25-14, 25-14]]></description>
       <pubDate>Sat, 21 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 12:30: VOLEVO MA 3 - VOLEVO MA 4]]></title>
+      <title><![CDATA[VOLEVO MA 3 - VOLEVO MA 4, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026269</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026269</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1J1 CA, Datum: zaterdag 21 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 3 - VOLEVO MA 4, Uitslag: 1-3, Setstanden: 23-25, 25-23, 18-25, 22-25]]></description>
       <pubDate>Sat, 21 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 12:30: VOLEVO JC 1 - Inter Rijswijk JC 2]]></title>
+      <title><![CDATA[VOLEVO JC 1 - Inter Rijswijk JC 2, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029779</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029779</guid>
-      <description><![CDATA[Wedstrijd: 3000XC1H1 EC, Datum: zaterdag 21 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JC 1 - Inter Rijswijk JC 2, Uitslag: 4-0, Setstanden: 25-10, 25-19, 25-18, 25-21]]></description>
       <pubDate>Sat, 21 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 12:30: VOLEVO MC 4 - Kalinko MC 3]]></title>
+      <title><![CDATA[VOLEVO MC 4 - Kalinko MC 3, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030959</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030959</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2O1 BF, Datum: zaterdag 21 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 4 - Kalinko MC 3, Uitslag: 3-1, Setstanden: 25-15, 25-12, 27-29, 25-15]]></description>
       <pubDate>Sat, 21 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 12:30: VOLEVO MC 1 - Smash'66 MC 1]]></title>
+      <title><![CDATA[VOLEVO MC 1 - Smash'66 MC 1, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025675</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025675</guid>
-      <description><![CDATA[Wedstrijd: 3000XCHB1 DA, Datum: zaterdag 21 november, 12:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 1 - Smash'66 MC 1, Uitslag: 3-2, Setstanden: 25-12, 12-25, 25-15, 21-25, 15-10]]></description>
       <pubDate>Sat, 21 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[VOLEVO L4 4 - Zovoc L4 6, Uitslag: 4-0]]></title>
@@ -519,428 +519,428 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:00: Spaarnestad MB 1 - VOLEVO MB 1]]></title>
+      <title><![CDATA[Spaarnestad MB 1 - VOLEVO MB 1, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2025576</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025576</guid>
-      <description><![CDATA[Wedstrijd: 3000MBHB1 BE, Datum: zaterdag 21 november, 13:00, Speellocatie: Yvonne van Gennip Sporthal, Sportweg 7, 2024CN  Haarlem]]></description>
+      <description><![CDATA[Wedstrijd: Spaarnestad MB 1 - VOLEVO MB 1, Uitslag: 4-0, Setstanden: 25-9, 25-17, 25-16, 25-13]]></description>
       <pubDate>Sat, 21 Nov 2026 13:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:00: Monza L4 1 - VOLEVO L4 1]]></title>
+      <title><![CDATA[Monza L4 1 - VOLEVO L4 1, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099304</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099304</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42ACDB, Datum: zaterdag 21 november, 13:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Monza L4 1 - VOLEVO L4 1, Uitslag: 2-2, Setstanden: 10-9, 13-18]]></description>
       <pubDate>Sat, 21 Nov 2026 13:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:00: Kratos '08 L4 1 - VOLEVO L4 4]]></title>
+      <title><![CDATA[Kratos '08 L4 1 - VOLEVO L4 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099317</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099317</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42BCFC, Datum: zaterdag 21 november, 13:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kratos '08 L4 1 - VOLEVO L4 4, Uitslag: 4-0, Setstanden: 17-10, 16-8]]></description>
       <pubDate>Sat, 21 Nov 2026 13:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:00: Zovoc L4 11 - VOLEVO L4 5]]></title>
+      <title><![CDATA[Zovoc L4 11 - VOLEVO L4 5, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2097622</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2097622</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42DCCB, Datum: zaterdag 21 november, 13:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc L4 11 - VOLEVO L4 5, Uitslag: 0-4, Setstanden: 7-16, 11-19]]></description>
       <pubDate>Sat, 21 Nov 2026 13:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:20: VOLEVO L4 3 - Zovoc L4 11]]></title>
+      <title><![CDATA[VOLEVO L4 3 - Zovoc L4 11, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2097617</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2097617</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42DCHC, Datum: zaterdag 21 november, 13:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 3 - Zovoc L4 11, Uitslag: 4-0, Setstanden: 16-10, 14-13]]></description>
       <pubDate>Sat, 21 Nov 2026 13:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:40: VOLEVO L4 2 - DEO L4 1]]></title>
+      <title><![CDATA[VOLEVO L4 2 - DEO L4 1, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099321</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099321</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42CCEA, Datum: zaterdag 21 november, 13:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 2 - DEO L4 1, Uitslag: 2-2, Setstanden: 9-17, 13-12]]></description>
       <pubDate>Sat, 21 Nov 2026 13:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:40: DEO L4 3 - VOLEVO L4 5]]></title>
+      <title><![CDATA[DEO L4 3 - VOLEVO L4 5, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2097618</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2097618</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42DCDB, Datum: zaterdag 21 november, 13:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: DEO L4 3 - VOLEVO L4 5, Uitslag: 2-2, Setstanden: 14-8, 9-19]]></description>
       <pubDate>Sat, 21 Nov 2026 13:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 13:40: Sovicos L4 1 - VOLEVO L4 3]]></title>
+      <title><![CDATA[Sovicos L4 1 - VOLEVO L4 3, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2097628</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2097628</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42DCGH, Datum: zaterdag 21 november, 13:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Sovicos L4 1 - VOLEVO L4 3, Uitslag: 4-0, Setstanden: 13-9, 16-8]]></description>
       <pubDate>Sat, 21 Nov 2026 13:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:00: VELO L4 1 - VOLEVO L4 2]]></title>
+      <title><![CDATA[VELO L4 1 - VOLEVO L4 2, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099324</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099324</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42CCBE, Datum: zaterdag 21 november, 14:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VELO L4 1 - VOLEVO L4 2, Uitslag: 2-2, Setstanden: 21-16, 7-12]]></description>
       <pubDate>Sat, 21 Nov 2026 14:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:00: VOLEVO L5 1 - Kalinko L5 4]]></title>
+      <title><![CDATA[VOLEVO L5 1 - Kalinko L5 4, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099843</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099843</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52BCAB, Datum: zaterdag 21 november, 14:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 1 - Kalinko L5 4, Uitslag: 0-4, Setstanden: 9-23, 16-19]]></description>
       <pubDate>Sat, 21 Nov 2026 14:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:00: Kalinko L5 5 - VOLEVO L5 3]]></title>
+      <title><![CDATA[Kalinko L5 5 - VOLEVO L5 3, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099397</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099397</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52CCDC, Datum: zaterdag 21 november, 14:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko L5 5 - VOLEVO L5 3, Uitslag: 4-0, Setstanden: 18-12, 17-14]]></description>
       <pubDate>Sat, 21 Nov 2026 14:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:00: VOLEVO L5 5 - Zovoc L5 5]]></title>
+      <title><![CDATA[VOLEVO L5 5 - Zovoc L5 5, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099401</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099401</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52CCEB, Datum: zaterdag 21 november, 14:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 5 - Zovoc L5 5, Uitslag: 0-4, Setstanden: 9-16, 14-16]]></description>
       <pubDate>Sat, 21 Nov 2026 14:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:15: Inter Rijswijk MA 3 - VOLEVO MA 2]]></title>
+      <title><![CDATA[Inter Rijswijk MA 3 - VOLEVO MA 2, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026283</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026283</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1K1 AE, Datum: zaterdag 21 november, 14:15, Speellocatie: De Altis, de Bruyn Kopsstraat 1, 2288EC  Rijswijk ZH]]></description>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk MA 3 - VOLEVO MA 2, Uitslag: 2-3, Setstanden: 25-23, 14-25, 19-25, 26-24, 13-15]]></description>
       <pubDate>Sat, 21 Nov 2026 14:15:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:20: VOLEVO L4 2 - Zovoc L4 10]]></title>
+      <title><![CDATA[VOLEVO L4 2 - Zovoc L4 10, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099323</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099323</guid>
-      <description><![CDATA[Wedstrijd: 3000VH42CCEC, Datum: zaterdag 21 november, 14:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L4 2 - Zovoc L4 10, Uitslag: 4-0, Setstanden: 5-0, 5-0]]></description>
       <pubDate>Sat, 21 Nov 2026 14:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:20: Zovoc L5 3 - VOLEVO L5 10]]></title>
+      <title><![CDATA[Zovoc L5 3 - VOLEVO L5 10, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099372</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099372</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51CCBC, Datum: zaterdag 21 november, 14:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc L5 3 - VOLEVO L5 10, Uitslag: 2-2, Setstanden: 14-12, 10-23]]></description>
       <pubDate>Sat, 21 Nov 2026 14:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:20: VOLEVO L5 7 - VOLEVO L5 1]]></title>
+      <title><![CDATA[VOLEVO L5 7 - VOLEVO L5 1, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099844</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099844</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52BCEA, Datum: zaterdag 21 november, 14:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 7 - VOLEVO L5 1, Uitslag: 2-2, Setstanden: 12-19, 19-14]]></description>
       <pubDate>Sat, 21 Nov 2026 14:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:20: VELO L5 1 - VOLEVO L5 3]]></title>
+      <title><![CDATA[VELO L5 1 - VOLEVO L5 3, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099396</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099396</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52CCAC, Datum: zaterdag 21 november, 14:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VELO L5 1 - VOLEVO L5 3, Uitslag: 4-0, Setstanden: 16-11, 18-11]]></description>
       <pubDate>Sat, 21 Nov 2026 14:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:40: VOLEVO L5 6 - Monza L5 1]]></title>
+      <title><![CDATA[VOLEVO L5 6 - Monza L5 1, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099353</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099353</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51ACAF, Datum: zaterdag 21 november, 14:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 6 - Monza L5 1, Uitslag: 2-2, Setstanden: 23-20, 22-28]]></description>
       <pubDate>Sat, 21 Nov 2026 14:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:40: Inter Rijswijk L5 1 - VOLEVO L5 8]]></title>
+      <title><![CDATA[Inter Rijswijk L5 1 - VOLEVO L5 8, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099358</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099358</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51ACBE, Datum: zaterdag 21 november, 14:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Inter Rijswijk L5 1 - VOLEVO L5 8, Uitslag: 0-4, Setstanden: 9-21, 13-22]]></description>
       <pubDate>Sat, 21 Nov 2026 14:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:40: VOLEVO L5 9 - Inter Rijswijk L5 2]]></title>
+      <title><![CDATA[VOLEVO L5 9 - Inter Rijswijk L5 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099370</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099370</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51BCBC, Datum: zaterdag 21 november, 14:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 9 - Inter Rijswijk L5 2, Uitslag: 0-4, Setstanden: 12-15, 12-21]]></description>
       <pubDate>Sat, 21 Nov 2026 14:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:40: Kalinko L5 4 - VOLEVO L5 7]]></title>
+      <title><![CDATA[Kalinko L5 4 - VOLEVO L5 7, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099845</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099845</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52BCBE, Datum: zaterdag 21 november, 14:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko L5 4 - VOLEVO L5 7, Uitslag: 2-2, Setstanden: 14-15, 27-10]]></description>
       <pubDate>Sat, 21 Nov 2026 14:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 14:40: VOLEVO L5 5 - Kalinko L5 5]]></title>
+      <title><![CDATA[VOLEVO L5 5 - Kalinko L5 5, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099400</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099400</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52CCED, Datum: zaterdag 21 november, 14:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 5 - Kalinko L5 5, Uitslag: 0-4, Setstanden: 8-21, 11-17]]></description>
       <pubDate>Sat, 21 Nov 2026 14:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO HS 1 - Volley2B HS 1]]></title>
+      <title><![CDATA[VOLEVO HS 1 - Volley2B HS 1, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1963935</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963935</guid>
-      <description><![CDATA[Wedstrijd: 90002EH   HF, Datum: zaterdag 21 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 1 - Volley2B HS 1, Uitslag: 3-1, Setstanden: 25-18, 25-17, 25-23, 23-25]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO DS 2 - Forza Hoogland DS 1]]></title>
+      <title><![CDATA[VOLEVO DS 2 - Forza Hoogland DS 1, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009730</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009730</guid>
-      <description><![CDATA[Wedstrijd: 30003BD   IE, Datum: zaterdag 21 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 2 - Forza Hoogland DS 1, Uitslag: 1-3, Setstanden: 19-25, 17-25, 18-25, 25-20]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO DS 4 - Volleybaldirect/Gemini-Kangeroes DS 1]]></title>
+      <title><![CDATA[VOLEVO DS 4 - Volleybaldirect/Gemini-Kangeroes DS 1, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2016294</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2016294</guid>
-      <description><![CDATA[Wedstrijd: 3000DPE   HF, Datum: zaterdag 21 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 4 - Volleybaldirect/Gemini-Kangeroes DS 1, Uitslag: 2-3, Setstanden: 25-23, 26-24, 22-25, 25-27, 11-15]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO JA 2 - Liusna JA 1]]></title>
+      <title><![CDATA[VOLEVO JA 2 - Liusna JA 1, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2027973</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2027973</guid>
-      <description><![CDATA[Wedstrijd: 3000JA2E1 BE, Datum: zaterdag 21 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JA 2 - Liusna JA 1, Uitslag: 4-0, Setstanden: 25-13, 25-7, 25-8, 25-17]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO L5 8 - VOLEVO L5 6]]></title>
+      <title><![CDATA[VOLEVO L5 8 - VOLEVO L5 6, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099359</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099359</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51ACEA, Datum: zaterdag 21 november, 15:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 8 - VOLEVO L5 6, Uitslag: 2-2, Setstanden: 13-27, 21-18]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO L5 10 - Inter Rijswijk L5 3]]></title>
+      <title><![CDATA[VOLEVO L5 10 - Inter Rijswijk L5 3, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099374</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099374</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51CCCA, Datum: zaterdag 21 november, 15:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 10 - Inter Rijswijk L5 3, Uitslag: 3-1, Setstanden: 16-15, 16-16]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO L5 4 - VOLEVO L5 2]]></title>
+      <title><![CDATA[VOLEVO L5 4 - VOLEVO L5 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099382</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099382</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52ACDB, Datum: zaterdag 21 november, 15:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 4 - VOLEVO L5 2, Uitslag: 0-4, Setstanden: 4-29, 10-28]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO L5 1 - PQV Westland - Data Giants L5 1]]></title>
+      <title><![CDATA[VOLEVO L5 1 - PQV Westland - Data Giants L5 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099846</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099846</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52BCAC, Datum: zaterdag 21 november, 15:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 1 - PQV Westland - Data Giants L5 1, Uitslag: 0-4, Setstanden: 14-17, 9-22]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO L5 3 - VOLEVO L5 5]]></title>
+      <title><![CDATA[VOLEVO L5 3 - VOLEVO L5 5, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099394</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099394</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52CCCE, Datum: zaterdag 21 november, 15:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 3 - VOLEVO L5 5, Uitslag: 4-0, Setstanden: 18-11, 14-11]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO MC 2 - Kalinko MC 2]]></title>
+      <title><![CDATA[VOLEVO MC 2 - Kalinko MC 2, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030165</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030165</guid>
-      <description><![CDATA[Wedstrijd: 3000XC1I1 DC, Datum: zaterdag 21 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 2 - Kalinko MC 2, Uitslag: 4-0, Setstanden: 25-7, 25-15, 25-18, 26-24]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:00: VOLEVO MC 5 - Leython DC MC 3]]></title>
+      <title><![CDATA[VOLEVO MC 5 - Leython DC MC 3, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2031047</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2031047</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2P1 DC, Datum: zaterdag 21 november, 15:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 5 - Leython DC MC 3, Uitslag: 1-3, Setstanden: 22-25, 27-25, 16-25, 16-25]]></description>
       <pubDate>Sat, 21 Nov 2026 15:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:20: Zovoc L5 4 - VOLEVO L5 9]]></title>
+      <title><![CDATA[Zovoc L5 4 - VOLEVO L5 9, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099364</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099364</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51BCDB, Datum: zaterdag 21 november, 15:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc L5 4 - VOLEVO L5 9, Uitslag: 1-3, Setstanden: 16-19, 17-17]]></description>
       <pubDate>Sat, 21 Nov 2026 15:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:20: VOLEVO L5 10 - Inter Rijswijk L5 4]]></title>
+      <title><![CDATA[VOLEVO L5 10 - Inter Rijswijk L5 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099375</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099375</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51CCCD, Datum: zaterdag 21 november, 15:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 10 - Inter Rijswijk L5 4, Uitslag: 4-0, Setstanden: 15-14, 18-12]]></description>
       <pubDate>Sat, 21 Nov 2026 15:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:20: VOLEVO L5 7 - Monza L5 2]]></title>
+      <title><![CDATA[VOLEVO L5 7 - Monza L5 2, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099847</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099847</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52BCED, Datum: zaterdag 21 november, 15:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 7 - Monza L5 2, Uitslag: 4-0, Setstanden: 5-0, 5-0]]></description>
       <pubDate>Sat, 21 Nov 2026 15:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:20: Zovoc L5 6 - VOLEVO L5 1]]></title>
+      <title><![CDATA[Zovoc L5 6 - VOLEVO L5 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099853</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099853</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52BCFA, Datum: zaterdag 21 november, 15:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc L5 6 - VOLEVO L5 1, Uitslag: 0-4, Setstanden: 7-20, 10-18]]></description>
       <pubDate>Sat, 21 Nov 2026 15:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:20: VOLEVO L5 3 - Zovoc L5 5]]></title>
+      <title><![CDATA[VOLEVO L5 3 - Zovoc L5 5, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099399</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099399</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52CCCB, Datum: zaterdag 21 november, 15:20, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 3 - Zovoc L5 5, Uitslag: 0-4, Setstanden: 10-17, 13-14]]></description>
       <pubDate>Sat, 21 Nov 2026 15:20:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:40: VOLEVO L5 8 - Monza L5 1]]></title>
+      <title><![CDATA[VOLEVO L5 8 - Monza L5 1, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099356</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099356</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51ACEF, Datum: zaterdag 21 november, 15:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 8 - Monza L5 1, Uitslag: 2-2, Setstanden: 18-25, 21-19]]></description>
       <pubDate>Sat, 21 Nov 2026 15:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:40: Kalinko L5 3 - VOLEVO L5 4]]></title>
+      <title><![CDATA[Kalinko L5 3 - VOLEVO L5 4, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099378</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099378</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52ACAD, Datum: zaterdag 21 november, 15:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko L5 3 - VOLEVO L5 4, Uitslag: 4-0, Setstanden: 11-9, 20-6]]></description>
       <pubDate>Sat, 21 Nov 2026 15:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:40: VELO L5 2 - VOLEVO L5 2]]></title>
+      <title><![CDATA[VELO L5 2 - VOLEVO L5 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099381</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099381</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52ACCB, Datum: zaterdag 21 november, 15:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VELO L5 2 - VOLEVO L5 2, Uitslag: 0-4, Setstanden: 7-23, 9-23]]></description>
       <pubDate>Sat, 21 Nov 2026 15:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 15:40: VELO L5 1 - VOLEVO L5 5]]></title>
+      <title><![CDATA[VELO L5 1 - VOLEVO L5 5, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099392</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099392</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52CCAE, Datum: zaterdag 21 november, 15:40, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VELO L5 1 - VOLEVO L5 5, Uitslag: 4-0, Setstanden: 24-15, 23-12]]></description>
       <pubDate>Sat, 21 Nov 2026 15:40:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 16:00: VOLEVO L5 6 - Kalinko L5 2]]></title>
+      <title><![CDATA[VOLEVO L5 6 - Kalinko L5 2, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099357</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099357</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51ACAD, Datum: zaterdag 21 november, 16:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 6 - Kalinko L5 2, Uitslag: 3-1, Setstanden: 21-13, 21-21]]></description>
       <pubDate>Sat, 21 Nov 2026 16:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 16:00: VOLEVO L5 9 - Kalinko L5 1]]></title>
+      <title><![CDATA[VOLEVO L5 9 - Kalinko L5 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099367</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099367</guid>
-      <description><![CDATA[Wedstrijd: 3000VH51BCBE, Datum: zaterdag 21 november, 16:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 9 - Kalinko L5 1, Uitslag: 0-4, Setstanden: 12-23, 14-22]]></description>
       <pubDate>Sat, 21 Nov 2026 16:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 16:00: VOLEVO L5 2 - Kalinko L5 3]]></title>
+      <title><![CDATA[VOLEVO L5 2 - Kalinko L5 3, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099377</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099377</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52ACBA, Datum: zaterdag 21 november, 16:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 2 - Kalinko L5 3, Uitslag: 4-0, Setstanden: 21-15, 29-13]]></description>
       <pubDate>Sat, 21 Nov 2026 16:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 16:00: VOLEVO L5 4 - VELO L5 2]]></title>
+      <title><![CDATA[VOLEVO L5 4 - VELO L5 2, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099380</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099380</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52ACDC, Datum: zaterdag 21 november, 16:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L5 4 - VELO L5 2, Uitslag: 4-0, Setstanden: 20-6, 20-8]]></description>
       <pubDate>Sat, 21 Nov 2026 16:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 16:00: PQV Westland - Data Giants L5 1 - VOLEVO L5 7]]></title>
+      <title><![CDATA[PQV Westland - Data Giants L5 1 - VOLEVO L5 7, Uitslag: 2-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2099848</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099848</guid>
-      <description><![CDATA[Wedstrijd: 3000VH52BCCE, Datum: zaterdag 21 november, 16:00, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: PQV Westland - Data Giants L5 1 - VOLEVO L5 7, Uitslag: 2-2, Setstanden: 20-10, 11-19]]></description>
       <pubDate>Sat, 21 Nov 2026 16:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 17:30: VOLEVO DS 1 - Next Volley Dordrecht DS 2]]></title>
+      <title><![CDATA[VOLEVO DS 1 - Next Volley Dordrecht DS 2, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1963744</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963744</guid>
-      <description><![CDATA[Wedstrijd: 90002ED   HF, Datum: zaterdag 21 november, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 1 - Next Volley Dordrecht DS 2, Uitslag: 3-2, Setstanden: 12-25, 18-25, 25-20, 25-12, 15-11]]></description>
       <pubDate>Sat, 21 Nov 2026 17:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 17:30: VOLEVO JA 1 - Kalinko JA 2]]></title>
+      <title><![CDATA[VOLEVO JA 1 - Kalinko JA 2, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026637</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026637</guid>
-      <description><![CDATA[Wedstrijd: 3000JA1D1 ED, Datum: zaterdag 21 november, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JA 1 - Kalinko JA 2, Uitslag: 4-0, Setstanden: 25-19, 25-14, 25-7, 25-8]]></description>
       <pubDate>Sat, 21 Nov 2026 17:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 17:30: VOLEVO JB 2 - Kalinko JB 2]]></title>
+      <title><![CDATA[VOLEVO JB 2 - Kalinko JB 2, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028119</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028119</guid>
-      <description><![CDATA[Wedstrijd: 3000JB2G1 FB, Datum: zaterdag 21 november, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO JB 2 - Kalinko JB 2, Uitslag: 4-0, Setstanden: 25-20, 25-22, 25-21, 25-22]]></description>
       <pubDate>Sat, 21 Nov 2026 17:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 17:30: VOLEVO MA 6 - Kalinko MA 4]]></title>
+      <title><![CDATA[VOLEVO MA 6 - Kalinko MA 4, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028411</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2028411</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2M1 EA, Datum: zaterdag 21 november, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 6 - Kalinko MA 4, Uitslag: 2-3, Setstanden: 25-14, 25-16, 12-25, 17-25, 12-15]]></description>
       <pubDate>Sat, 21 Nov 2026 17:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 17:30: VOLEVO MB 4 - Inter Rijswijk MB 4]]></title>
+      <title><![CDATA[VOLEVO MB 4 - Inter Rijswijk MB 4, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030090</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2030090</guid>
-      <description><![CDATA[Wedstrijd: 3000MB2N1 DB, Datum: zaterdag 21 november, 17:30, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO MB 4 - Inter Rijswijk MB 4, Uitslag: 3-2, Setstanden: 19-25, 25-23, 20-25, 26-24, 15-13]]></description>
       <pubDate>Sat, 21 Nov 2026 17:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[21 nov 18:00: Zovoc HS 4 - VOLEVO HS 4]]></title>
+      <title><![CDATA[Zovoc HS 4 - VOLEVO HS 4, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017783</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2017783</guid>
-      <description><![CDATA[Wedstrijd: 3000H2I   AD, Datum: zaterdag 21 november, 18:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc HS 4 - VOLEVO HS 4, Uitslag: 1-3, Setstanden: 22-25, 13-25, 25-14, 15-25]]></description>
       <pubDate>Sat, 21 Nov 2026 18:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[27 nov 19:00: VOLEVO DS 7 - Timios DS 2]]></title>
