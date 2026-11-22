@@ -2,34 +2,37 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#2A3176">
-<title>VOLEVO · Teamoverzicht</title>
-<link rel="stylesheet" href="app.css?v=b02a7fc83271">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>VOLEVO · Mijn team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="app.css?v=e3ba33874042">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="VOLEVO">
 <script>var VOLEVO_DATA = '../';</script>
 <script src="../overrides.js?v=f23fd34a8eec"></script>
 <script src="../shared/wedstrijden.js?v=d3a7e810f0e3"></script>
-<script src="app.js?v=6a6a852c00a4"></script>
-<script src="resultaten.js?v=e2591af40a89"></script>
+<script src="app.js?v=4b967e4ff5cd"></script>
+<script src="resultaten.js?v=3f70f22a95ff"></script>
 </head>
 <body>
 <script>
+// Mijn team: de stand, jullie beurten, de volgende wedstrijden, de laatste uitslag en de rest van wat bij het team hoort.
 var teamVersie = 0, resultaatCache = null;
-var van = new URLSearchParams(location.search).get('van');
-var terug = App.VAN[van] && van !== 'team' ? App.VAN[van] : App.VAN.vandaag;
 
 function komendHtml(D, naam, uitslagen) {
   var start = new Date(); start.setHours(0, 0, 0, 0);
   var eigen = D.wedstrijden.filter(function (w) { return App.team(w, naam); });
   var komend = Wedstrijden.speelbaar(eigen).filter(function (w) {
-    return new Date(w.tijdstip) >= start && w.status !== 'gespeeld' && !Resultaten.heeftUitslag(w, uitslagen || []);
+    return w.tijdstip && new Date(w.tijdstip) >= start && w.status !== 'gespeeld' && !Resultaten.heeftUitslag(w, uitslagen || []);
   }).sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
-  return App.vervallenMeldingen(eigen) + (komend.length ? '<p class="sub">' + komend.length + ' wedstrijden vanaf vandaag</p><div class="lijst">' + komend.map(function (w) {
-    return App.wedstrijdKaart(w, D, { metDatum: true, van: 'team' });
-  }).join('') + '</div>' : '<div class="melding leeg">Geen komende wedstrijden gevonden voor dit team.</div>');
+  return App.vervallenMeldingen(eigen) + (komend.length ? '<div class="lijst">' + komend.slice(0, 3).map(function (w) {
+    return App.wedstrijdRij(w, D, { metDatum: true, van: 'team' });
+  }).join('') + '</div>' + (komend.length > 3 ? '<p class="klein" style="padding-top:10px">En nog ' + (komend.length - 3) + ' daarna. Het hele rijtje staat in het programma.</p>' : '')
+    : '<p class="klein">Geen komende wedstrijden gevonden voor dit team.</p>');
 }
 
 async function toonGespeeld(naam, versie, D) {
@@ -42,33 +45,47 @@ async function toonGespeeld(naam, versie, D) {
     if (!doel) return;
     var programma = document.getElementById('teamprogramma');
     if (programma && D) programma.innerHTML = komendHtml(D, naam, alle);
-    doel.innerHTML = lijst.length ? '<p class="sub">' + lijst.length + ' uitslagen beschikbaar, nieuwste eerst</p><div class="lijst">' +
-      lijst.map(function (u) { return Resultaten.kaart(u, naam); }).join('') + '</div>' :
-      '<div class="melding leeg">Er zijn nog geen uitslagen beschikbaar voor dit team.</div>';
+    doel.innerHTML = lijst.length ? '<div class="lijst">' + Resultaten.kaart(lijst[0], naam, { metDatum: true }) + '</div>' :
+      '<p class="klein">Er zijn nog geen uitslagen beschikbaar voor dit team.</p>';
   } catch (e) {
     if (versie !== teamVersie) return;
     var doel = document.getElementById('teamuitslagen');
-    if (doel) doel.innerHTML = '<div class="melding fout"><strong>Uitslagen konden niet worden geladen.</strong><button class="knop" data-herlaad>Opnieuw proberen</button></div>';
+    if (doel) doel.innerHTML = '<div class="melding fout"><strong>Uitslagen konden niet worden geladen.</strong><div><button class="knop" data-herlaad>Opnieuw proberen</button></div></div>';
   }
 }
 
-App.start({ pagina: 'team', titel: 'Teamoverzicht', teamKeuze: 'verplicht', toon: function (D, naam) {
-  var versie = ++teamVersie, stand = App.teamStand(D, naam);
-  resultaatCache = null;
-  var html = '<p><a class="knop" href="' + App.esc(terug[0]) + '">← Terug naar ' + App.esc(terug[1]) + '</a></p>' +
-    '<h2>' + App.esc(App.teamNaam(naam)) + '</h2>' +
-    '<nav class="teamsecties" aria-label="In dit teamoverzicht"><a class="knop" href="#teamstand-detail">Stand</a><a class="knop" href="#komend">Komend</a><a class="knop" href="#gespeeld">Gespeeld</a></nav>' +
-    '<section id="teamstand-detail"><h2>Stand volgens Nevobo</h2><div class="kaart"><p class="stand-tekst">' + App.esc(stand.tekst) + '</p>' +
-    (stand.seizoen ? '<p class="sub">Seizoen ' + App.esc(stand.seizoen) + '</p>' : '') +
-    (stand.datum ? '<p class="sub">Opgehaald: ' + App.esc(stand.datum) + '</p>' : '') +
-    (stand.oud ? '<p class="melding">Deze stand is mogelijk verouderd. Bekijk de actuele stand bij Nevobo.</p>' : '') +
-    '<div class="acties">' + App.bronKnop(stand.bron, stand.beschikbaar ? 'Bekijk team en volledige stand bij Nevobo' : 'Bekijk team bij Nevobo') + '</div></div></section>' +
-    '<section id="komend"><h2>Komende wedstrijden</h2><div id="teamprogramma">' + komendHtml(D, naam, []) + '</div></section>' +
-    '<section id="gespeeld"><h2>Gespeelde wedstrijden en uitslagen</h2><p class="sub">Uitslagen die Nevobo heeft gepubliceerd. De bron bevat mogelijk niet het hele seizoen.</p>' +
-    '<div id="teamuitslagen" aria-live="polite"><p>Uitslagen ophalen…</p></div></section>';
-  Promise.resolve().then(function () { toonGespeeld(naam, versie, D); });
-  return html;
-} });
+function beurtenHtml(D, naam) {
+  if (!D.officialsOk) return '<div class="melding fout"><strong>Taken konden niet worden geladen</strong>De fluit- en telbeurten zijn nu niet beschikbaar. Dit betekent niet dat er geen beurten zijn.<div><button class="knop" data-herlaad>Opnieuw proberen</button></div></div>';
+  var nu = new Date(), start = new Date(); start.setHours(0, 0, 0, 0);
+  var taken = App.takenVan(D, Wedstrijden.teamCode(naam)).filter(function (t) { return new Date(t.tijdstip) >= start; });
+  if (!taken.length) return '<p class="klein">Geen beurten gevonden: er staan nu geen fluit- of telbeurten voor jullie op de planning.</p>';
+  var vandaag = App.dagSleutel(nu), eerstKomend = taken.filter(function (t) { return new Date(t.tijdstip).getTime() + 90 * 60e3 > nu.getTime(); })[0];
+  return '<div class="lijst">' + taken.slice(0, 4).map(function (t) {
+    var d = new Date(t.tijdstip), klaar = d.getTime() + 90 * 60e3 <= nu.getTime();
+    return App.taakRij(t, D, { van: 'team', klaar: klaar, jij: t === eerstKomend, onder: App.dagSleutel(d) === vandaag ? (klaar ? 'geweest' : 'vandaag') : '' });
+  }).join('') + '</div>' + (taken.length > 4 ? '<p class="klein" style="padding-top:10px">En nog ' + (taken.length - 4) + ' daarna.</p>' : '');
+}
+
+App.start({ pagina: 'team', titel: 'Mijn team', teamKeuze: 'verplicht', kiesTekst: 'Dan zie je hier de stand, jullie fluit- en telbeurten, de volgende wedstrijden en de laatste uitslag.',
+  toon: function (D, naam) {
+    var versie = ++teamVersie, stand = App.teamStand(D, naam), delen = stand.beschikbaar ? App.standDelen(stand.tekst) : null;
+    resultaatCache = null;
+    var bron = Wedstrijden.bronLink(stand.bron);
+    var pil = delen ? (bron ? '<a class="standpil" target="_blank" rel="noopener noreferrer" href="' + App.esc(bron) + '" aria-label="' + App.esc(stand.tekst) + ', bekijk de stand bij Nevobo (nieuw venster)">' : '<div class="standpil">') +
+      '<b>' + App.esc(delen.plaats) + '</b><span>in de stand' + (bron ? ' ↗' : '') + '</span>' + (bron ? '</a>' : '</div>') : '';
+    var html = App.kop(App.teamNaam(naam), delen ? delen.poule : stand.tekst, pil) +
+      (stand.oud && stand.beschikbaar ? '<p class="klein" style="margin-top:-18px">De stand is van ' + App.esc(stand.datum || 'onbekende datum') + ' en kan verouderd zijn.</p>' : '') +
+      (!delen && bron ? '<div>' + App.bronKnop(stand.bron, 'Bekijk team bij Nevobo') + '</div>' : '') +
+      '<section aria-label="Fluiten en tellen"><div class="sectiekop"><h2>Fluiten en tellen</h2><a href="fluiten.html">Alle beurten</a></div>' + beurtenHtml(D, naam) + '</section>' +
+      '<section id="komend" aria-label="Volgende wedstrijden"><div class="sectiekop"><h2>Volgende wedstrijden</h2><a href="programma.html">Programma</a></div><div id="teamprogramma">' + komendHtml(D, naam, []) + '</div></section>' +
+      '<section id="gespeeld" aria-label="Laatste uitslag"><div class="sectiekop"><h2>Laatste uitslag</h2><a href="uitslagen.html">Uitslagen</a></div><div id="teamuitslagen" aria-live="polite"><p class="klein">Uitslagen ophalen…</p></div></section>' +
+      '<section aria-label="Meer voor ' + App.esc(App.teamNaam(naam)) + '">' +
+      '<a class="door laag" href="training.html">Trainingsschema' + App.icoon('verder') + '</a>' +
+      '<a class="door laag" href="wijzigingen.html">Wijzigingen in het programma' + App.icoon('verder') + '</a>' +
+      App.beginscherm() + '</section>';
+    Promise.resolve().then(function () { toonGespeeld(naam, versie, D); });
+    return html;
+  } });
 </script>
 </body>
 </html>

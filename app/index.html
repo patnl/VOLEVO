@@ -2,41 +2,151 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#2A3176">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
 <title>VOLEVO · Vandaag</title>
-<link rel="stylesheet" href="app.css?v=b02a7fc83271">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="app.css?v=e3ba33874042">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="VOLEVO">
 <script>var VOLEVO_DATA = '../';</script>
 <script src="../overrides.js?v=f23fd34a8eec"></script>
 <script src="../shared/wedstrijden.js?v=d3a7e810f0e3"></script>
-<script src="app.js?v=6a6a852c00a4"></script>
+<script src="app.js?v=4b967e4ff5cd"></script>
+<script src="resultaten.js?v=3f70f22a95ff"></script>
 </head>
 <body>
 <script>
+// Vandaag: het eerste wat je wilt weten. Met een gekozen team: jullie eerstvolgende wedstrijd groot,
+// jullie beurt van vandaag, de uitslagen van vandaag en wat er verder bij de club speelt.
+var uitslagVersie = 0;
+function overTekst(d, nu) {
+  var min = Math.round((d - nu) / 60000);
+  if (min <= 0) return min > -120 ? 'nu bezig' : '';
+  if (min < 60) return 'over ' + min + (min === 1 ? ' minuut' : ' minuten');
+  if (App.dagSleutel(d) === App.dagSleutel(nu)) return 'over ' + Math.round(min / 60) + ' uur';
+  var dagen = Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(nu.getFullYear(), nu.getMonth(), nu.getDate())) / 864e5);
+  return dagen === 1 ? 'morgen' : 'over ' + dagen + ' dagen';
+}
+// De velden van de zaal als strookje, met het eigen veld gekleurd. De Tas ligt links (3, 2, 1), De Bocht rechts.
+function banen(w, D) {
+  var veld = App.veldKort(w, D);
+  if (!veld) return '';
+  var nr = String(Wedstrijden.veldNummer(w, D.correcties)), n = parseInt(nr, 10);
+  function baan(v) { return '<span class="baan' + (v === n ? ' hier' : '') + '"></span>'; }
+  return '<div class="banen" role="img" aria-label="Jullie veld is ' + App.esc(veld) + (n <= 3 ? ', in De Tas' : ', in De Bocht') + '">' +
+    [3, 2, 1].map(baan).join('') + '<span class="tussen"></span>' + [4, 5, 6, 7].map(baan).join('') + '</div>';
+}
+function held(w, D, naam, nu) {
+  var d = new Date(w.tijdstip), p = Wedstrijden.perspectief(w, naam), vandaag = App.dagSleutel(d) === App.dagSleutel(nu);
+  var thuisInDeFluit = w.hal === 'De Fluit', veld = App.veldKort(w, D), loc = Wedstrijden.locatie(w), reis = Wedstrijden.reis(w);
+  var helpers = App.helpersTekst(D, w, null), stand = App.teamStand(D, naam);
+  var zl = App.zaalLink(w, D, 'vandaag'), route = App.routeUrl(w);
+  var bij = [vandaag ? overTekst(d, nu) : App.dagTekst(d), p.eigenThuis ? 'thuiswedstrijd' : 'uitwedstrijd'].filter(Boolean);
+  return '<section class="held" aria-label="Jullie wedstrijd">' +
+    (vandaag ? '' : '<p class="klein">Eerstvolgende wedstrijd, ' + App.esc(overTekst(d, nu)) + '</p>') +
+    '<div class="boven"><div class="klok">' + App.esc(App.tijd(d)) + '</div><div class="bij">' + bij.map(App.esc).join('<br>') + '</div></div>' +
+    '<div><div class="eigen">' + App.esc(p.eigen) + '</div><div class="tegen">tegen ' + App.esc(p.tegen) + '</div></div>' +
+    '<div class="waar"><div><div class="veldnaam">' + App.esc(thuisInDeFluit ? (veld || 'Veld nog niet bevestigd') : (w.hal || 'Sporthal nog niet bekend')) + '</div>' +
+    '<div class="klein">' + App.esc(thuisInDeFluit ? 'De Fluit, Leidschendam' : loc.adres) + '</div></div>' + banen(w, D) + '</div>' +
+    (reis ? '<p class="klein">Vertrek rond ' + App.esc(App.tijd(reis.vertrek)) + '. Reis ongeveer ' + reis.minuten + ' min (' + reis.km + ' km), een schatting.</p>' : '') +
+    '<div class="acties">' + (zl ? '<a class="knop vol" data-bewaar href="' + App.esc(zl) + '">Bekijk de zaal</a>' : (route ? '<a class="knop vol" target="_blank" rel="noopener" href="' + App.esc(route) + '">Route</a>' : '')) +
+    App.bronKnop(w.dwf, 'Wedstrijdformulier') + '</div>' +
+    '<p class="klein">' + (helpers ? App.esc(helpers) + ' bij jullie. ' : '') + (!D.officialsOk ? 'Fluit- en telbeurten konden niet worden geladen. ' : '') +
+    (stand.beschikbaar ? 'Stand: ' + App.esc(stand.tekst) + '.' : '') + '</p></section>';
+}
+// Het mintvlak: de eerstvolgende beurt van vandaag. Staat er een eigen wedstrijd bij, dan "Eerst" of "Daarna".
+function beurtBlok(D, naam, items, nu) {
+  var taken = items.filter(function (i) { return i.taak; }), wedstrijd = items.filter(function (i) { return i.wedstrijd; })[0];
+  if (!taken.length) return '';
+  var komend = taken.filter(function (i) { return new Date(i.t).getTime() + 90 * 60e3 > nu.getTime(); });
+  var eerst = (komend[0] || taken[taken.length - 1]).taak, d = new Date(eerst.tijdstip), geweest = !komend.length;
+  var doen = eerst.soort === 'Fluiten' ? 'fluiten jullie' : eerst.soort === 'Tellen' ? 'tellen jullie' : 'hebben jullie een beurt';
+  var plaats = wedstrijd ? (eerst.tijdstip > wedstrijd.t ? 'Daarna ' : (eerst.tijdstip < wedstrijd.t ? 'Eerst ' : 'Dan ')) : 'Vandaag ';
+  var titel = geweest ? 'Jullie beurten van vandaag zijn geweest' : plaats + doen + ' om ' + App.tijd(d);
+  var w = eerst.wedstrijd, veld = w ? App.veldKort(w, D) : '', zl = w ? App.zaalLink(w, D, 'vandaag') : '';
+  var andere = taken.filter(function (i) { return i.taak !== eerst || geweest; }).map(function (i) {
+    var k = App.taakKop(i.taak, D); return App.tijd(new Date(i.t)) + ' ' + k.charAt(0).toLowerCase() + k.slice(1) + (new Date(i.t).getTime() + 90 * 60e3 <= nu.getTime() ? ' (geweest)' : '');
+  });
+  return '<section class="beurt" aria-label="Jullie beurt">' + App.icoon('fluit') + '<div><h2>' + App.esc(titel) + '</h2>' +
+    (geweest ? '' : '<p>' + App.esc(eerst.thuis) + ' tegen ' + App.esc(eerst.uit) + (veld ? ', op ' + App.esc(veld) : '') + '.</p>' +
+      (eerst.opmerking ? '<span class="let">' + App.esc(eerst.opmerking) + '</span>' : '')) +
+    (andere.length ? '<p class="klein">' + (geweest ? '' : 'Vandaag ook: ') + App.esc(App.opsomming(andere)) + '.</p>' : '') +
+    '<div style="flex-direction:row;flex-wrap:wrap;column-gap:20px;display:flex">' + (zl && !geweest ? '<a class="tekstlink" data-bewaar href="' + App.esc(zl) + '">Bekijk het veld</a>' : '') +
+    '<a class="tekstlink beurten-link" href="fluiten.html">Alle beurten van ' + App.esc(App.teamNaam(naam)) + '</a></div></div></section>';
+}
+function clubBlok(D, nu) {
+  var vandaag = App.dagSleutel(nu), speel = Wedstrijden.speelbaar(D.wedstrijden).filter(function (w) { return w.tijdstip; });
+  var nuLijst = speel.filter(function (w) { return App.dagSleutel(new Date(w.tijdstip)) === vandaag; });
+  var thuis = nuLijst.filter(function (w) { return w.hal === 'De Fluit'; }), uit = nuLijst.filter(function (w) { return w.hal !== 'De Fluit'; });
+  var html = '<section aria-label="Bij de club"><div class="sectiekop"><h2>' + (nuLijst.length ? 'Vandaag bij de club' : 'Bij de club') + '</h2></div>';
+  if (thuis.length) {
+    var rondes = []; thuis.forEach(function (w) { var t = App.tijd(new Date(w.tijdstip)); if (rondes.indexOf(t) === -1) rondes.push(t); }); rondes.sort();
+    html += App.door('zaal.html?dag=' + vandaag + '&van=vandaag', thuis.length + (thuis.length === 1 ? ' thuiswedstrijd' : ' thuiswedstrijden') + ' in De Fluit',
+      (rondes.length === 1 ? 'om ' : 'rondes om ') + App.opsomming(rondes), ' data-bewaar');
+  }
+  if (uit.length) {
+    var plaatsen = [], hallen = {};
+    uit.forEach(function (w) { hallen[(w.hal || '') + '|' + (w.plaats || '')] = true; if (w.plaats && plaatsen.indexOf(w.plaats) === -1) plaatsen.push(w.plaats); });
+    var n = Object.keys(hallen).length;
+    html += App.door('kaart.html', 'Wedstrijden in ' + n + (n === 1 ? ' andere sporthal' : ' andere sporthallen'),
+      plaatsen.length > 4 ? plaatsen.slice(0, 3).join(', ') + ' en nog ' + (plaatsen.length - 3) + ' plaatsen' : App.opsomming(plaatsen));
+  }
+  if (!nuLijst.length) {
+    var komend = speel.filter(function (w) { return new Date(w.tijdstip) > nu; }).sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
+    if (komend.length) {
+      var dag = App.dagSleutel(new Date(komend[0].tijdstip)), opDag = komend.filter(function (w) { return App.dagSleutel(new Date(w.tijdstip)) === dag; });
+      html += App.door('programma.html?alle=1', 'Vandaag geen wedstrijden', 'eerstvolgende speeldag: ' + App.dagTekst(new Date(komend[0].tijdstip)) + ', ' + opDag.length + (opDag.length === 1 ? ' wedstrijd' : ' wedstrijden'));
+    }
+  }
+  var top = App.bovenaan(D);
+  if (top.length) {
+    html += '<details class="door-blok"><summary class="door"><span><strong>' + top.length + (top.length === 1 ? ' team staat bovenaan' : ' teams staan bovenaan') + '</strong>' +
+      '<span>onder meer ' + App.esc(App.opsomming(top.slice(0, 3).map(function (t) { return App.teamNaam(t.naam); }))) + '</span></span>' + App.icoon('verder') + '</summary>' +
+      '<div class="binnen"><ul>' + top.map(function (t) { return '<li><strong>' + App.esc(App.teamNaam(t.naam)) + '</strong>, eerste in ' + App.esc(t.poule) + '</li>'; }).join('') + '</ul></div></details>';
+  }
+  html += App.door('wijzigingen.html?alle=1', 'Wijzigingen in het programma', 'verplaatst, vervallen of in een andere zaal');
+  return html + '</section>';
+}
+async function netGespeeld(naam, nu) {
+  var versie = ++uitslagVersie, doel = document.getElementById('net-gespeeld');
+  if (!doel) return;
+  try {
+    var alle = await Resultaten.laad();
+    if (versie !== uitslagVersie) return;
+    var vandaag = App.dagSleutel(nu), lijst = alle.filter(function (u) { return App.dagSleutel(u.tijd) === vandaag; });
+    if (!lijst.length) return;
+    var eigen = naam ? lijst.filter(function (u) { return App.team(u, naam); }) : [];
+    var rest = lijst.filter(function (u) { return eigen.indexOf(u) === -1; }).slice(0, 3);
+    doel.innerHTML = '<section aria-label="Net gespeeld"><div class="sectiekop"><h2>Net gespeeld</h2><a href="uitslagen.html?alle=1">Alle uitslagen</a></div>' +
+      eigen.map(function (u) { return Resultaten.eigen(u, naam, 'Jullie wedstrijd van ' + App.tijd(u.tijd)); }).join('') +
+      (rest.length ? '<div class="lijst"' + (eigen.length ? ' style="margin-top:12px"' : '') + '>' + rest.map(function (u) { return Resultaten.kaart(u, ''); }).join('') + '</div>' : '') + '</section>';
+  } catch (e) { /* uitslagen zijn hier een extra; het scherm Wedstrijden meldt een storing */ }
+}
 App.start({
   pagina: 'vandaag', titel: 'Vandaag', teamKeuze: 'optioneel',
   toon: function (D, naam) {
     var nu = new Date(), vandaag = App.dagSleutel(nu);
-    var alle = D.wedstrijden.filter(function (w) { return !naam || App.team(w, naam); });
-    var speel = Wedstrijden.speelbaar(alle).sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
-    var vandaagLijst = speel.filter(function (w) { return App.dagSleutel(new Date(w.tijdstip)) === vandaag; });
-    var hierna = speel.filter(function (w) { var d = new Date(w.tijdstip); return d > nu && App.dagSleutel(d) !== vandaag; }).slice(0, 5);
-    var html = '<h2>Vandaag, ' + App.esc(App.dagTekst(nu)) + '</h2>' + App.dagKaart(D, naam, vandaag);
+    var html = App.kop(App.dagTekst(nu));
     if (D.meldingen[vandaag]) html += '<div class="melding"><strong>Melding van de club</strong>' + App.esc(D.meldingen[vandaag]) + '</div>';
-    html += vandaagLijst.length
-      ? '<div class="lijst">' + vandaagLijst.map(function (w) { return App.wedstrijdKaart(w, D); }).join('') + '</div>'
-      : '<div class="melding leeg"><strong>Vandaag speelt ' + App.esc(naam ? App.teamNaam(naam) : 'VOLEVO') + ' niet</strong>Hieronder staan de volgende wedstrijden.</div>';
-    if (vandaagLijst.some(function (w) { return w.hal === 'De Fluit'; }))
-      html += '<div class="acties" style="margin-top:10px"><a class="knop" data-bewaar href="zaal.html?dag=' + vandaag + '&van=vandaag">Bekijk de zaalindeling</a></div>';
-    html += '<h2>Volgende wedstrijden</h2>' + App.vervallenMeldingen(alle);
-    html += hierna.length
-      ? '<div class="lijst">' + hierna.map(function (w) { return App.wedstrijdKaart(w, D, { metDatum: true }); }).join('') + '</div><div class="acties" style="margin-top:12px"><a class="knop vol" href="programma.html">Hele programma</a></div>'
-      : '<div class="melding leeg"><strong>Geen komende wedstrijden gevonden</strong>Kijk later nog eens, of in het programma.</div>';
-    return html + App.beginschermKaart();
-  }
+    if (!naam) {
+      html += App.kiesTeam('Dan zie je hier wanneer en waar je speelt, en wanneer jullie fluiten of tellen.');
+    } else {
+      var eigen = Wedstrijden.speelbaar(D.wedstrijden).filter(function (w) { return w.tijdstip && App.team(w, naam); })
+        .sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
+      var volgende = eigen.filter(function (w) { return new Date(w.tijdstip).getTime() + 2 * 3600e3 > nu.getTime(); })[0];
+      html += volgende ? held(volgende, D, naam, nu)
+        : '<section class="held" aria-label="Jullie wedstrijd"><h2>Geen wedstrijden gepland</h2><p>Voor ' + App.esc(App.teamNaam(naam)) + ' staan er nu geen wedstrijden in het programma.</p></section>';
+      html += App.vervallenMeldingen(D.wedstrijden.filter(function (w) { return App.team(w, naam); }));
+      if (!D.officialsOk) html += '<div class="melding fout"><strong>Fluit- en telbeurten konden niet worden geladen.</strong>Dit betekent niet dat er geen beurten zijn.<div><button class="knop" data-herlaad>Opnieuw proberen</button></div></div>';
+      html += beurtBlok(D, naam, App.dagVanTeam(D, naam, vandaag), nu);
+    }
+    return html + '<div id="net-gespeeld" style="display:contents"></div>' + clubBlok(D, nu);
+  },
+  na: function (D, naam) { netGespeeld(naam, new Date()); }
 });
 </script>
 </body>

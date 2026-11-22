@@ -2,48 +2,74 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#2A3176">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
 <title>VOLEVO · Programma</title>
-<link rel="stylesheet" href="app.css?v=b02a7fc83271">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="app.css?v=e3ba33874042">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="VOLEVO">
 <script>var VOLEVO_DATA = '../';</script>
 <script src="../overrides.js?v=f23fd34a8eec"></script>
 <script src="../shared/wedstrijden.js?v=d3a7e810f0e3"></script>
-<script src="app.js?v=6a6a852c00a4"></script>
+<script src="app.js?v=4b967e4ff5cd"></script>
 </head>
 <body>
 <script>
-var AANTAL = 12, getoond = AANTAL;
+// Programma: alle komende wedstrijden per dag. Een rij klapt open voor adres, reistijd, beurten en knoppen.
+var AANTAL = 20, getoond = AANTAL, laatsteKeuze = null;
 function toonProgramma(D, naam) {
-  var start = new Date(); start.setHours(0, 0, 0, 0);
-  var alle = D.wedstrijden.filter(function (w) { return !naam || App.team(w, naam); });
-  var lijst = Wedstrijden.speelbaar(alle).filter(function (w) { return new Date(w.tijdstip) >= start; })
+  var b = App.bereik(naam, 'programma.html'), start = new Date(); start.setHours(0, 0, 0, 0);
+  var alle = D.wedstrijden.filter(function (w) { return b.alle || App.team(w, naam); });
+  var lijst = Wedstrijden.speelbaar(alle).filter(function (w) { return w.tijdstip && new Date(w.tijdstip) >= start; })
     .sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); });
-  var html = '<h2>' + (naam ? 'Programma ' + App.esc(App.teamNaam(naam)) : 'Programma alle teams') + '</h2>' + App.vervallenMeldingen(alle);
+  var html = App.kop('Wedstrijden') + App.wedstrijdenKeuze('programma', b.zoek) + b.html + App.vervallenMeldingen(alle);
   if (!lijst.length) return html + '<div class="melding leeg"><strong>Geen wedstrijden voor deze keuze</strong>Kies een ander team, of kijk later nog eens.</div>';
-  var zichtbaar = lijst.slice(0, getoond), dag = '';
-  html += '<p class="sub">' + zichtbaar.length + ' van ' + lijst.length + ' wedstrijden vanaf vandaag</p>';
-  zichtbaar.forEach(function (w) {
-    var d = new Date(w.tijdstip), k = App.dagSleutel(d);
-    if (k !== dag) { html += (dag ? '</div>' : '') + '<h3 class="dag">' + App.esc(App.dagTekst(d)) + '</h3><div class="lijst">'; dag = k; }
-    html += App.wedstrijdKaart(w, D);
+  // Bij alle teams: veel wedstrijden op één dag in dezelfde andere hal (een toernooi van de mini's) worden één rij
+  var rijen = [], groepen = {};
+  lijst.forEach(function (w) {
+    var k = App.dagSleutel(new Date(w.tijdstip)) + '|' + (w.hal || '') + '|' + (w.plaats || '');
+    (groepen[k] = groepen[k] || []).push(w);
   });
-  html += '</div>';
-  if (lijst.length > getoond) html += '<div class="acties" style="margin-top:14px"><button class="knop vol" id="meer">Toon meer wedstrijden</button></div>';
+  lijst.forEach(function (w) {
+    var k = App.dagSleutel(new Date(w.tijdstip)) + '|' + (w.hal || '') + '|' + (w.plaats || ''), g = groepen[k];
+    if (!b.alle || w.hal === 'De Fluit' || g.length <= 8) rijen.push({ w: w });
+    else if (g[0] === w) rijen.push({ toernooi: g });
+  });
+  var zichtbaar = rijen.slice(0, getoond), dag = '';
+  html += '<section class="lijst" aria-label="Programma ' + App.esc(b.alle ? 'alle teams' : App.teamNaam(naam)) + '">';
+  zichtbaar.forEach(function (r) {
+    var w = r.w || r.toernooi[0], d = new Date(w.tijdstip), k = App.dagSleutel(d);
+    if (k !== dag) { html += '<h2 class="dagkop">' + App.esc(App.dagTekst(d)) + '</h2>'; dag = k; }
+    html += r.w ? App.wedstrijdRij(w, D, b.alle ? { team: '', jij: !!naam && App.team(w, naam) } : {}) : toernooiRij(r.toernooi, D, naam);
+  });
+  html += '</section>';
+  html += '<p class="klein">' + zichtbaar.length + ' van ' + rijen.length + ' getoond, vanaf vandaag</p>';
+  if (rijen.length > getoond) html += '<button class="knop" id="meer">Toon meer wedstrijden</button>';
   return html;
 }
-var laatsteTeam = null;
+function toernooiRij(g, D, naam) {
+  var eerste = new Date(g[0].tijdstip), laatste = new Date(g[g.length - 1].tijdstip), teams = [];
+  g.forEach(function (w) { [w.thuis, w.uit].forEach(function (n) { var c = Wedstrijden.teamCode(n); if (c !== null && teams.indexOf(c) === -1) teams.push(c); }); });
+  teams.sort(function (a, b) { return a.localeCompare(b, 'nl', { numeric: true }); });
+  var route = App.routeUrl(g[0]);
+  return '<details class="rij toernooi"><summary><div><div class="t">' + App.esc(App.tijd(eerste)) + '</div><div class="d">tot ' + App.esc(App.tijd(laatste)) + '</div></div>' +
+    '<div><div class="w">' + g.length + ' wedstrijden in ' + App.esc(g[0].hal || 'een andere sporthal') + '</div><div class="o">' + App.esc(g[0].plaats || '') + (teams.length ? ', met ' + App.esc(teams.length > 4 ? teams.slice(0, 3).join(', ') + ' en nog ' + (teams.length - 3) + ' teams' : App.opsomming(teams)) : '') + '</div></div>' + App.icoon('omlaag') + '</summary>' +
+    '<div class="meer"><p>' + App.esc(Wedstrijden.locatie(g[0]).adres) + '</p>' +
+    (route ? '<div class="acties"><a class="knop" target="_blank" rel="noopener" aria-label="Route naar ' + App.esc(g[0].hal || 'de sporthal') + '" href="' + App.esc(route) + '">Route</a></div>' : '') +
+    '<p>' + g.map(function (w) { return App.esc(App.tijd(new Date(w.tijdstip)) + ' ' + App.kortTeam(w.thuis) + ' tegen ' + App.kortTeam(w.uit) + (w.veld ? ', veld ' + w.veld : '')); }).join('<br>') + '</p></div></details>';
+}
 document.addEventListener('click', function (e) { if (e.target.id === 'meer') { getoond += AANTAL; App.hertoon(); } });
 App.start({
   pagina: 'programma', titel: 'Programma', teamKeuze: 'optioneel',
   bewaar: function () { return { getoond: getoond }; },
-  herstel: function (e) { if (e && e.getoond) { getoond = e.getoond; laatsteTeam = undefined; } },
+  herstel: function (e) { if (e && e.getoond) { getoond = e.getoond; laatsteKeuze = undefined; } },
   toon: function (D, naam) {
-    if (laatsteTeam === undefined) laatsteTeam = naam;
-    if (naam !== laatsteTeam) { getoond = AANTAL; laatsteTeam = naam; }
+    if (laatsteKeuze === undefined) laatsteKeuze = naam;
+    if (naam !== laatsteKeuze) { getoond = AANTAL; laatsteKeuze = naam; }
     return toonProgramma(D, naam);
   }
 });
