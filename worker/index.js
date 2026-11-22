@@ -2,9 +2,9 @@
 // meldingen) die voorrang hebben op Nevobo, en het trainingsschema. Lezen is
 // openbaar (de pagina's lezen het), schrijven kan alleen met het beheerwachtwoord.
 //
-//   GET  /overrides   -> opgeslagen correcties (404 zolang er niets is opgeslagen)
+//   GET  /overrides   -> opgeslagen correcties (204 zonder inhoud zolang er niets is opgeslagen)
 //   PUT  /overrides   -> bewaart nieuwe correcties; header Authorization: Bearer <wachtwoord>
-//   GET  /trainingen  -> opgeslagen trainingsschema (404 zolang er niets is opgeslagen)
+//   GET  /trainingen  -> opgeslagen trainingsschema (204 zonder inhoud zolang er niets is opgeslagen)
 //   PUT  /trainingen  -> bewaart een nieuw trainingsschema; zelfde wachtwoord
 //   GET  /login       -> 200 bij het juiste wachtwoord, anders 401; bewaart niets
 //
@@ -130,7 +130,9 @@ export default {
 
     if (request.method === 'GET') {
       const bewaard = await env.OVERRIDES.get(onderdeel.sleutel);
-      return bewaard ? antwoord(env, 200, bewaard) : antwoord(env, 404, { fout: 'Nog niets opgeslagen.' });
+      // Niets opgeslagen is geen fout: de pagina's vragen dit bij elke weergave op en vallen dan terug op
+      // het bestand in de repo. Een 404 zou bij elke bezoeker als fout in de browser verschijnen.
+      return bewaard ? antwoord(env, 200, bewaard) : new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store', ...cors(env) } });
     }
 
     if (request.method === 'PUT') {

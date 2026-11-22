@@ -20,7 +20,7 @@ test('zonder wachtwoord of met een fout wachtwoord wordt niets bewaard', async (
 
 test('een geldige wijziging wordt bewaard, gelezen en de vorige blijft bewaard', async () => {
   const env = omgeving();
-  assert.equal((await worker.fetch(new Request('https://x/overrides'), env)).status, 404);
+  assert.equal((await worker.fetch(new Request('https://x/overrides'), env)).status, 204);
   assert.equal((await put(env, { velden: { [sleutel]: '4G' } })).status, 200);
   assert.equal((await put(env, { velden: { [sleutel]: '5' } })).status, 200);
   const gelezen = await (await worker.fetch(new Request('https://x/overrides'), env)).json();
@@ -55,7 +55,7 @@ test('trainingsschema: fout wachtwoord bewaart niets', async () => {
 
 test('trainingsschema: het echte schema uit de repo wordt aanvaard en onveranderd teruggegeven', async () => {
   const env = omgeving();
-  assert.equal((await worker.fetch(new Request('https://x/trainingen'), env)).status, 404);
+  assert.equal((await worker.fetch(new Request('https://x/trainingen'), env)).status, 204);
   const r = await putT(env, echt);
   assert.equal(r.status, 200, JSON.stringify(await r.clone().json()));
   const terug = await (await worker.fetch(new Request('https://x/trainingen'), env)).json();
