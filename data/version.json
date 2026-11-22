@@ -1,14 +1,18 @@
 {
-  "commit": "6c96ee9",
-  "date": "2026-11-22T22:15:26+01:00",
+  "commit": "a1dc61c",
+  "date": "2026-11-22T22:32:04+01:00",
   "files": {
     "index.html": {
-      "commit": "206d57f",
-      "date": "2026-10-17T12:38:03+02:00"
+      "commit": "a1dc61c",
+      "date": "2026-11-22T22:32:04+01:00"
     },
     "rss-inspect.html": {
       "commit": "2124d61",
       "date": "2026-09-04T21:34:36+02:00"
+    },
+    "schermen.html": {
+      "commit": "a1dc61c",
+      "date": "2026-11-22T22:32:04+01:00"
     },
     "volevo-admin.html": {
       "commit": "ee88e87",
@@ -27,8 +31,8 @@
       "date": "2026-10-15T13:06:37Z"
     },
     "volevo-mobiel.html": {
-      "commit": "206d57f",
-      "date": "2026-10-17T12:38:03+02:00"
+      "commit": "a1dc61c",
+      "date": "2026-11-22T22:32:04+01:00"
     },
     "volevo-officials.html": {
       "commit": "ee88e87",
