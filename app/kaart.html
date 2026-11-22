@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>VOLEVO · Kaart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="app.css?v=e3ba33874042">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="VOLEVO">
+<script>var VOLEVO_DATA = '../';</script>
+<script src="../overrides.js?v=f23fd34a8eec"></script>
+<script src="../shared/wedstrijden.js?v=d3a7e810f0e3"></script>
+<script src="app.js?v=4b967e4ff5cd"></script>
+</head>
+<body>
+<script>
+// Kaart: in welke sporthallen speelt VOLEVO op een dag? Bovenaan de kaart, eronder de hallen met hun wedstrijden,
+// de afstand en de vertrektijd. De reistijd is de schatting uit Wedstrijden.reis, geen routeplanner.
+var kaartObject = null, hallen = [];
+var FLUIT = [52.09332, 4.39517];
+function kaartPagina(D, naam) {
+  var nu = new Date(), vandaag = App.dagSleutel(nu), q = new URLSearchParams(location.search);
+  var speel = Wedstrijden.speelbaar(D.wedstrijden).filter(function (w) { return w.tijdstip && App.dagSleutel(new Date(w.tijdstip)) >= vandaag; });
+  var perDag = {};
+  speel.forEach(function (w) { var k = App.dagSleutel(new Date(w.tijdstip)); (perDag[k] = perDag[k] || []).push(w); });
+  var dagen = Object.keys(perDag).sort();
+  hallen = [];
+  if (!dagen.length) return App.kop('Waar spelen we') + '<div class="melding leeg"><strong>Geen komende wedstrijden gevonden</strong>Kijk later nog eens.</div>';
+  var dag = perDag[q.get('dag')] ? q.get('dag') : dagen[0];
+  var perHal = {};
+  perDag[dag].sort(function (a, b) { return new Date(a.tijdstip) - new Date(b.tijdstip); }).forEach(function (w) {
+    var k = (w.hal || '?') + '|' + (w.plaats || '');
+    if (!perHal[k]) perHal[k] = { naam: w.hal || 'Sporthal nog niet bekend', plaats: w.plaats || '', thuis: w.hal === 'De Fluit', lat: w.lat, lon: w.lon, wedstrijden: [], reis: Wedstrijden.reis(w) };
+    perHal[k].wedstrijden.push(w);
+  });
+  hallen = Object.keys(perHal).map(function (k) { return perHal[k]; }).sort(function (a, b) {
+    return (b.thuis ? 1 : 0) - (a.thuis ? 1 : 0) || (a.reis ? a.reis.km : 9999) - (b.reis ? b.reis.km : 9999);
+  });
+  hallen.forEach(function (h, i) { h.nr = i + 1; if (h.thuis) { h.lat = FLUIT[0]; h.lon = FLUIT[1]; } });
+  var aantal = perDag[dag].length, d = new Date(dag + 'T12:00:00');
+  var html = App.kop('Waar spelen we', aantal + (aantal === 1 ? ' wedstrijd' : ' wedstrijden') + ' in ' + hallen.length + (hallen.length === 1 ? ' sporthal' : ' sporthallen'));
+  html += '<div class="chips" role="group" aria-label="Speeldag">' + dagen.slice(0, 8).map(function (k) {
+    return '<a href="kaart.html?dag=' + k + '"' + (k === dag ? ' aria-current="true"' : '') + '>' + (k === vandaag ? 'Vandaag' : App.esc(App.dagKort(new Date(k + 'T12:00:00')))) + '</a>';
+  }).join('') + '</div>';
+  html += '<div id="kaart" role="img" aria-label="Kaart met de sporthallen van ' + App.esc(App.dagTekst(d)) + ': ' + App.esc(App.opsomming(hallen.map(function (h) { return h.plaats || h.naam; }))) + '"></div>';
+  html += '<section class="lijst" aria-label="Sporthallen van ' + App.esc(App.dagTekst(d)) + '">' + hallen.map(function (h) {
+    var eigen = !!naam && h.wedstrijden.some(function (w) { return App.team(w, naam); });
+    var eigenLijst = naam ? h.wedstrijden.filter(function (w) { return App.team(w, naam); }) : [];
+    var regel = function (w) { return App.esc(App.tijd(new Date(w.tijdstip)) + ' ' + App.kortTeam(w.thuis) + ' tegen ' + App.kortTeam(w.uit)); };
+    var regels = h.wedstrijden.length > 3
+      ? [h.wedstrijden.length + (h.thuis ? ' thuiswedstrijden' : ' wedstrijden') + ', van ' + App.tijd(new Date(h.wedstrijden[0].tijdstip)) + ' tot ' + App.tijd(new Date(h.wedstrijden[h.wedstrijden.length - 1].tijdstip))].concat(eigenLijst.slice(0, 3).map(regel)).join('<br>')
+      : h.wedstrijden.map(regel).join('<br>');
+    var meer = '<p>' + App.esc(Wedstrijden.locatie(h.wedstrijden[0]).adres) + '</p>';
+    if (!h.thuis) meer += (eigenLijst.length ? eigenLijst : h.wedstrijden.slice(0, h.wedstrijden.length > 3 ? 1 : 3)).map(function (w) {
+      var r = Wedstrijden.reis(w), wie = Wedstrijden.teamCode(w.uit) !== null ? w.uit : w.thuis;
+      return r ? '<p>' + App.esc(App.kortTeam(wie)) + ', wedstrijd van ' + App.esc(App.tijd(new Date(w.tijdstip))) + ': vertrek rond <strong>' + App.esc(App.tijd(r.vertrek)) + '</strong>.</p>' : '';
+    }).join('');
+    var route = App.routeUrl(h.wedstrijden[0]);
+    meer += '<div class="acties">' + (h.thuis ? '<a class="knop vol" data-bewaar href="zaal.html?dag=' + dag + '&van=kaart">Bekijk de zaal</a>' : '') +
+      (route ? '<a class="knop' + (h.thuis ? '' : ' vol') + '" target="_blank" rel="noopener" aria-label="Route naar ' + App.esc(h.naam) + '" href="' + App.esc(route) + '">Route</a>' : '') + '</div>';
+    return '<details class="plek"' + (eigen && !h.thuis ? ' open' : '') + '><summary><span class="p' + (h.thuis ? ' thuis' : '') + '">' + h.nr + '</span>' +
+      '<span><span class="h">' + App.esc(h.naam) + (h.plaats ? ', ' + App.esc(h.plaats) : '') + '</span><span class="w">' + regels + '</span>' +
+      (eigen ? '<span class="let">' + App.esc(App.teamNaam(naam)) + ' speelt hier</span>' : '') + '</span>' +
+      '<span class="km">' + (h.thuis ? 'thuis' : (h.reis ? h.reis.km + ' km<small>ca. ' + h.reis.minuten + ' min</small>' : '')) + '</span></summary>' +
+      '<div class="meer">' + meer + '</div></details>';
+  }).join('') + '</section>';
+  return html + '<p class="klein">Tik op een sporthal voor het adres, de vertrektijd en de route. Afstand en reistijd zijn een schatting vanaf De Fluit; de vertrektijd gaat uit van 45 minuten voor de aanvang in de zaal.</p>';
+}
+// De kaart zelf (Leaflet). Lukt het laden van de kaart niet, dan blijft de lijst met sporthallen over.
+function tekenKaart() {
+  var el = document.getElementById('kaart');
+  if (kaartObject) { kaartObject.remove(); kaartObject = null; }
+  if (!el) return;
+  var punten = hallen.filter(function (h) { return typeof h.lat === 'number' && typeof h.lon === 'number'; });
+  if (typeof L === 'undefined' || !punten.length) { el.style.display = 'none'; return; }
+  kaartObject = L.map(el, { zoomControl: false, attributionControl: true, scrollWheelZoom: false });
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', { maxZoom: 16, attribution: 'Kaart &copy; Esri' }).addTo(kaartObject);
+  var thuis = punten.filter(function (h) { return h.thuis; })[0] || { lat: FLUIT[0], lon: FLUIT[1] };
+  punten.forEach(function (h) {
+    if (!h.thuis) L.polyline([[thuis.lat, thuis.lon], [h.lat, h.lon]], { color: '#2A3176', weight: 1.5, opacity: .55, dashArray: '3 5', interactive: false }).addTo(kaartObject);
+  });
+  punten.slice().reverse().forEach(function (h) {
+    L.marker([h.lat, h.lon], { keyboard: false, icon: L.divIcon({ className: '', html: '<div class="pin' + (h.thuis ? ' thuis' : '') + '">' + h.nr + '</div>', iconSize: [28, 28], iconAnchor: [14, 14] }) })
+      .addTo(kaartObject).on('click', function () {
+        var rij = document.querySelectorAll('details.plek')[h.nr - 1];
+        if (rij) { rij.open = true; rij.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      });
+  });
+  var grenzen = L.latLngBounds(punten.map(function (h) { return [h.lat, h.lon]; }).concat([FLUIT]));
+  kaartObject.fitBounds(grenzen, { padding: [34, 34], maxZoom: 12 });
+}
+App.start({ pagina: 'kaart', titel: 'Kaart', teamKeuze: 'optioneel', toon: kaartPagina, na: tekenKaart });
+</script>
+</body>
+</html>

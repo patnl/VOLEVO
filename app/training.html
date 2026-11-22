@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>VOLEVO · Trainingsschema</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="app.css?v=e3ba33874042">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="VOLEVO">
+<script>var VOLEVO_DATA = '../';</script>
+<script src="../overrides.js?v=f23fd34a8eec"></script>
+<script src="../shared/wedstrijden.js?v=d3a7e810f0e3"></script>
+<script src="app.js?v=4b967e4ff5cd"></script>
+</head>
+<body>
+<script>
+// Trainingsschema van De Fluit. Met een gekozen team staan jullie eigen trainingen bovenaan; daaronder het hele schema per dag.
+var DAGNAAM = { ma: 'maandag', di: 'dinsdag', wo: 'woensdag', do: 'donderdag', vr: 'vrijdag', za: 'zaterdag', zo: 'zondag' };
+var trainVersie = 0;
+// "DS 2" in de competitie heet "D2" in het trainingsschema, "HS 4" heet "H4"; jeugdteams houden hun letters ("MA3")
+function schemaNamen(naam) {
+  var code = (Wedstrijden.teamCode(naam) || '').replace(/\s+/g, '').toUpperCase();
+  return code ? [code, code.replace(/^DS/, 'D').replace(/^HS/, 'H')] : [];
+}
+function isTeam(cel, namen) {
+  var t = String(cel || '').replace(/\(.*?\)/g, '').replace(/\s+/g, '').toUpperCase();
+  return namen.indexOf(t) !== -1;
+}
+async function toonTrainingen(naam) {
+  var versie = ++trainVersie, doel = document.getElementById('trainingen');
+  var d = null;
+  try { d = await laadTrainingen(); } catch (e) {}
+  if (versie !== trainVersie || !doel) return;
+  if (!d || !d.dagen) { doel.innerHTML = '<div class="melding fout"><strong>Het trainingsschema kan nu niet worden opgehaald.</strong><div><button class="knop" data-herlaad>Opnieuw proberen</button></div></div>'; return; }
+  var namen = naam ? schemaNamen(naam) : [], eigen = [], html = '';
+  var perDag = Object.keys(DAGNAAM).filter(function (k) { return (d.dagen[k] || []).length; }).map(function (k) {
+    var rijen = d.dagen[k].map(function (b) {
+      var cellen = Object.keys(b.velden || {}).sort().map(function (v) {
+        var c = b.velden[v]; if (!c || !c.team) return '';
+        var mijn = isTeam(c.team, namen), afwijkend = (c.van && c.van !== b.van) || (c.tot && c.tot !== b.tot);
+        if (mijn) eigen.push({ dag: k, van: c.van || b.van, tot: c.tot || b.tot, hal: b.hal, veld: v });
+        return '<span' + (mijn ? ' class="eigen"' : '') + '>' + App.esc(c.team) + '</span> <span class="klein">veld ' + App.esc(v) + (afwijkend ? ', ' + App.esc((c.van || b.van) + ' tot ' + (c.tot || b.tot)) : '') + '</span>';
+      }).filter(Boolean);
+      return cellen.length ? '<tr><th scope="row">' + App.esc(b.van) + '<br><span class="klein" style="font:500 13px Barlow,sans-serif">De ' + App.esc(b.hal) + '</span></th><td>' + cellen.join('<br>') + '</td></tr>' : '';
+    }).join('');
+    return { dag: k, rijen: rijen };
+  });
+  if (naam) {
+    html += '<section aria-label="Jullie trainingen"><div class="sectiekop"><h2>' + App.esc(App.teamNaam(naam)) + ' traint</h2></div>' + (eigen.length
+      ? '<div class="lijst">' + eigen.map(function (e) {
+        return '<div class="rij"><div><div class="t">' + App.esc(e.van) + '</div><div class="d">tot ' + App.esc(e.tot) + '</div></div><div><div class="w" style="text-transform:capitalize">' + DAGNAAM[e.dag] + '</div><div class="o">De ' + App.esc(e.hal) + ', veld ' + App.esc(e.veld) + '</div></div></div>';
+      }).join('') + '</div>'
+      : '<p class="klein">In het schema staat geen training onder de naam van jullie team. Kijk hieronder in het hele schema, of vraag het je trainer.</p>') + '</section>';
+  }
+  html += '<section aria-label="Het hele schema"><div class="sectiekop"><h2>Het hele schema</h2></div>' + perDag.map(function (p) {
+    return '<details class="door-blok"><summary class="door laag"><span style="text-transform:capitalize">' + DAGNAAM[p.dag] + '</span>' + App.icoon('verder') + '</summary><div class="binnen"><table class="schema">' + p.rijen + '</table></div></details>';
+  }).join('') + '</section>';
+  html += '<p class="klein">' + (d.versie ? 'Schema van ' + App.esc(d.versie) + '. ' : '') + 'Het cijfer tussen haakjes is de eerste of tweede training van het team in de week. De Tas heeft bij trainingen veld 1 tot en met 4.</p>';
+  doel.innerHTML = html;
+}
+App.start({ pagina: 'training', titel: 'Trainingsschema', teamKeuze: 'optioneel',
+  toon: function (D, naam) { return App.kop('Trainingsschema', 'Sporthal De Fluit') + '<div id="trainingen" aria-live="polite" style="display:flex;flex-direction:column;gap:26px"><div class="melding leeg">Trainingsschema ophalen…</div></div>'; },
+  na: function (D, naam) { toonTrainingen(naam); } });
+</script>
+</body>
+</html>

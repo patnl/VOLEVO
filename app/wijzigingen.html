@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>VOLEVO · Wijzigingen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="app.css?v=e3ba33874042">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="VOLEVO">
+<script>var VOLEVO_DATA = '../';</script>
+<script src="../overrides.js?v=f23fd34a8eec"></script>
+<script src="../shared/wedstrijden.js?v=d3a7e810f0e3"></script>
+<script src="app.js?v=4b967e4ff5cd"></script>
+</head>
+<body>
+<script>
+// Wijzigingen in het programma: wat Nevobo heeft verplaatst, laten vervallen of in een andere zaal gezet.
+// Alleen wedstrijden die nog moeten komen. De gegevens komen uit data/wijzigingen.json.
+var SOORT = { verplaatst: 'Verplaatst', vervallen: 'Vervallen', hersteld: 'Gaat toch door', nieuw: 'Nieuwe wedstrijd', verwijderd: 'Uit het programma', 'andere zaal': 'Andere zaal' };
+var wijzigVersie = 0, AANTAL = 25, getoond = AANTAL;
+function moment(p) {
+  if (!p || !p.tijdstip) return '';
+  var d = new Date(p.tijdstip);
+  return App.kort(d) + (p.hal ? ' in ' + p.hal + (p.plaats && p.hal !== 'De Fluit' ? ', ' + p.plaats : '') : '');
+}
+async function toonWijzigingen(naam, alle) {
+  var versie = ++wijzigVersie, doel = document.getElementById('wijzigingen');
+  try {
+    var r = await fetch('../data/wijzigingen.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('wijzigingen ' + r.status);
+    var d = await r.json();
+    if (versie !== wijzigVersie || !doel) return;
+    var start = new Date(); start.setHours(0, 0, 0, 0);
+    var lijst = (d.wijzigingen || []).filter(function (w) {
+      var p = w.naar || w.van;
+      return p && p.tijdstip && new Date(p.tijdstip) >= start && (alle || w.thuis === naam || w.uit === naam);
+    }).sort(function (a, b) { return new Date((a.naar || a.van).tijdstip) - new Date((b.naar || b.van).tijdstip); });
+    if (!lijst.length) { doel.innerHTML = '<div class="melding leeg"><strong>Geen wijzigingen</strong>' + (alle ? 'Er zijn geen komende wedstrijden verplaatst of vervallen.' : 'Voor ' + App.esc(App.teamNaam(naam)) + ' is er niets verplaatst of vervallen.') + '</div>'; return; }
+    doel.innerHTML = '<div class="lijst">' + lijst.slice(0, getoond).map(function (w) {
+      var p = w.naar && w.soort !== 'vervallen' && w.soort !== 'verwijderd' ? w.naar : (w.van || w.naar), t = new Date(p.tijdstip);
+      var weg = w.soort === 'vervallen' || w.soort === 'verwijderd';
+      var uitleg = weg ? 'Stond op ' + moment(w.van || w.naar) + '. Gaat niet door.'
+        : (w.van && w.naar ? 'Was ' + moment(w.van) + '. Wordt ' + moment(w.naar) + '.' : (w.naar ? 'Op ' + moment(w.naar) + '.' : ''));
+      return '<div class="rij' + (weg ? ' klaar' : '') + '"><div><div class="t">' + App.esc(App.tijd(t)) + '</div><div class="d">' + App.esc(App.dagKort(t)) + '</div></div>' +
+        '<div><div class="w">' + App.esc(w.thuis) + ' tegen ' + App.esc(w.uit) + '</div><div class="o">' + App.esc(uitleg) + '</div>' +
+        '<span class="let">' + App.esc(SOORT[w.soort] || w.soort) + '</span></div></div>';
+    }).join('') + '</div>' + (lijst.length > getoond ? '<p style="padding-top:14px"><button class="knop" id="meer">Toon meer wijzigingen</button></p>' : '') + (d.bijgewerkt ? '<p class="klein" style="padding-top:10px">Bijgewerkt op ' + App.esc(new Date(d.bijgewerkt).toLocaleString('nl-NL', { dateStyle: 'medium', timeStyle: 'short' })) + '.</p>' : '');
+  } catch (e) {
+    if (versie !== wijzigVersie || !doel) return;
+    doel.innerHTML = '<div class="melding fout"><strong>De wijzigingen kunnen nu niet worden opgehaald.</strong>Dit betekent niet dat er niets is gewijzigd.<div><button class="knop" data-herlaad>Opnieuw proberen</button></div></div>';
+  }
+}
+var bereikNu = null;
+document.addEventListener('click', function (e) { if (e.target.id === 'meer') { getoond += AANTAL; App.hertoon(); } });
+App.start({ pagina: 'wijzigingen', titel: 'Wijzigingen', teamKeuze: 'optioneel',
+  toon: function (D, naam) {
+    bereikNu = App.bereik(naam, 'wijzigingen.html');
+    return App.kop('Wijzigingen', 'Verplaatst, vervallen of in een andere zaal') + bereikNu.html + '<div id="wijzigingen" aria-live="polite"><div class="melding leeg">Wijzigingen ophalen…</div></div>';
+  },
+  na: function (D, naam) { toonWijzigingen(naam, bereikNu.alle); } });
+</script>
+</body>
+</html>

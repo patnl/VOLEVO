@@ -33,7 +33,8 @@ function omgeving() {
     fetch: (url) => /verslagen\.json/.test(url) ? Promise.resolve({ ok: false })
       : new Promise((resolve, reject) => pending.push({ resolve, reject })),
     document: { getElementById: (id) => id === 'inhoud' ? inhoud : null },
-    App: { start: (c) => { config = c; }, esc: String, kort: () => 'datum', teamNaam: String,
+    App: { start: (c) => { config = c; }, esc: String, kort: () => 'datum', dagKort: () => 'datum', dagTekst: () => 'datum', dagSleutel: () => 'dag', teamNaam: String,
+      kop: (t) => '<h1>' + t + '</h1>', wedstrijdenKeuze: () => '', bereik: () => ({ alle: false, html: '', zoek: '' }),
       bronKnop: () => '', herstelStaat: () => {} }
   });
   vm.runInContext(readFileSync(new URL('../app/resultaten.js', import.meta.url), 'utf8'), scope);
@@ -58,7 +59,7 @@ test('een tragere aanvraag voor het vorige team overschrijft de huidige uitslage
   assert.match(e.inhoud.innerHTML, /Uitslagen VOLEVO MA 4/);
   assert.doesNotMatch(e.inhoud.innerHTML, /Uitslagen VOLEVO MA 3/);
   await e.scope.teken('VOLEVO MA 4');
-  assert.match(e.inhoud.innerHTML, /Winnaar: VOLEVO MA 4/);
+  assert.match(e.inhoud.innerHTML, /VOLEVO MA 4<span class="alleen-lezer"> \(winnaar\)/);
   assert.doesNotMatch(e.inhoud.innerHTML, /Geen uitslagen/);
 });
 

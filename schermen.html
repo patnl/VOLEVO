@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex">
+<title>VOLEVO · Zaalschermen en beheer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+/* Overzicht van de pagina's die op de tv's in de zaal draaien, en van het beheer. Voor wie de schermen
+   instelt; clubleden gebruiken de app in app/. De adressen van de tv-pagina's blijven zoals ze zijn. */
+:root { --blauw: #2A3176; --inkt: #171B45; --grijs: #5A5E78; --lijn: #E2E4EE; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: var(--inkt); font: 400 16px/1.4 Barlow, system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+header img { width: 44px; height: 44px; object-fit: contain; }
+h1 { margin: 0; font: 700 38px/1.05 "Barlow Condensed", Barlow, sans-serif; color: var(--blauw); }
+h2 { margin: 34px 0 6px; font: 700 24px/1.1 "Barlow Condensed", Barlow, sans-serif; color: var(--blauw); }
+p { margin: 6px 0 0; color: var(--grijs); }
+a { color: var(--blauw); }
+:focus-visible { outline: 3px solid var(--blauw); outline-offset: 2px; }
+.rij { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; padding: 8px 0; border-top: 1px solid var(--lijn); text-decoration: none; color: var(--inkt); }
+.rij:last-child { border-bottom: 1px solid var(--lijn); }
+.rij strong { display: block; }
+.rij span span { display: block; font-size: 14px; color: var(--grijs); }
+.rij code { font: 500 13px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--grijs); white-space: nowrap; }
+@media (max-width: 520px) { .rij code { display: none; } }
+</style>
+</head>
+<body>
+<main>
+<header><img src="LOGO.png" alt=""><h1>Zaalschermen en beheer</h1></header>
+<p>Deze pagina's draaien op de tv's in De Fluit. Ze zijn gemaakt voor een groot scherm en verversen zichzelf. Clubleden gebruiken de <a href="app/">app op volevo.app</a>.</p>
+
+<h2>Op de schermen</h2>
+<nav aria-label="Pagina's voor de zaalschermen">
+<a class="rij" href="volevo-programma.html"><span><strong>Programma</strong><span>de wedstrijden van vandaag en de komende dagen</span></span><code>volevo-programma.html</code></a>
+<a class="rij" href="volevo-uitslagen.html"><span><strong>Uitslagen</strong><span>standen en setstanden</span></span><code>volevo-uitslagen.html</code></a>
+<a class="rij" href="volevo-zaal.html"><span><strong>Zaalindeling</strong><span>welk team op welk veld</span></span><code>volevo-zaal.html</code></a>
+<a class="rij" href="volevo-zaalscherm.html"><span><strong>Zaalscherm</strong><span>de indeling van één zaal, voor het scherm in die zaal</span></span><code>volevo-zaalscherm.html</code></a>
+<a class="rij" href="volevo-plattegrond.html"><span><strong>Plattegrond</strong><span>De Tas en De Bocht met de velden</span></span><code>volevo-plattegrond.html</code></a>
+<a class="rij" href="volevo-officials.html"><span><strong>Officialbeurten</strong><span>wie fluit, telt en het wedstrijdformulier doet</span></span><code>volevo-officials.html</code></a>
+<a class="rij" href="volevo-kaart.html"><span><strong>Kaart</strong><span>waar de teams vandaag en morgen spelen</span></span><code>volevo-kaart.html</code></a>
+<a class="rij" href="volevo-felicitatie.html"><span><strong>Felicitaties</strong><span>teams in het zonnetje</span></span><code>volevo-felicitatie.html</code></a>
+<a class="rij" href="volevo-qr.html"><span><strong>QR-code naar de app</strong><span>om te tonen of af te drukken</span></span><code>volevo-qr.html</code></a>
+</nav>
+
+<h2>Beheer</h2>
+<nav aria-label="Beheer">
+<a class="rij" href="volevo-schema.html"><span><strong>Zaalschema en trainingsschema</strong><span>velden, standen van de zaal en meldingen; met het beheerwachtwoord</span></span><code>volevo-schema.html</code></a>
+<a class="rij" href="volevo-wijzigingen.html"><span><strong>Wijzigingen verwerken</strong><span>verplaatste wedstrijden, vrije velden en botsende trainingen</span></span><code>volevo-wijzigingen.html</code></a>
+<a class="rij" href="volevo-admin.html"><span><strong>Correcties op de veldindeling</strong><span>handmatige correcties op de zaal- en veldindeling</span></span><code>volevo-admin.html</code></a>
+<a class="rij" href="volevo-inmeten.html"><span><strong>Scherm inmeten</strong><span>afmetingen en schaal van een tv controleren</span></span><code>volevo-inmeten.html</code></a>
+<a class="rij" href="rss-inspect.html"><span><strong>Nevobo-feeds bekijken</strong><span>de ruwe programma- en uitslagenfeed</span></span><code>rss-inspect.html</code></a>
+</nav>
+</main>
+</body>
+</html>

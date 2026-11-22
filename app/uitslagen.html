@@ -2,22 +2,26 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#2A3176">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
 <title>VOLEVO · Uitslagen</title>
-<link rel="stylesheet" href="app.css?v=b02a7fc83271">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="app.css?v=e3ba33874042">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="VOLEVO">
 <script>var VOLEVO_DATA = '../';</script>
 <script src="../overrides.js?v=f23fd34a8eec"></script>
 <script src="../shared/wedstrijden.js?v=d3a7e810f0e3"></script>
-<script src="app.js?v=6a6a852c00a4"></script>
-<script src="resultaten.js?v=e2591af40a89"></script>
+<script src="app.js?v=4b967e4ff5cd"></script>
+<script src="resultaten.js?v=3f70f22a95ff"></script>
 </head>
 <body>
 <script>
-var AANTAL = 12, getoond = AANTAL, uitslagen = null, laadVolgnummer = 0, tekenVolgnummer = 0, laatsteTeam = null;
+// Uitslagen: nieuwste eerst, per dag. Met een gekozen team staat jullie laatste wedstrijd groot bovenaan.
+var AANTAL = 20, getoond = AANTAL, uitslagen = null, laadVolgnummer = 0, tekenVolgnummer = 0, laatsteTeam = null;
 async function laadUitslagen() {
   if (uitslagen) return uitslagen;
   var aanvraag = ++laadVolgnummer;
@@ -26,16 +30,23 @@ async function laadUitslagen() {
   if (aanvraag === laadVolgnummer) uitslagen = gesorteerd;
   return gesorteerd;
 }
-// De uitslag als twee regels, thuis en uit, met de score bij het juiste team; de winnaar staat er in woorden bij
+function kopHtml(naam, b) { return App.kop('Wedstrijden') + App.wedstrijdenKeuze('uitslagen', b.zoek) + b.html; }
 async function toonUitslagen(naam) {
-  var alle = await laadUitslagen();
-  var lijst = alle.filter(function (u) { return !naam || u.thuis === naam || u.uit === naam; });
-  var html = '<h2>' + (naam ? 'Uitslagen ' + App.esc(App.teamNaam(naam)) : 'Uitslagen alle teams') + '</h2>';
+  var b = App.bereik(naam, 'uitslagen.html'), alle = await laadUitslagen();
+  var lijst = alle.filter(function (u) { return b.alle || u.thuis === naam || u.uit === naam; });
+  var html = kopHtml(naam, b);
   if (!lijst.length) return html + '<div class="melding leeg"><strong>Geen uitslagen voor deze keuze</strong>Er zijn nog geen uitslagen binnen. Kijk later nog eens.</div>';
-  html += '<p class="sub">' + Math.min(getoond, lijst.length) + ' van ' + lijst.length + ' uitslagen, nieuwste eerst</p><div class="lijst">';
-  lijst.slice(0, getoond).forEach(function (u) { html += Resultaten.kaart(u, naam); });
-  html += '</div>';
-  if (lijst.length > getoond) html += '<div class="acties" style="margin-top:14px"><button class="knop vol" id="meer">Toon meer uitslagen</button></div>';
+  var eerste = 0;
+  if (!b.alle) { html += Resultaten.eigen(lijst[0], naam, 'Jullie laatste wedstrijd, ' + App.dagKort(lijst[0].tijd)); eerste = 1; }
+  var zichtbaar = lijst.slice(eerste, getoond), dag = '';
+  html += '<section class="lijst" aria-label="Uitslagen ' + App.esc(b.alle ? 'alle teams' : App.teamNaam(naam)) + '">';
+  zichtbaar.forEach(function (u) {
+    var k = App.dagSleutel(u.tijd);
+    if (k !== dag) { html += '<h2 class="dagkop">' + App.esc(App.dagTekst(u.tijd)) + '</h2>'; dag = k; }
+    html += Resultaten.kaart(u, naam);
+  });
+  html += '</section><p class="klein">' + Math.min(getoond, lijst.length) + ' van ' + lijst.length + ' uitslagen, nieuwste eerst. Bij elke uitslag staat het thuisteam boven.</p>';
+  if (lijst.length > getoond) html += '<button class="knop" id="meer">Toon meer uitslagen</button>';
   return html;
 }
 async function teken(naam) {
@@ -46,7 +57,7 @@ async function teken(naam) {
     inhoud.innerHTML = html;
   } catch (e) {
     if (versie !== tekenVolgnummer) return;
-    inhoud.innerHTML = '<div class="melding fout"><strong>De uitslagen kunnen nu niet worden opgehaald.</strong>Probeer het opnieuw met de knop rechtsboven.</div>'; return;
+    inhoud.innerHTML = kopHtml(naam, App.bereik(naam, 'uitslagen.html')) + '<div class="melding fout"><strong>De uitslagen kunnen nu niet worden opgehaald.</strong>Probeer het opnieuw.<div><button class="knop" data-herlaad>Opnieuw proberen</button></div></div>'; return;
   }
   var m = document.getElementById('meer');
   if (m) m.addEventListener('click', function () { getoond += AANTAL; teken(naam); });
@@ -56,7 +67,8 @@ App.start({
   pagina: 'uitslagen', titel: 'Uitslagen', teamKeuze: 'optioneel',
   toon: function (D, naam) {
     if (naam !== laatsteTeam) { getoond = AANTAL; laatsteTeam = naam; }
-    uitslagen = null; teken(naam); return '<div class="melding leeg">Uitslagen ophalen…</div>';
+    uitslagen = null; teken(naam);
+    return kopHtml(naam, App.bereik(naam, 'uitslagen.html')) + '<div class="melding leeg">Uitslagen ophalen…</div>';
   }
 });
 </script>
