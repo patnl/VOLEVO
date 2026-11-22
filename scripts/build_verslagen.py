@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """Schrijft per gespeelde VOLEVO-wedstrijd een kort verslag naar data/verslagen.json.
 
-Leest data/resultaten.xml (de gespiegelde Nevobo-uitslagen) en laat Claude per nieuwe
+Leest data/resultaten.xml (de gespiegelde Nevobo-uitslagen) en laat een taalmodel per nieuwe
 uitslag een of twee zinnen schrijven, alleen op basis van score en setstanden.
 Het model en de aanbieder staan in de omgeving (LLM_PROVIDER, LLM_BASE_URL, LLM_MODEL,
 LLM_API_KEY; zie scripts/llm.py), dus Anthropic, Claude in Foundry en OpenAI werken allemaal.
 Zonder sleutel doet het script niets (en slaagt), zodat de workflow veilig kan draaien voordat
-het secret is ingesteld. Met --proef schrijft het niets weg en toont het alleen de teksten. Een fout bij een wedstrijd slaat alleen die
-wedstrijd over; bestaande verslagen blijven staan.
+het secret is ingesteld. Met --proef schrijft het niets weg en toont het alleen de teksten.
+Een fout bij een wedstrijd slaat alleen die wedstrijd over; bestaande verslagen blijven staan.
+
+Elke tekst wordt gecontroleerd voordat hij wordt opgeslagen (zie afkeuring): geen emoji,
+geen hashtags, niet langer dan twee zinnen of 400 tekens. Een afgekeurde tekst wordt eenmaal
+opnieuw gevraagd; lukt het dan nog niet, dan krijgt die wedstrijd geen verslag en probeert de
+volgende run het opnieuw.
 """
 import json
 import os
@@ -25,6 +30,14 @@ UIT = 'data/verslagen.json'
 MAX_PER_RUN = 10          # begrenst de kosten bij een eerste run of na een storing
 NIEUW_BINNEN_DAGEN = 14   # oudere uitslagen krijgen geen verslag meer
 BEWAAR_DAGEN = 60         # oudere verslagen worden opgeruimd
+
+MAX_TEKENS = 400          # een langere tekst past niet op de kaart en wordt afgekeurd, niet afgekapt
+MAX_ZINNEN = 2
+POGINGEN = 2              # per wedstrijd per run: eerste poging plus een nieuwe bij afkeuring
+# Emoji en pictogrammen: de blokken met symbolen en plaatjes, plus de tekens die ze samenvoegen
+EMOJI = re.compile('[\U0001F000-\U0001FAFF\u2190-\u21FF\u2300-\u23FF\u2600-\u27BF\u2B00-\u2BFF'
+                   '\u200D\uFE0E\uFE0F]')
+HASHTAG = re.compile(r'(?:^|\s)#\w')
 
 
 def uitslagen(xml_pad):
@@ -62,8 +75,35 @@ def prompt(u):
         'Bij verlies: sportief en opbeurend. Geef alleen de tekst terug.')
 
 
-def schrijf_verslag(u, cfg):
-    return llm.vraag(prompt(u), max_tokens=300, cfg=cfg)[:400]
+def afkeuring(tekst):
+    """Geeft de reden waarom een tekst niet getoond mag worden, of None als hij goed is."""
+    tekst = tekst.strip()
+    if not tekst:
+        return 'leeg'
+    if EMOJI.search(tekst):
+        return 'bevat emoji'
+    if HASHTAG.search(tekst):
+        return 'bevat een hashtag'
+    if '\n' in tekst:
+        return 'bestaat uit meerdere regels'
+    if len(tekst) > MAX_TEKENS:
+        return 'te lang (%d tekens, maximaal %d)' % (len(tekst), MAX_TEKENS)
+    zinnen = [z for z in re.split(r'(?<=[.!?])\s+', tekst) if z.strip()]
+    if len(zinnen) > MAX_ZINNEN:
+        return '%d zinnen (maximaal %d)' % (len(zinnen), MAX_ZINNEN)
+    return None
+
+
+def schrijf_verslag(u, cfg, vraag=llm.vraag):
+    """Een goedgekeurde tekst, of None als het model na POGINGEN keer nog niets bruikbaars gaf."""
+    for poging in range(1, POGINGEN + 1):
+        tekst = vraag(prompt(u), max_tokens=300, cfg=cfg).strip()
+        reden = afkeuring(tekst)
+        if reden is None:
+            return tekst
+        print('Verslag afgekeurd (poging %d van %d) voor %s - %s: %s' % (poging, POGINGEN, u['thuis'], u['uit'], reden),
+              file=sys.stderr)
+    return None
 
 
 def laad_bestaand():
@@ -94,6 +134,7 @@ def main(argv=None):
     kandidaten = kandidaten[:3] if proef else kandidaten[:MAX_PER_RUN]
     print('%s via %s, model %s' % ('Proef' if proef else 'Verslagen', cfg['provider'], cfg['model']))
     gemaakt = 0
+    zonder = 0  # wedstrijden zonder bruikbare tekst, na afkeuring
     for u in kandidaten:
         try:
             tekst = schrijf_verslag(u, cfg)
@@ -101,6 +142,7 @@ def main(argv=None):
             print('Verslag mislukt voor %s - %s: %s' % (u['thuis'], u['uit'], e), file=sys.stderr)
             continue
         if not tekst:
+            zonder += 1
             continue
         if proef:
             print('\n%s - %s (%s)\n  %s' % (u['thuis'], u['uit'], u['score'], tekst))
@@ -109,7 +151,7 @@ def main(argv=None):
                                   'model': cfg['model']}
         gemaakt += 1
     if proef:
-        print('\nProef klaar: %d tekst(en), niets opgeslagen' % gemaakt)
+        print('\nProef klaar: %d tekst(en), %d zonder bruikbare tekst, niets opgeslagen' % (gemaakt, zonder))
         return 0
     grens = nu - timedelta(days=BEWAAR_DAGEN)
     verslagen = {k: v for k, v in verslagen.items()
@@ -118,7 +160,7 @@ def main(argv=None):
     with open(UIT, 'w', encoding='utf-8') as f:
         json.dump({'verslagen': verslagen}, f, ensure_ascii=False, indent=1, sort_keys=True)
         f.write('\n')
-    print('%d nieuwe verslagen, %d in totaal' % (gemaakt, len(verslagen)))
+    print('%d nieuwe verslagen, %d zonder bruikbare tekst, %d in totaal' % (gemaakt, zonder, len(verslagen)))
     return 0
 
 
