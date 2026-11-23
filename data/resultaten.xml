@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Mon, 23 Nov 2026 02:05:18 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 10:03:44 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[Zovoc HS 4 - VOLEVO HS 4, Uitslag: 1-3]]></title>
@@ -759,10 +759,10 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[VOLEVO L3 1 - Netwerk L3 4, Uitslag: 0-2]]></title>
+      <title><![CDATA[VOLEVO L3 1 - Netwerk L3 4, Uitslag: 2-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2097510</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2097510</guid>
-      <description><![CDATA[Wedstrijd: VOLEVO L3 1 - Netwerk L3 4, Uitslag: 0-2, Setstanden: 0-10]]></description>
+      <description><![CDATA[Wedstrijd: VOLEVO L3 1 - Netwerk L3 4, Uitslag: 2-0, Setstanden: 10-0]]></description>
       <pubDate>Sat, 21 Nov 2026 10:30:00 +0100</pubDate>
       <nevobo:status>gespeeld</nevobo:status>
     </item>
