@@ -2,7 +2,7 @@
 
 Een kleine Cloudflare Worker die de handmatige correcties (velden, standen, meldingen) bewaart. De wedstrijdsecretaris werkt ze bij via `volevo-schema.html`; de schermen lezen ze van deze API. Is de API niet ingesteld of niet bereikbaar, dan gelden de correcties uit `data/overrides.json` in de repo.
 
-- `GET /overrides`: openbaar, geeft de opgeslagen correcties (404 zolang er niets is opgeslagen).
+- `GET /overrides`: openbaar, geeft de opgeslagen correcties (204 zonder inhoud zolang er niets is opgeslagen).
 - `PUT /overrides`: alleen met `Authorization: Bearer <wachtwoord>`. Controleert de inhoud, bewaart hem en houdt de vorige versie als `overrides:vorig` apart.
 - `GET /login`: geeft 200 bij het juiste wachtwoord (header `Authorization: Bearer <wachtwoord>`), anders 401; bewaart niets. De beheerpagina gebruikt dit voor de inlogknop.
 - `GET /trainingen` en `PUT /trainingen`: hetzelfde voor het trainingsschema (door de wedstrijdsecretaris te uploaden op `volevo-schema.html`; de vorige versie blijft als `trainingen:vorig` bewaard). Zolang er niets is opgeslagen geldt `data/trainingen.json` uit de repo.

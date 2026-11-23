@@ -15,7 +15,8 @@ async function laadOverrides() {
   if (VOLEVO_API) {
     try {
       var r = await fetch(VOLEVO_API + '/overrides' + t, { cache: 'no-store', signal: wachtTijd() });
-      if (r.ok) return await r.json();
+      // 204 betekent: bij de API is nog niets opgeslagen, dan geldt het bestand
+      if (r.status === 200) return await r.json();
     } catch (e) {}
   }
   try {
@@ -31,7 +32,8 @@ async function laadTrainingen() {
   if (VOLEVO_API) {
     try {
       var r = await fetch(VOLEVO_API + '/trainingen' + t, { cache: 'no-store', signal: wachtTijd() });
-      if (r.ok) return await r.json();
+      // 204 betekent: bij de API is nog niets opgeslagen, dan geldt het bestand
+      if (r.status === 200) return await r.json();
     } catch (e) {}
   }
   try {
