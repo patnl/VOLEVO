@@ -36,6 +36,12 @@
    "tekst": "VOLEVO HS 2 speelde thuis tegen Dosko HS 1 en moest de punten helaas aan de tegenstander laten: het werd 0-4 in sets. Ondanks de nederlaag liet VOLEVO HS 2 met vier spannende setstanden zien dat er genoeg aanknopingspunten zijn voor de volgende wedstrijd.",
    "tijd": "2026-11-21T12:30:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2025521": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO MA 1 speelde uit tegen VCH MA 1 en moest de winst helaas laten aan de thuisploeg: 3-1. Na een sterke derde set kijken we sportief terug en nemen we de positieve punten mee naar de volgende wedstrijd.",
+   "tijd": "2026-11-21T11:00:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2025576": {
    "gemaakt": "2026-11-24T02:34:15.773219+00:00",
    "model": "gpt-5.4-mini",
@@ -138,6 +144,24 @@
    "tekst": "VOLEVO L3 5 heeft uit bij Inter Rijswijk L3 2 een mooie 0-2 overwinning behaald. Een prima resultaat om met vertrouwen op terug te kijken.",
    "tijd": "2026-11-21T11:40:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2097514": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 1 won knap met 0-2 van Inter Rijswijk L3 2 en pakte daarmee een mooie uitzege. De setstand was 13-28.",
+   "tijd": "2026-11-21T11:20:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2097515": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 5 heeft uit een mooie 0-2 overwinning meegenomen na twee solide sets tegen Netwerk L3 5. Met 19-25 in de eerste set werd de basis gelegd voor een sportief en positief resultaat.",
+   "tijd": "2026-11-21T11:00:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2097516": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 5 heeft een sportieve wedstrijd gespeeld tegen VOLEVO L3 1 en wist ondanks een goede inzet geen set te pakken: 0-2. De setstand was 11-32, maar er zijn weer waardevolle lessen meegenomen voor de volgende wedstrijd.",
+   "tijd": "2026-11-21T10:50:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2097517": {
    "gemaakt": "2026-11-24T23:15:34.614050+00:00",
    "model": "gpt-5.4-mini",
@@ -149,6 +173,12 @@
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO L3 1 won uit bij Zovoc L3 1 met 0-2. De ploeg kan trots terugkijken op een nette overwinning met setstanden van 13-20.",
    "tijd": "2026-11-21T11:30:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2097519": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 5 heeft thuis sportief gestreden tegen Zovoc L3 1, maar moest de winst met 0-2 in sets aan de tegenstander laten. Ondanks de nederlaag kijkt het team met vertrouwen vooruit naar de volgende wedstrijd.",
+   "tijd": "2026-11-21T11:20:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2097613": {
    "gemaakt": "2026-11-24T12:55:27.207869+00:00",
@@ -390,6 +420,18 @@
    "tekst": "VOLEVO L5 5 speelde thuis tegen Zovoc L5 5 en moest de winst helaas aan de tegenstander laten met 0-4 in sets. De setstanden waren 9-16 en 14-16, maar er waren zeker momenten om op voort te bouwen voor de volgende wedstrijd.",
    "tijd": "2026-11-21T14:00:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2099573": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 4 speelde thuis tegen Netwerk L3 2 en de wedstrijd eindigde in 0-2. Ondanks de nederlaag liet VOLEVO een sportieve inzet zien en gaat het team met vertrouwen verder.",
+   "tijd": "2026-11-21T10:50:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2099589": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 2 speelde een sportieve wedstrijd tegen Netwerk L3 3 en moest de winst helaas aan de thuisploeg laten. Ondanks de 2-0 nederlaag bood het team goed partij, met een setstand van 25-13.",
+   "tijd": "2026-11-21T10:50:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2099592": {
    "gemaakt": "2026-11-24T23:15:34.614050+00:00",
    "model": "gpt-5.4-mini",
@@ -407,6 +449,18 @@
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO L3 8 heeft thuis hard gewerkt, maar moest de winst deze keer aan VELO L3 2 laten. Met 0-2 in sets en 12-21 als setstand kan het team toch trots zijn op de inzet en vol vertrouwen vooruitkijken naar de volgende wedstrijd.",
    "tijd": "2026-11-21T11:20:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2099596": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 8 speelde een sportieve wedstrijd tegen Kalinko L3 2, maar moest de overwinning dit keer aan de bezoekers laten. De ploeg uit Leidschendam hield de moed erin en kijkt met vertrouwen vooruit.",
+   "tijd": "2026-11-21T11:00:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2099598": {
+   "gemaakt": "2026-11-25T05:40:14.840912+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO L3 8 heeft thuis een mooie overwinning geboekt op VELO L3 5: het werd 2-0 in sets. Met 28-10 als setstand was het een fijne wedstrijd voor VOLEVO.",
+   "tijd": "2026-11-21T11:10:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2099843": {
    "gemaakt": "2026-11-23T15:19:59.623940+00:00",
