@@ -4,8 +4,80 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 27 Nov 2026 12:54:34 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 22:06:21 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Netwerk JB 1 - VOLEVO JB 2, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2028105</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2028105</guid>
+      <description><![CDATA[Wedstrijd: Netwerk JB 1 - VOLEVO JB 2, Uitslag: 0-4, Setstanden: 12-25, 15-25, 20-25, 13-25]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VHZ JB 1 - VOLEVO JB 1, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026721</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026721</guid>
+      <description><![CDATA[Wedstrijd: VHZ JB 1 - VOLEVO JB 1, Uitslag: 1-3, Setstanden: 21-25, 23-25, 17-25, 25-23]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VELO HS 2 - VOLEVO HS 2, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2020123</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2020123</guid>
+      <description><![CDATA[Wedstrijd: VELO HS 2 - VOLEVO HS 2, Uitslag: 3-1, Setstanden: 25-19, 25-19, 23-25, 25-15]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[SKC HS 1 - VOLEVO HS 3, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2016951</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2016951</guid>
+      <description><![CDATA[Wedstrijd: SKC HS 1 - VOLEVO HS 3, Uitslag: 3-1, Setstanden: 25-22, 25-22, 25-19, 29-31]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MC 1 - Inter Rijswijk MC 1, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025677</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025677</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MC 1 - Inter Rijswijk MC 1, Uitslag: 4-0, Setstanden: 25-9, 25-17, 25-22, 25-22]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Castellum MC 1 - VOLEVO MC 5, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2031004</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2031004</guid>
+      <description><![CDATA[Wedstrijd: Castellum MC 1 - VOLEVO MC 5, Uitslag: 3-2, Setstanden: 25-19, 14-25, 22-25, 25-8, 15-10]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO MA 1 - Zovoc MA 1, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2025509</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025509</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO MA 1 - Zovoc MA 1, Uitslag: 2-3, Setstanden: 25-22, 26-28, 25-20, 12-25, 10-15]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 8 - Inter Rijswijk DS 9, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041582</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041582</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 8 - Inter Rijswijk DS 9, Uitslag: 1-3, Setstanden: 18-25, 12-25, 25-22, 18-25]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 7 - Timios DS 2, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041510</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041510</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 7 - Timios DS 2, Uitslag: 2-3, Setstanden: 25-14, 15-25, 19-25, 25-20, 11-15]]></description>
+      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Zovoc HS 4 - VOLEVO HS 4, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017783</link>
