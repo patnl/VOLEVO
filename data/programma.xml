@@ -4,16 +4,8 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 27 Nov 2026 04:03:44 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 13:19:43 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
-    <item>
-      <title><![CDATA[: Dosko MA 1 - VOLEVO MA 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2080199</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080199</guid>
-      <description><![CDATA[Wedstrijd: 3000BM3A  07, Datum: , Speellocatie: De Stolp, Jan Steenlaan 16, 2821VB  Stolwijk]]></description>
-      <pubDate/>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
     <item>
       <title><![CDATA[: ZVH JC 1 - VOLEVO JC 1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2080212</link>
@@ -68,14 +60,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2025677</guid>
       <description><![CDATA[Wedstrijd: 3000XCHB1 DB, Datum: vrijdag 27 november, 19:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
       <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[27 nov 19:30: ‘t Leidsche Tuynhuis Leython DC DS 3 - VOLEVO DS 4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2016181</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2016181</guid>
-      <description><![CDATA[Wedstrijd: 3000DPE   EH, Datum: vrijdag 27 november, 19:30, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
@@ -532,6 +516,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2041546</guid>
       <description><![CDATA[Wedstrijd: 3000D2K   IC, Datum: zaterdag 12 december, 20:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
       <pubDate>Sat, 12 Dec 2026 20:00:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[17 dec 20:00: Dosko MA 1 - VOLEVO MA 1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2080199</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2080199</guid>
+      <description><![CDATA[Wedstrijd: 3000BM3A  07, Datum: donderdag 17 december, 20:00, Speellocatie: De Stolp, Jan Steenlaan 16, 2821VB  Stolwijk]]></description>
+      <pubDate>Thu, 17 Dec 2026 20:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
@@ -1092,6 +1084,14 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009610</guid>
       <description><![CDATA[Wedstrijd: 30003BD   FI, Datum: zaterdag 20 februari, 15:30, Speellocatie: Galgenwaard Sportcentrum, Herculesplein 341, 3584AA  Utrecht]]></description>
       <pubDate>Sat, 20 Feb 2027 15:30:00 +0100</pubDate>
+      <nevobo:status>gepland</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[26 feb 19:30: ‘t Leidsche Tuynhuis Leython DC DS 3 - VOLEVO DS 4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2016181</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2016181</guid>
+      <description><![CDATA[Wedstrijd: 3000DPE   EH, Datum: vrijdag 26 februari, 19:30, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <pubDate>Fri, 26 Feb 2027 19:30:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
