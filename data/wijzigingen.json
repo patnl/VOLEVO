@@ -1,6 +1,69 @@
 {
-  "bijgewerkt": "2026-11-27T08:56:19+00:00",
+  "bijgewerkt": "2026-11-27T21:34:16+00:00",
   "wijzigingen": [
+    {
+      "id": "verplaatst|None|Dosko MA 1|VOLEVO MA 1|2026-12-17T20:00:00+01:00|Dosko MA 1|VOLEVO MA 1",
+      "gezien": "2026-11-27T21:34:16+00:00",
+      "soort": "verplaatst",
+      "thuis": "Dosko MA 1",
+      "uit": "VOLEVO MA 1",
+      "van": {
+        "tijdstip": null,
+        "hal": "De Stolp",
+        "plaats": "Stolwijk",
+        "status": "gepland"
+      },
+      "naar": {
+        "tijdstip": "2026-12-17T20:00:00+01:00",
+        "hal": "De Stolp",
+        "plaats": "Stolwijk",
+        "status": "gepland"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
+    {
+      "id": "verplaatst|None|ZVH JC 1|VOLEVO JC 1|2026-12-19T16:15:00+01:00|ZVH JC 1|VOLEVO JC 1",
+      "gezien": "2026-11-27T21:34:16+00:00",
+      "soort": "verplaatst",
+      "thuis": "ZVH JC 1",
+      "uit": "VOLEVO JC 1",
+      "van": {
+        "tijdstip": null,
+        "hal": "Swanla",
+        "plaats": "Zevenhuizen ZH",
+        "status": "gepland"
+      },
+      "naar": {
+        "tijdstip": "2026-12-19T16:15:00+01:00",
+        "hal": "Swanla",
+        "plaats": "Zevenhuizen ZH",
+        "status": "gepland"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
+    {
+      "id": "verplaatst|2026-12-19T14:15:00+01:00|Inter Rijswijk JC 2|VOLEVO JC 1|2026-12-05T12:30:00+01:00|Inter Rijswijk JC 2|VOLEVO JC 1",
+      "gezien": "2026-11-27T21:34:16+00:00",
+      "soort": "verplaatst",
+      "thuis": "Inter Rijswijk JC 2",
+      "uit": "VOLEVO JC 1",
+      "van": {
+        "tijdstip": "2026-12-19T14:15:00+01:00",
+        "hal": "De Altis",
+        "plaats": "Rijswijk ZH",
+        "status": "gepland"
+      },
+      "naar": {
+        "tijdstip": "2026-12-05T12:30:00+01:00",
+        "hal": "De Altis",
+        "plaats": "Rijswijk ZH",
+        "status": "gepland"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
     {
       "id": "verplaatst|2026-11-27T19:30:00+01:00|‘t Leidsche Tuynhuis Leython DC DS 3|VOLEVO DS 4|2027-02-26T19:30:00+01:00|‘t Leidsche Tuynhuis Leython DC DS 3|VOLEVO DS 4",
       "gezien": "2026-11-27T08:56:19+00:00",
@@ -2826,64 +2889,6 @@
         "status": "concept"
       },
       "naar": null,
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verwijderd|2026-11-21T13:00:00+01:00|Kalinko L4 6|VOLEVO L4 4|None",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verwijderd",
-      "thuis": "Kalinko L4 6",
-      "uit": "VOLEVO L4 4",
-      "van": {
-        "tijdstip": "2026-11-21T13:00:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": null,
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T13:00:00+01:00|Kalinko L5 3|VOLEVO L5 4|2026-11-21T16:20:00+01:00|Kalinko L5 3|VOLEVO L5 4",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "Kalinko L5 3",
-      "uit": "VOLEVO L5 4",
-      "van": {
-        "tijdstip": "2026-11-21T13:00:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T16:20:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T13:00:00+01:00|VOLEVO L4 5|Kalinko L4 4|2026-11-21T12:40:00+01:00|VOLEVO L4 5|Kalinko L4 4",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "VOLEVO L4 5",
-      "uit": "Kalinko L4 4",
-      "van": {
-        "tijdstip": "2026-11-21T13:00:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T12:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
       "veldVoorheen": null,
       "officials": []
     }
