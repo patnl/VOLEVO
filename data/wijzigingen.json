@@ -1,6 +1,27 @@
 {
-  "bijgewerkt": "2026-11-21T19:41:02+00:00",
+  "bijgewerkt": "2026-11-27T08:56:19+00:00",
   "wijzigingen": [
+    {
+      "id": "verplaatst|2026-11-27T19:30:00+01:00|‘t Leidsche Tuynhuis Leython DC DS 3|VOLEVO DS 4|2027-02-26T19:30:00+01:00|‘t Leidsche Tuynhuis Leython DC DS 3|VOLEVO DS 4",
+      "gezien": "2026-11-27T08:56:19+00:00",
+      "soort": "verplaatst",
+      "thuis": "‘t Leidsche Tuynhuis Leython DC DS 3",
+      "uit": "VOLEVO DS 4",
+      "van": {
+        "tijdstip": "2026-11-27T19:30:00+01:00",
+        "hal": "De Bloemerd",
+        "plaats": "Leiderdorp",
+        "status": "gepland"
+      },
+      "naar": {
+        "tijdstip": "2027-02-26T19:30:00+01:00",
+        "hal": "De Bloemerd",
+        "plaats": "Leiderdorp",
+        "status": "gepland"
+      },
+      "veldVoorheen": null,
+      "officials": []
+    },
     {
       "id": "verwijderd|2026-11-29T09:50:00+01:00|AMSTMB 0|VOLEVO MB|None",
       "gezien": "2026-11-20T07:38:55+00:00",
@@ -2859,27 +2880,6 @@
       },
       "naar": {
         "tijdstip": "2026-11-21T12:40:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "veldVoorheen": null,
-      "officials": []
-    },
-    {
-      "id": "verplaatst|2026-11-21T13:20:00+01:00|DEO L4 3|VOLEVO L4 3|2026-11-21T13:00:00+01:00|DEO L4 3|VOLEVO L4 3",
-      "gezien": "2026-11-12T20:17:36+00:00",
-      "soort": "verplaatst",
-      "thuis": "DEO L4 3",
-      "uit": "VOLEVO L4 3",
-      "van": {
-        "tijdstip": "2026-11-21T13:20:00+01:00",
-        "hal": "Houtrust sporthal",
-        "plaats": "'s-Gravenhage",
-        "status": "concept"
-      },
-      "naar": {
-        "tijdstip": "2026-11-21T13:00:00+01:00",
         "hal": "Houtrust sporthal",
         "plaats": "'s-Gravenhage",
         "status": "concept"

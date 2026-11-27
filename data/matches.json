@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-21T19:41:02+00:00",
+ "gegenereerd": "2026-11-27T08:56:19+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -7384,20 +7384,6 @@
    "dwf": "https://dwf.nevobo.nl/matches/70397c1d-d3e5-435e-9779-13fcdb3f2ad8"
   },
   {
-   "tijdstip": "2026-11-27T19:30:00+01:00",
-   "thuis": "‘t Leidsche Tuynhuis Leython DC DS 3",
-   "uit": "VOLEVO DS 4",
-   "status": "gepland",
-   "hal": "De Bloemerd",
-   "plaats": "Leiderdorp",
-   "adres": "Bloemerd 1",
-   "postcode": "2353BZ",
-   "lat": 52.16411,
-   "lon": 4.54493,
-   "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/307a31f1-c830-487a-8f20-a2cd895422ed"
-  },
-  {
    "tijdstip": "2026-11-27T21:00:00+01:00",
    "thuis": "VOLEVO DS 5",
    "uit": "Zovoc DS 5",
@@ -9118,6 +9104,20 @@
    "lon": 5.14473,
    "veld": "6",
    "dwf": "https://dwf.nevobo.nl/matches/78f53e54-9d30-473e-991b-938d81451f79"
+  },
+  {
+   "tijdstip": "2027-02-26T19:30:00+01:00",
+   "thuis": "‘t Leidsche Tuynhuis Leython DC DS 3",
+   "uit": "VOLEVO DS 4",
+   "status": "gepland",
+   "hal": "De Bloemerd",
+   "plaats": "Leiderdorp",
+   "adres": "Bloemerd 1",
+   "postcode": "2353BZ",
+   "lat": 52.16411,
+   "lon": 4.54493,
+   "veld": "1",
+   "dwf": "https://dwf.nevobo.nl/matches/307a31f1-c830-487a-8f20-a2cd895422ed"
   },
   {
    "tijdstip": "2027-02-27T12:00:00+01:00",
