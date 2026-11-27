@@ -6,11 +6,23 @@
    "tekst": "VOLEVO DS 1 heeft in Leidschendam een spannende vijfsetter gespeeld tegen Next Volley Dordrecht DS 2. Na een 0-2 achterstand knokte het team zich knap terug en won het uiteindelijk met 3-2: 12-25, 18-25, 25-20, 25-12 en 15-11.",
    "tijd": "2026-11-21T17:30:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/1963912": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO HS 1 heeft uit bij Volley Lek en IJssel HS 1 een spannende wedstrijd gespeeld en na vijf sets met 2-3 gewonnen. Na setstanden van 25-20, 25-27, 25-20, 20-25 en 10-15 was het een knappe en sportieve zege.",
+   "tijd": "2026-11-14T19:00:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/1963935": {
    "gemaakt": "2026-11-23T03:59:03.967382+00:00",
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO HS 1 heeft thuis een mooie 3-1 overwinning behaald op Volley2B HS 1. Na twee sterke openingssets werd de wedstrijd in de derde set nog spannend, maar VOLEVO trok de winst uiteindelijk verdiend naar zich toe.",
    "tijd": "2026-11-21T15:00:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2009704": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO DS 3 speelde een sportieve wedstrijd tegen Majella DS 1 en pakte knap de eerste set met 27-25. Daarna trok de tegenstander de stand om, waardoor de wedstrijd eindigde in 1-3, maar er zijn zeker aanknopingspunten voor de volgende keer.",
+   "tijd": "2026-11-19T21:00:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2009730": {
    "gemaakt": "2026-11-23T03:59:03.967382+00:00",
@@ -18,11 +30,23 @@
    "tekst": "VOLEVO DS 2 heeft thuis tegen Forza Hoogland DS 1 met 1-3 verloren. De ploeg liet in de vierde set zien wat er in zat en kan daar met vertrouwen op verder bouwen.",
    "tijd": "2026-11-21T15:00:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2016268": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO DS 4 speelde uit tegen Jupiter DS 1 en moest de overwinning helaas aan de thuisploeg laten met 4-0. Ondanks de nederlaag blijven de punten de volgende keer weer het doel: op naar een nieuwe kans!",
+   "tijd": "2026-11-14T18:00:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2016294": {
    "gemaakt": "2026-11-23T03:59:03.967382+00:00",
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO DS 4 speelde thuis een spannende vijfsetter tegen Volleybaldirect/Gemini-Kangeroes DS 1, maar trok na een sterke start net aan het kortste eind: 2-3. Met setstanden van 25-23, 26-24, 22-25, 25-27 en 11-15 mag het team trots zijn op de inzet en op naar de volgende wedstrijd.",
    "tijd": "2026-11-21T15:00:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2017080": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO HS 3 heeft thuis in Leidschendam met 4-0 gewonnen van Dosko HS 3. Met setstanden van 25-12, 25-19, 25-20 en 25-21 werd het een mooie en overtuigende overwinning.",
+   "tijd": "2026-11-19T21:00:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2017702": {
    "gemaakt": "2026-11-26T19:15:44.633691+00:00",
@@ -41,6 +65,12 @@
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO HS 2 speelde thuis tegen Dosko HS 1 en moest de punten helaas aan de tegenstander laten: het werd 0-4 in sets. Ondanks de nederlaag liet VOLEVO HS 2 met vier spannende setstanden zien dat er genoeg aanknopingspunten zijn voor de volgende wedstrijd.",
    "tijd": "2026-11-21T12:30:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2025503": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO MA 1 heeft thuis een spannende wedstrijd tegen Limes MA 1 gespeeld en na vijf sets met 3-2 gewonnen. De setstanden waren 25-22, 20-25, 25-16, 20-25 en 16-14.",
+   "tijd": "2026-11-18T21:00:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2025521": {
    "gemaakt": "2026-11-25T05:40:14.840912+00:00",
@@ -72,6 +102,12 @@
    "tekst": "VOLEVO MA 2 speelde een spannende wedstrijd uit tegen Inter Rijswijk MA 3 en trok uiteindelijk in vijf sets aan het langste eind. Na setstanden van 25-23, 14-25, 19-25, 26-24 en 13-15 werd het 2-3, een knappe en sportieve prestatie.",
    "tijd": "2026-11-21T14:15:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2026321": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO MA 2 speelde uit tegen VELO MA 1 en liet in de vierde set zien wat het in huis heeft door die overtuigend te winnen. De wedstrijd eindigde in 3-1, met setstanden van 25-18, 25-16, 25-20 en 15-25.",
+   "tijd": "2026-11-14T18:30:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2026637": {
    "gemaakt": "2026-11-22T21:14:15.888619+00:00",
    "model": "gpt-5.4-mini",
@@ -89,6 +125,12 @@
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO JA 2 heeft thuis een mooie 4-0 zege behaald op Liusna JA 1. Met setstanden van 25-13, 25-7, 25-8 en 25-17 was het een overtuigende wedstrijd in Leidschendam.",
    "tijd": "2026-11-21T15:00:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2028115": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO JB 2 heeft uit bij VELO JB 1 een mooie overwinning geboekt met 1-3 in sets. Na spannende setstanden van 21-25, 27-29, 18-25 en 25-23 kan het team trots terugkijken op een sportieve wedstrijd.",
+   "tijd": "2026-11-14T14:30:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2028119": {
    "gemaakt": "2026-11-22T21:14:15.888619+00:00",
@@ -108,6 +150,12 @@
    "tekst": "VOLEVO MA 6 speelde thuis tegen Kalinko MA 4 een spannende wedstrijd die nipt met 2-3 werd verloren. Na een sterke start bleef het team tot het einde knokken en kan het met vertrouwen vooruitkijken naar de volgende wedstrijd.",
    "tijd": "2026-11-21T17:30:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2029490": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO MB 2 heeft in Leidschendam een spannende vijfsetter gespeeld tegen Ancora RVV MB 2 en trok uiteindelijk met 2-3 aan het langste eind. Na de setstanden 15-25, 25-23, 18-25, 25-19 en 9-15 kan VOLEVO terugkijken op een mooie en sportieve overwinning.",
+   "tijd": "2026-11-14T18:00:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2029779": {
    "gemaakt": "2026-11-24T12:55:27.207869+00:00",
    "model": "gpt-5.4-mini",
@@ -119,6 +167,12 @@
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO MB 4 en Inter Rijswijk MB 4 maakten er een spannende wedstrijd van, die pas in de vijfde set werd beslist. Na een mooie strijd trok VOLEVO met 3-2 aan het langste eind: 19-25, 25-23, 20-25, 26-24 en 15-13.",
    "tijd": "2026-11-21T17:30:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2030157": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO MC 2 won thuis met 3-2 van ZVH JC 1 na een spannende vijfsetter. Na een sterke start en een knappe afsluiting pakte VOLEVO de overwinning met setstanden van 25-10, 25-19, 17-25, 20-25 en 15-9.",
+   "tijd": "2026-11-19T18:00:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2030165": {
    "gemaakt": "2026-11-22T22:46:35.815446+00:00",
@@ -137,6 +191,12 @@
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO MC 5 verloor thuis met 1-3 van Leython DC MC 3, maar pakte tussendoor knap de tweede set met 27-25. Ondanks de nederlaag liet het team mooie inzet zien en kan het met vertrouwen vooruitkijken.",
    "tijd": "2026-11-21T15:00:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2031094": {
+   "gemaakt": "2026-11-27T02:23:54.193010+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO MC 5 speelde uit tegen Zovoc MC 4 en verloor met 3-1. Na een knappe setwinst ging de wedstrijd verder in het voordeel van de thuisploeg, maar er zijn weer mooie stappen gezet.",
+   "tijd": "2026-11-14T16:00:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2035504": {
    "gemaakt": "2026-11-26T19:15:44.633691+00:00",
