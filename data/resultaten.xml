@@ -4,8 +4,72 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 28 Nov 2026 13:21:05 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 21:07:20 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[OKK '70 HS 1 - VOLEVO HS 1, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1963858</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1963858</guid>
+      <description><![CDATA[Wedstrijd: OKK '70 HS 1 - VOLEVO HS 1, Uitslag: 3-2, Setstanden: 25-21, 23-25, 20-25, 25-19, 15-9]]></description>
+      <pubDate>Sat, 28 Nov 2026 18:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Zovoc MB 3 - VOLEVO MB 3, Uitslag: 1-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2029489</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2029489</guid>
+      <description><![CDATA[Wedstrijd: Zovoc MB 3 - VOLEVO MB 3, Uitslag: 1-3, Setstanden: 13-25, 12-25, 13-25, 25-23]]></description>
+      <pubDate>Sat, 28 Nov 2026 16:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VVV Delta MA 1 - VOLEVO MA 6, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2035434</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2035434</guid>
+      <description><![CDATA[Wedstrijd: VVV Delta MA 1 - VOLEVO MA 6, Uitslag: 4-0, Setstanden: 25-11, 25-14, 25-9, 25-9]]></description>
+      <pubDate>Sat, 28 Nov 2026 15:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VSTS DS 1 - VOLEVO DS 3, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2009575</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2009575</guid>
+      <description><![CDATA[Wedstrijd: VSTS DS 1 - VOLEVO DS 3, Uitslag: 3-1, Setstanden: 25-14, 25-23, 19-25, 25-14]]></description>
+      <pubDate>Sat, 28 Nov 2026 14:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[SKC HS 7 - VOLEVO HS 6, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2061557</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2061557</guid>
+      <description><![CDATA[Wedstrijd: SKC HS 7 - VOLEVO HS 6, Uitslag: 3-1, Setstanden: 25-23, 17-25, 25-22, 25-23]]></description>
+      <pubDate>Sat, 28 Nov 2026 14:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Van Rhijn Bouw Leython DC DS 2 - VOLEVO DS 1, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/1963718</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/1963718</guid>
+      <description><![CDATA[Wedstrijd: Van Rhijn Bouw Leython DC DS 2 - VOLEVO DS 1, Uitslag: 2-3, Setstanden: 25-23, 15-25, 25-22, 18-25, 13-15]]></description>
+      <pubDate>Sat, 28 Nov 2026 13:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[Kalinko MA 2 - VOLEVO MA 2, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2026303</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026303</guid>
+      <description><![CDATA[Wedstrijd: Kalinko MA 2 - VOLEVO MA 2, Uitslag: 2-3, Setstanden: 20-25, 21-25, 25-17, 25-21, 7-15]]></description>
+      <pubDate>Sat, 28 Nov 2026 12:30:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[ZVH MC 2 - VOLEVO MC 4, Uitslag: 3-2]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2031008</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2031008</guid>
+      <description><![CDATA[Wedstrijd: ZVH MC 2 - VOLEVO MC 4, Uitslag: 3-2, Setstanden: 11-25, 18-25, 25-14, 25-21, 15-5]]></description>
+      <pubDate>Sat, 28 Nov 2026 12:15:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Leython DC MC 2 - VOLEVO MC 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2030213</link>

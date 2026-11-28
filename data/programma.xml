@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 28 Nov 2026 13:23:41 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 21:27:38 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: VSTS MA 1 - VOLEVO MA 3]]></title>
@@ -23,68 +23,68 @@
       <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 12:15: ZVH MC 2 - VOLEVO MC 4]]></title>
+      <title><![CDATA[ZVH MC 2 - VOLEVO MC 4, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2031008</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2031008</guid>
-      <description><![CDATA[Wedstrijd: 3000XC2O1 EB, Datum: zaterdag 28 november, 12:15, Speellocatie: Swanla, Burgemeester Klinkhamerweg 86, 2761BJ  Zevenhuizen ZH]]></description>
+      <description><![CDATA[Wedstrijd: ZVH MC 2 - VOLEVO MC 4, Uitslag: 3-2, Setstanden: 11-25, 18-25, 25-14, 25-21, 15-5]]></description>
       <pubDate>Sat, 28 Nov 2026 12:15:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 12:30: Kalinko MA 2 - VOLEVO MA 2]]></title>
+      <title><![CDATA[Kalinko MA 2 - VOLEVO MA 2, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2026303</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2026303</guid>
-      <description><![CDATA[Wedstrijd: 3000MA1K1 BE, Datum: zaterdag 28 november, 12:30, Speellocatie: Houtrust sporthal, Laan van Poot 22, 2566EC  's-Gravenhage]]></description>
+      <description><![CDATA[Wedstrijd: Kalinko MA 2 - VOLEVO MA 2, Uitslag: 2-3, Setstanden: 20-25, 21-25, 25-17, 25-21, 7-15]]></description>
       <pubDate>Sat, 28 Nov 2026 12:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 13:30: Van Rhijn Bouw Leython DC DS 2 - VOLEVO DS 1]]></title>
+      <title><![CDATA[Van Rhijn Bouw Leython DC DS 2 - VOLEVO DS 1, Uitslag: 2-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1963718</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963718</guid>
-      <description><![CDATA[Wedstrijd: 90002ED   EH, Datum: zaterdag 28 november, 13:30, Speellocatie: De Bloemerd, Bloemerd 1 A, 2353BZ  Leiderdorp]]></description>
+      <description><![CDATA[Wedstrijd: Van Rhijn Bouw Leython DC DS 2 - VOLEVO DS 1, Uitslag: 2-3, Setstanden: 25-23, 15-25, 25-22, 18-25, 13-15]]></description>
       <pubDate>Sat, 28 Nov 2026 13:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 14:00: SKC HS 7 - VOLEVO HS 6]]></title>
+      <title><![CDATA[SKC HS 7 - VOLEVO HS 6, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2061557</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2061557</guid>
-      <description><![CDATA[Wedstrijd: 3000H4B   CD-1, Datum: zaterdag 28 november, 14:00, Speellocatie: Universitair SC, Goliuspad 22, 2333BH  Leiden]]></description>
+      <description><![CDATA[Wedstrijd: SKC HS 7 - VOLEVO HS 6, Uitslag: 3-1, Setstanden: 25-23, 17-25, 25-22, 25-23]]></description>
       <pubDate>Sat, 28 Nov 2026 14:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 14:30: VSTS DS 1 - VOLEVO DS 3]]></title>
+      <title><![CDATA[VSTS DS 1 - VOLEVO DS 3, Uitslag: 3-1]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2009575</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2009575</guid>
-      <description><![CDATA[Wedstrijd: 30003CD   EH, Datum: zaterdag 28 november, 14:30, Speellocatie: De Sporthoeve, Vromade 1, 2411LG  Bodegraven]]></description>
+      <description><![CDATA[Wedstrijd: VSTS DS 1 - VOLEVO DS 3, Uitslag: 3-1, Setstanden: 25-14, 25-23, 19-25, 25-14]]></description>
       <pubDate>Sat, 28 Nov 2026 14:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 15:30: VVV Delta MA 1 - VOLEVO MA 6]]></title>
+      <title><![CDATA[VVV Delta MA 1 - VOLEVO MA 6, Uitslag: 4-0]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2035434</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2035434</guid>
-      <description><![CDATA[Wedstrijd: 3000MA2M1 FE, Datum: zaterdag 28 november, 15:30, Speellocatie: Kerkpolder, Kerkpolderweg 14, 2625EB  Delft]]></description>
+      <description><![CDATA[Wedstrijd: VVV Delta MA 1 - VOLEVO MA 6, Uitslag: 4-0, Setstanden: 25-11, 25-14, 25-9, 25-9]]></description>
       <pubDate>Sat, 28 Nov 2026 15:30:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 16:00: Zovoc MB 3 - VOLEVO MB 3]]></title>
+      <title><![CDATA[Zovoc MB 3 - VOLEVO MB 3, Uitslag: 1-3]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2029489</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2029489</guid>
-      <description><![CDATA[Wedstrijd: 3000MB1H1 EC, Datum: zaterdag 28 november, 16:00, Speellocatie: De Limiet, Buytenparklaan 6, 2717AX  Zoetermeer]]></description>
+      <description><![CDATA[Wedstrijd: Zovoc MB 3 - VOLEVO MB 3, Uitslag: 1-3, Setstanden: 13-25, 12-25, 13-25, 25-23]]></description>
       <pubDate>Sat, 28 Nov 2026 16:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
-      <title><![CDATA[28 nov 18:00: OKK '70 HS 1 - VOLEVO HS 1]]></title>
+      <title><![CDATA[OKK '70 HS 1 - VOLEVO HS 1, Uitslag: 3-2]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/1963858</link>
       <guid>https://api.nevobo.nl/permalink/wedstrijd/1963858</guid>
-      <description><![CDATA[Wedstrijd: 90002EH   EH, Datum: zaterdag 28 november, 18:00, Speellocatie: De Wielewaal, Cornelisweer 2, 3371PH  Hardinxveld-Giessendam]]></description>
+      <description><![CDATA[Wedstrijd: OKK '70 HS 1 - VOLEVO HS 1, Uitslag: 3-2, Setstanden: 25-21, 23-25, 20-25, 25-19, 15-9]]></description>
       <pubDate>Sat, 28 Nov 2026 18:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
+      <nevobo:status>gespeeld</nevobo:status>
     </item>
     <item>
       <title><![CDATA[29 nov 9:00: VOLEVO MC - Albatros MC]]></title>
