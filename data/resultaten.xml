@@ -4,8 +4,40 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 27 Nov 2026 22:06:21 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 04:19:11 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[VOLEVO HS 5 - GGV HS 1, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2017803</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017803</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO HS 5 - GGV HS 1, Uitslag: 0-4, Setstanden: 17-25, 15-25, 13-25, 20-25]]></description>
+      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 9 - SKC DS 8, Uitslag: 2-3]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041565</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041565</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 9 - SKC DS 8, Uitslag: 2-3, Setstanden: 25-23, 19-25, 16-25, 27-25, 11-15]]></description>
+      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 5 - Zovoc DS 5, Uitslag: 4-0]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041545</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041545</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 5 - Zovoc DS 5, Uitslag: 4-0, Setstanden: 25-15, 28-26, 26-24, 25-15]]></description>
+      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
+    <item>
+      <title><![CDATA[VOLEVO DS 6 - Sovicos DS 4, Uitslag: 3-1]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2041518</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041518</guid>
+      <description><![CDATA[Wedstrijd: VOLEVO DS 6 - Sovicos DS 4, Uitslag: 3-1, Setstanden: 27-25, 22-25, 25-16, 25-23]]></description>
+      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[Netwerk JB 1 - VOLEVO JB 2, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2028105</link>

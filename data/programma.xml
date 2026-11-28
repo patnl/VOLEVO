@@ -4,7 +4,7 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Fri, 27 Nov 2026 22:31:32 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 04:31:43 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/programma.rss" rel="self" type="text/xml"/>
     <item>
       <title><![CDATA[: VSTS MA 1 - VOLEVO MA 3]]></title>
@@ -12,110 +12,6 @@
       <guid>https://api.nevobo.nl/permalink/wedstrijd/2099692</guid>
       <description><![CDATA[Wedstrijd: 3000MA1J1 DC, Datum: , Speellocatie: De Sporthoeve, Vromade 1, 2411LG  Bodegraven]]></description>
       <pubDate/>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[VOLEVO DS 7 - Timios DS 2, Uitslag: 2-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041510</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041510</guid>
-      <description><![CDATA[Wedstrijd: VOLEVO DS 7 - Timios DS 2, Uitslag: 2-3, Setstanden: 25-14, 15-25, 19-25, 25-20, 11-15]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[VOLEVO DS 8 - Inter Rijswijk DS 9, Uitslag: 1-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041582</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041582</guid>
-      <description><![CDATA[Wedstrijd: VOLEVO DS 8 - Inter Rijswijk DS 9, Uitslag: 1-3, Setstanden: 18-25, 12-25, 25-22, 18-25]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[VOLEVO MA 1 - Zovoc MA 1, Uitslag: 2-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2025509</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025509</guid>
-      <description><![CDATA[Wedstrijd: VOLEVO MA 1 - Zovoc MA 1, Uitslag: 2-3, Setstanden: 25-22, 26-28, 25-20, 12-25, 10-15]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Castellum MC 1 - VOLEVO MC 5, Uitslag: 3-2]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2031004</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2031004</guid>
-      <description><![CDATA[Wedstrijd: Castellum MC 1 - VOLEVO MC 5, Uitslag: 3-2, Setstanden: 25-19, 14-25, 22-25, 25-8, 15-10]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[VOLEVO MC 1 - Inter Rijswijk MC 1, Uitslag: 4-0]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2025677</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2025677</guid>
-      <description><![CDATA[Wedstrijd: VOLEVO MC 1 - Inter Rijswijk MC 1, Uitslag: 4-0, Setstanden: 25-9, 25-17, 25-22, 25-22]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:00:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[SKC HS 1 - VOLEVO HS 3, Uitslag: 3-1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2016951</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2016951</guid>
-      <description><![CDATA[Wedstrijd: SKC HS 1 - VOLEVO HS 3, Uitslag: 3-1, Setstanden: 25-22, 25-22, 25-19, 29-31]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[VELO HS 2 - VOLEVO HS 2, Uitslag: 3-1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2020123</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2020123</guid>
-      <description><![CDATA[Wedstrijd: VELO HS 2 - VOLEVO HS 2, Uitslag: 3-1, Setstanden: 25-19, 25-19, 23-25, 25-15]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[VHZ JB 1 - VOLEVO JB 1, Uitslag: 1-3]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2026721</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2026721</guid>
-      <description><![CDATA[Wedstrijd: VHZ JB 1 - VOLEVO JB 1, Uitslag: 1-3, Setstanden: 21-25, 23-25, 17-25, 25-23]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[Netwerk JB 1 - VOLEVO JB 2, Uitslag: 0-4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2028105</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2028105</guid>
-      <description><![CDATA[Wedstrijd: Netwerk JB 1 - VOLEVO JB 2, Uitslag: 0-4, Setstanden: 12-25, 15-25, 20-25, 13-25]]></description>
-      <pubDate>Fri, 27 Nov 2026 19:30:00 +0100</pubDate>
-      <nevobo:status>gespeeld</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[27 nov 21:00: VOLEVO DS 6 - Sovicos DS 4]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041518</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041518</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   CA, Datum: vrijdag 27 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[27 nov 21:00: VOLEVO DS 5 - Zovoc DS 5]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041545</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041545</guid>
-      <description><![CDATA[Wedstrijd: 3000D2K   DI, Datum: vrijdag 27 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[27 nov 21:00: VOLEVO DS 9 - SKC DS 8]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2041565</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2041565</guid>
-      <description><![CDATA[Wedstrijd: 3000D3J   CA, Datum: vrijdag 27 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
-      <nevobo:status>gepland</nevobo:status>
-    </item>
-    <item>
-      <title><![CDATA[27 nov 21:00: VOLEVO HS 5 - GGV HS 1]]></title>
-      <link>https://api.nevobo.nl/permalink/wedstrijd/2017803</link>
-      <guid>https://api.nevobo.nl/permalink/wedstrijd/2017803</guid>
-      <description><![CDATA[Wedstrijd: 3000H2F   DI, Datum: vrijdag 27 november, 21:00, Speellocatie: De Fluit, Fluitpolderplein 1, 2262ED  Leidschendam]]></description>
-      <pubDate>Fri, 27 Nov 2026 21:00:00 +0100</pubDate>
       <nevobo:status>gepland</nevobo:status>
     </item>
     <item>
