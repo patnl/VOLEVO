@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T21:34:16+00:00",
+ "gegenereerd": "2026-11-28T08:16:29+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -7359,7 +7359,7 @@
    "tijdstip": "2026-11-27T21:00:00+01:00",
    "thuis": "VOLEVO DS 5",
    "uit": "Zovoc DS 5",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -7367,13 +7367,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/e7899b1f-0f60-445f-9aba-6aaea835939b"
+   "dwf": "https://dwf.nevobo.nl/results/e7899b1f-0f60-445f-9aba-6aaea835939b/scoresheets/76154c14-c96e-4c53-b7b7-eb04968a2ed1"
   },
   {
    "tijdstip": "2026-11-27T21:00:00+01:00",
    "thuis": "VOLEVO DS 6",
    "uit": "Sovicos DS 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -7381,13 +7381,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "6",
-   "dwf": "https://dwf.nevobo.nl/matches/e3f94544-d720-45b2-9c8e-70b021fe29bb"
+   "dwf": "https://dwf.nevobo.nl/results/e3f94544-d720-45b2-9c8e-70b021fe29bb/scoresheets/ce9c5544-d85b-46ff-8a24-120402e0fe74"
   },
   {
    "tijdstip": "2026-11-27T21:00:00+01:00",
    "thuis": "VOLEVO DS 9",
    "uit": "SKC DS 8",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -7395,13 +7395,13 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "5",
-   "dwf": "https://dwf.nevobo.nl/matches/0f16a830-6bc4-473c-9e43-e7e9a55bfab7"
+   "dwf": "https://dwf.nevobo.nl/results/0f16a830-6bc4-473c-9e43-e7e9a55bfab7/scoresheets/7313ab97-946d-452e-b2b8-67131731610f"
   },
   {
    "tijdstip": "2026-11-27T21:00:00+01:00",
    "thuis": "VOLEVO HS 5",
    "uit": "GGV HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Fluit",
    "plaats": "Leidschendam",
    "adres": "Fluitpolderplein 1",
@@ -7409,7 +7409,7 @@
    "lat": 52.09332,
    "lon": 4.39517,
    "veld": "7",
-   "dwf": "https://dwf.nevobo.nl/matches/f43a0bce-b1c4-4c07-b829-c18c52fc90af"
+   "dwf": "https://dwf.nevobo.nl/results/f43a0bce-b1c4-4c07-b829-c18c52fc90af/scoresheets/50b878b2-b024-4410-9ff5-4163ee8fa6cd"
   },
   {
    "tijdstip": "2026-11-28T09:00:00+01:00",
