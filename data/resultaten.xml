@@ -4,8 +4,16 @@
     <title>RSS feed Nederlandse Volleybalbond</title>
     <link>https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss</link>
     <description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
-    <lastBuildDate>Sat, 28 Nov 2026 04:19:11 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 13:21:05 +0100</lastBuildDate>
     <atom:link href="https://api.nevobo.nl/export/vereniging/CNZ6B97/resultaten.rss" rel="self" type="text/xml"/>
+    <item>
+      <title><![CDATA[Leython DC MC 2 - VOLEVO MC 2, Uitslag: 0-4]]></title>
+      <link>https://api.nevobo.nl/permalink/wedstrijd/2030213</link>
+      <guid>https://api.nevobo.nl/permalink/wedstrijd/2030213</guid>
+      <description><![CDATA[Wedstrijd: Leython DC MC 2 - VOLEVO MC 2, Uitslag: 0-4, Setstanden: 17-25, 17-25, 19-25, 18-25]]></description>
+      <pubDate>Sat, 28 Nov 2026 09:00:00 +0100</pubDate>
+      <nevobo:status>gespeeld</nevobo:status>
+    </item>
     <item>
       <title><![CDATA[VOLEVO HS 5 - GGV HS 1, Uitslag: 0-4]]></title>
       <link>https://api.nevobo.nl/permalink/wedstrijd/2017803</link>
