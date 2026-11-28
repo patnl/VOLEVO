@@ -78,6 +78,12 @@
    "tekst": "VOLEVO HS 4 pakte in Leidschendam een mooie uitzege op Zovoc HS 4 met 1-3. Na twee sterke sets, een mindere derde en een overtuigende vierde set werd de wedstrijd sportief en verdiend afgesloten.",
    "tijd": "2026-11-21T18:00:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2017803": {
+   "gemaakt": "2026-11-28T12:18:18.302898+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO HS 5 streed sportief tegen GGV HS 1, maar moest de punten deze keer aan de gasten laten. De setstanden 17-25, 15-25, 13-25 en 20-25 laten zien dat er volop inzet was, en daar kan VOLEVO op verder bouwen.",
+   "tijd": "2026-11-27T21:00:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2019461": {
    "gemaakt": "2026-11-27T11:23:48.392682+00:00",
    "model": "gpt-5.4-mini",
@@ -312,11 +318,23 @@
    "tekst": "VOLEVO DS 6 had het lastig op bezoek bij Kalinko DS 5 en verloor met 4-0. De setstanden waren 25-17, 25-15, 25-12 en 25-15.",
    "tijd": "2026-11-20T19:00:00+01:00"
   },
+  "https://api.nevobo.nl/permalink/wedstrijd/2041518": {
+   "gemaakt": "2026-11-28T12:18:18.302898+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO DS 6 heeft thuis een mooie wedstrijd gespeeld tegen Sovicos DS 4 en won met 3-1 in sets. De setstanden waren 27-25, 22-25, 25-16 en 25-23.",
+   "tijd": "2026-11-27T21:00:00+01:00"
+  },
   "https://api.nevobo.nl/permalink/wedstrijd/2041527": {
    "gemaakt": "2026-11-27T11:23:48.392682+00:00",
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO DS 5 speelde thuis tegen Kalinko DS 5 en verloor de wedstrijd met 1-3 in sets. Na een lastige start pakte VOLEVO nog knap de derde set, en daarmee is er genoeg om op voort te bouwen.",
    "tijd": "2026-11-13T21:00:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2041545": {
+   "gemaakt": "2026-11-28T12:18:18.302898+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO DS 5 heeft thuis een mooie overwinning geboekt op Zovoc DS 5 en won met 4-0. De setstanden waren 25-15, 28-26, 26-24 en 25-15.",
+   "tijd": "2026-11-27T21:00:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2041548": {
    "gemaakt": "2026-11-26T19:15:44.633691+00:00",
@@ -329,6 +347,12 @@
    "model": "gpt-5.4-mini",
    "tekst": "VOLEVO DS 9 speelde uit bij Inter Rijswijk DS 7 en verloor met 3-1. Na een knappe setwinst in de tweede set werd er sportief gestreden, maar de thuisploeg trok uiteindelijk aan het langste eind met 25-20, 18-25, 25-23 en 25-8.",
    "tijd": "2026-11-13T19:30:00+01:00"
+  },
+  "https://api.nevobo.nl/permalink/wedstrijd/2041565": {
+   "gemaakt": "2026-11-28T12:18:18.302898+00:00",
+   "model": "gpt-5.4-mini",
+   "tekst": "VOLEVO DS 9 speelde een spannende wedstrijd tegen SKC DS 8 en verloor uiteindelijk nipt met 2-3. Na mooie setstanden en een sterke strijdlust kan het team met opgeheven hoofd vooruitkijken.",
+   "tijd": "2026-11-27T21:00:00+01:00"
   },
   "https://api.nevobo.nl/permalink/wedstrijd/2041566": {
    "gemaakt": "2026-11-26T19:15:44.633691+00:00",
