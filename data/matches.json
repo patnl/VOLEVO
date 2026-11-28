@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T08:16:29+00:00",
+ "gegenereerd": "2026-11-28T20:28:46+00:00",
  "wedstrijden": [
   {
    "tijdstip": null,
@@ -7415,7 +7415,7 @@
    "tijdstip": "2026-11-28T09:00:00+01:00",
    "thuis": "Leython DC MC 2",
    "uit": "VOLEVO MC 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -7423,13 +7423,13 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/716b2ae7-2d9a-4bd6-ade3-11037241f9f8"
+   "dwf": "https://dwf.nevobo.nl/results/716b2ae7-2d9a-4bd6-ade3-11037241f9f8/scoresheets/bf01c96c-3903-45cd-9b38-8ee81ef877b5"
   },
   {
    "tijdstip": "2026-11-28T12:15:00+01:00",
    "thuis": "ZVH MC 2",
    "uit": "VOLEVO MC 4",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Swanla",
    "plaats": "Zevenhuizen ZH",
    "adres": "Burgemeester Klinkhamerweg 86",
@@ -7437,13 +7437,13 @@
    "lat": 52.01443,
    "lon": 4.583,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/f8d536b7-b300-4cce-9cf4-c6ca09a8eb49"
+   "dwf": "https://dwf.nevobo.nl/results/f8d536b7-b300-4cce-9cf4-c6ca09a8eb49/scoresheets/0b5be012-63b4-45a8-a45e-ecfe74df2f46"
   },
   {
    "tijdstip": "2026-11-28T12:30:00+01:00",
    "thuis": "Kalinko MA 2",
    "uit": "VOLEVO MA 2",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Houtrust sporthal",
    "plaats": "'s-Gravenhage",
    "adres": "Laan van Poot 22",
@@ -7451,13 +7451,13 @@
    "lat": 52.08632,
    "lon": 4.26821,
    "veld": "2",
-   "dwf": "https://dwf.nevobo.nl/matches/76dbf485-f32b-4ba0-9da1-e6f590222c8b"
+   "dwf": "https://dwf.nevobo.nl/results/76dbf485-f32b-4ba0-9da1-e6f590222c8b/scoresheets/19b714f1-cd6f-4338-a3f7-96214675ec71"
   },
   {
    "tijdstip": "2026-11-28T13:30:00+01:00",
    "thuis": "Van Rhijn Bouw Leython DC DS 2",
    "uit": "VOLEVO DS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Bloemerd",
    "plaats": "Leiderdorp",
    "adres": "Bloemerd 1",
@@ -7465,13 +7465,13 @@
    "lat": 52.16411,
    "lon": 4.54493,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/ae9e0ea4-86ac-45c0-aa9a-43af77d48551"
+   "dwf": "https://dwf.nevobo.nl/results/ae9e0ea4-86ac-45c0-aa9a-43af77d48551/scoresheets/230aace5-db55-4889-9674-a58328b55514"
   },
   {
    "tijdstip": "2026-11-28T14:00:00+01:00",
    "thuis": "SKC HS 7",
    "uit": "VOLEVO HS 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Universitair SC",
    "plaats": "Leiden",
    "adres": "Goliuspad 22",
@@ -7479,13 +7479,13 @@
    "lat": 52.16739,
    "lon": 4.46244,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/bc84113c-e370-4162-8fcb-6a0e06e3b99d"
+   "dwf": "https://dwf.nevobo.nl/results/bc84113c-e370-4162-8fcb-6a0e06e3b99d/scoresheets/f0516ea5-fe54-4303-908a-934ab5eeef83"
   },
   {
    "tijdstip": "2026-11-28T14:30:00+01:00",
    "thuis": "VSTS DS 1",
    "uit": "VOLEVO DS 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Sporthoeve",
    "plaats": "Bodegraven",
    "adres": "Vromade 1",
@@ -7493,13 +7493,13 @@
    "lat": 52.07717,
    "lon": 4.75181,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/55e7a98c-3cfb-4cd4-b0a8-df176320be20"
+   "dwf": "https://dwf.nevobo.nl/results/55e7a98c-3cfb-4cd4-b0a8-df176320be20/scoresheets/43065533-7e4d-4354-9ee2-e67be057aaa1"
   },
   {
    "tijdstip": "2026-11-28T15:30:00+01:00",
    "thuis": "VVV Delta MA 1",
    "uit": "VOLEVO MA 6",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "Kerkpolder",
    "plaats": "Delft",
    "adres": "Kerkpolderweg 14",
@@ -7507,13 +7507,13 @@
    "lat": 51.98857,
    "lon": 4.32616,
    "veld": "3",
-   "dwf": "https://dwf.nevobo.nl/matches/02dc861c-3a02-4d8c-a866-7af2c2605e0d"
+   "dwf": "https://dwf.nevobo.nl/results/02dc861c-3a02-4d8c-a866-7af2c2605e0d/scoresheets/28e9ce5b-8a76-4a84-b6e4-8f04f213c174"
   },
   {
    "tijdstip": "2026-11-28T16:00:00+01:00",
    "thuis": "Zovoc MB 3",
    "uit": "VOLEVO MB 3",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Limiet",
    "plaats": "Zoetermeer",
    "adres": "Buytenparklaan 6",
@@ -7521,13 +7521,13 @@
    "lat": 52.06786,
    "lon": 4.46189,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/79f67f5d-8411-4872-a2b7-a2f6bb90a6ce"
+   "dwf": "https://dwf.nevobo.nl/results/79f67f5d-8411-4872-a2b7-a2f6bb90a6ce/scoresheets/4ab33e6f-1b3e-4b9d-a423-b4732b458850"
   },
   {
    "tijdstip": "2026-11-28T18:00:00+01:00",
    "thuis": "OKK '70 HS 1",
    "uit": "VOLEVO HS 1",
-   "status": "gepland",
+   "status": "gespeeld",
    "hal": "De Wielewaal",
    "plaats": "Hardinxveld-Giessendam",
    "adres": "Cornelisweer 2",
@@ -7535,7 +7535,7 @@
    "lat": 51.82534,
    "lon": 4.83614,
    "veld": "1",
-   "dwf": "https://dwf.nevobo.nl/matches/8502286e-987c-4f3a-af2e-4a2d3a19dfdc"
+   "dwf": "https://dwf.nevobo.nl/results/8502286e-987c-4f3a-af2e-4a2d3a19dfdc/scoresheets/64c53e51-1295-47fd-abbd-9443a588d236"
   },
   {
    "tijdstip": "2026-11-29T09:00:00+01:00",
